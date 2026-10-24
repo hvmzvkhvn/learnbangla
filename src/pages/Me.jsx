@@ -3,6 +3,7 @@ import { BADGES, stageOf, useGame } from '../state/game'
 import { useProgress, useTrack } from '../state/persist'
 import { allLessons, tracks } from '../curriculum/tracks'
 import SaveCode from '../components/SaveCode'
+import OfflineCard from '../components/OfflineCard'
 
 export default function Me() {
   const { game, level, reset } = useGame()
@@ -66,6 +67,7 @@ export default function Me() {
         })}
       </div>
 
+      <OfflineCard />
       <SaveCode />
 
       <div className="mt-8 flex flex-col items-center gap-2 text-sm font-bold text-ink/40">
