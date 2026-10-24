@@ -1,6 +1,6 @@
 # Learn Bangla
 
-A free, no-login Bangla learning site with two tracks — **Little Learners (5–7)** and **Explorers (8–12)** — in Bangladeshi Bangla. Built with Vite + React, React Router and Tailwind. Progress is saved in the browser (localStorage).
+A free, no-login Bangla learning site with four tracks — **Little Learners (5–7)**, **Explorers (8–12)**, **Voyagers (13–15)** and **Pathfinders (16–18)** — in Bangladeshi Bangla. Built with Vite + React, React Router and Tailwind. Progress is saved in the browser (localStorage).
 
 ## Run it
 
@@ -25,6 +25,31 @@ src/pages/Review.jsx       /review — mark every item ✓ or ⚑ with a correct
 To add content, add entries to the `src/data` files and reference them from `tracks.js`; the exercises are generated automatically. Fix a word once and it is fixed in every lesson.
 
 **Reviewing content:** open `/review`, mark each item, then use *Copy corrections* or *Download as JSON*.
+
+## Ages 13–15 and 16–18
+
+Two more tracks, both starting from the alphabet:
+
+- **Voyagers (13–15):** smaller steps and more scaffolding — 110 lessons in 10 units.
+- **Pathfinders (16–18):** the fast track, with denser lessons and more reading — 99 lessons in 10 units.
+
+What's different from the younger tracks:
+
+- **Story chats** (`/stories`): branching text-message conversations where your replies move a meter and change the ending. 5 per track, 3 endings each. Content: `src/data/stories.js`.
+- **Games & XP** (`/play`, `/me`): Word Blitz, Memory Match, Type It, a Daily Challenge, plus XP, levels, a daily streak and 16 badges (`src/state/game.js`). Saved in the browser.
+- **Listen & type:** hear a word and type it with the on-screen Bangla keyboard; listening questions in every lesson.
+- **Boss levels:** a timed sprint closes every unit.
+- **Poems & readings:** Tagore, Dwijendralal Ray, Lalon and a traditional rhyme (all public domain / traditional), reading passages with comprehension questions, and cinema conversations. Content: `src/data/teenText.js`.
+- **Vocabulary & sentences:** `src/data/teenWords.js`, `src/data/teenSentences.js`; conjunct letters in `src/data/conjuncts.js`.
+
+Kazi Nazrul Islam (d. 1976) appears only in facts — his words are still in copyright and are not quoted.
+
+Checkers:
+
+```bash
+npm run lint:stories    # every story graph: links, dead ends, reachable endings, address rules
+npm run lint:family     # the Family unit's apni / tumi rules
+```
 
 ## The Family unit
 

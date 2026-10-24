@@ -9,7 +9,8 @@ export default function ChoiceQ({ ex, onSolved, onWrong }) {
 
   // Listening practice: say the Bangla in the question as it appears.
   useEffect(() => {
-    if (ex.stem.bn && !ex.stem.noAudio) speak(ex.stem.bn)
+    if (ex.stem.listen) speak(ex.stem.say)
+    else if (ex.stem.bn && !ex.stem.noAudio) speak(ex.stem.bn)
   }, [ex])
 
   function choose(i) {
@@ -18,7 +19,7 @@ export default function ChoiceQ({ ex, onSolved, onWrong }) {
     if (i === ex.answer) {
       setSolved(true)
       onSolved(wrong.length === 0)
-      if (o.bn) speak(o.bn)
+      speak(ex.say ?? o.bn ?? ex.stem.say)
     } else {
       setWrong((w) => [...w, i])
       onWrong()
@@ -46,7 +47,7 @@ export default function ChoiceQ({ ex, onSolved, onWrong }) {
                 isRight
                   ? 'border-success bg-success/10'
                   : isWrong
-                    ? 'border-error/60 bg-error/10 opacity-60'
+                    ? 'animate-shake border-error/60 bg-error/10 opacity-60'
                     : 'border-primary/10 hover:border-primary/40'
               }`}
             >

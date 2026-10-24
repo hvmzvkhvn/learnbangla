@@ -8,7 +8,8 @@ const KINDS = [
   { key: 'letter', label: 'Letters' },
   { key: 'sign', label: 'Signs & syllables', kinds: ['sign', 'syllable'] },
   { key: 'word', label: 'Words' },
-  { key: 'line', label: 'Conversations' },
+  { key: 'line', label: 'Conversations & texts' },
+  { key: 'beat', label: 'Story chats' },
   { key: 'sentence', label: 'Sentences' },
   { key: 'form', label: 'Verb forms' },
 ]
@@ -19,7 +20,7 @@ const FILTERS = [
   { key: 'ok', label: 'Approved' },
 ]
 
-const KIND_NAME = { line: 'Conversation line', letter: 'Letter', sign: 'Vowel sign', syllable: 'Syllable', word: 'Word', sentence: 'Sentence', form: 'Verb form' }
+const KIND_NAME = { beat: 'Story line', line: 'Conversation line', letter: 'Letter', sign: 'Vowel sign', syllable: 'Syllable', word: 'Word', sentence: 'Sentence', form: 'Verb form' }
 
 function describe(item) {
   const parts = [`[${KIND_NAME[item.kind]}${item.section ? ` · ${item.section}` : ''}]`, item.bn, `(${item.roman})`]

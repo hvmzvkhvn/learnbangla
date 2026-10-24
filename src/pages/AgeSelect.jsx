@@ -1,6 +1,13 @@
 import { trackList } from '../curriculum/tracks'
 import { useTrack } from '../state/persist'
 
+const LOOK = {
+  young: 'bg-secondary text-white',
+  older: 'bg-primary text-white',
+  teen: 'bg-ink text-white',
+  senior: 'bg-gradient-to-br from-primary to-ink text-white',
+}
+
 export default function AgeSelect() {
   const [, setTrack] = useTrack()
   return (
@@ -12,15 +19,13 @@ export default function AgeSelect() {
           <p className="text-lg font-bold text-ink/70">Hi, I'm Tara! How old are you?</p>
         </div>
       </div>
-      <div className="space-y-4">
+      <div className="grid gap-4 sm:grid-cols-2">
         {trackList.map((t) => (
           <button
             key={t.key}
             type="button"
             onClick={() => setTrack(t.key)}
-            className={`flex w-full items-center gap-4 rounded-3xl px-6 py-7 text-left shadow-md transition active:scale-95 hover:brightness-110 ${
-              t.key === 'young' ? 'bg-secondary text-white' : 'bg-primary text-white'
-            }`}
+            className={`flex w-full items-center gap-4 rounded-3xl px-6 py-7 text-left shadow-md transition active:scale-95 hover:brightness-110 ${LOOK[t.key]}`}
           >
             <span className="text-5xl">{t.emoji}</span>
             <span>

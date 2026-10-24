@@ -44,8 +44,8 @@ function poolFor(item, lessonItems) {
   if (item.kind === 'form') return all.filter((x) => x.kind === 'form' && x.verb === item.verb)
   if (item.kind === 'letter') {
     // vowels are quizzed against vowels, consonants against consonants
-    const isVowel = (x) => x.section === 'Vowels'
-    return all.filter((x) => x.kind === 'letter' && isVowel(x) === isVowel(item))
+    const cls = (x) => (x.section === 'Vowels' ? 'v' : x.section === 'Conjuncts' ? 'c' : 'k')
+    return all.filter((x) => x.kind === 'letter' && cls(x) === cls(item))
   }
   return all.filter((x) => x.kind === item.kind)
 }
@@ -210,7 +210,7 @@ function lineExercises(item) {
 
   const meaning = choice({
     itemId: item.id,
-    title: `${whoName(item.speaker)} says this. What does it mean?`,
+    title: item.speaker === 'text' ? 'What does this line mean?' : `${whoName(item.speaker)} says this. What does it mean?`,
     stem: { art: item.art, bn: item.bn, roman: item.roman },
     correct: { text: item.en },
     candidates: others.map((p) => ({ text: p.en })),
@@ -224,6 +224,11 @@ function lineExercises(item) {
       id: nextId(), type: 'tiles', tag: 'tiles', itemId: item.id, title: 'Put the words in order',
       stem: { art: item.art, text: item.en }, tiles: item.tokens, target: item.tokens.join(' '), joiner: ' ', speakTiles: true, say: item.bn,
     })
+  }
+
+  if (item.speaker === 'text') {
+    const cz = clozeExercise(item, others)
+    if (cz) out.push({ ...cz, tag: 'cloze' })
   }
 
   // "How do you reply?" — only for substantial lines, with distractors that are clearly other conversations.
@@ -241,6 +246,69 @@ function lineExercises(item) {
     if (reply) out.push({ ...reply, tag: 'reply' })
   }
   return out
+}
+
+// ---- Fill the gap (poems & passages) -------------------------------------------------------------
+const stripP = (t) => t.replace(/[।,?!"“”\-—]/g, '')
+function clozeExercise(item, others) {
+  const idxs = item.tokens.map((t, i) => i).filter((i) => stripP(item.tokens[i]).length >= 3)
+  if (!idxs.length) return null
+  const i = idxs[Math.floor(Math.random() * idxs.length)]
+  const word = stripP(item.tokens[i])
+  const same = others.filter((x) => x.sceneKey === item.sceneKey)
+  const pool = [...same, ...others].flatMap((x) => x.tokens.map(stripP)).filter((t) => t.length >= 3 && t !== word)
+  const blanked = item.tokens.map((t, k) => (k === i ? '____' : t)).join(' ')
+  const c = choice({
+    itemId: item.id,
+    title: 'Fill the gap',
+    stem: { bn: blanked, text: item.en, noAudio: true },
+    correct: { bn: word },
+    candidates: pool.map((t) => ({ bn: t })),
+    dim: 'bn',
+  })
+  return c ? { ...c, say: item.bn } : null
+}
+
+// ---- Listening & typing (13–18) ---------------------------------------------------------------------
+export function listenExercise(item) {
+  const pool = poolFor(item).filter((x) => x.id !== item.id)
+  if (item.kind === 'word') {
+    const c = choice({
+      itemId: item.id, title: 'Listen. Which word did you hear?', stem: { listen: true, say: item.bn, noAudio: true },
+      correct: { bn: item.bn, roman: item.roman }, candidates: pool.map((p) => ({ bn: p.bn, roman: p.roman })), dim: 'bn',
+    })
+    return c && { ...c, tag: 'listen' }
+  }
+  if (item.kind === 'letter' && item.example) {
+    const c = choice({
+      itemId: item.id, title: 'Listen. Which word did you hear?', stem: { listen: true, say: item.example.bn, noAudio: true },
+      correct: { art: item.example.emoji, bn: item.example.bn }, candidates: pool.map((p) => ({ art: p.example.emoji, bn: p.example.bn })), dim: 'bn',
+    })
+    return c && { ...c, tag: 'listen' }
+  }
+  if (item.kind === 'sentence' || item.kind === 'line' || item.kind === 'form') {
+    const c = choice({
+      itemId: item.id, title: 'Listen. What does it mean?', stem: { listen: true, say: item.bn, noAudio: true },
+      correct: { text: item.en }, candidates: (item.kind === 'line' ? Array.from(bank.values()).filter((x) => x.kind === 'line' && x.track === item.track) : pool).filter((x) => x.id !== item.id).map((p) => ({ text: p.en })), dim: 'text',
+    })
+    return c && { ...c, tag: 'listen' }
+  }
+  return null
+}
+
+export function typeExercise(item) {
+  if (item.kind !== 'word' || /\s/.test(item.bn)) return null
+  const n = splitClusters(item.bn).length
+  if (n < 2 || n > 7) return null
+  return { id: nextId(), type: 'type', tag: 'type', itemId: item.id, title: 'Type it in Bangla', stem: { art: item.art, text: item.en }, say: item.bn, target: item.bn }
+}
+
+/** One quick multiple-choice question about any item (used by the games). */
+export function quickChoice(item, trackKey) {
+  const cands = candidatesFor(item, [item], trackKey).filter((e) => e.type === 'choice')
+  const listen = Math.random() < 0.3 ? listenExercise(item) : null
+  const all = listen ? [...cands, listen] : cands
+  return all.length ? all[Math.floor(Math.random() * all.length)] : null
 }
 
 const candidatesFor = (item, lessonItems, track) => {
@@ -280,15 +348,16 @@ function matchExercise(items) {
   return { id: nextId(), type: 'match', title: 'Match them up', pairs }
 }
 
-// "Put the conversation in order": three consecutive lines as tiles.
-function conversationOrder(lines, scene) {
-  if (lines.length < 3) return null
-  const i = Math.floor(Math.random() * (lines.length - 2))
-  const trio = lines.slice(i, i + 3)
-  if (new Set(trio.map((l) => l.bn)).size < 3) return null
+// "Put the conversation / lines in order": 2–3 consecutive lines as tiles.
+function conversationOrder(lines, scene, title = 'Put the conversation in order') {
+  const n = Math.min(3, lines.length)
+  if (n < 2) return null
+  const i = Math.floor(Math.random() * (lines.length - n + 1))
+  const part = lines.slice(i, i + n)
+  if (new Set(part.map((l) => l.bn)).size < n) return null
   return {
-    id: nextId(), type: 'tiles', title: 'Put the conversation in order', stem: { art: scene?.emoji, text: scene?.title },
-    tiles: trio.map((l) => l.bn), target: trio.map((l) => l.bn).join('\n'), joiner: '\n', speakTiles: true, compact: true,
+    id: nextId(), type: 'tiles', title, stem: { art: scene?.emoji, text: scene?.title },
+    tiles: part.map((l) => l.bn), target: part.map((l) => l.bn).join('\n'), joiner: '\n', speakTiles: true, compact: true,
   }
 }
 
@@ -296,6 +365,7 @@ function conversationOrder(lines, scene) {
 export function buildLesson(lesson, trackKey) {
   uid = 0
   const young = trackKey === 'young'
+  const teen = trackKey === 'teen' || trackKey === 'senior'
   const learnItems = lesson.learn.map(get).filter(Boolean)
   const practiceItems = (lesson.practice ?? []).map(get).filter(Boolean)
 
@@ -309,6 +379,30 @@ export function buildLesson(lesson, trackKey) {
       return { id: nextId(), type: 'choice', itemId: c.rightId, title: c.title, stem: { ...c.stem, noAudio: true }, options, answer: options.findIndex((o) => o.bn === get(c.rightId).bn) }
     })
     return { learn: [], exercises: shuffle(exercises) }
+  }
+
+  if (lesson.kind === 'story') return { learn: [], exercises: [] }
+  if (lesson.kind === 'boss') return { learn: [], exercises: [], pool: (lesson.reviewOf ?? []).map(get).filter(Boolean) }
+
+  if (lesson.kind === 'poem' || lesson.kind === 'passage') {
+    const lines = learnItems
+    const all = lines.flatMap((l) => candidatesFor(l, lines, trackKey))
+    const take = (tag, n) => sample(all.filter((e) => e.tag === tag), n)
+    const exercises = shuffle([...take('meaning', 2), ...take('cloze', lesson.kind === 'poem' ? 3 : 2), ...take('tiles', 2)])
+    exercises.push(...sample(lines, 1).map(listenExercise).filter(Boolean))
+    if (lesson.kind === 'poem') {
+      const co = conversationOrder(lines, { emoji: lesson.emoji, title: lesson.title }, 'Put the lines in order')
+      if (co) exercises.push(co)
+    } else {
+      ;(lesson.questions ?? []).forEach((q) => {
+        const order = shuffle(q.options.map((_, i) => i))
+        exercises.push({
+          id: nextId(), type: 'choice', itemId: lines[0].id, title: q.q, stem: { text: 'Comprehension', noAudio: true },
+          options: order.map((i) => ({ text: q.options[i] })), answer: order.indexOf(q.answer),
+        })
+      })
+    }
+    return { learn: [], text: { lines, emoji: lesson.emoji, title: lesson.title, kind: lesson.kind, author: lesson.author }, exercises }
   }
 
   if (lesson.kind === 'dialogue') {
@@ -351,6 +445,14 @@ export function buildLesson(lesson, trackKey) {
   }
   choices = shuffle(choices).slice(0, cap)
 
+  if (teen) {
+    const listens = (n) => sample(learnItems.map(listenExercise).filter(Boolean), n)
+    if (lesson.kind === 'words' || lesson.kind === 'letters' || lesson.kind === 'sentences') choices.push(...listens(2))
+    if (lesson.kind === 'forms') choices.push(...listens(1))
+    choices = shuffle(choices)
+    if (lesson.kind === 'words') tail.push(...sample(learnItems.map(typeExercise).filter(Boolean), 2))
+  }
+
   if (lesson.kind === 'words' && !young) {
     tail.push(...sample(learnItems.map(buildExercise).filter(Boolean), 3))
   }
@@ -358,7 +460,7 @@ export function buildLesson(lesson, trackKey) {
   if (match) choices.splice(Math.min(4, choices.length), 0, match)
 
   if (lesson.kind === 'letters') {
-    const traceItems = young ? learnItems : sample(learnItems, 2)
+    const traceItems = young ? learnItems : sample(learnItems, teen ? 1 : 2)
     tail.push(...traceItems.map((i) => ({ id: nextId(), type: 'trace', itemId: i.id, title: 'Trace the letter', letter: i.bn })))
   }
 

@@ -4,6 +4,14 @@ import Speaker from '../Speaker'
 // With `speak`, a 🔊 button plays the Bangla (f.say overrides what is spoken; f.noAudio silences it).
 export default function Face({ f, big = false, speak = false }) {
   if (!f) return null
+  if (f.listen) {
+    return (
+      <div className="flex flex-col items-center gap-2 py-2">
+        <Speaker text={f.say} size="lg" label="Play the audio" className="!h-20 !w-20 !text-5xl" />
+        <span className="text-sm font-bold text-ink/50">Tap to listen</span>
+      </div>
+    )
+  }
   return (
     <div className="flex flex-col items-center text-center leading-tight">
       {f.art && <span className={`font-bangla ${big ? 'text-7xl' : 'text-4xl'}`}>{f.art}</span>}

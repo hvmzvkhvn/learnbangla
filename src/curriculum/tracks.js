@@ -2,6 +2,8 @@
 // A lesson is { id, title, emoji, kind, learn: [itemIds], practice?: [itemIds], tip?, cat? }.
 // kind: letters | signs | words | sentences | forms | review
 import { chunk } from './text'
+import { lessonsFrom, withReview, unit, catLessons, byBn } from './build'
+import { buildTeenTracks } from './teenTracks'
 import {
   vowelIds,
   consonantGroupIds,
@@ -18,45 +20,6 @@ import {
   ADDRESS_TIP,
 } from './bank'
 import { verbs } from '../data/sentences'
-
-const lessonsFrom = (prefix, title, emoji, kind, ids, size, extra = {}) =>
-  chunk(ids, size).map((c, i, arr) => ({
-    id: `${prefix}-${i + 1}`,
-    title: arr.length > 1 ? `${title} ${i + 1}` : title,
-    emoji,
-    kind,
-    learn: c,
-    ...extra,
-  }))
-
-const withReview = (prefix, title, lessons) =>
-  lessons.length > 1
-    ? [
-        ...lessons,
-        {
-          id: `${prefix}-review`,
-          title: `${title}: Review`,
-          emoji: '🏅',
-          kind: 'review',
-          learn: [],
-          reviewOf: lessons.flatMap((l) => [...l.learn, ...(l.practice ?? [])]),
-        },
-      ]
-    : lessons
-
-const unit = (id, title, emoji, blurb, lessons) => ({ id, title, emoji, blurb, lessons })
-
-const catLessons = (prefix, cat, size, opts = {}) => {
-  const meta = categoryMeta[cat]
-  const ids = opts.pick ? opts.pick(wordIdsByCat[cat]) : wordIdsByCat[cat]
-  return withReview(
-    prefix,
-    opts.title ?? meta.title,
-    lessonsFrom(prefix, opts.title ?? meta.title, meta.emoji, 'words', ids, size, { cat, tip: meta.note }),
-  )
-}
-
-const byBn = (cat, list) => wordIdsByCat[cat].filter((id) => list.includes(bank.get(id).bn))
 
 // ---- Tips ----------------------------------------------------------------
 const TIPS = {
@@ -143,7 +106,7 @@ const verbLessons = () => {
 }
 
 const sentenceUnitLessons = () => {
-  const lessons = Object.keys(sentenceIdsByGroup).flatMap((key) =>
+  const lessons = ['introduce', 'things', 'daily', 'describe'].flatMap((key) =>
     lessonsFrom(`o-s-${key}`, sentenceMeta[key].title, sentenceMeta[key].emoji, 'sentences', sentenceIdsByGroup[key], 5),
   )
   return withReview('o-s', 'Sentences', lessons)
@@ -233,9 +196,11 @@ const insertAfter = (units, id, extra) => units.splice(units.findIndex((u) => u.
 insertAfter(young.units, 'y-family', familyUnits('y', 'young'))
 insertAfter(older.units, 'o-people', familyUnits('o', 'older'))
 
-export const tracks = { young, older }
+const { teen, senior } = buildTeenTracks()
 
-export const trackList = [young, older]
+export const tracks = { young, older, teen, senior }
+
+export const trackList = [young, older, teen, senior]
 export const allLessons = (trackKey) => tracks[trackKey].units.flatMap((u) => u.lessons)
 
 export function findLesson(id) {

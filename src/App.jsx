@@ -4,6 +4,10 @@ import Home from './pages/Home'
 import Alphabet from './pages/Alphabet'
 import Words from './pages/Words'
 import Lesson from './pages/Lesson'
+import Story from './pages/Story'
+import Stories from './pages/Stories'
+import Play from './pages/Play'
+import Me from './pages/Me'
 import Review from './pages/Review'
 import NotFound from './pages/NotFound'
 
@@ -18,8 +22,13 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="alphabet" element={<Alphabet />} />
         <Route path="words" element={<Words />} />
+        <Route path="stories" element={<Stories />} />
+        <Route path="play" element={<Play />} />
+        <Route path="play/:game" element={<Play />} />
+        <Route path="me" element={<Me />} />
       </Route>
       <Route path="lesson/:lessonId" element={<Lesson />} />
+      <Route path="story/:storyId" element={<Story />} />
       <Route path="review" element={<Review />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

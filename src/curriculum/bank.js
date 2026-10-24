@@ -4,6 +4,11 @@ import { vowels, consonantGroups, vowelSigns } from '../data/alphabet'
 import { wordCategories } from '../data/words'
 import { sentenceGroups, verbs, pronounForms } from '../data/sentences'
 import { roster, phrases, scenes, politeYoung, politeOlder, unitLayout, ADDRESS_TIP } from '../data/family'
+import { conjuncts } from '../data/conjuncts'
+import { teenWordCategories } from '../data/teenWords'
+import { teenSentenceGroups, tenseVerbs, tensePronouns } from '../data/teenSentences'
+import { poems, passages, cinemaScenes } from '../data/teenText'
+import { stories } from '../data/stories'
 
 export const bank = new Map()
 const add = (item) => {
@@ -139,5 +144,79 @@ for (const track of ['young', 'older']) {
   })
   family[track] = { phraseIds, polite, scenes: sceneList }
 }
+
+// ---- 13–18 tracks: conjuncts, vocabulary, sentences, tenses, poems, passages, scenes, stories --------------------
+export const conjunctIds = conjuncts.map((c) =>
+  add({ id: `letter:${c.letter}`, kind: 'letter', section: 'Conjuncts', bn: c.letter, roman: c.roman, art: c.example.emoji, example: c.example }),
+)
+
+teenWordCategories.forEach((c) => {
+  categoryMeta[c.key] = { title: c.title, emoji: c.emoji, visual: false, note: c.note }
+  wordIdsByCat[c.key] = c.words.map((w) =>
+    add({ id: `word:${c.key}:${w.bn}`, kind: 'word', section: c.title, cat: c.key, visual: false, bn: w.bn, roman: w.roman, en: w.en, art: w.emoji }),
+  )
+})
+
+teenSentenceGroups.forEach((g) => {
+  sentenceMeta[g.key] = { title: g.title, emoji: g.emoji }
+  sentenceIdsByGroup[g.key] = g.sentences.map((x) =>
+    add({ id: `sent:${x.bn}`, kind: 'sentence', section: g.title, group: g.key, bn: x.bn, roman: x.roman, en: x.en, tokens: x.bn.split(' ') }),
+  )
+})
+
+// Perfect / future patterns: tense -> verb -> [আমি, তুমি, আপনি] form ids
+export const formIdsByTense = { perfect: {}, future: {} }
+tenseVerbs.forEach((v) => {
+  ;['perfect', 'future'].forEach((tense) => {
+    const t = v[tense]
+    formIdsByTense[tense][v.key] = tensePronouns.map((p, i) =>
+      add({
+        id: `form:${tense}:${v.key}:${p.roman}`, kind: 'form', section: `Verb: ${v.inf} (${tense})`, verb: `${tense}:${v.key}`,
+        pronoun: p.bn, form: t.forms[i], bn: `${p.bn} ${t.forms[i]}`, roman: `${p.roman} ${t.romans[i]}`,
+        en: `${p.en} ${t.enForm}`, tokens: [p.bn, t.forms[i]], allForms: t.forms,
+      }),
+    )
+  })
+})
+
+// Poems, passages and cinema conversations as lines (kind 'line'), per track.
+const TEEN_AGES = { teen: '13–15', senior: '16–18' }
+export const teenText = {}
+for (const track of ['teen', 'senior']) {
+  const mk = (sceneKey, sceneTitle, label, lines, speakerOf) =>
+    lines.map((l, i) =>
+      add({
+        id: `line:${track}:${sceneKey}:${i}`, kind: 'line', track, sceneKey, sceneTitle, section: `${label} · ${sceneTitle} (${TEEN_AGES[track]})`,
+        speaker: speakerOf(l), speakerName: speakerOf(l) === 'text' ? '' : roster[speakerOf(l)]?.en,
+        bn: l.bn, roman: l.roman, en: l.en, tokens: l.bn.split(' '), prevId: i > 0 ? `line:${track}:${sceneKey}:${i - 1}` : null,
+      }),
+    )
+  teenText[track] = {
+    poems: poems.map((p) => ({ key: p.key, title: p.title, emoji: p.emoji, author: p.author, note: p.note, lineIds: mk(`poem-${p.key}`, p.title, 'Poem', p[track], () => 'text') })),
+    passages: passages.map((p) => ({
+      key: p.key, title: p.title, emoji: p.emoji, questions: p[track].questions,
+      lineIds: mk(`read-${p.key}`, p.title, 'Reading', p[track].lines, () => 'text'),
+    })),
+    scenes: Object.entries(cinemaScenes).map(([key, sc]) => ({ key, title: sc.title, emoji: sc.emoji, lineIds: mk(`scene-${key}`, sc.title, 'Conversation', sc.lines, (l) => l.who) })),
+  }
+}
+
+// Story beats: every NPC line and every reply option, so they are reviewed and recorded like everything else.
+export const storyBeatIds = {}
+stories.forEach((st) => {
+  storyBeatIds[st.id] = []
+  Object.entries(st.nodes).forEach(([nid, n]) => {
+    if (n.bn) {
+      storyBeatIds[st.id].push(
+        add({ id: `beat:${st.id}:${nid}`, kind: 'beat', section: `Story · ${st.title}`, speaker: n.who, speakerName: st.cast[n.who]?.en, bn: n.bn, roman: n.roman, en: n.en, tokens: n.bn.split(' ') }),
+      )
+    }
+    ;(n.choice ?? []).forEach((opt, i) => {
+      storyBeatIds[st.id].push(
+        add({ id: `beat:${st.id}:${nid}:${i}`, kind: 'beat', section: `Story · ${st.title}`, speaker: 'you', speakerName: 'You (reply)', bn: opt.bn, roman: opt.roman, en: opt.en, tokens: opt.bn.split(' ') }),
+      )
+    })
+  })
+})
 
 export const allItems = () => Array.from(bank.values())
