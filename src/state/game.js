@@ -1,6 +1,7 @@
 // XP, levels, daily streak and badges for the 13–15 and 16–18 tracks. Saved in the browser (localStorage).
 import { useCallback, useSyncExternalStore } from 'react'
-import { usePersistent } from './persist'
+import { usePersistent, useTrack } from './persist'
+import { featuresOf } from '../curriculum/features'
 
 const pad = (n) => String(n).padStart(2, '0')
 const dayKey = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
@@ -11,6 +12,14 @@ const DEFAULT = {
   xp: 0, streak: 0, best: 0, last: '', badges: {},
   stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {} },
 }
+
+// Younger learners see their level as a garden that grows.
+export const STAGES = [
+  { name: 'Seed', emoji: '🌱' }, { name: 'Sprout', emoji: '🌿' }, { name: 'Flower', emoji: '🌼' },
+  { name: 'Sapling', emoji: '🌳' }, { name: 'Apple tree', emoji: '🍎' }, { name: 'Rainbow tree', emoji: '🌈' },
+  { name: 'Star tree', emoji: '🌟' },
+]
+export const stageOf = (level) => STAGES[Math.min(level, STAGES.length) - 1]
 
 /** Level n needs 100 + 40·(n−1) XP to complete. */
 export function levelInfo(xp) {
@@ -69,10 +78,11 @@ export const useToasts = () =>
 // ---- the hook ------------------------------------------------------------------------------------------------
 const merge = (prev) => ({ ...DEFAULT, ...prev, stats: { ...DEFAULT.stats, ...(prev?.stats ?? {}) }, badges: { ...(prev?.badges ?? {}) } })
 
-function touch(g) {
+// gentle: a missed day pauses the streak instead of resetting it (younger tracks)
+function touch(g, gentle = false) {
   const t = today()
   if (g.last === t) return g
-  const streak = g.last === yesterday() ? g.streak + 1 : 1
+  const streak = g.last === yesterday() ? g.streak + 1 : gentle ? Math.max(1, g.streak) : 1
   return { ...g, last: t, streak, best: Math.max(g.best, streak) }
 }
 
@@ -92,6 +102,8 @@ function evaluate(prev, next) {
 
 export function useGame() {
   const [raw, set] = usePersistent('lb.game', DEFAULT)
+  const [trackKey] = useTrack()
+  const gentle = Boolean(featuresOf(trackKey).gentleStreak)
   const game = merge(raw)
 
   /** Apply a change: { xp, stats: (stats) => stats }. Updates the streak and checks badges. */
@@ -99,11 +111,11 @@ export function useGame() {
     ({ xp = 0, stats } = {}) =>
       set((prevRaw) => {
         const prev = merge(prevRaw)
-        let next = touch({ ...prev, xp: prev.xp + xp })
+        let next = touch({ ...prev, xp: prev.xp + xp }, gentle)
         if (stats) next = { ...next, stats: { ...next.stats, ...stats(next.stats) } }
         return evaluate(prev, next)
       }),
-    [set],
+    [set, gentle],
   )
   const addXp = useCallback((n) => act({ xp: n }), [act])
   const reset = useCallback(() => set(DEFAULT), [set])

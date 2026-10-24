@@ -4,6 +4,8 @@
 import { chunk } from './text'
 import { lessonsFrom, withReview, unit, catLessons, byBn } from './build'
 import { buildTeenTracks } from './teenTracks'
+import { FEATURES } from './features'
+import { stories } from '../data/stories'
 import {
   vowelIds,
   consonantGroupIds,
@@ -197,6 +199,33 @@ insertAfter(young.units, 'y-family', familyUnits('y', 'young'))
 insertAfter(older.units, 'o-people', familyUnits('o', 'older'))
 
 const { teen, senior } = buildTeenTracks()
+
+// per-age features (XP, games, tracing…) live in features.js
+young.features = FEATURES.young
+older.features = FEATURES.older
+teen.features = FEATURES.teen
+senior.features = FEATURES.senior
+
+// Ages 5–7: the end-of-unit review becomes a gentle, untimed treasure hunt.
+young.units.forEach((u) => {
+  u.lessons = u.lessons.map((l) =>
+    l.kind === 'review' ? { ...l, treasure: true, emoji: '🎁', title: l.title.replace(': Review', ': Treasure Hunt') } : l,
+  )
+})
+
+// Ages 8–12: four simple story chats, placed where the vocabulary has just been taught.
+const addStory = (track, prefix, unitId, storyId) => {
+  const u = track.units.find((x) => x.id === unitId)
+  const st = stories.find((x) => x.id === storyId)
+  const lesson = { id: `${prefix}-story-${storyId}`, title: `Story: ${st.title}`, emoji: st.emoji, kind: 'story', learn: [], storyId, track: track.key }
+  const at = u.lessons.findIndex((l) => l.kind === 'review')
+  if (at >= 0) u.lessons.splice(at, 0, lesson)
+  else u.lessons.push(lesson)
+}
+addStory(older, 'o', 'o-hello', 'newfriend')
+addStory(older, 'o', 'o-numbers', 'sweetshop')
+addStory(older, 'o', 'o-ft-elders', 'nanivisit')
+addStory(older, 'o', 'o-around', 'rainyday')
 
 export const tracks = { young, older, teen, senior }
 

@@ -3,7 +3,7 @@ import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { findLesson, nextLessonId } from '../curriculum/tracks'
 import { buildLesson } from '../curriculum/exercises'
 import { useProgress } from '../state/persist'
-import { useGame } from '../state/game'
+import { stageOf, useGame } from '../state/game'
 import LearnCard from '../components/lesson/LearnCard'
 import ChoiceQ from '../components/lesson/ChoiceQ'
 import MatchQ from '../components/lesson/MatchQ'
@@ -30,7 +30,9 @@ export default function Lesson() {
 
 function Player({ lesson, unit, track }) {
   const navigate = useNavigate()
-  const teen = track.theme === 'teen'
+  const feat = track.features
+  const xpOn = feat.xp
+  const playful = feat.playful
   const { progress, complete } = useProgress()
   const { act, level } = useGame()
   const built = useMemo(() => buildLesson(lesson, track.key), [lesson, track.key])
@@ -61,8 +63,8 @@ function Player({ lesson, unit, track }) {
     const first = !progress[lesson.id]
     complete(lesson.id, stars)
     let bonus = 0
-    if (teen) {
-      bonus = 20 + stars * 10 + (first ? 10 : 0) + extraXp
+    if (xpOn) {
+      bonus = 20 + stars * 10 + (first ? 10 : 0) + extraXp + (lesson.treasure ? 15 : 0)
       act({
         xp: bonus,
         stats: (s) => ({
@@ -89,7 +91,7 @@ function Player({ lesson, unit, track }) {
   const solved = (ex) => (isClean) => {
     clean.current[ex.id] = isClean
     setStatus('solved')
-    if (!teen) return
+    if (!xpOn) return
     const c = isClean ? combo + 1 : 0
     setCombo(c)
     const g = (isClean ? 10 : 4) + (isClean && c >= 3 ? Math.min(10, (c - 2) * 2) : 0)
@@ -103,7 +105,17 @@ function Player({ lesson, unit, track }) {
     navigator.vibrate?.(60)
   }
 
-  const bar = teen ? (
+  const traceDone = (stars) => {
+    if (xpOn) {
+      const g = 3 + stars * 3
+      setSessionXp((x) => x + g)
+      setGain({ id: Math.random(), g })
+      act({ xp: g })
+    }
+    advance()
+  }
+
+  const bar = xpOn ? (
     <div className="flex items-center gap-2">
       {combo >= 2 && <span className="animate-pop rounded-full bg-secondary px-3 py-1 text-sm font-extrabold text-white">🔥 x{combo}</span>}
       <span className="relative rounded-full bg-accent px-3 py-1 text-sm font-extrabold">
@@ -125,22 +137,24 @@ function Player({ lesson, unit, track }) {
         {result.stars >= 2 && <Confetti />}
         <Toasts />
         <div className="py-10 text-center">
+          {lesson.treasure && <p className="animate-pop text-8xl">🎁</p>}
           <p className="animate-pop text-7xl">{'⭐'.repeat(result.stars)}</p>
           <h1 className="mt-4 text-3xl font-extrabold text-primary">
-            {lesson.kind === 'boss' ? (result.stars >= 2 ? 'Boss defeated!' : 'You survived!') : result.stars === 3 ? 'Perfect!' : result.stars === 2 ? 'Well done!' : 'Nice work!'}
+            {lesson.treasure ? 'Treasure found!' : lesson.kind === 'boss' ? (result.stars >= 2 ? 'Boss defeated!' : 'You survived!') : result.stars === 3 ? 'Perfect!' : result.stars === 2 ? 'Well done!' : 'Nice work!'}
           </h1>
           <p className="mt-2 text-ink/60">
             You finished <b>{lesson.title}</b>.
             {result.stars < 3 && ' Try it again to earn more stars!'}
           </p>
-          {teen && (
+          {playful && <p className="mt-3 text-lg font-extrabold text-primary">⭐ Tara says: “{result.stars === 3 ? 'Wonderful!' : result.stars === 2 ? 'Well done!' : 'Great try!'}”</p>}
+          {xpOn && (
             <div className="mx-auto mt-5 max-w-xs rounded-3xl bg-white p-4 text-left shadow-md">
               <div className="flex justify-between text-sm font-extrabold">
                 <span>XP this lesson</span>
                 <span className="text-success">+{sessionXp + result.bonus}</span>
               </div>
               <div className="mt-2 flex justify-between text-sm font-bold text-ink/60">
-                <span>Level {level.level}</span>
+                <span>{feat.garden ? `${stageOf(level.level).emoji} ${stageOf(level.level).name}` : `Level ${level.level}`}</span>
                 <span>{level.into}/{level.need} XP</span>
               </div>
               <div className="mt-1 h-3 overflow-hidden rounded-full bg-primary/10">
@@ -175,7 +189,9 @@ function Player({ lesson, unit, track }) {
           <p className="mt-3 text-sm font-extrabold uppercase tracking-wide text-ink/40">{unit.title}</p>
           <h1 className="text-3xl font-extrabold text-primary">{lesson.title}</h1>
           <p className="mt-2 text-ink/60">
-            {lesson.kind === 'review'
+            {lesson.treasure
+              ? 'A treasure hunt! Answer the questions to open the chest. No rush — take your time.'
+              : lesson.kind === 'review'
               ? 'A mix of everything from this unit.'
               : lesson.kind === 'boss'
                 ? 'A 45-second sprint through everything in this unit. Build a combo!'
@@ -254,7 +270,7 @@ function Player({ lesson, unit, track }) {
           {step.ex.type === 'match' && <MatchQ key={step.ex.id} {...common(step.ex)} />}
           {step.ex.type === 'tiles' && <TilesQ key={step.ex.id} {...common(step.ex)} />}
           {step.ex.type === 'type' && <TypeQ key={step.ex.id} {...common(step.ex)} onTyped={() => act({ stats: (s) => ({ typed: s.typed + 1 }) })} />}
-          {step.ex.type === 'trace' && <TraceQ key={step.ex.id} ex={step.ex} onSolved={() => advance()} />}
+          {step.ex.type === 'trace' && <TraceQ key={step.ex.id} ex={step.ex} lenient={playful} onSolved={traceDone} />}
 
           {step.ex.type !== 'trace' && (
             <div className="mt-6 min-h-[5.5rem]">

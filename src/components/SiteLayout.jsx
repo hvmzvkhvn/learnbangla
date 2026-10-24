@@ -1,30 +1,24 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { allLessons, tracks } from '../curriculum/tracks'
-import { useProgress, useTrack } from '../state/persist'
-import { useGame } from '../state/game'
+import { tracks } from '../curriculum/tracks'
+import { useTrack } from '../state/persist'
+import { stageOf, useGame } from '../state/game'
 import SoundToggle from './SoundToggle'
 import Toasts from './Toasts'
 
-const KIDS_TABS = [
-  { to: '/', label: 'Learn', icon: '🏠', end: true },
-  { to: '/alphabet', label: 'Alphabet', icon: '🔤' },
-  { to: '/words', label: 'Words', icon: '📚' },
-]
-const TEEN_TABS = [
-  { to: '/', label: 'Learn', icon: '🏠', end: true },
-  { to: '/stories', label: 'Stories', icon: '💬' },
-  { to: '/play', label: 'Play', icon: '🎮' },
-  { to: '/me', label: 'Me', icon: '🏅' },
-]
+const LEARN = { to: '/', label: 'Learn', icon: '🏠', end: true }
+const STORIES = { to: '/stories', label: 'Stories', icon: '💬' }
+const PLAY = { to: '/play', label: 'Play', icon: '🎮' }
+const tabsFor = (feat) =>
+  feat.stories ? [LEARN, STORIES, PLAY, { to: '/me', label: 'Me', icon: '🏅' }] : [LEARN, PLAY, { to: '/me', label: 'Stickers', icon: '🌟' }]
 
 export default function SiteLayout() {
   const [trackKey] = useTrack()
-  const { progress } = useProgress()
   const { game, level } = useGame()
   const track = trackKey ? tracks[trackKey] : null
-  const teen = track?.theme === 'teen'
-  const stars = track ? allLessons(trackKey).reduce((sum, l) => sum + (progress[l.id]?.stars ?? 0), 0) : null
-  const tabs = teen ? TEEN_TABS : KIDS_TABS
+  const feat = track?.features
+  const garden = Boolean(feat?.garden)
+  const stage = stageOf(level.level)
+  const tabs = tabsFor(feat ?? { stories: false })
 
   return (
     <div className="min-h-screen bg-background pb-24">
@@ -36,18 +30,13 @@ export default function SiteLayout() {
         </span>
         <span className="flex items-center gap-2">
           <SoundToggle />
-          {teen ? (
+          {feat && (
             <>
               <span className="flex h-11 items-center gap-1 rounded-full bg-white px-3 text-sm font-extrabold text-secondary shadow-sm" title="Day streak">🔥 {game.streak}</span>
-              <span className="flex h-11 items-center gap-1 rounded-full bg-accent px-4 font-extrabold shadow-sm" title="Level">⚡ Lv {level.level}</span>
-            </>
-          ) : (
-            stars !== null && (
-              <span className="flex h-11 items-center gap-1.5 rounded-full bg-accent px-4 font-extrabold shadow-sm" title="Stars earned">
-                <span className="text-xl leading-none">⭐</span>
-                {stars}
+              <span className="flex h-11 items-center gap-1 rounded-full bg-accent px-4 font-extrabold shadow-sm" title="Level">
+                {garden ? `${stage.emoji} Lv ${level.level}` : `⚡ Lv ${level.level}`}
               </span>
-            )
+            </>
           )}
         </span>
       </header>
