@@ -11,6 +11,7 @@ import Me from './pages/Me'
 import Review from './pages/Review'
 import StrokeReview from './pages/StrokeReview'
 import Practice from './pages/Practice'
+import Studio from './pages/Studio'
 import NotFound from './pages/NotFound'
 
 // The site is currently fully public — no login. Progress lives in the browser (localStorage).
@@ -34,6 +35,7 @@ export default function App() {
       <Route path="story/:storyId" element={<Story />} />
       <Route path="review" element={<Review />} />
       <Route path="review/strokes" element={<StrokeReview />} />
+      <Route path="studio" element={<Studio />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

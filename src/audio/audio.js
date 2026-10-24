@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { norm, sayFor } from './norm'
 import { usePersistent } from '../state/persist'
+import { myVoiceUrl } from './voiceStore'
 
 const BASE = import.meta.env.BASE_URL
 let manifest = null
@@ -13,6 +14,8 @@ let token = 0
 const listeners = new Set()
 
 const notify = () => listeners.forEach((f) => f())
+
+export const getManifest = () => manifest
 
 export function loadManifest() {
   if (!loading) {
@@ -49,18 +52,21 @@ export function stop() {
 }
 
 /** Play one piece of Bangla text. Resolves true if it played to the end. */
-export async function speak(text, { force = false } = {}) {
+export async function speak(text, { force = false, skipMine = false } = {}) {
   if (!text || (!force && !soundOn())) return false
   await loadManifest()
   const key = norm(text)
   stop()
   const my = token
+  const mine = skipMine ? null : await myVoiceUrl(key)
+  if (token !== my) return false
   const file = manifest?.[key]
-  if (file) {
-    let el = elements.get(file)
+  if (mine || file) {
+    const src = mine ?? `${BASE}audio/${file}`
+    let el = elements.get(src)
     if (!el) {
-      el = new Audio(`${BASE}audio/${file}`)
-      elements.set(file, el)
+      el = new Audio(src)
+      elements.set(src, el)
     }
     el.currentTime = 0
     current = el
