@@ -9,7 +9,7 @@ export const today = () => dayKey(new Date())
 const yesterday = () => dayKey(new Date(Date.now() - 86400000))
 
 const DEFAULT = {
-  xp: 0, streak: 0, best: 0, last: '', badges: {},
+  xp: 0, streak: 0, best: 0, last: '', badges: {}, activity: {},
   stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {} },
 }
 
@@ -78,6 +78,15 @@ export const useToasts = () =>
 // ---- the hook ------------------------------------------------------------------------------------------------
 const merge = (prev) => ({ ...DEFAULT, ...prev, stats: { ...DEFAULT.stats, ...(prev?.stats ?? {}) }, badges: { ...(prev?.badges ?? {}) } })
 
+/** XP earned per day, kept for the last 30 days (the parent view charts it). */
+function recentActivity(activity = {}, xp) {
+  const t = today()
+  const out = { ...activity, [t]: (activity[t] ?? 0) + xp }
+  const days = Object.keys(out).sort()
+  days.slice(0, Math.max(0, days.length - 30)).forEach((d) => delete out[d])
+  return out
+}
+
 // gentle: a missed day pauses the streak instead of resetting it (younger tracks)
 function touch(g, gentle = false) {
   const t = today()
@@ -112,6 +121,7 @@ export function useGame() {
       set((prevRaw) => {
         const prev = merge(prevRaw)
         let next = touch({ ...prev, xp: prev.xp + xp }, gentle)
+        if (xp) next = { ...next, activity: recentActivity(prev.activity, xp) }
         if (stats) next = { ...next, stats: { ...next.stats, ...stats(next.stats) } }
         return evaluate(prev, next)
       }),

@@ -12,12 +12,13 @@ import Review from './pages/Review'
 import StrokeReview from './pages/StrokeReview'
 import Practice from './pages/Practice'
 import Studio from './pages/Studio'
+import Account from './pages/Account'
+import ParentView from './pages/ParentView'
+import Privacy from './pages/Privacy'
 import NotFound from './pages/NotFound'
 
-// The site is currently fully public — no login. Progress lives in the browser (localStorage).
-// The accounts code (AuthContext, Login, SignupChild, ActivateParent, ParentDashboard,
-// ProtectedRoute, child layout/pages) and the Supabase backend are still in the repo, just not
-// routed. To bring accounts back, re-add those routes and wrap the tree in <AuthProvider>.
+// The site works fully without an account: progress lives in the browser. Accounts (src/sync, /account, /parent)
+// add saving across devices and a parent view; they stay switched off in production until the site is built with VITE_ACCOUNTS=on.
 export default function App() {
   return (
     <Routes>
@@ -29,10 +30,13 @@ export default function App() {
         <Route path="play" element={<Play />} />
         <Route path="play/:game" element={<Play />} />
         <Route path="practice" element={<Practice />} />
+        <Route path="account" element={<Account />} />
+        <Route path="parent" element={<ParentView />} />
         <Route path="me" element={<Me />} />
       </Route>
       <Route path="lesson/:lessonId" element={<Lesson />} />
       <Route path="story/:storyId" element={<Story />} />
+      <Route path="privacy" element={<Privacy />} />
       <Route path="review" element={<Review />} />
       <Route path="review/strokes" element={<StrokeReview />} />
       <Route path="studio" element={<Studio />} />

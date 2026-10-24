@@ -1,6 +1,6 @@
 # Learn Bangla
 
-A free, no-login Bangla learning site with four tracks — **Little Learners (5–7)**, **Explorers (8–12)**, **Voyagers (13–15)** and **Pathfinders (16–18)** — in Bangladeshi Bangla. Built with Vite + React, React Router and Tailwind. Progress is saved in the browser (localStorage).
+A free Bangla learning site (no login needed) with four tracks — **Little Learners (5–7)**, **Explorers (8–12)**, **Voyagers (13–15)** and **Pathfinders (16–18)** — in Bangladeshi Bangla. Built with Vite + React, React Router and Tailwind. Progress is saved in the browser (localStorage); a parent account is optional.
 
 ## Run it
 
@@ -77,99 +77,51 @@ npm run audio             # only records what is new; add -- --force to redo eve
 
 This uses a free neural Bangladeshi voice (`bn-BD-NabanitaNeural`; change with `AUDIO_VOICE`, e.g. `bn-BD-PradeepNeural` for a male voice). Those voices come from Microsoft Edge's read-aloud service through an unofficial library, so treat them as **prototype audio**: before a public launch, replace them with licensed text-to-speech or, better, real recordings. To use your own recording, replace the mp3 in `public/audio/` (same filename — the manifest shows which file is which text). Marks that can't be spoken alone (ং ঃ ঁ ৎ) are recorded with a carrier vowel — see `src/audio/norm.js`.
 
-## Accounts (currently switched off)
+## What each age group gets
 
-The earlier login / parent-activation code and the Supabase backend are still in the repo but not routed (see the comment in `src/App.jsx`). The notes below describe that setup.
+All behaviour that differs by age lives in one file, `src/curriculum/features.js`.
 
----
+| | 5–7 | 8–12 | 13–15 / 16–18 |
+|---|---|---|---|
+| XP, levels, daily streak, badges | ✓ (garden stages, stickers) | ✓ | ✓ |
+| A missed day | pauses the streak | pauses the streak | resets it |
+| Games (`/play`) | Memory (pictures), Tap the Picture, Daily Treat — no timers | Daily, Word Blitz (90 s), Memory, Type It | Daily, Word Blitz (60 s), Memory, Type It |
+| Story chats | – | 4 stories | 5 stories each |
+| Unit finale | Treasure hunt (untimed) | – | Boss level (timed) |
+| Tracing | every letter, one word per lesson | 2 letters, signs, a word | every letter, signs, syllables, 2 words, digits |
 
-## Phase 1 accounts setup
+**Tracing** (`src/components/lesson/TraceQ.jsx`, `src/curriculum/trace.js`): the learner draws over the glyph and the drawing is scored 1–3 stars for how much of the letter it covers and how little it strays (more forgiving for the younger tracks). A *Watch how* animation of the stroke order is drafted automatically from the font; it stays hidden until a Bangla speaker has checked it on **`/review/strokes`** and the approved list is pasted into `src/data/strokesApproved.js`.
 
-A children's app for learning Bangla, built with Vite + React, React Router, Tailwind CSS, and Supabase.
+**Review today** (`/practice`, `src/state/srs.js`): every answer is recorded; things answered wrong come back straight away, right ones after 1, 2, 4, 8, 16, 32 days.
 
-Phase 1 covers: authentication (child signup → parent activation → login), role-based routing, the child and parent dashboard shells, the database schema, and the `useUnlock` content-gating hook. No lesson content yet — that's Phase 2+.
+**Say it** (`src/components/SayIt.jsx`): record yourself on any flashcard and hear it next to the native clip. The recording never leaves the device.
 
-## Stack
+**Save code** (Me page): copy a code to move progress to another device without an account.
 
-- Vite + React
-- React Router
-- Tailwind CSS (colour palette + Nunito font wired up in `tailwind.config.js` / `src/index.css`)
-- Supabase (Postgres + Auth + Edge Functions)
+## Your own voice (Voice studio)
 
-## 1. Create the Supabase project
+`/studio` (linked from `/review`) walks through every spoken clip — letters first — and records it in your own voice. Clips are trimmed, levelled and encoded to small mp3s, kept in the browser, and played instead of the prototype voice on that device. **Download my recordings** produces a zip whose file names are exactly the existing ones: unzip it into `public/audio/`, commit and push, and the recordings replace the prototype voice for everyone. No manifest change is needed.
 
-1. Create a project at [supabase.com](https://supabase.com).
-2. In **Project Settings → API**, copy the Project URL and `anon` public key.
-3. Copy `.env.example` to `.env` and fill in both values:
+## Installable and offline
 
-   ```bash
-   cp .env.example .env
-   ```
+The site is a PWA: a web manifest, icons and a service worker (generated at build time by `build/sw-plugin.js`) that caches the app so it opens without internet. Audio is cached as it is played, and the Me page has **Save audio for offline** (about 50 MB) to fetch all of it.
 
-## 2. Run the database migration
+## Accounts and the parent view
 
-In the Supabase SQL editor, run the contents of [`supabase/migrations/20261016000000_init.sql`](supabase/migrations/20261016000000_init.sql). This creates the `profiles`, `progress`, and `unlocks` tables, enables Row Level Security with the policies each role needs, and adds a trigger that seeds every new child account with the `child_mode` unlock.
+A parent signs in with email + password (`/account`) and adds **learners** (a first name and an age group — children have no logins). Each learner's progress is stored in Supabase and merged with what is on the device, so it follows them between devices (`src/sync/`). The **parent view** (`/parent`) shows each learner's level, XP, streak, lessons done, XP over the last week and the words they keep getting wrong. `/privacy` explains what is stored. Parent screens sit behind a small "grown-ups only" number check.
 
-## 3. Deploy the Edge Functions
+The app works fully without an account. Accounts are **off in production unless the site is built with `VITE_ACCOUNTS=on`** (they are on in `npm run dev`).
 
-Two Edge Functions handle the parts of the auth flow that need elevated (service-role) database access:
-
-- **`signup-child`** — creates the child's auth user + locked profile, then emails the parent an activation link.
-- **`activate-parent`** — validates the activation link, creates the parent's auth user + profile, and flips the child's account to `active`.
+Setup, once per Supabase project:
 
 ```bash
-supabase functions deploy signup-child
-supabase functions deploy activate-parent
+cp .env.example .env     # VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY (Project Settings → API)
+supabase link --project-ref <ref>
+supabase db push         # creates learners + learner_state with row-level security, and delete_my_account()
 ```
 
-Then set the secrets they need (service role key + URL are provided automatically by Supabase; you only need to add the email ones):
+For the deployed site, set the repository variables `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` (public by design) and `VITE_ACCOUNTS=on` (Settings → Secrets and variables → Actions → Variables); the workflow passes them to the build.
 
-```bash
-supabase secrets set RESEND_API_KEY=your_resend_api_key
-supabase secrets set EMAIL_FROM="Learn Bangla <hello@yourdomain.com>"
-```
+Before switching accounts on for the public, decide how sign-up emails are sent: with *Confirm email* on, Supabase's built-in sender only reaches members of the Supabase team, so connect your own SMTP service (Authentication → Emails → SMTP settings, e.g. Resend with `learnbangla.app` verified). Without a sender there is also no "forgot password" email. A free Supabase project pauses after a week without activity; the Pro plan avoids that.
 
-[Resend](https://resend.com) is used to send the parent activation email — it has a free tier that's enough for development. Without `RESEND_API_KEY` set, child signup still works and the account is created, but no email is sent (a warning is returned so you can still find the activation link in the `profiles.activation_token` column while developing).
-
-## 4. Run the app
-
-```bash
-npm install
-npm run dev
-```
-
-## How the auth flow works
-
-1. **Child signs up** (`/signup/child`) with name, age, email, password, and parent email. This calls the `signup-child` Edge Function, which creates the child's account with `status = "locked"` and emails the parent an activation link. The child is then shown a holding screen at `/waiting`.
-2. **Parent opens the email link** (`/activate/:token`) and creates their own account (name, email, password). This calls the `activate-parent` Edge Function, which creates the parent's account and links it to the child, flipping the child's `status` to `"active"`.
-3. **Login** (`/login`) is a single form for both roles — after signing in, the app reads the user's `profiles` row and routes child → `/child`, parent/teacher → `/parent`. A child whose account is still locked is sent to `/waiting` regardless of where they land.
-
-## Project structure
-
-```
-src/
-  context/AuthContext.jsx   # session + profile, available app-wide via useAuth()
-  hooks/useUnlock.js        # content-gating hook (checks the `unlocks` table)
-  hooks/useStarTotal.js     # sums stars_earned across a user's progress rows
-  components/               # ProtectedRoute, ChildLayout, BottomNav, StarCounter, Spinner
-  pages/                    # Login, SignupChild, WaitingForParent, ActivateParent,
-                             # ChildDashboard, ChildProgress, ChildSettings, ParentDashboard
-supabase/
-  migrations/20261016000000_init.sql  # tables, RLS policies, default-unlock trigger
-  functions/                # signup-child, activate-parent
-```
-
-## Using `useUnlock` in later phases
-
-```jsx
-import { useUnlock } from '../hooks/useUnlock'
-
-function AlphabetModule() {
-  const { unlocked, loading } = useUnlock('child_mode')
-
-  if (loading) return <Spinner />
-  if (!unlocked) return <LockedScreen />
-
-  return <AlphabetLessons />
-}
-```
+Database: `supabase/migrations/20261024000000_accounts.sql` (tables, policies, an 8-learner limit, `delete_my_account()`); the earlier Phase 1 tables were retired in `…000100_drop_phase1.sql`.

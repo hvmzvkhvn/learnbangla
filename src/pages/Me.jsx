@@ -4,6 +4,7 @@ import { useProgress, useTrack } from '../state/persist'
 import { allLessons, tracks } from '../curriculum/tracks'
 import SaveCode from '../components/SaveCode'
 import OfflineCard from '../components/OfflineCard'
+import AccountCard from '../components/AccountCard'
 
 export default function Me() {
   const { game, level, reset } = useGame()
@@ -67,6 +68,7 @@ export default function Me() {
         })}
       </div>
 
+      <AccountCard />
       <OfflineCard />
       <SaveCode />
 

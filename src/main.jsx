@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import { registerServiceWorker } from './pwa'
+import { bootSync } from './sync/engine'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,3 +15,4 @@ createRoot(document.getElementById('root')).render(
 )
 
 registerServiceWorker()
+bootSync()

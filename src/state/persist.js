@@ -4,6 +4,13 @@ import { useCallback, useSyncExternalStore } from 'react'
 const cache = new Map()
 const mem = new Map()
 const subs = new Set()
+const writeSubs = new Set()
+
+/** Called with the key after any write made through this module (used to sync to an account). */
+export function onPersistentWrite(cb) {
+  writeSubs.add(cb)
+  return () => writeSubs.delete(cb)
+}
 
 function readRaw(key) {
   try {
@@ -50,6 +57,7 @@ export function updatePersistent(key, fallback, fn) {
     mem.set(key, raw)
   }
   subs.forEach((f) => f())
+  writeSubs.forEach((f) => f(key))
 }
 
 export function usePersistent(key, fallback) {
@@ -65,6 +73,7 @@ export function usePersistent(key, fallback) {
         mem.set(key, raw)
       }
       subs.forEach((f) => f())
+      writeSubs.forEach((f) => f(key))
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [key],
