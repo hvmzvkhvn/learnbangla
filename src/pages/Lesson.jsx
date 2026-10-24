@@ -4,6 +4,7 @@ import { findLesson, nextLessonId } from '../curriculum/tracks'
 import { buildLesson } from '../curriculum/exercises'
 import { useProgress } from '../state/persist'
 import { stageOf, useGame } from '../state/game'
+import { recordAnswer } from '../state/srs'
 import LearnCard from '../components/lesson/LearnCard'
 import ChoiceQ from '../components/lesson/ChoiceQ'
 import MatchQ from '../components/lesson/MatchQ'
@@ -90,6 +91,7 @@ function Player({ lesson, unit, track }) {
 
   const solved = (ex) => (isClean) => {
     clean.current[ex.id] = isClean
+    recordAnswer(ex.itemId, isClean)
     setStatus('solved')
     if (!xpOn) return
     const c = isClean ? combo + 1 : 0

@@ -10,6 +10,7 @@ import Play from './pages/Play'
 import Me from './pages/Me'
 import Review from './pages/Review'
 import StrokeReview from './pages/StrokeReview'
+import Practice from './pages/Practice'
 import NotFound from './pages/NotFound'
 
 // The site is currently fully public — no login. Progress lives in the browser (localStorage).
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="stories" element={<Stories />} />
         <Route path="play" element={<Play />} />
         <Route path="play/:game" element={<Play />} />
+        <Route path="practice" element={<Practice />} />
         <Route path="me" element={<Me />} />
       </Route>
       <Route path="lesson/:lessonId" element={<Lesson />} />

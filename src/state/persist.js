@@ -40,6 +40,18 @@ function subscribe(cb) {
   }
 }
 
+/** Read-modify-write outside React (for things like recording an answer). */
+export function updatePersistent(key, fallback, fn) {
+  const v = fn(snapshot(key, fallback))
+  const raw = JSON.stringify(v)
+  try {
+    localStorage.setItem(key, raw)
+  } catch {
+    mem.set(key, raw)
+  }
+  subs.forEach((f) => f())
+}
+
 export function usePersistent(key, fallback) {
   const value = useSyncExternalStore(subscribe, () => snapshot(key, fallback))
   const set = useCallback(

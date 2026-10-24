@@ -3,6 +3,7 @@ import Face from '../lesson/Face'
 import { quickChoice } from '../../curriculum/exercises'
 import { shuffle } from '../../curriculum/text'
 import { speak } from '../../audio/audio'
+import { recordAnswer } from '../../state/srs'
 
 /**
  * Timed multiple-choice rounds. Fast answers build a combo; mistakes break it.
@@ -60,6 +61,7 @@ export default function BlitzGame({ pool, trackKey, seconds: secondsProp = 60, o
     if (picked !== null || done.current) return
     setPicked(i)
     const ok = i === q.answer
+    recordAnswer(q.itemId, ok)
     if (ok) {
       const c = combo + 1
       setCombo(c)

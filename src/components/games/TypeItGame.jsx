@@ -3,6 +3,7 @@ import TypeQ from '../lesson/TypeQ'
 import { typeExercise } from '../../curriculum/exercises'
 import { shuffle } from '../../curriculum/text'
 import { useGame } from '../../state/game'
+import { recordAnswer } from '../../state/srs'
 
 /** Hear a word, type it in Bangla. Six rounds. onFinish({ correct, total }) */
 export default function TypeItGame({ pool, count = 6, onFinish }) {
@@ -28,6 +29,7 @@ export default function TypeItGame({ pool, count = 6, onFinish }) {
         ex={ex}
         onTyped={() => act({ stats: (s) => ({ typed: s.typed + 1 }) })}
         onSolved={(clean) => {
+          recordAnswer(ex.itemId, clean)
           if (clean) right.current += 1
           setStatus('solved')
         }}

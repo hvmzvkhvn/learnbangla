@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import ChoiceQ from '../lesson/ChoiceQ'
+import { recordAnswer } from '../../state/srs'
 
 /** A fixed set of multiple-choice questions, one after another. onFinish({ correct, total }) */
 export default function QuizRunner({ exercises, onFinish, label = 'Question' }) {
@@ -23,6 +24,7 @@ export default function QuizRunner({ exercises, onFinish, label = 'Question' }) 
         key={ex.id}
         ex={ex}
         onSolved={(clean) => {
+          recordAnswer(ex.itemId, clean)
           if (clean) right.current += 1
           setStatus('solved')
         }}

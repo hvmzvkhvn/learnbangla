@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useDue } from '../state/srs'
 import { tracks, allLessons } from '../curriculum/tracks'
 import { useProgress, useTrack } from '../state/persist'
 import { stageOf, today, useGame } from '../state/game'
@@ -87,6 +88,8 @@ function GameHome({ track, lessons, done, next, progress }) {
         </Link>
       </div>
 
+      <ReviewCard track={track} progress={progress} playful={playful} />
+
       <UnitList track={track} progress={progress} nextId={next.id} />
 
       <div className="mt-6 grid grid-cols-2 gap-3 text-center text-sm font-extrabold">
@@ -94,5 +97,22 @@ function GameHome({ track, lessons, done, next, progress }) {
         <Link to="/words" className="card !p-4 text-primary">📚 Word lists</Link>
       </div>
     </div>
+  )
+}
+
+function ReviewCard({ track, progress, playful }) {
+  const { items, dueCount } = useDue(track.key, progress)
+  if (!items.length) return null
+  return (
+    <Link to="/practice" className="mb-5 flex items-center gap-4 rounded-3xl bg-white px-5 py-4 shadow-md ring-2 ring-primary/15 transition active:scale-95 hover:brightness-105">
+      <span className="text-4xl">{playful ? '🧠' : '🔁'}</span>
+      <span className="flex-1">
+        <span className="block text-lg font-extrabold leading-tight text-primary">Review today</span>
+        <span className="block text-sm font-bold text-ink/60">
+          {dueCount > 0 ? `${dueCount} ${dueCount === 1 ? 'thing is' : 'things are'} ready to practise again` : 'A quick refresher of what you learned'}
+        </span>
+      </span>
+      <span className="text-2xl text-primary">▶</span>
+    </Link>
   )
 }
