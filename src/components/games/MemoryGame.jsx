@@ -3,11 +3,16 @@ import { shuffle } from '../../curriculum/text'
 import { speak } from '../../audio/audio'
 
 /** Flip cards to match each Bangla word with its meaning. onFinish({ moves, seconds }) */
-export default function MemoryGame({ pool, pairs = 6, onFinish }) {
+export default function MemoryGame({ pool, pairs = 6, mode = 'en', onFinish }) {
   const cards = useMemo(() => {
-    const chosen = shuffle(pool.filter((w) => w.bn.length <= 12 && w.en.length <= 22)).slice(0, pairs)
-    return shuffle(chosen.flatMap((w) => [{ uid: `${w.id}-b`, key: w.id, side: 'bn', text: w.bn, say: w.bn }, { uid: `${w.id}-e`, key: w.id, side: 'en', text: w.en }]))
-  }, [pool, pairs])
+    const chosen = shuffle(pool.filter((w) => w.bn.length <= 12 && (mode === 'picture' ? w.art : w.en.length <= 22))).slice(0, pairs)
+    return shuffle(
+      chosen.flatMap((w) => [
+        { uid: `${w.id}-b`, key: w.id, side: 'bn', text: w.bn, say: w.bn },
+        mode === 'picture' ? { uid: `${w.id}-e`, key: w.id, side: 'art', text: w.art, say: w.bn } : { uid: `${w.id}-e`, key: w.id, side: 'en', text: w.en },
+      ]),
+    )
+  }, [pool, pairs, mode])
 
   const [open, setOpen] = useState([])
   const [matched, setMatched] = useState([])
@@ -72,7 +77,7 @@ export default function MemoryGame({ pool, pairs = 6, onFinish }) {
               }`}
             >
               {up ? (
-                <span className={`leading-tight ${c.side === 'bn' ? 'font-bangla text-xl font-bold text-primary' : 'text-sm font-extrabold text-ink'}`}>{c.text}</span>
+                <span className={`leading-tight ${c.side === 'bn' ? 'font-bangla text-xl font-bold text-primary' : c.side === 'art' ? 'text-5xl' : 'text-sm font-extrabold text-ink'}`}>{c.text}</span>
               ) : (
                 <span className="text-3xl text-white/80">⭐</span>
               )}

@@ -6,6 +6,7 @@
 //   tiles:  { type, title, stem, tiles: [string], target: string, joiner: '' | ' ' }
 //   trace:  { type, title, letter }
 import { bank, categoryMeta, roster } from './bank'
+import { FEATURES } from './features'
 import { shuffle, sample, splitClusters } from './text'
 
 const get = (id) => bank.get(id)
@@ -303,6 +304,22 @@ export function typeExercise(item) {
   return { id: nextId(), type: 'type', tag: 'type', itemId: item.id, title: 'Type it in Bangla', stem: { art: item.art, text: item.en }, say: item.bn, target: item.bn }
 }
 
+/** Listen-and-tap-the-picture, for learners who can't read yet. Only for words that have an unambiguous picture. */
+export function pictureQuestion(item) {
+  if (item.kind !== 'word' || !item.visual) return null
+  const pool = Array.from(bank.values()).filter((x) => x.kind === 'word' && x.cat === item.cat && x.id !== item.id)
+  const showWord = Math.random() < 0.4
+  const c = choice({
+    itemId: item.id,
+    title: showWord ? 'Which picture is this?' : 'Listen. Which picture is it?',
+    stem: showWord ? { bn: item.bn, roman: item.roman } : { listen: true, say: item.bn, noAudio: true },
+    correct: { art: item.art },
+    candidates: pool.map((p) => ({ art: p.art })),
+    dim: 'art',
+  })
+  return c ? { ...c, say: item.bn } : null
+}
+
 /** One quick multiple-choice question about any item (used by the games). */
 export function quickChoice(item, trackKey) {
   const cands = candidatesFor(item, [item], trackKey).filter((e) => e.type === 'choice')
@@ -361,11 +378,37 @@ function conversationOrder(lines, scene, title = 'Put the conversation in order'
   }
 }
 
+// ---- Tracing -----------------------------------------------------------------------------------
+const traceEx = (item, gKind, glyph, title) => ({ id: nextId(), type: 'trace', itemId: item.id, title, glyph, gKind, say: item.bn })
+const nClusters = (str) => splitClusters(str).length
+
+/** Which things to trace in this lesson, per the track's settings (features.js). */
+function makeTraces(lesson, learnItems, practiceItems, f) {
+  const t = f.trace
+  const out = []
+  if (lesson.kind === 'letters') {
+    const n = t.letters === 'all' ? learnItems.length : t.letters
+    sample(learnItems, n).forEach((i) => out.push(traceEx(i, 'letter', i.bn, 'Trace the letter')))
+  }
+  if (lesson.kind === 'signs' && t.signs) {
+    sample(learnItems, 3).forEach((i) => out.push(traceEx(i, 'sign', i.bn, 'Trace the syllable')))
+    if (t.syllables) sample(practiceItems, 2).forEach((i) => out.push(traceEx(i, 'sign', i.bn, 'Trace the syllable')))
+  }
+  if (lesson.kind === 'words') {
+    if (t.digits) sample(learnItems.filter((i) => i.digit), 3).forEach((i) => out.push(traceEx(i, 'digit', i.digit, 'Trace the number')))
+    if (t.words > 0) {
+      const ok = learnItems.filter((i) => !i.digit && !/\s/.test(i.bn) && nClusters(i.bn) >= 2 && nClusters(i.bn) <= 4)
+      sample(ok, t.words).forEach((i) => out.push(traceEx(i, 'word', i.bn, 'Trace the word')))
+    }
+  }
+  return out
+}
+
 // ---- Lesson assembly ------------------------------------------------------------------
 export function buildLesson(lesson, trackKey) {
   uid = 0
   const young = trackKey === 'young'
-  const teen = trackKey === 'teen' || trackKey === 'senior'
+  const f = FEATURES[trackKey] ?? FEATURES.teen
   const learnItems = lesson.learn.map(get).filter(Boolean)
   const practiceItems = (lesson.practice ?? []).map(get).filter(Boolean)
 
@@ -445,7 +488,7 @@ export function buildLesson(lesson, trackKey) {
   }
   choices = shuffle(choices).slice(0, cap)
 
-  if (teen) {
+  if (f.listenType) {
     const listens = (n) => sample(learnItems.map(listenExercise).filter(Boolean), n)
     if (lesson.kind === 'words' || lesson.kind === 'letters' || lesson.kind === 'sentences') choices.push(...listens(2))
     if (lesson.kind === 'forms') choices.push(...listens(1))
@@ -459,10 +502,7 @@ export function buildLesson(lesson, trackKey) {
   const match = lesson.kind === 'letters' || lesson.kind === 'words' ? matchExercise(learnItems) : null
   if (match) choices.splice(Math.min(4, choices.length), 0, match)
 
-  if (lesson.kind === 'letters') {
-    const traceItems = young ? learnItems : sample(learnItems, teen ? 1 : 2)
-    tail.push(...traceItems.map((i) => ({ id: nextId(), type: 'trace', itemId: i.id, title: 'Trace the letter', letter: i.bn })))
-  }
+  tail.push(...makeTraces(lesson, learnItems, practiceItems, f))
 
   return { learn: learnItems, exercises: [...choices, ...tail] }
 }

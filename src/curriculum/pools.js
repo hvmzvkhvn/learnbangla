@@ -2,13 +2,13 @@
 import { allLessons } from './tracks'
 import { bank } from './bank'
 
-export function gamePool(trackKey, progress, kinds = ['word', 'sentence', 'letter', 'form'], min = 10) {
+export function gamePool(trackKey, progress, kinds = ['word', 'sentence', 'letter', 'form'], min = 10, keep = () => true) {
   const seen = new Set()
   const take = (lessons) => {
     for (const l of lessons) {
       ;[...(l.learn ?? []), ...(l.practice ?? [])].forEach((id) => {
         const it = bank.get(id)
-        if (it && kinds.includes(it.kind)) seen.add(id)
+        if (it && kinds.includes(it.kind) && keep(it)) seen.add(id)
       })
     }
   }

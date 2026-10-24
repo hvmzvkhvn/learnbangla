@@ -91,6 +91,7 @@ export default function Review() {
         Every letter, word and sentence in the curriculum. Mark each one ✓ if it is correct, or ⚑ and write what it should be.
         Your marks are saved in this browser.
       </p>
+      <Link to="/review/strokes" className="mb-4 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">✏️ Check stroke order for tracing →</Link>
 
       <div className="card mb-4 grid grid-cols-3 gap-2 text-center">
         <div><p className="text-2xl font-extrabold text-success">{counts.ok}</p><p className="text-xs font-bold text-ink/50">Approved</p></div>
