@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useReviewMarks } from '../../state/persist'
 import { speak, speakSequence } from '../../audio/audio'
 import Speaker from '../Speaker'
+import SayIt from '../SayIt'
 
 // Words inside a sentence can be tapped to hear them one at a time.
 function TappableWords({ tokens }) {
@@ -97,6 +98,8 @@ export default function LearnCard({ item }) {
           <TappableWords tokens={item.tokens} />
         </>
       )}
+
+      <SayIt text={item.bn} maxSeconds={item.kind === 'sentence' || item.kind === 'form' ? 12 : 6} />
     </div>
   )
 }
