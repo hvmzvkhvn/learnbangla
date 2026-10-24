@@ -25,9 +25,10 @@ export function fitFont(ctx, text, w, h) {
 }
 
 /** Draw `text` centred in w×h. Returns the font size used. */
-export function drawText(ctx, text, w, h, fill) {
+export function drawText(ctx, text, w, h, fill, weight = 700) {
   const size = fitFont(ctx, text, w, h)
   const m = ctx.measureText(text)
+  if (weight !== 700) ctx.font = `${weight} ${size}px ${FONT}` // same size and position, lighter ink
   ctx.textAlign = 'center'
   ctx.textBaseline = 'alphabetic'
   ctx.fillStyle = fill
@@ -103,119 +104,4 @@ export function scoreTrace(T, U, w, h, penR, tolR, lenient = false) {
   const [c3, s3, c2, s2, c1] = lenient ? [0.75, 0.3, 0.55, 0.5, 0.3] : [0.85, 0.2, 0.65, 0.4, 0.4]
   const stars = coverage >= c3 && stray <= s3 ? 3 : coverage >= c2 && stray <= s2 ? 2 : coverage >= c1 ? 1 : 0
   return { stars, coverage, stray }
-}
-
-/**
- * A guided stroke order worked out from the glyph itself (not hand-authored):
- * body strokes are drawn left to right, each starting near its top-left, and the headline (মাত্রা) is drawn last.
- * Returns steps: [{ order: Int32Array of cell indices in drawing order, start: {x, y} }]
- */
-export function strokePlan(T, w, h) {
-  let minX = w, maxX = -1, minY = h, maxY = -1
-  for (let y = 0; y < h; y++)
-    for (let x = 0; x < w; x++)
-      if (T[y * w + x]) {
-        if (x < minX) minX = x
-        if (x > maxX) maxX = x
-        if (y < minY) minY = y
-        if (y > maxY) maxY = y
-      }
-  if (maxX < 0) return { steps: [], w, h }
-  const bw = maxX - minX + 1
-  const bh = maxY - minY + 1
-
-  // headline: a long, thick horizontal run near the top
-  const rowCount = (y) => {
-    let c = 0
-    for (let x = minX; x <= maxX; x++) c += T[y * w + x]
-    return c
-  }
-  let head = new Set()
-  if (bw >= 6) {
-    let best = 0
-    let bestY = -1
-    for (let y = minY; y <= minY + Math.floor(bh * 0.45); y++) {
-      const c = rowCount(y)
-      if (c > best) {
-        best = c
-        bestY = y
-      }
-    }
-    if (best >= 0.55 * bw) {
-      for (let y = bestY; y >= minY && rowCount(y) >= 0.6 * best; y--) head.add(y)
-      for (let y = bestY + 1; y <= maxY && rowCount(y) >= 0.6 * best; y++) head.add(y)
-    }
-  }
-
-  // body components (8-connected) outside the headline rows
-  const isBody = (i) => T[i] && !head.has(Math.floor(i / w))
-  const seen = new Uint8Array(w * h)
-  const comps = []
-  for (let i = 0; i < w * h; i++) {
-    if (!isBody(i) || seen[i]) continue
-    const cells = []
-    const q = [i]
-    seen[i] = 1
-    while (q.length) {
-      const c = q.pop()
-      cells.push(c)
-      const cx = c % w
-      const cy = (c - cx) / w
-      for (let dy = -1; dy <= 1; dy++)
-        for (let dx = -1; dx <= 1; dx++) {
-          const nx = cx + dx
-          const ny = cy + dy
-          if (nx < 0 || ny < 0 || nx >= w || ny >= h) continue
-          const n = ny * w + nx
-          if (!seen[n] && isBody(n)) {
-            seen[n] = 1
-            q.push(n)
-          }
-        }
-    }
-    comps.push(cells)
-  }
-  const big = comps.filter((c) => c.length >= 4)
-  big.sort((a, b) => Math.min(...a.map((c) => c % w)) - Math.min(...b.map((c) => c % w)))
-
-  const steps = big.map((cells) => {
-    const inComp = new Set(cells)
-    let start = cells[0]
-    let bestScore = Infinity
-    for (const c of cells) {
-      const sc = Math.floor(c / w) + 0.5 * (c % w)
-      if (sc < bestScore) {
-        bestScore = sc
-        start = c
-      }
-    }
-    // geodesic order from the start cell
-    const order = []
-    const dist = new Map([[start, 0]])
-    const q = [start]
-    for (let qi = 0; qi < q.length; qi++) {
-      const c = q[qi]
-      order.push(c)
-      const cx = c % w
-      const cy = (c - cx) / w
-      for (let dy = -1; dy <= 1; dy++)
-        for (let dx = -1; dx <= 1; dx++) {
-          const n = (cy + dy) * w + (cx + dx)
-          if (cx + dx < 0 || cx + dx >= w || cy + dy < 0 || cy + dy >= h) continue
-          if (inComp.has(n) && !dist.has(n)) {
-            dist.set(n, dist.get(c) + 1)
-            q.push(n)
-          }
-        }
-    }
-    return { order: Int32Array.from(order), start: { x: start % w, y: Math.floor(start / w) } }
-  })
-
-  if (head.size) {
-    const cells = []
-    for (let i = 0; i < w * h; i++) if (T[i] && head.has(Math.floor(i / w))) cells.push(i)
-    cells.sort((a, b) => (a % w) - (b % w))
-    steps.push({ order: Int32Array.from(cells), start: { x: cells[0] % w, y: Math.floor(cells[0] / w) }, headline: true })
-  }
-  return { steps, w, h }
 }

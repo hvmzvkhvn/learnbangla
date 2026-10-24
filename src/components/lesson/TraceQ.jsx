@@ -4,7 +4,7 @@ import Prompt from './Prompt'
 import StrokeDemo from './StrokeDemo'
 import { speak } from '../../audio/audio'
 import { GRID_CELL, drawText, ensureFont, scoreTrace, toGrid } from '../../curriculum/trace'
-import { isGuideApproved } from '../../data/strokesApproved'
+import { isGuideApproved, localEdits } from '../../data/strokesApproved'
 
 const MESSAGES = {
   3: ['Perfect tracing! ⭐⭐⭐', 'text-success'],
@@ -128,7 +128,7 @@ export default function TraceQ({ ex, onSolved, lenient = false }) {
 
       {demo ? (
         <div className="mx-auto rounded-3xl border-4 border-primary/20 bg-white p-2 shadow-sm" style={{ width: W + 20, maxWidth: '100%' }}>
-          <StrokeDemo glyph={ex.glyph} width={W} height={H} />
+          <StrokeDemo glyph={ex.glyph} width={W} height={H} local={localEdits()} />
         </div>
       ) : (
         <div className="relative mx-auto rounded-3xl border-4 border-primary/20 bg-white shadow-sm" style={{ width: W, maxWidth: '100%', aspectRatio: `${W} / ${H}` }}>

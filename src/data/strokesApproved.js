@@ -18,3 +18,12 @@ const preview = () => {
 }
 
 export const isGuideApproved = (glyph, gKind) => APPROVE_ALL || APPROVED.has(glyph) || (gKind === 'word' && APPROVE_WORDS) || preview()
+
+/** Corrections made on this device's review page (only used while previewing guides). */
+export const localEdits = () => {
+  try {
+    return preview() ? JSON.parse(localStorage.getItem('lb.strokeEdits') ?? '{}') : undefined
+  } catch {
+    return undefined
+  }
+}
