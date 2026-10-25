@@ -10,7 +10,7 @@ const yesterday = () => dayKey(new Date(Date.now() - 86400000))
 
 const DEFAULT = {
   xp: 0, streak: 0, best: 0, last: '', badges: {}, activity: {},
-  stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {} },
+  stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {}, stamps: {}, geoBest: 0 },
 }
 
 // Younger learners see their level as a garden that grows.
@@ -49,6 +49,9 @@ export const BADGES = [
   { id: 'memory', emoji: '🐘', title: 'Elephant Memory', desc: 'Win Memory Match in 8 moves or fewer', test: (g) => g.stats.memoryBest > 0 && g.stats.memoryBest <= 8 },
   { id: 'boss', emoji: '⚔️', title: 'Boss Slayer', desc: 'Beat a boss level', test: (g) => g.stats.bosses >= 1 },
   { id: 'daily3', emoji: '📅', title: 'Regular', desc: 'Complete 3 daily challenges', test: (g) => g.stats.dailyDone >= 3 },
+  { id: 'explorer', emoji: '🧭', title: 'Explorer', desc: 'Stamp all 8 divisions of Bangladesh', test: (g) => Object.keys(g.stats.stamps ?? {}).filter((k) => k.startsWith('r:')).length >= 8 },
+  { id: 'traveller', emoji: '🗺️', title: 'Traveller', desc: 'Visit 16 cities on the map', test: (g) => Object.keys(g.stats.stamps ?? {}).filter((k) => k.startsWith('c:')).length >= 16 },
+  { id: 'geo', emoji: '📍', title: 'Map Master', desc: 'Score 9 or more in a Map Quiz', test: (g) => (g.stats.geoBest ?? 0) >= 9 },
   { id: 'lvl5', emoji: '🚀', title: 'Level 5', desc: 'Reach level 5', test: (g) => levelInfo(g.xp).level >= 5 },
   { id: 'lvl10', emoji: '👑', title: 'Level 10', desc: 'Reach level 10', test: (g) => levelInfo(g.xp).level >= 10 },
 ]

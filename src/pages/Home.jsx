@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useDue } from '../state/srs'
+import { cityOfTheDay } from '../state/explore'
 import { tracks, allLessons } from '../curriculum/tracks'
 import { useProgress, useTrack } from '../state/persist'
 import { stageOf, today, useGame } from '../state/game'
@@ -88,6 +89,8 @@ function GameHome({ track, lessons, done, next, progress }) {
         </Link>
       </div>
 
+      {track.features.explore && <PostcardCard />}
+
       <ReviewCard track={track} progress={progress} playful={playful} />
 
       <UnitList track={track} progress={progress} nextId={next.id} />
@@ -113,6 +116,22 @@ function ReviewCard({ track, progress, playful }) {
         </span>
       </span>
       <span className="text-2xl text-primary">▶</span>
+    </Link>
+  )
+}
+
+function PostcardCard() {
+  const c = cityOfTheDay()
+  const { game } = useGame()
+  const got = Boolean(game.stats.stamps?.[`p:${today()}`])
+  return (
+    <Link to="/explore" className="mb-3 flex items-center gap-4 rounded-3xl bg-white px-5 py-4 shadow-md ring-2 ring-secondary/30 transition active:scale-95 hover:brightness-105">
+      <span className="text-4xl">{c.emoji}</span>
+      <span className="flex-1">
+        <span className="block text-lg font-extrabold leading-tight text-secondary">{got ? 'Postcard collected ✓' : "Today's postcard"}</span>
+        <span className="block text-sm font-bold text-ink/60">From <span className="font-bangla">{c.bn}</span> · {c.name}</span>
+      </span>
+      <span className="text-2xl text-secondary">▶</span>
     </Link>
   )
 }

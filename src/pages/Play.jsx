@@ -10,6 +10,7 @@ import BlitzGame from '../components/games/BlitzGame'
 import MemoryGame from '../components/games/MemoryGame'
 import QuizRunner from '../components/games/QuizRunner'
 import TypeItGame from '../components/games/TypeItGame'
+import GeoGame from '../components/games/GeoGame'
 import Confetti from '../components/Confetti'
 import Toasts from '../components/Toasts'
 
@@ -18,6 +19,7 @@ const GAMES = {
   tap: { emoji: '👆', title: 'Tap the Picture', blurb: 'Listen, then tap the right picture. No timer — take your time!', color: 'bg-secondary text-white' },
   blitz: { emoji: '⚡', title: 'Word Blitz', blurb: 'Answer fast and build a combo before the clock runs out.', color: 'bg-primary text-white' },
   memory: { emoji: '🃏', title: 'Memory Match', blurb: 'Flip the cards and find the matching pairs.', color: 'bg-ink text-white' },
+  geo: { emoji: '📍', title: 'Map Quiz', blurb: 'Tap, guess and match places on the map of Bangladesh.', color: 'bg-secondary text-white' },
   type: { emoji: '⌨️', title: 'Type It', blurb: 'Hear a word and type it in Bangla.', color: 'bg-success text-white' },
 }
 
@@ -152,6 +154,13 @@ function Runner({ gameKey }) {
     )
   } else if (gameKey === 'type') {
     body = <TypeItGame key={round} pool={wordPool} onFinish={(r) => done({ headline: `${r.correct} of ${r.total}`, line: 'Words typed with no hints and no mistakes' }, r.correct * 10 + 10, (s) => s)} />
+  } else if (gameKey === 'geo') {
+    body = (
+      <GeoGame
+        key={round}
+        onFinish={(r) => done({ headline: `${r.correct} of ${r.total}`, line: 'Places you found first time' }, r.correct * 8 + 10, (s) => ({ geoBest: Math.max(s.geoBest ?? 0, r.correct) }))}
+      />
+    )
   } else if (gameKey === 'tap') {
     body = <QuizRunner key={round} exercises={tap} label="Picture" onFinish={(r) => done({ headline: `${r.correct} of ${r.total}`, line: 'Pictures you found first time' }, r.correct * 8 + 10, (s) => s)} />
   } else if (gameKey === 'daily') {

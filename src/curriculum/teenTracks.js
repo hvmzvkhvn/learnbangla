@@ -21,6 +21,7 @@ import { lessonsFrom, unit, catLessons, byBn, boss } from './build'
 import { chunk } from './text'
 import { verbs } from '../data/sentences'
 import { tenseVerbs } from '../data/teenSentences'
+import { exploreRegions } from '../data/explore'
 
 const TIPS = {
   vowels: 'ই and ঈ sound the same today, and so do উ and ঊ. Bangla keeps both because you will see both in real writing.',
@@ -255,6 +256,21 @@ export function buildTeenTracks() {
       ]),
     ],
   }
+
+  // Explore Bangladesh: words and reading for each division, closed by a boss level
+  const exploreUnit = (prefix) => {
+    const lessons = exploreRegions.flatMap((r) => {
+      const cat = `x-${r.id}`
+      const reading = sentenceIdsByGroup[cat]
+      return [
+        ...lessonsFrom(`${prefix}-x-${r.id}`, `${r.name}: words`, r.emoji, 'words', wordIdsByCat[cat], 8, { cat, tip: categoryMeta[cat].note }),
+        { id: `${prefix}-xr-${r.id}`, title: `${r.name}: reading`, emoji: r.emoji, kind: 'sentences', learn: [reading[0], reading[1], reading[2], reading[3], reading[4], reading[5]] },
+      ]
+    })
+    return bossUnit(`${prefix}-xp`, `${prefix}-explore`, 'Explore Bangladesh', '🗺️', 'Words and reading from all eight divisions — then open the map', [...lessons, ...storyLessons(prefix, prefix === 'v' ? 'teen' : 'senior', ['roadtrip'])])
+  }
+  voyagers.units.push(exploreUnit('v'))
+  pathfinders.units.push(exploreUnit('p'))
 
   return { teen: voyagers, senior: pathfinders }
 }

@@ -12,6 +12,7 @@ const KINDS = [
   { key: 'beat', label: 'Story chats' },
   { key: 'sentence', label: 'Sentences' },
   { key: 'form', label: 'Verb forms' },
+  { key: 'fact', label: 'Explore facts (English)' },
 ]
 const FILTERS = [
   { key: 'all', label: 'All' },
@@ -20,7 +21,7 @@ const FILTERS = [
   { key: 'ok', label: 'Approved' },
 ]
 
-const KIND_NAME = { beat: 'Story line', line: 'Conversation line', letter: 'Letter', sign: 'Vowel sign', syllable: 'Syllable', word: 'Word', sentence: 'Sentence', form: 'Verb form' }
+const KIND_NAME = { beat: 'Story line', line: 'Conversation line', letter: 'Letter', sign: 'Vowel sign', syllable: 'Syllable', word: 'Word', sentence: 'Sentence', form: 'Verb form', fact: 'Fact' }
 
 function describe(item) {
   const parts = [`[${KIND_NAME[item.kind]}${item.section ? ` · ${item.section}` : ''}]`, item.bn, `(${item.roman})`]
@@ -141,10 +142,12 @@ export default function Review() {
                     <span className="w-10 text-center font-bangla text-2xl">{i.art ?? ''}</span>
                     <div className="min-w-0 flex-1">
                       {i.speakerName && <p className="text-xs font-extrabold uppercase tracking-wide text-ink/40">{i.speakerName} says</p>}
-                      <p className="flex items-center gap-2 font-bangla text-2xl font-bold leading-snug text-primary">
-                        {i.bn}
-                        <Speaker text={i.bn} size="sm" label="Hear it" />
-                      </p>
+                      {i.bn && (
+                        <p className="flex items-center gap-2 font-bangla text-2xl font-bold leading-snug text-primary">
+                          {i.bn}
+                          <Speaker text={i.bn} size="sm" label="Hear it" />
+                        </p>
+                      )}
                       <p className="text-sm font-bold text-ink">{i.roman}</p>
                       {i.en && <p className="text-sm text-ink/60">{i.en}</p>}
                       {i.example && (

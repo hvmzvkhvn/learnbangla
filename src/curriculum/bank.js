@@ -9,6 +9,7 @@ import { teenWordCategories } from '../data/teenWords'
 import { teenSentenceGroups, tenseVerbs, tensePronouns } from '../data/teenSentences'
 import { poems, passages, cinemaScenes } from '../data/teenText'
 import { stories } from '../data/stories'
+import { exploreRegions } from '../data/explore'
 
 export const bank = new Map()
 const add = (item) => {
@@ -217,6 +218,32 @@ stories.forEach((st) => {
       )
     })
   })
+})
+
+// ---- Explore Bangladesh: each region's words (cities + local vocabulary) and its reading lines ------------------------------
+export const exploreCats = {}
+exploreRegions.forEach((r) => {
+  const cat = `x-${r.id}`
+  const section = `Explore · ${r.name}`
+  categoryMeta[cat] = { title: `${r.name}: places & words`, emoji: r.emoji, visual: false, note: `Words from ${r.name} division — its cities first, then the things it is known for.` }
+  const words = [
+    ...r.cities.map((c) => ({ bn: c.bn, roman: c.roman, en: `${c.name} (a city)`, emoji: c.emoji })),
+    ...r.cities.flatMap((c) => c.words),
+  ]
+  wordIdsByCat[cat] = words.map((w) => add({ id: `word:${cat}:${w.bn}`, kind: 'word', section, cat, visual: false, bn: w.bn, roman: w.roman, en: w.en, art: w.emoji }))
+  sentenceMeta[cat] = { title: `${r.name}: reading`, emoji: r.emoji }
+  const lines = [r.intro, ...r.famous, r.then.line, r.now.line, ...r.made, ...r.cities.map((c) => c.line)]
+  sentenceIdsByGroup[cat] = lines.map((x) => add({ id: `sent:${x.bn}`, kind: 'sentence', section, group: cat, bn: x.bn, roman: x.roman, en: x.en, tokens: x.bn.split(' ') }))
+  exploreCats[r.id] = cat
+  // the English facts, so they can be checked on /review too
+  const fsec = `Explore facts · ${r.name}`
+  const fact = (key, label, en) => add({ id: `fact:${r.id}:${key}`, kind: 'fact', section: fsec, bn: '', roman: label, en, art: r.emoji })
+  fact('hook', 'Introduction', r.hook)
+  fact('then', 'Then', r.then.en)
+  fact('now', 'Now', r.now.en)
+  r.timeline.forEach(([y, t], i) => fact(`t${i}`, `Timeline ${y}`, t))
+  fact('economy', 'Economy', r.economy)
+  r.cities.forEach((c) => fact(`city-${c.id}`, c.name, c.fact))
 })
 
 export const allItems = () => Array.from(bank.values())

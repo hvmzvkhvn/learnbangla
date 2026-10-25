@@ -12,6 +12,7 @@ import Review from './pages/Review'
 import StrokeReview from './pages/StrokeReview'
 import Practice from './pages/Practice'
 import Studio from './pages/Studio'
+import Explore from './pages/Explore'
 import Account from './pages/Account'
 import ParentView from './pages/ParentView'
 import Privacy from './pages/Privacy'
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="alphabet" element={<Alphabet />} />
         <Route path="words" element={<Words />} />
         <Route path="stories" element={<Stories />} />
+        <Route path="explore" element={<Explore />} />
         <Route path="play" element={<Play />} />
         <Route path="play/:game" element={<Play />} />
         <Route path="practice" element={<Practice />} />
