@@ -6,7 +6,7 @@ import { tracks } from '../curriculum/tracks'
 import { useTrack } from '../state/persist'
 import { addLearner, deleteAccount, hasLocalProgress, listLearners, push, pull, removeLearner, renameLearner, selectLearner, signIn, signOut, signUp, useSync } from '../sync/engine'
 
-const TRACK_KEYS = ['young', 'older', 'teen', 'senior']
+const TRACK_KEYS = ['young', 'older', 'teen', 'senior', 'adult']
 
 const ago = (t) => {
   if (!t) return ''

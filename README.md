@@ -98,6 +98,12 @@ All behaviour that differs by age lives in one file, `src/curriculum/features.js
 
 **Save code** (Me page): copy a code to move progress to another device without an account.
 
+## Explore Bangladesh (13+) and the 18+ track
+
+**Explore** (`/explore`, 13–15, 16–18 and 18+): a tappable map of the eight divisions (`src/data/bdMap.js`, boundaries from geoBoundaries, CC0). Each division follows one card — *Famous for · Then & Now · Made here · 4 cities* — with an English hook first and Bangla lines you can tap to hear. Depth grows with age: 13–15 gets the facts and short Bangla; 16–18 adds a timeline and the economy; 18+ adds fuller essays (`src/data/exploreDeep.js`). Visiting a division or city earns a passport stamp and XP (stamps live in the game stats, so they sync and travel in the save code). Dhaka, Chattogram and Sylhet are open from the start; the other five unlock with progress. Content: `src/data/explore.js`. Extras: a **Map Quiz** in Play, a daily **postcard**, a road-trip story chat, and a words-and-reading lesson pair for every division. The English facts are listed on `/review` under *Explore facts*.
+
+**Wayfarers (18+)**: adults starting from zero. The script and basics match the 16–18 track; new units cover work, banks and forms, health, news and the economy, **history from 1905 to 1971** (the first partition of Bengal, 1947, the language movement, the road to independence, how the political parties developed), faith, clothing, music and poets, and *Bengal Beyond Borders* (West Bengal, the diaspora, and a lesson on the words that differ between Bangladesh and West Bengal). Content: `src/data/adultText.js`. The history readings lead with an English paragraph and state contested things neutrally — check them on `/review`.
+
 ## Your own voice (Voice studio)
 
 `/studio` (linked from `/review`) walks through every spoken clip — letters first — and records it in your own voice. Clips are trimmed, levelled and encoded to small mp3s, kept in the browser, and played instead of the prototype voice on that device. **Download my recordings** produces a zip whose file names are exactly the existing ones: unzip it into `public/audio/`, commit and push, and the recordings replace the prototype voice for everyone. No manifest change is needed.

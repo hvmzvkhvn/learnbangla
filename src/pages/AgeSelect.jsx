@@ -6,6 +6,7 @@ const LOOK = {
   older: 'bg-primary text-white',
   teen: 'bg-ink text-white',
   senior: 'bg-gradient-to-br from-primary to-ink text-white',
+  adult: 'bg-gradient-to-br from-ink to-primary text-white',
 }
 
 export default function AgeSelect() {

@@ -13,7 +13,7 @@ await server.close()
 
 const TUMI = /তুমি|তোমার|তোমাকে|তোমরা/
 const APNI = /আপনি|আপনার|আপনাকে/
-const ELDERS = new Set(['sir', 'dada', 'chacha', 'khala', 'driver', 'seller', 'shop', 'local'])
+const ELDERS = new Set(['sir', 'dada', 'chacha', 'khala', 'driver', 'seller', 'shop', 'local', 'officer'])
 const issues = []
 let beats = 0
 
@@ -31,7 +31,7 @@ for (const st of stories) {
       if (!n.roman || !n.en) issues.push(`${at(id)}: missing roman/en`)
       if (!n.who || !st.cast[n.who]) issues.push(`${at(id)}: unknown speaker "${n.who}"`)
       if (!n.next) issues.push(`${at(id)}: message with no next`)
-      if (ELDERS.has(n.who) && APNI.test(n.bn.replace(/"[^"]*"/g, '')) && n.who !== 'driver' && n.who !== 'seller' && n.who !== 'shop' && n.who !== 'local')
+      if (ELDERS.has(n.who) && APNI.test(n.bn.replace(/"[^"]*"/g, '')) && n.who !== 'driver' && n.who !== 'seller' && n.who !== 'shop' && n.who !== 'local' && n.who !== 'officer')
         issues.push(`${at(id)}: an elder says আপনি to the learner → ${n.bn}`)
     }
     for (const [i, o] of (n.choice ?? []).entries()) {

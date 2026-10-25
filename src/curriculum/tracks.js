@@ -198,13 +198,14 @@ const insertAfter = (units, id, extra) => units.splice(units.findIndex((u) => u.
 insertAfter(young.units, 'y-family', familyUnits('y', 'young'))
 insertAfter(older.units, 'o-people', familyUnits('o', 'older'))
 
-const { teen, senior } = buildTeenTracks()
+const { teen, senior, adult } = buildTeenTracks()
 
 // per-age features (XP, games, tracing…) live in features.js
 young.features = FEATURES.young
 older.features = FEATURES.older
 teen.features = FEATURES.teen
 senior.features = FEATURES.senior
+adult.features = FEATURES.adult
 
 // Ages 5–7: the end-of-unit review becomes a gentle, untimed treasure hunt.
 young.units.forEach((u) => {
@@ -227,9 +228,9 @@ addStory(older, 'o', 'o-numbers', 'sweetshop')
 addStory(older, 'o', 'o-ft-elders', 'nanivisit')
 addStory(older, 'o', 'o-around', 'rainyday')
 
-export const tracks = { young, older, teen, senior }
+export const tracks = { young, older, teen, senior, adult }
 
-export const trackList = [young, older, teen, senior]
+export const trackList = [young, older, teen, senior, adult]
 export const allLessons = (trackKey) => tracks[trackKey].units.flatMap((u) => u.lessons)
 
 export function findLesson(id) {

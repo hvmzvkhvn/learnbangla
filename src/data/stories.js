@@ -270,7 +270,7 @@ export const stories = [
 
   // ============================================ 16–18 ============================================
   {
-    id: 'landing', tracks: ['senior'], title: 'Landing in Dhaka', emoji: '✈️',
+    id: 'landing', tracks: ['senior', 'adult'], title: 'Landing in Dhaka', emoji: '✈️',
     blurb: 'Your uncle is waiting outside the airport. Greet him as a grown-up.',
     meter: { label: 'Respect', emoji: '🙏', start: 50 },
     cast: { chacha: { bn: 'চাচা', en: 'Chacha (uncle)', emoji: '🧔' } },
@@ -322,7 +322,7 @@ export const stories = [
   },
 
   {
-    id: 'wedding', tracks: ['senior'], title: 'A Wedding Invitation', emoji: '💒',
+    id: 'wedding', tracks: ['senior', 'adult'], title: 'A Wedding Invitation', emoji: '💒',
     blurb: 'The gaye holud is tonight. Greet relatives, chat politely and give your gift.',
     meter: { label: 'Charm', emoji: '✨', start: 50 },
     cast: { khala: { bn: 'খালা', en: 'Khala (aunt)', emoji: '👩' }, kone: { bn: 'কনে', en: 'The bride', emoji: '👰' } },
@@ -370,7 +370,7 @@ export const stories = [
   },
 
   {
-    id: 'olddhaka', tracks: ['senior'], title: 'Lost in Old Dhaka', emoji: '🧭',
+    id: 'olddhaka', tracks: ['senior', 'adult'], title: 'Lost in Old Dhaka', emoji: '🧭',
     blurb: 'You took a wrong turn. Ask for directions and follow them carefully.',
     meter: { label: 'Navigation', emoji: '🧭', start: 50 },
     cast: { local: { bn: 'পথচারী', en: 'Passer-by', emoji: '🧑' }, shop: { bn: 'দোকানদার', en: 'Shopkeeper', emoji: '🧑‍🌾' } },
@@ -412,7 +412,7 @@ export const stories = [
   },
 
   {
-    id: 'grandpa71', tracks: ['senior'], title: "Dada's 1971", emoji: '🇧🇩',
+    id: 'grandpa71', tracks: ['senior', 'adult'], title: "Dada's 1971", emoji: '🇧🇩',
     blurb: 'Dada remembers the year the country became independent. Listen and ask with respect.',
     meter: { label: 'Understanding', emoji: '💡', start: 50 },
     cast: { dada: { bn: 'দাদা', en: 'Dada', emoji: '👴' } },
@@ -457,7 +457,7 @@ export const stories = [
   },
 
   {
-    id: 'teadebate', tracks: ['senior'], title: 'Tea Stall Debate', emoji: '☕',
+    id: 'teadebate', tracks: ['senior', 'adult'], title: 'Tea Stall Debate', emoji: '☕',
     blurb: 'Cricket or football? Argue with a friend and stay friends.',
     meter: { label: 'Banter', emoji: '😄', start: 50 },
     cast: { rafi: { bn: 'রাফি', en: 'Rafi', emoji: '🧑' } },
@@ -700,7 +700,7 @@ export const stories = [
 
   // ============================================ 13–18: Explore Bangladesh ============================================
   {
-    id: 'roadtrip', tracks: ['teen', 'senior'], title: "Road Trip: Dhaka to Cox's Bazar", emoji: '🚌',
+    id: 'roadtrip', tracks: ['teen', 'senior', 'adult'], title: "Road Trip: Dhaka to Cox's Bazar", emoji: '🚌',
     blurb: 'Tea gardens in Sylhet, then the sea at Cox\'s Bazar. Travel with your friend Rafi and choose your words well.',
     meter: { label: 'Adventure', emoji: '🚌', start: 50 },
     cast: { rafi: { bn: 'রাফি', en: 'Rafi (your friend)', emoji: '🧒' }, driver: { bn: 'ড্রাইভার', en: 'Bus driver', emoji: '🚌' }, seller: { bn: 'চা-ওয়ালা', en: 'Tea seller', emoji: '🍵' } },
@@ -764,6 +764,101 @@ export const stories = [
       eA: end('Best trip ever', '🌅', 'You spoke politely, enjoyed the tea and the sea, and made Rafi laugh all the way. Where next — Khulna and the Sundarbans?', 'great'),
       eB: end('A good journey', '🙂', 'A few bumps along the road, but you saw tea gardens and the sea. Practise your polite phrases and go again!', 'ok'),
       eC: end('A bumpy ride', '🌧️', 'The trip was tricky this time. Revisit the Sylhet and Chattogram words and try the road again.', 'rough'),
+    },
+  },
+
+  // ============================================ 18+ ============================================
+  {
+    id: 'bankstory', tracks: ['adult'], title: 'Opening a Bank Account', emoji: '🏦',
+    blurb: 'Paperwork in Bangla: greet the officer, show your papers, fill in the form.',
+    meter: { label: 'Confidence', emoji: '💼', start: 50 },
+    cast: { officer: { bn: 'ব্যাংক কর্মকর্তা', en: 'Bank officer', emoji: '🧑‍💼' } },
+    start: 's0',
+    keys: ['n1', 'r1a', 'r2a', 'n3'],
+    nodes: {
+      s0: sys('You want to open a bank account. You walk into a bank in Dhaka and a bank officer greets you.', 'n1'),
+      n1: say('officer', 'আসসালামু আলাইকুম। বলুন, আপনাকে কীভাবে সাহায্য করতে পারি?', 'Assalamu alaikum. Bolun, apnake kibhabe shahajjo korte pari?', 'Peace be upon you. Tell me, how can I help you?', 'c1'),
+      c1: ask(
+        o('ওয়ালাইকুম আসসালাম। আমি একটা ব্যাংক হিসাব খুলতে চাই।', 'Walaikum assalam. Ami ekta byank hishab khulte chai.', 'And peace be upon you. I want to open a bank account.', 25, 'r1a'),
+        o('আমি একটা হিসাব খুলতে চাই।', 'Ami ekta hishab khulte chai.', 'I want to open an account.', 15, 'r1a'),
+        o('টাকা দাও।', 'Taka dao.', 'Give me money.', -20, 'r1b'),
+      ),
+      r1a: say('officer', 'অবশ্যই। আপনার পাসপোর্ট বা পরিচয়পত্র আছে?', 'Obosshoi. Apnar passport ba porichoypotro ache?', 'Of course. Do you have your passport or ID card?', 'c2'),
+      r1b: say('officer', 'দয়া করে ঠিকভাবে বলুন। আপনি কী চান?', 'Doya kore thikbhabe bolun. Apni ki chan?', 'Please say it properly. What do you want?', 'c2'),
+      c2: ask(
+        o('জি, আমার পাসপোর্ট আছে। এই নিন।', 'Ji, amar passport ache. Ei nin.', 'Yes, I have my passport. Here you are.', 25, 'r2a'),
+        o('জি, আমার পরিচয়পত্র আছে।', 'Ji, amar porichoypotro ache.', 'Yes, I have my ID card.', 20, 'r2a'),
+        o('না, আমার কিছু নেই।', 'Na, amar kichhu nei.', 'No, I have nothing.', -10, 'r2b'),
+      ),
+      r2a: say('officer', 'ধন্যবাদ। এই ফর্মটা পূরণ করুন।', 'Dhonnobad. Ei formta puron korun.', 'Thank you. Please fill in this form.', 'n2'),
+      r2b: say('officer', 'ঠিক আছে, ফর্মটা অন্তত দেখে নিন।', 'Thik ache, formta ontoto dekhe nin.', 'All right, at least look at the form.', 'n2'),
+      n2: sys('You take the form. You are not sure what to write, and you wonder about the fee.', 'c3'),
+      c3: ask(
+        o('এই ফর্মে কী লিখব?', 'Ei forme ki likhbo?', 'What should I write on this form?', 15, 'r3a'),
+        o('ফি কত টাকা, বলবেন?', 'Fi koto taka, bolben?', 'Could you tell me the fee?', 20, 'r3b'),
+      ),
+      r3a: say('officer', 'এখানে নাম আর ঠিকানা লিখুন। তারপর স্বাক্ষর করুন।', 'Ekhane nam ar thikana likhun. Tarpor shakkhor korun.', 'Write your name and address here. Then sign.', 'n3'),
+      r3b: say('officer', 'ফি খুব কম, পাঁচশো টাকা। এখানে নাম আর স্বাক্ষর দিন।', 'Fi khub kom, panchsho taka. Ekhane nam ar shakkhor din.', 'The fee is small, five hundred taka. Put your name and signature here.', 'n3'),
+      n3: say('officer', 'সব ঠিক আছে। আপনার হিসাব খোলা হয়েছে।', 'Shob thik ache. Apnar hishab khola hoyeche.', 'Everything is in order. Your account has been opened.', 'c4'),
+      c4: ask(
+        o('অনেক ধন্যবাদ! আপনি খুব সাহায্য করলেন।', 'Onek dhonnobad! Apni khub shahajjo korlen.', 'Many thanks! You helped me a lot.', 20, 'b1'),
+        o('ধন্যবাদ।', 'Dhonnobad.', 'Thanks.', 10, 'b1'),
+        o('ঠিক আছে।', 'Thik ache.', 'Okay.', 0, 'b1'),
+      ),
+      b1: branch({ min: 85, next: 'eA' }, { min: 60, next: 'eB' }, { next: 'eC' }),
+      eA: end('Account opened!', '🏦', 'Polite, prepared and clear: the officer was glad to help and you walked out with an account.', 'great'),
+      eB: end('Done, with a few bumps', '🙂', 'The account is open, though a few answers could have been smoother. Practise the bank and forms words and try again.', 'ok'),
+      eC: end('Come back tomorrow', '📄', 'The paperwork did not go well this time. Revisit the Bank, Forms & Documents words and try again.', 'rough'),
+    },
+  },
+
+  {
+    id: 'kolkatacousin', tracks: ['adult'], title: 'A Cousin from Kolkata', emoji: '🌉',
+    blurb: 'Same language, different words. Your cousin Ritu visits from West Bengal.',
+    meter: { label: 'Understanding', emoji: '💡', start: 50 },
+    cast: { ritu: { bn: 'ঋতু', en: 'Ritu (your cousin from Kolkata)', emoji: '👩' } },
+    start: 's0',
+    keys: ['n1', 'r1a', 'n2', 'n4'],
+    nodes: {
+      s0: sys('Your cousin Ritu has arrived from Kolkata. You speak the same language, but some everyday words are different.', 'n1'),
+      n1: say('ritu', 'নমস্কার! আমি ঋতু। একটু জল পাব?', 'Nomoshkar! Ami Ritu. Ektu jol pabo?', "Hello! I'm Ritu. Could I have a little water?", 'c1'),
+      c1: ask(
+        o('নিশ্চয়ই! এই নাও, পানি।', 'Nishchoyi! Ei nao, pani.', 'Of course! Here you are, water.', 20, 'r1a'),
+        o('জল মানে কী?', 'Jol mane ki?', 'What does jol mean?', 10, 'r1b'),
+        o('আমি বুঝতে পারছি না।', 'Ami bujhte parchhi na.', "I can't understand.", -10, 'r1c'),
+      ),
+      r1a: say('ritu', 'ধন্যবাদ! তোমরা পানি বলো, আমরা জল বলি।', 'Dhonnobad! Tomra pani bolo, amra jol boli.', 'Thanks! You say pani, we say jol.', 'n2'),
+      r1b: say('ritu', 'জল মানে পানি! আমাদের ওখানে জল বলে।', 'Jol mane pani! Amader okhane jol bole.', 'Jol means pani! We say jol where I live.', 'n2'),
+      r1c: say('ritu', 'আরে, জল মানে পানি! ভয় নেই।', 'Are, jol mane pani! Bhoy nei.', "Oh, jol means pani! Don't worry.", 'n2'),
+      n2: say('ritu', 'আমার দাদা কলকাতায় থাকে। তোমার দাদা কোথায়?', 'Amar dada kolkatay thake. Tomar dada kothay?', 'My dada lives in Kolkata. Where is your dada?', 'c2'),
+      c2: ask(
+        o('আমার দাদা এখানে থাকেন। উনি বাবার বাবা।', 'Amar dada ekhane thaken. Uni babar baba.', 'My dada lives here. He is my father’s father.', 25, 'r2a'),
+        o('তোমার দাদা কে? বড় ভাই?', 'Tomar dada ke? Boro bhai?', 'Who is your dada? An elder brother?', 20, 'r2b'),
+        o('আমার দাদা নেই।', 'Amar dada nei.', "I don't have a dada.", 0, 'r2c'),
+      ),
+      r2a: say('ritu', 'ওহ! তাই তো। আমাদের ওখানে দাদা মানে বড় ভাই।', 'Oh! Tai to. Amader okhane dada mane boro bhai.', 'Oh! I see. Where I live, dada means elder brother.', 'n3'),
+      r2b: say('ritu', 'হ্যাঁ! আমাদের ওখানে দাদা মানে বড় ভাই।', 'Hyã! Amader okhane dada mane boro bhai.', 'Yes! Where I live, dada means elder brother.', 'n3'),
+      r2c: say('ritu', 'ও আচ্ছা। আমার দাদা আমার বড় ভাই।', 'O accha. Amar dada amar boro bhai.', 'Oh, I see. My dada is my elder brother.', 'n3'),
+      n3: sys('Ritu is hungry, so you sit down to lunch together.', 'n4'),
+      n4: say('ritu', 'আমাকে একটু নুন দেবে?', 'Amake ektu nun debe?', 'Will you give me a little nun?', 'c3'),
+      c3: ask(
+        o('নুন মানে লবণ, তাই না?', 'Nun mane lobon, tai na?', 'Nun means lobon (salt), doesn’t it?', 25, 'r3a'),
+        o('হ্যাঁ, এই নাও।', 'Hyã, ei nao.', 'Yes, here you are.', 15, 'r3b'),
+        o('নুন কী?', 'Nun ki?', 'What is nun?', 5, 'r3c'),
+      ),
+      r3a: say('ritu', 'ঠিক! তুমি তো শিখে গেছ।', 'Thik! Tumi to shikhe gechho.', "Right! You've already learned it.", 'n5'),
+      r3b: say('ritu', 'ধন্যবাদ! নুন মানে লবণ।', 'Dhonnobad! Nun mane lobon.', 'Thanks! Nun means salt.', 'n5'),
+      r3c: say('ritu', 'নুন মানে লবণ। দুই শব্দ একই জিনিস।', 'Nun mane lobon. Dui shobdo-i ek jinish.', 'Nun means salt. The two words are the same thing.', 'n5'),
+      n5: say('ritu', 'ভাষা একই, শুধু একটু আলাদা। মজা, তাই না?', 'Bhasha-i ek, shudhu ektu alada. Moja, tai na?', "It's the same language, just a bit different. Fun, isn't it?", 'c4'),
+      c4: ask(
+        o('হ্যাঁ! আমাদের ভাষা এক।', 'Hyã! Amader bhasha ek.', 'Yes! Our language is one.', 20, 'b1'),
+        o('হ্যাঁ, আমি আরও শব্দ শিখতে চাই।', 'Hyã, ami aro shobdo shikhte chai.', 'Yes, I want to learn more words.', 20, 'b1'),
+        o('আমি কিছুই বুঝিনি।', 'Ami kichhui bujhini.', 'I understood nothing.', -15, 'b1'),
+      ),
+      b1: branch({ min: 85, next: 'eA' }, { min: 60, next: 'eB' }, { next: 'eC' }),
+      eA: end('Two Bengals, one language', '🌉', 'You asked, listened and learned: pani and jol, dada and dada, lobon and nun. Ritu left with a friend for life.', 'great'),
+      eB: end('Getting there', '🙂', 'You understood most of it. A few more words in the "Same Language, Different Words" lesson will help.', 'ok'),
+      eC: end('Lost in translation', '🌀', 'It was confusing this time. Try the "Same Language, Different Words" lesson, then chat with Ritu again.', 'rough'),
     },
   },
 ]

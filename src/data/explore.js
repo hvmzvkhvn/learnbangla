@@ -343,6 +343,11 @@ export const exploreRegions = [
   },
 ]
 
+import { deep } from './exploreDeep'
+exploreRegions.forEach((r) => {
+  r.deep = deep[r.id]
+})
+
 export const exploreById = Object.fromEntries(exploreRegions.map((r) => [r.id, r]))
 
 /** Every region name and city with its picture, for the quizzes. */

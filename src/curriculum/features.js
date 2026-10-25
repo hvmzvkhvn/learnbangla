@@ -33,6 +33,11 @@ export const FEATURES = {
     arcade: ['daily', 'blitz', 'memory', 'type', 'geo'], explore: true, stories: true, treasure: false, boss: true, listenType: true, blitzSeconds: 60,
     trace: { letters: 'all', signs: true, syllables: true, words: 2, digits: true },
   },
+  adult: {
+    xp: true, playful: false, garden: false, gentleStreak: false,
+    arcade: ['daily', 'blitz', 'memory', 'type', 'geo'], explore: true, stories: true, treasure: false, boss: true, listenType: true, blitzSeconds: 60,
+    trace: { letters: 'all', signs: true, syllables: true, words: 2, digits: true },
+  },
 }
 
 export const featuresOf = (trackKey) => FEATURES[trackKey] ?? FEATURES.teen

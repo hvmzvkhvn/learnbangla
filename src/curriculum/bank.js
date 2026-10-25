@@ -10,6 +10,7 @@ import { teenSentenceGroups, tenseVerbs, tensePronouns } from '../data/teenSente
 import { poems, passages, cinemaScenes } from '../data/teenText'
 import { stories } from '../data/stories'
 import { exploreRegions } from '../data/explore'
+import { adultWordCategories, adultSentenceGroups, adultPassages } from '../data/adultText'
 
 export const bank = new Map()
 const add = (item) => {
@@ -165,6 +166,22 @@ teenSentenceGroups.forEach((g) => {
   )
 })
 
+// 18+: work, bank, health, politics, economy, culture, and the two-Bengals vocabulary
+adultWordCategories.forEach((c) => {
+  if (wordIdsByCat[c.key]) throw new Error(`word category "${c.key}" already exists`)
+  categoryMeta[c.key] = { title: c.title, emoji: c.emoji, visual: false, note: c.note }
+  wordIdsByCat[c.key] = c.words.map((w) =>
+    add({ id: `word:${c.key}:${w.bn}`, kind: 'word', section: c.title, cat: c.key, visual: false, bn: w.bn, roman: w.roman, en: w.en, art: w.emoji }),
+  )
+})
+adultSentenceGroups.forEach((g) => {
+  if (sentenceIdsByGroup[g.key]) throw new Error(`sentence group "${g.key}" already exists`)
+  sentenceMeta[g.key] = { title: g.title, emoji: g.emoji }
+  sentenceIdsByGroup[g.key] = g.sentences.map((x) =>
+    add({ id: `sent:${x.bn}`, kind: 'sentence', section: g.title, group: g.key, bn: x.bn, roman: x.roman, en: x.en, tokens: x.bn.split(' ') }),
+  )
+})
+
 // Perfect / future patterns: tense -> verb -> [আমি, তুমি, আপনি] form ids
 export const formIdsByTense = { perfect: {}, future: {} }
 tenseVerbs.forEach((v) => {
@@ -201,6 +218,26 @@ for (const track of ['teen', 'senior']) {
     scenes: Object.entries(cinemaScenes).map(([key, sc]) => ({ key, title: sc.title, emoji: sc.emoji, lineIds: mk(`scene-${key}`, sc.title, 'Conversation', sc.lines, (l) => l.who) })),
   }
 }
+
+// 18+: the 16–18 poems, scenes and readings are shared (so each line is reviewed once); the history, politics,
+// economy, faith, culture and diaspora readings are new.
+teenText.adult = {
+  poems: teenText.senior.poems,
+  scenes: teenText.senior.scenes,
+  passages: [
+    ...teenText.senior.passages,
+    ...adultPassages.map((p) => ({
+      key: p.key, title: p.title, emoji: p.emoji, lead: p.lead, questions: p.questions,
+      lineIds: p.lines.map((l, i) =>
+        add({
+          id: `line:adult:read-${p.key}:${i}`, kind: 'line', track: 'adult', sceneKey: `read-${p.key}`, sceneTitle: p.title, section: `Reading · ${p.title} (18+)`,
+          speaker: 'text', speakerName: '', bn: l.bn, roman: l.roman, en: l.en, tokens: l.bn.split(' '), prevId: i > 0 ? `line:adult:read-${p.key}:${i - 1}` : null,
+        }),
+      ),
+    })),
+  ],
+}
+adultPassages.forEach((p) => add({ id: `fact:adult:lead:${p.key}`, kind: 'fact', section: 'Readings (18+) · English introductions', bn: '', roman: p.title, en: p.lead, art: p.emoji }))
 
 // Story beats: every NPC line and every reply option, so they are reviewed and recorded like everything else.
 export const storyBeatIds = {}
@@ -244,6 +281,7 @@ exploreRegions.forEach((r) => {
   r.timeline.forEach(([y, t], i) => fact(`t${i}`, `Timeline ${y}`, t))
   fact('economy', 'Economy', r.economy)
   r.cities.forEach((c) => fact(`city-${c.id}`, c.name, c.fact))
+  ;(r.deep ?? []).forEach((t, i) => fact(`deep${i}`, 'Go deeper (18+)', t))
 })
 
 export const allItems = () => Array.from(bank.values())

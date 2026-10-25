@@ -87,7 +87,7 @@ const storyLessons = (prefix, track, ids) =>
 const poemLessons = (prefix, track) =>
   teenText[track].poems.map((p) => ({ id: `${prefix}-poem-${p.key}`, title: p.title, emoji: p.emoji, kind: 'poem', learn: p.lineIds, author: p.author, tip: p.note }))
 const passageLessons = (prefix, track, keys) =>
-  teenText[track].passages.filter((p) => keys.includes(p.key)).map((p) => ({ id: `${prefix}-read-${p.key}`, title: `Reading: ${p.title}`, emoji: p.emoji, kind: 'passage', learn: p.lineIds, questions: p.questions }))
+  teenText[track].passages.filter((p) => keys.includes(p.key)).map((p) => ({ id: `${prefix}-read-${p.key}`, title: `Reading: ${p.title}`, emoji: p.emoji, kind: 'passage', learn: p.lineIds, questions: p.questions, tip: p.lead }))
 const sceneLessons = (prefix, track, keys) =>
   teenText[track].scenes.filter((s) => keys.includes(s.key)).map((s) => ({ id: `${prefix}-scene-${s.key}`, title: s.title, emoji: s.emoji, kind: 'dialogue', learn: s.lineIds }))
 
@@ -264,7 +264,9 @@ export function buildTeenTracks() {
       const reading = sentenceIdsByGroup[cat]
       return [
         ...lessonsFrom(`${prefix}-x-${r.id}`, `${r.name}: words`, r.emoji, 'words', wordIdsByCat[cat], 8, { cat, tip: categoryMeta[cat].note }),
-        { id: `${prefix}-xr-${r.id}`, title: `${r.name}: reading`, emoji: r.emoji, kind: 'sentences', learn: [reading[0], reading[1], reading[2], reading[3], reading[4], reading[5]] },
+        ...(prefix === 'a'
+          ? lessonsFrom(`${prefix}-xr-${r.id}`, `${r.name}: reading`, r.emoji, 'sentences', reading, 6)
+          : [{ id: `${prefix}-xr-${r.id}`, title: `${r.name}: reading`, emoji: r.emoji, kind: 'sentences', learn: reading.slice(0, 6) }]),
       ]
     })
     return bossUnit(`${prefix}-xp`, `${prefix}-explore`, 'Explore Bangladesh', '🗺️', 'Words and reading from all eight divisions — then open the map', [...lessons, ...storyLessons(prefix, prefix === 'v' ? 'teen' : 'senior', ['roadtrip'])])
@@ -272,5 +274,104 @@ export function buildTeenTracks() {
   voyagers.units.push(exploreUnit('v'))
   pathfinders.units.push(exploreUnit('p'))
 
-  return { teen: voyagers, senior: pathfinders }
+  // ===========================================================================================
+  // 18+  Wayfarers — adults starting from zero: real life, real history and the Bangla-speaking world
+  // ===========================================================================================
+  const a = 'a'
+  const wayfarers = {
+    key: 'adult', label: 'Wayfarers', ages: '18+', emoji: '🧳', theme: 'teen',
+    tagline: 'Start from zero as an adult: real life, real history, and the Bangla world from Dhaka to Kolkata to London.',
+    units: [
+      bossUnit('a-s', 'a-script', 'Script Fast-Track', '🔤', 'The whole alphabet, quickly', [
+        lettersLesson('a-vow', 'Vowels', allV, TIPS.vowels),
+        lettersLesson('a-c1', 'Consonants I · ক–ঞ', [...gThroat.ids, ...gRoof.ids]),
+        lettersLesson('a-c2', 'Consonants II · ট–ন', [...gCurled.ids, ...gTeeth.ids], TIPS.curled),
+        lettersLesson('a-c3', 'Consonants III · প–হ', [...gLips.ids, ...gFlow.ids], TIPS.flowing),
+        lettersLesson('a-sp', 'Special letters', gSpecial.ids, TIPS.special),
+      ]),
+      bossUnit('a-r', 'a-reading', 'Signs, Conjuncts & Reading', '✏️', 'Vowel signs, joined letters and reading real words', [
+        ...signLessons('a-sign', [[0, 1, 2], [3, 4, 5], [6, 7, 8, 9]]),
+        ...lessonsFrom('a-conj', 'Conjuncts', '🧩', 'letters', conjunctIds, 9, { tip: TIPS.conjuncts }),
+        ...lessonsFrom('a-read', 'Read it!', '📖', 'words', readWordIds(), 9, { cat: 'mixed', tip: 'Sound out each letter, then say the whole word.' }),
+      ]),
+      bossUnit('a-i', 'a-identity', 'People, Family & In-laws', '🪪', 'Greetings, family and who you are', [
+        ...words('a-hi', 'greetings', 12, 'Greetings'),
+        ...words('a-pro', 'pronouns', 9, 'I, You, We'),
+        ...words('a-fam', 'family', 9, 'Family'),
+        ...words('a-inl', 'inlaws', 6, 'In-laws & Extended Family'),
+        { id: 'a-polite', title: 'আপনি or তুমি?', emoji: '🙇', kind: 'polite', learn: [], polite: family.older.polite, tip: 'We say আপনি to every elder and to colleagues you do not know well, and তুমি to friends. Choose the right sentence each time.' },
+        ...sentences('a-id', 'identity', 6),
+        ...storyLessons(a, 'adult', ['landing']),
+      ]),
+      bossUnit('a-n', 'a-numbers', 'Numbers, Time & Money', '🔢', 'Count, tell the time and handle money', [
+        ...wordsE('a-num', 'numbers', 11, '🔢', 'Numbers'),
+        ...wordsE('a-ten', 'tens', 9, '💯', 'Bigger Numbers'),
+        ...wordsE('a-day', 'days', 7, '📅', 'Days of the Week'),
+        ...wordsE('a-mon', 'months', 6, '🗓️', 'Bangla Months'),
+        ...wordsE('a-tim', 'time2', 8, '⏰', 'Time & Dates'),
+        ...wordsE('a-baz', 'bazaar', 7, '🛒', 'Money & Shopping'),
+        ...sentences('a-bs', 'bazaar', 5),
+      ]),
+      bossUnit('a-t', 'a-travel', 'Travel & Cities', '🧭', 'Directions, transport and asking for help', [
+        ...wordsE('a-trv', 'travel', 9, '✈️', 'Travel & Directions'),
+        ...sentences('a-ts', 'travel', 6),
+        ...wordsE('a-tc', 'tech', 8, '📱', 'Phones & Tech'),
+        ...storyLessons(a, 'adult', ['olddhaka']),
+      ]),
+      bossUnit('a-w', 'a-work', 'Work, Money & Forms', '💼', 'Offices, banks and paperwork', [
+        ...words('a-wk', 'work', 6, 'Work & Office'),
+        ...sentences('a-wks', 'awork', 6),
+        ...words('a-bk', 'bank', 6, 'Bank, Forms & Documents'),
+        ...sentences('a-bks', 'abank', 5),
+        ...storyLessons(a, 'adult', ['bankstory']),
+      ]),
+      bossUnit('a-h', 'a-health', 'Health, Study & Eating Out', '🩺', 'The doctor, school and work, the restaurant', [
+        ...words('a-hl', 'health', 6, 'Health & the Doctor'),
+        ...sentences('a-hls', 'ahealth', 5),
+        ...wordsE('a-sch', 'school', 9, '🎓', 'School, Study & Work'),
+        ...wordsE('a-rst', 'restaurant', 11, '🍛', 'Eating Out'),
+      ]),
+      bossUnit('a-p', 'a-politics', 'News, Politics & the Economy', '📰', 'The words behind the headlines, and how the economy changed', [
+        ...words('a-pol', 'politics', 6, 'Government & Politics'),
+        ...words('a-eco', 'economy', 6, 'Economy & Development'),
+        ...sentences('a-nws', 'anews', 6),
+        ...sentences('a-op', 'opinions', 5),
+        ...passageLessons('a-rde', 'adult', ['economy']),
+        ...storyLessons(a, 'adult', ['teadebate']),
+      ]),
+      bossUnit('a-hs', 'a-history', 'History: 1905 to 1971', '🕯️', 'Partition, the Language Movement, independence and the political parties', [
+        ...wordsE('a-his', 'history', 8, '🏛️', 'History & Identity'),
+        ...sentences('a-hst', 'history', 6),
+        ...passageLessons('a-rdh', 'adult', ['bengal1905', 'partition1947', 'langday', 'roadto71', 'parties']),
+        ...storyLessons(a, 'adult', ['grandpa71']),
+      ]),
+      bossUnit('a-f', 'a-faith', 'Faith, Culture & the Arts', '🎶', 'Religion, clothing, music and poets', [
+        ...words('a-cu2', 'culture2', 6, 'Faith, Clothes & Music'),
+        ...sentences('a-cul', 'culture', 5),
+        ...passageLessons('a-rdf', 'adult', ['faith', 'artsculture', 'eid']),
+        ...wordsE('a-flm', 'film', 9, '🎬', 'Film, Music & Art'),
+        ...sceneLessons('a-sc', 'adult', ['ticket', 'song', 'filmtalk']),
+        ...poemLessons('a-pm', 'adult'),
+        ...sentences('a-pv', 'proverbs', 4),
+        ...wordsE('a-cel', 'celebrate', 8, '🎉', 'Celebrations & Weddings'),
+        ...storyLessons(a, 'adult', ['wedding']),
+      ]),
+      bossUnit('a-b', 'a-bengal', 'Bengal Beyond Borders', '🌉', 'West Bengal, the diaspora and two ways of saying it', [
+        ...words('a-tb', 'twobengals', 6, 'Same Language, Different Words'),
+        ...passageLessons('a-rdb', 'adult', ['diaspora', 'dhaka']),
+        ...storyLessons(a, 'adult', ['kolkatacousin']),
+      ]),
+      bossUnit('a-g', 'a-grammar', 'Grammar in Action', '🧩', 'Verbs and tenses you can use right away', [
+        ...wordsE('a-vb', 'verbs', 6, '🏃', 'Action Words'),
+        ...wordsE('a-q', 'questions', 7, '❓', 'Question Words'),
+        ...wordsE('a-adj', 'adjectives', 7, '✨', 'Describing Words'),
+        ...presentForms('a-g'),
+        ...tenseLessons('a-g', 'perfect', 'Have done', '✅', 2, 'To say something is finished, use the "have done" form: আমি খেয়েছি = "I have eaten".'),
+        ...tenseLessons('a-g', 'future', 'Will do', '🔮', 2, 'For the future, the ending changes: আমি খাব, তুমি খাবে, আপনি খাবেন.'),
+      ]),
+      exploreUnit('a'),
+    ],
+  }
+
+  return { teen: voyagers, senior: pathfinders, adult: wayfarers }
 }
