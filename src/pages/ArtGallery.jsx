@@ -1,4 +1,7 @@
 import Scene from '../art/Scene'
+import Sprite from '../art/Sprite'
+import { allSpriteKeys } from '../art/sprites'
+import { youngBooks, olderBooks, lookScenes, buildTasks, regionStoryboards, timelineStory } from '../data/playbook'
 
 const SAMPLES = [
   { bg: 'meadow', time: 'day', items: [{ e: '🏠', x: 22, y: 66, s: 60 }, { e: '🌳', x: 8, y: 64, s: 54, anim: 'sway' }, { e: '👧', x: 55, y: 72, s: 50 }, { e: '🐕', x: 72, y: 76, s: 38, anim: 'bob' }] },
@@ -16,10 +19,60 @@ const SAMPLES = [
   { bg: 'paper', time: 'day', items: [{ map: 'sylhet', x: 30, y: 52, w: 120 }, { t: '1947', x: 72, y: 56, s: 54, c: '#B03A2E' }] },
 ]
 
+// every emoji the Playbook asks for, so anything still without a drawing shows up here
+const used = (() => {
+  const set = new Set()
+  const scene = (sc) => sc.items.forEach((i) => i.e && set.add(i.e))
+  ;[...youngBooks, ...olderBooks].forEach((b) => b.pages.forEach((p) => scene(p.scene)))
+  lookScenes.forEach((l) => scene(l.scene))
+  buildTasks.forEach((t) => { t.steps.forEach((x) => set.add(x.e)); t.decoys.forEach((e) => set.add(e)) })
+  Object.values(regionStoryboards).forEach((b) => b.panels.forEach((p) => scene(p.scene)))
+  timelineStory.panels.forEach((p) => scene(p.scene))
+  return [...set]
+})()
+const have = new Set(allSpriteKeys())
+const missing = used.filter((e) => !have.has(e.replace(/\uFE0F/g, '')))
+
 /** A page of every backdrop with sample props — handy for checking the art. */
+const ALL = [
+  ...youngBooks.map((b) => ({ group: `5–7 · ${b.title.en}`, pages: b.pages })),
+  ...olderBooks.map((b) => ({ group: `8–15 · ${b.title.en}`, pages: b.pages })),
+  ...Object.entries(regionStoryboards).map(([k, b]) => ({ group: `Storyboard · ${k}`, pages: b.panels })),
+  { group: 'Timeline 1905–1971', pages: timelineStory.panels },
+]
+
 export default function ArtGallery() {
+  const all = typeof location !== 'undefined' && new URLSearchParams(location.search).has('all')
+  if (all)
+    return (
+      <div className="mx-auto max-w-5xl px-4 py-6">
+        {ALL.map((g, gi) => (
+          <section key={gi} className="mb-6">
+            <h2 className="mb-2 text-lg font-extrabold text-primary">{g.group}</h2>
+            <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
+              {g.pages.map((pg, i) => (
+                <div key={i}>
+                  <Scene scene={pg.scene} id={`all${gi}-${i}`} />
+                  <p className="mt-0.5 text-[10px] leading-tight text-ink/60">{pg.en}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    )
   return (
     <div className="mx-auto max-w-4xl px-4 py-6">
+      <h1 className="mb-2 text-3xl font-extrabold text-primary">Sprite sheet</h1>
+      <p className="mb-3 text-sm text-ink/60">{used.length} pictures used in the Playbook · {missing.length ? `still emoji: ${missing.join(' ')}` : 'all drawn'}</p>
+      <div className="mb-8 grid grid-cols-6 gap-2 sm:grid-cols-8">
+        {used.map((e) => (
+          <div key={e} className="rounded-xl bg-white p-1 text-center shadow-sm">
+            <Sprite e={e} className="mx-auto h-16 w-16" />
+            <span className="text-[10px] text-ink/40">{e}</span>
+          </div>
+        ))}
+      </div>
       <h1 className="mb-4 text-3xl font-extrabold text-primary">Scene gallery</h1>
       <div className="grid gap-3 sm:grid-cols-2">
         {SAMPLES.map((s, i) => (

@@ -1,9 +1,10 @@
 import { MAP } from '../data/bdMap'
+import { scaleFor, spriteFor } from './sprites'
 
 // A tiny illustration engine: a painted backdrop (sky, hills, river, room…) plus emoji "actors" and props placed
 // on it. Scenes are plain data, so a whole picture book is just a list of { scene, text } pages.
 //
-//   scene = { bg: 'village', time: 'day' | 'evening' | 'night' | 'rain', items: [ … ] }
+//   scene = { bg: 'village', time: 'day' | 'evening' | 'night' | 'rain', items: [ … ], noLuminary?: true (no painted sun / moon, when a sun or moon is an item) }
 //   item  = { e: '🏠', x: 20, y: 62, s: 56, flip?, anim?: 'bob'|'sway'|'drift'|'pulse', shadow?: false, z?: n }
 //         | { t: '1947', x, y, s, c?: colour, w?: weight }            (big text)
 //         | { map: 'sylhet', x, y, w }                                (Bangladesh, one division highlighted)
@@ -25,7 +26,7 @@ const GROUND = {
 }
 const HILL = { day: '#5DB35A', evening: '#4C8C4A', night: '#2E5A3E', rain: '#527F55' }
 
-function Sky({ time, id }) {
+function Sky({ time, id, lum = true }) {
   const [a, b] = SKY[time] ?? SKY.day
   return (
     <>
@@ -40,15 +41,15 @@ function Sky({ time, id }) {
         [[40, 30], [90, 60], [150, 22], [230, 48], [310, 26], [360, 70], [200, 80], [280, 100], [60, 110]].map(([x, y], i) => (
           <circle key={i} cx={x} cy={y} r={i % 3 ? 1.2 : 1.8} fill="#FFF8D6" opacity=".9" />
         ))}
-      {time === 'night' && <circle cx="330" cy="48" r="20" fill="#FFF3C4" />}
-      {time === 'night' && <circle cx="338" cy="42" r="17" fill="#3B4890" opacity=".35" />}
-      {time === 'day' && (
+      {lum && time === 'night' && <circle cx="330" cy="48" r="20" fill="#FFF3C4" />}
+      {lum && time === 'night' && <circle cx="338" cy="42" r="17" fill="#3B4890" opacity=".35" />}
+      {lum && time === 'day' && (
         <>
           <circle cx="332" cy="46" r="38" fill="#FFF3B0" opacity=".35" />
           <circle cx="332" cy="46" r="24" fill="#FFD84D" />
         </>
       )}
-      {time === 'evening' && (
+      {lum && time === 'evening' && (
         <>
           <circle cx="300" cy="150" r="46" fill="#FFE29A" opacity=".45" />
           <circle cx="300" cy="150" r="28" fill="#FF9A4D" />
@@ -123,7 +124,7 @@ function Rain() {
 }
 
 // each backdrop paints everything behind the actors
-function Backdrop({ bg, time, id }) {
+function Backdrop({ bg, time, id, lum = true }) {
   switch (bg) {
     case 'room':
     case 'kitchen':
@@ -159,7 +160,7 @@ function Backdrop({ bg, time, id }) {
     case 'market':
       return (
         <>
-          <Sky time={time} id={id} />
+          <Sky time={time} id={id} lum={lum} />
           <Hills time={time} y={118} color="#7BB46B" />
           <rect y="168" width={W} height="92" fill="#D8B27A" />
           {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
@@ -171,7 +172,7 @@ function Backdrop({ bg, time, id }) {
     case 'river':
       return (
         <>
-          <Sky time={time} id={id} />
+          <Sky time={time} id={id} lum={lum} />
           <Hills time={time} y={110} />
           <Waves y={140} h={120} from={time === 'night' ? '#274A8C' : '#4FB6E8'} to={time === 'night' ? '#14306B' : '#1F7FC0'} id={id} count={8} />
         </>
@@ -179,7 +180,7 @@ function Backdrop({ bg, time, id }) {
     case 'sea':
       return (
         <>
-          <Sky time={time} id={id} />
+          <Sky time={time} id={id} lum={lum} />
           <Waves y={110} h={90} from={time === 'night' ? '#1F5D8C' : '#3BD0D0'} to={time === 'night' ? '#10386A' : '#1D8FC4'} id={id} count={9} />
           <path d={`M0 190 Q100 172 200 188 T400 180 V${H} H0 Z`} fill={time === 'night' ? '#8C7A5C' : '#F3DFA2'} />
           <path d={`M0 214 Q120 200 240 212 T400 206 V${H} H0 Z`} fill={time === 'night' ? '#7A694E' : '#E8CC86'} />
@@ -188,7 +189,7 @@ function Backdrop({ bg, time, id }) {
     case 'city':
       return (
         <>
-          <Sky time={time} id={id} />
+          <Sky time={time} id={id} lum={lum} />
           {[[10, 90, 50], [60, 70, 44], [106, 100, 56], [166, 80, 40], [208, 62, 52], [262, 96, 46], [310, 74, 58], [366, 92, 40]].map(([x, y, w], i) => (
             <g key={i}>
               <rect x={x} y={y} width={w} height={178 - y} fill={time === 'night' ? '#2A3568' : ['#C4B5A0', '#B7C4D0', '#D6C1A8', '#C9B79C'][i % 4]} />
@@ -205,7 +206,7 @@ function Backdrop({ bg, time, id }) {
     case 'hills':
       return (
         <>
-          <Sky time={time} id={id} />
+          <Sky time={time} id={id} lum={lum} />
           <path d={`M0 120 Q80 70 170 112 T400 96 V${H} H0 Z`} fill="#4E9F5B" />
           <path d={`M0 150 Q110 104 220 146 T400 130 V${H} H0 Z`} fill="#3E8F4C" />
           <path d={`M0 190 Q120 150 240 188 T400 172 V${H} H0 Z`} fill="#2F7E3E" />
@@ -225,7 +226,7 @@ function Backdrop({ bg, time, id }) {
     case 'village':
       return (
         <>
-          <Sky time={time} id={id} />
+          <Sky time={time} id={id} lum={lum} />
           <Hills time={time} y={130} />
           <Ground time={time} y={168} id={id} />
           <Waves y={196} h={26} from={time === 'night' ? '#274A8C' : '#59BDE8'} to={time === 'night' ? '#1B3A7A' : '#2A8BC8'} id={id + 'r'} count={6} />
@@ -238,7 +239,7 @@ function Backdrop({ bg, time, id }) {
     default:
       return (
         <>
-          <Sky time={time} id={id} />
+          <Sky time={time} id={id} lum={lum} />
           <Hills time={time} y={140} />
           <Ground time={time} y={176} id={id} />
           {Array.from({ length: 12 }).map((_, i) => (
@@ -272,6 +273,17 @@ function Item({ it }) {
   }
   const s = it.s ?? 44
   const shadow = it.shadow ?? (it.y > 48 && s >= 28)
+  const Art = spriteFor(it.e)
+  if (Art) {
+    return (
+      <g className={cls} style={{ transformOrigin: `${x}px ${y}px`, transformBox: 'view-box' }}>
+        {shadow && <ellipse cx={x} cy={y + s * 0.4} rx={s * 0.4} ry={s * 0.09} fill="#000" opacity=".16" />}
+        <g transform={`${it.flip ? `translate(${2 * x} 0) scale(-1 1) ` : ''}translate(${x} ${y + s * 0.4}) scale(${(s / 100) * scaleFor(it.e)}) translate(-50 -90)`}>
+          <Art />
+        </g>
+      </g>
+    )
+  }
   return (
     <g className={cls} style={{ transformOrigin: `${x}px ${y}px`, transformBox: 'view-box' }}>
       {shadow && <ellipse cx={x} cy={y + s * 0.34} rx={s * 0.42} ry={s * 0.1} fill="#000" opacity=".16" />}
@@ -288,7 +300,7 @@ export default function Scene({ scene, className = '', onItem, ring, id = 'a' })
   const items = [...(scene.items ?? [])].map((it, i) => ({ ...it, _i: i })).sort((a, b) => (a.z ?? 0) - (b.z ?? 0) || a._i - b._i)
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={`block w-full overflow-hidden rounded-3xl ${className}`} role="img" aria-label={scene.alt ?? 'Illustration'}>
-      <Backdrop bg={scene.bg ?? 'meadow'} time={time} id={id} />
+      <Backdrop bg={scene.bg ?? 'meadow'} time={time} id={id} lum={!scene.noLuminary} />
       {items.map((it) => {
         const x = (it.x / 100) * W
         const y = (it.y / 100) * H

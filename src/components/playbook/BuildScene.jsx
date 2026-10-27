@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Scene from '../../art/Scene'
+import Sprite from '../../art/Sprite'
 import Speaker from '../Speaker'
 import { speak } from '../../audio/audio'
 import { useRoman } from '../../state/roman'
@@ -26,7 +27,7 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
   }, [task, n]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const placed = task.steps.slice(0, n).map((s) => ({ e: s.e, x: s.x, y: s.y, s: s.s, anim: s.anim }))
-  const scene = { bg: task.bg, time: task.time, items: placed, alt: task.title.en }
+  const scene = { bg: task.bg, time: task.time, items: placed, alt: task.title.en, noLuminary: task.noLuminary }
 
   const begin = () => {
     setStarted(true)
@@ -102,8 +103,9 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
                 onClick={() => pick(e)}
                 className={`flex aspect-square items-center justify-center rounded-2xl bg-white text-4xl shadow transition active:scale-95 ${wrong === e ? 'animate-shake ring-2 ring-error' : ''}`}
                 aria-label="Picture choice"
+                data-e={e}
               >
-                {e}
+                <Sprite e={e} className="h-14 w-14" />
               </button>
             ))}
           </div>

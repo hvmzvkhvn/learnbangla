@@ -6,7 +6,7 @@ export const lookScenes = [
   {
     id: 'village', emoji: '🏡', title: { bn: 'গ্রাম', en: 'The Village' },
     scene: {
-      bg: 'village', time: 'day', alt: 'A village with a house, tree, pond, boat and animals',
+      bg: 'village', time: 'day', noLuminary: true, alt: 'A village with a house, tree, pond, boat and animals',
       items: [
         it('☀️', 86, 16, 44, w('সূর্য', 'shurjo', 'sun'), { anim: 'pulse' }),
         it('🏡', 22, 58, 64, w('বাড়ি', 'bari', 'house')),
@@ -15,7 +15,7 @@ export const lookScenes = [
         it('🦆', 30, 84, 34, w('হাঁস', 'hash', 'duck'), { anim: 'bob' }),
         it('🛶', 82, 84, 44, w('নৌকা', 'nouka', 'boat'), { anim: 'bob' }),
         it('🐦', 62, 24, 28, w('পাখি', 'pakhi', 'bird'), { anim: 'drift' }),
-        it('🌼', 8, 82, 26, w('ফুল', 'ful', 'flower')),
+        it('🌼', 8, 70, 28, w('ফুল', 'ful', 'flower')),
       ],
     },
   },
@@ -29,7 +29,7 @@ export const lookScenes = [
         it('📚', 80, 74, 40, w('বই', 'boi', 'book')),
         it('🧸', 52, 80, 40, w('পুতুল', 'putul', 'doll'), { anim: 'bob' }),
         it('🪑', 70, 76, 44, w('চেয়ার', 'cheyar', 'chair')),
-        it('🪟', 88, 40, 44, w('জানালা', 'janala', 'window')),
+        it('🪟', 82, 29, 112, w('জানালা', 'janala', 'window'), { z: -1 }),
       ],
     },
   },
@@ -38,13 +38,13 @@ export const lookScenes = [
     scene: {
       bg: 'market', time: 'day', alt: 'A market stall with fruit, fish and a shopkeeper',
       items: [
-        it('🥭', 18, 76, 40, w('আম', 'am', 'mango')),
-        it('🍌', 34, 80, 38, w('কলা', 'kola', 'banana')),
-        it('🍎', 50, 76, 38, w('আপেল', 'apel', 'apple')),
-        it('🐟', 66, 80, 42, w('মাছ', 'mach', 'fish')),
-        it('🧑‍🌾', 84, 66, 54, w('দোকানদার', 'dokandar', 'shopkeeper')),
-        it('💵', 46, 52, 34, w('টাকা', 'taka', 'money'), { anim: 'pulse' }),
-        it('🛍️', 12, 56, 34, w('ব্যাগ', 'byag', 'bag')),
+        it('🛍️', 9, 76, 36, w('ব্যাগ', 'byag', 'bag')),
+        it('🥭', 23, 80, 38, w('আম', 'am', 'mango')),
+        it('🍌', 37, 80, 36, w('কলা', 'kola', 'banana')),
+        it('🍎', 51, 80, 36, w('আপেল', 'apel', 'apple')),
+        it('🐟', 65, 82, 40, w('মাছ', 'mach', 'fish')),
+        it('💵', 77, 84, 30, w('টাকা', 'taka', 'money')),
+        it('🧑‍🌾', 91, 70, 50, w('দোকানদার', 'dokandar', 'shopkeeper')),
       ],
     },
   },
@@ -69,9 +69,9 @@ export const lookScenes = [
       items: [
         it('🚌', 24, 80, 58, w('বাস', 'bas', 'bus'), { anim: 'bob' }),
         it('🛺', 56, 82, 48, w('রিকশা', 'riksha', 'rickshaw'), { anim: 'bob' }),
-        it('🏫', 84, 56, 56, w('স্কুল', 'skul', 'school')),
-        it('🏥', 12, 52, 50, w('হাসপাতাল', 'haspatal', 'hospital')),
-        it('🌳', 40, 54, 44, w('গাছ', 'gachh', 'tree')),
+        it('🏫', 84, 66, 56, w('স্কুল', 'skul', 'school')),
+        it('🏥', 12, 66, 50, w('হাসপাতাল', 'haspatal', 'hospital')),
+        it('🌳', 42, 72, 46, w('গাছ', 'gachh', 'tree')),
         it('🚦', 70, 62, 40, w('বাতি', 'bati', 'light')),
       ],
     },
@@ -80,7 +80,7 @@ export const lookScenes = [
 
 export const buildTasks = [
   {
-    id: 'village', emoji: '🏡', title: { bn: 'গ্রাম সাজাই', en: 'Build the Village' }, bg: 'village', time: 'day',
+    id: 'village', emoji: '🏡', title: { bn: 'গ্রাম সাজাই', en: 'Build the Village' }, bg: 'village', time: 'day', noLuminary: true,
     steps: [
       { word: w('বাড়ি', 'bari', 'house'), e: '🏡', x: 24, y: 58, s: 62 },
       { word: w('গাছ', 'gachh', 'tree'), e: '🌳', x: 52, y: 52, s: 66, anim: 'sway' },
@@ -92,7 +92,7 @@ export const buildTasks = [
     decoys: ['🚀', '🐧', '🏔️', '🚗', '⛄'],
   },
   {
-    id: 'night', emoji: '🌙', title: { bn: 'রাতের ছবি', en: 'Build the Night' }, bg: 'meadow', time: 'night',
+    id: 'night', emoji: '🌙', title: { bn: 'রাতের ছবি', en: 'Build the Night' }, bg: 'meadow', time: 'night', noLuminary: true,
     steps: [
       { word: w('চাঁদ', 'chãd', 'moon'), e: '🌙', x: 78, y: 20, s: 50, anim: 'pulse' },
       { word: w('তারা', 'tara', 'star'), e: '⭐', x: 30, y: 18, s: 32, anim: 'pulse' },
@@ -103,7 +103,7 @@ export const buildTasks = [
     decoys: ['☀️', '🌈', '🐘', '🚌', '🏖️'],
   },
   {
-    id: 'river', emoji: '🛶', title: { bn: 'নদীর ছবি', en: 'Build the River' }, bg: 'river', time: 'day',
+    id: 'river', emoji: '🛶', title: { bn: 'নদীর ছবি', en: 'Build the River' }, bg: 'river', time: 'day', noLuminary: true,
     steps: [
       { word: w('নৌকা', 'nouka', 'boat'), e: '⛵', x: 40, y: 70, s: 54, anim: 'bob' },
       { word: w('মাছ', 'mach', 'fish'), e: '🐟', x: 72, y: 84, s: 38, anim: 'bob' },

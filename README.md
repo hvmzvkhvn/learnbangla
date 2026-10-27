@@ -106,7 +106,7 @@ All behaviour that differs by age lives in one file, `src/curriculum/features.js
 
 ## Playbook (all ages)
 
-A 🎨 **Playbook** tab of visual learning, drawn by a small built-in illustration engine (`src/art/Scene.jsx`: painted backdrops plus emoji actors, no image files; every scene is plain data, and `/art` shows samples).
+A 🎨 **Playbook** tab of visual learning, drawn by a small built-in illustration engine (`src/art/Scene.jsx`: painted backdrops plus hand-drawn SVG characters, animals, buildings and objects from `src/art/sprites/`, no image files; every scene is plain data). `/art` shows the sprite sheet and any picture still missing a drawing; `/art?all` shows every page of every book and storyboard. Anything without a sprite falls back to its emoji, and a scene can later be replaced by commissioned artwork.
 
 - **Picture books**: 6 for ages 5–7 (one short Bangla line a page, English hidden until asked) and 6 for 8–15 (seven pages each). The line is read aloud on every page, words are tappable, transliteration follows the Aa switch.
 - **Look & Learn**: tap things in a picture to hear and see their Bangla names, then play "Find it". 5 scenes.

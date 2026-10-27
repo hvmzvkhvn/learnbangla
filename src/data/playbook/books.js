@@ -2,7 +2,7 @@
 //   young  — ages 5–7: one very short line per picture
 //   older  — ages 8–13: two short lines' worth of story across seven pages
 // Pages are { scene, bn, roman, en }. Scenes are described in src/art/Scene.jsx.
-const sc = (bg, time, ...items) => ({ bg, time, items })
+const sc = (bg, time, ...items) => ({ bg, time, items, ...(items.some((i) => ['🌙', '🌅', '☀️'].includes(i.e)) ? { noLuminary: true } : {}) })
 const it = (e, x, y, s = 44, extra = {}) => ({ e, x, y, s, ...extra })
 const pg = (scene, bn, roman, en) => ({ scene, bn, roman, en })
 
@@ -35,7 +35,7 @@ export const youngBooks = [
       pg(sc('meadow', 'rain', it('☁️', 50, 20, 70, { anim: 'drift' }), it('🏠', 72, 62, 56)), 'আকাশে মেঘ।', 'akashe megh.', 'Clouds in the sky.'),
       pg(sc('meadow', 'rain', it('🧒', 44, 76, 54), it('🏠', 76, 58, 50)), 'বৃষ্টি পড়ে।', 'brishti pore.', 'The rain falls.'),
       pg(sc('meadow', 'rain', it('☂️', 40, 52, 62, { anim: 'sway' }), it('🧒', 40, 78, 50)), 'আমার ছাতা আছে।', 'amar chhata ache.', 'I have an umbrella.'),
-      pg(sc('meadow', 'rain', it('🧒', 38, 76, 52, { anim: 'bob' }), it('💦', 60, 86, 34, { anim: 'pulse' })), 'পানিতে ছপ ছপ!', 'panite chhop chhop!', 'Splash splash in the water!'),
+      pg(sc('meadow', 'rain', it('🧒', 38, 76, 52, { anim: 'bob' }), it('💦', 62, 84, 52, { anim: 'pulse' })), 'পানিতে ছপ ছপ!', 'panite chhop chhop!', 'Splash splash in the water!'),
       pg(sc('village', 'day', it('⛵', 46, 80, 44, { anim: 'bob' }), it('🧒', 20, 62, 48)), 'আমার কাগজের নৌকা।', 'amar kagojer nouka.', 'My paper boat.'),
       pg(sc('meadow', 'day', it('🌈', 50, 28, 120), it('🧒', 36, 80, 50, { anim: 'bob' })), 'ওই দেখো, রংধনু!', 'oi dekho, rongdhonu!', 'Look, a rainbow!'),
     ],

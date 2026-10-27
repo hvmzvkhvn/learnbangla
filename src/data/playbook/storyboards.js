@@ -1,7 +1,8 @@
 // Division storyboards (16–18 and 18+): English narration first, with the Bangla caption beneath.
 // Each panel = one illustration + { en, bn, roman }.
 const it = (e, x, y, s = 44, extra = {}) => ({ e, x, y, s, ...extra })
-const p = (bg, time, items, en, bn, roman) => ({ scene: { bg, time, items }, en, bn, roman })
+const big = (bg, items) => (bg === 'paper' ? items.map((i) => (i.e ? { ...i, s: Math.round(i.s * 1.45) } : i)) : items)
+const p = (bg, time, rawItems, en, bn, roman, items = big(bg, rawItems)) => ({ scene: { bg, time, items, ...(items.some((i) => ['🌙', '🌅', '☀️'].includes(i.e)) ? { noLuminary: true } : {}) }, en, bn, roman })
 const map = (id) => ({ map: id, x: 50, y: 50, w: 165 })
 
 export const regionStoryboards = {
@@ -14,7 +15,7 @@ export const regionStoryboards = {
       p('city', 'day', [it('🛺', 22, 80, 50, { anim: 'bob' }), it('🛺', 52, 82, 50, { anim: 'bob' }), it('🛺', 82, 80, 50, { anim: 'bob' }), it('🚌', 40, 62, 40)],
         'Rickshaws, painted in bright colours, crowd the narrow streets of Old Dhaka.',
         'ঢাকার রাস্তায় অনেক রিকশা চলে।', 'dhakar rastay onek riksha chole.'),
-      p('paper', 'day', [it('🏛️', 50, 56, 96), it('🕯️', 24, 80, 36, { anim: 'pulse' }), it('🕯️', 76, 80, 36, { anim: 'pulse' }), { t: '21 Feb 1952', x: 50, y: 14, s: 24 }],
+      p('paper', 'day', [it('minar', 50, 56, 96), it('🕯️', 24, 80, 36, { anim: 'pulse' }), it('🕯️', 76, 80, 36, { anim: 'pulse' }), { t: '21 Feb 1952', x: 50, y: 14, s: 24 }],
         'On 21 February 1952, people were killed protesting for Bangla to be a state language. The Shaheed Minar remembers them, and the day is now International Mother Language Day.',
         'একুশে ফেব্রুয়ারি ভাষার দিন।', 'ekushe februari bhashar din.'),
       p('room', 'day', [it('🧵', 24, 74, 44), it('👕', 52, 72, 50), it('🧑‍🏭', 80, 70, 52)],
@@ -94,7 +95,7 @@ export const regionStoryboards = {
       p('sea', 'day', [it('🚢', 40, 66, 60, { anim: 'bob' }), it('🦐', 78, 76, 44)],
         'Mongla is the second seaport, and shrimp from Khulna’s farms are sold around the world.',
         'খুলনার চিংড়ি বিদেশে যায়।', 'khulnar chingri bideshe jay.'),
-      p('paper', 'day', [it('🕌', 50, 56, 98), it('⭐', 82, 22, 30, { anim: 'pulse' })],
+      p('paper', 'day', [it('domes', 50, 56, 98), it('⭐', 82, 22, 30, { anim: 'pulse' })],
         'In Bagerhat, the Sixty Dome Mosque was built in the 15th century and is a UNESCO World Heritage Site.',
         'বাগেরহাটে ষাট গম্বুজ মসজিদ আছে।', 'bagerhate shat gombuj moshjid ache.'),
     ],
@@ -111,10 +112,10 @@ export const regionStoryboards = {
       p('room', 'day', [it('🐛', 26, 72, 36), it('🧵', 56, 70, 44), it('👘', 82, 70, 48)],
         'Rajshahi silk is woven from threads spun by silkworms and is prized for sarees.',
         'রাজশাহীর রেশম খুব সুন্দর।', 'rajshahir reshom khub shundor.'),
-      p('paper', 'day', [it('🏛️', 50, 56, 100), it('🌿', 20, 80, 30), it('🌿', 80, 80, 30)],
+      p('paper', 'day', [it('vihara', 50, 56, 100), it('🌿', 20, 80, 30), it('🌿', 80, 80, 30)],
         'At Paharpur in the north, the ruins of a vast Buddhist monastery from the 8th century are a UNESCO World Heritage Site.',
         'পাহাড়পুরে প্রাচীন বিহার আছে।', 'paharpure prachin bihar ache.'),
-      p('river', 'evening', [it('🌊', 50, 66, 90, { anim: 'bob' }), it('🛶', 24, 56, 40, { anim: 'bob' })],
+      p('river', 'evening', [it('🛶', 50, 74, 64, { anim: 'bob' })],
         'The wide Padma river feeds the land but also floods and erodes its banks every year.',
         'পদ্মা নদী অনেক বড়।', 'poddha nodi onek boro.'),
     ],
@@ -125,7 +126,7 @@ export const regionStoryboards = {
       p('paper', 'day', [map('mymensingh'), it('🎶', 84, 22, 40)],
         'Mymensingh, in the north-centre, lies along the Brahmaputra river.',
         'ময়মনসিংহ ব্রহ্মপুত্র নদের ধারে।', 'moymonshingho brohmoputro noder dhare.'),
-      p('river', 'day', [it('🌊', 50, 66, 90, { anim: 'bob' }), it('🛶', 26, 60, 40, { anim: 'bob' })],
+      p('river', 'day', [it('🛶', 50, 74, 64, { anim: 'bob' })],
         'The Brahmaputra carries water and silt from the Himalayas and makes the land fertile.',
         'নদের পানিতে মাটি উর্বর হয়।', 'noder panite mati urbor hoy.'),
       p('paper', 'day', [it('📜', 36, 62, 72), it('🎶', 70, 40, 48, { anim: 'pulse' }), it('🪕', 74, 74, 48)],
@@ -145,7 +146,7 @@ export const regionStoryboards = {
       p('paper', 'day', [map('rangpur'), it('🏔️', 84, 22, 40)],
         'Rangpur is the far north of Bangladesh, where flat plains stretch towards the Himalayas.',
         'রংপুর বাংলাদেশের উত্তরে।', 'rongpur bangladesher uttore.'),
-      p('river', 'day', [it('🌊', 50, 68, 90, { anim: 'bob' }), it('🌾', 18, 54, 44, { anim: 'sway' }), it('🏡', 84, 50, 44)],
+      p('river', 'day', [it('🌾', 18, 54, 44, { anim: 'sway' }), it('🏡', 84, 50, 44)],
         'The Teesta river brings snowmelt and monsoon floods. People in its sandy char islands live close to the water.',
         'তিস্তা নদী উত্তরে বয়ে যায়।', 'tishta nodi uttore boye jay.'),
       p('paper', 'day', [it('🛕', 50, 56, 96), it('🌿', 18, 80, 30), it('🌿', 82, 80, 30)],

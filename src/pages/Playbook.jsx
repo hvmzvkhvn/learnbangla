@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import Scene from '../art/Scene'
+import Sprite from '../art/Sprite'
 import BookReader from '../components/playbook/BookReader'
 import LookLearn from '../components/playbook/LookLearn'
 import BuildScene from '../components/playbook/BuildScene'
@@ -21,7 +22,7 @@ function Tile({ to, scene, emoji, title, sub, done, id }) {
   return (
     <Link to={to} className="block overflow-hidden rounded-3xl bg-white shadow-sm transition active:scale-[0.98] hover:shadow-md">
       <div className="relative">
-        {scene ? <Scene scene={scene} id={id} className="!rounded-none" /> : <div className="flex aspect-[400/260] items-center justify-center bg-accent/40 text-5xl">{emoji}</div>}
+        {scene ? <Scene scene={scene} id={id} className="!rounded-none" /> : <div className="flex aspect-[400/260] items-center justify-center bg-accent/40 text-5xl"><Sprite e={emoji} className="h-20 w-20" /></div>}
         {done && <span className="absolute right-2 top-2 rounded-full bg-success px-2 py-0.5 text-xs font-extrabold text-white shadow">✓ done</span>}
       </div>
       <div className="px-3 py-2.5">
