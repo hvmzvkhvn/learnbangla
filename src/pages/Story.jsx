@@ -8,6 +8,8 @@ import { useGame } from '../state/game'
 import { speak, stop, useSoundOn } from '../audio/audio'
 import Speaker from '../components/Speaker'
 import SoundToggle from '../components/SoundToggle'
+import RomanToggle from '../components/RomanToggle'
+import { useRoman } from '../state/roman'
 import Confetti from '../components/Confetti'
 import Toasts from '../components/Toasts'
 
@@ -24,6 +26,7 @@ export default function Story() {
 }
 
 function Player({ story }) {
+  const [romanOn] = useRoman()
   const navigate = useNavigate()
   const [trackKey] = useTrack()
   const { complete } = useProgress()
@@ -166,6 +169,7 @@ function Player({ story }) {
           <button type="button" onClick={() => setShowEn((v) => !v)} className={`rounded-full px-3 py-2 text-xs font-extrabold shadow-sm ${showEn ? 'bg-white text-primary' : 'bg-ink/10 text-ink/50'}`}>
             EN
           </button>
+          <RomanToggle />
           <SoundToggle />
         </div>
       </header>
@@ -186,7 +190,7 @@ function Player({ story }) {
               )}
               <div className={`max-w-[82%] rounded-3xl px-4 py-3 shadow-sm ${m.kind === 'you' ? 'rounded-br-md bg-primary text-white' : 'rounded-bl-md bg-white'}`}>
                 <p className={`font-bangla text-xl font-bold leading-snug ${m.kind === 'you' ? 'text-white' : 'text-primary'}`}>{m.bn}</p>
-                <p className={`text-xs font-bold ${m.kind === 'you' ? 'text-white/80' : 'text-ink/60'}`}>{m.roman}</p>
+                <p className={`text-xs font-bold ${m.kind === 'you' ? 'text-white/80' : 'text-ink/60'}`}>{romanOn ? m.roman : null}</p>
                 {showEn && <p className={`text-xs ${m.kind === 'you' ? 'text-white/70' : 'text-ink/50'}`}>{m.en}</p>}
               </div>
               <button type="button" onClick={() => speak(m.bn, { force: true })} aria-label="Hear it" className="mb-1 rounded-full bg-accent/60 px-2 py-1 text-sm">
@@ -227,7 +231,7 @@ function Player({ story }) {
                     <div className="min-w-0 flex-1">
                       <p className="font-bangla text-lg font-bold leading-snug text-primary">{n.bn}</p>
                       <p className="text-xs text-ink/50">
-                        {n.roman} · {n.en}
+                        {romanOn && `${n.roman} · `}{n.en}
                       </p>
                     </div>
                     <Speaker text={n.bn} size="sm" />
@@ -256,7 +260,7 @@ function Player({ story }) {
               <div key={i} className="flex items-stretch gap-2">
                 <button type="button" onClick={() => choose(o, i)} className="flex-1 rounded-2xl border-4 border-primary/15 bg-white px-4 py-3 text-left shadow-sm transition active:scale-[0.98] hover:border-primary/50">
                   <span className="block font-bangla text-lg font-bold leading-snug text-primary">{o.bn}</span>
-                  <span className="block text-xs font-bold text-ink/60">{o.roman}</span>
+                  {romanOn && <span className="block text-xs font-bold text-ink/60">{o.roman}</span>}
                   {showEn && <span className="block text-xs text-ink/50">{o.en}</span>}
                 </button>
                 <Speaker text={o.bn} size="md" className="self-center" label="Hear this reply" />

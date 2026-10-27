@@ -3,6 +3,7 @@ import { useReviewMarks } from '../../state/persist'
 import { speak, speakSequence } from '../../audio/audio'
 import Speaker from '../Speaker'
 import SayIt from '../SayIt'
+import { useRoman } from '../../state/roman'
 
 // Words inside a sentence can be tapped to hear them one at a time.
 function TappableWords({ tokens }) {
@@ -23,6 +24,7 @@ function TappableWords({ tokens }) {
 }
 
 export default function LearnCard({ item }) {
+  const [romanOn] = useRoman()
   const [marks, setMarks] = useReviewMarks()
   const flagged = marks[item.id]?.status === 'fix'
   const toggleFlag = () =>
@@ -50,13 +52,13 @@ export default function LearnCard({ item }) {
         <>
           <p className="font-bangla text-8xl font-bold leading-tight text-primary">{item.bn}</p>
           <div className="mt-1 flex items-center justify-center gap-3">
-            <span className="rounded-full bg-accent px-4 py-1 text-xl font-extrabold">{item.roman}</span>
+            {romanOn && <span className="rounded-full bg-accent px-4 py-1 text-xl font-extrabold">{item.roman}</span>}
             <Speaker text={item.bn} size="lg" label="Hear the letter" />
           </div>
           <div className="mt-5 border-t border-primary/10 pt-4">
             <p className="text-6xl">{item.example.emoji}</p>
             <p className="font-bangla text-3xl font-bold text-ink">{item.example.bn}</p>
-            <p className="font-bold text-primary">{item.example.roman}</p>
+            {romanOn && <p className="font-bold text-primary">{item.example.roman}</p>}
             <p className="mb-2 text-sm text-ink/50">{item.example.en}</p>
             <Speaker text={item.example.bn} label="Hear the word" />
           </div>
@@ -67,7 +69,7 @@ export default function LearnCard({ item }) {
         <>
           <p className="font-bangla text-8xl font-bold leading-tight text-primary">{item.bn}</p>
           <div className="mt-1 flex items-center justify-center gap-3">
-            <span className="rounded-full bg-accent px-4 py-1 text-xl font-extrabold">{item.roman}</span>
+            {romanOn && <span className="rounded-full bg-accent px-4 py-1 text-xl font-extrabold">{item.roman}</span>}
             <Speaker text={item.bn} size="lg" label="Hear it" />
           </div>
           {item.signChar && (
@@ -82,7 +84,7 @@ export default function LearnCard({ item }) {
         <>
           <p className="font-bangla text-8xl">{item.art}</p>
           <p className="mt-2 font-bangla text-5xl font-bold leading-snug text-primary">{item.bn}</p>
-          <p className="mt-1 text-xl font-extrabold text-ink">{item.roman}</p>
+          {romanOn && <p className="mt-1 text-xl font-extrabold text-ink">{item.roman}</p>}
           <p className="mb-3 text-ink/60">{item.en}</p>
           <Speaker text={item.bn} size="lg" label="Hear the word" />
         </>
@@ -91,7 +93,7 @@ export default function LearnCard({ item }) {
       {(item.kind === 'sentence' || item.kind === 'form') && (
         <>
           <p className="mt-6 font-bangla text-4xl font-bold leading-snug text-primary">{item.bn}</p>
-          <p className="mt-2 text-lg font-extrabold text-ink">{item.roman}</p>
+          {romanOn && <p className="mt-2 text-lg font-extrabold text-ink">{item.roman}</p>}
           <p className="mb-3 text-ink/60">{item.en}</p>
           <Speaker text={item.bn} size="lg" label="Hear the sentence" />
           <p className="mt-4 text-xs font-bold uppercase tracking-wide text-ink/40">Tap a word to hear it</p>

@@ -1,8 +1,10 @@
 import { speak } from '../../audio/audio'
 import Speaker from '../Speaker'
+import { useRoman } from '../../state/roman'
 
 /** A line of Bangla with tap-a-word audio, romanisation and the English underneath. */
 export default function BanglaLine({ s, emoji, size = 'text-xl' }) {
+  const [romanOn] = useRoman()
   return (
     <div className="flex items-start gap-3 rounded-2xl bg-white px-3 py-3 shadow-sm">
       {emoji && <span className="text-3xl">{emoji}</span>}
@@ -14,7 +16,7 @@ export default function BanglaLine({ s, emoji, size = 'text-xl' }) {
             </button>
           ))}
         </p>
-        <p className="text-sm font-bold text-ink/70">{s.roman}</p>
+        {romanOn && <p className="text-sm font-bold text-ink/70">{s.roman}</p>}
         <p className="text-sm text-ink/50">{s.en}</p>
       </div>
       <Speaker text={s.bn} size="sm" label="Hear the sentence" />

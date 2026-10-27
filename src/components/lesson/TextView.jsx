@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { speak, stop, useSoundOn } from '../../audio/audio'
+import { useRoman } from '../../state/roman'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 const strip = (t) => t.replace(/[।,?!"“”]/g, '')
@@ -9,6 +10,7 @@ export default function TextView({ text }) {
   const [active, setActive] = useState(-1)
   const [showEn, setShowEn] = useState(true)
   const [soundOn] = useSoundOn()
+  const [romanOn] = useRoman()
   const run = useRef(0)
   const poem = text.kind === 'poem'
 
@@ -70,7 +72,7 @@ export default function TextView({ text }) {
               ))}
             </p>
             <button type="button" onClick={() => playLine(i)} className="mt-1 block w-full text-center text-xs font-bold text-ink/50">
-              {l.roman}
+              {romanOn && <span className="block">{l.roman}</span>}
               {showEn && <span className="mt-0.5 block font-normal text-ink/60">{l.en}</span>}
               <span className="mt-1 inline-block text-[11px] text-primary">🔊 tap to hear the line</span>
             </button>

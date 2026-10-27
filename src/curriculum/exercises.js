@@ -8,6 +8,7 @@
 import { bank, categoryMeta, roster } from './bank'
 import { FEATURES } from './features'
 import { shuffle, sample, splitClusters } from './text'
+import { romanOn } from './roman'
 
 const get = (id) => bank.get(id)
 let uid = 0
@@ -81,7 +82,14 @@ function letterExercises(item, lessonItems, track) {
 
 function syllableExercises(item) {
   const pool = poolFor(item).filter((x) => x.id !== item.id)
-  const out = []
+  if (!romanOn()) {
+    // no transliteration to match against: listen and pick the Bangla instead
+    const l = choice({
+      itemId: item.id, title: 'Listen. Which one is it?', stem: { listen: true, say: item.bn, noAudio: true },
+      correct: { bn: item.bn }, candidates: pool.map((p) => ({ bn: p.bn })), dim: 'bn',
+    })
+    return [l].filter(Boolean)
+  }
   const a = choice({
     itemId: item.id,
     title: 'How do you say this?',

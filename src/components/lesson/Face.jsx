@@ -1,8 +1,10 @@
 import Speaker from '../Speaker'
+import { useRoman } from '../../state/roman'
 
 // Renders a "face": any mix of picture/digit (art), Bangla (bn), romanisation and English text.
 // With `speak`, a 🔊 button plays the Bangla (f.say overrides what is spoken; f.noAudio silences it).
 export default function Face({ f, big = false, speak = false }) {
+  const [romanOn] = useRoman()
   if (!f) return null
   if (f.listen) {
     return (
@@ -18,7 +20,7 @@ export default function Face({ f, big = false, speak = false }) {
       {f.bn && (
         <span className={`font-bangla font-bold text-primary ${big ? 'mt-2 text-5xl' : 'text-2xl'}`}>{f.bn}</span>
       )}
-      {f.roman && <span className="mt-1 text-sm font-bold text-ink/50">{f.roman}</span>}
+      {f.roman && (romanOn || !f.bn) && <span className="mt-1 text-sm font-bold text-ink/50">{f.roman}</span>}
       {f.text && <span className={`font-extrabold text-ink ${big ? 'mt-2 text-2xl' : 'text-base'}`}>{f.text}</span>}
       {speak && f.bn && !f.noAudio && <Speaker inline size={big ? 'md' : 'sm'} text={f.say ?? f.bn} className="mt-2" />}
     </div>

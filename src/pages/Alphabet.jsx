@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { vowels, consonantGroups, vowelSigns } from '../data/alphabet'
 import Speaker from '../components/Speaker'
+import { useRoman } from '../state/roman'
 
 const TABS = [
   { key: 'vowels', label: 'Vowels' },
@@ -10,17 +11,18 @@ const TABS = [
 
 function LetterCard({ item }) {
   const { letter, roman, example } = item
+  const [romanOn] = useRoman()
   return (
     <div className="card flex flex-col items-center !p-4 text-center">
       <span className="font-bangla text-6xl font-bold leading-tight text-primary">{letter}</span>
       <div className="mt-1 flex items-center gap-2">
-        <span className="rounded-full bg-accent px-3 py-0.5 text-sm font-extrabold">{roman}</span>
+        {romanOn && <span className="rounded-full bg-accent px-3 py-0.5 text-sm font-extrabold">{roman}</span>}
         <Speaker text={letter} size="sm" label="Hear the letter" />
       </div>
       <div className="mt-3 w-full border-t border-primary/10 pt-3">
         <span className="text-3xl">{example.emoji}</span>
         <p className="font-bangla text-xl font-bold text-ink">{example.bn}</p>
-        <p className="text-sm font-bold text-primary">{example.roman}</p>
+        {romanOn && <p className="text-sm font-bold text-primary">{example.roman}</p>}
         <p className="mb-1 text-xs text-ink/50">{example.en}</p>
         <Speaker text={example.bn} size="sm" label="Hear the word" />
       </div>
@@ -31,6 +33,7 @@ function LetterCard({ item }) {
 const GRID = 'grid grid-cols-2 gap-3 sm:grid-cols-3'
 
 export default function Alphabet() {
+  const [romanOn] = useRoman()
   const [tab, setTab] = useState('vowels')
 
   return (
@@ -106,11 +109,11 @@ export default function Alphabet() {
               <div key={s.sign} className="card flex flex-col items-center !p-4 text-center">
                 <span className="font-bangla text-5xl font-bold text-primary">{s.combined}</span>
                 <span className="mt-1 flex items-center gap-2">
-                  <span className="rounded-full bg-accent px-3 py-0.5 text-sm font-extrabold">{s.combinedRoman}</span>
+                  {romanOn && <span className="rounded-full bg-accent px-3 py-0.5 text-sm font-extrabold">{s.combinedRoman}</span>}
                   <Speaker text={s.combined} size="sm" label="Hear it" />
                 </span>
                 <p className="mt-3 text-xs text-ink/50">
-                  sign <span className="font-bangla text-lg font-bold text-ink">◌{s.sign}</span> = "{s.roman}"
+                  sign <span className="font-bangla text-lg font-bold text-ink">◌{s.sign}</span> {romanOn && <> = "{s.roman}"</>}
                 </p>
               </div>
             ))}

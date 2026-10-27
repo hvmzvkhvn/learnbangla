@@ -4,12 +4,14 @@ import { speak } from '../../audio/audio'
 import Speaker from '../Speaker'
 import BanglaLine from './BanglaLine'
 import ThenNow from './ThenNow'
+import { useRoman } from '../../state/roman'
 
 const SectionTitle = ({ children }) => <h3 className="mb-2 mt-5 text-sm font-extrabold uppercase tracking-wide text-ink/40">{children}</h3>
 
 /** The card that slides up when a division is tapped. What it shows deepens with the age track. */
 export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, onCity, activeCity }) {
   const [openCity, setOpenCity] = useState(null)
+  const [romanOn] = useRoman()
   const ref = useRef(null)
   useEffect(() => {
     setOpenCity(null)
@@ -36,7 +38,7 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
           <span className="text-4xl">{r.emoji}</span>
           <span className="flex-1">
             <span className="block font-bangla text-3xl font-extrabold leading-none text-primary">{r.bn}</span>
-            <span className="block text-sm font-bold text-ink/50">{r.name} Division · {r.roman}</span>
+            <span className="block text-sm font-bold text-ink/50">{r.name} Division{romanOn ? ` · ${r.roman}` : ''}</span>
           </span>
           <Speaker text={r.bn} size="md" label="Hear the name" />
           <button type="button" onClick={onClose} aria-label="Close" className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg font-extrabold text-ink/50 shadow">✕</button>
@@ -104,7 +106,7 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
                           <span className="text-2xl">{w.emoji}</span>
                           <span>
                             <span className="block font-bangla text-lg font-bold leading-none text-ink">{w.bn}</span>
-                            <span className="block text-xs text-ink/60">{w.roman} · {w.en}</span>
+                            <span className="block text-xs text-ink/60">{romanOn ? `${w.roman} · ` : ''}{w.en}</span>
                           </span>
                         </button>
                       ))}

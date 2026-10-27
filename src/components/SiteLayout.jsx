@@ -3,6 +3,7 @@ import { tracks } from '../curriculum/tracks'
 import { useTrack } from '../state/persist'
 import { stageOf, useGame } from '../state/game'
 import SoundToggle from './SoundToggle'
+import RomanToggle from './RomanToggle'
 import Toasts from './Toasts'
 
 const LEARN = { to: '/', label: 'Learn', icon: '🏠', end: true }
@@ -32,6 +33,7 @@ export default function SiteLayout() {
           <span className="text-2xl font-extrabold text-primary">Learn Bangla</span>
         </span>
         <span className="flex items-center gap-2">
+          <RomanToggle />
           <SoundToggle />
           {feat && (
             <>

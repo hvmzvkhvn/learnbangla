@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { roster } from '../../curriculum/bank'
 import { speak, stop } from '../../audio/audio'
 import { useSoundOn } from '../../audio/audio'
+import { useRoman } from '../../state/roman'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
@@ -9,6 +10,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 export default function SceneView({ scene }) {
   const [active, setActive] = useState(-1)
   const [soundOn] = useSoundOn()
+  const [romanOn] = useRoman()
   const run = useRef(0)
 
   async function playAll() {
@@ -70,7 +72,7 @@ export default function SceneView({ scene }) {
                   {l.art && <span className="text-2xl">{l.art}</span>}
                   <span>
                     <span className="block font-bangla text-xl font-bold leading-snug text-primary">{l.bn}</span>
-                    <span className="block text-xs font-bold text-ink/60">{l.roman}</span>
+                    {romanOn && <span className="block text-xs font-bold text-ink/60">{l.roman}</span>}
                     <span className="block text-xs text-ink/50">{l.en}</span>
                   </span>
                 </span>

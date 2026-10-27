@@ -15,6 +15,7 @@ import SceneView from '../components/lesson/SceneView'
 import TextView from '../components/lesson/TextView'
 import BlitzGame from '../components/games/BlitzGame'
 import SoundToggle from '../components/SoundToggle'
+import RomanToggle from '../components/RomanToggle'
 import Speaker from '../components/Speaker'
 import Confetti from '../components/Confetti'
 import Toasts from '../components/Toasts'
@@ -305,6 +306,7 @@ function Shell({ children, onClose, progress, extra }) {
             <div className="h-full rounded-full bg-success transition-all" style={{ width: `${Math.round(progress * 100)}%` }} />
           </div>
           {extra}
+          <RomanToggle />
           <SoundToggle />
         </div>
         {children}

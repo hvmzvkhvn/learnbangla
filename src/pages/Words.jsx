@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { wordCategories } from '../data/words'
 import Speaker from '../components/Speaker'
+import { useRoman } from '../state/roman'
 
 export default function Words() {
+  const [romanOn] = useRoman()
   const [activeKey, setActiveKey] = useState(wordCategories[0].key)
   const active = wordCategories.find((c) => c.key === activeKey)
 
@@ -34,7 +36,7 @@ export default function Words() {
           <div key={w.bn + w.en} className="card flex flex-col items-center !p-4 text-center">
             <span className="font-bangla text-4xl">{w.digit ?? w.emoji}</span>
             <p className="mt-2 font-bangla text-2xl font-bold leading-snug text-primary">{w.bn}</p>
-            <p className="text-sm font-extrabold text-ink">{w.roman}</p>
+            {romanOn && <p className="text-sm font-extrabold text-ink">{w.roman}</p>}
             <p className="mb-1 text-xs text-ink/50">{w.en}</p>
             <Speaker text={w.bn} size="sm" label="Hear the word" />
           </div>
