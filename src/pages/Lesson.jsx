@@ -16,6 +16,7 @@ import TextView from '../components/lesson/TextView'
 import BlitzGame from '../components/games/BlitzGame'
 import SoundToggle from '../components/SoundToggle'
 import RomanToggle from '../components/RomanToggle'
+import { NoRoman } from '../state/roman'
 import Speaker from '../components/Speaker'
 import Confetti from '../components/Confetti'
 import Toasts from '../components/Toasts'
@@ -27,7 +28,11 @@ export default function Lesson() {
   const found = findLesson(lessonId)
   if (!found) return <Navigate to="/" replace />
   if (found.lesson.kind === 'story') return <Navigate to={`/story/${found.lesson.storyId}`} replace />
-  return <Player key={lessonId} {...found} />
+  return (
+    <NoRoman.Provider value={found.lesson.kind === 'super'}>
+      <Player key={lessonId} {...found} />
+    </NoRoman.Provider>
+  )
 }
 
 function Player({ lesson, unit, track }) {
@@ -66,13 +71,14 @@ function Player({ lesson, unit, track }) {
     complete(lesson.id, stars)
     let bonus = 0
     if (xpOn) {
-      bonus = 20 + stars * 10 + (first ? 10 : 0) + extraXp + (lesson.treasure ? 15 : 0)
+      bonus = 20 + stars * 10 + (first ? 10 : 0) + extraXp + (lesson.treasure ? 15 : 0) + (lesson.kind === 'super' ? 40 : 0)
       act({
         xp: bonus,
         stats: (s) => ({
           lessons: s.lessons + (first ? 1 : 0),
           perfect: s.perfect + (stars === 3 ? 1 : 0),
           bosses: s.bosses + (lesson.kind === 'boss' ? 1 : 0),
+          ...(lesson.kind === 'super' && stars >= 2 ? { supers: { ...(s.supers ?? {}), [lesson.id]: stars } } : {}),
         }),
       })
     }
@@ -136,14 +142,14 @@ function Player({ lesson, unit, track }) {
   if (result) {
     const next = nextLessonId(track.key, lesson.id)
     return (
-      <Shell onClose={() => navigate('/')} progress={1}>
+      <Shell onClose={() => navigate('/')} progress={1} hideRoman={lesson.kind === 'super'}>
         {result.stars >= 2 && <Confetti />}
         <Toasts />
         <div className="py-10 text-center">
           {lesson.treasure && <p className="animate-pop text-8xl">🎁</p>}
           <p className="animate-pop text-7xl">{'⭐'.repeat(result.stars)}</p>
           <h1 className="mt-4 text-3xl font-extrabold text-primary">
-            {lesson.treasure ? 'Treasure found!' : lesson.kind === 'boss' ? (result.stars >= 2 ? 'Boss defeated!' : 'You survived!') : result.stars === 3 ? 'Perfect!' : result.stars === 2 ? 'Well done!' : 'Nice work!'}
+            {lesson.treasure ? 'Treasure found!' : lesson.kind === 'super' ? (result.stars >= 2 ? 'Super! You did it!' : 'Tough one! Try again') : lesson.kind === 'boss' ? (result.stars >= 2 ? 'Boss defeated!' : 'You survived!') : result.stars === 3 ? 'Perfect!' : result.stars === 2 ? 'Well done!' : 'Nice work!'}
           </h1>
           <p className="mt-2 text-ink/60">
             You finished <b>{lesson.title}</b>.
@@ -184,7 +190,7 @@ function Player({ lesson, unit, track }) {
   const common = (ex) => ({ ex, onSolved: solved(ex), onWrong: wrong })
 
   return (
-    <Shell onClose={() => navigate('/')} progress={i / steps.length} extra={bar}>
+    <Shell onClose={() => navigate('/')} progress={i / steps.length} extra={bar} hideRoman={lesson.kind === 'super'}>
       <Toasts />
       {step.kind === 'intro' && (
         <div className="py-8 text-center">
@@ -194,6 +200,8 @@ function Player({ lesson, unit, track }) {
           <p className="mt-2 text-ink/60">
             {lesson.treasure
               ? 'A treasure hunt! Answer the questions to open the chest. No rush — take your time.'
+              : lesson.kind === 'super'
+              ? 'Longer sentences, no transliteration and no hints. Take your time: you can retry as often as you like.'
               : lesson.kind === 'review'
               ? 'A mix of everything from this unit.'
               : lesson.kind === 'boss'
@@ -220,7 +228,7 @@ function Player({ lesson, unit, track }) {
             </div>
           )}
           <button className="btn-primary mt-8 w-full max-w-xs" onClick={advance}>
-            {lesson.kind === 'boss' ? 'Fight!' : "Let's go!"}
+            {lesson.kind === 'boss' ? 'Fight!' : lesson.kind === 'super' ? 'Bring it on!' : "Let's go!"}
           </button>
         </div>
       )}
@@ -294,7 +302,7 @@ function Player({ lesson, unit, track }) {
   )
 }
 
-function Shell({ children, onClose, progress, extra }) {
+function Shell({ children, onClose, progress, extra, hideRoman }) {
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-xl px-5 pb-10 pt-4">
@@ -306,7 +314,7 @@ function Shell({ children, onClose, progress, extra }) {
             <div className="h-full rounded-full bg-success transition-all" style={{ width: `${Math.round(progress * 100)}%` }} />
           </div>
           {extra}
-          <RomanToggle />
+          {!hideRoman && <RomanToggle />}
           <SoundToggle />
         </div>
         {children}

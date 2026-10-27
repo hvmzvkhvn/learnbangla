@@ -18,7 +18,7 @@ export default function Face({ f, big = false, speak = false }) {
     <div className="flex flex-col items-center text-center leading-tight">
       {f.art && <span className={`font-bangla ${big ? 'text-7xl' : 'text-4xl'}`}>{f.art}</span>}
       {f.bn && (
-        <span className={`font-bangla font-bold text-primary ${big ? 'mt-2 text-5xl' : 'text-2xl'}`}>{f.bn}</span>
+        <span className={`font-bangla font-bold text-primary ${big ? (f.bn.length > 40 ? 'mt-2 text-2xl leading-snug' : f.bn.length > 22 ? 'mt-2 text-3xl leading-snug' : 'mt-2 text-5xl') : 'text-2xl'}`}>{f.bn}</span>
       )}
       {f.roman && (romanOn || !f.bn) && <span className="mt-1 text-sm font-bold text-ink/50">{f.roman}</span>}
       {f.text && <span className={`font-extrabold text-ink ${big ? 'mt-2 text-2xl' : 'text-base'}`}>{f.text}</span>}

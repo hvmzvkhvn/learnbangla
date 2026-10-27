@@ -30,12 +30,13 @@ export default function UnitList({ track, progress, nextId }) {
                 {u.lessons.map((l) => {
                   const p = progress[l.id]
                   const special = l.kind === 'boss' || l.kind === 'story'
+                  const superL = l.kind === 'super'
                   return (
                     <Link
                       key={l.id}
                       to={`/lesson/${l.id}`}
                       className={`flex items-center gap-2 rounded-2xl px-3 py-3 text-sm font-extrabold transition active:scale-95 ${
-                        p ? 'bg-success/15 text-success' : l.id === nextId ? 'bg-accent text-ink' : special ? 'bg-secondary/15 text-ink' : 'bg-background text-ink/70'
+                        p ? 'bg-success/15 text-success' : l.id === nextId ? 'bg-accent text-ink' : superL ? 'bg-ink text-white sm:col-span-2' : special ? 'bg-secondary/15 text-ink' : 'bg-background text-ink/70'
                       }`}
                     >
                       <span className="text-xl">{l.emoji}</span>

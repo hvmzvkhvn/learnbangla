@@ -6,6 +6,7 @@ import { shuffle } from '../../curriculum/text'
 import { speak } from '../../audio/audio'
 
 export default function TilesQ({ ex, onSolved, onWrong }) {
+  const need = ex.need ?? ex.tiles.length // with decoy tiles, only `need` of them are used
   const order = useMemo(() => {
     let o = shuffle(ex.tiles.map((_, i) => i))
     // avoid starting already solved
@@ -22,11 +23,11 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
   useEffect(() => () => clearTimeout(timer.current), [])
 
   function place(i) {
-    if (solved || placed.includes(i) || placed.length >= ex.tiles.length) return
+    if (solved || placed.includes(i) || placed.length >= need) return
     const next = [...placed, i]
     setPlaced(next)
     if (ex.speakTiles) speak(ex.tiles[i])
-    if (next.length === ex.tiles.length) {
+    if (next.length === need) {
       if (next.map((k) => ex.tiles[k]).join(ex.joiner) === ex.target) {
         setSolved(true)
         onSolved(!mistake.current)
@@ -40,7 +41,7 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
   }
 
   const remove = (i) => {
-    if (!solved && placed.length < ex.tiles.length) setPlaced((p) => p.filter((k) => k !== i))
+    if (!solved && placed.length < need) setPlaced((p) => p.filter((k) => k !== i))
   }
 
   return (

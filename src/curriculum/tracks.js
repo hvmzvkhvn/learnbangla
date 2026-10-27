@@ -20,6 +20,7 @@ import {
   family,
   unitLayout,
   ADDRESS_TIP,
+  superIdsByUnit,
 } from './bank'
 import { verbs } from '../data/sentences'
 
@@ -227,6 +228,14 @@ addStory(older, 'o', 'o-hello', 'newfriend')
 addStory(older, 'o', 'o-numbers', 'sweetshop')
 addStory(older, 'o', 'o-ft-elders', 'nanivisit')
 addStory(older, 'o', 'o-around', 'rainyday')
+
+// Every unit that has a Super challenge set ends with that challenge.
+Object.entries({ young, older, teen, senior, adult }).forEach(([, track]) => {
+  track.units.forEach((u) => {
+    const ids = superIdsByUnit[u.id]
+    if (ids?.length) u.lessons.push({ id: `${u.id}-super`, title: 'Super challenge', emoji: '🦸', kind: 'super', learn: [], superIds: ids })
+  })
+})
 
 export const tracks = { young, older, teen, senior, adult }
 

@@ -10,7 +10,7 @@ const yesterday = () => dayKey(new Date(Date.now() - 86400000))
 
 const DEFAULT = {
   xp: 0, streak: 0, best: 0, last: '', badges: {}, activity: {},
-  stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {}, stamps: {}, geoBest: 0 },
+  stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {}, stamps: {}, geoBest: 0, supers: {} },
 }
 
 // Younger learners see their level as a garden that grows.
@@ -52,6 +52,9 @@ export const BADGES = [
   { id: 'explorer', emoji: '🧭', title: 'Explorer', desc: 'Stamp all 8 divisions of Bangladesh', test: (g) => Object.keys(g.stats.stamps ?? {}).filter((k) => k.startsWith('r:')).length >= 8 },
   { id: 'traveller', emoji: '🗺️', title: 'Traveller', desc: 'Visit 16 cities on the map', test: (g) => Object.keys(g.stats.stamps ?? {}).filter((k) => k.startsWith('c:')).length >= 16 },
   { id: 'geo', emoji: '📍', title: 'Map Master', desc: 'Score 9 or more in a Map Quiz', test: (g) => (g.stats.geoBest ?? 0) >= 9 },
+  { id: 'super1', emoji: '🦸', title: 'Super!', desc: 'Pass a Super challenge (2 stars or more)', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 1 },
+  { id: 'super5', emoji: '🧠', title: 'Super Brain', desc: 'Pass 5 Super challenges', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 5 },
+  { id: 'super15', emoji: '🌟', title: 'Super Star', desc: 'Pass 15 Super challenges', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 15 },
   { id: 'lvl5', emoji: '🚀', title: 'Level 5', desc: 'Reach level 5', test: (g) => levelInfo(g.xp).level >= 5 },
   { id: 'lvl10', emoji: '👑', title: 'Level 10', desc: 'Reach level 10', test: (g) => levelInfo(g.xp).level >= 10 },
 ]

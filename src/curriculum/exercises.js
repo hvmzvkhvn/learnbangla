@@ -412,6 +412,33 @@ function makeTraces(lesson, learnItems, practiceItems, f) {
   return out
 }
 
+// ---- Super challenge ------------------------------------------------------------------------
+// Longer sentences, no transliteration: read and say what it means, build it from tiles (with decoy tiles),
+// fill the gap, and listen and type (13+) or listen and build (younger).
+const TYPING_TRACKS = new Set(['teen', 'senior', 'adult'])
+function superExercises(items, trackKey) {
+  const typing = TYPING_TRACKS.has(trackKey)
+  const tokensOf = (it) => (/\s/.test(it.bn) ? it.bn.split(' ') : splitClusters(it.bn))
+  const out = []
+  items.forEach((it, idx) => {
+    const others = items.filter((x) => x.id !== it.id)
+    const toks = tokensOf(it)
+    const joiner = /\s/.test(it.bn) ? ' ' : ''
+    const decoyPool = shuffle([...new Set(others.flatMap(tokensOf))]).filter((t) => !toks.includes(t))
+    const tiles = (title, stem) => ({
+      id: nextId(), type: 'tiles', itemId: it.id, title, stem, tiles: [...toks, ...decoyPool.slice(0, Math.min(3, Math.max(1, Math.floor(toks.length / 3))))],
+      need: toks.length, target: toks.join(joiner), joiner, say: it.bn,
+    })
+    const meaning = choice({ itemId: it.id, title: 'What does this mean?', stem: { bn: it.bn }, correct: { text: it.en }, candidates: others.map((o) => ({ text: o.en })), dim: 'text' })
+    const listenMeaning = choice({ itemId: it.id, title: 'Listen. What does it mean?', stem: { listen: true, say: it.bn, noAudio: true }, correct: { text: it.en }, candidates: others.map((o) => ({ text: o.en })), dim: 'text' })
+    const cloze = toks.length >= 3 ? clozeExercise({ ...it, tokens: toks }, others.map((o) => ({ ...o, tokens: tokensOf(o) }))) : null
+    out.push(meaning, tiles('Build it. Watch out for extra tiles!', { text: it.en }))
+    const third = [cloze, typing ? { id: nextId(), type: 'type', tag: 'type', itemId: it.id, title: 'Listen and type it in Bangla', stem: { listen: true, say: it.bn, noAudio: true }, say: it.bn, target: it.bn } : tiles('Listen and build it', { listen: true, say: it.bn, noAudio: true }), listenMeaning]
+    out.push(third[idx % 3] ?? listenMeaning)
+  })
+  return shuffle(out.filter(Boolean))
+}
+
 // ---- Lesson assembly ------------------------------------------------------------------
 export function buildLesson(lesson, trackKey) {
   uid = 0
@@ -431,6 +458,8 @@ export function buildLesson(lesson, trackKey) {
     })
     return { learn: [], exercises: shuffle(exercises) }
   }
+
+  if (lesson.kind === 'super') return { learn: [], exercises: superExercises((lesson.superIds ?? []).map(get).filter(Boolean), trackKey) }
 
   if (lesson.kind === 'story') return { learn: [], exercises: [] }
   if (lesson.kind === 'boss') return { learn: [], exercises: [], pool: (lesson.reviewOf ?? []).map(get).filter(Boolean) }

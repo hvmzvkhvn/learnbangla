@@ -10,6 +10,7 @@ import { teenSentenceGroups, tenseVerbs, tensePronouns } from '../data/teenSente
 import { poems, passages, cinemaScenes } from '../data/teenText'
 import { stories } from '../data/stories'
 import { exploreRegions } from '../data/explore'
+import { SUPER } from '../data/super'
 import { adultWordCategories, adultSentenceGroups, adultPassages } from '../data/adultText'
 
 export const bank = new Map()
@@ -282,6 +283,14 @@ exploreRegions.forEach((r) => {
   fact('economy', 'Economy', r.economy)
   r.cities.forEach((c) => fact(`city-${c.id}`, c.name, c.fact))
   ;(r.deep ?? []).forEach((t, i) => fact(`deep${i}`, 'Go deeper (18+)', t))
+})
+
+// ---- Super challenges: longer sentences per unit (never shown with transliteration) ---------------------------------
+export const superIdsByUnit = {}
+Object.entries(SUPER).forEach(([unit, set]) => {
+  superIdsByUnit[unit] = set.items.map(([bn, en]) =>
+    add({ id: `super:${bn}`, kind: 'sentence', section: `Super challenge · ${set.label}`, group: `super:${unit}`, bn, roman: '', en, tokens: bn.split(' ') }),
+  )
 })
 
 export const allItems = () => Array.from(bank.values())

@@ -7,7 +7,7 @@ import { speak } from '../../audio/audio'
 import { splitClusters } from '../../curriculum/text'
 
 // Compare after Unicode decomposition so ড় typed as one character or two both match; ignore spaces and joiners.
-const norm = (s) => s.normalize('NFD').replace(/[\s‌‍]/g, '')
+const norm = (s) => s.normalize('NFD').replace(/[\s‌‍।,?!"“”.\-—]/g, '')
 
 /** Hear the word (and see its meaning), then type it in Bangla. */
 export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {

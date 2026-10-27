@@ -104,6 +104,12 @@ All behaviour that differs by age lives in one file, `src/curriculum/features.js
 
 **Wayfarers (18+)**: adults starting from zero. The script and basics match the 16–18 track; new units cover work, banks and forms, health, news and the economy, **history from 1905 to 1971** (the first partition of Bengal, 1947, the language movement, the road to independence, how the political parties developed), faith, clothing, music and poets, and *Bengal Beyond Borders* (West Bengal, the diaspora, and a lesson on the words that differ between Bangladesh and West Bengal). Content: `src/data/adultText.js`. The history readings lead with an English paragraph and state contested things neutrally — check them on `/review`.
 
+## Super challenges
+
+The last lesson of a unit (the dark 🦸 tile) is a **Super challenge**: about six new, longer sentences written with only vocabulary that unit's track has already taught, and **no transliteration** (the Aa switch is removed inside it). Each has 18 questions: read and say what it means, build the sentence from tiles with decoy tiles, fill the gap, listen and build, and (13+) listen and type in Bangla. Script units use unseen words made only from letters learned so far. Passing with 2+ stars earns bonus XP and the Super badges; there is no gate, and it can be retried any time.
+
+Content lives in `src/data/super/` (one set per unit id; units that teach identical words share a set). `npm run lint:super` checks every word against what has been taught by that unit (a short list of function words such as আর, কিন্তু, তাই is always allowed; add `--strict` to make unknown words errors). Status: 13–15, 16–18 and 18+ done; 8–12 and 5–7 are next.
+
 ## Your own voice (Voice studio)
 
 `/studio` (linked from `/review`) walks through every spoken clip — letters first — and records it in your own voice. Clips are trimmed, levelled and encoded to small mp3s, kept in the browser, and played instead of the prototype voice on that device. **Download my recordings** produces a zip whose file names are exactly the existing ones: unzip it into `public/audio/`, commit and push, and the recordings replace the prototype voice for everyone. No manifest change is needed.
