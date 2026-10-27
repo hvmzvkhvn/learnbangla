@@ -72,7 +72,7 @@ export const lookScenes = [
         it('🏫', 84, 66, 56, w('স্কুল', 'skul', 'school')),
         it('🏥', 12, 66, 50, w('হাসপাতাল', 'haspatal', 'hospital')),
         it('🌳', 42, 72, 46, w('গাছ', 'gachh', 'tree')),
-        it('🚦', 70, 62, 40, w('বাতি', 'bati', 'light')),
+        it('🚦', 70, 62, 40, w('ট্রাফিক বাতি', 'trafik bati', 'traffic light')),
       ],
     },
   },
