@@ -11,6 +11,7 @@ import { poems, passages, cinemaScenes } from '../data/teenText'
 import { stories } from '../data/stories'
 import { exploreRegions } from '../data/explore'
 import { SUPER } from '../data/super'
+import { allLines as playbookLines, allWords as playbookWords } from '../data/playbook'
 import { adultWordCategories, adultSentenceGroups, adultPassages } from '../data/adultText'
 
 export const bank = new Map()
@@ -292,5 +293,13 @@ Object.entries(SUPER).forEach(([unit, set]) => {
     add({ id: `super:${bn}`, kind: 'sentence', section: `Super challenge · ${set.label}`, group: `super:${unit}`, bn, roman: '', en, tokens: bn.split(' ') }),
   )
 })
+
+// ---- Playbook: picture-book lines, storyboard captions and Look & Learn words ----------------------------------------
+export const playbookIds = playbookLines().map((x) =>
+  add({ id: `pb:${x.bn}`, kind: 'sentence', section: x.group, group: 'playbook', bn: x.bn, roman: x.roman, en: x.en, tokens: x.bn.split(' ') }),
+)
+export const playbookWordIds = playbookWords().map((w) =>
+  add({ id: `pbw:${w.bn}`, kind: 'word', section: 'Playbook · Look & Learn words', cat: 'playbook', bn: w.bn, roman: w.roman, en: w.en, art: w.e }),
+)
 
 export const allItems = () => Array.from(bank.values())

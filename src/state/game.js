@@ -10,7 +10,7 @@ const yesterday = () => dayKey(new Date(Date.now() - 86400000))
 
 const DEFAULT = {
   xp: 0, streak: 0, best: 0, last: '', badges: {}, activity: {},
-  stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {}, stamps: {}, geoBest: 0, supers: {} },
+  stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {}, stamps: {}, geoBest: 0, supers: {}, books: {}, looks: {}, builds: {} },
 }
 
 // Younger learners see their level as a garden that grows.
@@ -55,6 +55,10 @@ export const BADGES = [
   { id: 'super1', emoji: '🦸', title: 'Super!', desc: 'Pass a Super challenge (2 stars or more)', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 1 },
   { id: 'super5', emoji: '🧠', title: 'Super Brain', desc: 'Pass 5 Super challenges', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 5 },
   { id: 'super15', emoji: '🌟', title: 'Super Star', desc: 'Pass 15 Super challenges', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 15 },
+  { id: 'book1', emoji: '📖', title: 'Picture Reader', desc: 'Finish a Playbook story', test: (g) => Object.keys(g.stats.books ?? {}).length >= 1 },
+  { id: 'book5', emoji: '📚', title: 'Story Lover', desc: 'Finish 5 Playbook stories', test: (g) => Object.keys(g.stats.books ?? {}).length >= 5 },
+  { id: 'look', emoji: '🔍', title: 'Sharp Eyes', desc: 'Find everything in a Look & Learn picture', test: (g) => Object.keys(g.stats.looks ?? {}).length >= 1 },
+  { id: 'build', emoji: '🧩', title: 'Scene Builder', desc: 'Build a whole scene', test: (g) => Object.keys(g.stats.builds ?? {}).length >= 1 },
   { id: 'lvl5', emoji: '🚀', title: 'Level 5', desc: 'Reach level 5', test: (g) => levelInfo(g.xp).level >= 5 },
   { id: 'lvl10', emoji: '👑', title: 'Level 10', desc: 'Reach level 10', test: (g) => levelInfo(g.xp).level >= 10 },
 ]

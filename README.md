@@ -104,6 +104,17 @@ All behaviour that differs by age lives in one file, `src/curriculum/features.js
 
 **Wayfarers (18+)**: adults starting from zero. The script and basics match the 16–18 track; new units cover work, banks and forms, health, news and the economy, **history from 1905 to 1971** (the first partition of Bengal, 1947, the language movement, the road to independence, how the political parties developed), faith, clothing, music and poets, and *Bengal Beyond Borders* (West Bengal, the diaspora, and a lesson on the words that differ between Bangladesh and West Bengal). Content: `src/data/adultText.js`. The history readings lead with an English paragraph and state contested things neutrally — check them on `/review`.
 
+## Playbook (all ages)
+
+A 🎨 **Playbook** tab of visual learning, drawn by a small built-in illustration engine (`src/art/Scene.jsx`: painted backdrops plus emoji actors, no image files; every scene is plain data, and `/art` shows samples).
+
+- **Picture books**: 6 for ages 5–7 (one short Bangla line a page, English hidden until asked) and 6 for 8–15 (seven pages each). The line is read aloud on every page, words are tappable, transliteration follows the Aa switch.
+- **Look & Learn**: tap things in a picture to hear and see their Bangla names, then play "Find it". 5 scenes.
+- **Build the scene**: hear a word, tap the right picture to place it. 3 tasks.
+- **16–18 and 18+ only**: a **▶ Watch the story** button on every Explore division card opens a 4–5 panel storyboard (English narration first, Bangla caption beneath), plus a 7-panel 1905–1971 timeline.
+
+Content lives in `src/data/playbook/` and is registered in the bank, so all lines get audio (`npm run audio`) and appear on `/review`. Finishing things earns one-time XP and the Picture Reader, Story Lover, Sharp Eyes and Scene Builder badges.
+
 ## Super challenges
 
 The last lesson of a unit (the dark 🦸 tile) is a **Super challenge**: about six new, longer sentences written with only vocabulary that unit's track has already taught, and **no transliteration** (the Aa switch is removed inside it). Each has 18 questions: read and say what it means, build the sentence from tiles with decoy tiles, fill the gap, listen and build, and (13+) listen and type in Bangla. Script units use unseen words made only from letters learned so far. Passing with 2+ stars earns bonus XP and the Super badges; there is no gate, and it can be retried any time.

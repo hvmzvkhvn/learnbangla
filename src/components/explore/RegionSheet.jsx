@@ -48,6 +48,9 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
           <p className="text-xs font-extrabold uppercase tracking-wide opacity-70">📖 In English</p>
           <p className="mt-1 text-base leading-relaxed">{r.hook}</p>
         </div>
+        {(tier === 'senior' || tier === 'adult') && (
+          <Link to={`/playbook/story/${r.id}`} className="btn-secondary mt-3 w-full !py-3">▶ Watch the story of {r.name}</Link>
+        )}
         <div className="mt-3"><BanglaLine s={r.intro} size="text-2xl" /></div>
 
         <SectionTitle>⭐ Famous for</SectionTitle>

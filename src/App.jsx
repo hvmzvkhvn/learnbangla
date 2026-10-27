@@ -12,6 +12,8 @@ import Review from './pages/Review'
 import StrokeReview from './pages/StrokeReview'
 import Practice from './pages/Practice'
 import Studio from './pages/Studio'
+import ArtGallery from './pages/ArtGallery'
+import Playbook from './pages/Playbook'
 import Explore from './pages/Explore'
 import Account from './pages/Account'
 import ParentView from './pages/ParentView'
@@ -29,6 +31,8 @@ export default function App() {
         <Route path="words" element={<Words />} />
         <Route path="stories" element={<Stories />} />
         <Route path="explore" element={<Explore />} />
+        <Route path="playbook" element={<Playbook />} />
+        <Route path="playbook/:kind/:id" element={<Playbook />} />
         <Route path="play" element={<Play />} />
         <Route path="play/:game" element={<Play />} />
         <Route path="practice" element={<Practice />} />
@@ -42,6 +46,7 @@ export default function App() {
       <Route path="review" element={<Review />} />
       <Route path="review/strokes" element={<StrokeReview />} />
       <Route path="studio" element={<Studio />} />
+      <Route path="art" element={<ArtGallery />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

@@ -9,11 +9,12 @@ import Toasts from './Toasts'
 const LEARN = { to: '/', label: 'Learn', icon: '🏠', end: true }
 const STORIES = { to: '/stories', label: 'Stories', icon: '💬' }
 const EXPLORE = { to: '/explore', label: 'Explore', icon: '🗺️' }
+const PLAYBOOK = { to: '/playbook', label: 'Playbook', icon: '🎨' }
 const PLAY = { to: '/play', label: 'Play', icon: '🎮' }
 const tabsFor = (feat) =>
   feat.stories
-    ? [LEARN, STORIES, ...(feat.explore ? [EXPLORE] : []), PLAY, { to: '/me', label: 'Me', icon: '🏅' }]
-    : [LEARN, PLAY, { to: '/me', label: 'Stickers', icon: '🌟' }]
+    ? [LEARN, STORIES, ...(feat.explore ? [EXPLORE] : []), ...(feat.playbook ? [PLAYBOOK] : []), PLAY, { to: '/me', label: 'Me', icon: '🏅' }]
+    : [LEARN, ...(feat.playbook ? [PLAYBOOK] : []), PLAY, { to: '/me', label: 'Stickers', icon: '🌟' }]
 
 export default function SiteLayout() {
   const [trackKey] = useTrack()
