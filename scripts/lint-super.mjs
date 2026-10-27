@@ -23,7 +23,7 @@ const clean = (t) => t.replace(PUNCT, '').trim()
 const ENDINGS = ['গুলো', 'গুলি', 'দের', 'রা', 'েরা', 'কে', 'তে', 'ের', 'র', 'টা', 'টি', 'টাকে', 'ে', 'য়', 'ও', 'ই', 'কেও', 'য়ে', 'ায়', 'ি', 'য়ের']
 // A few high-frequency function words are allowed in any sentence even if a unit never spelled them out
 // (and, but, so, this, that, very, a little, is/are, was, from, with…). Every content word must have been taught.
-const GLUE = new Set('আর ও এবং কিন্তু তাই এই ওই সব সবাই খুব আরও একটু অনেক কী কেন না নয় নেই আছে আছি আছেন ছিল ছিলেন হয় হবে হয়েছে থেকে জন্য সাথে সঙ্গে নিয়ে দিয়ে করে পর আগে এখন আজ কাল প্রতি তবে যদি যখন তখন কারণ কত কোন মধ্যে মতো যা তা যে সেখানে এখানে তাহলে কি'.split(' '))
+const GLUE = new Set('আর ও এবং কিন্তু তাই এই ওই সব সবাই খুব আরও একটু অনেক কী কেন না নয় নেই আছে আছি আছেন ছিল ছিলেন হয় হবে হয়েছে থেকে জন্য সাথে সঙ্গে নিয়ে দিয়ে করে পর আগে এখন আজ কাল প্রতি তবে যদি যখন তখন কারণ কত কোন মধ্যে মতো যা তা যে সেখানে এখানে তাহলে কি শুধু নাকি কাল এবার'.split(' '))
 const stems = (w) => {
   const out = new Set([w])
   for (const e of ENDINGS) if (w.length > e.length + 1 && w.endsWith(e)) out.add(w.slice(0, -e.length))

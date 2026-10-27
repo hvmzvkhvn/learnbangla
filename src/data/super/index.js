@@ -3,5 +3,6 @@
 import { teenSuper } from './teen'
 import { seniorSuper } from './senior'
 import { adultSuper } from './adult'
+import { olderSuper } from './older'
 
-export const SUPER = { ...teenSuper, ...seniorSuper, ...adultSuper }
+export const SUPER = { ...olderSuper, ...teenSuper, ...seniorSuper, ...adultSuper }
