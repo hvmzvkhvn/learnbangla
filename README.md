@@ -108,7 +108,7 @@ All behaviour that differs by age lives in one file, `src/curriculum/features.js
 
 The last lesson of a unit (the dark 🦸 tile) is a **Super challenge**: about six new, longer sentences written with only vocabulary that unit's track has already taught, and **no transliteration** (the Aa switch is removed inside it). Each has 18 questions: read and say what it means, build the sentence from tiles with decoy tiles, fill the gap, listen and build, and (13+) listen and type in Bangla. Script units use unseen words made only from letters learned so far. Passing with 2+ stars earns bonus XP and the Super badges; there is no gate, and it can be retried any time.
 
-Content lives in `src/data/super/` (one set per unit id; units that teach identical words share a set). `npm run lint:super` checks every word against what has been taught by that unit (a short list of function words such as আর, কিন্তু, তাই is always allowed; add `--strict` to make unknown words errors). Status: 13–15, 16–18, 18+ and 8–12 done (the 8–12 Vowels unit has none: only two real words can be made from vowel letters alone); 5–7 is next.
+Content lives in `src/data/super/` (one set per unit id; units that teach identical words share a set). `npm run lint:super` checks every word against what has been taught by that unit (a short list of function words such as আর, কিন্তু, তাই is always allowed; add `--strict` to make unknown words errors). Status: all five age groups done (the Vowels unit of 5–7 and 8–12 has none: only two real words can be made from vowel letters alone). 5–7 gets shorter sentences (4–6 words), no typing, and one decoy tile.
 
 ## Your own voice (Voice studio)
 

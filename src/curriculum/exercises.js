@@ -426,7 +426,7 @@ function superExercises(items, trackKey) {
     const joiner = /\s/.test(it.bn) ? ' ' : ''
     const decoyPool = shuffle([...new Set(others.flatMap(tokensOf))]).filter((t) => !toks.includes(t))
     const tiles = (title, stem) => ({
-      id: nextId(), type: 'tiles', itemId: it.id, title, stem, tiles: [...toks, ...decoyPool.slice(0, Math.min(3, Math.max(1, Math.floor(toks.length / 3))))],
+      id: nextId(), type: 'tiles', itemId: it.id, title, stem, tiles: [...toks, ...decoyPool.slice(0, trackKey === 'young' ? 1 : Math.min(3, Math.max(1, Math.floor(toks.length / 3))))],
       need: toks.length, target: toks.join(joiner), joiner, say: it.bn,
     })
     const meaning = choice({ itemId: it.id, title: 'What does this mean?', stem: { bn: it.bn }, correct: { text: it.en }, candidates: others.map((o) => ({ text: o.en })), dim: 'text' })

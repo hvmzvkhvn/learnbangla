@@ -74,7 +74,7 @@ for (const [trackKey, track] of Object.entries(tracks)) {
           console.log(`${strict ? 'ERROR' : 'note '} ${trackKey}/${u.id}: not taught yet → ${unknown.join(' ')}   in: ${bn}`)
           if (strict) problems++
         }
-        if (bn.split(' ').length < 5) here(`sentence is short (${bn.split(' ').length} words): ${bn}`)
+        if (bn.split(' ').length < (trackKey === 'young' ? 4 : 5)) here(`sentence is short (${bn.split(' ').length} words): ${bn}`)
       }
     }
   })
