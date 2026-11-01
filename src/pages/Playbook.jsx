@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
-import Scene from '../art/Scene'
+import PaintedBuild from '../components/playbook/PaintedBuild'
+import { pageArtPath } from '../data/playbook/artwork'
 import Artwork, { PlayIcon, coverUrl } from '../components/playbook/Artwork'
 import BookReader from '../components/playbook/BookReader'
 import LookLearn from '../components/playbook/LookLearn'
@@ -21,10 +22,10 @@ function Section({ kind, title, hint, children, count }) {
   </section>
 }
 
-function Tile({ to, scene, bookId, title, sub, done, id, kind = 'read', page = 0, pages, children }) {
+function Tile({ to, scene, bookId, art, title, sub, done, id, kind = 'read', page = 0, pages, children }) {
   return <Link to={to} className={`pb-tile pb-${kind}`}>
     <div className="pb-cover">
-      {children || <Artwork bookId={bookId} scene={scene} id={id} alt={`${title.en} — illustrated scene`} />}
+      {children || <Artwork bookId={bookId} src={art} scene={scene} id={id} alt={`${title.en} — illustrated scene`} />}
       <span className="pb-type"><PlayIcon kind={kind} />{kind === 'read' ? 'Read & listen' : kind === 'look' ? 'Tap & discover' : kind === 'build' ? 'Listen & build' : 'Story'}</span>
       {done && <span className="pb-done">✓ Completed</span>}
     </div>
@@ -77,11 +78,11 @@ export default function Playbook() {
       {lookScenes.map(l => <Tile key={l.id} kind="look" to={`/playbook/look/${l.id}`} scene={l.scene} id={`t-look-${l.id}`} title={l.title} sub={`${l.scene.items.filter(i => i.word).length} words to find`} done={Boolean(looked[l.id])} />)}
     </Section>
     <Section kind="build" title="Make it your own" hint="A word, a picture, a little imagination. Bring each scene to life." count={`${buildTasks.length} scenes`}>
-      {buildTasks.map(t => <Tile key={t.id} kind="build" to={`/playbook/build/${t.id}`} title={t.title} sub={`${t.steps.length} pieces · Listen & build`} done={Boolean(built[t.id])}><Scene scene={{...t, alt: `Partly completed ${t.title.en.toLowerCase()} with missing pieces`, items: t.steps.map((s,i) => ({...s, ghost: i > 1, anim: undefined}))}} id={`build-cover-${t.id}`} className="pb-scene" /></Tile>)}
+      {buildTasks.map(t => <Tile key={t.id} kind="build" to={`/playbook/build/${t.id}`} title={t.title} sub={`${t.steps.length} pieces · Listen & build`} done={Boolean(built[t.id])}><PaintedBuild task={t} preview /></Tile>)}
     </Section>
     {feat.storyboards && <Section kind="history" title="A country full of stories" hint="People, places and the journey to independence. Explore our shared history.">
-      <Tile kind="history" to="/playbook/story/timeline" scene={timelineStory.panels[2].scene} id="t-timeline" title={{bn:'স্বাধীনতার পথ',en:timelineStory.title}} sub="1905–1971 · 7 chapters" done={Boolean(read['story:timeline'])} page={saved['story:timeline']?.page || 0} pages={7} />
-      {Object.entries(regionStoryboards).map(([key, story]) => <Tile key={key} kind="history" to={`/playbook/story/${key}`} scene={story.panels[0].scene} id={`region-${key}`} title={{bn:exploreById[key]?.bn || '',en:story.title.replace('The story of ', '')}} sub={`${story.panels.length} illustrated chapters`} done={Boolean(read[`story:${key}`])} page={saved[`story:${key}`]?.page || 0} pages={story.panels.length} />)}
+      <Tile kind="history" to="/playbook/story/timeline" art={`${import.meta.env.BASE_URL}${pageArtPath('story:timeline', 2)}`} id="t-timeline" title={{bn:'স্বাধীনতার পথ',en:timelineStory.title}} sub="1905–1971 · 7 chapters" done={Boolean(read['story:timeline'])} page={saved['story:timeline']?.page || 0} pages={7} />
+      {Object.entries(regionStoryboards).map(([key, story]) => <Tile key={key} kind="history" to={`/playbook/story/${key}`} art={`${import.meta.env.BASE_URL}${pageArtPath(`story:${key}`, 0)}`} id={`region-${key}`} title={{bn:exploreById[key]?.bn || '',en:story.title.replace('The story of ', '')}} sub={`${story.panels.length} illustrated chapters`} done={Boolean(read[`story:${key}`])} page={saved[`story:${key}`]?.page || 0} pages={story.panels.length} />)}
     </Section>}
     <p className="pb-footer">Made for curious minds. Rooted in Bangladesh.</p>
   </div>

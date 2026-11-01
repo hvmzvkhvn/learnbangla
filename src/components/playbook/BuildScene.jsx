@@ -1,9 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Scene from '../../art/Scene'
-import Sprite from '../../art/Sprite'
+import PaintedBuild, { PaintedPiece } from './PaintedBuild'
+import { paintedPieces, pieceDistractors } from '../../data/playbook/artwork'
 import Speaker from '../Speaker'
-import { speak } from '../../audio/audio'
+import { speak, stop } from '../../audio/audio'
 import { useRoman } from '../../state/roman'
 import { useGame } from '../../state/game'
 
@@ -18,22 +18,29 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
   const [wrong, setWrong] = useState(null)
   const [perfect, setPerfect] = useState(0)
   const [started, setStarted] = useState(false)
+  const timers = useRef(new Set())
+  const clearTimers = () => { timers.current.forEach(clearTimeout); timers.current.clear() }
+  const later = (fn, delay) => {
+    const timer = setTimeout(() => { timers.current.delete(timer); fn() }, delay)
+    timers.current.add(timer)
+  }
+  useEffect(() => () => { clearTimers(); stop() }, [])
   const done = n >= task.steps.length
   const step = task.steps[Math.min(n, task.steps.length - 1)]
 
   const tray = useMemo(() => {
-    const pool = [...task.steps.map((s) => s.e), ...task.decoys].filter((e) => e !== step.e)
+    const pool = pieceDistractors(step.e)
     return shuffle([step.e, ...shuffle([...new Set(pool)]).slice(0, 3)])
-  }, [task, n]) // eslint-disable-line react-hooks/exhaustive-deps
-
-  const placed = task.steps.slice(0, n).map((s) => ({ e: s.e, x: s.x, y: s.y, s: s.s, anim: s.anim }))
-  const scene = { furnished: true, bg: task.bg, time: task.time, items: [...placed, ...task.steps.slice(n).map(s => ({...s, ghost:true, anim:undefined}))], alt: task.title.en, noLuminary: task.noLuminary }
+  }, [step.e])
 
   const begin = () => {
     setStarted(true)
-    setTimeout(() => speak(step.word.bn, { force: true }), 200)
+    later(() => speak(step.word.bn, { force: true }), 200)
   }
   const pick = (e) => {
+    if (done || !started) return
+    clearTimers()
+    setWrong(null)
     if (e === step.e) {
       setPerfect((p) => p + (misses === 0 ? 1 : 0))
       setMisses(0)
@@ -43,21 +50,24 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
         const first = !game.stats.builds?.[task.id]
         act({ xp: first ? 15 : 3, stats: (s) => ({ builds: { ...(s.builds ?? {}), [task.id]: Date.now() } }) })
       } else {
-        setTimeout(() => speak(task.steps[next].word.bn, { force: true }), 500)
+        later(() => speak(task.steps[next].word.bn, { force: true }), 500)
       }
     } else {
       setMisses((m) => m + 1)
       setWrong(e)
-      setTimeout(() => setWrong(null), 600)
+      later(() => setWrong(null), 600)
       speak(step.word.bn, { force: true })
     }
   }
   const restart = () => {
+    clearTimers()
+    stop()
+    setWrong(null)
     setN(0)
     setMisses(0)
     setPerfect(0)
     setStarted(true)
-    setTimeout(() => speak(task.steps[0].word.bn, { force: true }), 200)
+    later(() => speak(task.steps[0].word.bn, { force: true }), 200)
   }
 
   return (
@@ -78,7 +88,7 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
         </span>
       </div>
 
-      <Scene scene={scene} id={`build-${task.id}`} className="shadow-md" />
+      <PaintedBuild task={task} placed={n} />
 
       {!started ? (
         <div className="card mt-3 text-center">
@@ -120,10 +130,10 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
                 type="button"
                 onClick={() => pick(e)}
                 className={`flex aspect-square items-center justify-center rounded-2xl bg-white text-4xl shadow transition active:scale-95 ${wrong === e ? 'animate-shake ring-2 ring-error' : ''}`}
-                aria-label="Picture choice"
+                aria-label={`Place ${paintedPieces[e].label.toLowerCase()}`}
                 data-e={e}
               >
-                <Sprite e={e} className="h-14 w-14" />
+                <PaintedPiece emoji={e} className="pb-tray-piece" />
               </button>
             ))}
           </div>

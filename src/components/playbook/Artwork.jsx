@@ -14,8 +14,8 @@ export function PlayIcon({ kind, ...props }) {
   return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d={paths[kind] || paths.read} /></svg>
 }
 
-export default function Artwork({ bookId, scene, id, alt, className = '', eager = false }) {
-  return coverIds.includes(bookId)
-    ? <img className={`pb-artwork ${className}`} src={coverUrl(bookId)} alt={alt} width="1536" height="1024" loading={eager ? 'eager' : 'lazy'} decoding="async" />
-    : <Scene scene={{ ...scene, furnished:true, alt: alt || scene.alt }} id={id} className={`pb-scene ${className}`} />
+export default function Artwork({ bookId, src, scene, id, alt, className = '', eager = false }) {
+  return src || coverIds.includes(bookId)
+    ? <img className={`pb-artwork ${className}`} src={src || coverUrl(bookId)} alt={alt} width="1536" height="1024" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    : <Scene scene={{ ...scene, furnished:true, alt: alt || scene?.alt }} id={id} className={`pb-scene ${className}`} />
 }

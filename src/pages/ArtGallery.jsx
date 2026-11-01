@@ -1,3 +1,7 @@
+import Artwork from '../components/playbook/Artwork'
+import PaintedBuild from '../components/playbook/PaintedBuild'
+import { pageArtPath } from '../data/playbook/artwork'
+import '../components/playbook/playbook.css'
 import Scene from '../art/Scene'
 import Sprite from '../art/Sprite'
 import { allSpriteKeys } from '../art/sprites'
@@ -138,10 +142,10 @@ const missing = used.filter((e) => !have.has(e.replace(/\uFE0F/g, '')))
 
 /** A page of every backdrop with sample props — handy for checking the art. */
 const ALL = [
-  ...youngBooks.map((b) => ({ group: `5–7 · ${b.title.en}`, pages: b.pages })),
-  ...olderBooks.map((b) => ({ group: `8–15 · ${b.title.en}`, pages: b.pages })),
-  ...Object.entries(regionStoryboards).map(([k, b]) => ({ group: `Storyboard · ${k}`, pages: b.panels })),
-  { group: 'Timeline 1905–1971', pages: timelineStory.panels },
+  ...youngBooks.map((b) => ({ id: `book:${b.id}`, group: `5–7 · ${b.title.en}`, pages: b.pages })),
+  ...olderBooks.map((b) => ({ id: `book:${b.id}`, group: `8–15 · ${b.title.en}`, pages: b.pages })),
+  ...Object.entries(regionStoryboards).map(([k, b]) => ({ id: `story:${k}`, group: `Storyboard · ${k}`, pages: b.panels })),
+  { id: 'story:timeline', group: 'Timeline 1905–1971', pages: timelineStory.panels },
 ]
 
 export default function ArtGallery() {
@@ -149,19 +153,21 @@ export default function ArtGallery() {
   if (all)
     return (
       <div className="mx-auto max-w-5xl px-4 py-6">
+        <h1 className="mb-5 text-2xl font-bold">Every story, illustrated</h1>
         {ALL.map((g, gi) => (
           <section key={gi} className="mb-6">
             <h2 className="mb-2 text-lg font-extrabold text-primary">{g.group}</h2>
-            <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {g.pages.map((pg, i) => (
                 <div key={i}>
-                  <Scene scene={pg.scene} id={`all${gi}-${i}`} />
-                  <p className="mt-0.5 text-[10px] leading-tight text-ink/75">{pg.en}</p>
+                  <div className="aspect-[3/2] overflow-hidden rounded-xl"><Artwork src={`${import.meta.env.BASE_URL}${pageArtPath(g.id, i)}`} alt={pg.en} /></div>
+                  <p className="mt-2 text-xs leading-relaxed text-ink/75">{pg.en}</p>
                 </div>
               ))}
             </div>
           </section>
         ))}
+        <section><h2 className="mb-3 text-lg font-bold">Make it your own</h2><div className="grid gap-4 sm:grid-cols-3">{buildTasks.map(task => <div key={task.id}><PaintedBuild task={task} preview /><p>{task.title.en}</p></div>)}</div></section>
       </div>
     )
   return (

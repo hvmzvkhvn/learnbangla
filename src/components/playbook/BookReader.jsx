@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Scene from '../../art/Scene'
+import { pageArtPath } from '../../data/playbook/artwork'
 import Artwork, { PlayIcon, coverIds } from './Artwork'
 import { speak, stop } from '../../audio/audio'
 import { useRoman } from '../../state/roman'
@@ -20,8 +20,15 @@ export default function BookReader({id, bookId, title, pages, mode = 'book', hid
   const [romanOn] = useRoman()
   const { act, game } = useGame()
   const run = useRef(0)
+  const reader = useRef(null)
   const done = i >= pages.length
   const pg = pages[Math.min(i, pages.length - 1)]
+  useEffect(() => {
+    if (i + 1 < pages.length) {
+      const next = new Image()
+      next.src = `${import.meta.env.BASE_URL}${pageArtPath(id, i + 1)}`
+    }
+  }, [id, i, pages.length])
   useEffect(() => () => { run.current++; stop() }, [])
   const cancel = () => { run.current++; stop(); setPlaying(false); setActiveWord(-1) }
   const go = (n) => {
@@ -35,6 +42,7 @@ export default function BookReader({id, bookId, title, pages, mode = 'book', hid
       save(id, 0)
     } else save(id, n)
     setI(n)
+    reader.current?.scrollIntoView({ block: 'start', behavior: 'auto' })
   }
   const listen = async (word = null, rate = 1) => {
     cancel(); setAudioError(''); setPlaying(true)
@@ -57,16 +65,16 @@ export default function BookReader({id, bookId, title, pages, mode = 'book', hid
     }
     if (token === run.current) { setActiveWord(-1); setPlaying(false) }
   }
-  if (done) return <div className="pb-reader card mt-5 text-center">
+  if (done) return <div ref={reader} className="pb-reader card mt-5 text-center">
     {coverIds.includes(bookId) && <img src={`${import.meta.env.BASE_URL}images/playbook/${bookId}.webp`} alt="" className="mx-auto mb-5 w-48 rounded-xl" />}
     <p className="pb-eyebrow">STORY COMPLETE</p><h1 className="text-2xl font-bold">{finishText || 'A little story. A big discovery.'}</h1><p className="mt-3">You finished “{title}”.{award > 0 ? ` +${award} XP` : ''}</p>
     <div className="mt-5 flex flex-wrap justify-center gap-3"><button className="btn-secondary" onClick={() => go(0)}>Read again</button><Link className="btn-primary" to={backTo}>Find another story</Link></div>
   </div>
-  return <article className="pb-reader">
-    <header className="pb-reader-header"><Link to={backTo} aria-label="Back to Playbook">←</Link><div><h1>{title}</h1><p>{mode === 'story' ? 'Our stories' : 'Read & listen'} · Page {i+1} of {pages.length} · Bookmark saved on this device</p></div></header>
+  return <article ref={reader} className="pb-reader">
+    <header className="pb-reader-header"><Link to={backTo} aria-label="Back to Playbook">←</Link><div><h1>{title}</h1><p aria-live="polite">{mode === 'story' ? 'Our stories' : 'Read & listen'} · Page {i+1} of {pages.length} · Bookmark saved on this device</p></div></header>
     {mode === 'story' && <nav className="pb-timeline" aria-label="Story chapters">{pages.map((_,k) => <button key={k} onClick={() => go(k)} aria-current={i === k ? 'step' : undefined}>{id === 'story:timeline' ? dates[k] : `Chapter ${k+1}`}</button>)}</nav>}
     <div className={`pb-reader-sheet ${mode === 'story' ? 'pb-story-sheet' : ''}`}>
-      <div className="pb-reader-art">{i === 0 && mode === 'book' ? <Artwork bookId={bookId} scene={pg.scene} id={`${id}-${i}`} alt={`${title} — opening illustration`} eager /> : <Scene scene={{...pg.scene, furnished:true, alt:pg.en}} id={`${id}-${i}`} />}</div>
+      <div className="pb-reader-art"><Artwork key={`${id}-${i}`} src={`${import.meta.env.BASE_URL}${pageArtPath(id, i)}`} alt={pg.en} eager /></div>
       <div>
         {mode === 'story' && <p className="pb-history-narration">{pg.en}</p>}
         <div className="pb-caption">
