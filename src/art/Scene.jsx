@@ -1,3 +1,4 @@
+import { Person } from './sprites/people'
 import { MAP } from '../data/bdMap'
 import { scaleFor, spriteFor } from './sprites'
 
@@ -250,6 +251,18 @@ function Backdrop({ bg, time, id, lum = true }) {
   }
 }
 
+// Furniture and grounded details for the interactive Playbook scenes.
+function SetDressing({ bg }) {
+  const table = (x, y, w) => <g key={x}><rect x={x} y={y} width={w} height="10" rx="3" fill="#95613f" stroke="#65482f" strokeWidth="2"/><path d={`M${x+8} ${y+10}v26m${w-16} -26v26`} stroke="#795339" strokeWidth="5"/></g>
+  if (bg === 'market') return <g aria-hidden="true"><path d="M13 54v150M386 54v150" stroke="#87613b" strokeWidth="5"/><rect x="17" y="66" width="365" height="8" rx="3" fill="#ecd2a0"/>{table(15,220,300)}{[66,122,180,235].map(x=><path key={x} d={`M${x} 211h42l-6 16h-30z`} fill="#c99359" stroke="#8a603b" strokeWidth="2"/>)}<path d="M18 238h290" stroke="#b9996d" strokeWidth="2"/></g>
+  if (bg === 'classroom') return <g aria-hidden="true">{table(28,228,52)}{table(166,230,190)}<rect x="24" y="150" width="100" height="8" rx="2" fill="#9b7045"/><rect x="24" y="158" width="9" height="26" fill="#9b7045"/></g>
+  if (bg === 'room') return <g aria-hidden="true"><ellipse cx="194" cy="226" rx="70" ry="20" fill="#cf896d" opacity=".55"/><ellipse cx="194" cy="226" rx="56" ry="13" fill="none" stroke="#f3d7a6" strokeWidth="3"/><rect x="300" y="178" width="76" height="9" rx="3" fill="#95613f"/><path d="M310 187v13m56-13v13" stroke="#795339" strokeWidth="4"/><path d="M20 168h100" stroke="#f9e6bd" strokeWidth="3"/></g>
+  if (bg === 'village') return <g aria-hidden="true"><path d="M30 183q47-18 88 0" stroke="#ead9ab" strokeWidth="14" fill="none"/><path d="M262 187h100m-90-12v22m22-22v22m22-22v22m22-22v22" stroke="#c2a26c" strokeWidth="3"/><g fill="#49784f">{[12,24,363,377].map(x=><path key={x} d={`M${x} 194q-8-20-10-12q2 8 10 12q6-24 10-15q-3 11-10 15`}/>)}</g></g>
+  return null
+}
+
+const StoryGirl = () => <Person scale={0.78} pigtails top="#d5a231" dress />
+
 function Item({ it }) {
   const x = (it.x / 100) * W
   const y = (it.y / 100) * H
@@ -273,7 +286,7 @@ function Item({ it }) {
   }
   const s = it.s ?? 44
   const shadow = it.shadow ?? (it.y > 48 && s >= 28)
-  const Art = spriteFor(it.e)
+  const Art = it.recurring && it.e === '👧' ? StoryGirl : spriteFor(it.e)
   if (Art) {
     return (
       <g className={cls} style={{ transformOrigin: `${x}px ${y}px`, transformBox: 'view-box' }}>
@@ -297,18 +310,20 @@ function Item({ it }) {
 /** Draws one scene. `onItem(item)` makes the emoji tappable (Look & Learn); `ring` outlines one of them. */
 export default function Scene({ scene, className = '', onItem, ring, id = 'a' }) {
   const time = scene.time ?? 'day'
-  const items = [...(scene.items ?? [])].map((it, i) => ({ ...it, _i: i })).sort((a, b) => (a.z ?? 0) - (b.z ?? 0) || a._i - b._i)
+  const items = [...(scene.items ?? [])].map((it, i) => ({ ...it, recurring: scene.furnished, _i: i })).sort((a, b) => (a.z ?? 0) - (b.z ?? 0) || a._i - b._i)
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className={`block w-full overflow-hidden rounded-3xl ${className}`} role="img" aria-label={scene.alt ?? 'Illustration'}>
-      <Backdrop bg={scene.bg ?? 'meadow'} time={time} id={id} lum={!scene.noLuminary} />
+    <svg viewBox={`0 0 ${W} ${H}`} className={`block w-full overflow-hidden rounded-3xl ${className}`} role={onItem ? "group" : "img"} aria-label={scene.alt ?? 'Illustration'}>
+      {scene.image ? <image href={`${import.meta.env.BASE_URL}${scene.image}`} width={W} height={H} preserveAspectRatio="none" /> : <Backdrop bg={scene.bg ?? 'meadow'} time={time} id={id} lum={!scene.noLuminary} />}
+      {scene.furnished && !scene.image && <SetDressing bg={scene.bg} />}
       {items.map((it) => {
         const x = (it.x / 100) * W
         const y = (it.y / 100) * H
         const hit = onItem && it.word
         return (
-          <g key={it._i} onClick={hit ? () => onItem(it) : undefined} className={hit ? 'cursor-pointer' : undefined} role={hit ? 'button' : undefined} aria-label={hit ? it.word.en : undefined}>
-            <Item it={it} />
-            {hit && <circle cx={x} cy={y} r={(it.s ?? 44) * 0.62} fill="transparent" stroke={ring === it._i ? '#F4A324' : 'none'} strokeWidth="4" strokeDasharray="6 4" />}
+          <g key={it._i} tabIndex={hit ? 0 : undefined} onKeyDown={hit ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onItem(it) } } : undefined} onClick={hit ? () => onItem(it) : undefined} className={hit ? 'cursor-pointer' : undefined} role={hit ? 'button' : undefined} aria-label={hit ? it.word.en : undefined}>
+            {scene.image ? null : it.ghost ? <g opacity=".42"><rect x={x-(it.s??44)*.55} y={y-(it.s??44)*.55} width={(it.s??44)*1.1} height={(it.s??44)*1.1} rx="10" fill="#fff7dc" stroke="#705b37" strokeWidth="2" strokeDasharray="4 3"/><text x={x} y={y+5} textAnchor="middle" fontSize="20" fill="#705b37">+</text></g> : <Item it={it} />}
+            {hit && scene.image && <circle cx={x} cy={y} r="3.5" fill="#fff9e8" stroke="#315b4a" strokeWidth="1.3" />}
+            {hit && <circle cx={x} cy={y} r={(it.s ?? 44) * (scene.image ? 0.42 : 0.62)} fill="transparent" stroke={ring === it._i ? '#F4A324' : 'none'} className="pb-hotspot" strokeWidth="4" strokeDasharray="6 4" />}
           </g>
         )
       })}

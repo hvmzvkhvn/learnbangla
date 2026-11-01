@@ -27,7 +27,7 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
   }, [task, n]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const placed = task.steps.slice(0, n).map((s) => ({ e: s.e, x: s.x, y: s.y, s: s.s, anim: s.anim }))
-  const scene = { bg: task.bg, time: task.time, items: placed, alt: task.title.en, noLuminary: task.noLuminary }
+  const scene = { furnished: true, bg: task.bg, time: task.time, items: [...placed, ...task.steps.slice(n).map(s => ({...s, ghost:true, anim:undefined}))], alt: task.title.en, noLuminary: task.noLuminary }
 
   const begin = () => {
     setStarted(true)
@@ -61,7 +61,7 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
   }
 
   return (
-    <div className="mt-2">
+    <div className="pb-activity">
       <div className="mb-3 flex items-center gap-3">
         <Link
           to={backTo}

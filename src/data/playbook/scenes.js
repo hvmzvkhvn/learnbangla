@@ -25,10 +25,10 @@ export const lookScenes = [
       bg: 'room', time: 'day', alt: 'A bedroom with a bed, clock, book, lamp and toys',
       items: [
         it('🛏️', 24, 66, 66, w('বিছানা', 'bichhana', 'bed')),
-        it('⏰', 60, 36, 36, w('ঘড়ি', 'ghori', 'clock'), { anim: 'pulse' }),
-        it('📚', 80, 74, 40, w('বই', 'boi', 'book')),
+        it('⏰', 58, 26, 40, w('ঘড়ি', 'ghori', 'clock'), { anim: 'pulse' }),
+        it('📚', 84, 62, 44, w('বই', 'boi', 'book')),
         it('🧸', 52, 80, 40, w('পুতুল', 'putul', 'doll'), { anim: 'bob' }),
-        it('🪑', 70, 76, 44, w('চেয়ার', 'cheyar', 'chair')),
+        it('🪑', 76, 83, 44, w('চেয়ার', 'cheyar', 'chair')),
         it('🪟', 82, 29, 112, w('জানালা', 'janala', 'window'), { z: -1 }),
       ],
     },
@@ -77,6 +77,22 @@ export const lookScenes = [
     },
   },
 ]
+
+// Hotspots are measured against the final 3:2 illustrations (percent coordinates).
+const illustratedPositions = {
+  village: [[94,8,40],[17,43,70],[45,32,90],[79,55,62],[23,82,40],[85,83,70],[74,11,32],[6,71,42]],
+  home: [[21,53,90],[51,12,42],[67,38,56],[49,78,52],[89,69,68],[91,18,58]],
+  market: [[7,55,48],[22,61,52],[38,63,48],[55,63,50],[75,64,60],[93,71,36],[82,34,76]],
+  school: [[34,49,88],[70,55,60],[88,72,60],[62,73,36],[10,76,48],[89,16,46]],
+  city: [[18,59,110],[55,76,88],[89,38,86],[13,20,64],[41,27,84],[69,33,40]],
+}
+for (const look of lookScenes) {
+  look.scene.image = `images/playbook/look-${look.id}.webp`
+  look.scene.items = look.scene.items.map((item, index) => {
+    const [x, y, s] = illustratedPositions[look.id][index]
+    return {...item, x, y, s, anim: undefined}
+  })
+}
 
 export const buildTasks = [
   {

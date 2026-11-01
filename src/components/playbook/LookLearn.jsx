@@ -69,7 +69,7 @@ export default function LookLearn({ look, backTo = '/playbook' }) {
 
   const w = shown?.word
   return (
-    <div className="mt-2">
+    <div className="pb-activity">
       <div className="mb-3 flex items-center gap-3">
         <Link
           to={backTo}
@@ -83,10 +83,11 @@ export default function LookLearn({ look, backTo = '/playbook' }) {
         </h1>
       </div>
 
-      <div className={wrong ? 'animate-shake' : ''}>
-        <Scene scene={look.scene} id={`look-${look.id}`} className="shadow-md" onItem={tap} ring={shown?._i} />
+      <div className={`pb-activity-scene ${wrong ? 'animate-shake' : ''}`} >
+        <Scene scene={{...look.scene, furnished:true}} id={`look-${look.id}`} className="shadow-md" onItem={tap} ring={shown?._i} />
       </div>
 
+      {mode === 'explore' && <div className="pb-object-list" aria-label="Objects in the scene">{hot.map(it => <button key={it.i} aria-pressed={seen.has(it.i)} onClick={() => tap({...it, _i:it.i})}>{seen.has(it.i) ? '✓ ' : ''}{it.word.en}</button>)}</div>}
       <div className="mt-3 min-h-[92px] rounded-2xl bg-white px-4 py-3 shadow-sm">
         {mode === 'find' && target && !end && (
           <div className="flex items-center gap-3">
