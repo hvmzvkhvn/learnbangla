@@ -21,7 +21,17 @@ const FILTERS = [
   { key: 'ok', label: 'Approved' },
 ]
 
-const KIND_NAME = { beat: 'Story line', line: 'Conversation line', letter: 'Letter', sign: 'Vowel sign', syllable: 'Syllable', word: 'Word', sentence: 'Sentence', form: 'Verb form', fact: 'Fact' }
+const KIND_NAME = {
+  beat: 'Story line',
+  line: 'Conversation line',
+  letter: 'Letter',
+  sign: 'Vowel sign',
+  syllable: 'Syllable',
+  word: 'Word',
+  sentence: 'Sentence',
+  form: 'Verb form',
+  fact: 'Fact',
+}
 
 function describe(item) {
   const parts = [`[${KIND_NAME[item.kind]}${item.section ? ` · ${item.section}` : ''}]`, item.bn, `(${item.roman})`]
@@ -62,11 +72,11 @@ export default function Review() {
   })
 
   const setStatus = (id, status) => setMarks((m) => ({ ...m, [id]: { ...m[id], status: m[id]?.status === status ? 'todo' : status } }))
-  const setNote = (id, note) => setMarks((m) => ({ ...m, [id]: { ...m[id], status: m[id]?.status === 'ok' ? 'fix' : (m[id]?.status ?? 'fix'), note } }))
+  const setNote = (id, note) =>
+    setMarks((m) => ({ ...m, [id]: { ...m[id], status: m[id]?.status === 'ok' ? 'fix' : (m[id]?.status ?? 'fix'), note } }))
 
   const fixes = items.filter((i) => marks[i.id]?.status === 'fix')
-  const exportText = () =>
-    fixes.map((i) => `${describe(i)}\n   FIX: ${marks[i.id]?.note?.trim() || '(no note)'}`).join('\n\n')
+  const exportText = () => fixes.map((i) => `${describe(i)}\n   FIX: ${marks[i.id]?.note?.trim() || '(no note)'}`).join('\n\n')
 
   function copy() {
     navigator.clipboard?.writeText(exportText()).then(() => {
@@ -75,7 +85,15 @@ export default function Review() {
     })
   }
   function download() {
-    const data = fixes.map((i) => ({ id: i.id, kind: i.kind, section: i.section, bn: i.bn, roman: i.roman, en: i.en, note: marks[i.id]?.note ?? '' }))
+    const data = fixes.map((i) => ({
+      id: i.id,
+      kind: i.kind,
+      section: i.section,
+      bn: i.bn,
+      roman: i.roman,
+      en: i.en,
+      note: marks[i.id]?.note ?? '',
+    }))
     const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }))
     const a = document.createElement('a')
     a.href = url
@@ -86,37 +104,65 @@ export default function Review() {
 
   return (
     <div className="mx-auto max-w-3xl px-5 py-6">
-      <Link to="/" className="text-sm font-bold text-primary">← Back to the app</Link>
+      <Link to="/" className="text-sm font-bold text-primary">
+        ← Back to the app
+      </Link>
       <h1 className="mt-2 text-3xl font-extrabold text-primary">Content review</h1>
-      <p className="mb-4 text-ink/60">
-        Every letter, word and sentence in the curriculum. Mark each one ✓ if it is correct, or ⚑ and write what it should be.
-        Your marks are saved in this browser.
+      <p className="mb-4 text-ink/75">
+        Every letter, word and sentence in the curriculum. Mark each one ✓ if it is correct, or ⚑ and write what it should be. Your marks
+        are saved in this browser.
       </p>
-      <Link to="/review/strokes" className="mb-4 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">✏️ Check stroke order for tracing →</Link>
-      <Link to="/studio" className="mb-4 ml-2 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">🎙️ Record the audio in your own voice →</Link>
+      <Link to="/review/strokes" className="mb-4 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">
+        ✏️ Check stroke order for tracing →
+      </Link>
+      <Link to="/studio" className="mb-4 ml-2 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">
+        🎙️ Record the audio in your own voice →
+      </Link>
 
       <div className="card mb-4 grid grid-cols-3 gap-2 text-center">
-        <div><p className="text-2xl font-extrabold text-success">{counts.ok}</p><p className="text-xs font-bold text-ink/50">Approved</p></div>
-        <div><p className="text-2xl font-extrabold text-error">{counts.fix}</p><p className="text-xs font-bold text-ink/50">Need fixing</p></div>
-        <div><p className="text-2xl font-extrabold text-ink">{counts.todo}</p><p className="text-xs font-bold text-ink/50">Not reviewed</p></div>
+        <div>
+          <p className="text-2xl font-extrabold text-success">{counts.ok}</p>
+          <p className="text-xs font-bold text-ink/70">Approved</p>
+        </div>
+        <div>
+          <p className="text-2xl font-extrabold text-error">{counts.fix}</p>
+          <p className="text-xs font-bold text-ink/70">Need fixing</p>
+        </div>
+        <div>
+          <p className="text-2xl font-extrabold text-ink">{counts.todo}</p>
+          <p className="text-xs font-bold text-ink/70">Not reviewed</p>
+        </div>
       </div>
 
       <div className="mb-3 flex flex-wrap gap-2">
         {KINDS.map((k) => (
-          <button key={k.key} type="button" onClick={() => setKind(k.key)}
-            className={`rounded-full px-4 py-2 text-sm font-extrabold ${kind === k.key ? 'bg-primary text-white' : 'bg-white text-primary shadow-sm'}`}>
+          <button
+            key={k.key}
+            type="button"
+            onClick={() => setKind(k.key)}
+            className={`rounded-full px-4 py-2 text-sm font-extrabold ${kind === k.key ? 'bg-primary text-white' : 'bg-white text-primary shadow-sm'}`}
+          >
             {k.label}
           </button>
         ))}
       </div>
       <div className="mb-4 flex flex-wrap items-center gap-2">
         {FILTERS.map((f) => (
-          <button key={f.key} type="button" onClick={() => setFilter(f.key)}
-            className={`rounded-full px-3 py-1 text-xs font-extrabold ${filter === f.key ? 'bg-secondary text-white' : 'bg-white text-ink/60 shadow-sm'}`}>
+          <button
+            key={f.key}
+            type="button"
+            onClick={() => setFilter(f.key)}
+            className={`rounded-full px-3 py-1 text-xs font-extrabold ${filter === f.key ? 'bg-secondary text-ink' : 'bg-white text-ink/75 shadow-sm'}`}
+          >
             {f.label}
           </button>
         ))}
-        <input className="input-field !w-auto flex-1 !py-2 text-sm" placeholder="Search…" value={query} onChange={(e) => setQuery(e.target.value)} />
+        <input
+          className="input-field !w-auto flex-1 !py-2 text-sm"
+          placeholder="Search…"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
       </div>
 
       <div className="mb-6 flex flex-wrap items-center gap-2">
@@ -128,11 +174,13 @@ export default function Review() {
         </button>
       </div>
 
-      {sections.length === 0 && <p className="card text-center text-ink/50">Nothing here.</p>}
+      {sections.length === 0 && <p className="card text-center text-ink/70">Nothing here.</p>}
 
       {sections.map((s) => (
         <section key={s.name} className="mb-6">
-          <h2 className="mb-2 text-lg font-extrabold text-ink">{s.name} <span className="text-sm font-bold text-ink/40">({s.items.length})</span></h2>
+          <h2 className="mb-2 text-lg font-extrabold text-ink">
+            {s.name} <span className="text-sm font-bold text-ink/70">({s.items.length})</span>
+          </h2>
           <div className="space-y-2">
             {s.items.map((i) => {
               const st = statusOf(i.id)
@@ -141,7 +189,7 @@ export default function Review() {
                   <div className="flex items-center gap-3">
                     <span className="w-10 text-center font-bangla text-2xl">{i.art ?? ''}</span>
                     <div className="min-w-0 flex-1">
-                      {i.speakerName && <p className="text-xs font-extrabold uppercase tracking-wide text-ink/40">{i.speakerName} says</p>}
+                      {i.speakerName && <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70">{i.speakerName} says</p>}
                       {i.bn && (
                         <p className="flex items-center gap-2 font-bangla text-2xl font-bold leading-snug text-primary">
                           {i.bn}
@@ -149,22 +197,39 @@ export default function Review() {
                         </p>
                       )}
                       <p className="text-sm font-bold text-ink">{i.roman}</p>
-                      {i.en && <p className="text-sm text-ink/60">{i.en}</p>}
+                      {i.en && <p className="text-sm text-ink/75">{i.en}</p>}
                       {i.example && (
-                        <p className="flex items-center gap-2 text-xs text-ink/50">
+                        <p className="flex items-center gap-2 text-xs text-ink/70">
                           example: <span className="font-bangla font-bold">{i.example.bn}</span> ({i.example.roman}) = {i.example.en}
                           <Speaker text={i.example.bn} size="sm" label="Hear the example" />
                         </p>
                       )}
                     </div>
-                    <button type="button" onClick={() => setStatus(i.id, 'ok')} aria-label="Approve"
-                      className={`h-10 w-10 rounded-full text-lg font-extrabold ${st === 'ok' ? 'bg-success text-white' : 'bg-white text-success shadow'}`}>✓</button>
-                    <button type="button" onClick={() => setStatus(i.id, 'fix')} aria-label="Needs fixing"
-                      className={`h-10 w-10 rounded-full text-lg font-extrabold ${st === 'fix' ? 'bg-error text-white' : 'bg-white text-error shadow'}`}>⚑</button>
+                    <button
+                      type="button"
+                      onClick={() => setStatus(i.id, 'ok')}
+                      aria-label="Approve"
+                      className={`h-10 w-10 rounded-full text-lg font-extrabold ${st === 'ok' ? 'bg-success text-white' : 'bg-white text-success shadow'}`}
+                    >
+                      ✓
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setStatus(i.id, 'fix')}
+                      aria-label="Needs fixing"
+                      className={`h-10 w-10 rounded-full text-lg font-extrabold ${st === 'fix' ? 'bg-error text-white' : 'bg-white text-error shadow'}`}
+                    >
+                      ⚑
+                    </button>
                   </div>
                   {st === 'fix' && (
-                    <textarea className="input-field mt-2 text-sm" rows={2} placeholder="What should it be? (correct Bangla, spelling, romanisation, meaning…)"
-                      value={marks[i.id]?.note ?? ''} onChange={(e) => setNote(i.id, e.target.value)} />
+                    <textarea
+                      className="input-field mt-2 text-sm"
+                      rows={2}
+                      placeholder="What should it be? (correct Bangla, spelling, romanisation, meaning…)"
+                      value={marks[i.id]?.note ?? ''}
+                      onChange={(e) => setNote(i.id, e.target.value)}
+                    />
                   )}
                 </div>
               )

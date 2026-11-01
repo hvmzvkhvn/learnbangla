@@ -11,7 +11,7 @@ export default function Words() {
   return (
     <div className="py-2">
       <h1 className="text-3xl font-extrabold text-primary">Bangla Words</h1>
-      <p className="mb-4 text-ink/60">শব্দ — pick a topic.</p>
+      <p className="mb-4 text-ink/75">শব্দ — pick a topic.</p>
 
       <div className="-mx-5 mb-6 flex gap-2 overflow-x-auto px-5 pb-2">
         {wordCategories.map((c) => (
@@ -37,7 +37,7 @@ export default function Words() {
             <span className="font-bangla text-4xl">{w.digit ?? w.emoji}</span>
             <p className="mt-2 font-bangla text-2xl font-bold leading-snug text-primary">{w.bn}</p>
             {romanOn && <p className="text-sm font-extrabold text-ink">{w.roman}</p>}
-            <p className="mb-1 text-xs text-ink/50">{w.en}</p>
+            <p className="mb-1 text-xs text-ink/70">{w.en}</p>
             <Speaker text={w.bn} size="sm" label="Hear the word" />
           </div>
         ))}

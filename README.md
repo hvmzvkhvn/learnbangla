@@ -148,3 +148,10 @@ For the deployed site, set the repository variables `VITE_SUPABASE_URL`, `VITE_S
 Before switching accounts on for the public, decide how sign-up emails are sent: with *Confirm email* on, Supabase's built-in sender only reaches members of the Supabase team, so connect your own SMTP service (Authentication → Emails → SMTP settings, e.g. Resend with `learnbangla.app` verified). Without a sender there is also no "forgot password" email. A free Supabase project pauses after a week without activity; the Pro plan avoids that.
 
 Database: `supabase/migrations/20261024000000_accounts.sql` (tables, policies, an 8-learner limit, `delete_my_account()`); the earlier Phase 1 tables were retired in `…000100_drop_phase1.sql`.
+
+## November reliability and usability update
+
+See [the 40-change checklist and rollout notes](docs/improvements-2026-11.md).
+Run `npm run check` before deployment. The new account client requires the
+`20261101000000_reliable_progress.sql` migration before enabling accounts.
+Support and content corrections: **info@learnbangla.app**.

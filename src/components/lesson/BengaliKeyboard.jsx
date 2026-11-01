@@ -3,7 +3,40 @@ import { useState } from 'react'
 const ROWS = {
   Vowels: ['অ', 'আ', 'ই', 'ঈ', 'উ', 'ঊ', 'ঋ', 'এ', 'ঐ', 'ও', 'ঔ'],
   Signs: ['া', 'ি', 'ী', 'ু', 'ূ', 'ৃ', 'ে', 'ৈ', 'ো', 'ৌ'],
-  Letters: ['ক', 'খ', 'গ', 'ঘ', 'ঙ', 'চ', 'ছ', 'জ', 'ঝ', 'ঞ', 'ট', 'ঠ', 'ড', 'ঢ', 'ণ', 'ত', 'থ', 'দ', 'ধ', 'ন', 'প', 'ফ', 'ব', 'ভ', 'ম', 'য', 'র', 'ল', 'শ', 'ষ', 'স', 'হ'],
+  Letters: [
+    'ক',
+    'খ',
+    'গ',
+    'ঘ',
+    'ঙ',
+    'চ',
+    'ছ',
+    'জ',
+    'ঝ',
+    'ঞ',
+    'ট',
+    'ঠ',
+    'ড',
+    'ঢ',
+    'ণ',
+    'ত',
+    'থ',
+    'দ',
+    'ধ',
+    'ন',
+    'প',
+    'ফ',
+    'ব',
+    'ভ',
+    'ম',
+    'য',
+    'র',
+    'ল',
+    'শ',
+    'ষ',
+    'স',
+    'হ',
+  ],
   More: ['ড়', 'ঢ়', 'য়', 'ৎ', 'ং', 'ঃ', 'ঁ', '্'],
 }
 const SHOW = { Signs: (c) => `◌${c}`, More: (c) => (c === '্' ? '◌্' : c) }
@@ -36,10 +69,20 @@ export default function BengaliKeyboard({ onKey, onBackspace, onSpace }) {
             {(SHOW[tab] ?? ((x) => x))(c)}
           </button>
         ))}
-        <button type="button" onClick={onBackspace} aria-label="Backspace" className="h-11 rounded-xl bg-error/10 text-lg font-extrabold text-error active:scale-90">
+        <button
+          type="button"
+          onClick={onBackspace}
+          aria-label="Backspace"
+          className="h-11 rounded-xl bg-error/10 text-lg font-extrabold text-error active:scale-90"
+        >
           ⌫
         </button>
-        <button type="button" onClick={onSpace} aria-label="Space" className="col-span-2 h-11 rounded-xl bg-background text-sm font-extrabold text-ink/50 active:scale-90">
+        <button
+          type="button"
+          onClick={onSpace}
+          aria-label="Space"
+          className="col-span-2 h-11 rounded-xl bg-background text-sm font-extrabold text-ink/70 active:scale-90"
+        >
           space
         </button>
       </div>

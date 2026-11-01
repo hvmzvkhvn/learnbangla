@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { findLesson, nextLessonId } from '../curriculum/tracks'
 import { buildLesson } from '../curriculum/exercises'
@@ -19,6 +19,8 @@ import RomanToggle from '../components/RomanToggle'
 import { NoRoman } from '../state/roman'
 import Speaker from '../components/Speaker'
 import Confetti from '../components/Confetti'
+import SaveStatus from '../components/SaveStatus'
+import { getLessonSession, saveLessonSession, clearLessonSession, lessonMinutes, recordDuration } from '../state/learning'
 import Toasts from '../components/Toasts'
 
 const CHEERS = ['Great!', 'Yes!', 'Brilliant!', 'Well done!', 'Super!', 'You got it!']
@@ -30,19 +32,52 @@ export default function Lesson() {
   if (found.lesson.kind === 'story') return <Navigate to={`/story/${found.lesson.storyId}`} replace />
   return (
     <NoRoman.Provider value={found.lesson.kind === 'super'}>
-      <Player key={lessonId} {...found} />
+      <ResumeLesson key={lessonId} {...found} />
     </NoRoman.Provider>
   )
 }
 
-function Player({ lesson, unit, track }) {
+function ResumeLesson(props) {
+  const [saved, setSaved] = useState(() => getLessonSession(props.lesson.id))
+  const [start, setStart] = useState(!saved || saved.i === 0 || Boolean(saved.result))
+  if (!start)
+    return (
+      <Shell
+        onClose={() => {
+          location.href = '/'
+        }}
+        progress={0}
+      >
+        <div className="card text-center">
+          <h1 className="text-2xl font-bold">Continue {props.lesson.title}?</h1>
+          <p className="my-4">Your lesson and question order are saved. An unfinished question starts again.</p>
+          <button className="btn-primary w-full" onClick={() => setStart(true)}>
+            Resume lesson
+          </button>
+          <button
+            className="mt-4 underline"
+            onClick={() => {
+              clearLessonSession(props.lesson.id)
+              setSaved(null)
+              setStart(true)
+            }}
+          >
+            Start again
+          </button>
+        </div>
+      </Shell>
+    )
+  return <Player {...props} saved={saved?.result ? null : saved} />
+}
+
+function Player({ lesson, unit, track, saved }) {
   const navigate = useNavigate()
   const feat = track.features
   const xpOn = feat.xp
   const playful = feat.playful
   const { progress, complete } = useProgress()
   const { act, level } = useGame()
-  const built = useMemo(() => buildLesson(lesson, track.key), [lesson, track.key])
+  const [built] = useState(() => saved?.built ?? buildLesson(lesson, track.key))
 
   const steps = useMemo(
     () => [
@@ -55,18 +90,28 @@ function Player({ lesson, unit, track }) {
     ],
     [built, lesson.kind],
   )
-  const [i, setI] = useState(0)
-  const [status, setStatus] = useState('idle') // idle | wrong | solved
-  const clean = useRef({})
+  const [i, setI] = useState(saved?.i ?? 0)
+  const [status, setStatus] = useState(saved?.status ?? 'idle') // idle | wrong | solved
+  const clean = useRef(saved?.clean ?? {})
+  const started = useRef(null)
+  useEffect(() => {
+    started.current = Date.now()
+  }, [])
   const [combo, setCombo] = useState(0)
   const [gain, setGain] = useState(null)
-  const [sessionXp, setSessionXp] = useState(0)
+  const [sessionXp, setSessionXp] = useState(saved?.sessionXp ?? 0)
   const [result, setResult] = useState(null) // { stars, bonus, extra }
 
-  const step = steps[i]
+  useEffect(() => {
+    saveLessonSession(lesson.id, { built, i, status, clean: clean.current, sessionXp, result, elapsedMs: (saved?.elapsedMs ?? 0) + Date.now() - (started.current ?? Date.now()), at: Date.now() })
+  }, [lesson.id, built, i, status, sessionXp, result, saved?.elapsedMs])
+  const duration = lessonMinutes(lesson.id, steps.length)
+  const step = steps[i] ?? steps[0]
   const scored = built.exercises.filter((e) => e.type !== 'trace')
 
   function finish(stars, extraXp = 0) {
+    if (result) return
+    recordDuration(lesson.id, ((saved?.elapsedMs ?? 0) + Date.now() - (started.current ?? Date.now())) / 1000)
     const first = !progress[lesson.id]
     complete(lesson.id, stars)
     let bonus = 0
@@ -97,6 +142,10 @@ function Player({ lesson, unit, track }) {
   }
 
   const solved = (ex) => (isClean) => {
+    if (Object.hasOwn(clean.current, ex.id)) {
+      setStatus('solved')
+      return
+    }
     clean.current[ex.id] = isClean
     recordAnswer(ex.itemId, isClean)
     setStatus('solved')
@@ -130,7 +179,10 @@ function Player({ lesson, unit, track }) {
       <span className="relative rounded-full bg-accent px-3 py-1 text-sm font-extrabold">
         ⚡ {sessionXp}
         {gain && (
-          <span key={gain.id} className="animate-floatUp pointer-events-none absolute -top-1 left-1/2 -translate-x-1/2 text-sm font-extrabold text-success">
+          <span
+            key={gain.id}
+            className="animate-floatUp pointer-events-none absolute -top-1 left-1/2 -translate-x-1/2 text-sm font-extrabold text-success"
+          >
             +{gain.g}
           </span>
         )}
@@ -149,22 +201,58 @@ function Player({ lesson, unit, track }) {
           {lesson.treasure && <p className="animate-pop text-8xl">🎁</p>}
           <p className="animate-pop text-7xl">{'⭐'.repeat(result.stars)}</p>
           <h1 className="mt-4 text-3xl font-extrabold text-primary">
-            {lesson.treasure ? 'Treasure found!' : lesson.kind === 'super' ? (result.stars >= 2 ? 'Super! You did it!' : 'Tough one! Try again') : lesson.kind === 'boss' ? (result.stars >= 2 ? 'Boss defeated!' : 'You survived!') : result.stars === 3 ? 'Perfect!' : result.stars === 2 ? 'Well done!' : 'Nice work!'}
+            {lesson.treasure
+              ? 'Treasure found!'
+              : lesson.kind === 'super'
+                ? result.stars >= 2
+                  ? 'Super! You did it!'
+                  : 'Tough one! Try again'
+                : lesson.kind === 'boss'
+                  ? result.stars >= 2
+                    ? 'Boss defeated!'
+                    : 'You survived!'
+                  : result.stars === 3
+                    ? 'Perfect!'
+                    : result.stars === 2
+                      ? 'Well done!'
+                      : 'Nice work!'}
           </h1>
-          <p className="mt-2 text-ink/60">
-            You finished <b>{lesson.title}</b>.
-            {result.stars < 3 && ' Try it again to earn more stars!'}
+          <p className="mt-2 text-ink/75">
+            You finished <b>{lesson.title}</b>.{result.stars < 3 && ' Try it again to earn more stars!'}
           </p>
-          {playful && <p className="mt-3 text-lg font-extrabold text-primary">⭐ Tara says: “{result.stars === 3 ? 'Wonderful!' : result.stars === 2 ? 'Well done!' : 'Great try!'}”</p>}
+          {playful && (
+            <p className="mt-3 text-lg font-extrabold text-primary">
+              ⭐ Tara says: “{result.stars === 3 ? 'Wonderful!' : result.stars === 2 ? 'Well done!' : 'Great try!'}”
+            </p>
+          )}
+          <div className="card mt-5 text-left">
+            <h2 className="text-xl font-bold">What you practised</h2>
+            <p className="mt-2" lang="bn">
+              {[
+                ...new Set(
+                  [...(built.learn ?? []), ...(built.scene?.lines ?? []), ...(built.text?.lines ?? [])].map((it) => it.bn).filter(Boolean),
+                ),
+              ]
+                .slice(0, 6)
+                .join(' · ') || lesson.title}
+            </p>
+            <p className="mt-2">{scored.filter((ex) => clean.current[ex.id] === false).length} questions need another look.</p>
+            <Link to="/practice" className="mt-3 inline-block font-bold underline">
+              Review what needs practice
+            </Link>
+          </div>
+          <SaveStatus />
           {xpOn && (
             <div className="mx-auto mt-5 max-w-xs rounded-3xl bg-white p-4 text-left shadow-md">
               <div className="flex justify-between text-sm font-extrabold">
                 <span>XP this lesson</span>
                 <span className="text-success">+{sessionXp + result.bonus}</span>
               </div>
-              <div className="mt-2 flex justify-between text-sm font-bold text-ink/60">
+              <div className="mt-2 flex justify-between text-sm font-bold text-ink/75">
                 <span>{feat.garden ? `${stageOf(level.level).emoji} ${stageOf(level.level).name}` : `Level ${level.level}`}</span>
-                <span>{level.into}/{level.need} XP</span>
+                <span>
+                  {level.into}/{level.need} XP
+                </span>
               </div>
               <div className="mt-1 h-3 overflow-hidden rounded-full bg-primary/10">
                 <div className="h-full rounded-full bg-success transition-all" style={{ width: `${level.pct * 100}%` }} />
@@ -195,26 +283,36 @@ function Player({ lesson, unit, track }) {
       {step.kind === 'intro' && (
         <div className="py-8 text-center">
           <p className="animate-pop text-6xl">{lesson.emoji}</p>
-          <p className="mt-3 text-sm font-extrabold uppercase tracking-wide text-ink/40">{unit.title}</p>
+          <p className="mt-3 text-sm font-extrabold uppercase tracking-wide text-ink/70">{unit.title}</p>
           <h1 className="text-3xl font-extrabold text-primary">{lesson.title}</h1>
-          <p className="mt-2 text-ink/60">
+          <p className="mt-2 text-ink/75">
             {lesson.treasure
               ? 'A treasure hunt! Answer the questions to open the chest. No rush — take your time.'
               : lesson.kind === 'super'
-              ? 'Longer sentences, no transliteration and no hints. Take your time: you can retry as often as you like.'
-              : lesson.kind === 'review'
-              ? 'A mix of everything from this unit.'
-              : lesson.kind === 'boss'
-                ? 'A 45-second sprint through everything in this unit. Build a combo!'
-                : lesson.kind === 'dialogue'
-                  ? `A conversation with ${built.scene.lines.length} lines`
-                  : lesson.kind === 'poem' || lesson.kind === 'passage'
-                    ? `${built.text.lines.length} lines to read and understand`
-                    : lesson.kind === 'polite'
-                      ? 'Learn who gets which "you"'
-                      : `${built.learn.length} new thing${built.learn.length === 1 ? '' : 's'} to learn`}
+                ? 'Longer sentences, no transliteration and no hints. Take your time: you can retry as often as you like.'
+                : lesson.kind === 'review'
+                  ? 'A mix of everything from this unit.'
+                  : lesson.kind === 'boss'
+                    ? 'A 45-second sprint through everything in this unit. Build a combo!'
+                    : lesson.kind === 'dialogue'
+                      ? `A conversation with ${built.scene.lines.length} lines`
+                      : lesson.kind === 'poem' || lesson.kind === 'passage'
+                        ? `${built.text.lines.length} lines to read and understand`
+                        : lesson.kind === 'polite'
+                          ? 'Learn who gets which "you"'
+                          : `${built.learn.length} new thing${built.learn.length === 1 ? '' : 's'} to learn`}
           </p>
-          {lesson.tip && <p className="mx-auto mt-5 max-w-sm rounded-2xl bg-accent/30 px-4 py-3 text-left text-sm font-semibold">💡 {lesson.tip}</p>}
+          <p className="mt-3 text-sm">
+            {duration.measured ? 'Your usual time' : 'Estimated time'}: about {duration.minutes} minutes · Goal:{' '}
+            {lesson.kind === 'letters'
+              ? 'recognise these letters and their sounds'
+              : lesson.kind === 'words'
+                ? 'understand and use these words'
+                : 'understand and practise ' + lesson.title.toLowerCase()}
+          </p>
+          {lesson.tip && (
+            <p className="mx-auto mt-5 max-w-sm rounded-2xl bg-accent/30 px-4 py-3 text-left text-sm font-semibold">💡 {lesson.tip}</p>
+          )}
           {lesson.rules && (
             <div className="mx-auto mt-4 max-w-sm space-y-2 text-left">
               {lesson.rules.map((r) => (
@@ -258,7 +356,9 @@ function Player({ lesson, unit, track }) {
       {step.kind === 'text' && (
         <div>
           <TextView text={built.text} />
-          {lesson.kind === 'poem' && lesson.tip && <p className="mt-4 rounded-2xl bg-accent/30 px-4 py-3 text-sm font-semibold">ℹ️ {lesson.tip}</p>}
+          {lesson.kind === 'poem' && lesson.tip && (
+            <p className="mt-4 rounded-2xl bg-accent/30 px-4 py-3 text-sm font-semibold">ℹ️ {lesson.tip}</p>
+          )}
           <button className="btn-primary mt-6 w-full" onClick={advance}>
             Next
           </button>
@@ -267,8 +367,19 @@ function Player({ lesson, unit, track }) {
 
       {step.kind === 'learn' && (
         <div>
-          <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/40">New</p>
+          <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/70">New</p>
           <LearnCard key={step.item.id} item={step.item} />
+          {i > 1 && steps[i - 1]?.kind === 'learn' && (
+            <button
+              className="mt-4 underline"
+              onClick={() => {
+                setI(i - 1)
+                setStatus('idle')
+              }}
+            >
+              ← Previous card
+            </button>
+          )}
           <button className="btn-primary mt-6 w-full" onClick={advance}>
             Next
           </button>
@@ -277,18 +388,29 @@ function Player({ lesson, unit, track }) {
 
       {step.kind === 'ex' && (
         <div>
-          {step.ex.type === 'choice' && <ChoiceQ key={step.ex.id} {...common(step.ex)} />}
-          {step.ex.type === 'match' && <MatchQ key={step.ex.id} {...common(step.ex)} />}
-          {step.ex.type === 'tiles' && <TilesQ key={step.ex.id} {...common(step.ex)} />}
-          {step.ex.type === 'type' && <TypeQ key={step.ex.id} {...common(step.ex)} onTyped={() => act({ stats: (s) => ({ typed: s.typed + 1 }) })} />}
+          {status !== 'solved' && step.ex.type === 'choice' && <ChoiceQ key={step.ex.id} {...common(step.ex)} />}
+          {status !== 'solved' && step.ex.type === 'match' && <MatchQ key={step.ex.id} {...common(step.ex)} />}
+          {status !== 'solved' && step.ex.type === 'tiles' && <TilesQ key={step.ex.id} {...common(step.ex)} />}
+          {status !== 'solved' && step.ex.type === 'type' && (
+            <TypeQ key={step.ex.id} {...common(step.ex)} onTyped={() => act({ stats: (s) => ({ typed: s.typed + 1 }) })} />
+          )}
           {step.ex.type === 'trace' && <TraceQ key={step.ex.id} ex={step.ex} lenient={playful} onSolved={traceDone} />}
 
           {step.ex.type !== 'trace' && (
             <div className="mt-6 min-h-[5.5rem]">
-              {status === 'wrong' && <p className="gentle-error text-center">Oops, not quite — try again!</p>}
+              {status === 'wrong' && (
+                <p role="status" className="gentle-error text-center">
+                  Listen again and compare the letters or word order. Use a hint below the question if you need one.
+                </p>
+              )}
               {status === 'solved' && (
                 <>
-                  <p className="animate-pop mb-3 rounded-2xl bg-success/15 px-4 py-3 text-center text-lg font-extrabold text-success">{cheer}</p>
+                  <p
+                    role="status"
+                    className="animate-pop mb-3 rounded-2xl bg-success/15 px-4 py-3 text-center text-lg font-extrabold text-success"
+                  >
+                    {cheer}
+                  </p>
                   <button className="btn-primary w-full" onClick={advance}>
                     Continue
                   </button>
@@ -307,10 +429,22 @@ function Shell({ children, onClose, progress, extra, hideRoman }) {
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-xl px-5 pb-10 pt-4">
         <div className="mb-6 flex items-center gap-3">
-          <button type="button" onClick={onClose} aria-label="Close lesson" className="rounded-full bg-white px-3 py-2 text-lg font-extrabold text-ink/50 shadow">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close lesson"
+            className="rounded-full bg-white px-3 py-2 text-lg font-extrabold text-ink/70 shadow"
+          >
             ✕
           </button>
-          <div className="h-4 flex-1 overflow-hidden rounded-full bg-primary/10">
+          <div
+            role="progressbar"
+            aria-label="Lesson progress"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={Math.round(progress * 100)}
+            className="h-4 min-w-8 flex-1 overflow-hidden rounded-full bg-primary/10"
+          >
             <div className="h-full rounded-full bg-success transition-all" style={{ width: `${Math.round(progress * 100)}%` }} />
           </div>
           {extra}

@@ -38,7 +38,7 @@ export const onVoiceChange = (f) => {
   return () => listeners.delete(f)
 }
 
-export const useMyVoicePref = () => {
+export const getMyVoicePref = () => {
   try {
     return JSON.parse(localStorage.getItem('lb.useMyVoice') ?? 'true') !== false
   } catch {
@@ -100,7 +100,7 @@ export async function allClips() {
 
 /** A playable URL for your recording of `key`, or null (none yet, or switched off). */
 export async function myVoiceUrl(key) {
-  if (!useMyVoicePref()) return null
+  if (!getMyVoicePref()) return null
   const have = await loadVoiceKeys()
   if (!have.has(key)) return null
   if (urls.has(key)) return urls.get(key)

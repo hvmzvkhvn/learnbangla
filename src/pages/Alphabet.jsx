@@ -23,7 +23,7 @@ function LetterCard({ item }) {
         <span className="text-3xl">{example.emoji}</span>
         <p className="font-bangla text-xl font-bold text-ink">{example.bn}</p>
         {romanOn && <p className="text-sm font-bold text-primary">{example.roman}</p>}
-        <p className="mb-1 text-xs text-ink/50">{example.en}</p>
+        <p className="mb-1 text-xs text-ink/70">{example.en}</p>
         <Speaker text={example.bn} size="sm" label="Hear the word" />
       </div>
     </div>
@@ -39,7 +39,7 @@ export default function Alphabet() {
   return (
     <div className="py-2">
       <h1 className="text-3xl font-extrabold text-primary">The Bangla Alphabet</h1>
-      <p className="mb-4 text-ink/60">বর্ণমালা — tap a tab to explore.</p>
+      <p className="mb-4 text-ink/75">বর্ণমালা — tap a tab to explore.</p>
 
       <div className="mb-6 flex gap-2 rounded-full bg-primary/10 p-1">
         {TABS.map((t) => (
@@ -61,7 +61,7 @@ export default function Alphabet() {
           <h2 className="text-xl font-extrabold text-ink">
             Vowels <span className="font-bangla text-primary">স্বরবর্ণ</span>
           </h2>
-          <p className="mb-4 text-sm text-ink/60">There are 11 vowels. Vowels can stand on their own.</p>
+          <p className="mb-4 text-sm text-ink/75">There are 11 vowels. Vowels can stand on their own.</p>
           <div className={GRID}>
             {vowels.map((v) => (
               <LetterCard key={v.letter} item={v} />
@@ -76,15 +76,15 @@ export default function Alphabet() {
             <h2 className="text-xl font-extrabold text-ink">
               Consonants <span className="font-bangla text-primary">ব্যঞ্জনবর্ণ</span>
             </h2>
-            <p className="text-sm text-ink/60">
-              The 39 consonants are grouped by where in your mouth the sound is made. Each one has the
-              built-in "o" sound, which is why they are written "ko", "kho" and so on.
+            <p className="text-sm text-ink/75">
+              The 39 consonants are grouped by where in your mouth the sound is made. Each one has the built-in "o" sound, which is why they
+              are written "ko", "kho" and so on.
             </p>
           </div>
           {consonantGroups.map((group) => (
             <div key={group.name}>
               <h3 className="text-lg font-extrabold text-primary">{group.name}</h3>
-              <p className="mb-3 text-sm text-ink/60">{group.hint}</p>
+              <p className="mb-3 text-sm text-ink/75">{group.hint}</p>
               <div className={GRID}>
                 {group.letters.map((c) => (
                   <LetterCard key={c.letter} item={c} />
@@ -100,9 +100,9 @@ export default function Alphabet() {
           <h2 className="text-xl font-extrabold text-ink">
             Vowel signs <span className="font-bangla text-primary">কার</span>
           </h2>
-          <p className="mb-4 text-sm text-ink/60">
-            After a consonant, a vowel is written as a small sign instead of its full letter. Here are all
-            ten signs attached to <span className="font-bangla font-bold">ক</span> (ko).
+          <p className="mb-4 text-sm text-ink/75">
+            After a consonant, a vowel is written as a small sign instead of its full letter. Here are all ten signs attached to{' '}
+            <span className="font-bangla font-bold">ক</span> (ko).
           </p>
           <div className={GRID}>
             {vowelSigns.map((s) => (
@@ -112,7 +112,7 @@ export default function Alphabet() {
                   {romanOn && <span className="rounded-full bg-accent px-3 py-0.5 text-sm font-extrabold">{s.combinedRoman}</span>}
                   <Speaker text={s.combined} size="sm" label="Hear it" />
                 </span>
-                <p className="mt-3 text-xs text-ink/50">
+                <p className="mt-3 text-xs text-ink/70">
                   sign <span className="font-bangla text-lg font-bold text-ink">◌{s.sign}</span> {romanOn && <> = "{s.roman}"</>}
                 </p>
               </div>

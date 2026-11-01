@@ -18,6 +18,7 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
   const [placed, setPlaced] = useState([]) // tile indexes in answer order
   const [solved, setSolved] = useState(false)
   const mistake = useRef(false)
+  const [hint, setHint] = useState(false)
   const timer = useRef(null)
 
   useEffect(() => () => clearTimeout(timer.current), [])
@@ -34,6 +35,7 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
         speak(ex.say)
       } else {
         mistake.current = true
+        setHint(true)
         onWrong()
         timer.current = setTimeout(() => setPlaced([]), 900)
       }
@@ -51,6 +53,18 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
         <Face f={ex.stem} big />
         <Speaker text={ex.say} label="Hear it in Bangla" />
       </div>
+      {hint && !solved && (
+        <p role="status" className="gentle-error mb-3">
+          Start with{' '}
+          <span lang="bn">
+            {ex.target
+              .split(ex.joiner || '')
+              .slice(0, 1)
+              .join('')}
+          </span>
+          . Listen to the whole sentence, then rebuild it in that order.
+        </p>
+      )}
       <div
         className={`mb-5 flex min-h-[5.75rem] ${ex.compact ? 'flex-col items-stretch' : 'flex-wrap items-center justify-center'} gap-2 rounded-2xl border-4 border-dashed p-3 ${
           solved ? 'border-success bg-success/10' : 'border-primary/20 bg-white'

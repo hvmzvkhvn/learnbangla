@@ -82,7 +82,7 @@ export default function BlitzGame({ pool, trackKey, seconds: secondsProp = 60, o
     )
   }
 
-  if (!q) return <p className="py-10 text-center text-ink/50">Getting ready…</p>
+  if (!q) return <p className="py-10 text-center text-ink/70">Getting ready…</p>
   const pct = (left / seconds) * 100
 
   return (
@@ -94,7 +94,9 @@ export default function BlitzGame({ pool, trackKey, seconds: secondsProp = 60, o
         </div>
         <span className="rounded-full bg-accent px-3 py-1 text-sm font-extrabold">⚡ {score}</span>
       </div>
-      <div className="mb-2 h-6 text-center text-sm font-extrabold text-secondary">{combo >= 2 && <span className="animate-pop inline-block">🔥 Combo x{combo}</span>}</div>
+      <div className="mb-2 h-6 text-center text-sm font-extrabold text-secondary">
+        {combo >= 2 && <span className="animate-pop inline-block">🔥 Combo x{combo}</span>}
+      </div>
 
       <h2 className="mb-3 text-center text-lg font-extrabold text-ink">{q.title}</h2>
       <div className="card mb-4 flex min-h-[7rem] items-center justify-center">

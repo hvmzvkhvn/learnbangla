@@ -63,9 +63,19 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
   return (
     <div className="mt-2">
       <div className="mb-3 flex items-center gap-3">
-        <Link to={backTo} aria-label="Back" className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-extrabold text-ink/50 shadow">←</Link>
-        <h1 className="flex-1 truncate text-lg font-extrabold text-ink">{task.title.en} <span className="font-bangla text-primary">· {task.title.bn}</span></h1>
-        <span className="text-sm font-bold text-ink/40">{Math.min(n, task.steps.length)} / {task.steps.length}</span>
+        <Link
+          to={backTo}
+          aria-label="Back"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-extrabold text-ink/70 shadow"
+        >
+          ←
+        </Link>
+        <h1 className="flex-1 truncate text-lg font-extrabold text-ink">
+          {task.title.en} <span className="font-bangla text-primary">· {task.title.bn}</span>
+        </h1>
+        <span className="text-sm font-bold text-ink/70">
+          {Math.min(n, task.steps.length)} / {task.steps.length}
+        </span>
       </div>
 
       <Scene scene={scene} id={`build-${task.id}`} className="shadow-md" />
@@ -73,16 +83,24 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
       {!started ? (
         <div className="card mt-3 text-center">
           <p className="text-lg font-bold text-ink">Listen to each word, then tap the right picture to place it.</p>
-          <button type="button" onClick={begin} className="btn-primary mt-3">▶ Start</button>
+          <button type="button" onClick={begin} className="btn-primary mt-3">
+            ▶ Start
+          </button>
         </div>
       ) : done ? (
         <div className="animate-pop card mt-3 text-center">
           <p className="text-5xl">🎉</p>
           <h2 className="mt-1 text-xl font-extrabold text-primary">You built the scene!</h2>
-          <p className="text-sm text-ink/60">{perfect} / {task.steps.length} right first time</p>
+          <p className="text-sm text-ink/75">
+            {perfect} / {task.steps.length} right first time
+          </p>
           <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-center">
-            <button type="button" onClick={restart} className="btn-secondary">↺ Build it again</button>
-            <Link to={backTo} className="btn-primary">More in the Playbook</Link>
+            <button type="button" onClick={restart} className="btn-secondary">
+              ↺ Build it again
+            </button>
+            <Link to={backTo} className="btn-primary">
+              More in the Playbook
+            </Link>
           </div>
         </div>
       ) : (
@@ -91,7 +109,7 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
             <span className="text-center">
               <span className="block font-bangla text-3xl font-extrabold text-primary">{step.word.bn}</span>
               {romanOn && <span className="block text-sm font-bold text-ink/70">{step.word.roman}</span>}
-              {misses > 0 && <span className="block text-sm text-ink/50">{step.word.en}</span>}
+              {misses > 0 && <span className="block text-sm text-ink/70">{step.word.en}</span>}
             </span>
             <Speaker text={step.word.bn} size="lg" label="Hear the word" />
           </div>

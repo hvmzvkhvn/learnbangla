@@ -14,12 +14,17 @@ export default function UnitList({ track, progress, nextId }) {
         const isOpen = openUnit === u.id
         return (
           <div key={u.id} className="card !p-0 overflow-hidden">
-            <button type="button" onClick={() => setOpen(isOpen ? '' : u.id)} className="flex w-full items-center gap-3 p-4 text-left">
+            <button
+              type="button"
+              aria-expanded={isOpen}
+              onClick={() => setOpen(isOpen ? '' : u.id)}
+              className="flex w-full items-center gap-3 p-4 text-left"
+            >
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-2xl">{u.emoji}</span>
               <span className="flex-1">
-                <span className="block text-xs font-extrabold uppercase tracking-wide text-ink/40">Unit {ui + 1}</span>
+                <span className="block text-xs font-extrabold uppercase tracking-wide text-ink/70">Unit {ui + 1}</span>
                 <span className="block font-bangla text-lg font-extrabold leading-snug text-ink">{u.title}</span>
-                <span className="block text-xs text-ink/50">{u.blurb}</span>
+                <span className="block text-xs text-ink/70">{u.blurb}</span>
               </span>
               <span className="text-sm font-extrabold text-primary">
                 {finished}/{u.lessons.length}
@@ -36,7 +41,15 @@ export default function UnitList({ track, progress, nextId }) {
                       key={l.id}
                       to={`/lesson/${l.id}`}
                       className={`flex items-center gap-2 rounded-2xl px-3 py-3 text-sm font-extrabold transition active:scale-95 ${
-                        p ? 'bg-success/15 text-success' : l.id === nextId ? 'bg-accent text-ink' : superL ? 'bg-ink text-white sm:col-span-2' : special ? 'bg-secondary/15 text-ink' : 'bg-background text-ink/70'
+                        p
+                          ? 'bg-success/15 text-success'
+                          : l.id === nextId
+                            ? 'bg-accent text-ink'
+                            : superL
+                              ? 'bg-ink text-white sm:col-span-2'
+                              : special
+                                ? 'bg-secondary/15 text-ink'
+                                : 'bg-background text-ink/70'
                       }`}
                     >
                       <span className="text-xl">{l.emoji}</span>

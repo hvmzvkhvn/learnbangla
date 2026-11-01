@@ -25,9 +25,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run check
       - run: npm run build
         env:
           # public by design (the anon key only works within the database's row-level security rules)
+          VITE_ACCOUNTS: ${{ vars.VITE_ACCOUNTS }}
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
       # GitHub Pages has no rewrites: serving the app as the 404 page lets deep links

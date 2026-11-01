@@ -9,8 +9,8 @@ export default {
         accent: '#FFD166',
         background: '#FFFDF7',
         ink: '#2D2D2D',
-        success: '#4CAF7D',
-        error: '#E8624A',
+        success: '#24734D',
+        error: '#B33426',
       },
       fontFamily: {
         sans: ['Nunito', '"Noto Sans Bengali"', 'ui-sans-serif', 'system-ui', 'sans-serif'],

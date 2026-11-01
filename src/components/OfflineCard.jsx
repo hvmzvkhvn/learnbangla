@@ -1,76 +1,138 @@
 import { useEffect, useRef, useState } from 'react'
 import { audioStatus, clearAudioOffline, offlineSupported, saveAudioOffline, useInstall } from '../pwa'
-
-/** Install the app and save the audio so it works without internet. */
+import { useProgress, useTrack } from '../state/persist'
+import { tracks } from '../curriculum/tracks'
+import { bank } from '../curriculum/bank'
+import { norm } from '../audio/norm'
+function textKeys(unit) {
+  const keys = new Set()
+  for (const l of unit?.lessons ?? [])
+    for (const id of [...(l.learn ?? []), ...(l.practice ?? []), ...(l.reviewOf ?? []), ...(l.superIds ?? [])]) {
+      const item = bank.get(id)
+      if (!item) continue
+      for (const text of [item.bn, item.example?.bn, ...(item.tokens ?? [])]) if (text) keys.add(norm(text))
+    }
+  return [...keys]
+}
 export default function OfflineCard() {
   const install = useInstall()
-  const [status, setStatus] = useState(null) // { saved, total }
-  const [prog, setProg] = useState(null) // { done, total } while downloading
-  const [note, setNote] = useState('')
+  const [trackKey] = useTrack()
+  const { progress } = useProgress()
+  const track = tracks[trackKey]
+  const [status, setStatus] = useState(null),
+    [prog, setProg] = useState(null),
+    [note, setNote] = useState(''),
+    [selection, setSelection] = useState('next')
   const abort = useRef(null)
   const ok = offlineSupported()
-
   useEffect(() => {
-    if (ok) audioStatus().then(setStatus).catch(() => {})
+    if (ok)
+      audioStatus()
+        .then(setStatus)
+        .catch(() => setNote('Connect to the internet once to load the audio list.'))
+    return () => abort.current?.abort()
   }, [ok])
-
-  if (!ok && install.installed) return null
-
+  const unit = track?.units.find((u) => u.lessons.some((l) => !progress[l.id])) ?? track?.units[0]
+  const keys =
+    selection === 'all'
+      ? null
+      : selection === 'track'
+        ? track?.units.flatMap(textKeys)
+        : textKeys(track?.units.find((u) => u.id === selection) ?? unit)
   const start = async () => {
     setNote('')
     abort.current = new AbortController()
-    setProg({ done: 0, total: status?.total ?? 1 })
-    const r = await saveAudioOffline((done, total) => setProg({ done, total }), abort.current.signal)
-    setProg(null)
-    setStatus(await audioStatus())
-    setNote(r.aborted ? 'Stopped — what is saved stays saved.' : r.failed ? `${r.failed} clips could not be saved. Try again on a better connection.` : 'All saved — it works without internet now.')
+    setProg({ done: 0, total: 1 })
+    try {
+      const r = await saveAudioOffline((done, total) => setProg({ done, total }), abort.current.signal, keys)
+      setStatus(await audioStatus())
+      setNote(
+        r.aborted
+          ? 'Stopped. Downloaded clips are kept.'
+          : r.failed
+            ? `${r.failed} clips failed. Retry when connected.`
+            : 'Your selected audio is ready offline.',
+      )
+    } catch (e) {
+      setNote('Download could not finish. Check your connection and available storage. ' + e.message)
+    } finally {
+      setProg(null)
+    }
   }
-  const remove = async () => {
-    await clearAudioOffline()
-    setStatus(await audioStatus())
-    setNote('Removed the saved audio.')
-  }
-  const mb = status ? Math.round((status.total * 15) / 1024) : 50
-  const complete = status && status.saved >= status.total
-
   return (
-    <div className="card mt-8 !p-5">
-      <h2 className="text-xl font-extrabold text-ink">Use it like an app</h2>
-
-      {!install.installed && (
-        <div className="mt-2">
-          {install.canPrompt ? (
-            <button type="button" onClick={install.prompt} className="btn-primary w-full !py-3">Install Learn Bangla</button>
-          ) : install.ios ? (
-            <p className="text-sm text-ink/70">On iPhone or iPad: tap the <b>Share</b> button, then <b>Add to Home Screen</b>.</p>
-          ) : (
-            <p className="text-sm text-ink/70">In your browser's menu, choose <b>Install app</b> (or <b>Add to Home screen</b>) to open it like an app.</p>
-          )}
-        </div>
-      )}
-      {install.installed && <p className="mt-2 text-sm font-bold text-success">✓ Installed on this device</p>}
-
-      {ok && status && (
-        <div className="mt-4 border-t border-primary/10 pt-4">
-          <p className="font-extrabold text-ink">Offline audio</p>
-          <p className="text-sm text-ink/60">
-            {complete ? `All ${status.total.toLocaleString()} clips are saved on this device.` : `${status.saved.toLocaleString()} of ${status.total.toLocaleString()} clips saved. Saving them all takes about ${mb} MB — best on Wi-Fi.`}
+    <section className="mt-4">
+      <h2 className="text-xl font-bold">Use it like an app</h2>
+      {!install.installed &&
+        (install.canPrompt ? (
+          <button onClick={install.prompt} className="btn-primary mt-3">
+            Install Learn Bangla
+          </button>
+        ) : (
+          <p className="my-2">
+            {install.ios
+              ? 'On iPhone or iPad: Share → Add to Home Screen.'
+              : 'Use your browser’s Install app or Add to Home screen option.'}
           </p>
+        ))}
+      {install.installed && <p>✓ Installed</p>}
+      {ok && (
+        <div className="mt-4">
+          <h3 className="font-bold">Offline audio</h3>
+          <p className="my-2">
+            {status ? `${status.saved.toLocaleString()} of ${status.total.toLocaleString()} clips saved.` : 'Loading audio list…'} Download
+            only what you need; sizes vary by clip.
+          </p>
+          <label className="block">
+            Choose audio
+            <select className="input-field mt-2" value={selection} onChange={(e) => setSelection(e.target.value)} disabled={Boolean(prog)}>
+              <option value="next">My next unit{unit ? `: ${unit.title}` : ''}</option>
+              <option value="track">My whole age track</option>
+              {track?.units.map((u) => (
+                <option key={u.id} value={u.id}>
+                  {u.title}
+                </option>
+              ))}
+              <option value="all">Everything (all age tracks)</option>
+            </select>
+          </label>
           {prog ? (
             <div className="mt-3">
-              <div className="h-3 overflow-hidden rounded-full bg-primary/10"><div className="h-full rounded-full bg-success transition-all" style={{ width: `${(prog.done / prog.total) * 100}%` }} /></div>
-              <p className="mt-1 text-xs font-bold text-ink/50">{prog.done.toLocaleString()} / {prog.total.toLocaleString()}</p>
-              <button type="button" onClick={() => abort.current?.abort()} className="mt-2 text-sm font-bold text-ink/50">Stop</button>
+              <progress aria-label="Audio download" max={prog.total} value={prog.done} />
+              <p role="status">
+                {prog.done} / {prog.total}
+              </p>
+              <button onClick={() => abort.current?.abort()} className="underline">
+                Stop download
+              </button>
             </div>
           ) : (
-            <div className="mt-3 flex flex-wrap gap-2">
-              {!complete && <button type="button" onClick={start} className="btn-secondary !px-5 !py-3 text-base">Save audio for offline</button>}
-              {status.saved > 0 && <button type="button" onClick={remove} className="rounded-2xl px-4 py-3 text-sm font-bold text-ink/50 hover:text-ink/70">Remove saved audio</button>}
+            <div className="mt-3 flex flex-wrap gap-3">
+              <button onClick={start} disabled={!status || (!track && selection !== 'all')} className="btn-secondary">
+                Download selected audio
+              </button>
+              {status?.saved > 0 && (
+                <button
+                  className="underline"
+                  onClick={async () => {
+                    try {
+                      await clearAudioOffline()
+                      setStatus(await audioStatus())
+                      setNote('Offline audio removed.')
+                    } catch {
+                      setNote('Could not remove downloaded audio.')
+                    }
+                  }}
+                >
+                  Remove downloaded audio
+                </button>
+              )}
             </div>
           )}
-          {note && <p className="mt-2 text-sm font-bold text-ink/60">{note}</p>}
         </div>
       )}
-    </div>
+      <p role="status" className="mt-2 text-sm">
+        {note}
+      </p>
+    </section>
   )
 }

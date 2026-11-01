@@ -12,7 +12,9 @@ export function getSupabase() {
   if (!accountsEnabled) return Promise.resolve(null)
   if (import.meta.env.DEV && window.__lbSupabase) return Promise.resolve(window.__lbSupabase) // a fake, for tests
   client ??= import('@supabase/supabase-js').then(({ createClient }) =>
-    createClient(url, key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false, storageKey: AUTH_STORAGE_KEY } }),
+    createClient(url, key, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: 'pkce', storageKey: AUTH_STORAGE_KEY },
+    }),
   )
   return client
 }

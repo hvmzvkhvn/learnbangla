@@ -1,74 +1,132 @@
 import { useState } from 'react'
-
-// Everything that makes up a learner's progress on this device.
-const KEYS = ['lb.track', 'lb.progress', 'lb.game', 'lb.srs']
-const PREFIX = 'LB1.'
-
-const toCode = () => {
-  const data = {}
-  KEYS.forEach((k) => {
-    try {
-      const v = localStorage.getItem(k)
-      if (v !== null) data[k] = JSON.parse(v)
-    } catch {
-      /* skip unreadable keys */
-    }
-  })
-  return PREFIX + btoa(unescape(encodeURIComponent(JSON.stringify(data))))
+import { validateState } from '../state/schema'
+import { readPersistent, updatePersistent } from '../state/persist'
+import { useSync } from '../sync/engine'
+const KEYS = { track: 'lb.track', progress: 'lb.progress', game: 'lb.game', srs: 'lb.srs', epoch: 'lb.epoch' }
+export function encodeSave(state) {
+  return 'LB2.' + btoa(unescape(encodeURIComponent(JSON.stringify(validateState(state)))))
 }
-
-function fromCode(code) {
+export function decodeSave(code) {
   const c = code.trim()
-  if (!c.startsWith(PREFIX)) throw new Error('That does not look like a save code.')
-  const data = JSON.parse(decodeURIComponent(escape(atob(c.slice(PREFIX.length)))))
-  const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v)
-  Object.entries(data).forEach(([k, v]) => {
-    const ok = k === 'lb.track' ? typeof v === 'string' || v === null : isObj(v)
-    if (!KEYS.includes(k) || !ok) throw new Error('That save code has unexpected contents.')
-  })
-  return data
+  if (c.length > 480000 || !/^LB[12]\./.test(c)) throw new Error('Use a Learn Bangla save code smaller than 480 KB.')
+  let data
+  try {
+    data = JSON.parse(decodeURIComponent(escape(atob(c.slice(4)))))
+  } catch {
+    throw new Error('That code is incomplete or damaged.')
+  }
+  if (c.startsWith('LB1.')) {
+    if (!data || typeof data !== 'object' || Array.isArray(data) || Object.keys(data).some((k) => !Object.values(KEYS).includes(k)))
+      throw new Error('Unexpected save code contents.')
+    data = Object.fromEntries(
+      Object.entries(KEYS)
+        .filter(([, k]) => k in data)
+        .map(([n, k]) => [n, data[k]]),
+    )
+  }
+  return validateState(data)
 }
-
-/** Copy progress to another device (or back it up) with a save code. */
 export default function SaveCode() {
-  const [mine, setMine] = useState('')
-  const [paste, setPaste] = useState('')
-  const [msg, setMsg] = useState('')
-
+  const sync = useSync()
+  const [mine, setMine] = useState(''),
+    [paste, setPaste] = useState(''),
+    [msg, setMsg] = useState(''),
+    [preview, setPreview] = useState(null)
+  const current = () =>
+    Object.fromEntries(Object.entries(KEYS).map(([n, k]) => [n, readPersistent(k, n === 'track' ? null : n === 'epoch' ? 0 : {})]))
   const copy = async () => {
-    const code = toCode()
+    const code = encodeSave(current())
     setMine(code)
     try {
       await navigator.clipboard.writeText(code)
-      setMsg('Copied! Paste it into "Load" on your other device.')
+      setMsg('Copied. Keep this code somewhere safe.')
     } catch {
       setMsg('Select and copy the code below.')
     }
   }
-  const load = () => {
+  const inspect = () => {
     try {
-      const data = fromCode(paste)
-      if (!window.confirm('Replace the progress on THIS device with the saved progress?')) return
-      KEYS.forEach((k) => (k in data ? localStorage.setItem(k, JSON.stringify(data[k])) : localStorage.removeItem(k)))
-      location.reload()
+      setPreview(decodeSave(paste))
+      setMsg('')
     } catch (e) {
-      setMsg(e.message || "Oops, that didn't work — check the code and try again!")
+      setMsg(e.message)
     }
   }
-
+  const load = () => {
+    try {
+      if (sync.learnerId) throw new Error('Sign out before importing a guest backup, so it cannot replace another learner’s work.')
+      const data = validateState(preview)
+      localStorage.setItem('lb.importBackup', encodeSave(current())) // must succeed before replacement
+      for (const [n, k] of Object.entries(KEYS)) updatePersistent(k, null, () => data[n] ?? (n === 'track' ? null : n === 'epoch' ? 0 : {}))
+      updatePersistent('lb.lessonSessions', {}, () => ({}))
+      setPreview(null)
+      setMsg('Progress restored. Your previous progress is available below.')
+    } catch (e) {
+      setMsg(e.message)
+    }
+  }
+  const recover = () => {
+    const code = localStorage.getItem('lb.importBackup')
+    if (code) {
+      setPaste(code)
+      setPreview(decodeSave(code))
+    } else setMsg('No previous import backup on this device.')
+  }
   return (
-    <div className="card mt-8 !p-5">
-      <h2 className="text-xl font-extrabold text-ink">Save code</h2>
-      <p className="mb-3 text-sm text-ink/60">Move your progress to another phone or computer — no account needed.</p>
-      <button type="button" onClick={copy} className="btn-secondary w-full !py-3">
+    <section className="card mt-5 !p-5" aria-labelledby="backup-title">
+      <h2 id="backup-title" className="text-xl font-extrabold">
+        Back up your progress
+      </h2>
+      <p className="mb-3 text-sm">A save code includes learning progress, not your voice recordings. Keep it private.</p>
+      <button onClick={copy} className="btn-secondary w-full">
         Copy my save code
       </button>
-      {mine && <textarea readOnly value={mine} rows={3} className="input-field mt-3 break-all text-xs" onFocus={(e) => e.target.select()} />}
-      <textarea value={paste} onChange={(e) => setPaste(e.target.value)} rows={2} placeholder="Paste a save code here to load it…" className="input-field mt-3 break-all text-xs" />
-      <button type="button" onClick={load} disabled={!paste.trim()} className="btn-primary mt-3 w-full !py-3">
-        Load this code
+      {mine && (
+        <textarea
+          aria-label="Your save code"
+          readOnly
+          value={mine}
+          rows={3}
+          className="input-field mt-3 text-xs"
+          onFocus={(e) => e.target.select()}
+        />
+      )}
+      <label className="mt-3 block font-bold">
+        Restore a backup
+        <textarea
+          value={paste}
+          onChange={(e) => {
+            setPaste(e.target.value)
+            setPreview(null)
+          }}
+          rows={3}
+          maxLength={480000}
+          className="input-field mt-1 text-xs"
+        />
+      </label>
+      <button disabled={!paste.trim()} onClick={inspect} className="btn-primary mt-3">
+        Preview backup
       </button>
-      {msg && <p className="mt-2 text-center text-sm font-bold text-ink/60">{msg}</p>}
-    </div>
+      {preview && (
+        <div className="mt-3 rounded-xl bg-accent/30 p-3">
+          <p>
+            {Object.keys(preview.progress ?? {}).length} completed lessons · {preview.game?.xp ?? 0} XP · {preview.track ?? 'No age group'}
+          </p>
+          <p>This replaces this device’s guest progress. A recovery copy is saved first.</p>
+          <button onClick={load} className="btn-primary mt-2">
+            Restore this backup
+          </button>
+          <button onClick={() => setPreview(null)} className="ml-3 underline">
+            Cancel
+          </button>
+        </div>
+      )}
+      <button onClick={recover} className="mt-3 block underline">
+        Recover progress from before the last import
+      </button>
+      <p role="status" className="mt-2 text-sm">
+        {msg}
+      </p>
+    </section>
   )
 }

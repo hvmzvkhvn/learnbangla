@@ -9,14 +9,42 @@ export const today = () => dayKey(new Date())
 const yesterday = () => dayKey(new Date(Date.now() - 86400000))
 
 const DEFAULT = {
-  xp: 0, streak: 0, best: 0, last: '', badges: {}, activity: {},
-  stats: { lessons: 0, perfect: 0, bosses: 0, stories: 0, storyDone: {}, greatEndings: 0, endings: {}, typed: 0, blitzBest: 0, memoryBest: 0, dailyDone: 0, daily: {}, stamps: {}, geoBest: 0, supers: {}, books: {}, looks: {}, builds: {} },
+  xp: 0,
+  streak: 0,
+  best: 0,
+  last: '',
+  badges: {},
+  activity: {},
+  stats: {
+    lessons: 0,
+    perfect: 0,
+    bosses: 0,
+    stories: 0,
+    storyDone: {},
+    greatEndings: 0,
+    endings: {},
+    typed: 0,
+    blitzBest: 0,
+    memoryBest: 0,
+    dailyDone: 0,
+    daily: {},
+    stamps: {},
+    geoBest: 0,
+    supers: {},
+    books: {},
+    looks: {},
+    builds: {},
+  },
 }
 
 // Younger learners see their level as a garden that grows.
 export const STAGES = [
-  { name: 'Seed', emoji: '🌱' }, { name: 'Sprout', emoji: '🌿' }, { name: 'Flower', emoji: '🌼' },
-  { name: 'Sapling', emoji: '🌳' }, { name: 'Apple tree', emoji: '🍎' }, { name: 'Rainbow tree', emoji: '🌈' },
+  { name: 'Seed', emoji: '🌱' },
+  { name: 'Sprout', emoji: '🌿' },
+  { name: 'Flower', emoji: '🌼' },
+  { name: 'Sapling', emoji: '🌳' },
+  { name: 'Apple tree', emoji: '🍎' },
+  { name: 'Rainbow tree', emoji: '🌈' },
   { name: 'Star tree', emoji: '🌟' },
 ]
 export const stageOf = (level) => STAGES[Math.min(level, STAGES.length) - 1]
@@ -46,19 +74,79 @@ export const BADGES = [
   { id: 'smooth', emoji: '😎', title: 'Smooth Talker', desc: 'Get a top ending in a story', test: (g) => g.stats.greatEndings >= 1 },
   { id: 'typist', emoji: '⌨️', title: 'Typist', desc: 'Type 20 words in Bangla', test: (g) => g.stats.typed >= 20 },
   { id: 'blitz', emoji: '⚡', title: 'Quick Draw', desc: 'Score 15 in a Word Blitz', test: (g) => g.stats.blitzBest >= 15 },
-  { id: 'memory', emoji: '🐘', title: 'Elephant Memory', desc: 'Win Memory Match in 8 moves or fewer', test: (g) => g.stats.memoryBest > 0 && g.stats.memoryBest <= 8 },
+  {
+    id: 'memory',
+    emoji: '🐘',
+    title: 'Elephant Memory',
+    desc: 'Win Memory Match in 8 moves or fewer',
+    test: (g) => g.stats.memoryBest > 0 && g.stats.memoryBest <= 8,
+  },
   { id: 'boss', emoji: '⚔️', title: 'Boss Slayer', desc: 'Beat a boss level', test: (g) => g.stats.bosses >= 1 },
   { id: 'daily3', emoji: '📅', title: 'Regular', desc: 'Complete 3 daily challenges', test: (g) => g.stats.dailyDone >= 3 },
-  { id: 'explorer', emoji: '🧭', title: 'Explorer', desc: 'Stamp all 8 divisions of Bangladesh', test: (g) => Object.keys(g.stats.stamps ?? {}).filter((k) => k.startsWith('r:')).length >= 8 },
-  { id: 'traveller', emoji: '🗺️', title: 'Traveller', desc: 'Visit 16 cities on the map', test: (g) => Object.keys(g.stats.stamps ?? {}).filter((k) => k.startsWith('c:')).length >= 16 },
+  {
+    id: 'explorer',
+    emoji: '🧭',
+    title: 'Explorer',
+    desc: 'Stamp all 8 divisions of Bangladesh',
+    test: (g) => Object.keys(g.stats.stamps ?? {}).filter((k) => k.startsWith('r:')).length >= 8,
+  },
+  {
+    id: 'traveller',
+    emoji: '🗺️',
+    title: 'Traveller',
+    desc: 'Visit 16 cities on the map',
+    test: (g) => Object.keys(g.stats.stamps ?? {}).filter((k) => k.startsWith('c:')).length >= 16,
+  },
   { id: 'geo', emoji: '📍', title: 'Map Master', desc: 'Score 9 or more in a Map Quiz', test: (g) => (g.stats.geoBest ?? 0) >= 9 },
-  { id: 'super1', emoji: '🦸', title: 'Super!', desc: 'Pass a Super challenge (2 stars or more)', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 1 },
-  { id: 'super5', emoji: '🧠', title: 'Super Brain', desc: 'Pass 5 Super challenges', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 5 },
-  { id: 'super15', emoji: '🌟', title: 'Super Star', desc: 'Pass 15 Super challenges', test: (g) => Object.keys(g.stats.supers ?? {}).length >= 15 },
-  { id: 'book1', emoji: '📖', title: 'Picture Reader', desc: 'Finish a Playbook story', test: (g) => Object.keys(g.stats.books ?? {}).length >= 1 },
-  { id: 'book5', emoji: '📚', title: 'Story Lover', desc: 'Finish 5 Playbook stories', test: (g) => Object.keys(g.stats.books ?? {}).length >= 5 },
-  { id: 'look', emoji: '🔍', title: 'Sharp Eyes', desc: 'Find everything in a Look & Learn picture', test: (g) => Object.keys(g.stats.looks ?? {}).length >= 1 },
-  { id: 'build', emoji: '🧩', title: 'Scene Builder', desc: 'Build a whole scene', test: (g) => Object.keys(g.stats.builds ?? {}).length >= 1 },
+  {
+    id: 'super1',
+    emoji: '🦸',
+    title: 'Super!',
+    desc: 'Pass a Super challenge (2 stars or more)',
+    test: (g) => Object.keys(g.stats.supers ?? {}).length >= 1,
+  },
+  {
+    id: 'super5',
+    emoji: '🧠',
+    title: 'Super Brain',
+    desc: 'Pass 5 Super challenges',
+    test: (g) => Object.keys(g.stats.supers ?? {}).length >= 5,
+  },
+  {
+    id: 'super15',
+    emoji: '🌟',
+    title: 'Super Star',
+    desc: 'Pass 15 Super challenges',
+    test: (g) => Object.keys(g.stats.supers ?? {}).length >= 15,
+  },
+  {
+    id: 'book1',
+    emoji: '📖',
+    title: 'Picture Reader',
+    desc: 'Finish a Playbook story',
+    test: (g) => Object.keys(g.stats.books ?? {}).length >= 1,
+  },
+  {
+    id: 'book5',
+    emoji: '📚',
+    title: 'Story Lover',
+    desc: 'Finish 5 Playbook stories',
+    test: (g) => Object.keys(g.stats.books ?? {}).length >= 5,
+  },
+  {
+    id: 'look',
+    emoji: '🔍',
+    title: 'Sharp Eyes',
+    desc: 'Find everything in a Look & Learn picture',
+    test: (g) => Object.keys(g.stats.looks ?? {}).length >= 1,
+  },
+  {
+    id: 'build',
+    emoji: '🧩',
+    title: 'Scene Builder',
+    desc: 'Build a whole scene',
+    test: (g) => Object.keys(g.stats.builds ?? {}).length >= 1,
+  },
   { id: 'lvl5', emoji: '🚀', title: 'Level 5', desc: 'Reach level 5', test: (g) => levelInfo(g.xp).level >= 5 },
   { id: 'lvl10', emoji: '👑', title: 'Level 10', desc: 'Reach level 10', test: (g) => levelInfo(g.xp).level >= 10 },
 ]
@@ -130,7 +218,21 @@ export function useGame() {
     ({ xp = 0, stats } = {}) =>
       set((prevRaw) => {
         const prev = merge(prevRaw)
-        let next = touch({ ...prev, xp: prev.xp + xp }, gentle)
+        let device
+        try {
+          device = sessionStorage.getItem('lb.writer')
+          if (!device) {
+            device = crypto.randomUUID()
+            sessionStorage.setItem('lb.writer', device)
+          }
+        } catch {
+          device = 'session-' + crypto.randomUUID()
+        }
+        const xpBase = prev.xpBase ?? prev.xp
+        const activityBase = prev.activityBase ?? prev.activity
+        const counter = prev.xpCounters?.[device] ?? { xp: 0, activity: {} }
+        const xpCounters = { ...prev.xpCounters, [device]: { xp: counter.xp + xp, activity: recentActivity(counter.activity, xp) } }
+        let next = touch({ ...prev, xp: prev.xp + xp, xpBase, activityBase, xpCounters }, gentle)
         if (xp) next = { ...next, activity: recentActivity(prev.activity, xp) }
         if (stats) next = { ...next, stats: { ...next.stats, ...stats(next.stats) } }
         return evaluate(prev, next)
