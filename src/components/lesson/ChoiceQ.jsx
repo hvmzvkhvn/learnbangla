@@ -33,6 +33,14 @@ export default function ChoiceQ({ ex, onSolved, onWrong }) {
       <div className="card mb-5 flex min-h-[8rem] items-center justify-center">
         <Face f={ex.stem} big speak />
       </div>
+      {wrong.length > 0 && !solved && (
+        <p role="status" className="gentle-error mb-3">
+          Compare the remaining choices. Listen again.{' '}
+          {wrong.length >= 2
+            ? `The answer is ${ex.options[ex.answer]?.bn ?? ex.options[ex.answer]?.text ?? ex.options[ex.answer]?.roman ?? 'the remaining choice'}. Say it aloud, then choose it.`
+            : 'Try noticing the first sound or the meaning of the word.'}
+        </p>
+      )}
       <div className="grid grid-cols-2 gap-3">
         {ex.options.map((o, i) => {
           const isRight = solved && i === ex.answer

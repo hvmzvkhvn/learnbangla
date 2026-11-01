@@ -28,7 +28,10 @@ export function recordAnswer(itemId, correct) {
       if (s.last !== t || box === 0) box = Math.min(box + 1, INTERVALS.length - 1)
     } else box = 0
     const due = correct && box > 0 ? keyAt(dayNo(t) + INTERVALS[box]) : t
-    return { ...cur, [itemId]: { box, due, last: t, miss: s.miss + (correct ? 0 : 1) } }
+    return {
+      ...cur,
+      [itemId]: { box, due, last: t, answeredAt: Math.max(Date.now(), (s.answeredAt ?? 0) + 1), miss: s.miss + (correct ? 0 : 1) },
+    }
   })
 }
 

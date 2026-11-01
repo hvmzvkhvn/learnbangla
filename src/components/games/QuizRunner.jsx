@@ -17,7 +17,7 @@ export default function QuizRunner({ exercises, onFinish, label = 'Question' }) 
 
   return (
     <div>
-      <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/40">
+      <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/70">
         {label} {i + 1} of {exercises.length}
       </p>
       <ChoiceQ

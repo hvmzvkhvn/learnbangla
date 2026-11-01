@@ -59,14 +59,16 @@ export default function GeoGame({ onFinish }) {
 
   return (
     <div>
-      <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/40">Question {i + 1} of {qs.length}</p>
+      <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/70">
+        Question {i + 1} of {qs.length}
+      </p>
       {q.kind === 'tap' && (
         <>
           <div className="mb-2 flex items-center justify-center gap-3 text-center">
             <div>
-              <p className="text-sm font-bold text-ink/60">Tap this division on the map</p>
+              <p className="text-sm font-bold text-ink/75">Tap this division on the map</p>
               <p className="font-bangla text-4xl font-extrabold text-primary">{q.region.bn}</p>
-              <p className="text-sm text-ink/50">{q.region.name}</p>
+              <p className="text-sm text-ink/70">{q.region.name}</p>
             </div>
             <Speaker text={q.region.bn} size="lg" />
           </div>
@@ -74,13 +76,21 @@ export default function GeoGame({ onFinish }) {
         </>
       )}
       {q.kind === 'clue' && (
-        <Choice title="Where am I?" sub="Listen, then pick the division." options={q.options} answer={answer} bad={bad} solved={solved} region={q.region}>
+        <Choice
+          title="Where am I?"
+          sub="Listen, then pick the division."
+          options={q.options}
+          answer={answer}
+          bad={bad}
+          solved={solved}
+          region={q.region}
+        >
           <div className="flex items-center justify-center gap-3 rounded-3xl bg-white p-4 shadow-sm">
             <span className="text-5xl">{q.line.emoji}</span>
             <p className="font-bangla text-2xl font-bold text-primary">{q.line.bn}</p>
             <Speaker text={q.line.bn} size="lg" />
           </div>
-          {solved && <p className="mt-2 text-center text-sm text-ink/60">{q.line.en}</p>}
+          {solved && <p className="mt-2 text-center text-sm text-ink/75">{q.line.en}</p>}
         </Choice>
       )}
       {q.kind === 'city' && (
@@ -89,7 +99,7 @@ export default function GeoGame({ onFinish }) {
             <span className="text-5xl">{q.city.emoji}</span>
             <div className="text-center">
               <p className="font-bangla text-4xl font-extrabold text-primary">{q.city.bn}</p>
-              <p className="text-sm text-ink/60">{q.city.name}</p>
+              <p className="text-sm text-ink/75">{q.city.name}</p>
             </div>
             <Speaker text={q.city.bn} size="lg" />
           </div>
@@ -97,7 +107,11 @@ export default function GeoGame({ onFinish }) {
       )}
       <div className="mt-5 min-h-[4.5rem]">
         {!clean && !solved && <p className="gentle-error text-center">Oops, not quite — try again!</p>}
-        {solved && <button type="button" className="btn-primary w-full" onClick={next}>{i + 1 < qs.length ? 'Continue' : 'See my score'}</button>}
+        {solved && (
+          <button type="button" className="btn-primary w-full" onClick={next}>
+            {i + 1 < qs.length ? 'Continue' : 'See my score'}
+          </button>
+        )}
       </div>
     </div>
   )
@@ -107,19 +121,26 @@ function Choice({ title, sub, options, answer, bad, solved, region, children }) 
   return (
     <div>
       <p className="mb-1 text-center text-lg font-extrabold text-ink">{title}</p>
-      {sub && <p className="mb-2 text-center text-sm text-ink/50">{sub}</p>}
+      {sub && <p className="mb-2 text-center text-sm text-ink/70">{sub}</p>}
       {children}
       <div className="mt-4 grid grid-cols-2 gap-3">
         {options.map((r) => (
           <button
-            key={r.id} type="button" onClick={() => answer(r)} disabled={solved && r.id !== region.id}
+            key={r.id}
+            type="button"
+            onClick={() => answer(r)}
+            disabled={solved && r.id !== region.id}
             className={`min-h-[5.5rem] rounded-2xl border-4 px-2 py-3 text-center transition active:scale-95 ${
-              solved && r.id === region.id ? 'border-success bg-success/15' : bad[r.id] ? 'animate-shake border-error/60 bg-error/10' : 'border-primary/15 bg-white hover:border-primary/40'
+              solved && r.id === region.id
+                ? 'border-success bg-success/15'
+                : bad[r.id]
+                  ? 'animate-shake border-error/60 bg-error/10'
+                  : 'border-primary/15 bg-white hover:border-primary/40'
             }`}
           >
             <span className="block text-2xl">{r.emoji}</span>
             <span className="block font-bangla text-xl font-extrabold text-ink">{r.bn}</span>
-            <span className="block text-xs font-bold text-ink/50">{r.name}</span>
+            <span className="block text-xs font-bold text-ink/70">{r.name}</span>
           </button>
         ))}
       </div>

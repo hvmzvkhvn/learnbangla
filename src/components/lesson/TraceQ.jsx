@@ -124,14 +124,17 @@ export default function TraceQ({ ex, onSolved, lenient = false }) {
   return (
     <div className="text-center">
       <Prompt text={ex.title} />
-      <p className="-mt-2 mb-3 text-sm text-ink/60">Use your finger or mouse to draw over the shape.</p>
+      <p className="-mt-2 mb-3 text-sm text-ink/75">Use your finger or mouse to draw over the shape.</p>
 
       {demo ? (
         <div className="mx-auto rounded-3xl border-4 border-primary/20 bg-white p-2 shadow-sm" style={{ width: W + 20, maxWidth: '100%' }}>
           <StrokeDemo glyph={ex.glyph} width={W} height={H} local={localEdits()} />
         </div>
       ) : (
-        <div className="relative mx-auto rounded-3xl border-4 border-primary/20 bg-white shadow-sm" style={{ width: W, maxWidth: '100%', aspectRatio: `${W} / ${H}` }}>
+        <div
+          className="relative mx-auto rounded-3xl border-4 border-primary/20 bg-white shadow-sm"
+          style={{ width: W, maxWidth: '100%', aspectRatio: `${W} / ${H}` }}
+        >
           <canvas ref={ghostRef} className="absolute inset-0 h-full w-full" />
           <canvas
             ref={drawRef}
@@ -154,13 +157,17 @@ export default function TraceQ({ ex, onSolved, lenient = false }) {
       <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
         <Speaker text={ex.say} size="md" label="Hear it" />
         {guided && (
-          <button type="button" onClick={() => setDemo((d) => !d)} className="rounded-2xl bg-white px-4 py-3 font-extrabold text-primary shadow">
+          <button
+            type="button"
+            onClick={() => setDemo((d) => !d)}
+            className="rounded-2xl bg-white px-4 py-3 font-extrabold text-primary shadow"
+          >
             {demo ? '✏️ Back to tracing' : '▶ Watch how'}
           </button>
         )}
         {!demo && (
           <>
-            <button type="button" onClick={clear} className="rounded-2xl bg-white px-4 py-3 font-extrabold text-ink/60 shadow">
+            <button type="button" onClick={clear} className="rounded-2xl bg-white px-4 py-3 font-extrabold text-ink/75 shadow">
               Clear
             </button>
             {result && result.stars > 0 ? (
@@ -180,7 +187,7 @@ export default function TraceQ({ ex, onSolved, lenient = false }) {
           </>
         )}
       </div>
-      <button type="button" onClick={() => onSolved(result?.stars ?? 0)} className="mt-3 text-xs font-bold text-ink/40 hover:text-ink/60">
+      <button type="button" onClick={() => onSolved(result?.stars ?? 0)} className="mt-3 text-xs font-bold text-ink/70 hover:text-ink/75">
         {tries > 0 && !(result && result.stars > 0) ? 'Skip this one' : 'Skip'}
       </button>
     </div>

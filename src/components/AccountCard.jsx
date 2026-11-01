@@ -12,7 +12,7 @@ export default function AccountCard() {
       <span className="text-4xl">{signedIn ? '☁️' : '👪'}</span>
       <span className="flex-1">
         <span className="block text-lg font-extrabold text-ink">{signedIn ? 'Your account' : 'Parent account'}</span>
-        <span className="block text-sm text-ink/60">
+        <span className="block text-sm text-ink/75">
           {!signedIn && 'Keep progress on every device and see how your child is doing.'}
           {signedIn && sync.learnerId && sync.status === 'ok' && '✓ Progress is saved to the account.'}
           {signedIn && sync.learnerId && sync.status === 'syncing' && 'Saving…'}

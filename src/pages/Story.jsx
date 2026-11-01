@@ -60,7 +60,9 @@ function Player({ story }) {
         await sleep(650)
         if (run.current !== id) return
         setTyping(null)
-        setLog((l) => (l.some((x) => x.key === nodeId) ? l : [...l, { key: nodeId, kind: 'npc', who: n.who, bn: n.bn, roman: n.roman, en: n.en }]))
+        setLog((l) =>
+          l.some((x) => x.key === nodeId) ? l : [...l, { key: nodeId, kind: 'npc', who: n.who, bn: n.bn, roman: n.roman, en: n.en }],
+        )
         const t = Date.now()
         if (soundOn) await speak(n.bn)
         await sleep(Math.max(250, 700 - (Date.now() - t)))
@@ -142,7 +144,12 @@ function Player({ story }) {
       {ending && ending.stars >= 2 && <Confetti />}
       <header className="sticky top-0 z-10 border-b border-primary/10 bg-background/95 backdrop-blur">
         <div className="mx-auto flex max-w-xl items-center gap-3 px-4 py-3">
-          <button type="button" onClick={() => navigate('/stories')} aria-label="Leave story" className="rounded-full bg-white px-3 py-2 text-lg font-extrabold text-ink/50 shadow">
+          <button
+            type="button"
+            onClick={() => navigate('/stories')}
+            aria-label="Leave story"
+            className="rounded-full bg-white px-3 py-2 text-lg font-extrabold text-ink/70 shadow"
+          >
             ✕
           </button>
           <div className="min-w-0 flex-1">
@@ -150,23 +157,33 @@ function Player({ story }) {
               {story.emoji} {story.title}
             </p>
             <div className="mt-1 flex items-center gap-2">
-              <span className="text-xs font-extrabold text-ink/50">
+              <span className="text-xs font-extrabold text-ink/70">
                 {story.meter.emoji} {story.meter.label}
               </span>
               <div className="relative h-2.5 flex-1 overflow-hidden rounded-full bg-primary/10">
-                <div className={`h-full rounded-full transition-all duration-500 ${meter < 35 ? 'bg-error' : meter < 65 ? 'bg-secondary' : 'bg-success'}`} style={{ width: `${meter}%` }} />
+                <div
+                  className={`h-full rounded-full transition-all duration-500 ${meter < 35 ? 'bg-error' : meter < 65 ? 'bg-secondary' : 'bg-success'}`}
+                  style={{ width: `${meter}%` }}
+                />
               </div>
-              <span className="relative w-8 text-right text-xs font-extrabold text-ink/60">
+              <span className="relative w-8 text-right text-xs font-extrabold text-ink/75">
                 {meter}
                 {delta && (
-                  <span key={delta.id} className={`animate-floatUp absolute -top-3 right-0 text-xs font-extrabold ${delta.v >= 0 ? 'text-success' : 'text-error'}`}>
+                  <span
+                    key={delta.id}
+                    className={`animate-floatUp absolute -top-3 right-0 text-xs font-extrabold ${delta.v >= 0 ? 'text-success' : 'text-error'}`}
+                  >
                     {delta.v >= 0 ? `+${delta.v}` : delta.v}
                   </span>
                 )}
               </span>
             </div>
           </div>
-          <button type="button" onClick={() => setShowEn((v) => !v)} className={`rounded-full px-3 py-2 text-xs font-extrabold shadow-sm ${showEn ? 'bg-white text-primary' : 'bg-ink/10 text-ink/50'}`}>
+          <button
+            type="button"
+            onClick={() => setShowEn((v) => !v)}
+            className={`rounded-full px-3 py-2 text-xs font-extrabold shadow-sm ${showEn ? 'bg-white text-primary' : 'bg-ink/10 text-ink/70'}`}
+          >
             EN
           </button>
           <RomanToggle />
@@ -177,7 +194,10 @@ function Player({ story }) {
       <main className="mx-auto w-full max-w-xl flex-1 space-y-3 px-4 py-4 pb-44">
         {log.map((m) =>
           m.kind === 'sys' ? (
-            <p key={m.key} className="animate-slideIn mx-auto max-w-sm rounded-2xl bg-ink/5 px-4 py-2 text-center text-sm font-semibold italic text-ink/60">
+            <p
+              key={m.key}
+              className="animate-slideIn mx-auto max-w-sm rounded-2xl bg-ink/5 px-4 py-2 text-center text-sm font-semibold italic text-ink/75"
+            >
               {m.en}
             </p>
           ) : (
@@ -185,15 +205,22 @@ function Player({ story }) {
               {m.kind === 'npc' && (
                 <div className="flex w-12 shrink-0 flex-col items-center text-center">
                   <span className="text-3xl">{avatar(m.who)}</span>
-                  <span className="text-[10px] font-extrabold leading-tight text-ink/50">{name(m.who)}</span>
+                  <span className="text-[10px] font-extrabold leading-tight text-ink/70">{name(m.who)}</span>
                 </div>
               )}
-              <div className={`max-w-[82%] rounded-3xl px-4 py-3 shadow-sm ${m.kind === 'you' ? 'rounded-br-md bg-primary text-white' : 'rounded-bl-md bg-white'}`}>
+              <div
+                className={`max-w-[82%] rounded-3xl px-4 py-3 shadow-sm ${m.kind === 'you' ? 'rounded-br-md bg-primary text-white' : 'rounded-bl-md bg-white'}`}
+              >
                 <p className={`font-bangla text-xl font-bold leading-snug ${m.kind === 'you' ? 'text-white' : 'text-primary'}`}>{m.bn}</p>
-                <p className={`text-xs font-bold ${m.kind === 'you' ? 'text-white/80' : 'text-ink/60'}`}>{romanOn ? m.roman : null}</p>
-                {showEn && <p className={`text-xs ${m.kind === 'you' ? 'text-white/70' : 'text-ink/50'}`}>{m.en}</p>}
+                <p className={`text-xs font-bold ${m.kind === 'you' ? 'text-white/80' : 'text-ink/75'}`}>{romanOn ? m.roman : null}</p>
+                {showEn && <p className={`text-xs ${m.kind === 'you' ? 'text-white/70' : 'text-ink/70'}`}>{m.en}</p>}
               </div>
-              <button type="button" onClick={() => speak(m.bn, { force: true })} aria-label="Hear it" className="mb-1 rounded-full bg-accent/60 px-2 py-1 text-sm">
+              <button
+                type="button"
+                onClick={() => speak(m.bn, { force: true })}
+                aria-label="Hear it"
+                className="mb-1 rounded-full bg-accent/60 px-2 py-1 text-sm"
+              >
                 🔊
               </button>
             </div>
@@ -216,22 +243,23 @@ function Player({ story }) {
         {ending && (
           <div className="animate-pop card mt-4 text-center">
             <p className="text-6xl">{ending.emoji}</p>
-            <p className="mt-1 text-sm font-extrabold uppercase tracking-wide text-ink/40">Ending</p>
+            <p className="mt-1 text-sm font-extrabold uppercase tracking-wide text-ink/70">Ending</p>
             <h2 className="text-2xl font-extrabold text-primary">{ending.title}</h2>
             <p className="mt-2 text-ink/70">{ending.en}</p>
             <p className="mt-3 text-lg">{'⭐'.repeat(ending.stars)}</p>
-            <p className="text-xs font-bold text-ink/50">
+            <p className="text-xs font-bold text-ink/70">
               {story.meter.emoji} {story.meter.label}: {meter}/100
             </p>
             <div className="mt-5 rounded-2xl bg-background p-3 text-left">
-              <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-ink/40">Phrases to remember</p>
+              <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-ink/70">Phrases to remember</p>
               <div className="space-y-2">
                 {keyLines.map((n, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <div className="min-w-0 flex-1">
                       <p className="font-bangla text-lg font-bold leading-snug text-primary">{n.bn}</p>
-                      <p className="text-xs text-ink/50">
-                        {romanOn && `${n.roman} · `}{n.en}
+                      <p className="text-xs text-ink/70">
+                        {romanOn && `${n.roman} · `}
+                        {n.en}
                       </p>
                     </div>
                     <Speaker text={n.bn} size="sm" />
@@ -255,13 +283,17 @@ function Player({ story }) {
       {options && (
         <div className="animate-slideIn fixed inset-x-0 bottom-0 z-20 border-t border-primary/10 bg-white/95 px-4 pb-5 pt-3 backdrop-blur">
           <div className="mx-auto max-w-xl space-y-2">
-            <p className="text-center text-xs font-extrabold uppercase tracking-wide text-ink/40">Your reply</p>
+            <p className="text-center text-xs font-extrabold uppercase tracking-wide text-ink/70">Your reply</p>
             {options.map((o, i) => (
               <div key={i} className="flex items-stretch gap-2">
-                <button type="button" onClick={() => choose(o, i)} className="flex-1 rounded-2xl border-4 border-primary/15 bg-white px-4 py-3 text-left shadow-sm transition active:scale-[0.98] hover:border-primary/50">
+                <button
+                  type="button"
+                  onClick={() => choose(o, i)}
+                  className="flex-1 rounded-2xl border-4 border-primary/15 bg-white px-4 py-3 text-left shadow-sm transition active:scale-[0.98] hover:border-primary/50"
+                >
                   <span className="block font-bangla text-lg font-bold leading-snug text-primary">{o.bn}</span>
-                  {romanOn && <span className="block text-xs font-bold text-ink/60">{o.roman}</span>}
-                  {showEn && <span className="block text-xs text-ink/50">{o.en}</span>}
+                  {romanOn && <span className="block text-xs font-bold text-ink/75">{o.roman}</span>}
+                  {showEn && <span className="block text-xs text-ink/70">{o.en}</span>}
                 </button>
                 <Speaker text={o.bn} size="md" className="self-center" label="Hear this reply" />
               </div>

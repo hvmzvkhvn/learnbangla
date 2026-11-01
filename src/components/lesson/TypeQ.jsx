@@ -12,6 +12,7 @@ const norm = (s) => s.normalize('NFD').replace(/[\s‌‍।,?!"“”.\-—]/g,
 /** Hear the word (and see its meaning), then type it in Bangla. */
 export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
   const [value, setValue] = useState('')
+  const [deviceKeyboard, setDeviceKeyboard] = useState(false)
   const [hints, setHints] = useState(0)
   const [shake, setShake] = useState(false)
   const [solved, setSolved] = useState(false)
@@ -37,7 +38,14 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
     }
   }
 
-  const hintText = hints === 0 ? null : hints === 1 ? `It starts with ${clusters[0]}` : hints === 2 ? `${clusters.length} sounds: ${clusters.map((c, i) => (i === 0 ? c : '_')).join(' ')}` : ex.target
+  const hintText =
+    hints === 0
+      ? null
+      : hints === 1
+        ? `It starts with ${clusters[0]}`
+        : hints === 2
+          ? `${clusters.length} written parts: ${clusters.map((c, i) => (i === 0 ? c : '_')).join(' ')}`
+          : ex.target
 
   return (
     <div>
@@ -50,7 +58,8 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
       <div className={`mb-3 flex items-center gap-2 ${shake ? 'animate-shake' : ''}`}>
         <input
           lang="bn"
-          inputMode="none"
+          inputMode={deviceKeyboard ? 'text' : 'none'}
+          aria-label="Your answer in Bangla"
           autoComplete="off"
           autoCapitalize="none"
           spellCheck={false}
@@ -63,19 +72,43 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
         />
       </div>
 
+      <label className="mb-3 flex items-center gap-2 text-sm">
+        <input type="checkbox" checked={deviceKeyboard} onChange={(e) => setDeviceKeyboard(e.target.checked)} /> Use my device’s keyboard
+      </label>
+      {shake && (
+        <p role="status" className="gentle-error mb-3">
+          {(() => {
+            const typed = splitClusters(value)
+            const mismatch = clusters.findIndex((c, i) => typed[i] !== c)
+            return mismatch >= 0
+              ? `Look at written part ${mismatch + 1}. Listen again, or use Hint to see the next clue.`
+              : 'Check for an extra letter or vowel sign at the end.'
+          })()}
+        </p>
+      )}
       {hintText && !solved && <p className="mb-3 rounded-2xl bg-accent/30 px-4 py-2 text-center text-sm font-bold">💡 {hintText}</p>}
 
       {!solved && (
         <>
           <div className="mb-3 flex gap-3">
-            <button type="button" onClick={() => setHints((h) => Math.min(3, h + 1))} className="flex-1 rounded-2xl bg-white px-4 py-3 font-extrabold text-ink/60 shadow">
+            <button
+              type="button"
+              onClick={() => setHints((h) => Math.min(3, h + 1))}
+              className="flex-1 rounded-2xl bg-white px-4 py-3 font-extrabold text-ink/75 shadow"
+            >
               💡 Hint
             </button>
             <button type="button" onClick={check} disabled={!value} className="btn-primary flex-[2] !py-3">
               Check
             </button>
           </div>
-          <BengaliKeyboard onKey={(c) => setValue((v) => v + c)} onBackspace={() => setValue((v) => Array.from(v).slice(0, -1).join(''))} onSpace={() => setValue((v) => v + ' ')} />
+          {!deviceKeyboard && (
+            <BengaliKeyboard
+              onKey={(c) => setValue((v) => v + c)}
+              onBackspace={() => setValue((v) => Array.from(v).slice(0, -1).join(''))}
+              onSpace={() => setValue((v) => v + ' ')}
+            />
+          )}
         </>
       )}
     </div>

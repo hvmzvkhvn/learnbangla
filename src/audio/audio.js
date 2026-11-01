@@ -18,17 +18,32 @@ const notify = () => listeners.forEach((f) => f())
 export const getManifest = () => manifest
 
 export function loadManifest() {
+  if (manifest) return Promise.resolve(manifest)
   if (!loading) {
     loading = fetch(`${BASE}audio/manifest.json`)
-      .then((r) => (r.ok ? r.json() : {}))
-      .catch(() => ({}))
+      .then((r) => {
+        if (!r.ok) throw new Error('Audio could not load.')
+        return r.json()
+      })
       .then((m) => {
         manifest = m
         notify()
+        return m
+      })
+      .catch(() => {
+        notify()
+        return null
+      })
+      .finally(() => {
+        loading = null
       })
   }
   return loading
 }
+if (typeof window !== 'undefined')
+  window.addEventListener('online', () => {
+    if (!manifest) loadManifest()
+  })
 
 const soundOn = () => {
   try {
@@ -52,7 +67,7 @@ export function stop() {
 }
 
 /** Play one piece of Bangla text. Resolves true if it played to the end. */
-export async function speak(text, { force = false, skipMine = false } = {}) {
+export async function speak(text, { force = false, skipMine = false, rate = 1 } = {}) {
   if (!text || (!force && !soundOn())) return false
   await loadManifest()
   const key = norm(text)
@@ -69,6 +84,7 @@ export async function speak(text, { force = false, skipMine = false } = {}) {
       elements.set(src, el)
     }
     el.currentTime = 0
+    el.playbackRate = rate
     current = el
     try {
       await el.play()
@@ -79,10 +95,12 @@ export async function speak(text, { force = false, skipMine = false } = {}) {
       const done = () => {
         el.removeEventListener('ended', done)
         el.removeEventListener('pause', done)
+        el.removeEventListener('error', done)
         resolve(token === my && el.ended)
       }
       el.addEventListener('ended', done)
       el.addEventListener('pause', done)
+      el.addEventListener('error', done)
     })
   }
   const bn = voiceFor('bn')
@@ -91,7 +109,7 @@ export async function speak(text, { force = false, skipMine = false } = {}) {
       const u = new SpeechSynthesisUtterance(sayFor(text))
       u.voice = bn
       u.lang = bn.lang
-      u.rate = 0.8
+      u.rate = rate
       u.onend = () => resolve(true)
       u.onerror = () => resolve(false)
       synth.speak(u)
@@ -146,5 +164,11 @@ export function useAudioReady() {
 
 export const useSoundOn = () => {
   const [on, set] = usePersistent('lb.sound', true)
-  return [on !== false, (v) => { if (!v) stop(); set(v) }]
+  return [
+    on !== false,
+    (v) => {
+      if (!v) stop()
+      set(v)
+    },
+  ]
 }

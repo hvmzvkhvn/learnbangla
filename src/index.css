@@ -21,7 +21,7 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-secondary px-6 py-4 text-lg font-bold text-white shadow-md transition active:scale-95 hover:brightness-110 disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-secondary px-6 py-4 text-lg font-bold text-ink shadow-md transition active:scale-95 hover:brightness-110 disabled:opacity-50 disabled:pointer-events-none;
   }
 
   .card {
@@ -49,3 +49,12 @@
 .sc-pulse { animation: sc-pulse 1.8s ease-in-out infinite; }
 .sc-rain { animation: sc-rain 0.9s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .sc-bob, .sc-sway, .sc-drift, .sc-pulse, .sc-rain { animation: none; } }
+
+/* Consistent contrast, focus, reduced motion and touch targets. */
+.text-secondary { color: #8a4b00; }
+.bg-secondary.text-white { color: #2d2d2d; }
+:focus-visible { outline: 3px solid #1b7a7a; outline-offset: 4px; }
+button, summary, a { -webkit-tap-highlight-color: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

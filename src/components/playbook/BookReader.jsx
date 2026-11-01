@@ -1,90 +1,91 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Scene from '../../art/Scene'
-import Speaker from '../Speaker'
-import { speak } from '../../audio/audio'
+import { pageArtPath } from '../../data/playbook/artwork'
+import Artwork, { PlayIcon, coverIds } from './Artwork'
+import { speak, stop } from '../../audio/audio'
 import { useRoman } from '../../state/roman'
 import { useGame } from '../../state/game'
+import { useBookmarks } from './bookmarks'
+import './playbook.css'
 
-/**
- * A page-turn reader for picture books and storyboards.
- *   mode 'book'  — picture, then the Bangla line (tap a word to hear it), romanisation, and the English (hidden until tapped for the young)
- *   mode 'story' — picture, English narration first, Bangla caption beneath (16+ storyboards)
- */
-export default function BookReader({ id, title, pages, mode = 'book', hideEnglish = false, backTo = '/playbook', xp = 15, onFinish, finishText }) {
-  const [i, setI] = useState(0)
-  const [showEn, setShowEn] = useState(false)
+const dates = ['1905', '1947', '1952', '1966', '1970', '26 Mar 1971', '16 Dec 1971']
+export default function BookReader({id, bookId, title, pages, mode = 'book', hideEnglish = false, backTo = '/playbook', xp = 15, onFinish, finishText}) {
+  const [saved, save] = useBookmarks()
+  const [i, setI] = useState(() => Math.max(0, Math.min(Number.isInteger(saved[id]?.page) ? saved[id].page : 0, pages.length - 1)))
+  const [showEn, setShowEn] = useState(!hideEnglish)
+  const [activeWord, setActiveWord] = useState(-1)
+  const [playing, setPlaying] = useState(false)
+  const [audioError, setAudioError] = useState('')
+  const [award, setAward] = useState(0)
   const [romanOn] = useRoman()
   const { act, game } = useGame()
+  const run = useRef(0)
+  const reader = useRef(null)
   const done = i >= pages.length
   const pg = pages[Math.min(i, pages.length - 1)]
-
   useEffect(() => {
-    setShowEn(false)
-    if (!done) speak(pg.bn)
-  }, [i]) // eslint-disable-line react-hooks/exhaustive-deps
-
-  const finish = () => {
-    const first = !game.stats.books?.[id]
-    act({ xp: first ? xp : 0, stats: (s) => ({ books: { ...(s.books ?? {}), [id]: Date.now() } }) })
-    onFinish?.(first)
+    if (i + 1 < pages.length) {
+      const next = new Image()
+      next.src = `${import.meta.env.BASE_URL}${pageArtPath(id, i + 1)}`
+    }
+  }, [id, i, pages.length])
+  useEffect(() => () => { run.current++; stop() }, [])
+  const cancel = () => { run.current++; stop(); setPlaying(false); setActiveWord(-1) }
+  const go = (n) => {
+    cancel(); setAudioError(''); setShowEn(!hideEnglish)
+    if (n >= pages.length) {
+      const first = !game.stats.books?.[id]
+      const earned = first ? xp : 0
+      setAward(earned)
+      act({xp: earned, stats: s => ({books: {...s.books, [id]: Date.now()}})})
+      onFinish?.(first)
+      save(id, 0)
+    } else save(id, n)
+    setI(n)
+    reader.current?.scrollIntoView({ block: 'start', behavior: 'auto' })
   }
-
-  if (done) {
-    const first = !game.stats.books?.[id]
-    return (
-      <div className="animate-pop card mt-6 text-center">
-        <p className="text-6xl">🎉</p>
-        <h2 className="mt-2 text-2xl font-extrabold text-primary">{finishText ?? 'The end!'}</h2>
-        <p className="mt-1 text-ink/60">{first ? `You finished “${title}”. +${xp} XP` : `You read “${title}” again.`}</p>
-        <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:justify-center">
-          <button type="button" onClick={() => { finish(); setI(0) }} className="btn-secondary">↺ Read it again</button>
-          <Link to={backTo} onClick={finish} className="btn-primary">More in the Playbook</Link>
-        </div>
-      </div>
-    )
+  const listen = async (word = null, rate = 1) => {
+    cancel(); setAudioError(''); setPlaying(true)
+    const token = run.current
+    if (word !== null) setActiveWord(word)
+    const ok = await speak(word === null ? pg.bn : pg.bn.split(' ')[word], {force:true, rate})
+    if (token !== run.current) return
+    setPlaying(false); setActiveWord(-1)
+    if (!ok) setAudioError('Audio could not play. Tap to try again.')
   }
-
-  const caption = (
-    <div className="rounded-2xl bg-white px-4 py-3 shadow-sm">
-      <div className="flex items-start gap-3">
-        <div className="flex-1">
-          <p className="font-bangla text-2xl font-bold leading-snug text-primary">
-            {pg.bn.split(' ').map((t, k) => (
-              <button key={k} type="button" onClick={() => speak(t, { force: true })} className="mr-1.5 rounded-lg px-0.5 transition hover:bg-primary/10 active:scale-95">{t}</button>
-            ))}
-          </p>
-          {romanOn && <p className="text-sm font-bold text-ink/70">{pg.roman}</p>}
-          {mode === 'book' && (hideEnglish && !showEn
-            ? <button type="button" onClick={() => setShowEn(true)} className="mt-1 text-sm font-bold text-secondary">🇬🇧 What does it say?</button>
-            : <p className="text-sm text-ink/60">{pg.en}</p>)}
+  const wordByWord = async () => {
+    cancel(); setAudioError(''); setPlaying(true)
+    const token = run.current
+    for (const [k, word] of pg.bn.split(' ').entries()) {
+      if (token !== run.current) return
+      setActiveWord(k)
+      const ok = await speak(word, {force:true, rate:.85})
+      if (token !== run.current) return
+      if (!ok) { setAudioError('A word recording is unavailable. Try “Hear the line”.'); break }
+    }
+    if (token === run.current) { setActiveWord(-1); setPlaying(false) }
+  }
+  if (done) return <div ref={reader} className="pb-reader card mt-5 text-center">
+    {coverIds.includes(bookId) && <img src={`${import.meta.env.BASE_URL}images/playbook/${bookId}.webp`} alt="" className="mx-auto mb-5 w-48 rounded-xl" />}
+    <p className="pb-eyebrow">STORY COMPLETE</p><h1 className="text-2xl font-bold">{finishText || 'A little story. A big discovery.'}</h1><p className="mt-3">You finished “{title}”.{award > 0 ? ` +${award} XP` : ''}</p>
+    <div className="mt-5 flex flex-wrap justify-center gap-3"><button className="btn-secondary" onClick={() => go(0)}>Read again</button><Link className="btn-primary" to={backTo}>Find another story</Link></div>
+  </div>
+  return <article ref={reader} className="pb-reader">
+    <header className="pb-reader-header"><Link to={backTo} aria-label="Back to Playbook">←</Link><div><h1>{title}</h1><p aria-live="polite">{mode === 'story' ? 'Our stories' : 'Read & listen'} · Page {i+1} of {pages.length} · Bookmark saved on this device</p></div></header>
+    {mode === 'story' && <nav className="pb-timeline" aria-label="Story chapters">{pages.map((_,k) => <button key={k} onClick={() => go(k)} aria-current={i === k ? 'step' : undefined}>{id === 'story:timeline' ? dates[k] : `Chapter ${k+1}`}</button>)}</nav>}
+    <div className={`pb-reader-sheet ${mode === 'story' ? 'pb-story-sheet' : ''}`}>
+      <div className="pb-reader-art"><Artwork key={`${id}-${i}`} src={`${import.meta.env.BASE_URL}${pageArtPath(id, i)}`} alt={pg.en} eager /></div>
+      <div>
+        {mode === 'story' && <p className="pb-history-narration">{pg.en}</p>}
+        <div className="pb-caption">
+          <p className="pb-caption-bn" lang="bn">{pg.bn.split(' ').map((word,k) => <button key={k} className="pb-word" data-active={activeWord === k} onClick={() => listen(k)} aria-label={`Hear ${word}`}>{word}</button>)}</p>
+          {romanOn && <p className="pb-roman">{pg.roman}</p>}
+          {mode === 'book' && (showEn ? <p className="pb-translation">{pg.en}</p> : <button className="pb-translation underline" onClick={() => setShowEn(true)}>Show English meaning</button>)}
+          <div className="pb-audio-tools"><button onClick={() => listen()}><PlayIcon kind="audio" />Hear the line</button><button onClick={() => listen(null,.75)}>Slowly</button><button onClick={wordByWord}>Word by word</button>{playing && <button onClick={cancel}>Stop audio</button>}</div>
+          <p className="pb-audio-status" role="status">{audioError || (activeWord >= 0 ? 'Listening · follow the highlighted word' : 'Tap any Bangla word to hear it.')}</p>
         </div>
-        <Speaker text={pg.bn} size="md" label="Hear the line" />
       </div>
     </div>
-  )
-
-  return (
-    <div className="mt-2">
-      <div className="mb-3 flex items-center gap-3">
-        <Link to={backTo} aria-label="Back" className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-extrabold text-ink/50 shadow">←</Link>
-        <h1 className="flex-1 truncate text-lg font-extrabold text-ink">{title}</h1>
-        <span className="text-sm font-bold text-ink/40">{i + 1} / {pages.length}</span>
-      </div>
-      <div key={i} className="animate-pop">
-        <Scene scene={pg.scene} id={`${id}${i}`} className="shadow-md" />
-        <div className="mt-3 space-y-3">
-          {mode === 'story' && <p className="rounded-2xl bg-primary px-4 py-3 text-base leading-relaxed text-white shadow">{pg.en}</p>}
-          {caption}
-        </div>
-      </div>
-      <div className="mt-4 flex items-center justify-between gap-3">
-        <button type="button" onClick={() => setI((n) => Math.max(0, n - 1))} disabled={i === 0} className="rounded-2xl bg-white px-5 py-3 font-extrabold text-ink/60 shadow disabled:opacity-30">← Back</button>
-        <div className="flex gap-1.5" aria-hidden>
-          {pages.map((_, k) => <span key={k} className={`h-2 w-2 rounded-full ${k === i ? 'bg-primary' : k < i ? 'bg-primary/40' : 'bg-ink/15'}`} />)}
-        </div>
-        <button type="button" onClick={() => setI((n) => n + 1)} className="btn-primary !px-6 !py-3">{i === pages.length - 1 ? 'Finish ✓' : 'Next →'}</button>
-      </div>
-    </div>
-  )
+    <nav className="pb-reader-controls" aria-label="Reading pages"><button disabled={i===0} onClick={() => go(i-1)}>← Previous</button><div className="pb-reader-progress" aria-hidden="true">{pages.map((_,k)=><span key={k} data-current={k===i} />)}</div><button onClick={() => go(i+1)}>{i===pages.length-1 ? 'Finish ✓' : 'Next page →'}</button></nav>
+  </article>
 }

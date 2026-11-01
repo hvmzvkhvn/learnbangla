@@ -1,0 +1,91 @@
+{
+  "generator": "Built-in image_gen tool",
+  "style": "Hand-painted gouache and coloured pencil on textured paper; forest teal, terracotta, saffron and cream. Bengali cultural settings. No text or logos.",
+  "assets": [
+    {
+      "id": "dhaka-rickshaw",
+      "path": "public/images/playbook/dhaka-rickshaw.webp",
+      "subject": "A richly decorated Bengali cycle rickshaw with driver and a young girl passenger on a lively Dhaka street, balconies, shops without signs, warm coral buildings."
+    },
+    {
+      "id": "boishakh-fair",
+      "path": "public/images/playbook/boishakh-fair.webp",
+      "subject": "Pohela Boishakh fair in Bangladesh, folk animal masks hung at a craft stall, red-white bunting, families in traditional red and white clothes, festive stalls, a young girl enjoying the fair."
+    },
+    {
+      "id": "hilsa-river",
+      "path": "public/images/playbook/hilsa-river.webp",
+      "subject": "A Bangladeshi fisherman in a wooden boat lifting a net with glistening silver hilsa fish, broad tranquil river, golden dusk, lush low riverbanks."
+    },
+    {
+      "id": "dada-village",
+      "path": "public/images/playbook/dada-village.webp",
+      "subject": "A grandfather in white panjabi welcomes his young granddaughter in mustard yellow dress with two black braids into a Bangladeshi village courtyard, tin roof home, mango tree, ducks and pond."
+    },
+    {
+      "id": "our-school",
+      "path": "public/images/playbook/our-school.webp",
+      "subject": "A welcoming Bangladeshi primary school courtyard with a teacher and children holding books, a girl in mustard yellow dress with two black braids, trees, school veranda, bright hopeful day."
+    },
+    {
+      "id": "coxs-bazar",
+      "path": "public/images/playbook/coxs-bazar.webp",
+      "subject": "Cox's Bazar Bangladesh sweeping sandy beach, turquoise rolling waves, colourful traditional crescent-shaped fishing boats pulled onto sand, a girl in mustard yellow dress with two black braids gathering shells with her family."
+    },
+    {
+      "id": "tara-morning",
+      "path": "public/images/playbook/tara-morning.webp",
+      "subject": "A Bangladeshi girl with two black braids and mustard yellow dress packs her school bag in her sunny bedroom, breakfast and mother visible through doorway."
+    },
+    {
+      "id": "nana-village",
+      "path": "public/images/playbook/nana-village.webp",
+      "subject": "A Bangladeshi grandfather and his granddaughter with two black braids and mustard yellow dress take a wooden boat past a village pond, ducks and lush green paddy fields."
+    },
+    {
+      "id": "rainy-day",
+      "path": "public/images/playbook/rainy-day.webp",
+      "subject": "A Bangladeshi child under a bright umbrella splashing in monsoon puddles beside a small paper boat, rain clouds clearing to a rainbow, lush village backdrop."
+    },
+    {
+      "id": "my-animals",
+      "path": "public/images/playbook/my-animals.webp",
+      "subject": "An inviting Bangladeshi illustrated animal scene: a cat and dog in foreground, cow and goat in middle, elephant in distance, peacock and birds beside a leafy tree, natural scale."
+    },
+    {
+      "id": "at-market",
+      "path": "public/images/playbook/at-market.webp",
+      "subject": "A father and young daughter with two black braids in mustard yellow dress buying mangoes at a Bangladeshi bazaar, fruit in baskets, fish stall, friendly seller."
+    },
+    {
+      "id": "eid-morning",
+      "path": "public/images/playbook/eid-morning.webp",
+      "subject": "A Bangladeshi family celebrating Eid morning at home in new festive clothing, girl with two black braids in mustard yellow dress greeting her grandfather, bowls of festive food, a mosque in distance."
+    },
+    {
+      "id": "look-village",
+      "path": "public/images/playbook/look-village.webp",
+      "subject": "A Bengali village learning scene: sun upper right, small tin-roof house left middle, large mango tree centre middle, cow right foreground, duck lower left swimming in pond, wooden boat lower right, bird near upper centre, flowers at far left foreground."
+    },
+    {
+      "id": "look-home",
+      "path": "public/images/playbook/look-home.webp",
+      "subject": "A Bengali child's bedroom learning scene: bed at left middle, wall clock upper centre, books on a shelf right middle, doll on a rug in the centre foreground, wooden chair right foreground, large window upper right. Clearly separated objects."
+    },
+    {
+      "id": "look-market",
+      "path": "public/images/playbook/look-market.webp",
+      "subject": "A Bengali bazaar stall learning scene: large market counter across foreground, shopping bag far left, mangoes left, bananas left centre, red apples centre, silver fish in basket right centre, banknotes on small plate at right, friendly shopkeeper standing far right behind counter. Striped canopy, richly coloured produce. All 7 targets distinct and unobstructed."
+    },
+    {
+      "id": "look-school",
+      "path": "public/images/playbook/look-school.webp",
+      "subject": "A Bengali classroom learning scene: teacher standing left middle, child seated centre right behind desk, an open book on right side desk, a blue pen on centre desk, a closed notebook on small desk far left foreground, round wall clock upper right of central blackboard. No other books, pens or clocks; no writing on blackboard."
+    },
+    {
+      "id": "look-city",
+      "path": "public/images/playbook/look-city.webp",
+      "subject": "A Bangladeshi city street learning scene: bus left foreground, colourful cycle rickshaw centre foreground, small school building upper right with school bell, hospital building upper left with red cross, leafy tree centre left middle, traffic light centre right middle. Distinct clearly separated objects, coherent perspective, no words."
+    }
+  ]
+}

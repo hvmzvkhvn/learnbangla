@@ -11,7 +11,9 @@
     "audio": "node scripts/generate-audio.mjs",
     "lint:family": "node scripts/lint-family.mjs",
     "lint:stories": "node scripts/lint-stories.mjs",
-    "lint:super": "node scripts/lint-super.mjs"
+    "lint:super": "node scripts/lint-super.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run lint && npm test && npm run lint:family && npm run lint:stories && npm run lint:super"
   },
   "dependencies": {
     "@breezystack/lamejs": "^1.2.7",
@@ -22,13 +24,18 @@
     "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.3.16",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
-    "@vitejs/plugin-react": "^6.1.0",
+    "@vitejs/plugin-react": "^6.1.2",
     "autoprefixer": "^10.5.4",
     "oxlint": "^1.79.0",
     "postcss": "^8.5.26",
     "tailwindcss": "^3.4.19",
-    "vite": "^8.2.2"
+    "vite": "^8.3.5"
+  },
+  "overrides": {
+    "source-map-js": "^1.2.2",
+    "postcss-selector-parser": "^6.1.5"
   }
 }

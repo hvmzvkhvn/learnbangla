@@ -9,15 +9,20 @@ export default function BanglaLine({ s, emoji, size = 'text-xl' }) {
     <div className="flex items-start gap-3 rounded-2xl bg-white px-3 py-3 shadow-sm">
       {emoji && <span className="text-3xl">{emoji}</span>}
       <div className="flex-1">
-        <p className={`font-bangla font-bold leading-snug text-primary ${size}`}>
+        <p lang="bn" className={`font-bangla font-bold leading-snug text-primary ${size}`}>
           {s.bn.split(' ').map((t, i) => (
-            <button key={i} type="button" onClick={() => speak(t, { force: true })} className="mr-1.5 rounded-lg px-0.5 transition active:scale-95 hover:bg-primary/10">
+            <button
+              key={i}
+              type="button"
+              onClick={() => speak(t, { force: true })}
+              className="mr-1.5 rounded-lg px-0.5 transition active:scale-95 hover:bg-primary/10"
+            >
               {t}
             </button>
           ))}
         </p>
         {romanOn && <p className="text-sm font-bold text-ink/70">{s.roman}</p>}
-        <p className="text-sm text-ink/50">{s.en}</p>
+        <p className="text-sm text-ink/70">{s.en}</p>
       </div>
       <Speaker text={s.bn} size="sm" label="Hear the sentence" />
     </div>

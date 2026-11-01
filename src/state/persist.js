@@ -5,6 +5,20 @@ const cache = new Map()
 const mem = new Map()
 const subs = new Set()
 const writeSubs = new Set()
+let storageProblem = false
+export const storageIsTemporary = () => storageProblem
+export const readPersistent = (key, fallback = null) => snapshot(key, fallback)
+export function clearPersistent(key) {
+  mem.delete(key)
+  cache.delete(key)
+  try {
+    localStorage.removeItem(key)
+  } catch {
+    storageProblem = true
+  }
+  subs.forEach((f) => f())
+  writeSubs.forEach((f) => f(key))
+}
 
 /** Called with the key after any write made through this module (used to sync to an account). */
 export function onPersistentWrite(cb) {
@@ -13,6 +27,7 @@ export function onPersistentWrite(cb) {
 }
 
 function readRaw(key) {
+  if (mem.has(key)) return mem.get(key)
   try {
     const v = localStorage.getItem(key)
     if (v !== null) return v
@@ -53,8 +68,10 @@ export function updatePersistent(key, fallback, fn) {
   const raw = JSON.stringify(v)
   try {
     localStorage.setItem(key, raw)
+    mem.delete(key)
   } catch {
     mem.set(key, raw)
+    storageProblem = true
   }
   subs.forEach((f) => f())
   writeSubs.forEach((f) => f(key))
@@ -69,8 +86,10 @@ export function usePersistent(key, fallback) {
       const raw = JSON.stringify(v)
       try {
         localStorage.setItem(key, raw)
+        mem.delete(key)
       } catch {
         mem.set(key, raw)
+        storageProblem = true
       }
       subs.forEach((f) => f())
       writeSubs.forEach((f) => f(key))
@@ -91,8 +110,7 @@ export const useTrack = () => usePersistent('lb.track', null)
 export function useProgress() {
   const [progress, setProgress] = usePersistent('lb.progress', NO_PROGRESS)
   const complete = useCallback(
-    (lessonId, stars) =>
-      setProgress((p) => ({ ...p, [lessonId]: { stars: Math.max(stars, p[lessonId]?.stars ?? 0) } })),
+    (lessonId, stars) => setProgress((p) => ({ ...p, [lessonId]: { stars: Math.max(stars, p[lessonId]?.stars ?? 0) } })),
     [setProgress],
   )
   return { progress, complete }

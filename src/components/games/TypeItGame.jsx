@@ -12,7 +12,7 @@ export default function TypeItGame({ pool, count = 6, onFinish }) {
   const [i, setI] = useState(0)
   const [status, setStatus] = useState('idle')
   const right = useRef(0)
-  if (!rounds.length) return <p className="py-10 text-center text-ink/50">Learn a few more words first!</p>
+  if (!rounds.length) return <p className="py-10 text-center text-ink/70">Learn a few more words first!</p>
   const ex = rounds[i]
   const next = () => {
     setStatus('idle')
@@ -21,7 +21,7 @@ export default function TypeItGame({ pool, count = 6, onFinish }) {
   }
   return (
     <div>
-      <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/40">
+      <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/70">
         Word {i + 1} of {rounds.length}
       </p>
       <TypeQ

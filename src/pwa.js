@@ -26,7 +26,8 @@ if (typeof window !== 'undefined') {
 }
 
 export const isStandalone = () => window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true
-export const isIos = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+export const isIos = () =>
+  /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 
 export function useInstall() {
   const [, bump] = useState(0)
@@ -51,10 +52,13 @@ export function useInstall() {
 
 export const offlineSupported = () => 'caches' in window && 'serviceWorker' in navigator
 
-async function audioUrls() {
+async function audioUrls(keys = null) {
   const r = await fetch(`${BASE}audio/manifest.json`)
+  if (!r.ok) throw new Error('Audio list unavailable.')
   const m = await r.json()
-  return [...new Set(Object.values(m))].map((f) => new URL(`${BASE}audio/${f}`, location.href).href)
+  return [...new Set(keys ? keys.map((k) => m[k]).filter(Boolean) : Object.values(m))].map(
+    (f) => new URL(`${BASE}audio/${f}`, location.href).href,
+  )
 }
 
 /** How many of the audio files are already saved on this device. */
@@ -66,8 +70,8 @@ export async function audioStatus() {
 }
 
 /** Save every audio clip for offline use. onProgress(done, total); stop with signal.abort(). */
-export async function saveAudioOffline(onProgress, signal) {
-  const urls = await audioUrls()
+export async function saveAudioOffline(onProgress, signal, keys = null) {
+  const urls = await audioUrls(keys)
   const cache = await caches.open(AUDIO_CACHE)
   const have = new Set((await cache.keys()).map((r) => r.url))
   const todo = urls.filter((u) => !have.has(u))

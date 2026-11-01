@@ -1,6 +1,8 @@
 // Merging a learner's progress from two places (this device and their account) without losing either.
 // Everything only ever grows — stars, XP, badges, answers — so "keep the best of both" is safe.
 
+import { validateState } from '../state/schema.js'
+
 const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v)
 
 /** Deep merge of counters: numbers take the larger value, maps merge key by key, anything else prefers a. */
@@ -28,16 +30,23 @@ export function mergeGame(a, b) {
   const later = (a.last ?? '') >= (b.last ?? '') ? a : b
   const badges = { ...b.badges }
   for (const [id, at] of Object.entries(a.badges ?? {})) badges[id] = badges[id] ? Math.min(badges[id], at) : at
-  const activity = { ...b.activity }
-  for (const [d, xp] of Object.entries(a.activity ?? {})) activity[d] = Math.max(xp, activity[d] ?? 0)
+  const counters = mergeStats(a.xpCounters, b.xpCounters)
+  const xpBase = Math.max(a.xpBase ?? a.xp ?? 0, b.xpBase ?? b.xp ?? 0)
+  const activityBase = mergeStats(a.activityBase ?? a.activity, b.activityBase ?? b.activity)
+  const combinedActivity = { ...activityBase }
+  for (const c of Object.values(counters))
+    for (const [day, amount] of Object.entries(c.activity ?? {})) combinedActivity[day] = (combinedActivity[day] ?? 0) + amount
   return {
     ...mergeStats(a, b),
-    xp: Math.max(a.xp ?? 0, b.xp ?? 0),
+    xpBase,
+    xpCounters: counters,
+    activityBase,
+    xp: xpBase + Object.values(counters).reduce((sum, c) => sum + (c.xp ?? 0), 0),
     streak: later.streak ?? 0, // the streak of whichever device was used most recently
     best: Math.max(a.best ?? 0, b.best ?? 0),
     last: later.last ?? '',
     badges,
-    activity,
+    activity: combinedActivity,
     stats: mergeStats(a.stats, b.stats),
   }
 }
@@ -51,7 +60,10 @@ export function mergeSrs(a = {}, b = {}) {
       out[id] = s
       continue
     }
-    const aWins = (s.last ?? '') > (o.last ?? '') || ((s.last ?? '') === (o.last ?? '') && (s.box ?? 0) <= (o.box ?? 0))
+    const aWins =
+      (s.answeredAt ?? 0) !== (o.answeredAt ?? 0)
+        ? (s.answeredAt ?? 0) > (o.answeredAt ?? 0)
+        : (s.last ?? '') > (o.last ?? '') || ((s.last ?? '') === (o.last ?? '') && (s.box ?? 0) <= (o.box ?? 0))
     out[id] = { ...(aWins ? s : o), miss: Math.max(s.miss ?? 0, o.miss ?? 0) }
   }
   return out
@@ -59,7 +71,11 @@ export function mergeSrs(a = {}, b = {}) {
 
 /** Merge two { track, progress, game, srs } snapshots (either may be missing parts). */
 export function mergeState(local = {}, remote = {}) {
+  validateState(local)
+  validateState(remote)
+  if ((local.epoch ?? 0) !== (remote.epoch ?? 0)) return (local.epoch ?? 0) > (remote.epoch ?? 0) ? local : remote
   return {
+    epoch: local.epoch ?? remote.epoch ?? 0,
     track: local.track ?? remote.track ?? null,
     progress: mergeProgress(local.progress, remote.progress),
     game: mergeGame(local.game, remote.game),
