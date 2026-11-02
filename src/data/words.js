@@ -1,6 +1,6 @@
-// Each word: { bn, roman, en, emoji, digit? }
+// Each word: { bn, roman, en, emoji, digit? }. The legacy emoji field is now a shared illustration key.
 // Category flags:
-//   visual — the emoji identifies the word unambiguously, so picture exercises can be used.
+//   visual — the picture identifies the word unambiguously, so picture exercises can be used.
 //   note   — shown above the list and at the start of lessons.
 // Dialect: Bangladeshi standard.
 const W = (bn, roman, en, emoji, digit) => ({ bn, roman, en, emoji, ...(digit ? { digit } : {}) })
@@ -115,7 +115,7 @@ export const wordCategories = [
       W('হলুদ', 'holud', 'yellow', '🟡'),
       W('কমলা', 'komola', 'orange', '🟠'),
       W('বেগুনি', 'beguni', 'purple', '🟣'),
-      W('গোলাপি', 'golapi', 'pink', '🌸'),
+      W('গোলাপি', 'golapi', 'pink', 'pink'),
       W('বাদামি', 'badami', 'brown', '🟤'),
       W('কালো', 'kalo', 'black', '⚫'),
       W('সাদা', 'shada', 'white', '⚪'),
@@ -172,7 +172,7 @@ export const wordCategories = [
       W('দুধ', 'dudh', 'milk', '🥛'),
       W('পানি', 'pani', 'water', '💧'),
       W('চা', 'cha', 'tea', '🍵'),
-      W('চিনি', 'chini', 'sugar', '🧂'),
+      W('চিনি', 'chini', 'sugar', 'sugar'),
     ],
   },
   {
@@ -240,9 +240,9 @@ export const wordCategories = [
       W('কাঁঠাল', 'kãthal', 'jackfruit (national fruit)', '🍈'),
       W('নৌকা', 'nouka', 'boat', '⛵'),
       W('রিকশা', 'riksha', 'rickshaw', '🛺'),
-      W('ধানক্ষেত', 'dhankhet', 'rice field', '🌾'),
+      W('ধানক্ষেত', 'dhankhet', 'rice field', 'rice-field'),
       W('মাতৃভাষা', 'matribhasha', 'mother tongue', '🗣️'),
-      W('শহীদ মিনার', 'shohid minar', 'Martyrs\' Monument', '🕯️'),
+      W('শহীদ মিনার', 'shohid minar', 'Martyrs\' Monument', 'shaheed-minar'),
       W('একুশে ফেব্রুয়ারি', 'ekushe february', '21 February (Language Day)', '🗓️'),
       W('পহেলা বৈশাখ', 'pohela boishakh', 'Bengali New Year', '🎉'),
       W('বিজয় দিবস', 'bijoy dibosh', 'Victory Day (16 December)', '🏆'),

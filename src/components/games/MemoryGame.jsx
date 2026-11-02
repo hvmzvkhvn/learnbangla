@@ -1,3 +1,5 @@
+import { uniquePictureItems } from '../../art/visualIdentity'
+import VisualText from '../../art/VisualText'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { shuffle } from '../../curriculum/text'
 import { speak } from '../../audio/audio'
@@ -5,7 +7,8 @@ import { speak } from '../../audio/audio'
 /** Flip cards to match each Bangla word with its meaning. onFinish({ moves, seconds }) */
 export default function MemoryGame({ pool, pairs = 6, mode = 'en', onFinish }) {
   const cards = useMemo(() => {
-    const chosen = shuffle(pool.filter((w) => w.bn.length <= 12 && (mode === 'picture' ? w.art : w.en.length <= 22))).slice(0, pairs)
+    const eligible = pool.filter((w) => w.bn.length <= 12 && (mode === 'picture' ? w.art : w.en.length <= 22))
+    const chosen = (mode === 'picture' ? uniquePictureItems(shuffle(eligible)) : shuffle(eligible)).slice(0, pairs)
     return shuffle(
       chosen.flatMap((w) => [
         { uid: `${w.id}-b`, key: w.id, side: 'bn', text: w.bn, say: w.bn },
@@ -60,9 +63,9 @@ export default function MemoryGame({ pool, pairs = 6, mode = 'en', onFinish }) {
   return (
     <div>
       <div className="mb-4 flex items-center justify-between text-sm font-extrabold">
-        <span className="rounded-full bg-white px-3 py-1 shadow-sm">🃏 Moves {moves}</span>
-        <span className="rounded-full bg-white px-3 py-1 shadow-sm">⏱ {seconds}s</span>
-        <span className="rounded-full bg-accent px-3 py-1">✅ {matched.length}/{cards.length / 2}</span>
+        <span className="rounded-full bg-white px-3 py-1 shadow-sm"><VisualText>🃏</VisualText> Moves {moves}</span>
+        <span className="rounded-full bg-white px-3 py-1 shadow-sm"><VisualText>⏱</VisualText> {seconds}s</span>
+        <span className="rounded-full bg-accent px-3 py-1"><VisualText>✅</VisualText> {matched.length}/{cards.length / 2}</span>
       </div>
       <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
         {cards.map((c) => {
@@ -77,9 +80,9 @@ export default function MemoryGame({ pool, pairs = 6, mode = 'en', onFinish }) {
               }`}
             >
               {up ? (
-                <span className={`leading-tight ${c.side === 'bn' ? 'font-bangla text-xl font-bold text-primary' : c.side === 'art' ? 'text-5xl' : 'text-sm font-extrabold text-ink'}`}>{c.text}</span>
+                <span className={`leading-tight ${c.side === 'bn' ? 'font-bangla text-xl font-bold text-primary' : c.side === 'art' ? 'text-5xl' : 'text-sm font-extrabold text-ink'}`}><VisualText>{c.text}</VisualText></span>
               ) : (
-                <span className="text-3xl text-white/80">⭐</span>
+                <span className="text-3xl text-white/80"><VisualText>⭐</VisualText></span>
               )}
             </button>
           )

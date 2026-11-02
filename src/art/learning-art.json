@@ -1,0 +1,2307 @@
+{
+  "☁️": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-cloud.webp",
+    "label": "Cloud"
+  },
+  "👪": {
+    "kind": "image",
+    "src": "images/learning/u-1f46a.webp",
+    "label": "Family"
+  },
+  "🎉": {
+    "kind": "image",
+    "src": "images/learning/u-1f38a.webp",
+    "label": "Celebration"
+  },
+  "⭐": {
+    "kind": "image",
+    "src": "images/learning/u-1f31f.webp",
+    "label": "Star"
+  },
+  "✨": {
+    "kind": "image",
+    "src": "images/learning/sparkles.webp",
+    "label": "Sparkles"
+  },
+  "🎊": {
+    "kind": "image",
+    "src": "images/learning/u-1f38a.webp",
+    "label": "Confetti ball"
+  },
+  "💫": {
+    "kind": "image",
+    "src": "images/learning/sparkles.webp",
+    "label": "Sparkles"
+  },
+  "🟡": {
+    "kind": "colour",
+    "value": "#f5c940",
+    "label": "Large yellow circle"
+  },
+  "🟢": {
+    "kind": "colour",
+    "value": "#3a9855",
+    "label": "Large green circle"
+  },
+  "🟠": {
+    "kind": "colour",
+    "value": "#ed8c35",
+    "label": "Large orange circle"
+  },
+  "🔒": {
+    "kind": "icon",
+    "id": "🔒",
+    "label": "Locked"
+  },
+  "🎤": {
+    "kind": "icon",
+    "id": "🎤",
+    "label": "Microphone"
+  },
+  "🔊": {
+    "kind": "icon",
+    "id": "🔊",
+    "label": "Sound"
+  },
+  "▶": {
+    "kind": "icon",
+    "id": "▶",
+    "label": "Play"
+  },
+  "🏠": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-house.webp",
+    "label": "House"
+  },
+  "🎨": {
+    "kind": "image",
+    "src": "images/learning/u-1f3a8.webp",
+    "label": "Art palette"
+  },
+  "🎮": {
+    "kind": "image",
+    "src": "images/learning/u-1f3ae.webp",
+    "label": "Video game"
+  },
+  "🌟": {
+    "kind": "image",
+    "src": "images/learning/u-1f31f.webp",
+    "label": "Star"
+  },
+  "🔁": {
+    "kind": "icon",
+    "id": "🔁",
+    "label": "Repeat"
+  },
+  "🧭": {
+    "kind": "image",
+    "src": "images/learning/u-1f9ed.webp",
+    "label": "Compass"
+  },
+  "🏅": {
+    "kind": "image",
+    "src": "images/learning/u-1f3c5.webp",
+    "label": "Sports medal"
+  },
+  "🔇": {
+    "kind": "icon",
+    "id": "🔇",
+    "label": "Muted"
+  },
+  "✅": {
+    "kind": "icon",
+    "id": "✅",
+    "label": "Check"
+  },
+  "✉️": {
+    "kind": "icon",
+    "id": "✉️",
+    "label": "Mail"
+  },
+  "📮": {
+    "kind": "image",
+    "src": "images/learning/u-1f4ee.webp",
+    "label": "Postbox"
+  },
+  "📖": {
+    "kind": "image",
+    "src": "images/learning/u-1f4d6.webp",
+    "label": "Open book"
+  },
+  "⏳": {
+    "kind": "icon",
+    "id": "⏳",
+    "label": "Time"
+  },
+  "🌾": {
+    "kind": "image",
+    "src": "images/learning/u-1f33e.webp",
+    "label": "Rice plant"
+  },
+  "💰": {
+    "kind": "image",
+    "src": "images/learning/u-1f4b0.webp",
+    "label": "Money bag"
+  },
+  "📚": {
+    "kind": "image",
+    "src": "images/learning/u-1f4da.webp",
+    "label": "Books"
+  },
+  "🏙️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3d9.webp",
+    "label": "Dhaka"
+  },
+  "🛂": {
+    "kind": "image",
+    "src": "images/learning/passport.webp",
+    "label": "Passport"
+  },
+  "📝": {
+    "kind": "icon",
+    "id": "📝",
+    "label": "Write"
+  },
+  "⚡": {
+    "kind": "icon",
+    "id": "⚡",
+    "label": "Energy"
+  },
+  "🔥": {
+    "kind": "image",
+    "src": "images/learning/u-1f525.webp",
+    "label": "Flame"
+  },
+  "🃏": {
+    "kind": "image",
+    "src": "images/learning/u-1f0cf.webp",
+    "label": "Memory cards"
+  },
+  "⏱": {
+    "kind": "icon",
+    "id": "⏱",
+    "label": "Timer"
+  },
+  "✏️": {
+    "kind": "icon",
+    "id": "✏️",
+    "label": "Pencil"
+  },
+  "💡": {
+    "kind": "icon",
+    "id": "💡",
+    "label": "Tip"
+  },
+  "⚔️": {
+    "kind": "image",
+    "src": "images/learning/u-2694.webp",
+    "label": "Crossed swords"
+  },
+  "🔠": {
+    "kind": "icon",
+    "id": "🔠",
+    "label": "Bangla letters"
+  },
+  "🧩": {
+    "kind": "image",
+    "src": "images/learning/u-1f9e9.webp",
+    "label": "Jigsaw puzzle piece"
+  },
+  "🚀": {
+    "kind": "image",
+    "src": "images/learning/u-1f680.webp",
+    "label": "Rocket"
+  },
+  "🔤": {
+    "kind": "icon",
+    "id": "🔤",
+    "label": "Bangla alphabet"
+  },
+  "🅰️": {
+    "kind": "icon",
+    "id": "🅰️",
+    "label": "First consonants"
+  },
+  "👋": {
+    "kind": "image",
+    "src": "images/learning/u-1f44b.webp",
+    "label": "Waving hand"
+  },
+  "🔢": {
+    "kind": "icon",
+    "id": "🔢",
+    "label": "Numbers"
+  },
+  "💯": {
+    "kind": "icon",
+    "id": "💯",
+    "label": "One hundred"
+  },
+  "🛒": {
+    "kind": "image",
+    "src": "images/learning/u-1f6d2.webp",
+    "label": "Shopping trolley"
+  },
+  "🛺": {
+    "kind": "image",
+    "src": "images/learning/u-1f6fa.webp",
+    "label": "Cycle rickshaw"
+  },
+  "✈️": {
+    "kind": "image",
+    "src": "images/learning/u-2708.webp",
+    "label": "Airplane"
+  },
+  "☀️": {
+    "kind": "image",
+    "src": "images/learning/u-1f324.webp",
+    "label": "Sun"
+  },
+  "📅": {
+    "kind": "image",
+    "src": "images/learning/u-1f4c5.webp",
+    "label": "Calendar"
+  },
+  "🗓️": {
+    "kind": "image",
+    "src": "images/learning/u-1f4c5.webp",
+    "label": "Spiral calendar pad"
+  },
+  "🍂": {
+    "kind": "image",
+    "src": "images/learning/u-1f342.webp",
+    "label": "Fallen leaf"
+  },
+  "⏰": {
+    "kind": "image",
+    "src": "images/learning/u-23f0.webp",
+    "label": "Alarm clock"
+  },
+  "🍚": {
+    "kind": "image",
+    "src": "images/learning/u-1f35a.webp",
+    "label": "Rice"
+  },
+  "🍛": {
+    "kind": "image",
+    "src": "images/learning/u-1f35b.webp",
+    "label": "Curry and rice"
+  },
+  "🎬": {
+    "kind": "image",
+    "src": "images/learning/u-1f3ac.webp",
+    "label": "Clapper board"
+  },
+  "🕯️": {
+    "kind": "image",
+    "src": "images/learning/u-1f56f.webp",
+    "label": "Candle"
+  },
+  "🏛️": {
+    "kind": "image",
+    "src": "images/learning/institution.webp",
+    "label": "Institution"
+  },
+  "🏃": {
+    "kind": "image",
+    "src": "images/learning/u-1f3c3.webp",
+    "label": "Runner"
+  },
+  "🔮": {
+    "kind": "image",
+    "src": "images/learning/u-1f52e.webp",
+    "label": "Crystal ball"
+  },
+  "❓": {
+    "kind": "icon",
+    "id": "❓",
+    "label": "Question"
+  },
+  "💬": {
+    "kind": "image",
+    "src": "images/learning/u-1f5e3.webp",
+    "label": "Conversation"
+  },
+  "📱": {
+    "kind": "image",
+    "src": "images/learning/u-1f4f1.webp",
+    "label": "Mobile phone"
+  },
+  "🏏": {
+    "kind": "image",
+    "src": "images/learning/u-1f3cf.webp",
+    "label": "Cricket bat and ball"
+  },
+  "🏔️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3d4.webp",
+    "label": "Mountains"
+  },
+  "🪪": {
+    "kind": "image",
+    "src": "images/learning/u-1faaa-v2.webp",
+    "label": "Identity card"
+  },
+  "🙇": {
+    "kind": "image",
+    "src": "images/learning/u-1f647.webp",
+    "label": "Person bowing deeply"
+  },
+  "🎓": {
+    "kind": "image",
+    "src": "images/learning/u-1f469-200d-1f393.webp",
+    "label": "Graduation cap"
+  },
+  "🎭": {
+    "kind": "image",
+    "src": "images/learning/u-1f3ad.webp",
+    "label": "Performing arts"
+  },
+  "🗺️": {
+    "kind": "image",
+    "src": "images/learning/u-1f5fa.webp",
+    "label": "Bangladesh map"
+  },
+  "🧳": {
+    "kind": "image",
+    "src": "images/learning/u-1f9f3.webp",
+    "label": "Luggage"
+  },
+  "💼": {
+    "kind": "image",
+    "src": "images/learning/u-1f4bc.webp",
+    "label": "Briefcase"
+  },
+  "🩺": {
+    "kind": "image",
+    "src": "images/learning/u-1fa7a.webp",
+    "label": "Stethoscope"
+  },
+  "📰": {
+    "kind": "image",
+    "src": "images/learning/newspaper.webp",
+    "label": "Newspaper"
+  },
+  "🎶": {
+    "kind": "image",
+    "src": "images/learning/u-1f3b6.webp",
+    "label": "Multiple musical notes"
+  },
+  "🌉": {
+    "kind": "image",
+    "src": "images/learning/u-1f309.webp",
+    "label": "Bridge at night"
+  },
+  "🌱": {
+    "kind": "image",
+    "src": "images/learning/u-1f331.webp",
+    "label": "Seedling"
+  },
+  "🅱️": {
+    "kind": "icon",
+    "id": "🅱️",
+    "label": "Middle consonants"
+  },
+  "🅾️": {
+    "kind": "icon",
+    "id": "🅾️",
+    "label": "Last consonants"
+  },
+  "👨‍👩‍👧": {
+    "kind": "image",
+    "src": "images/learning/u-1f468-200d-1f469-200d-1f467.webp",
+    "label": "Family"
+  },
+  "🐯": {
+    "kind": "image",
+    "src": "images/learning/u-1f42f.webp",
+    "label": "Tiger face"
+  },
+  "🧍": {
+    "kind": "image",
+    "src": "images/learning/u-1f9d1.webp",
+    "label": "Standing person"
+  },
+  "🏡": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-house.webp",
+    "label": "House"
+  },
+  "🙋": {
+    "kind": "image",
+    "src": "images/learning/u-1f64b.webp",
+    "label": "Happy person raising one hand"
+  },
+  "🤲": {
+    "kind": "image",
+    "src": "images/learning/u-1f932.webp",
+    "label": "Palms up together"
+  },
+  "👩": {
+    "kind": "image",
+    "src": "images/learning/u-1f469.webp",
+    "label": "Woman"
+  },
+  "👨": {
+    "kind": "image",
+    "src": "images/learning/u-1f468.webp",
+    "label": "Man"
+  },
+  "👴": {
+    "kind": "image",
+    "src": "images/learning/u-1f474.webp",
+    "label": "Grandfather"
+  },
+  "👵": {
+    "kind": "image",
+    "src": "images/learning/u-1f475.webp",
+    "label": "Grandmother"
+  },
+  "🧔": {
+    "kind": "image",
+    "src": "images/learning/u-1f468.webp",
+    "label": "Bearded person"
+  },
+  "🧑": {
+    "kind": "image",
+    "src": "images/learning/u-1f9d1.webp",
+    "label": "Person"
+  },
+  "👧": {
+    "kind": "image",
+    "src": "images/learning/u-1f467.webp",
+    "label": "Girl"
+  },
+  "🧒": {
+    "kind": "image",
+    "src": "images/learning/u-1f9d2.webp",
+    "label": "Child"
+  },
+  "🎁": {
+    "kind": "image",
+    "src": "images/learning/u-1f381.webp",
+    "label": "Gift"
+  },
+  "🦸": {
+    "kind": "image",
+    "src": "images/learning/u-1f9b8.webp",
+    "label": "Superhero"
+  },
+  "👨‍👩‍👧‍👦": {
+    "kind": "image",
+    "src": "images/learning/u-1f46a.webp",
+    "label": "Family"
+  },
+  "👰": {
+    "kind": "image",
+    "src": "images/learning/u-1f470.webp",
+    "label": "Bride with veil"
+  },
+  "🏢": {
+    "kind": "image",
+    "src": "images/learning/u-1f3e2.webp",
+    "label": "Office building"
+  },
+  "🛠️": {
+    "kind": "image",
+    "src": "images/learning/u-1f6e0.webp",
+    "label": "Hammer and wrench"
+  },
+  "💵": {
+    "kind": "image",
+    "src": "images/learning/taka.webp",
+    "label": "Banknote"
+  },
+  "🧑‍💼": {
+    "kind": "image",
+    "src": "images/learning/office-worker.webp",
+    "label": "Office worker"
+  },
+  "📧": {
+    "kind": "icon",
+    "id": "📧",
+    "label": "Email"
+  },
+  "🏖️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3d6.webp",
+    "label": "Beach with umbrella"
+  },
+  "🏪": {
+    "kind": "image",
+    "src": "images/learning/u-1f3ea.webp",
+    "label": "Market"
+  },
+  "🏭": {
+    "kind": "image",
+    "src": "images/learning/u-1f3ed.webp",
+    "label": "Factory"
+  },
+  "🤝": {
+    "kind": "image",
+    "src": "images/learning/u-1f91d.webp",
+    "label": "Handshake"
+  },
+  "🏦": {
+    "kind": "image",
+    "src": "images/learning/bank.webp",
+    "label": "Bank"
+  },
+  "🧾": {
+    "kind": "image",
+    "src": "images/learning/u-1f9fe.webp",
+    "label": "Receipt"
+  },
+  "📄": {
+    "kind": "image",
+    "src": "images/learning/u-1f4cb.webp",
+    "label": "Page facing up"
+  },
+  "✍️": {
+    "kind": "image",
+    "src": "images/learning/u-270d.webp",
+    "label": "Writing hand"
+  },
+  "🛃": {
+    "kind": "image",
+    "src": "images/learning/visa.webp",
+    "label": "Visa"
+  },
+  "📃": {
+    "kind": "image",
+    "src": "images/learning/u-1f4cb.webp",
+    "label": "Page with curl"
+  },
+  "📍": {
+    "kind": "icon",
+    "id": "📍",
+    "label": "Location"
+  },
+  "💳": {
+    "kind": "image",
+    "src": "images/learning/payment-card.webp",
+    "label": "Payment card"
+  },
+  "🏷️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3f7.webp",
+    "label": "Label"
+  },
+  "📈": {
+    "kind": "image",
+    "src": "images/learning/u-1f4c8.webp",
+    "label": "Chart with upwards trend"
+  },
+  "💊": {
+    "kind": "image",
+    "src": "images/learning/u-1f48a.webp",
+    "label": "Pill"
+  },
+  "🌡️": {
+    "kind": "image",
+    "src": "images/learning/u-1f321.webp",
+    "label": "Thermometer"
+  },
+  "😣": {
+    "kind": "image",
+    "src": "images/learning/u-1f623.webp",
+    "label": "Persevering face"
+  },
+  "🏥": {
+    "kind": "image",
+    "src": "images/learning/u-1f3e5.webp",
+    "label": "Hospital"
+  },
+  "🤧": {
+    "kind": "image",
+    "src": "images/learning/u-1f927.webp",
+    "label": "Sneezing face"
+  },
+  "😷": {
+    "kind": "image",
+    "src": "images/learning/u-1f637.webp",
+    "label": "Face with medical mask"
+  },
+  "🩸": {
+    "kind": "image",
+    "src": "images/learning/u-1fa78.webp",
+    "label": "Drop of blood"
+  },
+  "🤒": {
+    "kind": "image",
+    "src": "images/learning/u-1f912.webp",
+    "label": "Face with thermometer"
+  },
+  "🙂": {
+    "kind": "image",
+    "src": "images/learning/u-1f642.webp",
+    "label": "Smile"
+  },
+  "💉": {
+    "kind": "image",
+    "src": "images/learning/u-1f489.webp",
+    "label": "Syringe"
+  },
+  "🗳️": {
+    "kind": "image",
+    "src": "images/learning/u-1f5f3.webp",
+    "label": "Ballot box with ballot"
+  },
+  "👥": {
+    "kind": "image",
+    "src": "images/learning/u-1f465.webp",
+    "label": "Group"
+  },
+  "⚖️": {
+    "kind": "image",
+    "src": "images/learning/u-2696.webp",
+    "label": "Scales"
+  },
+  "📜": {
+    "kind": "image",
+    "src": "images/learning/u-1f4dc.webp",
+    "label": "Scroll"
+  },
+  "✊": {
+    "kind": "image",
+    "src": "images/learning/u-270a.webp",
+    "label": "Raised fist"
+  },
+  "🚢": {
+    "kind": "image",
+    "src": "images/learning/u-26f4.webp",
+    "label": "Ship"
+  },
+  "📦": {
+    "kind": "image",
+    "src": "images/learning/u-1f4e6.webp",
+    "label": "Package"
+  },
+  "🏗️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3d7.webp",
+    "label": "Building construction"
+  },
+  "🪙": {
+    "kind": "image",
+    "src": "images/learning/u-1fa99.webp",
+    "label": "Coin"
+  },
+  "🐖": {
+    "kind": "image",
+    "src": "images/learning/u-1f416.webp",
+    "label": "Pig"
+  },
+  "🕊️": {
+    "kind": "image",
+    "src": "images/learning/u-1f54a.webp",
+    "label": "Dove of peace"
+  },
+  "⛪": {
+    "kind": "image",
+    "src": "images/learning/u-26ea.webp",
+    "label": "Church"
+  },
+  "🌙": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-moon.webp",
+    "label": "Moon"
+  },
+  "🪔": {
+    "kind": "image",
+    "src": "images/learning/u-1fa94.webp",
+    "label": "Diya lamp"
+  },
+  "👘": {
+    "kind": "image",
+    "src": "images/learning/panjabi.webp",
+    "label": "Panjabi"
+  },
+  "🩳": {
+    "kind": "image",
+    "src": "images/learning/lungi.webp",
+    "label": "Lungi"
+  },
+  "🧣": {
+    "kind": "image",
+    "src": "images/learning/u-1f9e3.webp",
+    "label": "Scarf"
+  },
+  "🧵": {
+    "kind": "image",
+    "src": "images/learning/u-1f9f5.webp",
+    "label": "Spool of thread"
+  },
+  "🪈": {
+    "kind": "image",
+    "src": "images/learning/u-1fa88-v2.webp",
+    "label": "Bamboo flute"
+  },
+  "🥁": {
+    "kind": "image",
+    "src": "images/learning/u-1f941.webp",
+    "label": "Dhak drum"
+  },
+  "💧": {
+    "kind": "image",
+    "src": "images/learning/u-1f4a7.webp",
+    "label": "Water"
+  },
+  "🛁": {
+    "kind": "image",
+    "src": "images/learning/u-1f6c1.webp",
+    "label": "Bathtub"
+  },
+  "🧂": {
+    "kind": "image",
+    "src": "images/learning/salt.webp",
+    "label": "Salt"
+  },
+  "🍳": {
+    "kind": "image",
+    "src": "images/learning/u-1f373.webp",
+    "label": "Cooking"
+  },
+  "✂️": {
+    "kind": "image",
+    "src": "images/learning/u-2702.webp",
+    "label": "Black scissors"
+  },
+  "🕌": {
+    "kind": "image",
+    "src": "images/learning/u-1f54c.webp",
+    "label": "Mosque"
+  },
+  "🌍": {
+    "kind": "image",
+    "src": "images/learning/u-1f30d.webp",
+    "label": "World"
+  },
+  "🐍": {
+    "kind": "image",
+    "src": "images/learning/u-1f40d.webp",
+    "label": "Snake"
+  },
+  "🥭": {
+    "kind": "image",
+    "src": "images/learning/u-1f96d.webp",
+    "label": "Mango"
+  },
+  "🐭": {
+    "kind": "image",
+    "src": "images/learning/u-1f42d.webp",
+    "label": "Mouse face"
+  },
+  "🦅": {
+    "kind": "image",
+    "src": "images/learning/u-1f985.webp",
+    "label": "Eagle"
+  },
+  "🐪": {
+    "kind": "image",
+    "src": "images/learning/u-1f42a.webp",
+    "label": "Dromedary camel"
+  },
+  "🌅": {
+    "kind": "image",
+    "src": "images/learning/u-1f305.webp",
+    "label": "Sunrise"
+  },
+  "🧘": {
+    "kind": "image",
+    "src": "images/learning/u-1f9d8.webp",
+    "label": "Sage"
+  },
+  "🐘": {
+    "kind": "image",
+    "src": "images/learning/u-1f418.webp",
+    "label": "Elephant"
+  },
+  "🍠": {
+    "kind": "image",
+    "src": "images/learning/u-1f360.webp",
+    "label": "Yam"
+  },
+  "🍌": {
+    "kind": "image",
+    "src": "images/learning/u-1f34c.webp",
+    "label": "Banana"
+  },
+  "🐰": {
+    "kind": "image",
+    "src": "images/learning/u-1f430.webp",
+    "label": "Rabbit face"
+  },
+  "🐄": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-cow.webp",
+    "label": "Cow"
+  },
+  "🌏": {
+    "kind": "image",
+    "src": "images/learning/u-1f30d.webp",
+    "label": "World"
+  },
+  "☂️": {
+    "kind": "image",
+    "src": "images/learning/u-2602.webp",
+    "label": "Umbrella"
+  },
+  "🌪️": {
+    "kind": "image",
+    "src": "images/learning/u-1f32a.webp",
+    "label": "Cloud with tornado"
+  },
+  "🦜": {
+    "kind": "image",
+    "src": "images/learning/u-1f99c.webp",
+    "label": "Parrot"
+  },
+  "👄": {
+    "kind": "image",
+    "src": "images/learning/u-1f444.webp",
+    "label": "Mouth"
+  },
+  "🥚": {
+    "kind": "image",
+    "src": "images/learning/u-1f95a.webp",
+    "label": "Egg"
+  },
+  "🔔": {
+    "kind": "image",
+    "src": "images/learning/u-1f514.webp",
+    "label": "Bell"
+  },
+  "🍽️": {
+    "kind": "image",
+    "src": "images/learning/u-1f37d.webp",
+    "label": "Fork and knife with plate"
+  },
+  "🥛": {
+    "kind": "image",
+    "src": "images/learning/u-1f95b.webp",
+    "label": "Glass of milk"
+  },
+  "🏞️": {
+    "kind": "image",
+    "src": "images/learning/river.webp",
+    "label": "River"
+  },
+  "🐦": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-bird.webp",
+    "label": "Bird"
+  },
+  "🍎": {
+    "kind": "image",
+    "src": "images/learning/u-1f34e.webp",
+    "label": "Red apple"
+  },
+  "🐟": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-fish.webp",
+    "label": "Fish"
+  },
+  "⚙️": {
+    "kind": "icon",
+    "id": "⚙️",
+    "label": "Settings"
+  },
+  "🫓": {
+    "kind": "image",
+    "src": "images/learning/u-1fad3.webp",
+    "label": "Roti"
+  },
+  "🍋": {
+    "kind": "image",
+    "src": "images/learning/u-1f34b.webp",
+    "label": "Lemon"
+  },
+  "🌸": {
+    "kind": "image",
+    "src": "images/learning/u-1f338.webp",
+    "label": "Pink blossom"
+  },
+  "🐂": {
+    "kind": "image",
+    "src": "images/learning/u-1f402.webp",
+    "label": "Ox"
+  },
+  "⬆️": {
+    "kind": "icon",
+    "id": "⬆️",
+    "label": "Up"
+  },
+  "☔": {
+    "kind": "image",
+    "src": "images/learning/u-2602.webp",
+    "label": "Umbrella with rain drops"
+  },
+  "🦚": {
+    "kind": "image",
+    "src": "images/learning/u-1f99a.webp",
+    "label": "Peacock"
+  },
+  "🗣️": {
+    "kind": "image",
+    "src": "images/learning/u-1f5e3.webp",
+    "label": "Speaking"
+  },
+  "😢": {
+    "kind": "image",
+    "src": "images/learning/u-1f622.webp",
+    "label": "Tears"
+  },
+  "🧠": {
+    "kind": "image",
+    "src": "images/learning/u-1f9e0.webp",
+    "label": "Brain"
+  },
+  "😌": {
+    "kind": "image",
+    "src": "images/learning/u-1f642.webp",
+    "label": "Calm"
+  },
+  "😄": {
+    "kind": "image",
+    "src": "images/learning/u-1f604.webp",
+    "label": "Laughter"
+  },
+  "🧑‍🤝‍🧑": {
+    "kind": "image",
+    "src": "images/learning/u-1f46b.webp",
+    "label": "Friends"
+  },
+  "🛣️": {
+    "kind": "image",
+    "src": "images/learning/u-1f6e3.webp",
+    "label": "Motorway"
+  },
+  "🏫": {
+    "kind": "image",
+    "src": "images/learning/u-1f3eb.webp",
+    "label": "School"
+  },
+  "📏": {
+    "kind": "image",
+    "src": "images/learning/u-1f4cf.webp",
+    "label": "Straight ruler"
+  },
+  "🦋": {
+    "kind": "image",
+    "src": "images/learning/u-1f98b.webp",
+    "label": "Butterfly"
+  },
+  "🏯": {
+    "kind": "image",
+    "src": "images/learning/fort.webp",
+    "label": "Fort"
+  },
+  "👕": {
+    "kind": "image",
+    "src": "images/learning/u-1f455.webp",
+    "label": "T-shirt"
+  },
+  "🚇": {
+    "kind": "image",
+    "src": "images/learning/u-1f687.webp",
+    "label": "Metro"
+  },
+  "⚓": {
+    "kind": "image",
+    "src": "images/learning/u-2693.webp",
+    "label": "Anchor"
+  },
+  "🌿": {
+    "kind": "image",
+    "src": "images/learning/u-1f33f.webp",
+    "label": "Leaves"
+  },
+  "👷": {
+    "kind": "image",
+    "src": "images/learning/u-1f477-v2.webp",
+    "label": "Construction worker"
+  },
+  "🌳": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-tree.webp",
+    "label": "Tree"
+  },
+  "🥻": {
+    "kind": "image",
+    "src": "images/learning/u-1f97b.webp",
+    "label": "Sari"
+  },
+  "🪡": {
+    "kind": "image",
+    "src": "images/learning/u-1faa1.webp",
+    "label": "Sewing needle"
+  },
+  "⛱️": {
+    "kind": "image",
+    "src": "images/learning/u-26f1.webp",
+    "label": "Umbrella on ground"
+  },
+  "🍵": {
+    "kind": "image",
+    "src": "images/learning/u-2615.webp",
+    "label": "Teacup without handle"
+  },
+  "🌊": {
+    "kind": "image",
+    "src": "images/learning/u-1f30a.webp",
+    "label": "Water wave"
+  },
+  "⛰️": {
+    "kind": "image",
+    "src": "images/learning/green-hills.webp",
+    "label": "Green hills"
+  },
+  "🍬": {
+    "kind": "image",
+    "src": "images/learning/u-1f36c.webp",
+    "label": "Bengali sweets"
+  },
+  "🛕": {
+    "kind": "image",
+    "src": "images/learning/u-1f6d5.webp",
+    "label": "Hindu temple"
+  },
+  "🏺": {
+    "kind": "image",
+    "src": "images/learning/u-1f3fa.webp",
+    "label": "Amphora"
+  },
+  "🐚": {
+    "kind": "image",
+    "src": "images/learning/u-1f41a.webp",
+    "label": "Spiral shell"
+  },
+  "🎋": {
+    "kind": "image",
+    "src": "images/learning/bamboo.webp",
+    "label": "Bamboo"
+  },
+  "🍃": {
+    "kind": "image",
+    "src": "images/learning/u-1f343.webp",
+    "label": "Leaf fluttering in wind"
+  },
+  "🌴": {
+    "kind": "image",
+    "src": "images/learning/u-1f334.webp",
+    "label": "Palm tree"
+  },
+  "🦆": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-duck.webp",
+    "label": "Duck"
+  },
+  "❄️": {
+    "kind": "image",
+    "src": "images/learning/u-2744.webp",
+    "label": "Snowflake"
+  },
+  "⛏️": {
+    "kind": "image",
+    "src": "images/learning/u-26cf.webp",
+    "label": "Pick"
+  },
+  "🛶": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-boat.webp",
+    "label": "Canoe"
+  },
+  "🍈": {
+    "kind": "image",
+    "src": "images/learning/u-1f348.webp",
+    "label": "Jackfruit"
+  },
+  "🥥": {
+    "kind": "image",
+    "src": "images/learning/u-1f965.webp",
+    "label": "Coconut"
+  },
+  "⛴️": {
+    "kind": "image",
+    "src": "images/learning/u-26f4.webp",
+    "label": "Ferry"
+  },
+  "🛟": {
+    "kind": "image",
+    "src": "images/learning/u-1f6df-v2.webp",
+    "label": "Lifebuoy"
+  },
+  "🌇": {
+    "kind": "image",
+    "src": "images/learning/u-1f307.webp",
+    "label": "Sunset over buildings"
+  },
+  "🏝️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3dd.webp",
+    "label": "Desert island"
+  },
+  "🌀": {
+    "kind": "image",
+    "src": "images/learning/u-1f300.webp",
+    "label": "Cyclone"
+  },
+  "🐅": {
+    "kind": "image",
+    "src": "images/learning/u-1f42f.webp",
+    "label": "Tiger"
+  },
+  "🦐": {
+    "kind": "image",
+    "src": "images/learning/u-1f990.webp",
+    "label": "Shrimp"
+  },
+  "🍯": {
+    "kind": "image",
+    "src": "images/learning/u-1f36f.webp",
+    "label": "Honey pot"
+  },
+  "🎵": {
+    "kind": "image",
+    "src": "images/learning/u-1f3b6.webp",
+    "label": "Musical note"
+  },
+  "🪕": {
+    "kind": "image",
+    "src": "images/learning/u-1fa95.webp",
+    "label": "Dotara"
+  },
+  "🏰": {
+    "kind": "image",
+    "src": "images/learning/fort.webp",
+    "label": "Fort"
+  },
+  "🧑‍🌾": {
+    "kind": "image",
+    "src": "images/learning/u-1f9d1-200d-1f33e.webp",
+    "label": "Farmer"
+  },
+  "🔬": {
+    "kind": "image",
+    "src": "images/learning/u-1f52c.webp",
+    "label": "Microscope"
+  },
+  "🟫": {
+    "kind": "colour",
+    "value": "#895c3f",
+    "label": "Brown"
+  },
+  "⚪": {
+    "kind": "colour",
+    "value": "#ffffff",
+    "label": "White"
+  },
+  "🔵": {
+    "kind": "colour",
+    "value": "#347cc0",
+    "label": "Large blue circle"
+  },
+  "🖼️": {
+    "kind": "image",
+    "src": "images/learning/u-1f5bc.webp",
+    "label": "Frame with picture"
+  },
+  "🚧": {
+    "kind": "image",
+    "src": "images/learning/u-1f6a7.webp",
+    "label": "Construction sign"
+  },
+  "🥔": {
+    "kind": "image",
+    "src": "images/learning/u-1f954.webp",
+    "label": "Potato"
+  },
+  "💭": {
+    "kind": "image",
+    "src": "images/learning/u-1f4ad.webp",
+    "label": "Thought balloon"
+  },
+  "🍒": {
+    "kind": "image",
+    "src": "images/learning/litchi.webp",
+    "label": "Litchi"
+  },
+  "🗿": {
+    "kind": "image",
+    "src": "images/learning/statue.webp",
+    "label": "Statue"
+  },
+  "🚂": {
+    "kind": "image",
+    "src": "images/learning/u-1f686.webp",
+    "label": "Steam locomotive"
+  },
+  "🚉": {
+    "kind": "image",
+    "src": "images/learning/u-1f687.webp",
+    "label": "Station"
+  },
+  "🌫️": {
+    "kind": "image",
+    "src": "images/learning/u-1f32b.webp",
+    "label": "Fog"
+  },
+  "👨‍⚕️": {
+    "kind": "image",
+    "src": "images/learning/doctor.webp",
+    "label": "Doctor"
+  },
+  "🧼": {
+    "kind": "image",
+    "src": "images/learning/u-1f9fc.webp",
+    "label": "Bar of soap"
+  },
+  "🎒": {
+    "kind": "image",
+    "src": "images/learning/u-1f392.webp",
+    "label": "School satchel"
+  },
+  "👟": {
+    "kind": "image",
+    "src": "images/learning/u-1f45f.webp",
+    "label": "Athletic shoe"
+  },
+  "🙏": {
+    "kind": "image",
+    "src": "images/learning/u-1f64f.webp",
+    "label": "Thankful hands"
+  },
+  "🚗": {
+    "kind": "image",
+    "src": "images/learning/u-1f697.webp",
+    "label": "Automobile"
+  },
+  "😊": {
+    "kind": "image",
+    "src": "images/learning/u-1f642.webp",
+    "label": "Smile"
+  },
+  "😋": {
+    "kind": "image",
+    "src": "images/learning/u-1f60b.webp",
+    "label": "Face savouring delicious food"
+  },
+  "⚽": {
+    "kind": "image",
+    "src": "images/learning/u-26bd.webp",
+    "label": "Soccer ball"
+  },
+  "📞": {
+    "kind": "image",
+    "src": "images/learning/u-1f4de.webp",
+    "label": "Telephone receiver"
+  },
+  "🤩": {
+    "kind": "image",
+    "src": "images/learning/u-1f929.webp",
+    "label": "Grinning face with star eyes"
+  },
+  "👑": {
+    "kind": "image",
+    "src": "images/learning/u-1f451.webp",
+    "label": "Crown"
+  },
+  "👏": {
+    "kind": "image",
+    "src": "images/learning/u-1f44f.webp",
+    "label": "Clapping hands sign"
+  },
+  "🧢": {
+    "kind": "image",
+    "src": "images/learning/u-1f9e2.webp",
+    "label": "Billed cap"
+  },
+  "😔": {
+    "kind": "image",
+    "src": "images/learning/u-1f614.webp",
+    "label": "Sad"
+  },
+  "🛏️": {
+    "kind": "image",
+    "src": "images/learning/u-1f6cf.webp",
+    "label": "Bed"
+  },
+  "🪥": {
+    "kind": "image",
+    "src": "images/learning/u-1faa5.webp",
+    "label": "Toothbrush"
+  },
+  "💤": {
+    "kind": "image",
+    "src": "images/learning/u-1f4a4.webp",
+    "label": "Sleeping symbol"
+  },
+  "📋": {
+    "kind": "image",
+    "src": "images/learning/u-1f4cb.webp",
+    "label": "Clipboard"
+  },
+  "🍮": {
+    "kind": "image",
+    "src": "images/learning/u-1f36e.webp",
+    "label": "Custard"
+  },
+  "↔": {
+    "kind": "icon",
+    "id": "↔",
+    "label": "Both directions"
+  },
+  "🧴": {
+    "kind": "image",
+    "src": "images/learning/u-1f9f4.webp",
+    "label": "Lotion bottle"
+  },
+  "🚪": {
+    "kind": "image",
+    "src": "images/learning/u-1f6aa.webp",
+    "label": "Door"
+  },
+  "🧥": {
+    "kind": "image",
+    "src": "images/learning/u-1f9e5.webp",
+    "label": "Coat"
+  },
+  "🍱": {
+    "kind": "image",
+    "src": "images/learning/lunchbox.webp",
+    "label": "Lunchbox"
+  },
+  "🚌": {
+    "kind": "image",
+    "src": "images/learning/u-1f68c.webp",
+    "label": "Bus"
+  },
+  "🧸": {
+    "kind": "image",
+    "src": "images/learning/u-1f9f8.webp",
+    "label": "Teddy bear"
+  },
+  "🧹": {
+    "kind": "image",
+    "src": "images/learning/u-1f9f9.webp",
+    "label": "Broom"
+  },
+  "😰": {
+    "kind": "image",
+    "src": "images/learning/u-1f630.webp",
+    "label": "Face with open mouth and cold sweat"
+  },
+  "💪": {
+    "kind": "image",
+    "src": "images/learning/u-1f4aa.webp",
+    "label": "Flexed biceps"
+  },
+  "💛": {
+    "kind": "image",
+    "src": "images/learning/heart.webp",
+    "label": "Heart"
+  },
+  "🤗": {
+    "kind": "image",
+    "src": "images/learning/u-1f917.webp",
+    "label": "Welcome"
+  },
+  "💦": {
+    "kind": "image",
+    "src": "images/learning/u-1f4a6.webp",
+    "label": "Splashing sweat symbol"
+  },
+  "🛍️": {
+    "kind": "image",
+    "src": "images/learning/u-1f6cd.webp",
+    "label": "Shopping bags"
+  },
+  "😮": {
+    "kind": "image",
+    "src": "images/learning/u-1f62e.webp",
+    "label": "Face with open mouth"
+  },
+  "🐢": {
+    "kind": "image",
+    "src": "images/learning/u-1f422.webp",
+    "label": "Turtle"
+  },
+  "🥞": {
+    "kind": "image",
+    "src": "images/learning/pitha.webp",
+    "label": "Pitha"
+  },
+  "♨️": {
+    "kind": "image",
+    "src": "images/learning/u-2668.webp",
+    "label": "Hot springs"
+  },
+  "🎂": {
+    "kind": "image",
+    "src": "images/learning/u-1f382.webp",
+    "label": "Birthday cake"
+  },
+  "🍰": {
+    "kind": "image",
+    "src": "images/learning/u-1f370.webp",
+    "label": "Shortcake"
+  },
+  "🌧️": {
+    "kind": "image",
+    "src": "images/learning/u-1f327.webp",
+    "label": "Cloud with rain"
+  },
+  "🍲": {
+    "kind": "image",
+    "src": "images/learning/u-1f372.webp",
+    "label": "Lentil dal"
+  },
+  "🌄": {
+    "kind": "image",
+    "src": "images/learning/u-1f304.webp",
+    "label": "Sunrise over mountains"
+  },
+  "👔": {
+    "kind": "image",
+    "src": "images/learning/u-1f454.webp",
+    "label": "Necktie"
+  },
+  "👗": {
+    "kind": "image",
+    "src": "images/learning/u-1f457.webp",
+    "label": "Dress"
+  },
+  "🍞": {
+    "kind": "image",
+    "src": "images/learning/u-1f35e.webp",
+    "label": "Bread"
+  },
+  "🌃": {
+    "kind": "image",
+    "src": "images/learning/u-1f303.webp",
+    "label": "Night with stars"
+  },
+  "🥣": {
+    "kind": "image",
+    "src": "images/learning/chotpoti.webp",
+    "label": "Chotpoti"
+  },
+  "👓": {
+    "kind": "image",
+    "src": "images/learning/u-1f453.webp",
+    "label": "Eyeglasses"
+  },
+  "🔍": {
+    "kind": "icon",
+    "id": "🔍",
+    "label": "Search"
+  },
+  "🚦": {
+    "kind": "image",
+    "src": "images/learning/u-1f6a6.webp",
+    "label": "Vertical traffic light"
+  },
+  "👀": {
+    "kind": "image",
+    "src": "images/learning/u-1f440.webp",
+    "label": "Eyes"
+  },
+  "😲": {
+    "kind": "image",
+    "src": "images/learning/u-1f62e.webp",
+    "label": "Astonished face"
+  },
+  "🦊": {
+    "kind": "image",
+    "src": "images/learning/u-1f98a.webp",
+    "label": "Fox face"
+  },
+  "🪁": {
+    "kind": "image",
+    "src": "images/learning/u-1fa81.webp",
+    "label": "Kite"
+  },
+  "💨": {
+    "kind": "icon",
+    "id": "wind",
+    "label": "Wind"
+  },
+  "😍": {
+    "kind": "image",
+    "src": "images/learning/u-1f60d.webp",
+    "label": "Smiling face with heart-shaped eyes"
+  },
+  "⚠️": {
+    "kind": "icon",
+    "id": "⚠️",
+    "label": "Notice"
+  },
+  "🌈": {
+    "kind": "image",
+    "src": "images/learning/u-1f308.webp",
+    "label": "Rainbow"
+  },
+  "⛵": {
+    "kind": "image",
+    "src": "images/playbook/build/piece-sailboat.webp",
+    "label": "Sailboat"
+  },
+  "⚾": {
+    "kind": "image",
+    "src": "images/learning/u-26be.webp",
+    "label": "Baseball"
+  },
+  "🛝": {
+    "kind": "image",
+    "src": "images/learning/u-1f6dd-v2.webp",
+    "label": "Slide"
+  },
+  "🎈": {
+    "kind": "image",
+    "src": "images/learning/u-1f388.webp",
+    "label": "Balloon"
+  },
+  "🥳": {
+    "kind": "image",
+    "src": "images/learning/u-1f973.webp",
+    "label": "Face with party horn and party hat"
+  },
+  "🐱": {
+    "kind": "image",
+    "src": "images/learning/u-1f431.webp",
+    "label": "Cat face"
+  },
+  "🥺": {
+    "kind": "image",
+    "src": "images/learning/u-1f97a.webp",
+    "label": "Please"
+  },
+  "🔦": {
+    "kind": "image",
+    "src": "images/learning/u-1f526.webp",
+    "label": "Electric torch"
+  },
+  "🩹": {
+    "kind": "image",
+    "src": "images/learning/u-1fa79.webp",
+    "label": "Adhesive bandage"
+  },
+  "📺": {
+    "kind": "image",
+    "src": "images/learning/u-1f4fa.webp",
+    "label": "Television"
+  },
+  "⏹️": {
+    "kind": "icon",
+    "id": "⏹️",
+    "label": "Stop"
+  },
+  "💌": {
+    "kind": "image",
+    "src": "images/learning/u-1f48c.webp",
+    "label": "Love letter"
+  },
+  "👉": {
+    "kind": "image",
+    "src": "images/learning/u-1f449.webp",
+    "label": "White right pointing backhand index"
+  },
+  "👨‍🏫": {
+    "kind": "image",
+    "src": "images/learning/u-1f9d1-200d-1f3eb.webp",
+    "label": "Teacher"
+  },
+  "🍿": {
+    "kind": "image",
+    "src": "images/learning/u-1f37f.webp",
+    "label": "Popcorn"
+  },
+  "💒": {
+    "kind": "image",
+    "src": "images/learning/u-1f492.webp",
+    "label": "Wedding"
+  },
+  "😅": {
+    "kind": "image",
+    "src": "images/learning/u-1f605.webp",
+    "label": "Smiling face with open mouth and cold sweat"
+  },
+  "☕": {
+    "kind": "image",
+    "src": "images/learning/u-2615.webp",
+    "label": "Hot beverage"
+  },
+  "🏆": {
+    "kind": "image",
+    "src": "images/learning/u-1f3c6.webp",
+    "label": "Trophy"
+  },
+  "🧑‍🍳": {
+    "kind": "image",
+    "src": "images/learning/waiter.webp",
+    "label": "Waiter"
+  },
+  "🧡": {
+    "kind": "image",
+    "src": "images/learning/heart.webp",
+    "label": "Heart"
+  },
+  "🚶": {
+    "kind": "image",
+    "src": "images/learning/u-1f6b6.webp",
+    "label": "Pedestrian"
+  },
+  "🎫": {
+    "kind": "image",
+    "src": "images/learning/u-1f3ab.webp",
+    "label": "Ticket"
+  },
+  "🎞️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3ac.webp",
+    "label": "Film frames"
+  },
+  "🛫": {
+    "kind": "image",
+    "src": "images/learning/u-1f6eb.webp",
+    "label": "Airplane departure"
+  },
+  "🚆": {
+    "kind": "image",
+    "src": "images/learning/u-1f686.webp",
+    "label": "Train"
+  },
+  "🏘️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3d8.webp",
+    "label": "House buildings"
+  },
+  "🏨": {
+    "kind": "image",
+    "src": "images/learning/u-1f3e8.webp",
+    "label": "Hotel"
+  },
+  "💸": {
+    "kind": "image",
+    "src": "images/learning/u-1f4b8.webp",
+    "label": "Money with wings"
+  },
+  "➡️": {
+    "kind": "icon",
+    "id": "➡️",
+    "label": "Next"
+  },
+  "⬅️": {
+    "kind": "icon",
+    "id": "⬅️",
+    "label": "Back"
+  },
+  "📌": {
+    "kind": "icon",
+    "id": "📌",
+    "label": "Pin"
+  },
+  "🔭": {
+    "kind": "image",
+    "src": "images/learning/u-1f52d.webp",
+    "label": "Telescope"
+  },
+  "🔽": {
+    "kind": "icon",
+    "id": "🔽",
+    "label": "Down"
+  },
+  "🔼": {
+    "kind": "icon",
+    "id": "🔼",
+    "label": "Up"
+  },
+  "👍": {
+    "kind": "image",
+    "src": "images/learning/u-1f44d.webp",
+    "label": "Thumbs up sign"
+  },
+  "💎": {
+    "kind": "image",
+    "src": "images/learning/u-1f48e.webp",
+    "label": "Gem stone"
+  },
+  "👜": {
+    "kind": "image",
+    "src": "images/learning/u-1f45c.webp",
+    "label": "Handbag"
+  },
+  "🧑‍🎓": {
+    "kind": "image",
+    "src": "images/learning/u-1f469-200d-1f393.webp",
+    "label": "Adult graduation cap"
+  },
+  "👩‍🎓": {
+    "kind": "image",
+    "src": "images/learning/u-1f469-200d-1f393.webp",
+    "label": "Woman graduation cap"
+  },
+  "🪑": {
+    "kind": "image",
+    "src": "images/learning/u-1fa91.webp",
+    "label": "Chair"
+  },
+  "📊": {
+    "kind": "image",
+    "src": "images/learning/u-1f4ca.webp",
+    "label": "Bar chart"
+  },
+  "➗": {
+    "kind": "image",
+    "src": "images/learning/u-2797.webp",
+    "label": "Heavy division sign"
+  },
+  "🎥": {
+    "kind": "image",
+    "src": "images/learning/u-1f3a5.webp",
+    "label": "Movie camera"
+  },
+  "📕": {
+    "kind": "image",
+    "src": "images/learning/u-1f4d6.webp",
+    "label": "Closed book"
+  },
+  "🖋️": {
+    "kind": "image",
+    "src": "images/learning/u-1f58a.webp",
+    "label": "Lower left fountain pen"
+  },
+  "🎼": {
+    "kind": "image",
+    "src": "images/learning/u-1f3b6.webp",
+    "label": "Musical score"
+  },
+  "🎸": {
+    "kind": "image",
+    "src": "images/learning/u-1f3b8.webp",
+    "label": "Guitar"
+  },
+  "💃": {
+    "kind": "image",
+    "src": "images/learning/u-1f483.webp",
+    "label": "Dancer"
+  },
+  "🎖️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3c5.webp",
+    "label": "Military medal"
+  },
+  "🤵": {
+    "kind": "image",
+    "src": "images/learning/u-1f935.webp",
+    "label": "Man in tuxedo"
+  },
+  "🎆": {
+    "kind": "image",
+    "src": "images/learning/u-1f386.webp",
+    "label": "Fireworks"
+  },
+  "😠": {
+    "kind": "image",
+    "src": "images/learning/frustrated.webp",
+    "label": "Frustrated"
+  },
+  "😨": {
+    "kind": "image",
+    "src": "images/learning/u-1f630.webp",
+    "label": "Fearful face"
+  },
+  "😩": {
+    "kind": "image",
+    "src": "images/learning/u-1f623.webp",
+    "label": "Weary face"
+  },
+  "🥹": {
+    "kind": "image",
+    "src": "images/learning/u-1f622.webp",
+    "label": "a gently tearful Bengali child portrait, warm brown skin and black hair, no yellow emoji face"
+  },
+  "🤔": {
+    "kind": "image",
+    "src": "images/learning/u-1f914.webp",
+    "label": "Thinking face"
+  },
+  "❤️": {
+    "kind": "image",
+    "src": "images/learning/heart.webp",
+    "label": "Heart"
+  },
+  "😒": {
+    "kind": "image",
+    "src": "images/learning/u-1f614.webp",
+    "label": "Unamused face"
+  },
+  "😳": {
+    "kind": "image",
+    "src": "images/learning/u-1f633.webp",
+    "label": "Flushed face"
+  },
+  "👌": {
+    "kind": "image",
+    "src": "images/learning/u-1f44c.webp",
+    "label": "Ok hand sign"
+  },
+  "☎️": {
+    "kind": "image",
+    "src": "images/learning/u-1f4de.webp",
+    "label": "Black telephone"
+  },
+  "🌐": {
+    "kind": "image",
+    "src": "images/learning/u-1f30d.webp",
+    "label": "World"
+  },
+  "📹": {
+    "kind": "image",
+    "src": "images/learning/u-1f4f9.webp",
+    "label": "Video camera"
+  },
+  "📷": {
+    "kind": "image",
+    "src": "images/learning/u-1f4f7.webp",
+    "label": "Camera"
+  },
+  "💻": {
+    "kind": "image",
+    "src": "images/learning/u-1f4bb.webp",
+    "label": "Personal computer"
+  },
+  "🔋": {
+    "kind": "image",
+    "src": "images/learning/u-1f50b.webp",
+    "label": "Battery"
+  },
+  "🏟️": {
+    "kind": "image",
+    "src": "images/learning/u-1f3df.webp",
+    "label": "Stadium"
+  },
+  "🥈": {
+    "kind": "image",
+    "src": "images/learning/u-1f948.webp",
+    "label": "Second place medal"
+  },
+  "🍢": {
+    "kind": "image",
+    "src": "images/learning/kebab.webp",
+    "label": "Kebab"
+  },
+  "🥘": {
+    "kind": "image",
+    "src": "images/learning/u-1f958.webp",
+    "label": "Shallow pan of food"
+  },
+  "🥦": {
+    "kind": "image",
+    "src": "images/learning/u-1f966.webp",
+    "label": "Broccoli"
+  },
+  "🥟": {
+    "kind": "image",
+    "src": "images/learning/fuchka.webp",
+    "label": "Fuchka"
+  },
+  "🥤": {
+    "kind": "image",
+    "src": "images/learning/u-1f964.webp",
+    "label": "Cup with straw"
+  },
+  "📆": {
+    "kind": "image",
+    "src": "images/learning/u-1f4c5.webp",
+    "label": "Tear-off calendar"
+  },
+  "⏪": {
+    "kind": "icon",
+    "id": "⏪",
+    "label": "Rewind"
+  },
+  "⏩": {
+    "kind": "icon",
+    "id": "⏩",
+    "label": "Fast forward"
+  },
+  "🌤️": {
+    "kind": "image",
+    "src": "images/learning/u-1f324.webp",
+    "label": "Sun"
+  },
+  "🌆": {
+    "kind": "image",
+    "src": "images/learning/u-1f306.webp",
+    "label": "Cityscape at dusk"
+  },
+  "🕐": {
+    "kind": "image",
+    "src": "images/learning/u-1f550.webp",
+    "label": "Clock face one oclock"
+  },
+  "⏱️": {
+    "kind": "icon",
+    "id": "⏱️",
+    "label": "Timer"
+  },
+  "🔜": {
+    "kind": "icon",
+    "id": "🔜",
+    "label": "Next"
+  },
+  "❌": {
+    "kind": "icon",
+    "id": "❌",
+    "label": "Cross"
+  },
+  "👦": {
+    "kind": "image",
+    "src": "images/learning/u-1f466.webp",
+    "label": "Boy"
+  },
+  "🧑‍🏫": {
+    "kind": "image",
+    "src": "images/learning/u-1f9d1-200d-1f3eb.webp",
+    "label": "Teacher"
+  },
+  "🫵": {
+    "kind": "image",
+    "src": "images/learning/u-1faf5-v2.webp",
+    "label": "Pointing hand"
+  },
+  "👫": {
+    "kind": "image",
+    "src": "images/learning/u-1f46b.webp",
+    "label": "Friends"
+  },
+  "👇": {
+    "kind": "image",
+    "src": "images/learning/u-1f447.webp",
+    "label": "White down pointing backhand index"
+  },
+  "🔟": {
+    "kind": "icon",
+    "id": "🔟",
+    "label": "Ten"
+  },
+  "🔴": {
+    "kind": "colour",
+    "value": "#d94141",
+    "label": "Large red circle"
+  },
+  "🟣": {
+    "kind": "colour",
+    "value": "#9054ba",
+    "label": "Large purple circle"
+  },
+  "🟤": {
+    "kind": "colour",
+    "value": "#895c3f",
+    "label": "Large brown circle"
+  },
+  "⚫": {
+    "kind": "colour",
+    "value": "#292c31",
+    "label": "Black"
+  },
+  "🐶": {
+    "kind": "image",
+    "src": "images/learning/u-1f436.webp",
+    "label": "Dog face"
+  },
+  "🐴": {
+    "kind": "image",
+    "src": "images/learning/u-1f434.webp",
+    "label": "Horse face"
+  },
+  "🦁": {
+    "kind": "image",
+    "src": "images/learning/u-1f981.webp",
+    "label": "Lion face"
+  },
+  "🐒": {
+    "kind": "image",
+    "src": "images/learning/u-1f412.webp",
+    "label": "Monkey"
+  },
+  "🐐": {
+    "kind": "image",
+    "src": "images/learning/u-1f410.webp",
+    "label": "Goat"
+  },
+  "🐔": {
+    "kind": "image",
+    "src": "images/learning/u-1f414.webp",
+    "label": "Chicken"
+  },
+  "🐻": {
+    "kind": "image",
+    "src": "images/learning/u-1f43b.webp",
+    "label": "Bear face"
+  },
+  "🐸": {
+    "kind": "image",
+    "src": "images/learning/u-1f438.webp",
+    "label": "Frog face"
+  },
+  "🦌": {
+    "kind": "image",
+    "src": "images/learning/u-1f98c.webp",
+    "label": "Deer"
+  },
+  "🍇": {
+    "kind": "image",
+    "src": "images/learning/u-1f347.webp",
+    "label": "Grapes"
+  },
+  "🍉": {
+    "kind": "image",
+    "src": "images/learning/u-1f349.webp",
+    "label": "Watermelon"
+  },
+  "💇": {
+    "kind": "image",
+    "src": "images/learning/hair.webp",
+    "label": "Hair"
+  },
+  "👁️": {
+    "kind": "image",
+    "src": "images/learning/u-1f441.webp",
+    "label": "Eye"
+  },
+  "👃": {
+    "kind": "image",
+    "src": "images/learning/nose.webp",
+    "label": "Nose"
+  },
+  "👂": {
+    "kind": "image",
+    "src": "images/learning/u-1f442.webp",
+    "label": "Ear"
+  },
+  "👅": {
+    "kind": "image",
+    "src": "images/learning/u-1f445.webp",
+    "label": "Tongue"
+  },
+  "🦷": {
+    "kind": "image",
+    "src": "images/learning/u-1f9b7.webp",
+    "label": "Tooth"
+  },
+  "✋": {
+    "kind": "image",
+    "src": "images/learning/hand.webp",
+    "label": "Hand"
+  },
+  "☝️": {
+    "kind": "image",
+    "src": "images/learning/u-261d.webp",
+    "label": "White up pointing index"
+  },
+  "🦶": {
+    "kind": "image",
+    "src": "images/learning/u-1f9b6.webp",
+    "label": "Foot"
+  },
+  "🦵": {
+    "kind": "image",
+    "src": "images/learning/u-1f9b5.webp",
+    "label": "Knee"
+  },
+  "🤰": {
+    "kind": "image",
+    "src": "images/learning/u-1f930.webp",
+    "label": "Tummy"
+  },
+  "🖊️": {
+    "kind": "image",
+    "src": "images/learning/u-1f58a.webp",
+    "label": "Lower left ballpoint pen"
+  },
+  "🪟": {
+    "kind": "image",
+    "src": "images/learning/u-1fa9f.webp",
+    "label": "Window"
+  },
+  "🌺": {
+    "kind": "image",
+    "src": "images/learning/u-1f33a.webp",
+    "label": "Hibiscus"
+  },
+  "🪷": {
+    "kind": "image",
+    "src": "images/learning/u-1fab7.webp",
+    "label": "Water lily"
+  },
+  "🐦‍⬛": {
+    "kind": "image",
+    "src": "images/learning/u-1f426-200d-2b1b.webp",
+    "label": "Magpie-robin"
+  },
+  "🎣": {
+    "kind": "image",
+    "src": "images/learning/u-1f3a3.webp",
+    "label": "Hilsa"
+  },
+  "👎": {
+    "kind": "image",
+    "src": "images/learning/u-1f44e.webp",
+    "label": "Thumbs down sign"
+  },
+  "🆕": {
+    "kind": "icon",
+    "id": "🆕",
+    "label": "New"
+  },
+  "🧊": {
+    "kind": "image",
+    "src": "images/learning/u-1f9ca.webp",
+    "label": "Ice cube"
+  },
+  "😤": {
+    "kind": "image",
+    "src": "images/learning/frustrated.webp",
+    "label": "Frustrated"
+  },
+  "🌶️": {
+    "kind": "image",
+    "src": "images/learning/u-1f336.webp",
+    "label": "Hot pepper"
+  },
+  "😴": {
+    "kind": "image",
+    "src": "images/learning/u-1f634.webp",
+    "label": "Sleep"
+  },
+  "🕵️": {
+    "kind": "image",
+    "src": "images/learning/u-1f575.webp",
+    "label": "Sleuth or spy"
+  },
+  "👆": {
+    "kind": "image",
+    "src": "images/learning/u-1f446.webp",
+    "label": "White up pointing backhand index"
+  },
+  "ℹ️": {
+    "kind": "icon",
+    "id": "ℹ️",
+    "label": "Information"
+  },
+  "⌨️": {
+    "kind": "icon",
+    "id": "⌨️",
+    "label": "Keyboard"
+  },
+  "↗": {
+    "kind": "icon",
+    "id": "↗",
+    "label": "Open"
+  },
+  "🎙️": {
+    "kind": "icon",
+    "id": "🎙️",
+    "label": "Microphone"
+  },
+  "⬇": {
+    "kind": "icon",
+    "id": "⬇",
+    "label": "Download"
+  },
+  "🌼": {
+    "kind": "image",
+    "src": "images/learning/u-1f33c.webp",
+    "label": "Blossom"
+  },
+  "☄️": {
+    "kind": "image",
+    "src": "images/learning/u-2604.webp",
+    "label": "Comet"
+  },
+  "😎": {
+    "kind": "image",
+    "src": "images/learning/u-1f604.webp",
+    "label": "Smiling face with sunglasses"
+  },
+  "🇧🇩": {
+    "kind": "image",
+    "src": "images/learning/u-1f1e7-1f1e9.webp",
+    "label": "Bangladesh flag"
+  },
+  "pink": {
+    "kind": "colour",
+    "value": "#e88fac",
+    "label": "Pink"
+  },
+  "water-lily": {
+    "kind": "image",
+    "src": "images/learning/u-1fab7.webp",
+    "label": "Water lily"
+  },
+  "sugar": {
+    "kind": "image",
+    "src": "images/learning/u-1f9c2.webp",
+    "label": "Sugar"
+  },
+  "salt": {
+    "kind": "image",
+    "src": "images/learning/salt.webp",
+    "label": "Salt"
+  },
+  "shaheed-minar": {
+    "kind": "image",
+    "src": "images/learning/shaheed-minar.webp",
+    "label": "Shaheed Minar"
+  },
+  "green-hills": {
+    "kind": "image",
+    "src": "images/learning/green-hills.webp",
+    "label": "Green hills"
+  },
+  "parliament": {
+    "kind": "image",
+    "src": "images/learning/parliament.webp",
+    "label": "Bangladesh Parliament"
+  },
+  "python": {
+    "kind": "image",
+    "src": "images/learning/python.webp",
+    "label": "Python"
+  },
+  "breakfast": {
+    "kind": "image",
+    "src": "images/learning/breakfast.webp",
+    "label": "Breakfast"
+  },
+  "rice-field": {
+    "kind": "image",
+    "src": "images/learning/rice-field.webp",
+    "label": "Rice field"
+  },
+  "gamchha": {
+    "kind": "image",
+    "src": "images/learning/gamchha.webp",
+    "label": "Gamchha"
+  },
+  "quilt": {
+    "kind": "image",
+    "src": "images/learning/quilt.webp",
+    "label": "Nakshi kantha"
+  },
+  "handloom": {
+    "kind": "image",
+    "src": "images/learning/handloom.webp",
+    "label": "Handloom"
+  },
+  "yoghurt": {
+    "kind": "image",
+    "src": "images/learning/yoghurt.webp",
+    "label": "Yoghurt"
+  }
+}

@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { allItems } from '../curriculum/bank'
@@ -71,7 +72,7 @@ export default function StrokeReview() {
       <p className="mb-4 max-w-2xl text-ink/70">
         Each card shows how the letter is proposed to be written: coloured strokes, numbered in order, the arrow at the end showing the
         direction. The headline (মাত্রা) is drawn last. Use the buttons to fix a stroke's order (↑ ↓), flip its direction (⇄) or remove a
-        stray one (✕). <b>▶ Play</b> shows the animation the learner would see. Mark each card ✓ when it is right.
+        stray one (✕). <b><VisualText>▶</VisualText> Play</b> shows the animation the learner would see. Mark each card ✓ when it is right.
       </p>
 
       <div className="card mb-6 !p-4">
@@ -167,7 +168,7 @@ function GlyphCard({ glyph, kind, mark, onMark, fix, onFix, edits }) {
         onClick={() => setPlay((p) => !p)}
         className="mx-auto mt-2 block rounded-full bg-white px-4 py-1 text-sm font-extrabold text-primary shadow-sm"
       >
-        {play ? '✎ Back to the map' : '▶ Play'}
+        <VisualText>{play ? '✎ Back to the map' : '▶ Play'}</VisualText>
       </button>
 
       <ol className="mt-2 space-y-1">

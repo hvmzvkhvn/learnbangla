@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useState } from 'react'
 import { vowels, consonantGroups, vowelSigns } from '../data/alphabet'
 import Speaker from '../components/Speaker'
@@ -20,7 +21,7 @@ function LetterCard({ item }) {
         <Speaker text={letter} size="sm" label="Hear the letter" />
       </div>
       <div className="mt-3 w-full border-t border-primary/10 pt-3">
-        <span className="text-3xl">{example.emoji}</span>
+        <span className="text-3xl"><VisualText>{example.emoji}</VisualText></span>
         <p className="font-bangla text-xl font-bold text-ink">{example.bn}</p>
         {romanOn && <p className="text-sm font-bold text-primary">{example.roman}</p>}
         <p className="mb-1 text-xs text-ink/70">{example.en}</p>

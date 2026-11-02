@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useMemo, useState } from 'react'
 
 // A small "are you a grown-up?" check in front of the parent area, so a child using the device does not wander in.
@@ -66,7 +67,7 @@ export default function GrownUpGate({ children, why = 'This part is for parents 
 
   return (
     <form onSubmit={submit} className="card mx-auto mt-6 max-w-sm text-center">
-      <p className="text-5xl">🔒</p>
+      <p className="text-5xl"><VisualText>🔒</VisualText></p>
       <h1 className="mt-2 text-2xl font-extrabold text-primary">Grown-ups only</h1>
       <p className="mt-1 text-sm text-ink/75">{why}</p>
       <p className="mt-4 text-sm font-bold text-ink/70">Type this number in digits:</p>

@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useEffect, useRef, useState } from 'react'
 import { speak, stop, useSoundOn } from '../../audio/audio'
 import { useRoman } from '../../state/roman'
@@ -58,7 +59,7 @@ export default function TextView({ text }) {
             English {showEn ? 'on' : 'off'}
           </button>
           <button type="button" onClick={playAll} className="btn-primary !px-4 !py-2 !text-sm">
-            ▶ Play all
+            <VisualText>▶</VisualText> Play all
           </button>
         </div>
       </div>
@@ -82,7 +83,7 @@ export default function TextView({ text }) {
             <button type="button" onClick={() => playLine(i)} className="mt-1 block w-full text-center text-xs font-bold text-ink/70">
               {romanOn && <span className="block">{l.roman}</span>}
               {showEn && <span className="mt-0.5 block font-normal text-ink/75">{l.en}</span>}
-              <span className="mt-1 inline-block text-[11px] text-primary">🔊 tap to hear the line</span>
+              <span className="mt-1 inline-block text-[11px] text-primary"><VisualText>🔊</VisualText> tap to hear the line</span>
             </button>
           </div>
         ))}

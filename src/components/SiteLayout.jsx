@@ -1,3 +1,5 @@
+import UiIcon from '../art/UiIcon'
+import VisualText from '../art/VisualText'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { tracks } from '../curriculum/tracks'
 import { useTrack } from '../state/persist'
@@ -30,7 +32,7 @@ export default function SiteLayout() {
       </a>
       <header className="mx-auto flex max-w-3xl items-center justify-between gap-2 px-4 py-4">
         <Link to="/" className="whitespace-nowrap text-xl font-extrabold text-primary">
-          ⭐ Learn Bangla
+          <VisualText>⭐</VisualText> Learn Bangla
         </Link>
         <div className="flex items-center gap-2">
           {track && <span className="rounded-full bg-accent px-3 py-2 text-sm font-bold">Lv {level.level}</span>}
@@ -67,7 +69,7 @@ export default function SiteLayout() {
               }
             >
               <span aria-hidden="true" className="text-2xl">
-                {icon}
+                <UiIcon name={icon} />
               </span>
               {label}
             </NavLink>

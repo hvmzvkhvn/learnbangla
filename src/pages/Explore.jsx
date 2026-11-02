@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { exploreRegions } from '../data/explore'
@@ -29,17 +30,17 @@ export default function Explore() {
   return (
     <div className="py-2">
       <Toasts />
-      <h1 className="text-3xl font-extrabold text-primary">Explore Bangladesh 🗺️</h1>
+      <h1 className="text-3xl font-extrabold text-primary">Explore Bangladesh <VisualText>🗺️</VisualText></h1>
       <p className="mb-3 text-ink/75">Tap a division to read about it, hear it and collect stamps.</p>
 
       <div className="card mb-4 flex items-center justify-around text-center !p-3">
         <div>
-          <p className="text-2xl font-extrabold text-primary">🛂 {ex.regionCount}/8</p>
+          <p className="text-2xl font-extrabold text-primary"><VisualText>🛂</VisualText> {ex.regionCount}/8</p>
           <p className="text-xs font-bold text-ink/70">divisions</p>
         </div>
         <div>
           <p className="text-2xl font-extrabold text-secondary">
-            📍 {ex.cityCount}/{exploreRegions.length * 4}
+            <VisualText>📍</VisualText> {ex.cityCount}/{exploreRegions.length * 4}
           </p>
           <p className="text-xs font-bold text-ink/70">cities</p>
         </div>
@@ -84,7 +85,7 @@ export default function Explore() {
               className="animate-slideIn w-full max-w-xl rounded-t-[2rem] bg-background px-6 pb-28 pt-8 text-center shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <p className="text-6xl">🔒</p>
+              <p className="text-6xl"><VisualText>🔒</VisualText></p>
               <h2 className="mt-2 font-bangla text-3xl font-extrabold text-primary">{region.bn}</h2>
               <p className="font-bold text-ink/75">{region.name} Division</p>
               <p className="mt-3 text-ink/70">

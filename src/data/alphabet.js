@@ -6,7 +6,7 @@ const L = (letter, roman, bn, wordRoman, en, emoji) => ({
 })
 
 export const vowels = [
-  L('অ', 'o', 'অজগর', 'ojogor', 'python', '🐍'),
+  L('অ', 'o', 'অজগর', 'ojogor', 'python', 'python'),
   L('আ', 'a', 'আম', 'am', 'mango', '🥭'),
   L('ই', 'i', 'ইঁদুর', 'indur', 'mouse', '🐭'),
   L('ঈ', 'ee', 'ঈগল', 'igol', 'eagle', '🦅'),
@@ -82,7 +82,7 @@ export const consonantGroups = [
       L('য', 'jo', 'যন্ত্র', 'jontro', 'machine', '⚙️'),
       L('র', 'ro', 'রুটি', 'ruti', 'bread', '🫓'),
       L('ল', 'lo', 'লেবু', 'lebu', 'lemon', '🍋'),
-      L('শ', 'sho', 'শাপলা', 'shapla', 'water lily', '🌸'),
+      L('শ', 'sho', 'শাপলা', 'shapla', 'water lily', 'water-lily'),
       L('ষ', 'sho', 'ষাঁড়', 'shãr', 'bull', '🐂'),
       L('স', 'sho', 'সূর্য', 'shurjo', 'sun', '☀️'),
       L('হ', 'ho', 'হাতি', 'hati', 'elephant', '🐘'),

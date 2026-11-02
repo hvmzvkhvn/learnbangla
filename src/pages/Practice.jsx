@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useProgress, useTrack } from '../state/persist'
@@ -30,12 +31,12 @@ export default function Practice() {
     return (
       <div className="animate-pop py-8 text-center">
         <Confetti />
-        <p className="text-7xl">{feat.garden ? '🧠' : '🔁'}</p>
+        <p className="text-7xl"><VisualText>{feat.garden ? '🧠' : '🔁'}</VisualText></p>
         <h1 className="mt-3 text-3xl font-extrabold text-primary">
           {result.correct} of {result.total} first time
         </h1>
         <p className="mt-2 text-ink/75">The ones you missed will come back soon — that is how they stick.</p>
-        {feat.playful && <p className="mt-3 text-lg font-extrabold text-primary">⭐ Tara says: “Great remembering!”</p>}
+        {feat.playful && <p className="mt-3 text-lg font-extrabold text-primary"><VisualText>⭐</VisualText> Tara says: “Great remembering!”</p>}
         <p className="mt-4 text-2xl font-extrabold text-success">+{result.xp} XP</p>
         <div className="mx-auto mt-6 flex max-w-xs flex-col gap-3">
           <Link to="/" className="btn-primary">
@@ -51,7 +52,7 @@ export default function Practice() {
       <Toasts />
       <h1 className="mb-1 text-3xl font-extrabold text-primary">Practice</h1>
       <Link to="/play" className="card my-4 block font-bold text-primary">
-        🎮 Games — memory, listening and more →
+        <VisualText>🎮</VisualText> Games — memory, listening and more →
       </Link>
       {qs ? (
         qs.length ? (
@@ -72,7 +73,7 @@ export default function Practice() {
         <div className="card mt-4 text-center">
           {items.length ? (
             <>
-              <p className="text-6xl">{feat.garden ? '🧠' : '🔁'}</p>
+              <p className="text-6xl"><VisualText>{feat.garden ? '🧠' : '🔁'}</VisualText></p>
               <p className="mt-3 text-lg font-extrabold text-ink">
                 {dueCount > 0
                   ? `${dueCount} ${dueCount === 1 ? 'thing is' : 'things are'} ready to practise again.`
@@ -87,7 +88,7 @@ export default function Practice() {
             </>
           ) : (
             <>
-              <p className="text-6xl">🌱</p>
+              <p className="text-6xl"><VisualText>🌱</VisualText></p>
               <p className="mt-3 text-lg font-extrabold text-ink">Nothing to review yet.</p>
               <p className="mt-1 text-sm text-ink/75">Finish a lesson first — then the things you learned will show up here.</p>
               <Link to="/" className="btn-secondary mt-5 inline-block">

@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { Link } from 'react-router-dom'
 import { accountsEnabled } from '../lib/supabaseClient'
 import { useSync } from '../sync/engine'
@@ -9,7 +10,7 @@ export default function AccountCard() {
   const signedIn = Boolean(sync.email)
   return (
     <Link to="/account" className="card mt-8 flex items-center gap-4 !p-5 transition active:scale-95 hover:brightness-105">
-      <span className="text-4xl">{signedIn ? '☁️' : '👪'}</span>
+      <span className="text-4xl"><VisualText>{signedIn ? '☁️' : '👪'}</VisualText></span>
       <span className="flex-1">
         <span className="block text-lg font-extrabold text-ink">{signedIn ? 'Your account' : 'Parent account'}</span>
         <span className="block text-sm text-ink/75">

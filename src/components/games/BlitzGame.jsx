@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Face from '../lesson/Face'
 import { quickChoice } from '../../curriculum/exercises'
@@ -92,10 +93,10 @@ export default function BlitzGame({ pool, trackKey, seconds: secondsProp = 60, o
         <div className="h-3 flex-1 overflow-hidden rounded-full bg-primary/10">
           <div className={`h-full rounded-full transition-all ${left <= 10 ? 'bg-error' : 'bg-success'}`} style={{ width: `${pct}%` }} />
         </div>
-        <span className="rounded-full bg-accent px-3 py-1 text-sm font-extrabold">⚡ {score}</span>
+        <span className="rounded-full bg-accent px-3 py-1 text-sm font-extrabold"><VisualText>⚡</VisualText> {score}</span>
       </div>
       <div className="mb-2 h-6 text-center text-sm font-extrabold text-secondary">
-        {combo >= 2 && <span className="animate-pop inline-block">🔥 Combo x{combo}</span>}
+        {combo >= 2 && <span className="animate-pop inline-block"><VisualText>🔥</VisualText> Combo x{combo}</span>}
       </div>
 
       <h2 className="mb-3 text-center text-lg font-extrabold text-ink">{q.title}</h2>

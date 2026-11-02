@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useState } from 'react'
 import BanglaLine from './BanglaLine'
 
@@ -9,8 +10,8 @@ export default function ThenNow({ then, now }) {
   return (
     <div className="rounded-3xl bg-white p-4 shadow-sm">
       <div className="flex items-center justify-between text-sm font-extrabold">
-        <span className={isNow ? 'text-ink/30' : 'text-primary'}>⏳ Then</span>
-        <span className={isNow ? 'text-secondary' : 'text-ink/30'}>Now ✨</span>
+        <span className={isNow ? 'text-ink/30' : 'text-primary'}><VisualText>⏳</VisualText> Then</span>
+        <span className={isNow ? 'text-secondary' : 'text-ink/30'}>Now <VisualText>✨</VisualText></span>
       </div>
       <input
         type="range" min="0" max="100" value={v} onChange={(e) => setV(Number(e.target.value))}

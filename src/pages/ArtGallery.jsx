@@ -1,3 +1,5 @@
+import VisualText from '../art/VisualText'
+import learningArt from '../art/learning-art.json'
 import Artwork from '../components/playbook/Artwork'
 import PaintedBuild from '../components/playbook/PaintedBuild'
 import { pageArtPath } from '../data/playbook/artwork'
@@ -149,6 +151,16 @@ const ALL = [
 ]
 
 export default function ArtGallery() {
+  if (typeof location !== 'undefined' && new URLSearchParams(location.search).has('learning')) {
+    const seen = new Set()
+    const items = Object.entries(learningArt).filter(([, a]) => { const id = a.src || a.id || a.value; if(seen.has(id)) return false; seen.add(id); return true })
+    return <div className="mx-auto max-w-5xl px-4 py-8">
+      <p className="text-xs font-extrabold uppercase tracking-widest text-secondary">The LearnBangla picture library</p>
+      <h1 className="my-3 text-3xl font-extrabold text-primary">Small pictures. Clear meanings.</h1>
+      <p className="mb-8 text-ink/70">Everyday objects, familiar faces, and a little encouragement. Shared across lessons and every age group.</p>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">{items.map(([key, art]) => <div key={key} className="rounded-2xl bg-white p-4 text-center shadow-sm"><div className="text-6xl"><VisualText>{key}</VisualText></div><p className="mt-3 text-xs leading-relaxed text-ink/70">{art.label}</p></div>)}</div>
+    </div>
+  }
   const all = typeof location !== 'undefined' && new URLSearchParams(location.search).has('all')
   if (all)
     return (

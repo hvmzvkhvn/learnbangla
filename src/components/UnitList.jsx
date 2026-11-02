@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -20,7 +21,7 @@ export default function UnitList({ track, progress, nextId }) {
               onClick={() => setOpen(isOpen ? '' : u.id)}
               className="flex w-full items-center gap-3 p-4 text-left"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-2xl">{u.emoji}</span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-2xl"><VisualText>{u.emoji}</VisualText></span>
               <span className="flex-1">
                 <span className="block text-xs font-extrabold uppercase tracking-wide text-ink/70">Unit {ui + 1}</span>
                 <span className="block font-bangla text-lg font-extrabold leading-snug text-ink">{u.title}</span>
@@ -52,9 +53,9 @@ export default function UnitList({ track, progress, nextId }) {
                                 : 'bg-background text-ink/70'
                       }`}
                     >
-                      <span className="text-xl">{l.emoji}</span>
+                      <span className="text-xl"><VisualText>{l.emoji}</VisualText></span>
                       <span className="flex-1 font-bangla leading-tight">{l.title}</span>
-                      {p && <span className="text-xs">{'⭐'.repeat(p.stars)}</span>}
+                      {p && <span className="text-xs"><VisualText>{'⭐'.repeat(p.stars)}</VisualText></span>}
                     </Link>
                   )
                 })}

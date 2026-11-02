@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { findLesson, nextLessonId } from '../curriculum/tracks'
@@ -175,9 +176,9 @@ function Player({ lesson, unit, track, saved }) {
 
   const bar = xpOn ? (
     <div className="flex items-center gap-2">
-      {combo >= 2 && <span className="animate-pop rounded-full bg-secondary px-3 py-1 text-sm font-extrabold text-white">🔥 x{combo}</span>}
+      {combo >= 2 && <span className="animate-pop rounded-full bg-secondary px-3 py-1 text-sm font-extrabold text-white"><VisualText>🔥</VisualText> x{combo}</span>}
       <span className="relative rounded-full bg-accent px-3 py-1 text-sm font-extrabold">
-        ⚡ {sessionXp}
+        <VisualText>⚡</VisualText> {sessionXp}
         {gain && (
           <span
             key={gain.id}
@@ -198,8 +199,8 @@ function Player({ lesson, unit, track, saved }) {
         {result.stars >= 2 && <Confetti />}
         <Toasts />
         <div className="py-10 text-center">
-          {lesson.treasure && <p className="animate-pop text-8xl">🎁</p>}
-          <p className="animate-pop text-7xl">{'⭐'.repeat(result.stars)}</p>
+          {lesson.treasure && <p className="animate-pop text-8xl"><VisualText>🎁</VisualText></p>}
+          <p className="animate-pop text-7xl"><VisualText>{'⭐'.repeat(result.stars)}</VisualText></p>
           <h1 className="mt-4 text-3xl font-extrabold text-primary">
             {lesson.treasure
               ? 'Treasure found!'
@@ -222,7 +223,7 @@ function Player({ lesson, unit, track, saved }) {
           </p>
           {playful && (
             <p className="mt-3 text-lg font-extrabold text-primary">
-              ⭐ Tara says: “{result.stars === 3 ? 'Wonderful!' : result.stars === 2 ? 'Well done!' : 'Great try!'}”
+              <VisualText>⭐</VisualText> Tara says: “{result.stars === 3 ? 'Wonderful!' : result.stars === 2 ? 'Well done!' : 'Great try!'}”
             </p>
           )}
           <div className="card mt-5 text-left">
@@ -249,7 +250,7 @@ function Player({ lesson, unit, track, saved }) {
                 <span className="text-success">+{sessionXp + result.bonus}</span>
               </div>
               <div className="mt-2 flex justify-between text-sm font-bold text-ink/75">
-                <span>{feat.garden ? `${stageOf(level.level).emoji} ${stageOf(level.level).name}` : `Level ${level.level}`}</span>
+                <span><VisualText>{feat.garden ? `${stageOf(level.level).emoji} ${stageOf(level.level).name}` : `Level ${level.level}`}</VisualText></span>
                 <span>
                   {level.into}/{level.need} XP
                 </span>
@@ -282,7 +283,7 @@ function Player({ lesson, unit, track, saved }) {
       <Toasts />
       {step.kind === 'intro' && (
         <div className="py-8 text-center">
-          <p className="animate-pop text-6xl">{lesson.emoji}</p>
+          <p className="animate-pop text-6xl"><VisualText>{lesson.emoji}</VisualText></p>
           <p className="mt-3 text-sm font-extrabold uppercase tracking-wide text-ink/70">{unit.title}</p>
           <h1 className="text-3xl font-extrabold text-primary">{lesson.title}</h1>
           <p className="mt-2 text-ink/75">
@@ -311,13 +312,13 @@ function Player({ lesson, unit, track, saved }) {
                 : 'understand and practise ' + lesson.title.toLowerCase()}
           </p>
           {lesson.tip && (
-            <p className="mx-auto mt-5 max-w-sm rounded-2xl bg-accent/30 px-4 py-3 text-left text-sm font-semibold">💡 {lesson.tip}</p>
+            <p className="mx-auto mt-5 max-w-sm rounded-2xl bg-accent/30 px-4 py-3 text-left text-sm font-semibold"><VisualText>💡</VisualText> {lesson.tip}</p>
           )}
           {lesson.rules && (
             <div className="mx-auto mt-4 max-w-sm space-y-2 text-left">
               {lesson.rules.map((r) => (
                 <div key={r.who} className="card flex items-center gap-3 !p-3">
-                  <span className="text-2xl">{r.emoji}</span>
+                  <span className="text-2xl"><VisualText>{r.emoji}</VisualText></span>
                   <span className="flex-1 text-sm font-semibold text-ink/70">{r.who}</span>
                   <span className="font-bangla text-xl font-extrabold text-primary">{r.say}</span>
                   <Speaker inline size="sm" text={r.say} />
@@ -357,7 +358,7 @@ function Player({ lesson, unit, track, saved }) {
         <div>
           <TextView text={built.text} />
           {lesson.kind === 'poem' && lesson.tip && (
-            <p className="mt-4 rounded-2xl bg-accent/30 px-4 py-3 text-sm font-semibold">ℹ️ {lesson.tip}</p>
+            <p className="mt-4 rounded-2xl bg-accent/30 px-4 py-3 text-sm font-semibold"><VisualText>ℹ️</VisualText> {lesson.tip}</p>
           )}
           <button className="btn-primary mt-6 w-full" onClick={advance}>
             Next

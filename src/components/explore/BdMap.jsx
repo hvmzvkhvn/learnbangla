@@ -20,9 +20,9 @@ export default function BdMap({ selected, onSelect, unlocked, stamped, cities = 
             <text x={geo.cx} y={geo.cy} textAnchor="middle" fontSize="15" fontWeight="800" fill="#fff" stroke="rgba(0,0,0,.35)" strokeWidth="0.6" paintOrder="stroke" style={{ pointerEvents: 'none' }}>
               {r.name}
             </text>
-            <text x={geo.cx} y={geo.cy + 17} textAnchor="middle" fontSize="13" style={{ pointerEvents: 'none' }}>
-              {open ? (stamped(r) ? '✅' : '') : '🔒'}
-            </text>
+            <g transform={`translate(${geo.cx - 6} ${geo.cy + 5})`} fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ pointerEvents: 'none' }}>
+              {!open ? <path d="M3 5V3a3 3 0 0 1 6 0v2M1 5h10v8H1z" /> : stamped(r) ? <path d="m1 7 3 3 7-8" /> : null}
+            </g>
               </>
             )}
           </g>

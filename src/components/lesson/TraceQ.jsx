@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useEffect, useRef, useState } from 'react'
 import Speaker from '../Speaker'
 import Prompt from './Prompt'
@@ -150,7 +151,7 @@ export default function TraceQ({ ex, onSolved, lenient = false }) {
 
       {result && (
         <div className="animate-pop mx-auto mt-4 max-w-sm">
-          <p className={`rounded-2xl bg-white px-4 py-3 text-lg font-extrabold shadow-sm ${tone}`}>{msg}</p>
+          <p className={`rounded-2xl bg-white px-4 py-3 text-lg font-extrabold shadow-sm ${tone}`}><VisualText>{msg}</VisualText></p>
         </div>
       )}
 
@@ -162,7 +163,7 @@ export default function TraceQ({ ex, onSolved, lenient = false }) {
             onClick={() => setDemo((d) => !d)}
             className="rounded-2xl bg-white px-4 py-3 font-extrabold text-primary shadow"
           >
-            {demo ? '✏️ Back to tracing' : '▶ Watch how'}
+            <VisualText>{demo ? '✏️ Back to tracing' : '▶ Watch how'}</VisualText>
           </button>
         )}
         {!demo && (
