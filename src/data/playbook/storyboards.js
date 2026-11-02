@@ -189,3 +189,12 @@ export const timelineStory = {
       'বিজয় দিবস।', 'bijoy dibos.'),
   ],
 }
+
+// ---- longer background: extra English paragraphs and extra Bangla lines under the same paintings --------------------
+import { regionMore, timelineMore } from './storyboardMore.js'
+const applyDeep = (panels, extra, label) => {
+  if (extra.length !== panels.length) throw new Error(`${label}: ${extra.length} sets of background for ${panels.length} panels`)
+  panels.forEach((p, i) => Object.assign(p, extra[i]))
+}
+for (const [id, extra] of Object.entries(regionMore)) applyDeep(regionStoryboards[id].panels, extra, id)
+applyDeep(timelineStory.panels, timelineMore, 'timeline')

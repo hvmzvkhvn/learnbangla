@@ -149,3 +149,19 @@ export const olderBooks = [
     ],
   },
 ]
+
+// ---- longer readings: extra lines and chapters under the same paintings ---------------------------------------------
+import { youngMore } from './bookMoreYoung.js'
+import { olderMore } from './bookMoreOlder.js'
+const applyMore = (books, table) =>
+  books.forEach((b) => {
+    const m = table[b.id]
+    if (!m) return
+    if (m.pages.length !== b.pages.length) throw new Error(`${b.id}: ${m.pages.length} sets of extra lines for ${b.pages.length} pages`)
+    b.pages.forEach((p, i) => {
+      p.more = m.pages[i]
+      if (m.chapters[i]) p.chapter = m.chapters[i]
+    })
+  })
+applyMore(youngBooks, youngMore)
+applyMore(olderBooks, olderMore)

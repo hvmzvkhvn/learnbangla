@@ -442,9 +442,10 @@
   padding: 4px 0 14px;
 }
 .pb-timeline button {
-  flex: 1;
-  min-width: 66px;
-  padding: 9px 5px;
+  flex: 0 0 auto;
+  width: 104px;
+  line-height: 1.25;
+  padding: 9px 6px;
   border-bottom: 3px solid #ded6c5;
   color: rgb(var(--muted));
   font-size: 11px;
@@ -823,4 +824,58 @@
   background: rgb(var(--selected));
   color: rgb(var(--primary-text));
   border-color: rgb(var(--primary-text));
+}
+
+/* longer readings: chapter label, background paragraphs, progress bar */
+.pb-chapter {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: rgb(var(--primary-text));
+}
+.pb-chapter span {
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(var(--primary-text), 0.1);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.pb-chapter b {
+  font-family: 'Noto Sans Bengali', sans-serif;
+}
+.pb-deep {
+  margin: 0;
+  padding: 12px 24px 6px;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.65;
+  font-size: 16.5px;
+}
+.pb-art-note {
+  margin: 8px 24px 0;
+  font-size: 12.5px;
+  font-style: italic;
+  opacity: 0.65;
+}
+.pb-caption + .pb-caption {
+  margin-top: 8px;
+}
+.pb-caption[data-line-active='true'] {
+  box-shadow: 0 0 0 2px rgba(var(--primary-text), 0.35);
+}
+.pb-reader-bar {
+  flex: 1;
+  max-width: 220px;
+  height: 7px;
+  margin: 0 12px;
+  border-radius: 999px;
+  background: #d9dfd0;
+  overflow: hidden;
+}
+.pb-reader-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: rgb(var(--primary-text));
 }

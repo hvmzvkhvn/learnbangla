@@ -115,6 +115,12 @@ A 🎨 **Playbook** tab of visual learning, drawn by a small built-in illustrati
 
 Content lives in `src/data/playbook/` and is registered in the bank, so all lines get audio (`npm run audio`) and appear on `/review`. Finishing things earns one-time XP and the Picture Reader, Story Lover, Sharp Eyes and Scene Builder badges.
 
+### Longer stories and histories
+
+Every picture book now reads as chapters: each page keeps its painting and adds two more short readings under it (18 readings in a 5–7 book, 21 in an 8–15 book), with chapter labels. For 16–18 and 18+, each division storyboard and the 1905–1971 timeline have a longer English background paragraph and two extra Bangla lines per chapter, and four new illustrated histories sit under "A country full of stories": Ancient Bengal to the Mughals, Bengal Under the Company and the Raj, From the Language Movement to Independence, and People Who Shaped Bengal (32 chapters). The histories reuse the existing paintings (a chapter's `artNote` says what the picture stands in for), so a chapter can later get its own painting by pointing `art` at a new file.
+
+The extra text lives in `src/data/playbook/` (`bookMoreYoung.js`, `bookMoreOlder.js`, `storyboardMore.js`, `history.js`); `tests/playbook-content.test.mjs` checks every line's script, punctuation and romanisation and that borrowed paintings exist. Factual wording and the Bangla should be reviewed on `/review` before wide release.
+
 ## Super challenges
 
 The last lesson of a unit (the dark 🦸 tile) is a **Super challenge**: about six new, longer sentences written with only vocabulary that unit's track has already taught, and **no transliteration** (the Aa switch is removed inside it). Each has 18 questions: read and say what it means, build the sentence from tiles with decoy tiles, fill the gap, listen and build, and (13+) listen and type in Bangla. Script units use unseen words made only from letters learned so far. Passing with 2+ stars earns bonus XP and the Super badges; there is no gate, and it can be retried any time.

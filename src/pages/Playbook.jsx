@@ -3,13 +3,13 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import PaintedBuild from '../components/playbook/PaintedBuild'
 import { pageArtPath } from '../data/playbook/artwork'
 import Artwork, { PlayIcon, coverUrl } from '../components/playbook/Artwork'
-import BookReader from '../components/playbook/BookReader'
+import BookReader, { stepCount } from '../components/playbook/BookReader'
 import LookLearn from '../components/playbook/LookLearn'
 import BuildScene from '../components/playbook/BuildScene'
 import { useTrack } from '../state/persist'
 import { featuresOf } from '../curriculum/features'
 import { useGame } from '../state/game'
-import { booksFor, buildTasks, lookScenes, regionStoryboards, timelineStory } from '../data/playbook'
+import { booksFor, buildTasks, historyStories, lookScenes, regionStoryboards, timelineStory } from '../data/playbook'
 import { exploreById } from '../data/explore'
 import '../components/playbook/playbook.css'
 import { useBookmarks } from '../components/playbook/bookmarks'
@@ -57,7 +57,7 @@ export default function Playbook() {
     return t ? <BuildScene key={t.id} task={t} /> : <Navigate to="/playbook" replace />
   }
   if (kind === 'story' && feat.storyboards) {
-    const s = id === 'timeline' ? timelineStory : regionStoryboards[id]
+    const s = id === 'timeline' ? timelineStory : regionStoryboards[id] ?? historyStories[id]
     if (!s) return <Navigate to="/playbook" replace />
     const r = exploreById[id]
     return <BookReader key={id} id={`story:${id}`} title={s.title} pages={s.panels} mode="story" backTo="/playbook" xp={20} finishText={r ? `${r.name} — the end` : 'The end'} />
@@ -73,7 +73,7 @@ export default function Playbook() {
     </div>
     <nav className="pb-shortcuts" aria-label="Playbook activities">{categories.filter(([key]) => key !== 'history' || feat.storyboards).map(([key, label, hint]) => <a key={key} href={`#pb-${key}`} className={`pb-shortcut pb-${key}`}><span><PlayIcon kind={key} /></span><div><strong>{label}</strong><small>{hint}</small></div></a>)}</nav>
     <Section kind="read" title="One more story?" hint={young ? 'Little stories. Big discoveries. Tap to read and listen.' : 'Every page is a small adventure. Tap a Bangla word to hear it.'} count={`${books.length} books`}>
-      {books.map(b => <Tile key={b.id} to={`/playbook/book/${b.id}`} bookId={b.id} scene={b.pages[0].scene} id={`t-${b.id}`} title={b.title} sub={`${b.pages.length} pages · Read & listen`} done={Boolean(read[`book:${b.id}`])} page={saved[`book:${b.id}`]?.page || 0} pages={b.pages.length} />)}
+      {books.map(b => <Tile key={b.id} to={`/playbook/book/${b.id}`} bookId={b.id} scene={b.pages[0].scene} id={`t-${b.id}`} title={b.title} sub={`${b.pages.length} pages · ${stepCount(b.pages)} readings`} done={Boolean(read[`book:${b.id}`])} page={saved[`book:${b.id}`]?.of ? saved[`book:${b.id}`].page : 0} pages={saved[`book:${b.id}`]?.of || stepCount(b.pages)} />)}
     </Section>
     <Section kind="look" title="Look a little closer" hint="From a busy bazaar to your own bedroom. Every picture has words to discover." count={`${lookScenes.length} places`}>
       {lookScenes.map(l => <Tile key={l.id} kind="look" to={`/playbook/look/${l.id}`} scene={l.scene} id={`t-look-${l.id}`} title={l.title} sub={`${l.scene.items.filter(i => i.word).length} words to find`} done={Boolean(looked[l.id])} />)}
@@ -84,6 +84,7 @@ export default function Playbook() {
     {feat.storyboards && <Section kind="history" title="A country full of stories" hint="People, places and the journey to independence. Explore our shared history.">
       <Tile kind="history" to="/playbook/story/timeline" art={`${import.meta.env.BASE_URL}${pageArtPath('story:timeline', 2)}`} id="t-timeline" title={{bn:'স্বাধীনতার পথ',en:timelineStory.title}} sub="1905–1971 · 7 chapters" done={Boolean(read['story:timeline'])} page={saved['story:timeline']?.page || 0} pages={7} />
       {Object.entries(regionStoryboards).map(([key, story]) => <Tile key={key} kind="history" to={`/playbook/story/${key}`} art={`${import.meta.env.BASE_URL}${pageArtPath(`story:${key}`, 0)}`} id={`region-${key}`} title={{bn:exploreById[key]?.bn || '',en:story.title.replace('The story of ', '')}} sub={`${story.panels.length} illustrated chapters`} done={Boolean(read[`story:${key}`])} page={saved[`story:${key}`]?.page || 0} pages={story.panels.length} />)}
+      {Object.entries(historyStories).map(([key, story]) => <Tile key={key} kind="history" to={`/playbook/story/${key}`} art={`${import.meta.env.BASE_URL}${story.panels[0].art}`} id={`history-${key}`} title={{bn:story.titleBn,en:story.title}} sub={`${story.panels.length} chapters · ${story.span}`} done={Boolean(read[`story:${key}`])} page={saved[`story:${key}`]?.page || 0} pages={story.panels.length} />)}
     </Section>}
     <p className="pb-footer">Made for curious minds. Rooted in Bangladesh.</p>
   </div>

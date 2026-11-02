@@ -6,8 +6,9 @@
 import { youngBooks, olderBooks } from './books'
 import { lookScenes, buildTasks } from './scenes'
 import { regionStoryboards, timelineStory } from './storyboards'
+import { historyStories } from './history'
 
-export { youngBooks, olderBooks, lookScenes, buildTasks, regionStoryboards, timelineStory }
+export { youngBooks, olderBooks, lookScenes, buildTasks, regionStoryboards, timelineStory, historyStories }
 
 export const booksFor = (trackKey) => (trackKey === 'young' ? youngBooks : olderBooks)
 export const hasTimeline = (trackKey) => trackKey === 'senior' || trackKey === 'adult'
@@ -16,11 +17,12 @@ export const bookById = (trackKey, id) => booksFor(trackKey).find((b) => b.id ==
 /** Every Bangla line in the Playbook (for the audio build and the /review page). */
 export function allLines() {
   const out = []
-  const book = (group, b) => b.pages.forEach((pg) => out.push({ group, bn: pg.bn, roman: pg.roman, en: pg.en }))
-  youngBooks.forEach((b) => book('Playbook · picture books (5–7)', b))
-  olderBooks.forEach((b) => book('Playbook · picture books (8–15)', b))
-  Object.values(regionStoryboards).forEach((s) => s.panels.forEach((pg) => out.push({ group: 'Playbook · division storyboards (16+)', bn: pg.bn, roman: pg.roman, en: pg.en })))
-  timelineStory.panels.forEach((pg) => out.push({ group: 'Playbook · 1905–1971 timeline (16+)', bn: pg.bn, roman: pg.roman, en: pg.en }))
+  const page = (group, pg) => [pg, ...(pg.more ?? [])].forEach((x) => out.push({ group, bn: x.bn, roman: x.roman, en: x.en }))
+  youngBooks.forEach((b) => b.pages.forEach((pg) => page('Playbook · picture books (5–7)', pg)))
+  olderBooks.forEach((b) => b.pages.forEach((pg) => page('Playbook · picture books (8–15)', pg)))
+  Object.values(regionStoryboards).forEach((s) => s.panels.forEach((pg) => page('Playbook · division storyboards (16+)', pg)))
+  timelineStory.panels.forEach((pg) => page('Playbook · 1905–1971 timeline (16+)', pg))
+  Object.values(historyStories).forEach((s) => s.panels.forEach((pg) => page(`Playbook · ${s.title} (16+)`, pg)))
   return out
 }
 export function allWords() {

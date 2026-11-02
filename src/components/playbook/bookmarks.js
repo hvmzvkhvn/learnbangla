@@ -9,6 +9,6 @@ export function useBookmarks() {
   const [all, setAll] = usePersistent('lb.playbookBookmarks', {})
   const scope = `${learnerId || 'guest'}:${track}:${epoch}`
   const saved = all[scope] || {}
-  const save = (id, page) => setAll(prev => ({...prev, [scope]: {...prev[scope], [id]: {page, at: Date.now()}}}))
+  const save = (id, page, of) => setAll(prev => ({...prev, [scope]: {...prev[scope], [id]: {page, ...(of ? { of } : {}), at: Date.now()}}}))
   return [saved, save]
 }
