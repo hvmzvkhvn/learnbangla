@@ -8,8 +8,9 @@ import { lookScenes, buildTasks } from './scenes'
 import { regionStoryboards, timelineStory } from './storyboards'
 import { historyStories } from './history'
 import { longStories, longById, longPages, longParts } from './long/index.js'
+import { divisionStories } from './divisions/index.js'
 
-export { youngBooks, olderBooks, lookScenes, buildTasks, regionStoryboards, timelineStory, historyStories, longStories, longById, longPages, longParts }
+export { youngBooks, olderBooks, lookScenes, buildTasks, regionStoryboards, timelineStory, historyStories, longStories, longById, longPages, longParts, divisionStories }
 
 export const booksFor = (trackKey) => (trackKey === 'young' ? youngBooks : olderBooks)
 export const hasTimeline = (trackKey) => trackKey === 'senior' || trackKey === 'adult'
@@ -25,6 +26,7 @@ export function allLines() {
   timelineStory.panels.forEach((pg) => page('Playbook · 1905–1971 timeline (16+)', pg))
   Object.values(historyStories).forEach((s) => s.panels.forEach((pg) => page(`Playbook · ${s.title} (16+)`, pg)))
   longStories.forEach((s) => s.beats.forEach((b) => ['easy', 'hard'].forEach((level) => b[level].lines.forEach((x) => out.push({ group: `Playbook · ${s.title} (${level === 'easy' ? 'easier' : 'fuller'} telling)`, bn: x.bn, roman: x.roman, en: x.en })))))
+  Object.values(divisionStories).forEach((s) => s.chapters.forEach((ch) => [ch.main, ...ch.more].forEach((x) => out.push({ group: `Playbook · ${s.title} (16+)`, bn: x.bn, roman: x.roman, en: x.en }))))
   return out
 }
 export function allWords() {

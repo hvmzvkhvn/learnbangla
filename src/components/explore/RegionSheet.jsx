@@ -68,11 +68,14 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
           </p>
           <p className="mt-1 text-base leading-relaxed">{r.hook}</p>
         </div>
-        {(tier === 'senior' || tier === 'adult') && (
+        {(tier === 'senior' || tier === 'adult') && (<>
           <Link to={`/playbook/story/${r.id}`} className="btn-secondary mt-3 w-full !py-3">
             <VisualText>▶</VisualText> Watch the story of {r.name}
           </Link>
-        )}
+          <Link to={`/playbook/division/${r.id}`} className="btn-secondary mt-2 w-full !py-3">
+            <VisualText>📖</VisualText> Read the full story of {r.name}
+          </Link>
+        </>)}
         <div className="mt-3">
           <BanglaLine s={r.intro} size="text-2xl" />
         </div>

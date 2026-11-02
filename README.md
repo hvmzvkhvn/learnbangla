@@ -134,6 +134,10 @@ The four stories so far: *Kabuliwala* (Tagore's classic, retold), *The Language 
 
 `tests/long-stories.test.mjs` checks every story has 50 unique slides and that every Bangla line has valid script, a matching romanisation (same word count) and English, that easier lines stay short and fuller lines stay long. It cannot check whether the Bangla is *good* Bangla, or the history correct: new stories need a native-speaker read on `/review` and a fact check before wide release.
 
+### Division deep dives (16–18 and 18+)
+
+Each of the eight divisions has a twelve-chapter story in `src/data/playbook/divisions/<division>.js`: a narration, a background paragraph and three Bangla lines per chapter (with romanisation and English), covering geography, history, food, people and the problems each region faces today. They open from the Explore region sheet (**Read the full story of …**) and from the Playbook's history section, and are text-first: a chapter shows a text card until `public/images/playbook/divisions/<division>-NN.webp` exists. `docs/long-story-art-plan.json` now also has one prompt per chapter (96). `tests/divisions.test.mjs` checks each chapter's Bangla, romanisation and length; the facts need a read by someone who knows each region before wide release.
+
 ## Super challenges
 
 The last lesson of a unit (the dark 🦸 tile) is a **Super challenge**: about six new, longer sentences written with only vocabulary that unit's track has already taught, and **no transliteration** (the Aa switch is removed inside it). Each has 18 questions: read and say what it means, build the sentence from tiles with decoy tiles, fill the gap, listen and build, and (13+) listen and type in Bangla. Script units use unseen words made only from letters learned so far. Passing with 2+ stars earns bonus XP and the Super badges; there is no gate, and it can be retried any time.

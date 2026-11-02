@@ -9,7 +9,7 @@ import BuildScene from '../components/playbook/BuildScene'
 import { usePersistent, useTrack } from '../state/persist'
 import { featuresOf } from '../curriculum/features'
 import { useGame } from '../state/game'
-import { booksFor, buildTasks, historyStories, longById, longParts, longStories, longPages, lookScenes, regionStoryboards, timelineStory } from '../data/playbook'
+import { booksFor, buildTasks, divisionStories, historyStories, longById, longParts, longStories, longPages, lookScenes, regionStoryboards, timelineStory } from '../data/playbook'
 import { exploreById } from '../data/explore'
 import '../components/playbook/playbook.css'
 import { useBookmarks } from '../components/playbook/bookmarks'
@@ -73,6 +73,10 @@ export default function Playbook() {
     const s = longById[id]
     return s ? <LongStory story={s} trackKey={trackKey} /> : <Navigate to="/playbook" replace />
   }
+  if (kind === 'division' && feat.storyboards) {
+    const d = divisionStories[id]
+    return d ? <BookReader key={`division:${id}`} id={`division:${id}`} title={d.title} pages={d.panels} mode="story" backTo="/playbook#pb-history" xp={25} finishText={`${d.title} — the end`} /> : <Navigate to="/playbook" replace />
+  }
   if (kind === 'story' && feat.storyboards) {
     const s = id === 'timeline' ? timelineStory : regionStoryboards[id] ?? historyStories[id]
     if (!s) return <Navigate to="/playbook" replace />
@@ -105,6 +109,7 @@ export default function Playbook() {
       <Tile kind="history" to="/playbook/story/timeline" art={`${import.meta.env.BASE_URL}${pageArtPath('story:timeline', 2)}`} id="t-timeline" title={{bn:'স্বাধীনতার পথ',en:timelineStory.title}} sub="1905–1971 · 7 chapters" done={Boolean(read['story:timeline'])} page={saved['story:timeline']?.page || 0} pages={7} />
       {Object.entries(regionStoryboards).map(([key, story]) => <Tile key={key} kind="history" to={`/playbook/story/${key}`} art={`${import.meta.env.BASE_URL}${pageArtPath(`story:${key}`, 0)}`} id={`region-${key}`} title={{bn:exploreById[key]?.bn || '',en:story.title.replace('The story of ', '')}} sub={`${story.panels.length} illustrated chapters`} done={Boolean(read[`story:${key}`])} page={saved[`story:${key}`]?.page || 0} pages={story.panels.length} />)}
       {Object.entries(historyStories).map(([key, story]) => <Tile key={key} kind="history" to={`/playbook/story/${key}`} art={`${import.meta.env.BASE_URL}${story.panels[0].art}`} id={`history-${key}`} title={{bn:story.titleBn,en:story.title}} sub={`${story.panels.length} chapters · ${story.span}`} done={Boolean(read[`story:${key}`])} page={saved[`story:${key}`]?.page || 0} pages={story.panels.length} />)}
+      {Object.values(divisionStories).map((d) => <Tile key={d.id} kind="history" to={`/playbook/division/${d.id}`} id={`division-${d.id}`} title={{bn:d.titleBn,en:d.title.replace(' in depth', '')}} sub={`${d.chapters.length} chapters · in depth`} done={Boolean(read[`division:${d.id}`])} page={saved[`division:${d.id}`]?.page || 0} pages={d.chapters.length}><div className="pb-long-cover"><small>In depth</small><b lang="bn">{d.titleBn}</b><small>{d.chapters.length} chapters</small></div></Tile>)}
     </Section>}
     <p className="pb-footer">Made for curious minds. Rooted in Bangladesh.</p>
   </div>
