@@ -1,0 +1,150 @@
+{
+  "mode": "built-in image_gen",
+  "note": "Reproduction guidance including visual-review refinements.",
+  "jobs": [
+    {
+      "key": "book-rainy-day-01-reading-01",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 0,
+      "kind": "reading",
+      "index": 0,
+      "text": "The clouds are dark.",
+      "art": "images/playbook/additions/book-rainy-day-01-reading-01.webp",
+      "alt": "The clouds are dark.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: Clouds and rain.\nPRIMARY SCENE TO ILLUSTRATE: The clouds are dark.\nContext only (do not cram all events into image): Clouds in the sky.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-01-reading-02",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 0,
+      "kind": "reading",
+      "index": 1,
+      "text": "The wind blows.",
+      "art": "images/playbook/additions/book-rainy-day-01-reading-02.webp",
+      "alt": "The wind blows.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: Clouds and rain.\nPRIMARY SCENE TO ILLUSTRATE: The wind blows.\nContext only (do not cram all events into image): Clouds in the sky.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-02-reading-01",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 1,
+      "kind": "reading",
+      "index": 0,
+      "text": "Drip drop, the rain.",
+      "art": "images/playbook/additions/book-rainy-day-02-reading-01.webp",
+      "alt": "Drip drop, the rain.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: Drip drop, the rain.\nContext only (do not cram all events into image): The rain falls.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-02-reading-02",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 1,
+      "kind": "reading",
+      "index": 1,
+      "text": "I watch the rain.",
+      "art": "images/playbook/additions/book-rainy-day-02-reading-02.webp",
+      "alt": "I watch the rain.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: I watch the rain.\nContext only (do not cram all events into image): The rain falls.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-03-reading-01",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 2,
+      "kind": "reading",
+      "index": 0,
+      "text": "The umbrella is red.",
+      "art": "images/playbook/additions/book-rainy-day-03-reading-01.webp",
+      "alt": "The umbrella is red.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: The umbrella is red.\nContext only (do not cram all events into image): I have an umbrella.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-03-reading-02",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 2,
+      "kind": "reading",
+      "index": 1,
+      "text": "I do not get wet.",
+      "art": "images/playbook/additions/book-rainy-day-03-reading-02.webp",
+      "alt": "I do not get wet.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: I do not get wet.\nContext only (do not cram all events into image): I have an umbrella.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-04-reading-01",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 3,
+      "kind": "reading",
+      "index": 0,
+      "text": "I jump.",
+      "art": "images/playbook/additions/book-rainy-day-04-reading-01.webp",
+      "alt": "I jump.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: Play.\nPRIMARY SCENE TO ILLUSTRATE: I jump.\nContext only (do not cram all events into image): Splash splash in the water!\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-04-reading-02",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 3,
+      "kind": "reading",
+      "index": 1,
+      "text": "The water splashes.",
+      "art": "images/playbook/additions/book-rainy-day-04-reading-02.webp",
+      "alt": "The water splashes.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: Play.\nPRIMARY SCENE TO ILLUSTRATE: The water splashes.\nContext only (do not cram all events into image): Splash splash in the water!\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-05-reading-01",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 4,
+      "kind": "reading",
+      "index": 0,
+      "text": "The boat floats.",
+      "art": "images/playbook/additions/book-rainy-day-05-reading-01.webp",
+      "alt": "The boat floats.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: The boat floats.\nContext only (do not cram all events into image): My paper boat.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-05-reading-02",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 4,
+      "kind": "reading",
+      "index": 1,
+      "text": "The boat goes far away.",
+      "art": "images/playbook/additions/book-rainy-day-05-reading-02.webp",
+      "alt": "The boat goes far away.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: The boat goes far away.\nContext only (do not cram all events into image): My paper boat.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-06-reading-01",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 5,
+      "kind": "reading",
+      "index": 0,
+      "text": "A rainbow has many colours.",
+      "art": "images/playbook/additions/book-rainy-day-06-reading-01.webp",
+      "alt": "A rainbow has many colours.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: A rainbow has many colours.\nContext only (do not cram all events into image): Look, a rainbow!\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    },
+    {
+      "key": "book-rainy-day-06-reading-02",
+      "group": "book",
+      "id": "rainy-day",
+      "page": 5,
+      "kind": "reading",
+      "index": 1,
+      "text": "The rain has stopped.",
+      "art": "images/playbook/additions/book-rainy-day-06-reading-02.webp",
+      "alt": "The rain has stopped.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: A Rainy Day. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: The rain has stopped.\nContext only (do not cram all events into image): Look, a rainbow!\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, teal green dress with red leggings and yellow rain boots; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style.\nWardrobe continuity is mandatory: Tara wears her teal green dress, red leggings and yellow rain boots in this rainy-day book. No yellow dress."
+    }
+  ]
+}

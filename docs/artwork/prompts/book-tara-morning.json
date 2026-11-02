@@ -1,0 +1,150 @@
+{
+  "mode": "built-in image_gen",
+  "note": "Reproduction guidance including visual-review refinements.",
+  "jobs": [
+    {
+      "key": "book-tara-morning-01-reading-01",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 0,
+      "kind": "reading",
+      "index": 0,
+      "text": "The birds sing.",
+      "art": "images/playbook/additions/book-tara-morning-01-reading-01.webp",
+      "alt": "The birds sing.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: Morning.\nPRIMARY SCENE TO ILLUSTRATE: The birds sing.\nContext only (do not cram all events into image): It is morning.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-01-reading-02",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 0,
+      "kind": "reading",
+      "index": 1,
+      "text": "Tara wakes up.",
+      "art": "images/playbook/additions/book-tara-morning-01-reading-02.webp",
+      "alt": "Tara wakes up.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: Morning.\nPRIMARY SCENE TO ILLUSTRATE: Tara wakes up.\nContext only (do not cram all events into image): It is morning.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-02-reading-01",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 1,
+      "kind": "reading",
+      "index": 0,
+      "text": "The water is cold.",
+      "art": "images/playbook/additions/book-tara-morning-02-reading-01.webp",
+      "alt": "The water is cold.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: The water is cold.\nContext only (do not cram all events into image): Tara washes her face.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-02-reading-02",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 1,
+      "kind": "reading",
+      "index": 1,
+      "text": "Tara takes the soap.",
+      "art": "images/playbook/additions/book-tara-morning-02-reading-02.webp",
+      "alt": "Tara takes the soap.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: Tara takes the soap.\nContext only (do not cram all events into image): Tara washes her face.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-03-reading-01",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 2,
+      "kind": "reading",
+      "index": 0,
+      "text": "Today it is egg and roti.",
+      "art": "images/playbook/additions/book-tara-morning-03-reading-01.webp",
+      "alt": "Today it is egg and roti.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: Today it is egg and roti.\nContext only (do not cram all events into image): Ammu gives breakfast.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-03-reading-02",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 2,
+      "kind": "reading",
+      "index": 1,
+      "text": "Tara drinks a glass of milk.",
+      "art": "images/playbook/additions/book-tara-morning-03-reading-02.webp",
+      "alt": "Tara drinks a glass of milk.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: Tara drinks a glass of milk.\nContext only (do not cram all events into image): Ammu gives breakfast.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-04-reading-01",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 3,
+      "kind": "reading",
+      "index": 0,
+      "text": "There are books in the bag.",
+      "art": "images/playbook/additions/book-tara-morning-04-reading-01.webp",
+      "alt": "There are books in the bag.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: On the way to school.\nPRIMARY SCENE TO ILLUSTRATE: There are books in the bag.\nContext only (do not cram all events into image): Tara takes her bag.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-04-reading-02",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 3,
+      "kind": "reading",
+      "index": 1,
+      "text": "Tara puts on her shoes.",
+      "art": "images/playbook/additions/book-tara-morning-04-reading-02.webp",
+      "alt": "Tara puts on her shoes.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: On the way to school.\nPRIMARY SCENE TO ILLUSTRATE: Tara puts on her shoes.\nContext only (do not cram all events into image): Tara takes her bag.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-05-reading-01",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 4,
+      "kind": "reading",
+      "index": 0,
+      "text": "The bus is yellow.",
+      "art": "images/playbook/additions/book-tara-morning-05-reading-01.webp",
+      "alt": "The bus is yellow.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: The bus is yellow.\nContext only (do not cram all events into image): Tara gets on the bus.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-05-reading-02",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 4,
+      "kind": "reading",
+      "index": 1,
+      "text": "Tara sits by the window.",
+      "art": "images/playbook/additions/book-tara-morning-05-reading-02.webp",
+      "alt": "Tara sits by the window.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: Tara sits by the window.\nContext only (do not cram all events into image): Tara gets on the bus.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-06-reading-01",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 5,
+      "kind": "reading",
+      "index": 0,
+      "text": "There are friends at school.",
+      "art": "images/playbook/additions/book-tara-morning-06-reading-01.webp",
+      "alt": "There are friends at school.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: There are friends at school.\nContext only (do not cram all events into image): Tara goes to school.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-tara-morning-06-reading-02",
+      "group": "book",
+      "id": "tara-morning",
+      "page": 5,
+      "kind": "reading",
+      "index": 1,
+      "text": "Tara smiles.",
+      "art": "images/playbook/additions/book-tara-morning-06-reading-02.webp",
+      "alt": "Tara smiles.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Tara's Morning. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: Tara smiles.\nContext only (do not cram all events into image): Tara goes to school.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    }
+  ]
+}

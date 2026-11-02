@@ -1,0 +1,150 @@
+{
+  "mode": "built-in image_gen",
+  "note": "Reproduction guidance including visual-review refinements.",
+  "jobs": [
+    {
+      "key": "book-at-market-01-reading-01",
+      "group": "book",
+      "id": "at-market",
+      "page": 0,
+      "kind": "reading",
+      "index": 0,
+      "text": "Abbu holds my hand.",
+      "art": "images/playbook/additions/book-at-market-01-reading-01.webp",
+      "alt": "Abbu holds my hand.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: At the market.\nPRIMARY SCENE TO ILLUSTRATE: Abbu holds my hand.\nContext only (do not cram all events into image): We go to the market.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-01-reading-02",
+      "group": "book",
+      "id": "at-market",
+      "page": 0,
+      "kind": "reading",
+      "index": 1,
+      "text": "There are many people at the market.",
+      "art": "images/playbook/additions/book-at-market-01-reading-02.webp",
+      "alt": "There are many people at the market.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: At the market.\nPRIMARY SCENE TO ILLUSTRATE: There are many people at the market.\nContext only (do not cram all events into image): We go to the market.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-02-reading-01",
+      "group": "book",
+      "id": "at-market",
+      "page": 1,
+      "kind": "reading",
+      "index": 0,
+      "text": "The mangoes are sweet.",
+      "art": "images/playbook/additions/book-at-market-02-reading-01.webp",
+      "alt": "The mangoes are sweet.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: The mangoes are sweet.\nContext only (do not cram all events into image): I will buy mangoes.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-02-reading-02",
+      "group": "book",
+      "id": "at-market",
+      "page": 1,
+      "kind": "reading",
+      "index": 1,
+      "text": "The shopkeeper gives mangoes.",
+      "art": "images/playbook/additions/book-at-market-02-reading-02.webp",
+      "alt": "The shopkeeper gives mangoes.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: The shopkeeper gives mangoes.\nContext only (do not cram all events into image): I will buy mangoes.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-03-reading-01",
+      "group": "book",
+      "id": "at-market",
+      "page": 2,
+      "kind": "reading",
+      "index": 0,
+      "text": "The fish is fresh.",
+      "art": "images/playbook/additions/book-at-market-03-reading-01.webp",
+      "alt": "The fish is fresh.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: The fish is fresh.\nContext only (do not cram all events into image): How much is the fish?\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-03-reading-02",
+      "group": "book",
+      "id": "at-market",
+      "page": 2,
+      "kind": "reading",
+      "index": 1,
+      "text": "What is the price?",
+      "art": "images/playbook/additions/book-at-market-03-reading-02.webp",
+      "alt": "What is the price?",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: What is the price?\nContext only (do not cram all events into image): How much is the fish?\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-04-reading-01",
+      "group": "book",
+      "id": "at-market",
+      "page": 3,
+      "kind": "reading",
+      "index": 0,
+      "text": "Abbu gives the money.",
+      "art": "images/playbook/additions/book-at-market-04-reading-01.webp",
+      "alt": "Abbu gives the money.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: Shopping.\nPRIMARY SCENE TO ILLUSTRATE: Abbu gives the money.\nContext only (do not cram all events into image): One hundred taka.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-04-reading-02",
+      "group": "book",
+      "id": "at-market",
+      "page": 3,
+      "kind": "reading",
+      "index": 1,
+      "text": "The shopkeeper smiles.",
+      "art": "images/playbook/additions/book-at-market-04-reading-02.webp",
+      "alt": "The shopkeeper smiles.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: Shopping.\nPRIMARY SCENE TO ILLUSTRATE: The shopkeeper smiles.\nContext only (do not cram all events into image): One hundred taka.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-05-reading-01",
+      "group": "book",
+      "id": "at-market",
+      "page": 4,
+      "kind": "reading",
+      "index": 0,
+      "text": "There are apples in the bag.",
+      "art": "images/playbook/additions/book-at-market-05-reading-01.webp",
+      "alt": "There are apples in the bag.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: There are apples in the bag.\nContext only (do not cram all events into image): Fruit in my bag.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-05-reading-02",
+      "group": "book",
+      "id": "at-market",
+      "page": 4,
+      "kind": "reading",
+      "index": 1,
+      "text": "There are bananas too.",
+      "art": "images/playbook/additions/book-at-market-05-reading-02.webp",
+      "alt": "There are bananas too.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: There are bananas too.\nContext only (do not cram all events into image): Fruit in my bag.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-06-reading-01",
+      "group": "book",
+      "id": "at-market",
+      "page": 5,
+      "kind": "reading",
+      "index": 0,
+      "text": "Ammu is waiting.",
+      "art": "images/playbook/additions/book-at-market-06-reading-01.webp",
+      "alt": "Ammu is waiting.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: Ammu is waiting.\nContext only (do not cram all events into image): Let's go home.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-at-market-06-reading-02",
+      "group": "book",
+      "id": "at-market",
+      "page": 5,
+      "kind": "reading",
+      "index": 1,
+      "text": "Today was a fun day.",
+      "art": "images/playbook/additions/book-at-market-06-reading-02.webp",
+      "alt": "Today was a fun day.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: At the Market. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: Today was a fun day.\nContext only (do not cram all events into image): Let's go home.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    }
+  ]
+}

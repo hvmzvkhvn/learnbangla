@@ -190,11 +190,15 @@ export const timelineStory = {
   ],
 }
 
-// ---- longer background: extra English paragraphs and extra Bangla lines under the same paintings --------------------
+// ---- longer background: extra English paragraphs and Bangla lines with dedicated illustrations --------------------
+import { illustrateAdditions } from './readingArtwork.js'
 import { regionMore, timelineMore } from './storyboardMore.js'
 const applyDeep = (panels, extra, label) => {
   if (extra.length !== panels.length) throw new Error(`${label}: ${extra.length} sets of background for ${panels.length} panels`)
-  panels.forEach((p, i) => Object.assign(p, extra[i]))
+  panels.forEach((p, i) => {
+    Object.assign(p, extra[i])
+    illustrateAdditions('story', label, p, i)
+  })
 }
 for (const [id, extra] of Object.entries(regionMore)) applyDeep(regionStoryboards[id].panels, extra, id)
 applyDeep(timelineStory.panels, timelineMore, 'timeline')

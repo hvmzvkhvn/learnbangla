@@ -1,0 +1,150 @@
+{
+  "mode": "built-in image_gen",
+  "note": "Reproduction guidance including visual-review refinements.",
+  "jobs": [
+    {
+      "key": "book-my-animals-01-reading-01",
+      "group": "book",
+      "id": "my-animals",
+      "page": 0,
+      "kind": "reading",
+      "index": 0,
+      "text": "The dog runs.",
+      "art": "images/playbook/additions/book-my-animals-01-reading-01.webp",
+      "alt": "The dog runs.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: Animals at home.\nPRIMARY SCENE TO ILLUSTRATE: The dog runs.\nContext only (do not cram all events into image): A dog and a cat.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-01-reading-02",
+      "group": "book",
+      "id": "my-animals",
+      "page": 0,
+      "kind": "reading",
+      "index": 1,
+      "text": "The cat drinks milk.",
+      "art": "images/playbook/additions/book-my-animals-01-reading-02.webp",
+      "alt": "The cat drinks milk.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: Animals at home.\nPRIMARY SCENE TO ILLUSTRATE: The cat drinks milk.\nContext only (do not cram all events into image): A dog and a cat.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-02-reading-01",
+      "group": "book",
+      "id": "my-animals",
+      "page": 1,
+      "kind": "reading",
+      "index": 0,
+      "text": "The cow gives milk.",
+      "art": "images/playbook/additions/book-my-animals-02-reading-01.webp",
+      "alt": "The cow gives milk.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: The cow gives milk.\nContext only (do not cram all events into image): A cow and a goat.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-02-reading-02",
+      "group": "book",
+      "id": "my-animals",
+      "page": 1,
+      "kind": "reading",
+      "index": 1,
+      "text": "The goat eats grass.",
+      "art": "images/playbook/additions/book-my-animals-02-reading-02.webp",
+      "alt": "The goat eats grass.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: The goat eats grass.\nContext only (do not cram all events into image): A cow and a goat.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-03-reading-01",
+      "group": "book",
+      "id": "my-animals",
+      "page": 2,
+      "kind": "reading",
+      "index": 0,
+      "text": "The elephant's trunk is long.",
+      "art": "images/playbook/additions/book-my-animals-03-reading-01.webp",
+      "alt": "The elephant's trunk is long.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: Big animals.\nPRIMARY SCENE TO ILLUSTRATE: The elephant's trunk is long.\nContext only (do not cram all events into image): The elephant is very big.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-03-reading-02",
+      "group": "book",
+      "id": "my-animals",
+      "page": 2,
+      "kind": "reading",
+      "index": 1,
+      "text": "The elephant drinks water.",
+      "art": "images/playbook/additions/book-my-animals-03-reading-02.webp",
+      "alt": "The elephant drinks water.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: Big animals.\nPRIMARY SCENE TO ILLUSTRATE: The elephant drinks water.\nContext only (do not cram all events into image): The elephant is very big.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-04-reading-01",
+      "group": "book",
+      "id": "my-animals",
+      "page": 3,
+      "kind": "reading",
+      "index": 0,
+      "text": "The monkey eats a banana.",
+      "art": "images/playbook/additions/book-my-animals-04-reading-01.webp",
+      "alt": "The monkey eats a banana.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: page 4.\nPRIMARY SCENE TO ILLUSTRATE: The monkey eats a banana.\nContext only (do not cram all events into image): The monkey sits in the tree.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-04-reading-02",
+      "group": "book",
+      "id": "my-animals",
+      "page": 3,
+      "kind": "reading",
+      "index": 1,
+      "text": "The monkey jumps.",
+      "art": "images/playbook/additions/book-my-animals-04-reading-02.webp",
+      "alt": "The monkey jumps.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: page 4.\nPRIMARY SCENE TO ILLUSTRATE: The monkey jumps.\nContext only (do not cram all events into image): The monkey sits in the tree.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-05-reading-01",
+      "group": "book",
+      "id": "my-animals",
+      "page": 4,
+      "kind": "reading",
+      "index": 0,
+      "text": "The peacock's feathers are beautiful.",
+      "art": "images/playbook/additions/book-my-animals-05-reading-01.webp",
+      "alt": "The peacock's feathers are beautiful.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: Birds and fish.\nPRIMARY SCENE TO ILLUSTRATE: The peacock's feathers are beautiful.\nContext only (do not cram all events into image): The peacock dances.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-05-reading-02",
+      "group": "book",
+      "id": "my-animals",
+      "page": 4,
+      "kind": "reading",
+      "index": 1,
+      "text": "When the rain comes, the peacock dances.",
+      "art": "images/playbook/additions/book-my-animals-05-reading-02.webp",
+      "alt": "When the rain comes, the peacock dances.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: Birds and fish.\nPRIMARY SCENE TO ILLUSTRATE: When the rain comes, the peacock dances.\nContext only (do not cram all events into image): The peacock dances.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-06-reading-01",
+      "group": "book",
+      "id": "my-animals",
+      "page": 5,
+      "kind": "reading",
+      "index": 0,
+      "text": "The fish swim.",
+      "art": "images/playbook/additions/book-my-animals-06-reading-01.webp",
+      "alt": "The fish swim.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: The fish swim.\nContext only (do not cram all events into image): Fish in the water.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-my-animals-06-reading-02",
+      "group": "book",
+      "id": "my-animals",
+      "page": 5,
+      "kind": "reading",
+      "index": 1,
+      "text": "The fish are tiny.",
+      "art": "images/playbook/additions/book-my-animals-06-reading-02.webp",
+      "alt": "The fish are tiny.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: My Animals. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: The fish are tiny.\nContext only (do not cram all events into image): Fish in the water.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    }
+  ]
+}
