@@ -13,6 +13,7 @@ const server = await createServer({ root, server: { middlewareMode: true }, appT
 const { longStories, longArtPath } = await server.ssrLoadModule('/src/data/playbook/long/index.js')
 const { divisionStories } = await server.ssrLoadModule('/src/data/playbook/divisions/index.js')
 const { divisionArtPath } = await server.ssrLoadModule('/src/data/playbook/divisions/helpers.js')
+const { districtStories, districtArtPath } = await server.ssrLoadModule('/src/data/playbook/districts/index.js')
 await server.close()
 
 const STYLE = 'Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet.'
@@ -30,6 +31,15 @@ jobs.push(...Object.values(divisionStories).flatMap((d) => d.chapters.map((ch, i
   id: `${d.id}-${String(i + 1).padStart(2, '0')}`,
   relative: divisionArtPath(d.id, i),
   exists: existsSync(path.join(root, 'public', divisionArtPath(d.id, i))),
+  story: d.title,
+  slide: `${i + 1}/${d.chapters.length}`,
+  title: ch.heading,
+  prompt: `Illustration, "${d.title}", chapter ${i + 1} of ${d.chapters.length}, "${ch.heading}". ${ch.paint} ${DIVISION_NOTE} ${STYLE}`,
+}))))
+jobs.push(...Object.values(districtStories).flatMap((d) => d.chapters.map((ch, i) => ({
+  id: `${d.id}-${String(i + 1).padStart(2, '0')}`,
+  relative: districtArtPath(d.id, i),
+  exists: existsSync(path.join(root, 'public', districtArtPath(d.id, i))),
   story: d.title,
   slide: `${i + 1}/${d.chapters.length}`,
   title: ch.heading,

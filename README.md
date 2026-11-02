@@ -142,6 +142,10 @@ Each of the eight divisions has a twelve-chapter story in `src/data/playbook/div
 
 Every Explore division card (13+) now also shows **What people eat**, **Nature & places** and **Did you know?** for 13–15, and adds **Festivals & gatherings**, **People to know** and **How people talk** for 16–18 and 18+. Each food, place, festival and person is a short Bangla line (romanisation, English, tap-a-word audio) with a longer English note. Content: `src/data/exploreProfile*.js` (checked by `tests/explore-profile.test.mjs`) and `src/components/explore/RegionProfile.jsx`. Emoji must come from the shared art map (`src/art/learning-art.json`) or `tests/learning-art.test.mjs` fails.
 
+### District stories (16–18 and 18+)
+
+A first batch of eight districts, one per division, each with eight chapters in `src/data/playbook/districts/`: Narayanganj, Bandarban, Sunamganj, Patuakhali, Kushtia, Bogura, Netrokona and Dinajpur. They use the same chapter shape as the division deep dives (narration, background paragraph, three Bangla lines), open from the Explore region sheet (**District story: …**) and the Playbook's history section, and show a text card until `public/images/playbook/districts/<district>-NN.webp` exists (`docs/long-story-art-plan.json` has the prompts). `tests/districts.test.mjs` checks the Bangla and romanisation; facts need a local read before wide release. Adding a district means writing `districts/<id>.js` and one line in `districts/index.js`.
+
 ## Super challenges
 
 The last lesson of a unit (the dark 🦸 tile) is a **Super challenge**: about six new, longer sentences written with only vocabulary that unit's track has already taught, and **no transliteration** (the Aa switch is removed inside it). Each has 18 questions: read and say what it means, build the sentence from tiles with decoy tiles, fill the gap, listen and build, and (13+) listen and type in Bangla. Script units use unseen words made only from letters learned so far. Passing with 2+ stars earns bonus XP and the Super badges; there is no gate, and it can be retried any time.
