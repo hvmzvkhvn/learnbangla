@@ -67,11 +67,13 @@ export default function GrownUpGate({ children, why = 'This part is for parents 
 
   return (
     <form onSubmit={submit} className="card mx-auto mt-6 max-w-sm text-center">
-      <p className="text-5xl"><VisualText>🔒</VisualText></p>
-      <h1 className="mt-2 text-2xl font-extrabold text-primary">Grown-ups only</h1>
-      <p className="mt-1 text-sm text-ink/75">{why}</p>
-      <p className="mt-4 text-sm font-bold text-ink/70">Type this number in digits:</p>
-      <p className="mt-1 text-xl font-extrabold text-ink">{phrase}</p>
+      <p className="text-5xl">
+        <VisualText>🔒</VisualText>
+      </p>
+      <h1 className="mt-2 text-2xl font-bold text-primary">Grown-ups only</h1>
+      <p className="mt-1 text-sm text-muted">{why}</p>
+      <p className="mt-4 text-sm font-bold text-muted">Type this number in digits:</p>
+      <p className="mt-1 text-xl font-bold text-ink">{phrase}</p>
       <input
         value={val}
         onChange={(e) => {

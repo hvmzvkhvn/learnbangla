@@ -30,23 +30,27 @@ export default function Explore() {
   return (
     <div className="py-2">
       <Toasts />
-      <h1 className="text-3xl font-extrabold text-primary">Explore Bangladesh <VisualText>🗺️</VisualText></h1>
-      <p className="mb-3 text-ink/75">Tap a division to read about it, hear it and collect stamps.</p>
+      <h1 className="text-3xl font-bold text-primary">
+        Explore Bangladesh <VisualText>🗺️</VisualText>
+      </h1>
+      <p className="mb-3 text-muted">Tap a division to read about it, hear it and collect stamps.</p>
 
       <div className="card mb-4 flex items-center justify-around text-center !p-3">
         <div>
-          <p className="text-2xl font-extrabold text-primary"><VisualText>🛂</VisualText> {ex.regionCount}/8</p>
-          <p className="text-xs font-bold text-ink/70">divisions</p>
+          <p className="text-2xl font-bold text-primary">
+            <VisualText>🛂</VisualText> {ex.regionCount}/8
+          </p>
+          <p className="text-xs font-bold text-muted">divisions</p>
         </div>
         <div>
-          <p className="text-2xl font-extrabold text-secondary">
+          <p className="text-2xl font-bold text-secondary">
             <VisualText>📍</VisualText> {ex.cityCount}/{exploreRegions.length * 4}
           </p>
-          <p className="text-xs font-bold text-ink/70">cities</p>
+          <p className="text-xs font-bold text-muted">cities</p>
         </div>
         <div>
-          <p className="text-2xl font-extrabold text-ink">{exploreRegions.filter((r) => ex.unlocked(r)).length}/8</p>
-          <p className="text-xs font-bold text-ink/70">unlocked</p>
+          <p className="text-2xl font-bold text-ink">{exploreRegions.filter((r) => ex.unlocked(r)).length}/8</p>
+          <p className="text-xs font-bold text-muted">unlocked</p>
         </div>
       </div>
 
@@ -59,7 +63,7 @@ export default function Explore() {
         activeCity={city?.id}
         onCity={(c) => setCity(c)}
       />
-      <p className="mt-2 text-center text-xs font-bold text-ink/70">Grey regions open as you finish lessons.</p>
+      <p className="mt-2 text-center text-xs font-bold text-muted">Grey regions open as you finish lessons.</p>
 
       <div className="mt-5">
         <Postcard ex={ex} />
@@ -85,10 +89,14 @@ export default function Explore() {
               className="animate-slideIn w-full max-w-xl rounded-t-[2rem] bg-background px-6 pb-28 pt-8 text-center shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <p className="text-6xl"><VisualText>🔒</VisualText></p>
-              <h2 className="mt-2 font-bangla text-3xl font-extrabold text-primary">{region.bn}</h2>
-              <p className="font-bold text-ink/75">{region.name} Division</p>
-              <p className="mt-3 text-ink/70">
+              <p className="text-6xl">
+                <VisualText>🔒</VisualText>
+              </p>
+              <h2 lang="bn" className="mt-2 font-bangla text-3xl font-bold text-primary">
+                {region.bn}
+              </h2>
+              <p className="font-bold text-muted">{region.name} Division</p>
+              <p className="mt-3 text-muted">
                 Finish <b>{ex.needed(region)}</b> more {ex.needed(region) === 1 ? 'lesson' : 'lessons'} to unlock this region.
               </p>
               <button type="button" onClick={() => setSel(null)} className="btn-secondary mt-5 w-full">

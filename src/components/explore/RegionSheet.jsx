@@ -7,7 +7,7 @@ import BanglaLine from './BanglaLine'
 import ThenNow from './ThenNow'
 import { useRoman } from '../../state/roman'
 
-const SectionTitle = ({ children }) => <h3 className="mb-2 mt-5 text-sm font-extrabold uppercase tracking-wide text-ink/70">{children}</h3>
+const SectionTitle = ({ children }) => <h3 className="mb-2 mt-5 text-sm font-bold uppercase tracking-wide text-muted">{children}</h3>
 
 /** The card that slides up when a division is tapped. What it shows deepens with the age track. */
 export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, onCity, activeCity }) {
@@ -40,10 +40,14 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
         className="animate-slideIn max-h-[86vh] w-full max-w-xl overflow-y-auto rounded-t-[2rem] bg-background px-5 pb-28 pt-4 shadow-2xl"
       >
         <div className="sticky top-0 z-10 -mx-5 -mt-4 mb-2 flex items-center gap-3 bg-background/95 px-5 py-3 backdrop-blur">
-          <span className="text-4xl"><VisualText>{r.emoji}</VisualText></span>
+          <span className="text-4xl">
+            <VisualText>{r.emoji}</VisualText>
+          </span>
           <span className="flex-1">
-            <span className="block font-bangla text-3xl font-extrabold leading-none text-primary">{r.bn}</span>
-            <span className="block text-sm font-bold text-ink/70">
+            <span lang="bn" className="block font-bangla text-3xl font-bold leading-none text-primary">
+              {r.bn}
+            </span>
+            <span className="block text-sm font-bold text-muted">
               {r.name} Division{romanOn ? ` · ${r.roman}` : ''}
             </span>
           </span>
@@ -52,14 +56,16 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg font-extrabold text-ink/70 shadow"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg font-bold text-muted shadow"
           >
             ✕
           </button>
         </div>
 
         <div className="rounded-3xl bg-primary px-4 py-4 text-white shadow">
-          <p className="text-xs font-extrabold uppercase tracking-wide opacity-70"><VisualText>📖</VisualText> In English</p>
+          <p className="text-xs font-bold uppercase tracking-wide opacity-70">
+            <VisualText>📖</VisualText> In English
+          </p>
           <p className="mt-1 text-base leading-relaxed">{r.hook}</p>
         </div>
         {(tier === 'senior' || tier === 'adult') && (
@@ -71,27 +77,33 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
           <BanglaLine s={r.intro} size="text-2xl" />
         </div>
 
-        <SectionTitle><VisualText>⭐</VisualText> Famous for</SectionTitle>
+        <SectionTitle>
+          <VisualText>⭐</VisualText> Famous for
+        </SectionTitle>
         <div className="space-y-2">
           {r.famous.map((f) => (
             <BanglaLine key={f.bn} s={f} emoji={f.emoji} />
           ))}
         </div>
 
-        <SectionTitle><VisualText>⏳</VisualText> Then &amp; Now</SectionTitle>
+        <SectionTitle>
+          <VisualText>⏳</VisualText> Then &amp; Now
+        </SectionTitle>
         <ThenNow then={r.then} now={r.now} />
         {tier !== 'teen' && (
           <ol className="mt-3 space-y-2 border-l-4 border-primary/20 pl-4">
             {r.timeline.map(([year, text]) => (
               <li key={year + text} className="text-sm">
-                <span className="mr-2 rounded-full bg-accent px-2 py-0.5 text-xs font-extrabold">{year}</span>
-                <span className="text-ink/80">{text}</span>
+                <span className="mr-2 rounded-full bg-accent px-2 py-0.5 text-xs font-bold">{year}</span>
+                <span className="text-muted">{text}</span>
               </li>
             ))}
           </ol>
         )}
 
-        <SectionTitle><VisualText>🌾</VisualText> Made &amp; grown here</SectionTitle>
+        <SectionTitle>
+          <VisualText>🌾</VisualText> Made &amp; grown here
+        </SectionTitle>
         <div className="space-y-2">
           {r.made.map((f) => (
             <BanglaLine key={f.bn} s={f} emoji={f.emoji} />
@@ -99,22 +111,28 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
         </div>
         {tier !== 'teen' && (
           <div className="mt-3 rounded-2xl bg-secondary/10 px-4 py-3">
-            <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70"><VisualText>💰</VisualText> The economy</p>
-            <p className="mt-1 text-sm leading-relaxed text-ink/80">{r.economy}</p>
+            <p className="text-xs font-bold uppercase tracking-wide text-muted">
+              <VisualText>💰</VisualText> The economy
+            </p>
+            <p className="mt-1 text-sm leading-relaxed text-muted">{r.economy}</p>
           </div>
         )}
         {tier === 'adult' && r.deep && (
           <div className="mt-3 rounded-2xl bg-white px-4 py-3 shadow-sm">
-            <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70"><VisualText>📚</VisualText> Go deeper</p>
+            <p className="text-xs font-bold uppercase tracking-wide text-muted">
+              <VisualText>📚</VisualText> Go deeper
+            </p>
             {r.deep.map((p, i) => (
-              <p key={i} className="mt-2 text-sm leading-relaxed text-ink/80">
+              <p key={i} className="mt-2 text-sm leading-relaxed text-muted">
                 {p}
               </p>
             ))}
           </div>
         )}
 
-        <SectionTitle><VisualText>🏙️</VisualText> Four famous places — tap to open</SectionTitle>
+        <SectionTitle>
+          <VisualText>🏙️</VisualText> Four famous places — tap to open
+        </SectionTitle>
         <div className="space-y-2">
           {r.cities.map((c) => {
             const open = openCity === c.id
@@ -129,17 +147,25 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
                   className="flex w-full items-center gap-3 px-3 py-3 text-left"
                   aria-expanded={open}
                 >
-                  <span className="text-3xl"><VisualText>{c.emoji}</VisualText></span>
-                  <span className="flex-1">
-                    <span className="block font-bangla text-xl font-extrabold text-primary">{c.bn}</span>
-                    <span className="block text-xs font-bold text-ink/70">{c.name}</span>
+                  <span className="text-3xl">
+                    <VisualText>{c.emoji}</VisualText>
                   </span>
-                  {ex.cityStamped(c) && <span title="Stamped"><VisualText>🛂</VisualText></span>}
+                  <span className="flex-1">
+                    <span lang="bn" className="block font-bangla text-xl font-bold text-primary">
+                      {c.bn}
+                    </span>
+                    <span className="block text-xs font-bold text-muted">{c.name}</span>
+                  </span>
+                  {ex.cityStamped(c) && (
+                    <span title="Stamped">
+                      <VisualText>🛂</VisualText>
+                    </span>
+                  )}
                   <span className="text-ink/30">{open ? '▾' : '▸'}</span>
                 </button>
                 {open && (
                   <div className="animate-slideIn space-y-3 border-t border-primary/10 px-3 py-3">
-                    <p className="text-sm leading-relaxed text-ink/80">{c.fact}</p>
+                    <p className="text-sm leading-relaxed text-muted">{c.fact}</p>
                     <BanglaLine s={c.line} />
                     <div className="flex flex-wrap gap-2">
                       {c.words.map((w) => (
@@ -147,12 +173,16 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
                           key={w.bn}
                           type="button"
                           onClick={() => speak(w.bn, { force: true })}
-                          className="flex items-center gap-2 rounded-2xl bg-accent/40 px-3 py-2 text-left transition active:scale-95"
+                          className="flex items-center gap-2 rounded-2xl bg-accent/40 px-3 py-2 text-left transition active:scale-[0.98]"
                         >
-                          <span className="text-2xl"><VisualText>{w.emoji}</VisualText></span>
+                          <span className="text-2xl">
+                            <VisualText>{w.emoji}</VisualText>
+                          </span>
                           <span>
-                            <span className="block font-bangla text-lg font-bold leading-none text-ink">{w.bn}</span>
-                            <span className="block text-xs text-ink/75">
+                            <span lang="bn" className="block font-bangla text-lg font-bold leading-none text-ink">
+                              {w.bn}
+                            </span>
+                            <span className="block text-xs text-muted">
                               {romanOn ? `${w.roman} · ` : ''}
                               {w.en}
                             </span>

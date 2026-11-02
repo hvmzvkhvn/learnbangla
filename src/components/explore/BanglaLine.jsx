@@ -8,7 +8,11 @@ export default function BanglaLine({ s, emoji, size = 'text-xl' }) {
   const [romanOn] = useRoman()
   return (
     <div className="flex items-start gap-3 rounded-2xl bg-white px-3 py-3 shadow-sm">
-      {emoji && <span className="text-3xl"><VisualText>{emoji}</VisualText></span>}
+      {emoji && (
+        <span className="text-3xl">
+          <VisualText>{emoji}</VisualText>
+        </span>
+      )}
       <div className="flex-1">
         <p lang="bn" className={`font-bangla font-bold leading-snug text-primary ${size}`}>
           {s.bn.split(' ').map((t, i) => (
@@ -16,14 +20,14 @@ export default function BanglaLine({ s, emoji, size = 'text-xl' }) {
               key={i}
               type="button"
               onClick={() => speak(t, { force: true })}
-              className="mr-1.5 rounded-lg px-0.5 transition active:scale-95 hover:bg-primary/10"
+              className="mr-1.5 rounded-lg px-0.5 transition active:scale-[0.98] hover:bg-primary/10"
             >
               {t}
             </button>
           ))}
         </p>
-        {romanOn && <p className="text-sm font-bold text-ink/70">{s.roman}</p>}
-        <p className="text-sm text-ink/70">{s.en}</p>
+        {romanOn && <p className="text-sm font-bold text-muted">{s.roman}</p>}
+        <p className="text-sm text-muted">{s.en}</p>
       </div>
       <Speaker text={s.bn} size="sm" label="Hear the sentence" />
     </div>

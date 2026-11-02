@@ -83,23 +83,29 @@ export default function BlitzGame({ pool, trackKey, seconds: secondsProp = 60, o
     )
   }
 
-  if (!q) return <p className="py-10 text-center text-ink/70">Getting ready…</p>
+  if (!q) return <p className="py-10 text-center text-muted">Getting ready…</p>
   const pct = (left / seconds) * 100
 
   return (
     <div>
       <div className="mb-3 flex items-center gap-3">
-        <span className={`w-12 text-center text-2xl font-extrabold ${left <= 10 ? 'text-error' : 'text-primary'}`}>{left}</span>
+        <span className={`w-12 text-center text-2xl font-bold ${left <= 10 ? 'text-error' : 'text-primary'}`}>{left}</span>
         <div className="h-3 flex-1 overflow-hidden rounded-full bg-primary/10">
           <div className={`h-full rounded-full transition-all ${left <= 10 ? 'bg-error' : 'bg-success'}`} style={{ width: `${pct}%` }} />
         </div>
-        <span className="rounded-full bg-accent px-3 py-1 text-sm font-extrabold"><VisualText>⚡</VisualText> {score}</span>
+        <span className="rounded-full bg-accent px-3 py-1 text-sm font-bold">
+          <VisualText>⚡</VisualText> {score}
+        </span>
       </div>
-      <div className="mb-2 h-6 text-center text-sm font-extrabold text-secondary">
-        {combo >= 2 && <span className="animate-pop inline-block"><VisualText>🔥</VisualText> Combo x{combo}</span>}
+      <div className="mb-2 h-6 text-center text-sm font-bold text-secondary">
+        {combo >= 2 && (
+          <span className="animate-pop inline-block">
+            <VisualText>🔥</VisualText> Combo x{combo}
+          </span>
+        )}
       </div>
 
-      <h2 className="mb-3 text-center text-lg font-extrabold text-ink">{q.title}</h2>
+      <h2 className="mb-3 text-center text-lg font-bold text-ink">{q.title}</h2>
       <div className="card mb-4 flex min-h-[7rem] items-center justify-center">
         <Face f={q.stem} big />
       </div>
@@ -112,7 +118,7 @@ export default function BlitzGame({ pool, trackKey, seconds: secondsProp = 60, o
               key={i}
               type="button"
               onClick={() => choose(i)}
-              className={`flex min-h-[5.5rem] items-center justify-center rounded-3xl border-4 bg-white p-3 shadow-sm transition active:scale-95 ${
+              className={`flex min-h-[5.5rem] items-center justify-center rounded-3xl border-4 bg-white p-3 shadow-sm transition active:scale-[0.98] ${
                 right ? 'border-success bg-success/10' : wrong ? 'animate-shake border-error/60 bg-error/10' : 'border-primary/10'
               }`}
             >

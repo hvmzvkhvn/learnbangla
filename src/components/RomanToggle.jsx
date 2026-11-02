@@ -9,10 +9,10 @@ export default function RomanToggle() {
       onClick={() => setOn(!on)}
       aria-pressed={on}
       title={on ? 'Transliteration is on — tap to hide it' : 'Transliteration is off — tap to show it'}
-      className={`flex h-11 items-center gap-1 rounded-full px-3 text-sm font-extrabold shadow-sm ${on ? 'bg-white text-primary' : 'bg-ink/10 text-ink/70'}`}
+      className={`roman-toggle flex min-h-11 items-center gap-1 rounded-full px-3 text-sm font-bold shadow-sm ${on ? 'bg-white text-primary' : 'bg-ink/10 text-muted'}`}
     >
       <span className={`text-lg leading-none ${on ? '' : 'line-through'}`}>Aa</span>
-      <span className="hidden sm:inline">{on ? 'Roman' : 'Off'}</span>
+      <span>{on ? 'Hide pronunciation' : 'Show pronunciation'}</span>
     </button>
   )
 }

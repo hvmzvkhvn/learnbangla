@@ -15,7 +15,7 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
   const [value, setValue] = useState('')
   const [deviceKeyboard, setDeviceKeyboard] = useState(false)
   const [hints, setHints] = useState(0)
-  const [shake, setShake] = useState(false)
+  const [error, setError] = useState(false)
   const [solved, setSolved] = useState(false)
   const mistake = useRef(false)
   const clusters = splitClusters(ex.target)
@@ -33,8 +33,7 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
       speak(ex.say)
     } else {
       mistake.current = true
-      setShake(true)
-      setTimeout(() => setShake(false), 450)
+      setError(true)
       onWrong()
     }
   }
@@ -56,7 +55,7 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
         <Speaker text={ex.say} size="lg" label="Hear the word" />
       </div>
 
-      <div className={`mb-3 flex items-center gap-2 ${shake ? 'animate-shake' : ''}`}>
+      <div className="mb-3 flex items-center gap-2">
         <input
           lang="bn"
           inputMode={deviceKeyboard ? 'text' : 'none'}
@@ -66,7 +65,12 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
           spellCheck={false}
           value={value}
           disabled={solved}
-          onChange={(e) => setValue(e.target.value)}
+          aria-invalid={error}
+          aria-describedby={error ? 'typing-feedback' : undefined}
+          onChange={(e) => {
+            setError(false)
+            setValue(e.target.value)
+          }}
           onKeyDown={(e) => e.key === 'Enter' && check()}
           placeholder="Type here…"
           className={`input-field !py-3 text-center font-bangla !text-3xl font-bold ${solved ? '!border-success !bg-success/10' : ''}`}
@@ -76,26 +80,35 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
       <label className="mb-3 flex items-center gap-2 text-sm">
         <input type="checkbox" checked={deviceKeyboard} onChange={(e) => setDeviceKeyboard(e.target.checked)} /> Use my device’s keyboard
       </label>
-      {shake && (
-        <p role="status" className="gentle-error mb-3">
-          {(() => {
-            const typed = splitClusters(value)
-            const mismatch = clusters.findIndex((c, i) => typed[i] !== c)
-            return mismatch >= 0
-              ? `Look at written part ${mismatch + 1}. Listen again, or use Hint to see the next clue.`
-              : 'Check for an extra letter or vowel sign at the end.'
-          })()}
+      <div className="feedback-slot">
+        {error && (
+          <p id="typing-feedback" role="status" className="gentle-error mb-3">
+            {(() => {
+              const typed = splitClusters(value)
+              const mismatch = clusters.findIndex((c, i) => typed[i] !== c)
+              return mismatch >= 0
+                ? `Look at written part ${mismatch + 1}. Listen again, or use Hint to see the next clue.`
+                : 'Check for an extra letter or vowel sign at the end.'
+            })()}
+          </p>
+        )}
+      </div>
+      {hintText && !solved && (
+        <p className="mb-3 rounded-2xl bg-accent/30 px-4 py-2 text-center text-sm font-bold">
+          <VisualText>💡</VisualText> {hintText}
         </p>
       )}
-      {hintText && !solved && <p className="mb-3 rounded-2xl bg-accent/30 px-4 py-2 text-center text-sm font-bold"><VisualText>💡</VisualText> {hintText}</p>}
 
       {!solved && (
         <>
-          <div className="mb-3 flex gap-3">
+          <div className="lesson-actions">
             <button
               type="button"
-              onClick={() => setHints((h) => Math.min(3, h + 1))}
-              className="flex-1 rounded-2xl bg-white px-4 py-3 font-extrabold text-ink/75 shadow"
+              onClick={() => {
+                setError(false)
+                setHints((h) => Math.min(3, h + 1))
+              }}
+              className="flex-1 rounded-2xl bg-white px-4 py-3 font-bold text-muted shadow"
             >
               <VisualText>💡</VisualText> Hint
             </button>
@@ -105,9 +118,18 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
           </div>
           {!deviceKeyboard && (
             <BengaliKeyboard
-              onKey={(c) => setValue((v) => v + c)}
-              onBackspace={() => setValue((v) => Array.from(v).slice(0, -1).join(''))}
-              onSpace={() => setValue((v) => v + ' ')}
+              onKey={(c) => {
+                setError(false)
+                setValue((v) => v + c)
+              }}
+              onBackspace={() => {
+                setError(false)
+                setValue((v) => Array.from(v).slice(0, -1).join(''))
+              }}
+              onSpace={() => {
+                setError(false)
+                setValue((v) => v + ' ')
+              }}
             />
           )}
         </>

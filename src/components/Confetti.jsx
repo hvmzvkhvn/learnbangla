@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 const PIECES = ['🎉', '⭐', '✨', '🎊', '💫', '🟡', '🟢', '🟠']
 
 /** A burst of falling confetti (pure CSS, no library). */
-export default function Confetti({ count = 28 }) {
+export default function Confetti({ count = 12 }) {
   const items = useMemo(
     () =>
       Array.from({ length: count }, (_, i) => ({
@@ -17,9 +17,13 @@ export default function Confetti({ count = 28 }) {
     [count],
   )
   return (
-    <div className="pointer-events-none fixed inset-0 z-40 overflow-hidden" aria-hidden="true">
+    <div className="celebration-effect pointer-events-none fixed inset-0 z-40 overflow-hidden" aria-hidden="true">
       {items.map((p) => (
-        <span key={p.id} className="animate-confetti absolute top-0" style={{ left: `${p.left}%`, animationDelay: `${p.delay}s`, fontSize: p.size, opacity: 0 }}>
+        <span
+          key={p.id}
+          className="animate-confetti absolute top-0"
+          style={{ left: `${p.left}%`, animationDelay: `${p.delay}s`, fontSize: p.size, opacity: 0 }}
+        >
           <VisualText>{p.glyph}</VisualText>
         </span>
       ))}

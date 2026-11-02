@@ -75,26 +75,38 @@ export default function LookLearn({ look, backTo = '/playbook' }) {
         <Link
           to={backTo}
           aria-label="Back"
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-extrabold text-ink/70 shadow"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-bold text-muted shadow"
         >
           ←
         </Link>
-        <h1 className="flex-1 truncate text-lg font-extrabold text-ink">
-          {look.title.en} <span className="font-bangla text-primary">· {look.title.bn}</span>
+        <h1 className="flex-1 truncate text-lg font-bold text-ink">
+          {look.title.en}{' '}
+          <span lang="bn" className="font-bangla text-primary">
+            · {look.title.bn}
+          </span>
         </h1>
       </div>
 
-      <div className={`pb-activity-scene ${wrong ? 'animate-shake' : ''}`} >
-        <Scene scene={{...look.scene, furnished:true}} id={`look-${look.id}`} className="shadow-md" onItem={tap} ring={shown?._i} />
+      <div className={`pb-activity-scene ${wrong ? 'animate-shake' : ''}`}>
+        <Scene scene={{ ...look.scene, furnished: true }} id={`look-${look.id}`} className="shadow-md" onItem={tap} ring={shown?._i} />
       </div>
 
-      {mode === 'explore' && <div className="pb-object-list" aria-label="Objects in the scene">{hot.map(it => <button key={it.i} aria-pressed={seen.has(it.i)} onClick={() => tap({...it, _i:it.i})}>{seen.has(it.i) ? '✓ ' : ''}{it.word.en}</button>)}</div>}
+      {mode === 'explore' && (
+        <div className="pb-object-list" aria-label="Objects in the scene">
+          {hot.map((it) => (
+            <button key={it.i} aria-pressed={seen.has(it.i)} onClick={() => tap({ ...it, _i: it.i })}>
+              {seen.has(it.i) ? '✓ ' : ''}
+              {it.word.en}
+            </button>
+          ))}
+        </div>
+      )}
       <div className="mt-3 min-h-[92px] rounded-2xl bg-white px-4 py-3 shadow-sm">
         {mode === 'find' && target && !end && (
           <div className="flex items-center gap-3">
-            <span className="flex-1 text-lg font-extrabold text-ink">
+            <span className="flex-1 text-lg font-bold text-ink">
               Find it!{' '}
-              <span className="text-ink/70">
+              <span className="text-muted">
                 ({hot.length - order.length + 1} of {hot.length})
               </span>
             </span>
@@ -103,19 +115,27 @@ export default function LookLearn({ look, backTo = '/playbook' }) {
         )}
         {mode === 'find' && end && (
           <div className="text-center">
-            <p className="text-3xl"><VisualText>🎉</VisualText></p>
-            <p className="font-extrabold text-primary">
+            <p className="text-3xl">
+              <VisualText>🎉</VisualText>
+            </p>
+            <p className="font-bold text-primary">
               You found them all! {score} / {hot.length} on the first go
             </p>
           </div>
         )}
-        {mode === 'explore' && !w && <p className="py-3 text-center font-bold text-ink/70"><VisualText>👆</VisualText> Tap anything in the picture</p>}
+        {mode === 'explore' && !w && (
+          <p className="py-3 text-center font-bold text-muted">
+            <VisualText>👆</VisualText> Tap anything in the picture
+          </p>
+        )}
         {mode === 'explore' && w && (
           <div className="flex items-center gap-3">
             <div className="flex-1">
-              <p className="font-bangla text-3xl font-extrabold text-primary">{w.bn}</p>
-              {romanOn && <p className="text-sm font-bold text-ink/70">{w.roman}</p>}
-              <p className="text-sm text-ink/75">{w.en}</p>
+              <p lang="bn" className="font-bangla text-3xl font-bold text-primary">
+                {w.bn}
+              </p>
+              {romanOn && <p className="text-sm font-bold text-muted">{w.roman}</p>}
+              <p className="text-sm text-muted">{w.en}</p>
             </div>
             <Speaker text={w.bn} size="lg" label="Hear the word" />
           </div>
@@ -145,14 +165,14 @@ export default function LookLearn({ look, backTo = '/playbook' }) {
                 setShown(null)
                 setEnd(false)
               }}
-              className="rounded-2xl bg-white px-4 py-3 font-extrabold text-primary shadow"
+              className="rounded-2xl bg-white px-4 py-3 font-bold text-primary shadow"
             >
               <VisualText>👆</VisualText> Back to exploring
             </button>
           </>
         )}
       </div>
-      <p className="mt-3 text-center text-xs text-ink/70">
+      <p className="mt-3 text-center text-xs text-muted">
         {seen.size} / {hot.length} things discovered
       </p>
     </div>

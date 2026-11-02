@@ -70,25 +70,29 @@ function Hub({ feat }) {
   const stage = stageOf(level.level)
   return (
     <div className="py-2">
-      <h1 className="text-3xl font-extrabold text-primary">{feat.playful ? 'Play time!' : 'Arcade'}</h1>
-      <p className="mb-4 text-ink/75">
+      <h1 className="text-3xl font-bold text-primary">{feat.playful ? 'Play time!' : 'Arcade'}</h1>
+      <p className="mb-4 text-muted">
         {feat.blitzSeconds ? 'Quick games to earn XP and keep your streak going.' : 'Fun games to earn XP — no timers, no rush.'}
       </p>
       <div className="card mb-5 flex items-center justify-around text-center">
         <div>
-          <p className="text-2xl font-extrabold text-primary">
+          <p className="text-2xl font-bold text-primary">
             <VisualText>{feat.garden ? stage.emoji : '⚡'}</VisualText> Lv {level.level}
           </p>
-          <p className="text-xs font-bold text-ink/70">{feat.garden ? stage.name : 'Level'}</p>
+          <p className="text-xs font-bold text-muted">{feat.garden ? stage.name : 'Level'}</p>
         </div>
         <div>
-          <p className="text-2xl font-extrabold text-secondary"><VisualText>🔥</VisualText> {game.streak}</p>
-          <p className="text-xs font-bold text-ink/70">Day streak</p>
+          <p className="text-2xl font-bold text-secondary">
+            <VisualText>🔥</VisualText> {game.streak}
+          </p>
+          <p className="text-xs font-bold text-muted">Day streak</p>
         </div>
         {feat.arcade.includes('blitz') && (
           <div>
-            <p className="text-2xl font-extrabold text-ink"><VisualText>⚡</VisualText> {game.stats.blitzBest}</p>
-            <p className="text-xs font-bold text-ink/70">Blitz best</p>
+            <p className="text-2xl font-bold text-ink">
+              <VisualText>⚡</VisualText> {game.stats.blitzBest}
+            </p>
+            <p className="text-xs font-bold text-muted">Blitz best</p>
           </div>
         )}
       </div>
@@ -99,11 +103,13 @@ function Hub({ feat }) {
             <Link
               key={k}
               to={`/play/${k}`}
-              className={`flex items-center gap-4 rounded-3xl px-5 shadow-md transition active:scale-95 hover:brightness-110 ${feat.garden ? 'py-8' : 'py-6'} ${g.color}`}
+              className={`flex items-center gap-4 rounded-3xl px-5 shadow-md transition active:scale-[0.98] hover:brightness-110 ${feat.garden ? 'py-8' : 'py-6'} ${g.color}`}
             >
-              <span className={feat.garden ? 'text-6xl' : 'text-5xl'}><VisualText>{feat.garden && g.kidEmoji ? g.kidEmoji : g.emoji}</VisualText></span>
+              <span className={feat.garden ? 'text-6xl' : 'text-5xl'}>
+                <VisualText>{feat.garden && g.kidEmoji ? g.kidEmoji : g.emoji}</VisualText>
+              </span>
               <span>
-                <span className="block text-xl font-extrabold">
+                <span className="block text-xl font-bold">
                   {feat.garden && g.kidTitle ? g.kidTitle : g.title}
                   {k === 'daily' && doneToday ? ' ✓' : ''}
                 </span>
@@ -184,11 +190,17 @@ function Runner({ gameKey }) {
     body = (
       <div className="animate-pop py-8 text-center">
         <Confetti />
-        <p className="text-7xl"><VisualText>{feat.garden && meta.kidEmoji ? meta.kidEmoji : meta.emoji}</VisualText></p>
-        <h1 className="mt-3 text-3xl font-extrabold text-primary">{result.headline}</h1>
-        <p className="mt-2 text-ink/75">{result.line}</p>
-        {feat.playful && <p className="mt-3 text-lg font-extrabold text-primary"><VisualText>⭐</VisualText> Tara says: “Great playing!”</p>}
-        <p className="mt-4 text-2xl font-extrabold text-success">+{result.xp} XP</p>
+        <p className="text-7xl">
+          <VisualText>{feat.garden && meta.kidEmoji ? meta.kidEmoji : meta.emoji}</VisualText>
+        </p>
+        <h1 className="mt-3 text-3xl font-bold text-primary">{result.headline}</h1>
+        <p className="mt-2 text-muted">{result.line}</p>
+        {feat.playful && (
+          <p className="mt-3 text-lg font-bold text-primary">
+            <VisualText>⭐</VisualText> Tara says: “Great playing!”
+          </p>
+        )}
+        <p className="mt-4 text-2xl font-bold text-success">+{result.xp} XP</p>
         <div className="mx-auto mt-6 flex max-w-xs flex-col gap-3">
           {gameKey !== 'daily' && (
             <button onClick={again} className="btn-primary">
@@ -295,13 +307,14 @@ function Runner({ gameKey }) {
         <button
           type="button"
           onClick={() => navigate('/play')}
-          className="rounded-full bg-white px-3 py-2 text-lg font-extrabold text-ink/70 shadow"
+          className="rounded-full bg-white px-3 py-2 text-lg font-bold text-muted shadow"
           aria-label="Back"
         >
           ←
         </button>
-        <h1 className="text-2xl font-extrabold text-primary">
-          <VisualText>{feat.garden && meta.kidEmoji ? meta.kidEmoji : meta.emoji}</VisualText> {feat.garden && meta.kidTitle ? meta.kidTitle : meta.title}
+        <h1 className="text-2xl font-bold text-primary">
+          <VisualText>{feat.garden && meta.kidEmoji ? meta.kidEmoji : meta.emoji}</VisualText>{' '}
+          {feat.garden && meta.kidTitle ? meta.kidTitle : meta.title}
         </h1>
       </div>
       {body}

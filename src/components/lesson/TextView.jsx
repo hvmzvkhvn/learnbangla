@@ -47,14 +47,14 @@ export default function TextView({ text }) {
     <div>
       <div className="mb-4 flex items-center justify-between gap-2">
         <div>
-          <p className="text-sm font-extrabold uppercase tracking-wide text-ink/70">{poem ? 'Listen to the song' : 'Read and listen'}</p>
-          {text.author && <p className="text-xs font-bold text-ink/70">by {text.author}</p>}
+          <p className="text-sm font-bold uppercase tracking-wide text-muted">{poem ? 'Listen to the song' : 'Read and listen'}</p>
+          {text.author && <p className="text-sm font-bold text-muted">by {text.author}</p>}
         </div>
         <div className="flex gap-2">
           <button
             type="button"
             onClick={() => setShowEn((v) => !v)}
-            className={`rounded-full px-3 py-2 text-xs font-extrabold shadow-sm ${showEn ? 'bg-white text-primary' : 'bg-ink/10 text-ink/70'}`}
+            className={`rounded-full px-3 py-2 text-sm font-bold shadow-sm ${showEn ? 'bg-white text-primary' : 'bg-ink/10 text-muted'}`}
           >
             English {showEn ? 'on' : 'off'}
           </button>
@@ -73,22 +73,24 @@ export default function TextView({ text }) {
                   <button
                     type="button"
                     onClick={() => speak(strip(t), { force: true })}
-                    className="rounded-lg px-0.5 transition hover:bg-primary/10 active:scale-95"
+                    className="rounded-lg px-0.5 transition hover:bg-primary/10 active:scale-[0.98]"
                   >
                     {t}
                   </button>{' '}
                 </span>
               ))}
             </p>
-            <button type="button" onClick={() => playLine(i)} className="mt-1 block w-full text-center text-xs font-bold text-ink/70">
+            <button type="button" onClick={() => playLine(i)} className="mt-1 block w-full text-center text-sm font-bold text-muted">
               {romanOn && <span className="block">{l.roman}</span>}
-              {showEn && <span className="mt-0.5 block font-normal text-ink/75">{l.en}</span>}
-              <span className="mt-1 inline-block text-[11px] text-primary"><VisualText>🔊</VisualText> tap to hear the line</span>
+              {showEn && <span className="mt-0.5 block font-normal text-muted">{l.en}</span>}
+              <span className="mt-1 inline-block text-[11px] text-primary">
+                <VisualText>🔊</VisualText> tap to hear the line
+              </span>
             </button>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-center text-xs font-bold text-ink/70">Tap any word to hear it</p>
+      <p className="mt-3 text-center text-sm font-bold text-muted">Tap any word to hear it</p>
     </div>
   )
 }

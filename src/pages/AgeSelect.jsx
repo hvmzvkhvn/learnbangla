@@ -18,7 +18,7 @@ export default function AgeSelect() {
   if (chosen)
     return (
       <section className="card my-6">
-        <h1 className="text-2xl font-extrabold text-primary">Where would you like to start?</h1>
+        <h1 className="text-2xl font-bold text-primary">Where would you like to start?</h1>
         <p className="my-3">Age sets the style. Experience sets your starting point. You can open any lesson later.</p>
         <div className="grid gap-3">
           {[
@@ -47,10 +47,14 @@ export default function AgeSelect() {
   return (
     <div className="py-6">
       <div className="card mb-6 flex items-center gap-4">
-        <span className="text-6xl"><VisualText>⭐</VisualText></span>
+        <span className="text-6xl">
+          <VisualText>⭐</VisualText>
+        </span>
         <div>
-          <p className="font-bangla text-3xl font-bold text-primary">স্বাগতম!</p>
-          <p className="text-lg font-bold text-ink/70">Hi, I'm Tara! How old are you?</p>
+          <p lang="bn" className="font-bangla text-3xl font-bold text-primary">
+            স্বাগতম!
+          </p>
+          <p className="text-lg font-bold text-muted">Hi, I'm Tara! How old are you?</p>
         </div>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
@@ -59,11 +63,13 @@ export default function AgeSelect() {
             key={t.key}
             type="button"
             onClick={() => setChosen(t.key)}
-            className={`flex w-full items-center gap-4 rounded-3xl px-6 py-7 text-left shadow-md transition active:scale-95 hover:brightness-110 ${LOOK[t.key]}`}
+            className={`flex w-full items-center gap-4 rounded-3xl px-6 py-7 text-left shadow-md transition active:scale-[0.98] hover:brightness-110 ${LOOK[t.key]}`}
           >
-            <span className="text-5xl"><VisualText>{t.emoji}</VisualText></span>
+            <span className="text-5xl">
+              <VisualText>{t.emoji}</VisualText>
+            </span>
             <span>
-              <span className="block text-3xl font-extrabold">I'm {t.ages}</span>
+              <span className="block text-3xl font-bold">I'm {t.ages}</span>
               <span className="block font-bold">{t.label}</span>
               <span className="block text-sm font-semibold opacity-90">{t.tagline}</span>
             </span>

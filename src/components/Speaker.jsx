@@ -1,72 +1,76 @@
-import VisualText from '../art/VisualText'
-import { useState } from 'react'
-import { speak, speakEnglish, hasAudio, useAudioReady, canSpeakEnglish } from '../audio/audio'
+import UiIcon from '../art/UiIcon'
+import { useEffect, useRef, useState } from 'react'
+import { speak, speakEnglish, stop, canSpeakEnglish } from '../audio/audio'
 
-/**
- * 🔊 button. `text` is Bangla (plays the recording) unless `english` is set.
- * `inline` renders a span so it can sit inside another button without nesting buttons.
- */
+/** Inline is for compact presentation only; callers must not nest interactive controls. */
 export default function Speaker({ text, english = false, inline = false, size = 'md', label = 'Listen', className = '' }) {
-  const ready = useAudioReady()
-  const [playing, setPlaying] = useState(false)
-  const [error, setError] = useState('')
-  const [rate, setRate] = useState(1)
-  const [repeat, setRepeat] = useState(false)
+  const [state, setState] = useState('idle'),
+    [error, setError] = useState(''),
+    [rate, setRate] = useState(1),
+    [repeat, setRepeat] = useState(false)
+  const request = useRef(0),
+    mounted = useRef(true),
+    busy = state === 'loading' || state === 'playing'
+  useEffect(() => {
+    mounted.current = true
+    return () => {
+      mounted.current = false
+    }
+  }, [])
   if (!text || (english && !canSpeakEnglish())) return null
-  const missing = !english && ready && !hasAudio(text)
-
-  const play = async (e) => {
+  async function play(e) {
     e.stopPropagation()
     e.preventDefault()
-    if (english) return speakEnglish(text)
-    setPlaying(true)
+    if (busy) {
+      request.current++
+      stop()
+      setState('idle')
+      return
+    }
+    const id = ++request.current
+    const live = () => mounted.current && id === request.current
     setError('')
+    setState('loading')
+    const onState = (value) => {
+      if (live()) setState(value)
+    }
     try {
-      const ok = await speak(text, { force: true, rate })
-      if (!ok) setError('Audio did not play. Check your connection and tap Listen to retry.')
-      else if (repeat) await speak(text, { force: true, rate })
+      const run = () => (english ? speakEnglish(text, { force: true, onState }) : speak(text, { force: true, rate, onState }))
+      let ok = await run()
+      if (ok && repeat && live()) ok = await run()
+      if (live()) {
+        setState(ok === false ? 'error' : 'idle')
+        if (ok === false) setError('Audio unavailable. Check your connection, then try again.')
+      }
     } catch {
-      setError('Audio is unavailable. Tap Listen to retry.')
-    } finally {
-      setPlaying(false)
+      if (live()) {
+        setState('error')
+        setError('Audio unavailable. Try again.')
+      }
     }
   }
-
-  const sizes = { sm: 'h-8 w-8 text-base', md: 'h-11 w-11 text-xl', lg: 'h-14 w-14 text-3xl' }
-  const cls = `inline-flex shrink-0 select-none items-center justify-center rounded-full shadow-sm transition active:scale-90 ${sizes[size]} ${
-    playing ? 'bg-secondary text-ink' : 'bg-accent/70 text-ink hover:bg-accent'
-  } ${missing ? 'opacity-30' : ''} ${className}`
-
-  if (inline) {
-    return (
-      <span
-        role="button"
-        tabIndex={0}
-        aria-label={label}
-        title={missing ? 'No audio yet' : label}
-        className={cls}
-        onClick={play}
-        onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && play(e)}
-      >
-        <VisualText decorative>🔊</VisualText>
-      </span>
-    )
-  }
+  const sizes = { sm: '', md: '', lg: 'h-14 w-14 !text-3xl' }
+  const status = state === 'loading' ? 'Loading audio…' : state === 'playing' ? 'Playing · tap to stop' : ''
   return (
-    <span className="inline-flex flex-col items-center gap-2">
-      <button type="button" aria-label={label} title={missing ? 'No audio yet' : label} className={cls} onClick={play}>
-        <VisualText decorative>🔊</VisualText>
+    <span className={`audio-control ${inline ? 'audio-inline' : ''}`}>
+      <button
+        type="button"
+        aria-label={busy ? `Stop: ${label}` : state === 'error' ? `Retry: ${label}` : label}
+        title={busy ? 'Stop audio' : label}
+        data-state={state}
+        className={`speaker-button ${sizes[size]} ${className}`}
+        onClick={play}
+      >
+        <UiIcon name={busy ? 'stop' : state === 'error' ? 'repeat' : 'sound'} />
       </button>
+      <span className={size === 'lg' || busy ? 'audio-status' : 'sr-only'} role="status">
+        {status}
+      </span>
       {size === 'lg' && !english && (
-        <span className="flex flex-wrap items-center justify-center gap-3 text-xs font-bold">
+        <span className="audio-options">
           <label>
             Speed{' '}
-            <select
-              aria-label="Audio playback speed"
-              value={rate}
-              onChange={(e) => setRate(Number(e.target.value))}
-              className="rounded-lg border border-primary/30 bg-white p-2"
-            >
+            <select aria-label="Audio playback speed" value={rate} onChange={(e) => setRate(Number(e.target.value))}>
               <option value={1}>Normal</option>
               <option value={0.75}>Slow</option>
             </select>
@@ -77,7 +81,7 @@ export default function Speaker({ text, english = false, inline = false, size = 
         </span>
       )}
       {error && (
-        <span role="status" className="max-w-xs text-sm text-error">
+        <span role="status" className="audio-error">
           {error}
         </span>
       )}

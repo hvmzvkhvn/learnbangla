@@ -2,6 +2,8 @@ import { lazy, Suspense, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 import SiteLayout from './components/SiteLayout'
+import Experience from './ui/Experience'
+import LoadingScreen from './components/LoadingScreen'
 const Home = lazy(() => import('./pages/Home'))
 const Alphabet = lazy(() => import('./pages/Alphabet'))
 const Words = lazy(() => import('./pages/Words'))
@@ -29,14 +31,9 @@ const Discover = lazy(() => import('./pages/Discover'))
 export default function App() {
   return (
     <>
+      <Experience />
       <PageMetadata />
-      <Suspense
-        fallback={
-          <p role="status" className="p-8 text-center">
-            Loading your learning space…
-          </p>
-        }
-      >
+      <Suspense fallback={<LoadingScreen />}>
         <Routes>
           <Route element={<SiteLayout />}>
             <Route index element={<Home />} />
@@ -87,7 +84,7 @@ function PageMetadata() {
       playbook: 'Picture books',
     }
     document.title = titles[section] ? `${titles[section]} · Learn Bangla` : 'Learn Bangla — for children, teens and adults'
-    window.scrollTo(0, 0)
+    if (pathname !== '/words') window.scrollTo(0, 0)
   }, [pathname])
   return null
 }

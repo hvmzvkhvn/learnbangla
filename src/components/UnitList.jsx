@@ -21,13 +21,17 @@ export default function UnitList({ track, progress, nextId }) {
               onClick={() => setOpen(isOpen ? '' : u.id)}
               className="flex w-full items-center gap-3 p-4 text-left"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-2xl"><VisualText>{u.emoji}</VisualText></span>
-              <span className="flex-1">
-                <span className="block text-xs font-extrabold uppercase tracking-wide text-ink/70">Unit {ui + 1}</span>
-                <span className="block font-bangla text-lg font-extrabold leading-snug text-ink">{u.title}</span>
-                <span className="block text-xs text-ink/70">{u.blurb}</span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-2xl">
+                <VisualText decorative>{u.emoji}</VisualText>
               </span>
-              <span className="text-sm font-extrabold text-primary">
+              <span className="flex-1">
+                <span className="block text-xs font-bold uppercase tracking-wide text-muted">Unit {ui + 1}</span>
+                <span lang="bn" className="block font-bangla text-lg font-bold leading-snug text-ink">
+                  {u.title}
+                </span>
+                <span className="block text-xs text-muted">{u.blurb}</span>
+              </span>
+              <span className="text-sm font-bold text-primary">
                 {finished}/{u.lessons.length}
               </span>
             </button>
@@ -41,7 +45,7 @@ export default function UnitList({ track, progress, nextId }) {
                     <Link
                       key={l.id}
                       to={`/lesson/${l.id}`}
-                      className={`flex items-center gap-2 rounded-2xl px-3 py-3 text-sm font-extrabold transition active:scale-95 ${
+                      className={`flex items-center gap-2 rounded-2xl px-3 py-3 text-sm font-bold transition active:scale-[0.98] ${
                         p
                           ? 'bg-success/15 text-success'
                           : l.id === nextId
@@ -50,12 +54,20 @@ export default function UnitList({ track, progress, nextId }) {
                               ? 'bg-ink text-white sm:col-span-2'
                               : special
                                 ? 'bg-secondary/15 text-ink'
-                                : 'bg-background text-ink/70'
+                                : 'bg-background text-muted'
                       }`}
                     >
-                      <span className="text-xl"><VisualText>{l.emoji}</VisualText></span>
-                      <span className="flex-1 font-bangla leading-tight">{l.title}</span>
-                      {p && <span className="text-xs"><VisualText>{'⭐'.repeat(p.stars)}</VisualText></span>}
+                      <span className="text-xl">
+                        <VisualText decorative>{l.emoji}</VisualText>
+                      </span>
+                      <span lang="bn" className="flex-1 font-bangla leading-tight">
+                        {l.title}
+                      </span>
+                      {p && (
+                        <span className="text-xs">
+                          <VisualText decorative>{'⭐'.repeat(p.stars)}</VisualText>
+                        </span>
+                      )}
                     </Link>
                   )
                 })}

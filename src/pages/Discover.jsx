@@ -19,7 +19,9 @@ export default function Discover() {
       <div className="grid gap-4 sm:grid-cols-2">
         {cards.map(([to, title, detail]) => (
           <Link key={to} to={to} className="card">
-            <h2 className="text-xl font-bold"><VisualText>{title}</VisualText></h2>
+            <h2 className="text-xl font-bold">
+              <VisualText decorative>{title}</VisualText>
+            </h2>
             <p className="mt-2">{detail}</p>
           </Link>
         ))}

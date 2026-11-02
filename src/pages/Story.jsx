@@ -1,3 +1,5 @@
+import { haptic } from '../ui/haptics'
+import { readUI } from '../ui/preferences'
 import VisualText from '../art/VisualText'
 import { useEffect, useRef, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
@@ -46,7 +48,10 @@ function Player({ story }) {
   const lessonId = allLessons(trackKey ?? 'teen').find((l) => l.storyId === story.id)?.id
 
   useEffect(() => {
-    bottom.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+    bottom.current?.scrollIntoView({
+      behavior: readUI().calm || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+      block: 'end',
+    })
   }, [log, typing, options, ending])
 
   async function go(nodeId, id) {
@@ -86,6 +91,7 @@ function Player({ story }) {
   function finish(nodeId, end) {
     const stars = STARS[end.tier]
     setEnding({ ...end, nodeId, stars })
+    haptic('complete')
     if (lessonId) complete(lessonId, stars)
     const first = !game.stats.storyDone?.[story.id]
     act({
@@ -117,7 +123,7 @@ function Player({ story }) {
     meterRef.current = m
     setMeter(m)
     setDelta({ id: Math.random(), v: opt.meter })
-    navigator.vibrate?.(opt.meter < 0 ? 80 : 20)
+    if (opt.meter >= 0) haptic('success')
     if (soundOn) await speak(opt.bn)
     await sleep(350)
     go(opt.next, id)
@@ -144,21 +150,21 @@ function Player({ story }) {
       <Toasts />
       {ending && ending.stars >= 2 && <Confetti />}
       <header className="sticky top-0 z-10 border-b border-primary/10 bg-background/95 backdrop-blur">
-        <div className="mx-auto flex max-w-xl items-center gap-3 px-4 py-3">
+        <div className="story-header-tools mx-auto flex max-w-xl items-center gap-3 px-4 py-3">
           <button
             type="button"
             onClick={() => navigate('/stories')}
             aria-label="Leave story"
-            className="rounded-full bg-white px-3 py-2 text-lg font-extrabold text-ink/70 shadow"
+            className="rounded-full bg-white px-3 py-2 text-lg font-bold text-muted shadow"
           >
             ✕
           </button>
           <div className="min-w-0 flex-1">
-            <p className="truncate font-extrabold text-ink">
+            <p className="truncate font-bold text-ink">
               <VisualText>{story.emoji}</VisualText> {story.title}
             </p>
             <div className="mt-1 flex items-center gap-2">
-              <span className="text-xs font-extrabold text-ink/70">
+              <span className="text-sm font-bold text-muted">
                 <VisualText>{story.meter.emoji}</VisualText> {story.meter.label}
               </span>
               <div className="relative h-2.5 flex-1 overflow-hidden rounded-full bg-primary/10">
@@ -167,12 +173,12 @@ function Player({ story }) {
                   style={{ width: `${meter}%` }}
                 />
               </div>
-              <span className="relative w-8 text-right text-xs font-extrabold text-ink/75">
+              <span className="relative w-8 text-right text-sm font-bold text-muted">
                 {meter}
                 {delta && (
                   <span
                     key={delta.id}
-                    className={`animate-floatUp absolute -top-3 right-0 text-xs font-extrabold ${delta.v >= 0 ? 'text-success' : 'text-error'}`}
+                    className={`animate-floatUp absolute -top-3 right-0 text-sm font-bold ${delta.v >= 0 ? 'text-success' : 'text-error'}`}
                   >
                     {delta.v >= 0 ? `+${delta.v}` : delta.v}
                   </span>
@@ -182,8 +188,10 @@ function Player({ story }) {
           </div>
           <button
             type="button"
+            aria-pressed={showEn}
+            aria-label="Show English translation"
             onClick={() => setShowEn((v) => !v)}
-            className={`rounded-full px-3 py-2 text-xs font-extrabold shadow-sm ${showEn ? 'bg-white text-primary' : 'bg-ink/10 text-ink/70'}`}
+            className={`rounded-full px-3 py-2 text-sm font-bold shadow-sm ${showEn ? 'bg-white text-primary' : 'bg-ink/10 text-muted'}`}
           >
             EN
           </button>
@@ -192,12 +200,12 @@ function Player({ story }) {
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-xl flex-1 space-y-3 px-4 py-4 pb-44">
+      <main className="mx-auto w-full max-w-xl flex-1 space-y-3 px-4 py-4 pb-8">
         {log.map((m) =>
           m.kind === 'sys' ? (
             <p
               key={m.key}
-              className="animate-slideIn mx-auto max-w-sm rounded-2xl bg-ink/5 px-4 py-2 text-center text-sm font-semibold italic text-ink/75"
+              className="animate-slideIn mx-auto max-w-sm rounded-2xl bg-ink/5 px-4 py-2 text-center text-sm font-semibold italic text-muted"
             >
               {m.en}
             </p>
@@ -205,25 +213,20 @@ function Player({ story }) {
             <div key={m.key} className={`animate-slideIn flex items-end gap-2 ${m.kind === 'you' ? 'flex-row-reverse' : ''}`}>
               {m.kind === 'npc' && (
                 <div className="flex w-12 shrink-0 flex-col items-center text-center">
-                  <span className="text-3xl"><VisualText>{avatar(m.who)}</VisualText></span>
-                  <span className="text-[10px] font-extrabold leading-tight text-ink/70">{name(m.who)}</span>
+                  <span className="text-3xl">
+                    <VisualText>{avatar(m.who)}</VisualText>
+                  </span>
+                  <span className="text-[10px] font-bold leading-tight text-muted">{name(m.who)}</span>
                 </div>
               )}
               <div
                 className={`max-w-[82%] rounded-3xl px-4 py-3 shadow-sm ${m.kind === 'you' ? 'rounded-br-md bg-primary text-white' : 'rounded-bl-md bg-white'}`}
               >
                 <p className={`font-bangla text-xl font-bold leading-snug ${m.kind === 'you' ? 'text-white' : 'text-primary'}`}>{m.bn}</p>
-                <p className={`text-xs font-bold ${m.kind === 'you' ? 'text-white/80' : 'text-ink/75'}`}>{romanOn ? m.roman : null}</p>
-                {showEn && <p className={`text-xs ${m.kind === 'you' ? 'text-white/70' : 'text-ink/70'}`}>{m.en}</p>}
+                <p className={`text-sm font-bold ${m.kind === 'you' ? 'text-white' : 'text-muted'}`}>{romanOn ? m.roman : null}</p>
+                {showEn && <p className={`text-sm ${m.kind === 'you' ? 'text-white' : 'text-muted'}`}>{m.en}</p>}
               </div>
-              <button
-                type="button"
-                onClick={() => speak(m.bn, { force: true })}
-                aria-label="Hear it"
-                className="mb-1 rounded-full bg-accent/60 px-2 py-1 text-sm"
-              >
-                <VisualText>🔊</VisualText>
-              </button>
+              <Speaker text={m.bn} size="sm" label="Hear this line" />
             </div>
           ),
         )}
@@ -231,7 +234,9 @@ function Player({ story }) {
         {typing && (
           <div className="flex items-end gap-2">
             <div className="flex w-12 shrink-0 flex-col items-center">
-              <span className="text-3xl"><VisualText>{avatar(typing)}</VisualText></span>
+              <span className="text-3xl">
+                <VisualText>{avatar(typing)}</VisualText>
+              </span>
             </div>
             <div className="flex gap-1 rounded-3xl rounded-bl-md bg-white px-4 py-4 shadow-sm">
               {[0, 1, 2].map((d) => (
@@ -243,22 +248,28 @@ function Player({ story }) {
 
         {ending && (
           <div className="animate-pop card mt-4 text-center">
-            <p className="text-6xl"><VisualText>{ending.emoji}</VisualText></p>
-            <p className="mt-1 text-sm font-extrabold uppercase tracking-wide text-ink/70">Ending</p>
-            <h2 className="text-2xl font-extrabold text-primary">{ending.title}</h2>
-            <p className="mt-2 text-ink/70">{ending.en}</p>
-            <p className="mt-3 text-lg"><VisualText>{'⭐'.repeat(ending.stars)}</VisualText></p>
-            <p className="text-xs font-bold text-ink/70">
+            <p className="text-6xl">
+              <VisualText>{ending.emoji}</VisualText>
+            </p>
+            <p className="mt-1 text-sm font-bold uppercase tracking-wide text-muted">Ending</p>
+            <h2 className="text-2xl font-bold text-primary">{ending.title}</h2>
+            <p className="mt-2 text-muted">{ending.en}</p>
+            <p className="mt-3 text-lg">
+              <VisualText>{'⭐'.repeat(ending.stars)}</VisualText>
+            </p>
+            <p className="text-sm font-bold text-muted">
               <VisualText>{story.meter.emoji}</VisualText> {story.meter.label}: {meter}/100
             </p>
             <div className="mt-5 rounded-2xl bg-background p-3 text-left">
-              <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-ink/70">Phrases to remember</p>
+              <p className="mb-2 text-sm font-bold uppercase tracking-wide text-muted">Phrases to remember</p>
               <div className="space-y-2">
                 {keyLines.map((n, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <div className="min-w-0 flex-1">
-                      <p className="font-bangla text-lg font-bold leading-snug text-primary">{n.bn}</p>
-                      <p className="text-xs text-ink/70">
+                      <p lang="bn" className="font-bangla text-lg font-bold leading-snug text-primary">
+                        {n.bn}
+                      </p>
+                      <p className="text-sm text-muted">
                         {romanOn && `${n.roman} · `}
                         {n.en}
                       </p>
@@ -282,9 +293,9 @@ function Player({ story }) {
       </main>
 
       {options && (
-        <div className="animate-slideIn fixed inset-x-0 bottom-0 z-20 border-t border-primary/10 bg-white/95 px-4 pb-5 pt-3 backdrop-blur">
+        <div className="story-replies animate-slideIn z-20 border-t border-primary/10 bg-white/95 px-4 pb-5 pt-3 backdrop-blur">
           <div className="mx-auto max-w-xl space-y-2">
-            <p className="text-center text-xs font-extrabold uppercase tracking-wide text-ink/70">Your reply</p>
+            <p className="text-center text-sm font-bold uppercase tracking-wide text-muted">Your reply</p>
             {options.map((o, i) => (
               <div key={i} className="flex items-stretch gap-2">
                 <button
@@ -292,9 +303,11 @@ function Player({ story }) {
                   onClick={() => choose(o, i)}
                   className="flex-1 rounded-2xl border-4 border-primary/15 bg-white px-4 py-3 text-left shadow-sm transition active:scale-[0.98] hover:border-primary/50"
                 >
-                  <span className="block font-bangla text-lg font-bold leading-snug text-primary">{o.bn}</span>
-                  {romanOn && <span className="block text-xs font-bold text-ink/75">{o.roman}</span>}
-                  {showEn && <span className="block text-xs text-ink/70">{o.en}</span>}
+                  <span lang="bn" className="block font-bangla text-lg font-bold leading-snug text-primary">
+                    {o.bn}
+                  </span>
+                  {romanOn && <span className="block text-sm font-bold text-muted">{o.roman}</span>}
+                  {showEn && <span className="block text-sm text-muted">{o.en}</span>}
                 </button>
                 <Speaker text={o.bn} size="md" className="self-center" label="Hear this reply" />
               </div>

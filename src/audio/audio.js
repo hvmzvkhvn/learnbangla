@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { norm, sayFor } from './norm'
 import { usePersistent } from '../state/persist'
 import { myVoiceUrl } from './voiceStore'
+import { readUI } from '../ui/preferences'
 
 const BASE = import.meta.env.BASE_URL
 let manifest = null
@@ -11,6 +12,7 @@ let loading = null
 const elements = new Map()
 let current = null
 let token = 0
+let settleCurrent = null
 const listeners = new Set()
 
 const notify = () => listeners.forEach((f) => f())
@@ -20,7 +22,9 @@ export const getManifest = () => manifest
 export function loadManifest() {
   if (manifest) return Promise.resolve(manifest)
   if (!loading) {
-    loading = fetch(`${BASE}audio/manifest.json`)
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 10000)
+    loading = fetch(`${BASE}audio/manifest.json`, { signal: controller.signal })
       .then((r) => {
         if (!r.ok) throw new Error('Audio could not load.')
         return r.json()
@@ -35,6 +39,7 @@ export function loadManifest() {
         return null
       })
       .finally(() => {
+        clearTimeout(timeout)
         loading = null
       })
   }
@@ -46,6 +51,7 @@ if (typeof window !== 'undefined')
   })
 
 const soundOn = () => {
+  if (readUI().calm) return false
   try {
     return JSON.parse(localStorage.getItem('lb.sound') ?? 'true') !== false
   } catch {
@@ -59,6 +65,8 @@ const voiceFor = (prefix) => synth?.getVoices().find((v) => v.lang.toLowerCase()
 /** Stop whatever is playing. */
 export function stop() {
   token++
+  settleCurrent?.(null)
+  settleCurrent = null
   if (current) {
     current.pause()
     current = null
@@ -67,14 +75,16 @@ export function stop() {
 }
 
 /** Play one piece of Bangla text. Resolves true if it played to the end. */
-export async function speak(text, { force = false, skipMine = false, rate = 1 } = {}) {
+export async function speak(text, { force = false, skipMine = false, rate = 1, onState = () => {} } = {}) {
   if (!text || (!force && !soundOn())) return false
-  await loadManifest()
-  const key = norm(text)
   stop()
   const my = token
+  onState('loading')
+  await loadManifest()
+  if (token !== my) return null
+  const key = norm(text)
   const mine = skipMine ? null : await myVoiceUrl(key)
-  if (token !== my) return false
+  if (token !== my) return null
   const file = manifest?.[key]
   if (mine || file) {
     const src = mine ?? `${BASE}audio/${file}`
@@ -86,21 +96,33 @@ export async function speak(text, { force = false, skipMine = false, rate = 1 } 
     el.currentTime = 0
     el.playbackRate = rate
     current = el
-    try {
-      await el.play()
-    } catch {
-      return false
-    }
     return new Promise((resolve) => {
-      const done = () => {
-        el.removeEventListener('ended', done)
-        el.removeEventListener('pause', done)
-        el.removeEventListener('error', done)
-        resolve(token === my && el.ended)
+      let settled = false
+      const timeout = setTimeout(() => {
+        finish(false)
+        el.pause()
+      }, 15000)
+      const finish = (ok) => {
+        if (settled) return
+        settled = true
+        clearTimeout(timeout)
+        el.removeEventListener('ended', ended)
+        el.removeEventListener('error', failed)
+        el.removeEventListener('playing', playing)
+        if (settleCurrent === finish) settleCurrent = null
+        resolve(ok)
       }
-      el.addEventListener('ended', done)
-      el.addEventListener('pause', done)
-      el.addEventListener('error', done)
+      const ended = () => finish(token === my ? true : null)
+      const failed = () => finish(false)
+      const playing = () => {
+        clearTimeout(timeout)
+        onState('playing')
+      }
+      settleCurrent = finish
+      el.addEventListener('ended', ended)
+      el.addEventListener('error', failed)
+      el.addEventListener('playing', playing)
+      el.play().catch(failed)
     })
   }
   const bn = voiceFor('bn')
@@ -110,8 +132,14 @@ export async function speak(text, { force = false, skipMine = false, rate = 1 } 
       u.voice = bn
       u.lang = bn.lang
       u.rate = rate
-      u.onend = () => resolve(true)
-      u.onerror = () => resolve(false)
+      const done = (ok) => {
+        if (settleCurrent === done) settleCurrent = null
+        resolve(ok)
+      }
+      settleCurrent = done
+      u.onstart = () => onState('playing')
+      u.onend = () => done(token === my ? true : null)
+      u.onerror = () => done(token === my ? false : null)
       synth.speak(u)
     })
   }
@@ -133,15 +161,27 @@ export async function speakSequence(texts, gapMs = 250) {
 }
 
 /** Read an English instruction aloud with the browser's own voice. */
-export function speakEnglish(text) {
-  if (!synth || !soundOn()) return
+export function speakEnglish(text, { force = false, onState = () => {} } = {}) {
+  if (!synth || (!force && !soundOn())) return Promise.resolve(false)
   stop()
-  const u = new SpeechSynthesisUtterance(text)
-  const v = voiceFor('en-gb') || voiceFor('en')
-  if (v) u.voice = v
-  u.lang = v?.lang || 'en-GB'
-  u.rate = 0.9
-  synth.speak(u)
+  const my = token
+  onState('loading')
+  return new Promise((resolve) => {
+    const u = new SpeechSynthesisUtterance(text)
+    const v = voiceFor('en-gb') || voiceFor('en')
+    if (v) u.voice = v
+    u.lang = v?.lang || 'en-GB'
+    u.rate = 0.9
+    const done = (ok) => {
+      if (settleCurrent === done) settleCurrent = null
+      resolve(ok)
+    }
+    settleCurrent = done
+    u.onstart = () => onState('playing')
+    u.onend = () => done(token === my ? true : null)
+    u.onerror = () => done(token === my ? false : null)
+    synth.speak(u)
+  })
 }
 
 export const canSpeakEnglish = () => Boolean(synth)

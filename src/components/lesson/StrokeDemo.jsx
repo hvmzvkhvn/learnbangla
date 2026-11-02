@@ -14,7 +14,16 @@ export function fixFor(glyph, local) {
  * Shows how to write a glyph: a pen follows each stroke in turn (numbered, in order, headline last).
  * `editing` instead draws every stroke at once, colour-coded with arrows, for the review page.
  */
-export default function StrokeDemo({ glyph, width = 320, height = 280, autoPlay = true, color = '#1B7A7A', local, editing = false, onStrokes }) {
+export default function StrokeDemo({
+  glyph,
+  width = 320,
+  height = 280,
+  autoPlay = true,
+  color = '#1B7A7A',
+  local,
+  editing = false,
+  onStrokes,
+}) {
   const baseRef = useRef(null)
   const revealRef = useRef(null)
   const raf = useRef(0)
@@ -80,8 +89,11 @@ export default function StrokeDemo({ glyph, width = 320, height = 280, autoPlay 
       let head = pts[0]
       for (let i = 1; i < pts.length; i++) {
         const d = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1])
-        if (left >= d) { c.lineTo(pts[i][0], pts[i][1]); left -= d; head = pts[i] }
-        else {
+        if (left >= d) {
+          c.lineTo(pts[i][0], pts[i][1])
+          left -= d
+          head = pts[i]
+        } else {
           const t = d ? left / d : 0
           head = [pts[i - 1][0] + (pts[i][0] - pts[i - 1][0]) * t, pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * t]
           c.lineTo(head[0], head[1])
@@ -104,7 +116,8 @@ export default function StrokeDemo({ glyph, width = 320, height = 280, autoPlay 
         ctx.lineWidth = Math.max(5, proposal.size * 0.045)
         strokePath(ctx, s.pts, 1)
         const n = s.pts.length
-        const a = s.pts[Math.max(0, n - 4)], b = s.pts[n - 1]
+        const a = s.pts[Math.max(0, n - 4)],
+          b = s.pts[n - 1]
         const ang = Math.atan2(b[1] - a[1], b[0] - a[0])
         ctx.fillStyle = COLORS[k % COLORS.length]
         ctx.beginPath()
@@ -180,8 +193,12 @@ export default function StrokeDemo({ glyph, width = 320, height = 280, autoPlay 
             return (
               <span
                 key={k}
-                className="animate-pop absolute flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-xs font-extrabold text-white shadow"
-                style={{ left: `${(bx / width) * 100}%`, top: `${(by / height) * 100}%`, background: editing ? COLORS[k % COLORS.length] : s.matra ? '#F4A324' : '#1B7A7A' }}
+                className="animate-pop absolute flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-xs font-bold text-white shadow"
+                style={{
+                  left: `${(bx / width) * 100}%`,
+                  top: `${(by / height) * 100}%`,
+                  background: editing ? COLORS[k % COLORS.length] : s.matra ? '#F4A324' : '#1B7A7A',
+                }}
               >
                 {k + 1}
               </span>
@@ -190,7 +207,11 @@ export default function StrokeDemo({ glyph, width = 320, height = 280, autoPlay 
       </div>
       {!editing && (
         <div className="mt-2 text-center">
-          <button type="button" onClick={() => setReplayKey((k) => k + 1)} className="rounded-full bg-white px-4 py-2 text-sm font-extrabold text-primary shadow-sm">
+          <button
+            type="button"
+            onClick={() => setReplayKey((k) => k + 1)}
+            className="rounded-full bg-white px-4 py-2 text-sm font-bold text-primary shadow-sm"
+          >
             ↻ Watch again
           </button>
         </div>

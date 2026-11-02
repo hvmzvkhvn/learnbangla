@@ -20,12 +20,24 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
   const [perfect, setPerfect] = useState(0)
   const [started, setStarted] = useState(false)
   const timers = useRef(new Set())
-  const clearTimers = () => { timers.current.forEach(clearTimeout); timers.current.clear() }
+  const clearTimers = () => {
+    timers.current.forEach(clearTimeout)
+    timers.current.clear()
+  }
   const later = (fn, delay) => {
-    const timer = setTimeout(() => { timers.current.delete(timer); fn() }, delay)
+    const timer = setTimeout(() => {
+      timers.current.delete(timer)
+      fn()
+    }, delay)
     timers.current.add(timer)
   }
-  useEffect(() => () => { clearTimers(); stop() }, [])
+  useEffect(
+    () => () => {
+      clearTimers()
+      stop()
+    },
+    [],
+  )
   const done = n >= task.steps.length
   const step = task.steps[Math.min(n, task.steps.length - 1)]
 
@@ -77,14 +89,17 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
         <Link
           to={backTo}
           aria-label="Back"
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-extrabold text-ink/70 shadow"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-bold text-muted shadow"
         >
           ←
         </Link>
-        <h1 className="flex-1 truncate text-lg font-extrabold text-ink">
-          {task.title.en} <span className="font-bangla text-primary">· {task.title.bn}</span>
+        <h1 className="flex-1 truncate text-lg font-bold text-ink">
+          {task.title.en}{' '}
+          <span lang="bn" className="font-bangla text-primary">
+            · {task.title.bn}
+          </span>
         </h1>
-        <span className="text-sm font-bold text-ink/70">
+        <span className="text-sm font-bold text-muted">
           {Math.min(n, task.steps.length)} / {task.steps.length}
         </span>
       </div>
@@ -100,9 +115,11 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
         </div>
       ) : done ? (
         <div className="animate-pop card mt-3 text-center">
-          <p className="text-5xl"><VisualText>🎉</VisualText></p>
-          <h2 className="mt-1 text-xl font-extrabold text-primary">You built the scene!</h2>
-          <p className="text-sm text-ink/75">
+          <p className="text-5xl">
+            <VisualText>🎉</VisualText>
+          </p>
+          <h2 className="mt-1 text-xl font-bold text-primary">You built the scene!</h2>
+          <p className="text-sm text-muted">
             {perfect} / {task.steps.length} right first time
           </p>
           <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-center">
@@ -118,9 +135,11 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
         <div className="mt-3">
           <div className="flex items-center justify-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-sm">
             <span className="text-center">
-              <span className="block font-bangla text-3xl font-extrabold text-primary">{step.word.bn}</span>
-              {romanOn && <span className="block text-sm font-bold text-ink/70">{step.word.roman}</span>}
-              {misses > 0 && <span className="block text-sm text-ink/70">{step.word.en}</span>}
+              <span lang="bn" className="block font-bangla text-3xl font-bold text-primary">
+                {step.word.bn}
+              </span>
+              {romanOn && <span className="block text-sm font-bold text-muted">{step.word.roman}</span>}
+              {misses > 0 && <span className="block text-sm text-muted">{step.word.en}</span>}
             </span>
             <Speaker text={step.word.bn} size="lg" label="Hear the word" />
           </div>
@@ -130,7 +149,7 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
                 key={e}
                 type="button"
                 onClick={() => pick(e)}
-                className={`flex aspect-square items-center justify-center rounded-2xl bg-white text-4xl shadow transition active:scale-95 ${wrong === e ? 'animate-shake ring-2 ring-error' : ''}`}
+                className={`flex aspect-square items-center justify-center rounded-2xl bg-white text-4xl shadow transition active:scale-[0.98] ${wrong === e ? 'animate-shake ring-2 ring-error' : ''}`}
                 aria-label={`Place ${paintedPieces[e].label.toLowerCase()}`}
                 data-e={e}
               >

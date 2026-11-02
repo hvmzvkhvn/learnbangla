@@ -1,5 +1,14 @@
 // Small controls use consistent strokes rather than miniature paintings.
 const paths = {
+  paw: 'M6 10a2 3 0 1 0 0-6 2 3 0 0 0 0 6ZM12 8a2 3 0 1 0 0-6 2 3 0 0 0 0 6ZM18 10a2 3 0 1 0 0-6 2 3 0 0 0 0 6ZM5 18c0-3 4-7 7-7s7 4 7 7c0 5-5 2-7 2s-7 3-7-2Z',
+  people: 'M10 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM20 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM1 22v-5a6 6 0 0 1 12 0v5M13 13a6 6 0 0 1 10 4v5',
+  wave: 'M8 12V5a1.5 1.5 0 0 1 3 0v6M11 5V3a1.5 1.5 0 0 1 3 0v8M14 5a1.5 1.5 0 0 1 3 0v7M17 8a1.5 1.5 0 0 1 3 0v7a7 7 0 0 1-12 5l-5-6a1.5 1.5 0 0 1 2-2l3 3M2 3l2 2M21 2l-2 2',
+
+  food: 'M3 10h18a9 9 0 0 1-18 0ZM2 10h20M8 3v3M12 2v4M16 3v3',
+  person: 'M16 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 22v-3a8 8 0 0 1 16 0v3',
+  calendar: 'M3 5h18v16H3zM7 2v6M17 2v6M3 10h18M7 14h2M13 14h2M7 18h2',
+  sun: 'M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM12 1v3M12 20v3M1 12h3M20 12h3M4 4l2 2M18 18l2 2M4 20l2-2M18 6l2-2',
+
   wind: 'M3 8h12a3 3 0 1 0-3-3M2 12h18a3 3 0 1 1-3 3M4 16h6a3 3 0 1 1-3 3',
   check: 'm5 12 4 4L19 6',
   close: 'm6 6 12 12M18 6 6 18',
