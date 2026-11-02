@@ -2,8 +2,10 @@
 // Every story is five parts of ten slides. A slide is written once as a "beat" with both tellings side by side (see helpers.js).
 import { kabuliwala } from './kabuliwala.js'
 import { bhasha } from './bhasha.js'
+import { rokeya } from './rokeya.js'
+import { sundarbans } from './sundarbans.js'
 
-export const longStories = [kabuliwala, bhasha]
+export const longStories = [kabuliwala, bhasha, rokeya, sundarbans]
 export const longById = Object.fromEntries(longStories.map((s) => [s.id, s]))
 export const LEVELS = ['easy', 'hard']
 

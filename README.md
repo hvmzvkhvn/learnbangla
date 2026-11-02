@@ -121,6 +121,19 @@ Every picture book now reads as chapters: each page keeps its painting and adds 
 
 The extra text lives in `src/data/playbook/` (`bookMoreYoung.js`, `bookMoreOlder.js`, `storyboardMore.js`, `history.js`); `tests/playbook-content.test.mjs` checks every line's script, punctuation and romanisation and that borrowed paintings exist. Factual wording and the Bangla should be reviewed on `/review` before wide release.
 
+### Big stories (fifty slides each)
+
+The Playbook's **Big stories** section is for every age. Each story is five parts of ten slides, written once as 50 "beats" (`src/data/playbook/long/helpers.js`) and told **two ways**, which the learner picks with the *Easier / Fuller* switch (the choice is remembered on the device; the reading place is shared between the two):
+
+- **Easier**: a short English narration and two short Bangla lines per slide (nine words or fewer).
+- **Fuller**: a longer narration, a background paragraph, and two long, complex Bangla lines per slide (fourteen words or more), each with romanisation and English.
+
+The four stories so far: *Kabuliwala* (Tagore's classic, retold), *The Language Movement* (1947–2000), *Begum Rokeya* (1880–1932), and *The Honey Season* (a fictional boy in the Sundarbans). Each lives in `src/data/playbook/long/<story>.js` with its five part files in `long/<story>/`.
+
+**Paintings are separate from the text.** A slide looks for `public/images/playbook/long/<story-id>-NN.webp` (NN = 01…50) and shows a text card until the file exists, so paintings can be added a few at a time. `node scripts/long-art-plan.mjs` rewrites `docs/long-story-art-plan.json`: one generation prompt per slide (200 so far), each with the story's character and setting notes so the pictures stay consistent.
+
+`tests/long-stories.test.mjs` checks every story has 50 unique slides and that every Bangla line has valid script, a matching romanisation (same word count) and English, that easier lines stay short and fuller lines stay long. It cannot check whether the Bangla is *good* Bangla, or the history correct: new stories need a native-speaker read on `/review` and a fact check before wide release.
+
 ## Super challenges
 
 The last lesson of a unit (the dark 🦸 tile) is a **Super challenge**: about six new, longer sentences written with only vocabulary that unit's track has already taught, and **no transliteration** (the Aa switch is removed inside it). Each has 18 questions: read and say what it means, build the sentence from tiles with decoy tiles, fill the gap, listen and build, and (13+) listen and type in Bangla. Script units use unseen words made only from letters learned so far. Passing with 2+ stars earns bonus XP and the Super badges; there is no gate, and it can be retried any time.

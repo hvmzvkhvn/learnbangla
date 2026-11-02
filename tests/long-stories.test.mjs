@@ -16,7 +16,8 @@ function checkLine(where, x) {
 }
 
 test('every big story has fifty slides in five parts, told two ways', () => {
-  assert.ok(longStories.length >= 1)
+  assert.deepEqual(longStories.map((s) => s.id), ['kabuliwala', 'bhasha-andolon', 'begum-rokeya', 'sundarbans-honey'])
+  assert.deepEqual(new Set(longStories.map((s) => s.topic)), new Set(['classic', 'history', 'people', 'nature']))
   const ids = new Set()
   for (const s of longStories) {
     assert.ok(!ids.has(s.id), `${s.id} is repeated`)
