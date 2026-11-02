@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Scene from '../../art/Scene'
 
 export const coverIds = ['dhaka-rickshaw', 'boishakh-fair', 'hilsa-river', 'dada-village', 'our-school', 'coxs-bazar', 'tara-morning', 'nana-village', 'rainy-day', 'my-animals', 'at-market', 'eid-morning']
@@ -14,8 +15,11 @@ export function PlayIcon({ kind, ...props }) {
   return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d={paths[kind] || paths.read} /></svg>
 }
 
-export default function Artwork({ bookId, src, scene, id, alt, className = '', eager = false }) {
+// `fallback` is shown instead of the picture when its file is missing (used by the big stories while their paintings are made)
+export default function Artwork({ bookId, src, scene, id, alt, className = '', eager = false, fallback }) {
+  const [failed, setFailed] = useState(false)
+  if (failed && fallback) return fallback
   return src || coverIds.includes(bookId)
-    ? <img className={`pb-artwork ${className}`} src={src || coverUrl(bookId)} alt={alt} width="1536" height="1024" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    ? <img className={`pb-artwork ${className}`} src={src || coverUrl(bookId)} alt={alt} width="1536" height="1024" loading={eager ? 'eager' : 'lazy'} decoding="async" onError={fallback ? () => setFailed(true) : undefined} />
     : <Scene scene={{ ...scene, furnished:true, alt: alt || scene?.alt }} id={id} className={`pb-scene ${className}`} />
 }

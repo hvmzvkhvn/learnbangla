@@ -17,8 +17,10 @@ const BASE = import.meta.env.BASE_URL
  *   story mode — one page at a time: narration, longer background paragraphs, then all of its Bangla lines
  * A page may carry `more` (extra Bangla lines), `deep` (extra English paragraphs), `chapter` (starts a chapter),
  * `label` (its chapter-button text) and `art` (a dedicated painting path).
+ * The big stories also pass `parts` (one button per part instead of one per page), `toolbar` (shown above the slide),
+ * and slides with a `heading`; their paintings may not exist yet, so a missing file shows a typographic card instead.
  */
-export default function BookReader({id, bookId, title, pages, mode = 'book', hideEnglish = false, backTo = '/playbook', xp = 15, onFinish, finishText}) {
+export default function BookReader({id, bookId, title, pages, mode = 'book', hideEnglish = false, backTo = '/playbook', xp = 15, onFinish, finishText, parts, toolbar}) {
   const story = mode === 'story'
   const units = useMemo(() => readerUnits(pages, story), [pages, story])
   const [saved, save] = useBookmarks()
@@ -98,14 +100,16 @@ export default function BookReader({id, bookId, title, pages, mode = 'book', hid
     <div className="mt-5 flex flex-wrap justify-center gap-3"><button className="btn-secondary" onClick={() => go(0)}>Read again</button><Link className="btn-primary" to={backTo}>Find another story</Link></div>
   </div>
   const label = (p, k) => p.label || (id === 'story:timeline' ? dates[k] : `Chapter ${k + 1}`)
-  return <article ref={reader} className="pb-reader">
-    <header className="pb-reader-header"><Link to={backTo} aria-label="Back to Playbook">←</Link><div><h1>{title}</h1><p aria-live="polite">{story ? 'Our stories' : 'Read & listen'} · Page {unit.pageIndex + 1} of {pages.length}{unit.part ? ` · part ${unit.part}` : ''} · Bookmark saved on this device</p></div></header>
-    {story && <nav className="pb-timeline" aria-label="Story chapters">{pages.map((p, k) => <button key={k} onClick={() => go(k)} aria-current={i === k ? 'step' : undefined}>{label(p, k)}</button>)}</nav>}
+  return <article ref={reader} className={`pb-reader${parts ? ' pb-reader-long' : ''}`}>
+    <header className="pb-reader-header"><Link to={backTo} aria-label="Back to Playbook">←</Link><div><h1>{title}</h1><p aria-live="polite">{story ? 'Our stories' : 'Read & listen'} · {parts ? 'Slide' : 'Page'} {unit.pageIndex + 1} of {pages.length}{unit.part ? ` · part ${unit.part}` : ''} · Bookmark saved on this device</p></div></header>
+    {toolbar}
+    {story && !parts && <nav className="pb-timeline" aria-label="Story chapters">{pages.map((p, k) => <button key={k} onClick={() => go(k)} aria-current={i === k ? 'step' : undefined}>{label(p, k)}</button>)}</nav>}
+    {story && parts && <nav className="pb-timeline pb-parts" aria-label="Story parts">{parts.map((pt, k) => <button key={k} onClick={() => go(pt.from)} aria-current={unit.pageIndex >= pt.from && unit.pageIndex < (parts[k + 1]?.from ?? pages.length) ? 'step' : undefined}><span>Part {k + 1}</span>{pt.title}</button>)}</nav>}
     {!story && chapter && <p className="pb-chapter"><span>Chapter</span><b lang="bn">{chapter.bn}</b> · {chapter.en}</p>}
     <div className={`pb-reader-sheet ${story ? 'pb-story-sheet' : ''}`}>
-      <div className="pb-reader-art"><Artwork key={artSrc(unit)} src={artSrc(unit)} alt={unit.artAlt || pg.artAlt || pg.en} eager /></div>
+      <div className="pb-reader-art"><Artwork key={artSrc(unit)} src={artSrc(unit)} alt={unit.artAlt || pg.artAlt || pg.en} eager fallback={pg.partTitle && <div className="pb-art-pending" role="img" aria-label={`${pg.partTitle}: ${pg.heading}`}><span>Part {pg.part + 1} · slide {unit.pageIndex + 1}</span><b lang="bn">{pg.partTitleBn}</b><i>{pg.heading}</i></div>} /></div>
       <div>
-        {story && <><p className="pb-history-narration">{pg.en}</p>{(pg.deep ?? []).map((t, k) => <div key={k} className="pb-illustrated-background">{pg.deepArt?.[k] && <Artwork src={`${BASE}${pg.deepArt[k].art}`} alt={pg.deepArt[k].artAlt} />}<p className="pb-deep">{t}</p></div>)}</>}
+        {story && <>{pg.heading && <h2 className="pb-slide-heading">{pg.heading}</h2>}<p className="pb-history-narration">{pg.en}</p>{(pg.deep ?? []).map((t, k) => <div key={k} className={pg.deepArt?.[k] ? 'pb-illustrated-background' : undefined}>{pg.deepArt?.[k] && <Artwork src={`${BASE}${pg.deepArt[k].art}`} alt={pg.deepArt[k].artAlt} />}<p className="pb-deep">{t}</p></div>)}</>}
         {unit.lines.map((line, l) => <div className={`pb-caption ${story && l > 0 && line.art ? 'pb-illustrated-caption' : ''}`} key={l} data-line-active={active?.l === l}>
           {story && l > 0 && line.art && <Artwork src={`${BASE}${line.art}`} alt={line.artAlt || line.en} />}
           <p className="pb-caption-bn" lang="bn">{line.bn.split(' ').map((word, k) => <button key={k} className="pb-word" data-active={active?.l === l && active.w === k} onClick={() => hearWord(l, k)} aria-label={`Hear ${word}`}>{word}</button>)}</p>
