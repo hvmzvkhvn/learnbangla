@@ -10,6 +10,7 @@ import { teenSentenceGroups, tenseVerbs, tensePronouns } from '../data/teenSente
 import { poems, passages, cinemaScenes } from '../data/teenText'
 import { stories } from '../data/stories'
 import { exploreRegions } from '../data/explore'
+import { exploreProfiles, profileLines } from '../data/exploreProfile'
 import { SUPER } from '../data/super'
 import { allLines as playbookLines, allWords as playbookWords } from '../data/playbook'
 import { adultWordCategories, adultSentenceGroups, adultPassages } from '../data/adultText'
@@ -271,7 +272,7 @@ exploreRegions.forEach((r) => {
   ]
   wordIdsByCat[cat] = words.map((w) => add({ id: `word:${cat}:${w.bn}`, kind: 'word', section, cat, visual: false, bn: w.bn, roman: w.roman, en: w.en, art: w.emoji }))
   sentenceMeta[cat] = { title: `${r.name}: reading`, emoji: r.emoji }
-  const lines = [r.intro, ...r.famous, r.then.line, r.now.line, ...r.made, ...r.cities.map((c) => c.line)]
+  const lines = [r.intro, ...r.famous, r.then.line, r.now.line, ...r.made, ...r.cities.map((c) => c.line), ...profileLines(r.id)]
   sentenceIdsByGroup[cat] = lines.map((x) => add({ id: `sent:${x.bn}`, kind: 'sentence', section, group: cat, bn: x.bn, roman: x.roman, en: x.en, tokens: x.bn.split(' ') }))
   exploreCats[r.id] = cat
   // the English facts, so they can be checked on /review too
@@ -284,6 +285,9 @@ exploreRegions.forEach((r) => {
   fact('economy', 'Economy', r.economy)
   r.cities.forEach((c) => fact(`city-${c.id}`, c.name, c.fact))
   ;(r.deep ?? []).forEach((t, i) => fact(`deep${i}`, 'Go deeper (18+)', t))
+  const prof = exploreProfiles[r.id]
+  profileLines(r.id).forEach((x, i) => x.note && fact(`note${i}`, 'Note', x.note))
+  if (prof) { fact('speech', 'How people talk', prof.speech); prof.facts.forEach((t, i) => fact(`did${i}`, 'Did you know', t)) }
 })
 
 // ---- Super challenges: longer sentences per unit (never shown with transliteration) ---------------------------------

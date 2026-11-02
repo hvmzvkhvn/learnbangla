@@ -5,6 +5,7 @@ import { speak } from '../../audio/audio'
 import Speaker from '../Speaker'
 import BanglaLine from './BanglaLine'
 import ThenNow from './ThenNow'
+import RegionProfile from './RegionProfile'
 import { useRoman } from '../../state/roman'
 
 const SectionTitle = ({ children }) => <h3 className="mb-2 mt-5 text-sm font-bold uppercase tracking-wide text-muted">{children}</h3>
@@ -132,6 +133,8 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
             ))}
           </div>
         )}
+
+        <RegionProfile regionId={r.id} tier={tier} />
 
         <SectionTitle>
           <VisualText>🏙️</VisualText> Four famous places — tap to open

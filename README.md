@@ -138,6 +138,10 @@ The four stories so far: *Kabuliwala* (Tagore's classic, retold), *The Language 
 
 Each of the eight divisions has a twelve-chapter story in `src/data/playbook/divisions/<division>.js`: a narration, a background paragraph and three Bangla lines per chapter (with romanisation and English), covering geography, history, food, people and the problems each region faces today. They open from the Explore region sheet (**Read the full story of …**) and from the Playbook's history section, and are text-first: a chapter shows a text card until `public/images/playbook/divisions/<division>-NN.webp` exists. `docs/long-story-art-plan.json` now also has one prompt per chapter (96). `tests/divisions.test.mjs` checks each chapter's Bangla, romanisation and length; the facts need a read by someone who knows each region before wide release.
 
+### Explore region sheet — extra sections
+
+Every Explore division card (13+) now also shows **What people eat**, **Nature & places** and **Did you know?** for 13–15, and adds **Festivals & gatherings**, **People to know** and **How people talk** for 16–18 and 18+. Each food, place, festival and person is a short Bangla line (romanisation, English, tap-a-word audio) with a longer English note. Content: `src/data/exploreProfile*.js` (checked by `tests/explore-profile.test.mjs`) and `src/components/explore/RegionProfile.jsx`. Emoji must come from the shared art map (`src/art/learning-art.json`) or `tests/learning-art.test.mjs` fails.
+
 ## Super challenges
 
 The last lesson of a unit (the dark 🦸 tile) is a **Super challenge**: about six new, longer sentences written with only vocabulary that unit's track has already taught, and **no transliteration** (the Aa switch is removed inside it). Each has 18 questions: read and say what it means, build the sentence from tiles with decoy tiles, fill the gap, listen and build, and (13+) listen and type in Bangla. Script units use unseen words made only from letters learned so far. Passing with 2+ stars earns bonus XP and the Super badges; there is no gate, and it can be retried any time.
