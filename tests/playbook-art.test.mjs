@@ -40,7 +40,7 @@ test('every building step has painted art and unambiguous distractors', () => {
   }
 })
 
-test('a viewed Playbook painting remains available from the service worker when offline', async () => {
+for (const imagePath of ['playbook/pages/book-tara-morning-02.webp', 'learning/u-1f96d.webp']) test(`a viewed ${imagePath} remains available from the service worker when offline`, async () => {
   const { default: serviceWorker } = await import('../build/sw-plugin.js')
   const { runInNewContext } = await import('node:vm')
   let source
@@ -68,7 +68,7 @@ test('a viewed Playbook painting remains available from the service worker when 
     let response
     const pending = []
     listeners.fetch({
-      request: new Request('https://learnbangla.test/images/playbook/pages/book-tara-morning-02.webp'),
+      request: new Request('https://learnbangla.test/images/' + imagePath),
       respondWith: result => { response = result },
       waitUntil: promise => pending.push(promise),
     })

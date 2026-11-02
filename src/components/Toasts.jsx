@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useToasts } from '../state/game'
 
 /** Little pop-ups for badges and level-ups. */
@@ -12,7 +13,7 @@ export default function Toasts() {
             t.kind === 'badge' ? 'bg-ink text-white' : 'bg-secondary text-ink'
           }`}
         >
-          <span className="text-2xl">{t.emoji}</span>
+          <span className="text-2xl"><VisualText>{t.emoji}</VisualText></span>
           {t.text}
         </div>
       ))}

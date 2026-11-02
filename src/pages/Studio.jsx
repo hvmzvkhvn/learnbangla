@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { GROUPS, fileFor, studioClips } from '../audio/clips'
@@ -227,7 +228,7 @@ export default function Studio() {
           </p>
           <div className="flex flex-wrap items-center gap-2">
             <button type="button" onClick={exportZip} disabled={!doneAll} className="btn-primary !px-4 !py-2 text-sm disabled:opacity-40">
-              ⬇ Download my recordings
+              <VisualText>⬇</VisualText> Download my recordings
             </button>
             <button
               type="button"
@@ -326,7 +327,7 @@ export default function Studio() {
               onClick={() => speak(cur.say, { force: true, skipMine: true })}
               className="rounded-2xl bg-accent/70 px-4 py-3 font-extrabold text-ink hover:bg-accent"
             >
-              🔊 Prototype <span className="text-xs opacity-60">(L)</span>
+              <VisualText>🔊</VisualText> Prototype <span className="text-xs opacity-60">(L)</span>
             </button>
             {phase === 'recording' ? (
               <button type="button" onClick={stopRec} className="rounded-2xl bg-error px-6 py-3 font-extrabold text-white">
@@ -346,7 +347,7 @@ export default function Studio() {
             )}
             {(take || have.has(cur.key)) && phase !== 'recording' && (
               <button type="button" onClick={playMine} className="rounded-2xl bg-secondary px-4 py-3 font-extrabold text-white">
-                ▶ Mine <span className="text-xs opacity-70">(P)</span>
+                <VisualText>▶</VisualText> Mine <span className="text-xs opacity-70">(P)</span>
               </button>
             )}
             {take && (
@@ -378,7 +379,7 @@ export default function Studio() {
         </div>
       ) : (
         <p className="card text-center font-bold text-ink/75">
-          {status === 'todo' ? '🎉 Nothing left to record here.' : 'Nothing matches.'}
+          <VisualText>{status === 'todo' ? '🎉 Nothing left to record here.' : 'Nothing matches.'}</VisualText>
         </p>
       )}
     </div>

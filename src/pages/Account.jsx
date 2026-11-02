@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import GrownUpGate from '../components/GrownUpGate'
@@ -397,7 +398,7 @@ function Manage({ sync }) {
                 key={l.id}
                 className={`flex items-center gap-3 rounded-2xl px-3 py-3 ${l.id === sync.learnerId ? 'bg-success/10 ring-2 ring-success/40' : 'bg-primary/5'}`}
               >
-                <span className="text-3xl">{tracks[l.track]?.emoji ?? '🙂'}</span>
+                <span className="text-3xl"><VisualText>{tracks[l.track]?.emoji ?? '🙂'}</VisualText></span>
                 <span className="flex-1">
                   <span className="block font-extrabold text-ink">{l.name}</span>
                   <span className="block text-xs text-ink/70">
@@ -462,7 +463,7 @@ function Manage({ sync }) {
               <select value={track} onChange={(e) => setTrack(e.target.value)} className="input-field !w-auto">
                 {TRACK_KEYS.map((k) => (
                   <option key={k} value={k}>
-                    {tracks[k].emoji} {tracks[k].label} · {tracks[k].ages}
+                    {tracks[k].label} · {tracks[k].ages}
                   </option>
                 ))}
               </select>

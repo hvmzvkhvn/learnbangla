@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useEffect, useRef, useState } from 'react'
 import Face from './Face'
 import Prompt from './Prompt'
@@ -86,7 +87,7 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
           })()}
         </p>
       )}
-      {hintText && !solved && <p className="mb-3 rounded-2xl bg-accent/30 px-4 py-2 text-center text-sm font-bold">💡 {hintText}</p>}
+      {hintText && !solved && <p className="mb-3 rounded-2xl bg-accent/30 px-4 py-2 text-center text-sm font-bold"><VisualText>💡</VisualText> {hintText}</p>}
 
       {!solved && (
         <>
@@ -96,7 +97,7 @@ export default function TypeQ({ ex, onSolved, onWrong, onTyped }) {
               onClick={() => setHints((h) => Math.min(3, h + 1))}
               className="flex-1 rounded-2xl bg-white px-4 py-3 font-extrabold text-ink/75 shadow"
             >
-              💡 Hint
+              <VisualText>💡</VisualText> Hint
             </button>
             <button type="button" onClick={check} disabled={!value} className="btn-primary flex-[2] !py-3">
               Check

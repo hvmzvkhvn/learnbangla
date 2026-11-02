@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { speak } from '../../audio/audio'
 import { today } from '../../state/game'
 import { cityOfTheDay } from '../../state/explore'
@@ -16,12 +17,12 @@ export default function Postcard({ ex }) {
   return (
     <div className="rounded-3xl border-4 border-dashed border-secondary/50 bg-white p-4 shadow-sm">
       <div className="flex items-center gap-3">
-        <span className="text-4xl">{c.emoji}</span>
+        <span className="text-4xl"><VisualText>{c.emoji}</VisualText></span>
         <span className="flex-1">
-          <span className="block text-xs font-extrabold uppercase tracking-wide text-secondary">✉️ Today's postcard</span>
+          <span className="block text-xs font-extrabold uppercase tracking-wide text-secondary"><VisualText>✉️</VisualText> Today's postcard</span>
           <span className="block text-xl font-extrabold text-ink">From <span className="font-bangla text-primary">{c.bn}</span> · {c.name}</span>
         </span>
-        <span className="text-3xl">{got ? '✅' : '📮'}</span>
+        <span className="text-3xl"><VisualText>{got ? '✅' : '📮'}</VisualText></span>
       </div>
       <p className="mt-3 text-sm leading-relaxed text-ink/80">Greetings from {c.name}, in {c.region.name} division! {c.fact}</p>
       <div className="mt-3"><BanglaLine s={c.line} /></div>

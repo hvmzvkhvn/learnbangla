@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PaintedBuild, { PaintedPiece } from './PaintedBuild'
@@ -94,12 +95,12 @@ export default function BuildScene({ task, backTo = '/playbook' }) {
         <div className="card mt-3 text-center">
           <p className="text-lg font-bold text-ink">Listen to each word, then tap the right picture to place it.</p>
           <button type="button" onClick={begin} className="btn-primary mt-3">
-            ▶ Start
+            <VisualText>▶</VisualText> Start
           </button>
         </div>
       ) : done ? (
         <div className="animate-pop card mt-3 text-center">
-          <p className="text-5xl">🎉</p>
+          <p className="text-5xl"><VisualText>🎉</VisualText></p>
           <h2 className="mt-1 text-xl font-extrabold text-primary">You built the scene!</h2>
           <p className="text-sm text-ink/75">
             {perfect} / {task.steps.length} right first time

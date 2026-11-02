@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import Speaker from '../Speaker'
 import { useRoman } from '../../state/roman'
 
@@ -16,7 +17,7 @@ export default function Face({ f, big = false, speak = false }) {
   }
   return (
     <div className="flex flex-col items-center text-center leading-tight">
-      {f.art && <span className={`font-bangla ${big ? 'text-7xl' : 'text-4xl'}`}>{f.art}</span>}
+      {f.art && <span className={`font-bangla ${big ? 'text-7xl' : 'text-4xl'}`}><VisualText>{f.art}</VisualText></span>}
       {f.bn && (
         <span
           lang="bn"

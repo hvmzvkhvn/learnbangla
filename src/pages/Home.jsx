@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { Link } from 'react-router-dom'
 import { useDue } from '../state/srs'
 import { cityOfTheDay } from '../state/explore'
@@ -51,31 +52,31 @@ function GameHome({ track, lessons, done, next, progress, resume, ability }) {
       <div className={`card mb-4 ${playful ? '!p-5' : '!p-5'}`}>
         {playful ? (
           <div className="flex items-center gap-4">
-            <span className="animate-pop text-6xl">⭐</span>
+            <span className="animate-pop text-6xl"><VisualText>⭐</VisualText></span>
             <div className="flex-1">
               <p className="font-bangla text-2xl font-bold text-primary">স্বাগতম!</p>
               <p className="text-sm font-bold text-ink/70">
-                {track.emoji} {track.label} · ages {track.ages}
+                <VisualText>{track.emoji}</VisualText> {track.label} · ages {track.ages}
               </p>
               <p className="mt-1 text-sm font-extrabold text-ink">
-                {garden ? `${stage.emoji} Your garden: ${stage.name} · Level ${level.level}` : `⚡ Level ${level.level}`}
+                <VisualText>{garden ? `${stage.emoji} Your garden: ${stage.name} · Level ${level.level}` : `⚡ Level ${level.level}`}</VisualText>
               </p>
             </div>
             <div className="text-right text-xs font-bold text-secondary">
-              🔥 {game.streak} day{game.streak === 1 ? '' : 's'}
+              <VisualText>🔥</VisualText> {game.streak} day{game.streak === 1 ? '' : 's'}
             </div>
           </div>
         ) : (
           <div className="flex items-center justify-between gap-3">
             <div>
               <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70">
-                {track.emoji} {track.label} · ages {track.ages}
+                <VisualText>{track.emoji}</VisualText> {track.label} · ages {track.ages}
               </p>
               <h2 className="text-2xl font-extrabold text-primary">{done === 0 ? 'স্বাগতম — let’s begin' : 'Welcome back'}</h2>
             </div>
             <div className="text-right">
               <p className="text-3xl font-extrabold text-primary">Lv {level.level}</p>
-              <p className="text-xs font-bold text-secondary">🔥 {game.streak}-day streak</p>
+              <p className="text-xs font-bold text-secondary"><VisualText>🔥</VisualText> {game.streak}-day streak</p>
             </div>
           </div>
         )}
@@ -95,25 +96,25 @@ function GameHome({ track, lessons, done, next, progress, resume, ability }) {
           to={`/lesson/${next.id}`}
           className="flex items-center gap-4 rounded-3xl bg-primary px-5 py-5 text-white shadow-md transition active:scale-95 hover:brightness-110"
         >
-          <span className="text-4xl">{next.emoji}</span>
+          <span className="text-4xl"><VisualText>{next.emoji}</VisualText></span>
           <span className="flex-1">
             <span className="block text-xs font-bold opacity-80">
               {resume ? 'Resume your lesson' : done === 0 ? 'Start here' : 'Continue'}
             </span>
             <span className="block text-xl font-extrabold leading-tight">{next.title}</span>
           </span>
-          <span className="text-2xl">▶</span>
+          <span className="text-2xl"><VisualText>▶</VisualText></span>
         </Link>
         <Link
           to="/play/daily"
           className="flex items-center gap-4 rounded-3xl bg-secondary px-5 py-5 text-white shadow-md transition active:scale-95 hover:brightness-110"
         >
-          <span className="text-4xl">{garden ? '🎈' : '📅'}</span>
+          <span className="text-4xl"><VisualText>{garden ? '🎈' : '📅'}</VisualText></span>
           <span className="flex-1">
             <span className="block text-xs font-bold opacity-90">{dailyDone ? 'Done today ✓' : 'New today'}</span>
             <span className="block text-xl font-extrabold leading-tight">{garden ? 'Daily Treat' : 'Daily Challenge'}</span>
           </span>
-          <span className="text-2xl">▶</span>
+          <span className="text-2xl"><VisualText>▶</VisualText></span>
         </Link>
       </div>
 
@@ -128,10 +129,10 @@ function GameHome({ track, lessons, done, next, progress, resume, ability }) {
 
       <div className="mt-6 grid grid-cols-2 gap-3 text-center text-sm font-extrabold">
         <Link to="/alphabet" className="card !p-4 text-primary">
-          🔤 Alphabet chart
+          <VisualText>🔤</VisualText> Alphabet chart
         </Link>
         <Link to="/words" className="card !p-4 text-primary">
-          📚 Word lists
+          <VisualText>📚</VisualText> Word lists
         </Link>
       </div>
     </div>
@@ -146,7 +147,7 @@ function ReviewCard({ track, progress, playful }) {
       to="/practice"
       className="mb-5 flex items-center gap-4 rounded-3xl bg-white px-5 py-4 shadow-md ring-2 ring-primary/15 transition active:scale-95 hover:brightness-105"
     >
-      <span className="text-4xl">{playful ? '🧠' : '🔁'}</span>
+      <span className="text-4xl"><VisualText>{playful ? '🧠' : '🔁'}</VisualText></span>
       <span className="flex-1">
         <span className="block text-lg font-extrabold leading-tight text-primary">Review today</span>
         <span className="block text-sm font-bold text-ink/75">
@@ -155,7 +156,7 @@ function ReviewCard({ track, progress, playful }) {
             : 'A quick refresher of what you learned'}
         </span>
       </span>
-      <span className="text-2xl text-primary">▶</span>
+      <span className="text-2xl text-primary"><VisualText>▶</VisualText></span>
     </Link>
   )
 }
@@ -169,7 +170,7 @@ function PostcardCard() {
       to="/explore"
       className="mb-3 flex items-center gap-4 rounded-3xl bg-white px-5 py-4 shadow-md ring-2 ring-secondary/30 transition active:scale-95 hover:brightness-105"
     >
-      <span className="text-4xl">{c.emoji}</span>
+      <span className="text-4xl"><VisualText>{c.emoji}</VisualText></span>
       <span className="flex-1">
         <span className="block text-lg font-extrabold leading-tight text-secondary">
           {got ? 'Postcard collected ✓' : "Today's postcard"}
@@ -178,7 +179,7 @@ function PostcardCard() {
           From <span className="font-bangla">{c.bn}</span> · {c.name}
         </span>
       </span>
-      <span className="text-2xl text-secondary">▶</span>
+      <span className="text-2xl text-secondary"><VisualText>▶</VisualText></span>
     </Link>
   )
 }

@@ -1,5 +1,5 @@
 // Vocabulary for the 13–15 and 16–18 tracks (Bangladeshi Bangla).
-// Same shape as words.js: { bn, roman, en, emoji }. Emoji are decoration only — teen lessons are text-first.
+// Same shape as words.js: { bn, roman, en, emoji }. Illustrations are decoration only — teen lessons are text-first.
 const W = (bn, roman, en, emoji) => ({ bn, roman, en, emoji })
 
 export const teenWordCategories = [

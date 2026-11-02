@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { BADGES, stageOf, useGame } from '../state/game'
@@ -73,11 +74,11 @@ export default function Me() {
       <p role="status">{message}</p>
       <div className="card mb-5 text-center">
         <p className="text-sm font-extrabold uppercase tracking-wide text-ink/70">
-          {track ? `${track.emoji} ${track.label} · ages ${track.ages}` : ''}
+          <VisualText>{track ? `${track.emoji} ${track.label} · ages ${track.ages}` : ''}</VisualText>
         </p>
         {garden ? (
           <>
-            <p className="animate-pop mt-1 text-7xl">{stage.emoji}</p>
+            <p className="animate-pop mt-1 text-7xl"><VisualText>{stage.emoji}</VisualText></p>
             <p className="text-3xl font-extrabold text-primary">{stage.name}</p>
             <p className="text-sm font-bold text-ink/70">Your garden · Level {level.level}</p>
           </>
@@ -92,7 +93,7 @@ export default function Me() {
         </p>
         <div className="mt-4 grid grid-cols-3 gap-2 text-center">
           <div className="rounded-2xl bg-secondary/10 py-3">
-            <p className="text-2xl font-extrabold text-secondary">🔥 {game.streak}</p>
+            <p className="text-2xl font-extrabold text-secondary"><VisualText>🔥</VisualText> {game.streak}</p>
             <p className="text-xs font-bold text-ink/70">Day streak</p>
           </div>
           <div className="rounded-2xl bg-primary/10 py-3">
@@ -117,7 +118,7 @@ export default function Me() {
             const got = Boolean(game.badges[b.id])
             return (
               <div key={b.id} className={`card flex flex-col items-center !p-4 text-center ${got ? '' : 'opacity-50 grayscale'}`}>
-                <span className={garden ? 'text-5xl' : 'text-4xl'}>{got ? b.emoji : '🔒'}</span>
+                <span className={garden ? 'text-5xl' : 'text-4xl'}><VisualText>{got ? b.emoji : '🔒'}</VisualText></span>
                 <p className="mt-1 font-extrabold text-ink">{b.title}</p>
                 <p className="text-xs text-ink/75">{b.desc}</p>
               </div>

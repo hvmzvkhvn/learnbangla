@@ -47,7 +47,7 @@ export const adultWordCategories = [
     key: 'politics', title: 'Government & Politics', emoji: '🏛️', note: 'The words you meet in a newspaper or on the news.',
     words: [
       W('সরকার', 'shorkar', 'government', '🏛️'), W('নির্বাচন', 'nirbachon', 'election', '🗳️'), W('ভোট', 'bhot', 'vote', '🗳️'), W('দল', 'dol', 'party; team; group', '👥'),
-      W('সংসদ', 'shongshod', 'parliament', '🏛️'), W('আইন', 'ain', 'law', '⚖️'), W('প্রধানমন্ত্রী', 'prodhanmontri', 'prime minister', '🧑‍💼'), W('সংবিধান', 'shongbidhan', 'constitution', '📜'),
+      W('সংসদ', 'shongshod', 'parliament', 'parliament'), W('আইন', 'ain', 'law', '⚖️'), W('প্রধানমন্ত্রী', 'prodhanmontri', 'prime minister', '🧑‍💼'), W('সংবিধান', 'shongbidhan', 'constitution', '📜'),
       W('গণতন্ত্র', 'gonotontro', 'democracy', '🗳️'), W('অধিকার', 'odhikar', 'right', '✊'), W('আদালত', 'adalot', 'court', '⚖️'), W('নাগরিক', 'nagorik', 'citizen', '🪪'),
     ],
   },
@@ -63,7 +63,7 @@ export const adultWordCategories = [
     key: 'culture2', title: 'Faith, Clothes & Music', emoji: '🎶', note: 'Words for festivals, what people wear, and the sounds of Bengal.',
     words: [
       W('ধর্ম', 'dhormo', 'religion', '🕊️'), W('গির্জা', 'girja', 'church', '⛪'), W('ঈদ', 'id', 'Eid', '🌙'), W('পূজা', 'puja', 'Hindu worship; festival', '🪔'),
-      W('পাঞ্জাবি', 'panjabi', 'long kurta (men)', '👘'), W('লুঙ্গি', 'lungi', 'lungi (wrap-around)', '🩳'), W('গামছা', 'gamchha', 'thin cotton towel', '🧣'), W('নকশিকাঁথা', 'nokshikatha', 'embroidered quilt', '🧵'),
+      W('পাঞ্জাবি', 'panjabi', 'long kurta (men)', '👘'), W('লুঙ্গি', 'lungi', 'lungi (wrap-around)', '🩳'), W('গামছা', 'gamchha', 'thin cotton towel', 'gamchha'), W('নকশিকাঁথা', 'nokshikatha', 'embroidered quilt', 'quilt'),
       W('বাঁশি', 'banshi', 'bamboo flute', '🪈'), W('ঢোল', 'dhol', 'drum', '🥁'), W('উৎসব', 'utshob', 'festival', '🎉'), W('সংস্কৃতি', 'shonskriti', 'culture', '🎭'),
     ],
   },
@@ -76,7 +76,7 @@ export const adultWordCategories = [
       W('লবণ', 'lobon', 'salt (Bangladeshi; West Bengal: নুন)', '🧂'), W('নুন', 'nun', 'salt (West Bengal; also used in Bangladeshi villages)', '🧂'),
       W('খালা', 'khala', "mother's sister (Bangladeshi; West Bengal: মাসি)", '👩'), W('মাসি', 'mashi', "mother's sister (West Bengal)", '👩'),
       W('চাচা', 'chacha', "father's brother (Bangladeshi; West Bengal: কাকা)", '👨'), W('কাকা', 'kaka', "father's brother (West Bengal)", '👨'),
-      W('নাস্তা', 'nasta', 'breakfast, a snack (Bangladeshi; West Bengal: জলখাবার)', '🍳'), W('জলখাবার', 'jolkhabar', 'breakfast, a snack (West Bengal)', '🍳'),
+      W('নাস্তা', 'nasta', 'breakfast, a snack (Bangladeshi; West Bengal: জলখাবার)', 'breakfast'), W('জলখাবার', 'jolkhabar', 'breakfast, a snack (West Bengal)', 'breakfast'),
     ],
   },
 ]

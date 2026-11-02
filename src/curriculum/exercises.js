@@ -1,3 +1,4 @@
+import { visualIdentity } from '../art/visualIdentity'
 // Turns a lesson into a sequence of steps: flashcards first, then generated exercises.
 //
 // Exercise shapes (rendered in components/lesson):
@@ -16,11 +17,12 @@ const nextId = () => `ex${++uid}`
 
 // Build a choice question. `dim` is the option field that must be unique across options.
 function choice({ itemId, title, stem, correct, candidates, dim, count = 4 }) {
-  const seen = new Set([correct[dim]])
+  const keyFor = option => dim === 'art' ? visualIdentity(option.art) : option[dim]
+  const seen = new Set([keyFor(correct)])
   const wrong = []
   for (const c of shuffle(candidates)) {
-    if (c[dim] == null || seen.has(c[dim])) continue
-    seen.add(c[dim])
+    if (c[dim] == null || seen.has(keyFor(c))) continue
+    seen.add(keyFor(c))
     wrong.push(c)
     if (wrong.length === count - 1) break
   }

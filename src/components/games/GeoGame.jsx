@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useMemo, useState } from 'react'
 import { exploreRegions } from '../../data/explore'
 import { shuffle } from '../../curriculum/text'
@@ -86,7 +87,7 @@ export default function GeoGame({ onFinish }) {
           region={q.region}
         >
           <div className="flex items-center justify-center gap-3 rounded-3xl bg-white p-4 shadow-sm">
-            <span className="text-5xl">{q.line.emoji}</span>
+            <span className="text-5xl"><VisualText>{q.line.emoji}</VisualText></span>
             <p className="font-bangla text-2xl font-bold text-primary">{q.line.bn}</p>
             <Speaker text={q.line.bn} size="lg" />
           </div>
@@ -96,7 +97,7 @@ export default function GeoGame({ onFinish }) {
       {q.kind === 'city' && (
         <Choice title="Which division is this city in?" options={q.options} answer={answer} bad={bad} solved={solved} region={q.region}>
           <div className="flex items-center justify-center gap-3 rounded-3xl bg-white p-4 shadow-sm">
-            <span className="text-5xl">{q.city.emoji}</span>
+            <span className="text-5xl"><VisualText>{q.city.emoji}</VisualText></span>
             <div className="text-center">
               <p className="font-bangla text-4xl font-extrabold text-primary">{q.city.bn}</p>
               <p className="text-sm text-ink/75">{q.city.name}</p>
@@ -138,7 +139,7 @@ function Choice({ title, sub, options, answer, bad, solved, region, children }) 
                   : 'border-primary/15 bg-white hover:border-primary/40'
             }`}
           >
-            <span className="block text-2xl">{r.emoji}</span>
+            <span className="block text-2xl"><VisualText>{r.emoji}</VisualText></span>
             <span className="block font-bangla text-xl font-extrabold text-ink">{r.bn}</span>
             <span className="block text-xs font-bold text-ink/70">{r.name}</span>
           </button>

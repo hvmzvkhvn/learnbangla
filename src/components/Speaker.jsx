@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useState } from 'react'
 import { speak, speakEnglish, hasAudio, useAudioReady, canSpeakEnglish } from '../audio/audio'
 
@@ -47,14 +48,14 @@ export default function Speaker({ text, english = false, inline = false, size = 
         onClick={play}
         onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && play(e)}
       >
-        🔊
+        <VisualText decorative>🔊</VisualText>
       </span>
     )
   }
   return (
     <span className="inline-flex flex-col items-center gap-2">
       <button type="button" aria-label={label} title={missing ? 'No audio yet' : label} className={cls} onClick={play}>
-        🔊
+        <VisualText decorative>🔊</VisualText>
       </button>
       {size === 'lg' && !english && (
         <span className="flex flex-wrap items-center justify-center gap-3 text-xs font-bold">

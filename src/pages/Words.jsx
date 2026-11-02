@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useState } from 'react'
 import { wordCategories } from '../data/words'
 import Speaker from '../components/Speaker'
@@ -23,7 +24,7 @@ export default function Words() {
               activeKey === c.key ? 'bg-primary text-white' : 'bg-white text-primary'
             }`}
           >
-            <span className="text-lg">{c.emoji}</span>
+            <span className="text-lg"><VisualText>{c.emoji}</VisualText></span>
             {c.title}
           </button>
         ))}
@@ -34,7 +35,7 @@ export default function Words() {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {active.words.map((w) => (
           <div key={w.bn + w.en} className="card flex flex-col items-center !p-4 text-center">
-            <span className="font-bangla text-4xl">{w.digit ?? w.emoji}</span>
+            <span className="font-bangla learning-picture-card"><VisualText>{w.digit ?? w.emoji}</VisualText></span>
             <p className="mt-2 font-bangla text-2xl font-bold leading-snug text-primary">{w.bn}</p>
             {romanOn && <p className="text-sm font-extrabold text-ink">{w.roman}</p>}
             <p className="mb-1 text-xs text-ink/70">{w.en}</p>

@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { Link } from 'react-router-dom'
 import { storiesFor } from '../data/stories'
 import { useTrack } from '../state/persist'
@@ -19,13 +20,13 @@ export default function Stories() {
           const total = COUNT_ENDINGS(st)
           return (
             <Link key={st.id} to={`/story/${st.id}`} className="card flex gap-4 transition active:scale-[0.98] hover:shadow-lg">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-4xl">{st.emoji}</span>
+              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-4xl"><VisualText>{st.emoji}</VisualText></span>
               <span className="flex-1">
                 <span className="block text-xl font-extrabold text-ink">{st.title}</span>
                 <span className="block text-sm text-ink/75">{st.blurb}</span>
                 <span className="mt-2 flex items-center gap-2 text-xs font-extrabold">
                   <span className="rounded-full bg-accent px-2 py-0.5">
-                    {st.meter.emoji} {st.meter.label}
+                    <VisualText>{st.meter.emoji}</VisualText> {st.meter.label}
                   </span>
                   <span className={seen ? 'text-success' : 'text-ink/70'}>
                     {seen ? `✓ ${seen}/${total} endings` : `${total} endings to find`}

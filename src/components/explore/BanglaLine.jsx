@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { speak } from '../../audio/audio'
 import Speaker from '../Speaker'
 import { useRoman } from '../../state/roman'
@@ -7,7 +8,7 @@ export default function BanglaLine({ s, emoji, size = 'text-xl' }) {
   const [romanOn] = useRoman()
   return (
     <div className="flex items-start gap-3 rounded-2xl bg-white px-3 py-3 shadow-sm">
-      {emoji && <span className="text-3xl">{emoji}</span>}
+      {emoji && <span className="text-3xl"><VisualText>{emoji}</VisualText></span>}
       <div className="flex-1">
         <p lang="bn" className={`font-bangla font-bold leading-snug text-primary ${size}`}>
           {s.bn.split(' ').map((t, i) => (

@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useProgress, useTrack } from '../state/persist'
@@ -76,17 +77,17 @@ function Hub({ feat }) {
       <div className="card mb-5 flex items-center justify-around text-center">
         <div>
           <p className="text-2xl font-extrabold text-primary">
-            {feat.garden ? stage.emoji : '⚡'} Lv {level.level}
+            <VisualText>{feat.garden ? stage.emoji : '⚡'}</VisualText> Lv {level.level}
           </p>
           <p className="text-xs font-bold text-ink/70">{feat.garden ? stage.name : 'Level'}</p>
         </div>
         <div>
-          <p className="text-2xl font-extrabold text-secondary">🔥 {game.streak}</p>
+          <p className="text-2xl font-extrabold text-secondary"><VisualText>🔥</VisualText> {game.streak}</p>
           <p className="text-xs font-bold text-ink/70">Day streak</p>
         </div>
         {feat.arcade.includes('blitz') && (
           <div>
-            <p className="text-2xl font-extrabold text-ink">⚡ {game.stats.blitzBest}</p>
+            <p className="text-2xl font-extrabold text-ink"><VisualText>⚡</VisualText> {game.stats.blitzBest}</p>
             <p className="text-xs font-bold text-ink/70">Blitz best</p>
           </div>
         )}
@@ -100,7 +101,7 @@ function Hub({ feat }) {
               to={`/play/${k}`}
               className={`flex items-center gap-4 rounded-3xl px-5 shadow-md transition active:scale-95 hover:brightness-110 ${feat.garden ? 'py-8' : 'py-6'} ${g.color}`}
             >
-              <span className={feat.garden ? 'text-6xl' : 'text-5xl'}>{feat.garden && g.kidEmoji ? g.kidEmoji : g.emoji}</span>
+              <span className={feat.garden ? 'text-6xl' : 'text-5xl'}><VisualText>{feat.garden && g.kidEmoji ? g.kidEmoji : g.emoji}</VisualText></span>
               <span>
                 <span className="block text-xl font-extrabold">
                   {feat.garden && g.kidTitle ? g.kidTitle : g.title}
@@ -183,10 +184,10 @@ function Runner({ gameKey }) {
     body = (
       <div className="animate-pop py-8 text-center">
         <Confetti />
-        <p className="text-7xl">{feat.garden && meta.kidEmoji ? meta.kidEmoji : meta.emoji}</p>
+        <p className="text-7xl"><VisualText>{feat.garden && meta.kidEmoji ? meta.kidEmoji : meta.emoji}</VisualText></p>
         <h1 className="mt-3 text-3xl font-extrabold text-primary">{result.headline}</h1>
         <p className="mt-2 text-ink/75">{result.line}</p>
-        {feat.playful && <p className="mt-3 text-lg font-extrabold text-primary">⭐ Tara says: “Great playing!”</p>}
+        {feat.playful && <p className="mt-3 text-lg font-extrabold text-primary"><VisualText>⭐</VisualText> Tara says: “Great playing!”</p>}
         <p className="mt-4 text-2xl font-extrabold text-success">+{result.xp} XP</p>
         <div className="mx-auto mt-6 flex max-w-xs flex-col gap-3">
           {gameKey !== 'daily' && (
@@ -300,7 +301,7 @@ function Runner({ gameKey }) {
           ←
         </button>
         <h1 className="text-2xl font-extrabold text-primary">
-          {feat.garden && meta.kidEmoji ? meta.kidEmoji : meta.emoji} {feat.garden && meta.kidTitle ? meta.kidTitle : meta.title}
+          <VisualText>{feat.garden && meta.kidEmoji ? meta.kidEmoji : meta.emoji}</VisualText> {feat.garden && meta.kidTitle ? meta.kidTitle : meta.title}
         </h1>
       </div>
       {body}

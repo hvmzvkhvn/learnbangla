@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useEffect, useRef, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { stories } from '../data/stories'
@@ -154,11 +155,11 @@ function Player({ story }) {
           </button>
           <div className="min-w-0 flex-1">
             <p className="truncate font-extrabold text-ink">
-              {story.emoji} {story.title}
+              <VisualText>{story.emoji}</VisualText> {story.title}
             </p>
             <div className="mt-1 flex items-center gap-2">
               <span className="text-xs font-extrabold text-ink/70">
-                {story.meter.emoji} {story.meter.label}
+                <VisualText>{story.meter.emoji}</VisualText> {story.meter.label}
               </span>
               <div className="relative h-2.5 flex-1 overflow-hidden rounded-full bg-primary/10">
                 <div
@@ -204,7 +205,7 @@ function Player({ story }) {
             <div key={m.key} className={`animate-slideIn flex items-end gap-2 ${m.kind === 'you' ? 'flex-row-reverse' : ''}`}>
               {m.kind === 'npc' && (
                 <div className="flex w-12 shrink-0 flex-col items-center text-center">
-                  <span className="text-3xl">{avatar(m.who)}</span>
+                  <span className="text-3xl"><VisualText>{avatar(m.who)}</VisualText></span>
                   <span className="text-[10px] font-extrabold leading-tight text-ink/70">{name(m.who)}</span>
                 </div>
               )}
@@ -221,7 +222,7 @@ function Player({ story }) {
                 aria-label="Hear it"
                 className="mb-1 rounded-full bg-accent/60 px-2 py-1 text-sm"
               >
-                🔊
+                <VisualText>🔊</VisualText>
               </button>
             </div>
           ),
@@ -230,7 +231,7 @@ function Player({ story }) {
         {typing && (
           <div className="flex items-end gap-2">
             <div className="flex w-12 shrink-0 flex-col items-center">
-              <span className="text-3xl">{avatar(typing)}</span>
+              <span className="text-3xl"><VisualText>{avatar(typing)}</VisualText></span>
             </div>
             <div className="flex gap-1 rounded-3xl rounded-bl-md bg-white px-4 py-4 shadow-sm">
               {[0, 1, 2].map((d) => (
@@ -242,13 +243,13 @@ function Player({ story }) {
 
         {ending && (
           <div className="animate-pop card mt-4 text-center">
-            <p className="text-6xl">{ending.emoji}</p>
+            <p className="text-6xl"><VisualText>{ending.emoji}</VisualText></p>
             <p className="mt-1 text-sm font-extrabold uppercase tracking-wide text-ink/70">Ending</p>
             <h2 className="text-2xl font-extrabold text-primary">{ending.title}</h2>
             <p className="mt-2 text-ink/70">{ending.en}</p>
-            <p className="mt-3 text-lg">{'⭐'.repeat(ending.stars)}</p>
+            <p className="mt-3 text-lg"><VisualText>{'⭐'.repeat(ending.stars)}</VisualText></p>
             <p className="text-xs font-bold text-ink/70">
-              {story.meter.emoji} {story.meter.label}: {meter}/100
+              <VisualText>{story.meter.emoji}</VisualText> {story.meter.label}: {meter}/100
             </p>
             <div className="mt-5 rounded-2xl bg-background p-3 text-left">
               <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-ink/70">Phrases to remember</p>

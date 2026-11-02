@@ -48,7 +48,7 @@ export const exploreRegions = [
       city('gazipur', 'Gazipur', 'গাজীপুর', 'gazipur', '🏭', 90.42, 24.00, 'Factories and forest side by side: a garment hub close to Bhawal National Park.', S('গাজীপুরে অনেক কারখানা আছে।', 'gazipure onek karkhana ache.', 'Gazipur has many factories.'), [
         W('কারখানা', 'karkhana', 'factory', '🏭'), W('শ্রমিক', 'shromik', 'worker', '👷'), W('শাল', 'shal', 'sal tree', '🌳')]),
       city('tangail', 'Tangail', 'টাঙ্গাইল', 'tangail', '🥻', 89.92, 24.25, 'Known for hand-woven Tangail sarees, and for the long Jamuna Bridge near its edge.', S('টাঙ্গাইলের শাড়ি বিখ্যাত।', 'tangailer shari bikkhato.', 'The sarees of Tangail are famous.'), [
-        W('শাড়ি', 'shari', 'saree', '🥻'), W('তাঁত', 'tãt', 'handloom', '🧵'), W('সুতা', 'shuta', 'thread', '🪡')]),
+        W('শাড়ি', 'shari', 'saree', '🥻'), W('তাঁত', 'tãt', 'handloom', 'handloom'), W('সুতা', 'shuta', 'thread', '🧵')]),
     ],
   },
   // ------------------------------------------------------------------------------------------------ Chattogram
@@ -58,7 +58,7 @@ export const exploreRegions = [
     intro: S('চট্টগ্রাম আমাদের বন্দর শহর।', 'chottogram amader bondor shohor.', 'Chattogram is our port city.'),
     famous: [
       F('⛱️', S('কক্সবাজারে লম্বা সমুদ্র সৈকত আছে।', 'cox bazare lomba shomudro soikot ache.', 'Cox\'s Bazar has a long sea beach.')),
-      F('🏔️', S('চট্টগ্রামে সুন্দর পাহাড় আছে।', 'chottograme shundor pahar ache.', 'Chattogram has beautiful hills.')),
+      F('green-hills', S('চট্টগ্রামে সুন্দর পাহাড় আছে।', 'chottograme shundor pahar ache.', 'Chattogram has beautiful hills.')),
       F('⚓', S('এখানে দেশের বড় বন্দর।', 'ekhane desher boro bondor.', 'The country\'s big port is here.')),
     ],
     then: {
@@ -250,7 +250,7 @@ export const exploreRegions = [
       city('rajshahi', 'Rajshahi', 'রাজশাহী', 'rajshahi', '🥭', 88.60, 24.37, 'A green university city on the Padma, long known for silk.', S('রাজশাহী পদ্মার তীরে।', 'rajshahi poddar tire.', 'Rajshahi is on the bank of the Padma.'), [
         W('আম', 'am', 'mango', '🥭'), W('রেশম', 'resham', 'silk', '🧵'), W('পদ্মা', 'podda', 'the Padma river', '🌊')]),
       city('bogura', 'Bogura', 'বগুড়া', 'bogura', '🏺', 89.37, 24.85, 'Home of Mahasthangarh, a city more than 2,000 years old, and of famous Bogura yoghurt.', S('বগুড়ার দই খুব মজার।', 'bogurar doi khub mojar.', 'The yoghurt of Bogura is very tasty.'), [
-        W('দই', 'doi', 'yoghurt', '🥛'), W('দুর্গ', 'durgo', 'fort', '🏰'), W('ইতিহাস', 'itihash', 'history', '📖')]),
+        W('দই', 'doi', 'yoghurt', 'yoghurt'), W('দুর্গ', 'durgo', 'fort', '🏰'), W('ইতিহাস', 'itihash', 'history', '📖')]),
       city('naogaon', 'Naogaon', 'নওগাঁ', 'nowgã', '🛕', 88.94, 24.80, 'Home of the Paharpur Buddhist Vihara, and one of Bangladesh\'s biggest rice-growing districts.', S('নওগাঁয় অনেক ধান হয়।', 'nowgãy onek dhan hoy.', 'Much rice grows in Naogaon.'), [
         W('ধান', 'dhan', 'paddy', '🌾'), W('চাল', 'chal', 'rice (uncooked)', '🍚'), W('মন্দির', 'mondir', 'temple', '🛕')]),
       city('chapainawabganj', 'Chapainawabganj', 'চাঁপাইনবাবগঞ্জ', 'chãpainababgonj', '🥭', 88.28, 24.60, 'The mango capital, famed for Himsagar and Langra, near the old Bengal capital Gaur and its Chhota Sona Mosque.', S('চাঁপাইনবাবগঞ্জ আমের শহর।', 'chãpainababgonj amer shohor.', 'Chapainawabganj is a city of mangoes.'), [

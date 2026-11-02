@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useMemo } from 'react'
 
 const PIECES = ['🎉', '⭐', '✨', '🎊', '💫', '🟡', '🟢', '🟠']
@@ -19,7 +20,7 @@ export default function Confetti({ count = 28 }) {
     <div className="pointer-events-none fixed inset-0 z-40 overflow-hidden" aria-hidden="true">
       {items.map((p) => (
         <span key={p.id} className="animate-confetti absolute top-0" style={{ left: `${p.left}%`, animationDelay: `${p.delay}s`, fontSize: p.size, opacity: 0 }}>
-          {p.glyph}
+          <VisualText>{p.glyph}</VisualText>
         </span>
       ))}
     </div>

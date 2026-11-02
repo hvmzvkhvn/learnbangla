@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import GrownUpGate from '../components/GrownUpGate'
@@ -103,7 +104,7 @@ function LearnerCard({ l }) {
   return (
     <section className="card !p-5">
       <div className="flex items-center gap-3">
-        <span className="text-4xl">{track?.emoji ?? '🙂'}</span>
+        <span className="text-4xl"><VisualText>{track?.emoji ?? '🙂'}</VisualText></span>
         <div className="flex-1">
           <h2 className="text-2xl font-extrabold text-ink">{l.name}</h2>
           <p className="text-xs font-bold text-ink/70">
@@ -161,7 +162,7 @@ function LearnerCard({ l }) {
 
 const Stat = ({ big, small }) => (
   <div className="rounded-2xl bg-primary/5 px-2 py-3">
-    <p className="text-xl font-extrabold text-primary">{big}</p>
+    <p className="text-xl font-extrabold text-primary"><VisualText>{big}</VisualText></p>
     <p className="text-xs font-bold text-ink/70">{small}</p>
   </div>
 )

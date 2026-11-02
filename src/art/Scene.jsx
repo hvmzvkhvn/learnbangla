@@ -1,3 +1,4 @@
+import learningArt from './learning-art.json'
 import { Person } from './sprites/people'
 import { MAP } from '../data/bdMap'
 import { scaleFor, spriteFor } from './sprites'
@@ -287,6 +288,8 @@ function Item({ it }) {
   const s = it.s ?? 44
   const shadow = it.shadow ?? (it.y > 48 && s >= 28)
   const Art = it.recurring && it.e === '👧' ? StoryGirl : spriteFor(it.e)
+  const picture = learningArt[it.e]
+  if (!Art && picture?.kind === 'image') return <image href={`${import.meta.env.BASE_URL}${picture.src}`} x={x - s / 2} y={y - s / 2} width={s} height={s} preserveAspectRatio="xMidYMid meet" className={cls} transform={it.flip ? `translate(${2 * x} 0) scale(-1 1)` : undefined} />
   if (Art) {
     return (
       <g className={cls} style={{ transformOrigin: `${x}px ${y}px`, transformBox: 'view-box' }}>

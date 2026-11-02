@@ -113,7 +113,7 @@ self.addEventListener('fetch', (e) => {
       const hit = await cache.match(req)
       if (hit) return hit
       const response = await fetch(req)
-      if (response.ok && (url.pathname.includes('/assets/') || url.pathname.includes('/images/playbook/'))) e.waitUntil(cache.put(req, response.clone()))
+      if (response.ok && (url.pathname.includes('/assets/') || (url.pathname.includes('/images/playbook/') || url.pathname.includes('/images/learning/')))) e.waitUntil(cache.put(req, response.clone()))
       return response
     }))
   }

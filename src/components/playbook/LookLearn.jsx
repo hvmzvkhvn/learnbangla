@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Scene from '../../art/Scene'
@@ -102,13 +103,13 @@ export default function LookLearn({ look, backTo = '/playbook' }) {
         )}
         {mode === 'find' && end && (
           <div className="text-center">
-            <p className="text-3xl">🎉</p>
+            <p className="text-3xl"><VisualText>🎉</VisualText></p>
             <p className="font-extrabold text-primary">
               You found them all! {score} / {hot.length} on the first go
             </p>
           </div>
         )}
-        {mode === 'explore' && !w && <p className="py-3 text-center font-bold text-ink/70">👆 Tap anything in the picture</p>}
+        {mode === 'explore' && !w && <p className="py-3 text-center font-bold text-ink/70"><VisualText>👆</VisualText> Tap anything in the picture</p>}
         {mode === 'explore' && w && (
           <div className="flex items-center gap-3">
             <div className="flex-1">
@@ -129,7 +130,7 @@ export default function LookLearn({ look, backTo = '/playbook' }) {
       <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
         {mode === 'explore' && (
           <button type="button" onClick={startFind} className="btn-primary !py-3" disabled={!seen.size}>
-            🔍 Find it game {seen.size ? '' : '(tap a few things first)'}
+            <VisualText>🔍</VisualText> Find it game {seen.size ? '' : '(tap a few things first)'}
           </button>
         )}
         {mode === 'find' && (
@@ -146,7 +147,7 @@ export default function LookLearn({ look, backTo = '/playbook' }) {
               }}
               className="rounded-2xl bg-white px-4 py-3 font-extrabold text-primary shadow"
             >
-              👆 Back to exploring
+              <VisualText>👆</VisualText> Back to exploring
             </button>
           </>
         )}

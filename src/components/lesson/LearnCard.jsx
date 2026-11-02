@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useEffect } from 'react'
 import { useReviewMarks } from '../../state/persist'
 import { speak, speakSequence } from '../../audio/audio'
@@ -70,7 +71,7 @@ export default function LearnCard({ item }) {
             <Speaker text={item.bn} size="lg" label="Hear the letter" />
           </div>
           <div className="mt-5 border-t border-primary/10 pt-4">
-            <p className="text-6xl">{item.example.emoji}</p>
+            <p className="text-6xl"><VisualText>{item.example.emoji}</VisualText></p>
             <p lang="bn" className="font-bangla text-3xl font-bold text-ink">
               {item.example.bn}
             </p>
@@ -101,7 +102,7 @@ export default function LearnCard({ item }) {
       {item.kind === 'word' && (
         <>
           <p lang="bn" className="font-bangla text-8xl">
-            {item.art}
+            <VisualText>{item.art}</VisualText>
           </p>
           <p lang="bn" className="mt-2 font-bangla text-5xl font-bold leading-snug text-primary">
             {item.bn}

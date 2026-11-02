@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useEffect, useRef, useState } from 'react'
 import { speak, stop as stopNative } from '../audio/audio'
 
@@ -87,7 +88,7 @@ export default function SayIt({ text, maxSeconds = 8 }) {
           onClick={start}
           className="rounded-2xl bg-primary/10 px-5 py-3 font-extrabold text-primary transition active:scale-95 hover:bg-primary/20"
         >
-          🎤 Say it
+          <VisualText decorative>🎤</VisualText> Say it
         </button>
       )}
       {phase === 'recording' && (
@@ -107,10 +108,10 @@ export default function SayIt({ text, maxSeconds = 8 }) {
             onClick={() => speak(text, { force: true })}
             className="rounded-2xl bg-accent/70 px-4 py-3 font-extrabold text-ink hover:bg-accent"
           >
-            🔊 Native
+            <VisualText decorative>🔊</VisualText> Native
           </button>
           <button type="button" onClick={playMine} className="rounded-2xl bg-secondary px-4 py-3 font-extrabold text-white">
-            ▶ You
+            <VisualText decorative>▶</VisualText> You
           </button>
           <button type="button" onClick={playBoth} className="rounded-2xl bg-white px-4 py-3 font-extrabold text-primary shadow">
             Both

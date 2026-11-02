@@ -1,3 +1,4 @@
+import VisualText from '../../art/VisualText'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { speak } from '../../audio/audio'
@@ -39,7 +40,7 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
         className="animate-slideIn max-h-[86vh] w-full max-w-xl overflow-y-auto rounded-t-[2rem] bg-background px-5 pb-28 pt-4 shadow-2xl"
       >
         <div className="sticky top-0 z-10 -mx-5 -mt-4 mb-2 flex items-center gap-3 bg-background/95 px-5 py-3 backdrop-blur">
-          <span className="text-4xl">{r.emoji}</span>
+          <span className="text-4xl"><VisualText>{r.emoji}</VisualText></span>
           <span className="flex-1">
             <span className="block font-bangla text-3xl font-extrabold leading-none text-primary">{r.bn}</span>
             <span className="block text-sm font-bold text-ink/70">
@@ -58,26 +59,26 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
         </div>
 
         <div className="rounded-3xl bg-primary px-4 py-4 text-white shadow">
-          <p className="text-xs font-extrabold uppercase tracking-wide opacity-70">📖 In English</p>
+          <p className="text-xs font-extrabold uppercase tracking-wide opacity-70"><VisualText>📖</VisualText> In English</p>
           <p className="mt-1 text-base leading-relaxed">{r.hook}</p>
         </div>
         {(tier === 'senior' || tier === 'adult') && (
           <Link to={`/playbook/story/${r.id}`} className="btn-secondary mt-3 w-full !py-3">
-            ▶ Watch the story of {r.name}
+            <VisualText>▶</VisualText> Watch the story of {r.name}
           </Link>
         )}
         <div className="mt-3">
           <BanglaLine s={r.intro} size="text-2xl" />
         </div>
 
-        <SectionTitle>⭐ Famous for</SectionTitle>
+        <SectionTitle><VisualText>⭐</VisualText> Famous for</SectionTitle>
         <div className="space-y-2">
           {r.famous.map((f) => (
             <BanglaLine key={f.bn} s={f} emoji={f.emoji} />
           ))}
         </div>
 
-        <SectionTitle>⏳ Then &amp; Now</SectionTitle>
+        <SectionTitle><VisualText>⏳</VisualText> Then &amp; Now</SectionTitle>
         <ThenNow then={r.then} now={r.now} />
         {tier !== 'teen' && (
           <ol className="mt-3 space-y-2 border-l-4 border-primary/20 pl-4">
@@ -90,7 +91,7 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
           </ol>
         )}
 
-        <SectionTitle>🌾 Made &amp; grown here</SectionTitle>
+        <SectionTitle><VisualText>🌾</VisualText> Made &amp; grown here</SectionTitle>
         <div className="space-y-2">
           {r.made.map((f) => (
             <BanglaLine key={f.bn} s={f} emoji={f.emoji} />
@@ -98,13 +99,13 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
         </div>
         {tier !== 'teen' && (
           <div className="mt-3 rounded-2xl bg-secondary/10 px-4 py-3">
-            <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70">💰 The economy</p>
+            <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70"><VisualText>💰</VisualText> The economy</p>
             <p className="mt-1 text-sm leading-relaxed text-ink/80">{r.economy}</p>
           </div>
         )}
         {tier === 'adult' && r.deep && (
           <div className="mt-3 rounded-2xl bg-white px-4 py-3 shadow-sm">
-            <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70">📚 Go deeper</p>
+            <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70"><VisualText>📚</VisualText> Go deeper</p>
             {r.deep.map((p, i) => (
               <p key={i} className="mt-2 text-sm leading-relaxed text-ink/80">
                 {p}
@@ -113,7 +114,7 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
           </div>
         )}
 
-        <SectionTitle>🏙️ Four famous places — tap to open</SectionTitle>
+        <SectionTitle><VisualText>🏙️</VisualText> Four famous places — tap to open</SectionTitle>
         <div className="space-y-2">
           {r.cities.map((c) => {
             const open = openCity === c.id
@@ -128,12 +129,12 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
                   className="flex w-full items-center gap-3 px-3 py-3 text-left"
                   aria-expanded={open}
                 >
-                  <span className="text-3xl">{c.emoji}</span>
+                  <span className="text-3xl"><VisualText>{c.emoji}</VisualText></span>
                   <span className="flex-1">
                     <span className="block font-bangla text-xl font-extrabold text-primary">{c.bn}</span>
                     <span className="block text-xs font-bold text-ink/70">{c.name}</span>
                   </span>
-                  {ex.cityStamped(c) && <span title="Stamped">🛂</span>}
+                  {ex.cityStamped(c) && <span title="Stamped"><VisualText>🛂</VisualText></span>}
                   <span className="text-ink/30">{open ? '▾' : '▸'}</span>
                 </button>
                 {open && (
@@ -148,7 +149,7 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
                           onClick={() => speak(w.bn, { force: true })}
                           className="flex items-center gap-2 rounded-2xl bg-accent/40 px-3 py-2 text-left transition active:scale-95"
                         >
-                          <span className="text-2xl">{w.emoji}</span>
+                          <span className="text-2xl"><VisualText>{w.emoji}</VisualText></span>
                           <span>
                             <span className="block font-bangla text-lg font-bold leading-none text-ink">{w.bn}</span>
                             <span className="block text-xs text-ink/75">
@@ -168,7 +169,7 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
 
         {lessonId && (
           <Link to={`/lesson/${lessonId}`} className="btn-primary mt-6 w-full">
-            📝 Practise {r.name} words
+            <VisualText>📝</VisualText> Practise {r.name} words
           </Link>
         )}
       </div>

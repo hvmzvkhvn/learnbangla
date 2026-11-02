@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { allItems } from '../curriculum/bank'
@@ -113,10 +114,10 @@ export default function Review() {
         are saved in this browser.
       </p>
       <Link to="/review/strokes" className="mb-4 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">
-        ✏️ Check stroke order for tracing →
+        <VisualText>✏️</VisualText> Check stroke order for tracing →
       </Link>
       <Link to="/studio" className="mb-4 ml-2 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">
-        🎙️ Record the audio in your own voice →
+        <VisualText>🎙️</VisualText> Record the audio in your own voice →
       </Link>
 
       <div className="card mb-4 grid grid-cols-3 gap-2 text-center">
@@ -187,7 +188,7 @@ export default function Review() {
               return (
                 <div key={i.id} className={`card !p-3 ${st === 'ok' ? '!bg-success/10' : st === 'fix' ? '!bg-error/10' : ''}`}>
                   <div className="flex items-center gap-3">
-                    <span className="w-10 text-center font-bangla text-2xl">{i.art ?? ''}</span>
+                    <span className="w-10 text-center font-bangla text-2xl"><VisualText>{i.art ?? ''}</VisualText></span>
                     <div className="min-w-0 flex-1">
                       {i.speakerName && <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70">{i.speakerName} says</p>}
                       {i.bn && (

@@ -1,3 +1,4 @@
+import VisualText from '../art/VisualText'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import PaintedBuild from '../components/playbook/PaintedBuild'
 import { pageArtPath } from '../data/playbook/artwork'
@@ -29,7 +30,7 @@ function Tile({ to, scene, bookId, art, title, sub, done, id, kind = 'read', pag
       <span className="pb-type"><PlayIcon kind={kind} />{kind === 'read' ? 'Read & listen' : kind === 'look' ? 'Tap & discover' : kind === 'build' ? 'Listen & build' : 'Story'}</span>
       {done && <span className="pb-done">✓ Completed</span>}
     </div>
-    <div className="pb-tile-body"><p lang="bn" className="pb-bangla">{title.bn}</p><h3>{title.en}</h3><div className="pb-meta"><span>{done ? '✓ Completed' : page > 0 ? `Continue · page ${Math.min(page + 1, pages)} of ${pages}` : sub}</span><span aria-hidden="true">↗</span></div></div>
+    <div className="pb-tile-body"><p lang="bn" className="pb-bangla">{title.bn}</p><h3>{title.en}</h3><div className="pb-meta"><span>{done ? '✓ Completed' : page > 0 ? `Continue · page ${Math.min(page + 1, pages)} of ${pages}` : sub}</span><span aria-hidden="true"><VisualText>↗</VisualText></span></div></div>
     {pages && <div className="pb-card-progress" aria-hidden="true"><span style={{ width: `${done ? 100 : (page / pages) * 100}%` }} /></div>}
   </Link>
 }
@@ -67,7 +68,7 @@ export default function Playbook() {
   const built = game.stats.builds ?? {}
   return <div className="playbook">
     <div className="pb-hero">
-      <div className="pb-hero-copy"><p className="pb-eyebrow">THE PLAYBOOK · গল্পের জগৎ</p><h1>A little wonder.<br />A world of Bangla.</h1><p>Read a story. Discover a word. Build something wonderful.</p><a href="#pb-read" className="pb-hero-link">Find your next story <span aria-hidden="true">↗</span></a></div>
+      <div className="pb-hero-copy"><p className="pb-eyebrow">THE PLAYBOOK · গল্পের জগৎ</p><h1>A little wonder.<br />A world of Bangla.</h1><p>Read a story. Discover a word. Build something wonderful.</p><a href="#pb-read" className="pb-hero-link">Find your next story <span aria-hidden="true"><VisualText>↗</VisualText></span></a></div>
       <img src={coverUrl('dada-village')} alt="A grandfather welcomes his granddaughter to a leafy Bengali village" width="1536" height="1024" className="pb-hero-art" fetchPriority="high" />
     </div>
     <nav className="pb-shortcuts" aria-label="Playbook activities">{categories.filter(([key]) => key !== 'history' || feat.storyboards).map(([key, label, hint]) => <a key={key} href={`#pb-${key}`} className={`pb-shortcut pb-${key}`}><span><PlayIcon kind={key} /></span><div><strong>{label}</strong><small>{hint}</small></div></a>)}</nav>
