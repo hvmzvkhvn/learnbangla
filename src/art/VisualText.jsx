@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import artwork from './learning-art.json'
+import opticalScales from './optical-scales.json'
 import UiIcon from './UiIcon'
 
 const keys = Object.keys(artwork)
@@ -23,7 +24,7 @@ export function LearningPicture({ symbol, decorative = false }) {
       />
     )
   return (
-    <span className="learning-picture">
+    <span className="learning-picture" style={{ '--art-scale': opticalScales[art.src] || 1 }}>
       <img
         className="learning-visual"
         src={`${import.meta.env.BASE_URL}${art.src}`}

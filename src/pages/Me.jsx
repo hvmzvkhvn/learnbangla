@@ -1,3 +1,4 @@
+import DisplayPreferences from '../components/DisplayPreferences'
 import VisualText from '../art/VisualText'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
@@ -52,6 +53,9 @@ export default function Me() {
   return (
     <div className="py-2">
       <h1 className="mb-3 text-3xl font-bold text-primary">My learning</h1>
+      <section className="card mb-5">
+        <DisplayPreferences />
+      </section>
       <div id="backup">
         <SaveStatus />
         <AccountCard />
@@ -73,36 +77,40 @@ export default function Me() {
       </button>
       <p role="status">{message}</p>
       <div className="card mb-5 text-center">
-        <p className="text-sm font-extrabold uppercase tracking-wide text-ink/70">
+        <p className="text-sm font-bold uppercase tracking-wide text-muted">
           <VisualText>{track ? `${track.emoji} ${track.label} · ages ${track.ages}` : ''}</VisualText>
         </p>
         {garden ? (
           <>
-            <p className="animate-pop mt-1 text-7xl"><VisualText>{stage.emoji}</VisualText></p>
-            <p className="text-3xl font-extrabold text-primary">{stage.name}</p>
-            <p className="text-sm font-bold text-ink/70">Your garden · Level {level.level}</p>
+            <p className="animate-pop mt-1 text-7xl">
+              <VisualText>{stage.emoji}</VisualText>
+            </p>
+            <p className="text-3xl font-bold text-primary">{stage.name}</p>
+            <p className="text-sm font-bold text-muted">Your garden · Level {level.level}</p>
           </>
         ) : (
-          <p className="mt-1 text-5xl font-extrabold text-primary">Level {level.level}</p>
+          <p className="mt-1 text-5xl font-bold text-primary">Level {level.level}</p>
         )}
         <div className="mx-auto mt-3 h-4 max-w-sm overflow-hidden rounded-full bg-primary/10">
           <div className="h-full rounded-full bg-success transition-all" style={{ width: `${level.pct * 100}%` }} />
         </div>
-        <p className="mt-1 text-xs font-bold text-ink/70">
+        <p className="mt-1 text-xs font-bold text-muted">
           {level.into} / {level.need} XP to level {level.level + 1} · {game.xp} XP total
         </p>
         <div className="mt-4 grid grid-cols-3 gap-2 text-center">
           <div className="rounded-2xl bg-secondary/10 py-3">
-            <p className="text-2xl font-extrabold text-secondary"><VisualText>🔥</VisualText> {game.streak}</p>
-            <p className="text-xs font-bold text-ink/70">Day streak</p>
+            <p className="text-2xl font-bold text-secondary">
+              <VisualText>🔥</VisualText> {game.streak}
+            </p>
+            <p className="text-xs font-bold text-muted">Day streak</p>
           </div>
           <div className="rounded-2xl bg-primary/10 py-3">
-            <p className="text-2xl font-extrabold text-primary">{done}</p>
-            <p className="text-xs font-bold text-ink/70">of {lessons.length} lessons</p>
+            <p className="text-2xl font-bold text-primary">{done}</p>
+            <p className="text-xs font-bold text-muted">of {lessons.length} lessons</p>
           </div>
           <div className="rounded-2xl bg-accent/40 py-3">
-            <p className="text-2xl font-extrabold text-ink">{earned}</p>
-            <p className="text-xs font-bold text-ink/70">
+            <p className="text-2xl font-bold text-ink">{earned}</p>
+            <p className="text-xs font-bold text-muted">
               of {BADGES.length} {garden ? 'stickers' : 'badges'}
             </p>
           </div>
@@ -110,7 +118,7 @@ export default function Me() {
       </div>
 
       <details>
-        <summary className="mb-3 cursor-pointer text-xl font-extrabold">
+        <summary className="mb-3 cursor-pointer text-xl font-bold">
           {garden ? 'My stickers' : 'Badges'} · {earned} earned
         </summary>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -118,9 +126,11 @@ export default function Me() {
             const got = Boolean(game.badges[b.id])
             return (
               <div key={b.id} className={`card flex flex-col items-center !p-4 text-center ${got ? '' : 'opacity-50 grayscale'}`}>
-                <span className={garden ? 'text-5xl' : 'text-4xl'}><VisualText>{got ? b.emoji : '🔒'}</VisualText></span>
-                <p className="mt-1 font-extrabold text-ink">{b.title}</p>
-                <p className="text-xs text-ink/75">{b.desc}</p>
+                <span className={garden ? 'text-5xl' : 'text-4xl'}>
+                  <VisualText>{got ? b.emoji : '🔒'}</VisualText>
+                </span>
+                <p className="mt-1 font-bold text-ink">{b.title}</p>
+                <p className="text-xs text-muted">{b.desc}</p>
               </div>
             )
           })}
@@ -169,11 +179,11 @@ export default function Me() {
           </button>
         </form>
       )}
-      <div className="mt-8 flex flex-col items-center gap-2 text-sm font-bold text-ink/70">
-        <Link to="/review" className="hover:text-ink/75">
+      <div className="mt-8 flex flex-col items-center gap-2 text-sm font-bold text-muted">
+        <Link to="/review" className="hover:text-muted">
           For content reviewers →
         </Link>
-        <button type="button" onClick={() => setResetOpen(true)} className="text-error/70 hover:text-error">
+        <button type="button" onClick={() => setResetOpen(true)} className="text-error hover:text-error">
           Reset my progress
         </button>
       </div>

@@ -20,14 +20,14 @@ export default function ParentView() {
   const sync = useSync()
   return (
     <div className="mx-auto max-w-2xl px-1 py-2">
-      <h1 className="text-3xl font-extrabold text-primary">Parent view</h1>
+      <h1 className="text-3xl font-bold text-primary">Parent view</h1>
       {!accountsEnabled ? (
-        <p className="card mt-4 text-center text-ink/70">Accounts are not switched on for this copy of the app.</p>
+        <p className="card mt-4 text-center text-muted">Accounts are not switched on for this copy of the app.</p>
       ) : !sync.ready ? (
-        <p className="card mt-4 text-center text-ink/75">Loading…</p>
+        <p className="card mt-4 text-center text-muted">Loading…</p>
       ) : !sync.email ? (
         <div className="card mt-4 text-center">
-          <p className="text-ink/70">Sign in to see how your learners are doing.</p>
+          <p className="text-muted">Sign in to see how your learners are doing.</p>
           <Link to="/account" className="btn-primary mt-4 inline-flex">
             Sign in
           </Link>
@@ -50,10 +50,10 @@ function Learners() {
       .catch((e) => setErr(String(e.message ?? e)))
   }, [])
   if (err) return <p className="card mt-4 text-center text-error">{err}</p>
-  if (!learners) return <p className="card mt-4 text-center text-ink/75">Loading…</p>
+  if (!learners) return <p className="card mt-4 text-center text-muted">Loading…</p>
   if (!learners.length)
     return (
-      <p className="card mt-4 text-center text-ink/70">
+      <p className="card mt-4 text-center text-muted">
         No learners yet.{' '}
         <Link to="/account" className="font-bold text-primary underline">
           Add one
@@ -104,10 +104,12 @@ function LearnerCard({ l }) {
   return (
     <section className="card !p-5">
       <div className="flex items-center gap-3">
-        <span className="text-4xl"><VisualText>{track?.emoji ?? '🙂'}</VisualText></span>
+        <span className="text-4xl">
+          <VisualText>{track?.emoji ?? '🙂'}</VisualText>
+        </span>
         <div className="flex-1">
-          <h2 className="text-2xl font-extrabold text-ink">{l.name}</h2>
-          <p className="text-xs font-bold text-ink/70">
+          <h2 className="text-2xl font-bold text-ink">{l.name}</h2>
+          <p className="text-xs font-bold text-muted">
             {track ? `${track.label} · ages ${track.ages}` : 'Age group not chosen yet'} · last learned{' '}
             {lastSeen(g.last ? `${g.last}T12:00:00` : l.updated_at)}
           </p>
@@ -121,7 +123,7 @@ function LearnerCard({ l }) {
         <Stat big={`⭐ ${stars}`} small={`${Object.keys(g.badges ?? {}).length} badges`} />
       </div>
 
-      <h3 className="mt-5 text-sm font-extrabold uppercase tracking-wide text-ink/70">XP this week</h3>
+      <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-muted">XP this week</h3>
       <div className="mt-2 flex h-24 items-end gap-2">
         {days.map((d) => (
           <div key={d.key} className="flex flex-1 flex-col items-center gap-1">
@@ -132,27 +134,29 @@ function LearnerCard({ l }) {
                 title={`${d.xp} XP`}
               />
             </div>
-            <span className="text-xs font-bold text-ink/70">{d.label}</span>
+            <span className="text-xs font-bold text-muted">{d.label}</span>
           </div>
         ))}
       </div>
 
-      <h3 className="mt-5 text-sm font-extrabold uppercase tracking-wide text-ink/70">Needs more practice</h3>
+      <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-muted">Needs more practice</h3>
       {trouble.length ? (
         <ul className="mt-2 grid gap-2 sm:grid-cols-2">
           {trouble.map(({ item, miss }) => (
             <li key={item.id} className="flex items-center gap-3 rounded-2xl bg-secondary/10 px-3 py-2">
-              <span className="font-bangla text-2xl font-bold text-primary">{item.bn}</span>
+              <span lang="bn" className="font-bangla text-2xl font-bold text-primary">
+                {item.bn}
+              </span>
               <span className="flex-1 text-sm">
                 <span className="font-bold text-ink">{item.roman}</span>
-                {item.en && <span className="text-ink/75"> · {item.en}</span>}
+                {item.en && <span className="text-muted"> · {item.en}</span>}
               </span>
-              <span className="text-xs font-bold text-ink/70">{miss}×</span>
+              <span className="text-xs font-bold text-muted">{miss}×</span>
             </li>
           ))}
         </ul>
       ) : (
-        <p className="mt-2 text-sm text-ink/75">
+        <p className="mt-2 text-sm text-muted">
           Nothing tricky so far — a good sign. As they practise, anything they keep getting wrong shows up here.
         </p>
       )}
@@ -162,7 +166,9 @@ function LearnerCard({ l }) {
 
 const Stat = ({ big, small }) => (
   <div className="rounded-2xl bg-primary/5 px-2 py-3">
-    <p className="text-xl font-extrabold text-primary"><VisualText>{big}</VisualText></p>
-    <p className="text-xs font-bold text-ink/70">{small}</p>
+    <p className="text-xl font-bold text-primary">
+      <VisualText>{big}</VisualText>
+    </p>
+    <p className="text-xs font-bold text-muted">{small}</p>
   </div>
 )

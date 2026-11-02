@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import Face from './Face'
 import Prompt from './Prompt'
 import Speaker from '../Speaker'
@@ -19,9 +19,6 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
   const [solved, setSolved] = useState(false)
   const mistake = useRef(false)
   const [hint, setHint] = useState(false)
-  const timer = useRef(null)
-
-  useEffect(() => () => clearTimeout(timer.current), [])
 
   function place(i) {
     if (solved || placed.includes(i) || placed.length >= need) return
@@ -37,13 +34,12 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
         mistake.current = true
         setHint(true)
         onWrong()
-        timer.current = setTimeout(() => setPlaced([]), 900)
       }
     }
   }
 
   const remove = (i) => {
-    if (!solved && placed.length < need) setPlaced((p) => p.filter((k) => k !== i))
+    if (!solved) setPlaced((p) => p.filter((k) => k !== i))
   }
 
   return (
@@ -62,7 +58,7 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
               .slice(0, 1)
               .join('')}
           </span>
-          . Listen to the whole sentence, then rebuild it in that order.
+          . Listen to the whole sentence, tap a placed tile to remove it, then rebuild it in that order.
         </p>
       )}
       <div
@@ -88,7 +84,7 @@ export default function TilesQ({ ex, onSolved, onWrong }) {
             type="button"
             onClick={() => place(i)}
             disabled={placed.includes(i)}
-            className={`rounded-xl border-4 border-primary/20 bg-white px-3 py-2 font-bangla font-bold text-primary shadow-sm transition active:scale-95 ${
+            className={`rounded-xl border-4 border-primary/20 bg-white px-3 py-2 font-bangla font-bold text-primary shadow-sm transition active:scale-[0.98] ${
               ex.compact ? 'w-full text-left text-lg' : 'text-2xl'
             } ${placed.includes(i) ? 'opacity-20' : ''}`}
           >

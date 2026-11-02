@@ -1,3 +1,4 @@
+import { haptic } from '../ui/haptics'
 import VisualText from '../art/VisualText'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
@@ -104,7 +105,16 @@ function Player({ lesson, unit, track, saved }) {
   const [result, setResult] = useState(null) // { stars, bonus, extra }
 
   useEffect(() => {
-    saveLessonSession(lesson.id, { built, i, status, clean: clean.current, sessionXp, result, elapsedMs: (saved?.elapsedMs ?? 0) + Date.now() - (started.current ?? Date.now()), at: Date.now() })
+    saveLessonSession(lesson.id, {
+      built,
+      i,
+      status,
+      clean: clean.current,
+      sessionXp,
+      result,
+      elapsedMs: (saved?.elapsedMs ?? 0) + Date.now() - (started.current ?? Date.now()),
+      at: Date.now(),
+    })
   }, [lesson.id, built, i, status, sessionXp, result, saved?.elapsedMs])
   const duration = lessonMinutes(lesson.id, steps.length)
   const step = steps[i] ?? steps[0]
@@ -128,6 +138,7 @@ function Player({ lesson, unit, track, saved }) {
         }),
       })
     }
+    haptic('complete')
     setResult({ stars, bonus })
   }
 
@@ -149,6 +160,7 @@ function Player({ lesson, unit, track, saved }) {
     }
     clean.current[ex.id] = isClean
     recordAnswer(ex.itemId, isClean)
+    haptic('success')
     setStatus('solved')
     if (!xpOn) return
     const c = isClean ? combo + 1 : 0
@@ -161,10 +173,10 @@ function Player({ lesson, unit, track, saved }) {
   const wrong = () => {
     setStatus('wrong')
     setCombo(0)
-    navigator.vibrate?.(60)
   }
 
   const traceDone = (stars) => {
+    haptic('success')
     if (xpOn) {
       const g = 3 + stars * 3
       setSessionXp((x) => x + g)
@@ -176,13 +188,17 @@ function Player({ lesson, unit, track, saved }) {
 
   const bar = xpOn ? (
     <div className="flex items-center gap-2">
-      {combo >= 2 && <span className="animate-pop rounded-full bg-secondary px-3 py-1 text-sm font-extrabold text-white"><VisualText>🔥</VisualText> x{combo}</span>}
-      <span className="relative rounded-full bg-accent px-3 py-1 text-sm font-extrabold">
+      {combo >= 2 && (
+        <span className="animate-pop rounded-full bg-secondary px-3 py-1 text-sm font-bold text-white">
+          <VisualText>🔥</VisualText> x{combo}
+        </span>
+      )}
+      <span className="relative rounded-full bg-accent px-3 py-1 text-sm font-bold">
         <VisualText>⚡</VisualText> {sessionXp}
         {gain && (
           <span
             key={gain.id}
-            className="animate-floatUp pointer-events-none absolute -top-1 left-1/2 -translate-x-1/2 text-sm font-extrabold text-success"
+            className="celebration-effect animate-floatUp pointer-events-none absolute -top-1 left-1/2 -translate-x-1/2 text-sm font-bold text-success"
           >
             +{gain.g}
           </span>
@@ -199,9 +215,15 @@ function Player({ lesson, unit, track, saved }) {
         {result.stars >= 2 && <Confetti />}
         <Toasts />
         <div className="py-10 text-center">
-          {lesson.treasure && <p className="animate-pop text-8xl"><VisualText>🎁</VisualText></p>}
-          <p className="animate-pop text-7xl"><VisualText>{'⭐'.repeat(result.stars)}</VisualText></p>
-          <h1 className="mt-4 text-3xl font-extrabold text-primary">
+          {lesson.treasure && (
+            <p className="animate-pop text-8xl">
+              <VisualText>🎁</VisualText>
+            </p>
+          )}
+          <p className="animate-pop text-7xl">
+            <VisualText>{'⭐'.repeat(result.stars)}</VisualText>
+          </p>
+          <h1 className="mt-4 text-3xl font-bold text-primary">
             {lesson.treasure
               ? 'Treasure found!'
               : lesson.kind === 'super'
@@ -218,12 +240,13 @@ function Player({ lesson, unit, track, saved }) {
                       ? 'Well done!'
                       : 'Nice work!'}
           </h1>
-          <p className="mt-2 text-ink/75">
+          <p className="mt-2 text-muted">
             You finished <b>{lesson.title}</b>.{result.stars < 3 && ' Try it again to earn more stars!'}
           </p>
           {playful && (
-            <p className="mt-3 text-lg font-extrabold text-primary">
-              <VisualText>⭐</VisualText> Tara says: “{result.stars === 3 ? 'Wonderful!' : result.stars === 2 ? 'Well done!' : 'Great try!'}”
+            <p className="mt-3 text-lg font-bold text-primary">
+              <VisualText>⭐</VisualText> Tara says: “{result.stars === 3 ? 'Wonderful!' : result.stars === 2 ? 'Well done!' : 'Great try!'}
+              ”
             </p>
           )}
           <div className="card mt-5 text-left">
@@ -245,12 +268,16 @@ function Player({ lesson, unit, track, saved }) {
           <SaveStatus />
           {xpOn && (
             <div className="mx-auto mt-5 max-w-xs rounded-3xl bg-white p-4 text-left shadow-md">
-              <div className="flex justify-between text-sm font-extrabold">
+              <div className="flex justify-between text-sm font-bold">
                 <span>XP this lesson</span>
                 <span className="text-success">+{sessionXp + result.bonus}</span>
               </div>
-              <div className="mt-2 flex justify-between text-sm font-bold text-ink/75">
-                <span><VisualText>{feat.garden ? `${stageOf(level.level).emoji} ${stageOf(level.level).name}` : `Level ${level.level}`}</VisualText></span>
+              <div className="mt-2 flex justify-between text-sm font-bold text-muted">
+                <span>
+                  <VisualText>
+                    {feat.garden ? `${stageOf(level.level).emoji} ${stageOf(level.level).name}` : `Level ${level.level}`}
+                  </VisualText>
+                </span>
                 <span>
                   {level.into}/{level.need} XP
                 </span>
@@ -283,10 +310,12 @@ function Player({ lesson, unit, track, saved }) {
       <Toasts />
       {step.kind === 'intro' && (
         <div className="py-8 text-center">
-          <p className="animate-pop text-6xl"><VisualText>{lesson.emoji}</VisualText></p>
-          <p className="mt-3 text-sm font-extrabold uppercase tracking-wide text-ink/70">{unit.title}</p>
-          <h1 className="text-3xl font-extrabold text-primary">{lesson.title}</h1>
-          <p className="mt-2 text-ink/75">
+          <p className="animate-pop text-6xl">
+            <VisualText>{lesson.emoji}</VisualText>
+          </p>
+          <p className="mt-3 text-sm font-bold uppercase tracking-wide text-muted">{unit.title}</p>
+          <h1 className="text-3xl font-bold text-primary">{lesson.title}</h1>
+          <p className="mt-2 text-muted">
             {lesson.treasure
               ? 'A treasure hunt! Answer the questions to open the chest. No rush — take your time.'
               : lesson.kind === 'super'
@@ -312,15 +341,21 @@ function Player({ lesson, unit, track, saved }) {
                 : 'understand and practise ' + lesson.title.toLowerCase()}
           </p>
           {lesson.tip && (
-            <p className="mx-auto mt-5 max-w-sm rounded-2xl bg-accent/30 px-4 py-3 text-left text-sm font-semibold"><VisualText>💡</VisualText> {lesson.tip}</p>
+            <p className="mx-auto mt-5 max-w-sm rounded-2xl bg-accent/30 px-4 py-3 text-left text-sm font-semibold">
+              <VisualText>💡</VisualText> {lesson.tip}
+            </p>
           )}
           {lesson.rules && (
             <div className="mx-auto mt-4 max-w-sm space-y-2 text-left">
               {lesson.rules.map((r) => (
                 <div key={r.who} className="card flex items-center gap-3 !p-3">
-                  <span className="text-2xl"><VisualText>{r.emoji}</VisualText></span>
-                  <span className="flex-1 text-sm font-semibold text-ink/70">{r.who}</span>
-                  <span className="font-bangla text-xl font-extrabold text-primary">{r.say}</span>
+                  <span className="text-2xl">
+                    <VisualText>{r.emoji}</VisualText>
+                  </span>
+                  <span className="flex-1 text-sm font-semibold text-muted">{r.who}</span>
+                  <span lang="bn" className="font-bangla text-xl font-bold text-primary">
+                    {r.say}
+                  </span>
                   <Speaker inline size="sm" text={r.say} />
                 </div>
               ))}
@@ -348,7 +383,7 @@ function Player({ lesson, unit, track, saved }) {
       {step.kind === 'scene' && (
         <div>
           <SceneView scene={built.scene} />
-          <button className="btn-primary mt-6 w-full" onClick={advance}>
+          <button className="btn-primary lesson-next mt-6 w-full" onClick={advance}>
             Next
           </button>
         </div>
@@ -358,9 +393,11 @@ function Player({ lesson, unit, track, saved }) {
         <div>
           <TextView text={built.text} />
           {lesson.kind === 'poem' && lesson.tip && (
-            <p className="mt-4 rounded-2xl bg-accent/30 px-4 py-3 text-sm font-semibold"><VisualText>ℹ️</VisualText> {lesson.tip}</p>
+            <p className="mt-4 rounded-2xl bg-accent/30 px-4 py-3 text-sm font-semibold">
+              <VisualText>ℹ️</VisualText> {lesson.tip}
+            </p>
           )}
-          <button className="btn-primary mt-6 w-full" onClick={advance}>
+          <button className="btn-primary lesson-next mt-6 w-full" onClick={advance}>
             Next
           </button>
         </div>
@@ -368,7 +405,7 @@ function Player({ lesson, unit, track, saved }) {
 
       {step.kind === 'learn' && (
         <div>
-          <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/70">New</p>
+          <p className="mb-3 text-center text-sm font-bold uppercase tracking-wide text-muted">New</p>
           <LearnCard key={step.item.id} item={step.item} />
           {i > 1 && steps[i - 1]?.kind === 'learn' && (
             <button
@@ -381,7 +418,7 @@ function Player({ lesson, unit, track, saved }) {
               ← Previous card
             </button>
           )}
-          <button className="btn-primary mt-6 w-full" onClick={advance}>
+          <button className="btn-primary lesson-next mt-6 w-full" onClick={advance}>
             Next
           </button>
         </div>
@@ -389,16 +426,17 @@ function Player({ lesson, unit, track, saved }) {
 
       {step.kind === 'ex' && (
         <div>
-          {status !== 'solved' && step.ex.type === 'choice' && <ChoiceQ key={step.ex.id} {...common(step.ex)} />}
-          {status !== 'solved' && step.ex.type === 'match' && <MatchQ key={step.ex.id} {...common(step.ex)} />}
-          {status !== 'solved' && step.ex.type === 'tiles' && <TilesQ key={step.ex.id} {...common(step.ex)} />}
-          {status !== 'solved' && step.ex.type === 'type' && (
-            <TypeQ key={step.ex.id} {...common(step.ex)} onTyped={() => act({ stats: (s) => ({ typed: s.typed + 1 }) })} />
-          )}
-          {step.ex.type === 'trace' && <TraceQ key={step.ex.id} ex={step.ex} lenient={playful} onSolved={traceDone} />}
-
+          <fieldset disabled={status === 'solved'} className="min-w-0" aria-label="Answer the question">
+            {step.ex.type === 'choice' && <ChoiceQ key={step.ex.id} {...common(step.ex)} />}
+            {step.ex.type === 'match' && <MatchQ key={step.ex.id} {...common(step.ex)} />}
+            {step.ex.type === 'tiles' && <TilesQ key={step.ex.id} {...common(step.ex)} />}
+            {step.ex.type === 'type' && (
+              <TypeQ key={step.ex.id} {...common(step.ex)} onTyped={() => act({ stats: (s) => ({ typed: s.typed + 1 }) })} />
+            )}
+            {step.ex.type === 'trace' && <TraceQ key={step.ex.id} ex={step.ex} lenient={playful} onSolved={traceDone} />}
+          </fieldset>
           {step.ex.type !== 'trace' && (
-            <div className="mt-6 min-h-[5.5rem]">
+            <div className="mt-6 min-h-[5.5rem] lesson-feedback">
               {status === 'wrong' && (
                 <p role="status" className="gentle-error text-center">
                   Listen again and compare the letters or word order. Use a hint below the question if you need one.
@@ -408,11 +446,11 @@ function Player({ lesson, unit, track, saved }) {
                 <>
                   <p
                     role="status"
-                    className="animate-pop mb-3 rounded-2xl bg-success/15 px-4 py-3 text-center text-lg font-extrabold text-success"
+                    className="animate-pop mb-3 rounded-2xl bg-success/15 px-4 py-3 text-center text-lg font-bold text-success"
                   >
                     {cheer}
                   </p>
-                  <button className="btn-primary w-full" onClick={advance}>
+                  <button autoFocus className="btn-primary w-full" onClick={advance}>
                     Continue
                   </button>
                 </>
@@ -426,15 +464,20 @@ function Player({ lesson, unit, track, saved }) {
 }
 
 function Shell({ children, onClose, progress, extra, hideRoman }) {
+  const content = useRef(null)
+  useEffect(() => {
+    content.current?.focus({ preventScroll: true })
+    window.scrollTo(0, 0)
+  }, [progress])
   return (
-    <div className="min-h-screen bg-background">
+    <div className="lesson-shell min-h-screen bg-background">
       <div className="mx-auto max-w-xl px-5 pb-10 pt-4">
-        <div className="mb-6 flex items-center gap-3">
+        <div className="lesson-topbar mb-6 flex items-center gap-3">
           <button
             type="button"
             onClick={onClose}
             aria-label="Close lesson"
-            className="rounded-full bg-white px-3 py-2 text-lg font-extrabold text-ink/70 shadow"
+            className="rounded-full bg-white px-3 py-2 text-lg font-bold text-muted shadow"
           >
             ✕
           </button>
@@ -452,7 +495,9 @@ function Shell({ children, onClose, progress, extra, hideRoman }) {
           {!hideRoman && <RomanToggle />}
           <SoundToggle />
         </div>
-        {children}
+        <main ref={content} tabIndex={-1} className="lesson-step" aria-label="Current lesson step">
+          {children}
+        </main>
       </div>
     </div>
   )

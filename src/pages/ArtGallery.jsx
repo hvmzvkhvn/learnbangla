@@ -153,13 +153,31 @@ const ALL = [
 export default function ArtGallery() {
   if (typeof location !== 'undefined' && new URLSearchParams(location.search).has('learning')) {
     const seen = new Set()
-    const items = Object.entries(learningArt).filter(([, a]) => { const id = a.src || a.id || a.value; if(seen.has(id)) return false; seen.add(id); return true })
-    return <div className="mx-auto max-w-5xl px-4 py-8">
-      <p className="text-xs font-extrabold uppercase tracking-widest text-secondary">The LearnBangla picture library</p>
-      <h1 className="my-3 text-3xl font-extrabold text-primary">Small pictures. Clear meanings.</h1>
-      <p className="mb-8 text-ink/70">Everyday objects, familiar faces, and a little encouragement. Shared across lessons and every age group.</p>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">{items.map(([key, art]) => <div key={key} className="rounded-2xl bg-white p-4 text-center shadow-sm"><div className="text-6xl"><VisualText>{key}</VisualText></div><p className="mt-3 text-xs leading-relaxed text-ink/70">{art.label}</p></div>)}</div>
-    </div>
+    const items = Object.entries(learningArt).filter(([, a]) => {
+      const id = a.src || a.id || a.value
+      if (seen.has(id)) return false
+      seen.add(id)
+      return true
+    })
+    return (
+      <div className="mx-auto max-w-5xl px-4 py-8">
+        <p className="text-xs font-bold uppercase tracking-widest text-secondary">The LearnBangla picture library</p>
+        <h1 className="my-3 text-3xl font-bold text-primary">Small pictures. Clear meanings.</h1>
+        <p className="mb-8 text-muted">
+          Everyday objects, familiar faces, and a little encouragement. Shared across lessons and every age group.
+        </p>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
+          {items.map(([key, art]) => (
+            <div key={key} className="rounded-2xl bg-white p-4 text-center shadow-sm">
+              <div className="text-6xl">
+                <VisualText>{key}</VisualText>
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-muted">{art.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
   }
   const all = typeof location !== 'undefined' && new URLSearchParams(location.search).has('all')
   if (all)
@@ -168,39 +186,51 @@ export default function ArtGallery() {
         <h1 className="mb-5 text-2xl font-bold">Every story, illustrated</h1>
         {ALL.map((g, gi) => (
           <section key={gi} className="mb-6">
-            <h2 className="mb-2 text-lg font-extrabold text-primary">{g.group}</h2>
+            <h2 className="mb-2 text-lg font-bold text-primary">{g.group}</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {g.pages.map((pg, i) => (
                 <div key={i}>
-                  <div className="aspect-[3/2] overflow-hidden rounded-xl"><Artwork src={`${import.meta.env.BASE_URL}${pageArtPath(g.id, i)}`} alt={pg.en} /></div>
-                  <p className="mt-2 text-xs leading-relaxed text-ink/75">{pg.en}</p>
+                  <div className="aspect-[3/2] overflow-hidden rounded-xl">
+                    <Artwork src={`${import.meta.env.BASE_URL}${pageArtPath(g.id, i)}`} alt={pg.en} />
+                  </div>
+                  <p className="mt-2 text-xs leading-relaxed text-muted">{pg.en}</p>
                 </div>
               ))}
             </div>
           </section>
         ))}
-        <section><h2 className="mb-3 text-lg font-bold">Make it your own</h2><div className="grid gap-4 sm:grid-cols-3">{buildTasks.map(task => <div key={task.id}><PaintedBuild task={task} preview /><p>{task.title.en}</p></div>)}</div></section>
+        <section>
+          <h2 className="mb-3 text-lg font-bold">Make it your own</h2>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {buildTasks.map((task) => (
+              <div key={task.id}>
+                <PaintedBuild task={task} preview />
+                <p>{task.title.en}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     )
   return (
     <div className="mx-auto max-w-4xl px-4 py-6">
-      <h1 className="mb-2 text-3xl font-extrabold text-primary">Sprite sheet</h1>
-      <p className="mb-3 text-sm text-ink/75">
+      <h1 className="mb-2 text-3xl font-bold text-primary">Sprite sheet</h1>
+      <p className="mb-3 text-sm text-muted">
         {used.length} pictures used in the Playbook · {missing.length ? `still emoji: ${missing.join(' ')}` : 'all drawn'}
       </p>
       <div className="mb-8 grid grid-cols-6 gap-2 sm:grid-cols-8">
         {used.map((e) => (
           <div key={e} className="rounded-xl bg-white p-1 text-center shadow-sm">
             <Sprite e={e} className="mx-auto h-16 w-16" />
-            <span className="text-[10px] text-ink/70">{e}</span>
+            <span className="text-[10px] text-muted">{e}</span>
           </div>
         ))}
       </div>
-      <h1 className="mb-4 text-3xl font-extrabold text-primary">Scene gallery</h1>
+      <h1 className="mb-4 text-3xl font-bold text-primary">Scene gallery</h1>
       <div className="grid gap-3 sm:grid-cols-2">
         {SAMPLES.map((s, i) => (
           <div key={i}>
-            <p className="mb-1 text-xs font-bold text-ink/70">
+            <p className="mb-1 text-xs font-bold text-muted">
               {s.bg} · {s.time}
             </p>
             <Scene scene={s} id={`g${i}`} />

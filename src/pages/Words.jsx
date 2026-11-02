@@ -1,46 +1,169 @@
+import { useEffect, useRef, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import VisualText from '../art/VisualText'
-import { useState } from 'react'
+import UiIcon from '../art/UiIcon'
 import { wordCategories } from '../data/words'
 import Speaker from '../components/Speaker'
+import RomanToggle from '../components/RomanToggle'
+import WordGuide from '../components/WordGuide'
 import { useRoman } from '../state/roman'
-
+import { usePersistent } from '../state/persist'
+const ICONS = {
+  greetings: 'wave',
+  family: 'people',
+  pronouns: 'person',
+  numbers: '🔢',
+  'bigger-numbers': '🔢',
+  biggerNumbers: '🔢',
+  tens: '🔢',
+  colours: 'palette',
+  animals: 'paw',
+  food: 'food',
+  body: 'person',
+  'around-us': 'home',
+  bangladesh: 'pin',
+  days: 'calendar',
+  months: 'calendar',
+  seasons: 'sun',
+  adjectives: 'star',
+  verbs: 'bolt',
+  questions: 'question',
+}
 export default function Words() {
-  const [romanOn] = useRoman()
-  const [activeKey, setActiveKey] = useState(wordCategories[0].key)
-  const active = wordCategories.find((c) => c.key === activeKey)
-
+  const [romanOn] = useRoman(),
+    [params, setParams] = useSearchParams()
+  const [savedTopic, setSavedTopic] = usePersistent('lb.wordsTopic', wordCategories[0].key)
+  const activeKey = params.get('topic') || savedTopic
+  const active = wordCategories.find((c) => c.key === activeKey) || wordCategories[0]
+  const [allTopics, setAllTopics] = useState(false)
+  const strip = useRef(null),
+    chooser = useRef(null),
+    chooserButton = useRef(null),
+    categoryFocus = useRef(false)
+  useEffect(() => {
+    const el = strip.current?.querySelector('[aria-pressed="true"]')
+    if (el && strip.current) strip.current.scrollLeft = Math.max(0, el.offsetLeft - strip.current.clientWidth / 2 + el.clientWidth / 2)
+  }, [active.key])
+  useEffect(() => {
+    let y = 0
+    try {
+      y = Number(sessionStorage.getItem('lb.wordsScroll') || 0)
+    } catch {
+      /* optional */
+    }
+    const frame = requestAnimationFrame(() => window.scrollTo(0, y))
+    const remember = () => {
+      try {
+        sessionStorage.setItem('lb.wordsScroll', String(window.scrollY))
+      } catch {
+        /* optional */
+      }
+    }
+    window.addEventListener('scroll', remember, { passive: true })
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', remember)
+    }
+  }, [])
+  useEffect(() => {
+    if (allTopics) chooser.current?.querySelector('button')?.focus()
+  }, [allTopics])
+  function choose(key) {
+    setSavedTopic(key)
+    setParams({ topic: key }, { replace: true })
+    setAllTopics(false)
+    if (categoryFocus.current) {
+      chooserButton.current?.focus()
+      categoryFocus.current = false
+    }
+  }
   return (
-    <div className="py-2">
-      <h1 className="text-3xl font-extrabold text-primary">Bangla Words</h1>
-      <p className="mb-4 text-ink/75">শব্দ — pick a topic.</p>
-
-      <div className="-mx-5 mb-6 flex gap-2 overflow-x-auto px-5 pb-2">
-        {wordCategories.map((c) => (
-          <button
-            key={c.key}
-            type="button"
-            onClick={() => setActiveKey(c.key)}
-            className={`flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-sm font-extrabold shadow-sm transition ${
-              activeKey === c.key ? 'bg-primary text-white' : 'bg-white text-primary'
-            }`}
-          >
-            <span className="text-lg"><VisualText>{c.emoji}</VisualText></span>
-            {c.title}
-          </button>
-        ))}
+    <div className="words-page py-2">
+      <div className="page-title-row">
+        <div>
+          <h1 className="text-3xl font-bold text-primary">Bangla Words</h1>
+          <p className="text-muted">
+            <span lang="bn">শব্দ</span> — pick a topic.
+          </p>
+        </div>
+        <RomanToggle />
       </div>
-
-      {active.note && <p className="mb-4 rounded-2xl bg-accent/30 px-4 py-3 text-sm font-semibold">{active.note}</p>}
-
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <WordGuide />
+      <div className="topic-toolbar">
+        <button
+          ref={chooserButton}
+          type="button"
+          className="btn-quiet"
+          aria-expanded={allTopics}
+          aria-controls="all-topics"
+          onClick={() => {
+            categoryFocus.current = true
+            setAllTopics((v) => !v)
+          }}
+        >
+          All topics <UiIcon name="down" />
+        </button>
+        <span className="text-sm text-muted">{wordCategories.length} topics · swipe or use the arrows</span>
+      </div>
+      {allTopics && (
+        <div
+          id="all-topics"
+          ref={chooser}
+          className="topic-picker"
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              setAllTopics(false)
+              chooserButton.current?.focus()
+            }
+          }}
+        >
+          {wordCategories.map((c) => (
+            <button key={c.key} type="button" aria-pressed={active.key === c.key} onClick={() => choose(c.key)}>
+              <span>{c.title}</span>
+              {active.key === c.key && <UiIcon name="check" />}
+            </button>
+          ))}
+        </div>
+      )}
+      <div className="topic-scroll-controls">
+        <button className="btn-icon" aria-label="Earlier topics" onClick={() => strip.current?.scrollBy({ left: -240, behavior: 'auto' })}>
+          <UiIcon name="left" />
+        </button>
+        <div className="topic-strip" ref={strip} role="group" aria-label="Word topics">
+          {wordCategories.map((c) => (
+            <button key={c.key} type="button" aria-pressed={active.key === c.key} onClick={() => choose(c.key)} className="topic-chip">
+              <UiIcon name={ICONS[c.key] || 'compass'} />
+              <span>{c.title}</span>
+              {active.key === c.key && <UiIcon name="check" />}
+            </button>
+          ))}
+        </div>
+        <button className="btn-icon" aria-label="More topics" onClick={() => strip.current?.scrollBy({ left: 240, behavior: 'auto' })}>
+          <UiIcon name="right" />
+        </button>
+      </div>
+      <div className="topic-title">
+        <h2 className="text-xl font-bold">{active.title}</h2>
+        <span className="text-sm text-muted" role="status">
+          {active.words.length} words
+        </span>
+      </div>
+      {active.note && <p className="learning-note">{active.note}</p>}
+      <div className="browse-grid word-grid">
         {active.words.map((w) => (
-          <div key={w.bn + w.en} className="card flex flex-col items-center !p-4 text-center">
-            <span className="font-bangla learning-picture-card"><VisualText>{w.digit ?? w.emoji}</VisualText></span>
-            <p className="mt-2 font-bangla text-2xl font-bold leading-snug text-primary">{w.bn}</p>
-            {romanOn && <p className="text-sm font-extrabold text-ink">{w.roman}</p>}
-            <p className="mb-1 text-xs text-ink/70">{w.en}</p>
-            <Speaker text={w.bn} size="sm" label="Hear the word" />
-          </div>
+          <article key={w.bn + w.en} className="card word-card">
+            <div className="word-picture">
+              <VisualText decorative>{w.digit ?? w.emoji}</VisualText>
+            </div>
+            <p lang="bn" className="word-bangla font-bangla text-2xl font-bold leading-snug text-primary">
+              {w.bn}
+            </p>
+            {romanOn && <p className="word-roman">{w.roman}</p>}
+            <p className="word-meaning">{w.en}</p>
+            <div className="word-audio">
+              <Speaker text={w.bn} size="sm" label={`Hear ${w.en} in Bangla`} />
+            </div>
+          </article>
         ))}
       </div>
     </div>

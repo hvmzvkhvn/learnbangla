@@ -108,30 +108,30 @@ export default function Review() {
       <Link to="/" className="text-sm font-bold text-primary">
         ← Back to the app
       </Link>
-      <h1 className="mt-2 text-3xl font-extrabold text-primary">Content review</h1>
-      <p className="mb-4 text-ink/75">
+      <h1 className="mt-2 text-3xl font-bold text-primary">Content review</h1>
+      <p className="mb-4 text-muted">
         Every letter, word and sentence in the curriculum. Mark each one ✓ if it is correct, or ⚑ and write what it should be. Your marks
         are saved in this browser.
       </p>
-      <Link to="/review/strokes" className="mb-4 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">
+      <Link to="/review/strokes" className="mb-4 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-bold text-primary shadow">
         <VisualText>✏️</VisualText> Check stroke order for tracing →
       </Link>
-      <Link to="/studio" className="mb-4 ml-2 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">
+      <Link to="/studio" className="mb-4 ml-2 inline-block rounded-2xl bg-white px-4 py-2 text-sm font-bold text-primary shadow">
         <VisualText>🎙️</VisualText> Record the audio in your own voice →
       </Link>
 
       <div className="card mb-4 grid grid-cols-3 gap-2 text-center">
         <div>
-          <p className="text-2xl font-extrabold text-success">{counts.ok}</p>
-          <p className="text-xs font-bold text-ink/70">Approved</p>
+          <p className="text-2xl font-bold text-success">{counts.ok}</p>
+          <p className="text-xs font-bold text-muted">Approved</p>
         </div>
         <div>
-          <p className="text-2xl font-extrabold text-error">{counts.fix}</p>
-          <p className="text-xs font-bold text-ink/70">Need fixing</p>
+          <p className="text-2xl font-bold text-error">{counts.fix}</p>
+          <p className="text-xs font-bold text-muted">Need fixing</p>
         </div>
         <div>
-          <p className="text-2xl font-extrabold text-ink">{counts.todo}</p>
-          <p className="text-xs font-bold text-ink/70">Not reviewed</p>
+          <p className="text-2xl font-bold text-ink">{counts.todo}</p>
+          <p className="text-xs font-bold text-muted">Not reviewed</p>
         </div>
       </div>
 
@@ -141,7 +141,7 @@ export default function Review() {
             key={k.key}
             type="button"
             onClick={() => setKind(k.key)}
-            className={`rounded-full px-4 py-2 text-sm font-extrabold ${kind === k.key ? 'bg-primary text-white' : 'bg-white text-primary shadow-sm'}`}
+            className={`rounded-full px-4 py-2 text-sm font-bold ${kind === k.key ? 'bg-primary text-white' : 'bg-white text-primary shadow-sm'}`}
           >
             {k.label}
           </button>
@@ -153,7 +153,7 @@ export default function Review() {
             key={f.key}
             type="button"
             onClick={() => setFilter(f.key)}
-            className={`rounded-full px-3 py-1 text-xs font-extrabold ${filter === f.key ? 'bg-secondary text-ink' : 'bg-white text-ink/75 shadow-sm'}`}
+            className={`rounded-full px-3 py-1 text-xs font-bold ${filter === f.key ? 'bg-secondary text-ink' : 'bg-white text-muted shadow-sm'}`}
           >
             {f.label}
           </button>
@@ -175,12 +175,12 @@ export default function Review() {
         </button>
       </div>
 
-      {sections.length === 0 && <p className="card text-center text-ink/70">Nothing here.</p>}
+      {sections.length === 0 && <p className="card text-center text-muted">Nothing here.</p>}
 
       {sections.map((s) => (
         <section key={s.name} className="mb-6">
-          <h2 className="mb-2 text-lg font-extrabold text-ink">
-            {s.name} <span className="text-sm font-bold text-ink/70">({s.items.length})</span>
+          <h2 className="mb-2 text-lg font-bold text-ink">
+            {s.name} <span className="text-sm font-bold text-muted">({s.items.length})</span>
           </h2>
           <div className="space-y-2">
             {s.items.map((i) => {
@@ -188,20 +188,26 @@ export default function Review() {
               return (
                 <div key={i.id} className={`card !p-3 ${st === 'ok' ? '!bg-success/10' : st === 'fix' ? '!bg-error/10' : ''}`}>
                   <div className="flex items-center gap-3">
-                    <span className="w-10 text-center font-bangla text-2xl"><VisualText>{i.art ?? ''}</VisualText></span>
+                    <span lang="bn" className="w-10 text-center font-bangla text-2xl">
+                      <VisualText>{i.art ?? ''}</VisualText>
+                    </span>
                     <div className="min-w-0 flex-1">
-                      {i.speakerName && <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70">{i.speakerName} says</p>}
+                      {i.speakerName && <p className="text-xs font-bold uppercase tracking-wide text-muted">{i.speakerName} says</p>}
                       {i.bn && (
-                        <p className="flex items-center gap-2 font-bangla text-2xl font-bold leading-snug text-primary">
+                        <p lang="bn" className="flex items-center gap-2 font-bangla text-2xl font-bold leading-snug text-primary">
                           {i.bn}
                           <Speaker text={i.bn} size="sm" label="Hear it" />
                         </p>
                       )}
                       <p className="text-sm font-bold text-ink">{i.roman}</p>
-                      {i.en && <p className="text-sm text-ink/75">{i.en}</p>}
+                      {i.en && <p className="text-sm text-muted">{i.en}</p>}
                       {i.example && (
-                        <p className="flex items-center gap-2 text-xs text-ink/70">
-                          example: <span className="font-bangla font-bold">{i.example.bn}</span> ({i.example.roman}) = {i.example.en}
+                        <p className="flex items-center gap-2 text-xs text-muted">
+                          example:{' '}
+                          <span lang="bn" className="font-bangla font-bold">
+                            {i.example.bn}
+                          </span>{' '}
+                          ({i.example.roman}) = {i.example.en}
                           <Speaker text={i.example.bn} size="sm" label="Hear the example" />
                         </p>
                       )}
@@ -210,7 +216,7 @@ export default function Review() {
                       type="button"
                       onClick={() => setStatus(i.id, 'ok')}
                       aria-label="Approve"
-                      className={`h-10 w-10 rounded-full text-lg font-extrabold ${st === 'ok' ? 'bg-success text-white' : 'bg-white text-success shadow'}`}
+                      className={`h-10 w-10 rounded-full text-lg font-bold ${st === 'ok' ? 'bg-success text-white' : 'bg-white text-success shadow'}`}
                     >
                       ✓
                     </button>
@@ -218,7 +224,7 @@ export default function Review() {
                       type="button"
                       onClick={() => setStatus(i.id, 'fix')}
                       aria-label="Needs fixing"
-                      className={`h-10 w-10 rounded-full text-lg font-extrabold ${st === 'fix' ? 'bg-error text-white' : 'bg-white text-error shadow'}`}
+                      className={`h-10 w-10 rounded-full text-lg font-bold ${st === 'fix' ? 'bg-error text-white' : 'bg-white text-error shadow'}`}
                     >
                       ⚑
                     </button>

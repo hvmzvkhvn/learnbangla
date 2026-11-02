@@ -46,7 +46,7 @@ export default function SceneView({ scene }) {
   return (
     <div>
       <div className="mb-4 flex items-center justify-between">
-        <p className="text-sm font-extrabold uppercase tracking-wide text-ink/70">Listen to the conversation</p>
+        <p className="text-sm font-bold uppercase tracking-wide text-muted">Listen to the conversation</p>
         <button type="button" onClick={playAll} className="btn-primary !px-4 !py-2 !text-sm">
           <VisualText>▶</VisualText> Play all
         </button>
@@ -59,8 +59,10 @@ export default function SceneView({ scene }) {
           return (
             <div key={l.id} className={`flex items-end gap-2 ${me ? 'flex-row-reverse' : ''}`}>
               <div className="flex w-14 shrink-0 flex-col items-center text-center">
-                <span className="text-3xl"><VisualText>{who?.emoji}</VisualText></span>
-                <span lang="bn" className="font-bangla text-xs font-extrabold leading-tight text-ink/75">
+                <span className="text-3xl">
+                  <VisualText>{who?.emoji}</VisualText>
+                </span>
+                <span lang="bn" className="font-bangla text-sm font-bold leading-tight text-muted">
                   {who?.bn}
                 </span>
               </div>
@@ -72,13 +74,17 @@ export default function SceneView({ scene }) {
                 } ${active === i ? 'ring-4 ring-secondary' : ''}`}
               >
                 <span className="flex items-start gap-2">
-                  {l.art && <span className="text-2xl"><VisualText>{l.art}</VisualText></span>}
+                  {l.art && (
+                    <span className="text-2xl">
+                      <VisualText>{l.art}</VisualText>
+                    </span>
+                  )}
                   <span>
                     <span lang="bn" className="block font-bangla text-xl font-bold leading-snug text-primary">
                       {l.bn}
                     </span>
-                    {romanOn && <span className="block text-xs font-bold text-ink/75">{l.roman}</span>}
-                    <span className="block text-xs text-ink/70">{l.en}</span>
+                    {romanOn && <span className="block text-sm font-bold text-muted">{l.roman}</span>}
+                    <span className="block text-sm text-muted">{l.en}</span>
                   </span>
                 </span>
               </button>
@@ -86,7 +92,7 @@ export default function SceneView({ scene }) {
           )
         })}
       </div>
-      <p className="mt-4 text-center text-xs font-bold text-ink/70">Tap any line to hear it again</p>
+      <p className="mt-4 text-center text-sm font-bold text-muted">Tap any line to hear it again</p>
     </div>
   )
 }

@@ -31,13 +31,19 @@ export default function Practice() {
     return (
       <div className="animate-pop py-8 text-center">
         <Confetti />
-        <p className="text-7xl"><VisualText>{feat.garden ? '🧠' : '🔁'}</VisualText></p>
-        <h1 className="mt-3 text-3xl font-extrabold text-primary">
+        <p className="text-7xl">
+          <VisualText>{feat.garden ? '🧠' : '🔁'}</VisualText>
+        </p>
+        <h1 className="mt-3 text-3xl font-bold text-primary">
           {result.correct} of {result.total} first time
         </h1>
-        <p className="mt-2 text-ink/75">The ones you missed will come back soon — that is how they stick.</p>
-        {feat.playful && <p className="mt-3 text-lg font-extrabold text-primary"><VisualText>⭐</VisualText> Tara says: “Great remembering!”</p>}
-        <p className="mt-4 text-2xl font-extrabold text-success">+{result.xp} XP</p>
+        <p className="mt-2 text-muted">The ones you missed will come back soon — that is how they stick.</p>
+        {feat.playful && (
+          <p className="mt-3 text-lg font-bold text-primary">
+            <VisualText>⭐</VisualText> Tara says: “Great remembering!”
+          </p>
+        )}
+        <p className="mt-4 text-2xl font-bold text-success">+{result.xp} XP</p>
         <div className="mx-auto mt-6 flex max-w-xs flex-col gap-3">
           <Link to="/" className="btn-primary">
             Back home
@@ -50,7 +56,7 @@ export default function Practice() {
   return (
     <div className="py-2">
       <Toasts />
-      <h1 className="mb-1 text-3xl font-extrabold text-primary">Practice</h1>
+      <h1 className="mb-1 text-3xl font-bold text-primary">Practice</h1>
       <Link to="/play" className="card my-4 block font-bold text-primary">
         <VisualText>🎮</VisualText> Games — memory, listening and more →
       </Link>
@@ -67,19 +73,21 @@ export default function Practice() {
             }}
           />
         ) : (
-          <p className="card mt-4 text-center text-ink/70">Nothing to review yet.</p>
+          <p className="card mt-4 text-center text-muted">Nothing to review yet.</p>
         )
       ) : (
         <div className="card mt-4 text-center">
           {items.length ? (
             <>
-              <p className="text-6xl"><VisualText>{feat.garden ? '🧠' : '🔁'}</VisualText></p>
-              <p className="mt-3 text-lg font-extrabold text-ink">
+              <p className="text-6xl">
+                <VisualText>{feat.garden ? '🧠' : '🔁'}</VisualText>
+              </p>
+              <p className="mt-3 text-lg font-bold text-ink">
                 {dueCount > 0
                   ? `${dueCount} ${dueCount === 1 ? 'thing is' : 'things are'} ready to practise again.`
                   : 'Nothing is overdue — here is a quick refresher.'}
               </p>
-              <p className="mt-1 text-sm text-ink/75">
+              <p className="mt-1 text-sm text-muted">
                 Words and letters you got wrong, or haven't seen for a while. {items.length} questions.
               </p>
               <button type="button" onClick={start} className="btn-primary mt-5 w-full">
@@ -88,9 +96,11 @@ export default function Practice() {
             </>
           ) : (
             <>
-              <p className="text-6xl"><VisualText>🌱</VisualText></p>
-              <p className="mt-3 text-lg font-extrabold text-ink">Nothing to review yet.</p>
-              <p className="mt-1 text-sm text-ink/75">Finish a lesson first — then the things you learned will show up here.</p>
+              <p className="text-6xl">
+                <VisualText>🌱</VisualText>
+              </p>
+              <p className="mt-3 text-lg font-bold text-ink">Nothing to review yet.</p>
+              <p className="mt-1 text-sm text-muted">Finish a lesson first — then the things you learned will show up here.</p>
               <Link to="/" className="btn-secondary mt-5 inline-block">
                 Go to lessons
               </Link>

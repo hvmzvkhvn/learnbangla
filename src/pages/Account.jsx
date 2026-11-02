@@ -38,7 +38,7 @@ export default function Account() {
   if (!accountsEnabled)
     return (
       <Shell>
-        <p className="card text-center text-ink/70">
+        <p className="card text-center text-muted">
           Accounts are not switched on for this copy of the app. Everything still works on this device.
         </p>
       </Shell>
@@ -46,7 +46,7 @@ export default function Account() {
   if (!sync.ready)
     return (
       <Shell>
-        <p className="card text-center text-ink/75">Loading…</p>
+        <p className="card text-center text-muted">Loading…</p>
       </Shell>
     )
   if (sync.recovery)
@@ -71,10 +71,10 @@ export default function Account() {
 function Shell({ children }) {
   return (
     <div className="mx-auto max-w-xl px-1 py-2">
-      <h1 className="text-3xl font-extrabold text-primary">Account</h1>
-      <p className="mb-4 text-ink/75">Keep progress across devices and see how a child is doing.</p>
+      <h1 className="text-3xl font-bold text-primary">Account</h1>
+      <p className="mb-4 text-muted">Keep progress across devices and see how a child is doing.</p>
       {children}
-      <p className="mt-6 text-center text-xs font-bold text-ink/70">
+      <p className="mt-6 text-center text-xs font-bold text-muted">
         <Link to="/privacy">Privacy notice</Link>
       </p>
     </div>
@@ -107,7 +107,7 @@ function SignedOut() {
 
   return (
     <div className="card">
-      <div className="mb-4 flex rounded-2xl bg-primary/10 p-1 text-sm font-extrabold">
+      <div className="mb-4 flex rounded-2xl bg-primary/10 p-1 text-sm font-bold">
         {[
           ['in', 'Sign in'],
           ['up', 'Create account'],
@@ -119,14 +119,14 @@ function SignedOut() {
               setMode(k)
               setMsg('')
             }}
-            className={`flex-1 rounded-xl py-2 ${mode === k ? 'bg-white text-primary shadow' : 'text-ink/70'}`}
+            className={`flex-1 rounded-xl py-2 ${mode === k ? 'bg-white text-primary shadow' : 'text-muted'}`}
           >
             {label}
           </button>
         ))}
       </div>
       <form onSubmit={submit} className="space-y-3">
-        <label className="block text-sm font-bold text-ink/70">
+        <label className="block text-sm font-bold text-muted">
           Your email
           <input
             type="email"
@@ -137,8 +137,8 @@ function SignedOut() {
             className="input-field mt-1"
           />
         </label>
-        <label className="block text-sm font-bold text-ink/70">
-          Password {mode === 'up' && <span className="font-normal text-ink/70">(at least 8 characters)</span>}
+        <label className="block text-sm font-bold text-muted">
+          Password {mode === 'up' && <span className="font-normal text-muted">(at least 8 characters)</span>}
           <input
             type="password"
             required
@@ -150,7 +150,7 @@ function SignedOut() {
           />
         </label>
         {mode === 'up' && (
-          <label className="flex items-start gap-2 text-sm text-ink/70">
+          <label className="flex items-start gap-2 text-sm text-muted">
             <input type="checkbox" checked={adult} onChange={(e) => setAdult(e.target.checked)} className="mt-1" />
             <span>
               I am aged 18 or over, acting for myself or as a parent or guardian, and I have read the{' '}
@@ -208,7 +208,7 @@ function SignedOut() {
           </button>
         </div>
       </form>
-      <p className="mt-4 text-center text-xs text-ink/70">
+      <p className="mt-4 text-center text-xs text-muted">
         No account? Everything still works on this device — an account only adds saving across devices and the parent view.
       </p>
     </div>
@@ -353,15 +353,15 @@ function Manage({ sync }) {
         </form>
       )}
       <div className="card !p-4">
-        <p className="text-sm text-ink/75">Signed in as</p>
-        <p className="font-extrabold text-ink">{sync.email}</p>
+        <p className="text-sm text-muted">Signed in as</p>
+        <p className="font-bold text-ink">{sync.email}</p>
         <p className="mt-2 text-sm font-bold">
-          {sync.status === 'syncing' && <span className="text-ink/75">Saving…</span>}
+          {sync.status === 'syncing' && <span className="text-muted">Saving…</span>}
           {sync.status === 'ok' && <span className="text-success">✓ Saved {ago(sync.at)}</span>}
           {sync.status === 'offline' && <span className="text-secondary">Offline — it will save when you are back online.</span>}
           {sync.status === 'error' && <span className="text-error">Could not save: {sync.error}</span>}
           {sync.status === 'idle' && (
-            <span className="text-ink/70">{sync.learnerId ? 'Ready.' : 'Pick who is learning on this device.'}</span>
+            <span className="text-muted">{sync.learnerId ? 'Ready.' : 'Pick who is learning on this device.'}</span>
           )}
         </p>
         {sync.learnerId && (
@@ -369,28 +369,28 @@ function Manage({ sync }) {
             <button
               type="button"
               onClick={() => push().catch((e) => setErr(friendly(e)))}
-              className="rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow"
+              className="rounded-2xl bg-white px-4 py-2 text-sm font-bold text-primary shadow"
             >
               Sync now
             </button>
-            <Link to="/parent" className="rounded-2xl bg-primary px-4 py-2 text-sm font-extrabold text-white shadow">
+            <Link to="/parent" className="rounded-2xl bg-primary px-4 py-2 text-sm font-bold text-white shadow">
               Parent view →
             </Link>
           </div>
         )}
         {!sync.learnerId && learners?.length > 0 && (
-          <Link to="/parent" className="mt-3 inline-block text-sm font-extrabold text-primary">
+          <Link to="/parent" className="mt-3 inline-block text-sm font-bold text-primary">
             Parent view →
           </Link>
         )}
       </div>
 
       <div className="card !p-4">
-        <h2 className="text-xl font-extrabold text-ink">Learners</h2>
+        <h2 className="text-xl font-bold text-ink">Learners</h2>
         {learners === null ? (
-          <p className="mt-2 text-ink/70">Loading…</p>
+          <p className="mt-2 text-muted">Loading…</p>
         ) : learners.length === 0 ? (
-          <p className="mt-2 text-sm text-ink/75">Add the first learner below.</p>
+          <p className="mt-2 text-sm text-muted">Add the first learner below.</p>
         ) : (
           <ul className="mt-3 space-y-2">
             {learners.map((l) => (
@@ -398,21 +398,23 @@ function Manage({ sync }) {
                 key={l.id}
                 className={`flex items-center gap-3 rounded-2xl px-3 py-3 ${l.id === sync.learnerId ? 'bg-success/10 ring-2 ring-success/40' : 'bg-primary/5'}`}
               >
-                <span className="text-3xl"><VisualText>{tracks[l.track]?.emoji ?? '🙂'}</VisualText></span>
+                <span className="text-3xl">
+                  <VisualText>{tracks[l.track]?.emoji ?? '🙂'}</VisualText>
+                </span>
                 <span className="flex-1">
-                  <span className="block font-extrabold text-ink">{l.name}</span>
-                  <span className="block text-xs text-ink/70">
+                  <span className="block font-bold text-ink">{l.name}</span>
+                  <span className="block text-xs text-muted">
                     {tracks[l.track] ? `${tracks[l.track].label} · ages ${tracks[l.track].ages}` : 'age group not chosen yet'}
                   </span>
                 </span>
                 {l.id === sync.learnerId ? (
-                  <span className="text-xs font-extrabold text-success">Learning here</span>
+                  <span className="text-xs font-bold text-success">Learning here</span>
                 ) : (
                   <button
                     type="button"
                     disabled={busy}
                     onClick={() => choose(l.id)}
-                    className="rounded-xl bg-white px-3 py-2 text-sm font-extrabold text-primary shadow"
+                    className="rounded-xl bg-white px-3 py-2 text-sm font-bold text-primary shadow"
                   >
                     Use here
                   </button>
@@ -420,7 +422,7 @@ function Manage({ sync }) {
                 <button
                   type="button"
                   onClick={() => rename(l)}
-                  className="text-xs font-bold text-ink/70 hover:text-ink/70"
+                  className="text-xs font-bold text-muted hover:text-muted"
                   aria-label={`Rename ${l.name}`}
                 >
                   ✎
@@ -439,7 +441,7 @@ function Manage({ sync }) {
         )}
 
         {local && learners && !sync.learnerId && (
-          <label className="mt-3 flex items-start gap-2 text-xs text-ink/75">
+          <label className="mt-3 flex items-start gap-2 text-xs text-muted">
             <input type="checkbox" checked={useLocal} onChange={(e) => setUseLocal(e.target.checked)} className="mt-0.5" />
             <span>
               This device already has progress. Add it to the learner I pick (untick to use only their saved progress and replace what is
@@ -450,7 +452,7 @@ function Manage({ sync }) {
 
         {learners && learners.length < 8 && (
           <form onSubmit={add} className="mt-4 border-t border-primary/10 pt-4">
-            <p className="text-sm font-extrabold text-ink">Add a learner</p>
+            <p className="text-sm font-bold text-ink">Add a learner</p>
             <div className="mt-2 flex flex-wrap gap-2">
               <input
                 value={name}
@@ -473,7 +475,7 @@ function Manage({ sync }) {
             </div>
           </form>
         )}
-        {here && <p className="mt-3 text-xs text-ink/70">This device is saving to {here.name}'s progress.</p>}
+        {here && <p className="mt-3 text-xs text-muted">This device is saving to {here.name}'s progress.</p>}
         {err && (
           <p role="alert" className="mt-2 text-sm font-bold text-error">
             {err}
@@ -482,15 +484,15 @@ function Manage({ sync }) {
       </div>
 
       <div className="card !p-4">
-        <h2 className="text-xl font-extrabold text-ink">Your account</h2>
+        <h2 className="text-xl font-bold text-ink">Your account</h2>
         <div className="mt-3 flex flex-wrap gap-2">
-          <button type="button" onClick={download} className="rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-primary shadow">
+          <button type="button" onClick={download} className="rounded-2xl bg-white px-4 py-2 text-sm font-bold text-primary shadow">
             Download my data
           </button>
-          <button type="button" onClick={out} className="rounded-2xl bg-white px-4 py-2 text-sm font-extrabold text-ink/70 shadow">
+          <button type="button" onClick={out} className="rounded-2xl bg-white px-4 py-2 text-sm font-bold text-muted shadow">
             Sign out
           </button>
-          <button type="button" onClick={del} className="rounded-2xl px-4 py-2 text-sm font-bold text-error/70 hover:text-error">
+          <button type="button" onClick={del} className="rounded-2xl px-4 py-2 text-sm font-bold text-error hover:text-error">
             Delete my account
           </button>
         </div>

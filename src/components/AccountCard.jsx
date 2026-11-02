@@ -9,11 +9,13 @@ export default function AccountCard() {
   if (!accountsEnabled) return null
   const signedIn = Boolean(sync.email)
   return (
-    <Link to="/account" className="card mt-8 flex items-center gap-4 !p-5 transition active:scale-95 hover:brightness-105">
-      <span className="text-4xl"><VisualText>{signedIn ? '☁️' : '👪'}</VisualText></span>
+    <Link to="/account" className="card mt-8 flex items-center gap-4 !p-5 transition active:scale-[0.98] hover:brightness-105">
+      <span className="text-4xl">
+        <VisualText>{signedIn ? '☁️' : '👪'}</VisualText>
+      </span>
       <span className="flex-1">
-        <span className="block text-lg font-extrabold text-ink">{signedIn ? 'Your account' : 'Parent account'}</span>
-        <span className="block text-sm text-ink/75">
+        <span className="block text-lg font-bold text-ink">{signedIn ? 'Your account' : 'Parent account'}</span>
+        <span className="block text-sm text-muted">
           {!signedIn && 'Keep progress on every device and see how your child is doing.'}
           {signedIn && sync.learnerId && sync.status === 'ok' && '✓ Progress is saved to the account.'}
           {signedIn && sync.learnerId && sync.status === 'syncing' && 'Saving…'}

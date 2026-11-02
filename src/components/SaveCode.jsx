@@ -74,7 +74,7 @@ export default function SaveCode() {
   }
   return (
     <section className="card mt-5 !p-5" aria-labelledby="backup-title">
-      <h2 id="backup-title" className="text-xl font-extrabold">
+      <h2 id="backup-title" className="text-xl font-bold">
         Back up your progress
       </h2>
       <p className="mb-3 text-sm">A save code includes learning progress, not your voice recordings. Keep it private.</p>

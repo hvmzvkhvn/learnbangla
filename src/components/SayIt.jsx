@@ -86,7 +86,7 @@ export default function SayIt({ text, maxSeconds = 8 }) {
         <button
           type="button"
           onClick={start}
-          className="rounded-2xl bg-primary/10 px-5 py-3 font-extrabold text-primary transition active:scale-95 hover:bg-primary/20"
+          className="rounded-2xl bg-primary/10 px-5 py-3 font-bold text-primary transition active:scale-[0.98] hover:bg-primary/20"
         >
           <VisualText decorative>🎤</VisualText> Say it
         </button>
@@ -95,7 +95,7 @@ export default function SayIt({ text, maxSeconds = 8 }) {
         <button
           type="button"
           onClick={finish}
-          className="rounded-2xl bg-error px-5 py-3 font-extrabold text-white transition active:scale-95"
+          className="rounded-2xl bg-error px-5 py-3 font-bold text-white transition active:scale-[0.98]"
         >
           <span className="mr-2 inline-block h-3 w-3 animate-pulse rounded-full bg-white align-middle" />
           Listening… tap when done
@@ -106,23 +106,23 @@ export default function SayIt({ text, maxSeconds = 8 }) {
           <button
             type="button"
             onClick={() => speak(text, { force: true })}
-            className="rounded-2xl bg-accent/70 px-4 py-3 font-extrabold text-ink hover:bg-accent"
+            className="rounded-2xl bg-accent/70 px-4 py-3 font-bold text-ink hover:bg-accent"
           >
             <VisualText decorative>🔊</VisualText> Native
           </button>
-          <button type="button" onClick={playMine} className="rounded-2xl bg-secondary px-4 py-3 font-extrabold text-white">
+          <button type="button" onClick={playMine} className="rounded-2xl bg-secondary px-4 py-3 font-bold text-white">
             <VisualText decorative>▶</VisualText> You
           </button>
-          <button type="button" onClick={playBoth} className="rounded-2xl bg-white px-4 py-3 font-extrabold text-primary shadow">
+          <button type="button" onClick={playBoth} className="rounded-2xl bg-white px-4 py-3 font-bold text-primary shadow">
             Both
           </button>
-          <button type="button" onClick={start} className="rounded-2xl bg-white px-4 py-3 font-extrabold text-ink/75 shadow">
+          <button type="button" onClick={start} className="rounded-2xl bg-white px-4 py-3 font-bold text-muted shadow">
             ↻ Again
           </button>
         </div>
       )}
       {err && <p className="mt-2 text-sm font-bold text-error">{err}</p>}
-      <p className="mt-2 text-xs text-ink/70">
+      <p className="mt-2 text-xs text-muted">
         {phase === 'review' ? 'Listen to both — does yours sound close?' : 'Your voice stays on your device.'}
       </p>
     </div>

@@ -9,8 +9,8 @@ export default function Privacy() {
       <Link to="/" className="text-sm font-bold text-primary">
         ← Back to the app
       </Link>
-      <h1 className="mt-2 text-3xl font-extrabold text-primary">Privacy notice</h1>
-      <p className="mb-6 text-ink/75">Learn Bangla supports children and adults. We keep learning data to a minimum.</p>
+      <h1 className="mt-2 text-3xl font-bold text-primary">Privacy notice</h1>
+      <p className="mb-6 text-muted">Learn Bangla supports children and adults. We keep learning data to a minimum.</p>
 
       <Section title="Without an account">
         <p>
@@ -84,8 +84,8 @@ export default function Privacy() {
 function Section({ title, children }) {
   return (
     <section className="mb-5">
-      <h2 className="mb-1 text-xl font-extrabold text-ink">{title}</h2>
-      <div className="text-ink/80">{children}</div>
+      <h2 className="mb-1 text-xl font-bold text-ink">{title}</h2>
+      <div className="text-muted">{children}</div>
     </section>
   )
 }

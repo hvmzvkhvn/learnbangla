@@ -12,7 +12,9 @@ export default function MemoryGame({ pool, pairs = 6, mode = 'en', onFinish }) {
     return shuffle(
       chosen.flatMap((w) => [
         { uid: `${w.id}-b`, key: w.id, side: 'bn', text: w.bn, say: w.bn },
-        mode === 'picture' ? { uid: `${w.id}-e`, key: w.id, side: 'art', text: w.art, say: w.bn } : { uid: `${w.id}-e`, key: w.id, side: 'en', text: w.en },
+        mode === 'picture'
+          ? { uid: `${w.id}-e`, key: w.id, side: 'art', text: w.art, say: w.bn }
+          : { uid: `${w.id}-e`, key: w.id, side: 'en', text: w.en },
       ]),
     )
   }, [pool, pairs, mode])
@@ -62,10 +64,16 @@ export default function MemoryGame({ pool, pairs = 6, mode = 'en', onFinish }) {
 
   return (
     <div>
-      <div className="mb-4 flex items-center justify-between text-sm font-extrabold">
-        <span className="rounded-full bg-white px-3 py-1 shadow-sm"><VisualText>🃏</VisualText> Moves {moves}</span>
-        <span className="rounded-full bg-white px-3 py-1 shadow-sm"><VisualText>⏱</VisualText> {seconds}s</span>
-        <span className="rounded-full bg-accent px-3 py-1"><VisualText>✅</VisualText> {matched.length}/{cards.length / 2}</span>
+      <div className="mb-4 flex items-center justify-between text-sm font-bold">
+        <span className="rounded-full bg-white px-3 py-1 shadow-sm">
+          <VisualText>🃏</VisualText> Moves {moves}
+        </span>
+        <span className="rounded-full bg-white px-3 py-1 shadow-sm">
+          <VisualText>⏱</VisualText> {seconds}s
+        </span>
+        <span className="rounded-full bg-accent px-3 py-1">
+          <VisualText>✅</VisualText> {matched.length}/{cards.length / 2}
+        </span>
       </div>
       <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
         {cards.map((c) => {
@@ -75,14 +83,20 @@ export default function MemoryGame({ pool, pairs = 6, mode = 'en', onFinish }) {
               key={c.uid}
               type="button"
               onClick={() => flip(c)}
-              className={`flex aspect-[4/3] items-center justify-center rounded-2xl p-1 text-center shadow-md transition active:scale-95 ${
+              className={`flex aspect-[4/3] items-center justify-center rounded-2xl p-1 text-center shadow-md transition active:scale-[0.98] ${
                 matched.includes(c.key) ? 'bg-success/20 ring-2 ring-success' : up ? 'animate-flip bg-white' : 'bg-primary'
               }`}
             >
               {up ? (
-                <span className={`leading-tight ${c.side === 'bn' ? 'font-bangla text-xl font-bold text-primary' : c.side === 'art' ? 'text-5xl' : 'text-sm font-extrabold text-ink'}`}><VisualText>{c.text}</VisualText></span>
+                <span
+                  className={`leading-tight ${c.side === 'bn' ? 'font-bangla text-xl font-bold text-primary' : c.side === 'art' ? 'text-5xl' : 'text-sm font-bold text-ink'}`}
+                >
+                  <VisualText>{c.text}</VisualText>
+                </span>
               ) : (
-                <span className="text-3xl text-white/80"><VisualText>⭐</VisualText></span>
+                <span className="text-3xl text-white">
+                  <VisualText>⭐</VisualText>
+                </span>
               )}
             </button>
           )

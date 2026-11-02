@@ -214,8 +214,8 @@ export default function Studio() {
       <Link to="/review" className="text-sm font-bold text-primary">
         ← Review
       </Link>
-      <h1 className="mt-2 text-3xl font-extrabold text-primary">Voice studio</h1>
-      <p className="mb-4 max-w-2xl text-ink/70">
+      <h1 className="mt-2 text-3xl font-bold text-primary">Voice studio</h1>
+      <p className="mb-4 max-w-2xl text-muted">
         Read each item aloud and it replaces the prototype voice. Keep a quiet room and speak at a steady pace. Your recordings are saved in
         this browser, play instead of the built-in voice on this device, and can be downloaded as a zip that drops straight into{' '}
         <code>public/audio</code>.
@@ -223,7 +223,7 @@ export default function Studio() {
 
       <div className="card mb-4 !p-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <p className="font-extrabold text-ink">
+          <p className="font-bold text-ink">
             {doneAll.toLocaleString()} of {clips.length.toLocaleString()} recorded
           </p>
           <div className="flex flex-wrap items-center gap-2">
@@ -234,7 +234,7 @@ export default function Studio() {
               type="button"
               onClick={wipe}
               disabled={!doneAll}
-              className="rounded-xl px-3 py-2 text-xs font-bold text-error/70 hover:text-error disabled:opacity-30"
+              className="rounded-xl px-3 py-2 text-xs font-bold text-error hover:text-error disabled:opacity-30"
             >
               Delete all
             </button>
@@ -243,7 +243,7 @@ export default function Studio() {
         <div className="mt-2 h-3 overflow-hidden rounded-full bg-primary/10">
           <div className="h-full rounded-full bg-success" style={{ width: `${(doneAll / clips.length) * 100}%` }} />
         </div>
-        <label className="mt-3 flex items-center gap-2 text-sm font-bold text-ink/70">
+        <label className="mt-3 flex items-center gap-2 text-sm font-bold text-muted">
           <input
             type="checkbox"
             checked={useMine}
@@ -254,7 +254,7 @@ export default function Studio() {
           />
           Play my voice in the app on this device
         </label>
-        {busy && <p className="mt-2 text-sm font-bold text-ink/75">{busy}</p>}
+        {busy && <p className="mt-2 text-sm font-bold text-muted">{busy}</p>}
       </div>
 
       <div className="mb-3 flex flex-wrap gap-2">
@@ -266,7 +266,7 @@ export default function Studio() {
               setGroup(g.key)
               setPos(0)
             }}
-            className={`rounded-full px-4 py-2 text-sm font-extrabold ${group === g.key ? 'bg-primary text-white' : 'bg-white text-ink/70 shadow-sm'}`}
+            className={`rounded-full px-4 py-2 text-sm font-bold ${group === g.key ? 'bg-primary text-white' : 'bg-white text-muted shadow-sm'}`}
           >
             {g.label}{' '}
             <span className="opacity-60">
@@ -288,7 +288,7 @@ export default function Studio() {
               setStatus(k)
               setPos(0)
             }}
-            className={`rounded-full px-3 py-1 text-xs font-extrabold ${status === k ? 'bg-ink text-white' : 'bg-white text-ink/75 shadow-sm'}`}
+            className={`rounded-full px-3 py-1 text-xs font-bold ${status === k ? 'bg-ink text-white' : 'bg-white text-muted shadow-sm'}`}
           >
             {label}
           </button>
@@ -302,20 +302,20 @@ export default function Studio() {
           placeholder="Search…"
           className="input-field !w-40 !py-1 text-sm"
         />
-        <span className="text-xs font-bold text-ink/70">{list.length} shown</span>
+        <span className="text-xs font-bold text-muted">{list.length} shown</span>
       </div>
 
       {cur ? (
         <div className="card text-center">
-          <p className="text-xs font-extrabold uppercase tracking-wide text-ink/70">
+          <p className="text-xs font-bold uppercase tracking-wide text-muted">
             {Math.min(pos, list.length - 1) + 1} of {list.length} {cur.slow && ' · say it slowly'} {have.has(cur.key) && ' · ✓ recorded'}
           </p>
           <p className="mt-2 font-bangla text-6xl font-bold leading-snug text-primary" lang="bn">
             {cur.key}
           </p>
-          {cur.say !== cur.key && <p className="text-xs text-ink/70">(say it as “{cur.say}”)</p>}
-          {cur.roman && <p className="mt-1 text-lg font-extrabold text-ink">{cur.roman}</p>}
-          {cur.en && <p className="text-ink/75">{cur.en}</p>}
+          {cur.say !== cur.key && <p className="text-xs text-muted">(say it as “{cur.say}”)</p>}
+          {cur.roman && <p className="mt-1 text-lg font-bold text-ink">{cur.roman}</p>}
+          {cur.en && <p className="text-muted">{cur.en}</p>}
 
           <div className="mx-auto mt-4 h-2 w-48 overflow-hidden rounded-full bg-primary/10">
             <div className="h-full rounded-full bg-error transition-[width]" style={{ width: `${Math.min(1, level * 2) * 100}%` }} />
@@ -325,12 +325,12 @@ export default function Studio() {
             <button
               type="button"
               onClick={() => speak(cur.say, { force: true, skipMine: true })}
-              className="rounded-2xl bg-accent/70 px-4 py-3 font-extrabold text-ink hover:bg-accent"
+              className="rounded-2xl bg-accent/70 px-4 py-3 font-bold text-ink hover:bg-accent"
             >
               <VisualText>🔊</VisualText> Prototype <span className="text-xs opacity-60">(L)</span>
             </button>
             {phase === 'recording' ? (
-              <button type="button" onClick={stopRec} className="rounded-2xl bg-error px-6 py-3 font-extrabold text-white">
+              <button type="button" onClick={stopRec} className="rounded-2xl bg-error px-6 py-3 font-bold text-white">
                 <span className="mr-2 inline-block h-3 w-3 animate-pulse rounded-full bg-white align-middle" />
                 Stop <span className="text-xs opacity-70">(Space)</span>
               </button>
@@ -339,36 +339,36 @@ export default function Studio() {
                 type="button"
                 onClick={startRec}
                 disabled={phase === 'working'}
-                className="rounded-2xl bg-primary px-6 py-3 font-extrabold text-white disabled:opacity-50"
+                className="rounded-2xl bg-primary px-6 py-3 font-bold text-white disabled:opacity-50"
               >
                 {phase === 'working' ? 'Processing…' : take || have.has(cur.key) ? '↻ Record again' : '● Record'}{' '}
                 <span className="text-xs opacity-70">(Space)</span>
               </button>
             )}
             {(take || have.has(cur.key)) && phase !== 'recording' && (
-              <button type="button" onClick={playMine} className="rounded-2xl bg-secondary px-4 py-3 font-extrabold text-white">
+              <button type="button" onClick={playMine} className="rounded-2xl bg-secondary px-4 py-3 font-bold text-white">
                 <VisualText>▶</VisualText> Mine <span className="text-xs opacity-70">(P)</span>
               </button>
             )}
             {take && (
-              <button type="button" onClick={keep} className="rounded-2xl bg-success px-4 py-3 font-extrabold text-white">
+              <button type="button" onClick={keep} className="rounded-2xl bg-success px-4 py-3 font-bold text-white">
                 ✓ Keep <span className="text-xs opacity-70">(Enter)</span>
               </button>
             )}
           </div>
           {take && (
-            <p className="mt-2 text-xs text-ink/70">
+            <p className="mt-2 text-xs text-muted">
               {(take.ms / 1000).toFixed(1)} s · {Math.round(take.blob.size / 1024)} KB — silence trimmed, volume levelled
             </p>
           )}
           {msg && <p className="mt-3 text-sm font-bold text-error">{msg}</p>}
 
-          <div className="mt-5 flex items-center justify-between text-sm font-bold text-ink/70">
+          <div className="mt-5 flex items-center justify-between text-sm font-bold text-muted">
             <button type="button" onClick={() => setPos((p) => Math.max(0, p - 1))} disabled={pos === 0}>
               ← Back
             </button>
             {have.has(cur.key) && (
-              <button type="button" onClick={remove} className="text-error/60 hover:text-error">
+              <button type="button" onClick={remove} className="text-error hover:text-error">
                 Delete this one
               </button>
             )}
@@ -378,7 +378,7 @@ export default function Studio() {
           </div>
         </div>
       ) : (
-        <p className="card text-center font-bold text-ink/75">
+        <p className="card text-center font-bold text-muted">
           <VisualText>{status === 'todo' ? '🎉 Nothing left to record here.' : 'Nothing matches.'}</VisualText>
         </p>
       )}

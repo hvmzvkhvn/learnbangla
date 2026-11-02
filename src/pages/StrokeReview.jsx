@@ -68,16 +68,20 @@ export default function StrokeReview() {
       <Link to="/review" className="text-sm font-bold text-primary">
         ← Review
       </Link>
-      <h1 className="mt-2 text-3xl font-extrabold text-primary">Stroke-order review</h1>
-      <p className="mb-4 max-w-2xl text-ink/70">
+      <h1 className="mt-2 text-3xl font-bold text-primary">Stroke-order review</h1>
+      <p className="mb-4 max-w-2xl text-muted">
         Each card shows how the letter is proposed to be written: coloured strokes, numbered in order, the arrow at the end showing the
         direction. The headline (মাত্রা) is drawn last. Use the buttons to fix a stroke's order (↑ ↓), flip its direction (⇄) or remove a
-        stray one (✕). <b><VisualText>▶</VisualText> Play</b> shows the animation the learner would see. Mark each card ✓ when it is right.
+        stray one (✕).{' '}
+        <b>
+          <VisualText>▶</VisualText> Play
+        </b>{' '}
+        shows the animation the learner would see. Mark each card ✓ when it is right.
       </p>
 
       <div className="card mb-6 !p-4">
         <div className="flex flex-wrap items-center gap-3">
-          <p className="font-extrabold text-ink">
+          <p className="font-bold text-ink">
             ✓ {approved.length} right · ✗ {fixes.length} wrong · ✎ {edited.length} corrected · {total - approved.length - fixes.length} to
             look at
           </p>
@@ -88,7 +92,7 @@ export default function StrokeReview() {
             Copy approved list
           </button>
         </div>
-        <label className="mt-3 flex items-center gap-2 text-sm font-bold text-ink/70">
+        <label className="mt-3 flex items-center gap-2 text-sm font-bold text-muted">
           <input type="checkbox" checked={preview === true} onChange={(e) => setPreview(e.target.checked)} />
           Show every guide (with my corrections) in lessons on this device
         </label>
@@ -101,8 +105,8 @@ export default function StrokeReview() {
 
       {groups.map((g) => (
         <section key={g.key} className="mb-8">
-          <h2 className="mb-3 text-xl font-extrabold text-ink">
-            {g.label} <span className="text-sm font-bold text-ink/70">({g.glyphs.length})</span>
+          <h2 className="mb-3 text-xl font-bold text-ink">
+            {g.label} <span className="text-sm font-bold text-muted">({g.glyphs.length})</span>
           </h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {g.glyphs.map((glyph) => (
@@ -166,7 +170,7 @@ function GlyphCard({ glyph, kind, mark, onMark, fix, onFix, edits }) {
       <button
         type="button"
         onClick={() => setPlay((p) => !p)}
-        className="mx-auto mt-2 block rounded-full bg-white px-4 py-1 text-sm font-extrabold text-primary shadow-sm"
+        className="mx-auto mt-2 block rounded-full bg-white px-4 py-1 text-sm font-bold text-primary shadow-sm"
       >
         <VisualText>{play ? '✎ Back to the map' : '▶ Play'}</VisualText>
       </button>
@@ -175,12 +179,12 @@ function GlyphCard({ glyph, kind, mark, onMark, fix, onFix, edits }) {
         {order.map((i, pos) => (
           <li key={i} className="flex items-center gap-1 text-sm">
             <span
-              className="flex h-6 w-6 items-center justify-center rounded-full text-xs font-extrabold text-white"
+              className="flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold text-white"
               style={{ background: COLORS[pos % COLORS.length] }}
             >
               {pos + 1}
             </span>
-            <span className="flex-1 text-xs text-ink/70">{rev.has(i) ? 'reversed' : ''}</span>
+            <span className="flex-1 text-xs text-muted">{rev.has(i) ? 'reversed' : ''}</span>
             <button
               type="button"
               onClick={() => move(pos, -1)}
@@ -214,7 +218,7 @@ function GlyphCard({ glyph, kind, mark, onMark, fix, onFix, edits }) {
         ))}
       </ol>
       {fix && (
-        <button type="button" onClick={reset} className="mt-1 text-xs font-bold text-ink/70 underline">
+        <button type="button" onClick={reset} className="mt-1 text-xs font-bold text-muted underline">
           Undo my changes
         </button>
       )}
@@ -223,14 +227,14 @@ function GlyphCard({ glyph, kind, mark, onMark, fix, onFix, edits }) {
         <button
           type="button"
           onClick={() => onMark('ok')}
-          className={`flex-1 rounded-xl py-2 text-sm font-extrabold ${mark === 'ok' ? 'bg-success text-white' : 'bg-success/10 text-success'}`}
+          className={`flex-1 rounded-xl py-2 text-sm font-bold ${mark === 'ok' ? 'bg-success text-white' : 'bg-success/10 text-success'}`}
         >
           ✓ Right
         </button>
         <button
           type="button"
           onClick={() => onMark('fix')}
-          className={`flex-1 rounded-xl py-2 text-sm font-extrabold ${mark === 'fix' ? 'bg-error text-white' : 'bg-error/10 text-error'}`}
+          className={`flex-1 rounded-xl py-2 text-sm font-bold ${mark === 'fix' ? 'bg-error text-white' : 'bg-error/10 text-error'}`}
         >
           ✗ Wrong
         </button>

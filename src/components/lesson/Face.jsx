@@ -11,23 +11,24 @@ export default function Face({ f, big = false, speak = false }) {
     return (
       <div className="flex flex-col items-center gap-2 py-2">
         <Speaker text={f.say} size="lg" label="Play the audio" className="!h-20 !w-20 !text-5xl" />
-        <span className="text-sm font-bold text-ink/70">Tap to listen</span>
+        <span className="text-sm font-semibold text-muted">Tap to listen</span>
       </div>
     )
   }
   return (
-    <div className="flex flex-col items-center text-center leading-tight">
-      {f.art && <span className={`font-bangla ${big ? 'text-7xl' : 'text-4xl'}`}><VisualText>{f.art}</VisualText></span>}
+    <div className="learning-face flex flex-col items-center text-center leading-tight">
+      {f.art && (
+        <span className={`font-bangla ${big ? 'text-7xl' : 'text-4xl'}`}>
+          <VisualText>{f.art}</VisualText>
+        </span>
+      )}
       {f.bn && (
-        <span
-          lang="bn"
-          className={`font-bangla font-bold text-primary ${big ? (f.bn.length > 40 ? 'mt-2 text-2xl leading-snug' : f.bn.length > 22 ? 'mt-2 text-3xl leading-snug' : 'mt-2 text-5xl') : 'text-2xl'}`}
-        >
+        <span lang="bn" className={`font-bangla font-bold text-primary ${big ? 'mt-2 face-bangla-big' : 'text-2xl'}`}>
           {f.bn}
         </span>
       )}
-      {f.roman && (romanOn || !f.bn) && <span className="mt-1 text-sm font-bold text-ink/70">{f.roman}</span>}
-      {f.text && <span className={`font-extrabold text-ink ${big ? 'mt-2 text-2xl' : 'text-base'}`}>{f.text}</span>}
+      {f.roman && (romanOn || !f.bn) && <span className="mt-1 text-sm font-semibold text-muted">{f.roman}</span>}
+      {f.text && <span className={`font-bold text-ink ${big ? 'mt-2 text-2xl' : 'text-base'}`}>{f.text}</span>}
       {speak && f.bn && !f.noAudio && <Speaker inline size={big ? 'md' : 'sm'} text={f.say ?? f.bn} className="mt-2" />}
     </div>
   )

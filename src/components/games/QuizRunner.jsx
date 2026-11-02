@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ChoiceQ from '../lesson/ChoiceQ'
+import { haptic } from '../../ui/haptics'
 import { recordAnswer } from '../../state/srs'
 
 /** A fixed set of multiple-choice questions, one after another. onFinish({ correct, total }) */
@@ -8,16 +9,23 @@ export default function QuizRunner({ exercises, onFinish, label = 'Question' }) 
   const [status, setStatus] = useState('idle')
   const right = useRef(0)
   const ex = exercises[i]
+  const screen = useRef(null)
+  useEffect(() => {
+    screen.current?.focus({ preventScroll: true })
+  }, [i])
 
   const next = () => {
     setStatus('idle')
     if (i + 1 < exercises.length) setI(i + 1)
-    else onFinish({ correct: right.current, total: exercises.length })
+    else {
+      haptic('complete')
+      onFinish({ correct: right.current, total: exercises.length })
+    }
   }
 
   return (
-    <div>
-      <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/70">
+    <div ref={screen} tabIndex={-1} className="lesson-step" aria-label="Current question">
+      <p className="mb-3 text-center text-sm font-bold uppercase tracking-wide text-muted">
         {label} {i + 1} of {exercises.length}
       </p>
       <ChoiceQ
@@ -25,6 +33,7 @@ export default function QuizRunner({ exercises, onFinish, label = 'Question' }) 
         ex={ex}
         onSolved={(clean) => {
           recordAnswer(ex.itemId, clean)
+          haptic('success')
           if (clean) right.current += 1
           setStatus('solved')
         }}
@@ -33,7 +42,7 @@ export default function QuizRunner({ exercises, onFinish, label = 'Question' }) 
       <div className="mt-6 min-h-[5.5rem]">
         {status === 'wrong' && <p className="gentle-error text-center">Oops, not quite — try again!</p>}
         {status === 'solved' && (
-          <button className="btn-primary w-full" onClick={next}>
+          <button autoFocus className="btn-primary w-full" onClick={next}>
             {i + 1 < exercises.length ? 'Continue' : 'See my score'}
           </button>
         )}

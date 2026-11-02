@@ -16,7 +16,7 @@ function TappableWords({ tokens }) {
           key={i}
           type="button"
           onClick={() => speak(t, { force: true })}
-          className="rounded-xl bg-primary/10 px-3 py-1 font-bangla text-2xl font-bold text-primary transition active:scale-95"
+          className="rounded-xl bg-primary/10 px-3 py-1 font-bangla text-2xl font-bold text-primary transition active:scale-[0.98]"
         >
           {t}
         </button>
@@ -42,8 +42,8 @@ export default function LearnCard({ item }) {
         type="button"
         onClick={toggleFlag}
         title="Save a flag on this device"
-        className={`absolute right-4 top-4 rounded-full px-3 py-1 text-xs font-extrabold ${
-          flagged ? 'bg-error text-white' : 'bg-ink/5 text-ink/70'
+        className={`absolute right-4 top-4 rounded-full px-3 py-1 text-sm font-bold ${
+          flagged ? 'bg-error text-white' : 'bg-ink/5 text-muted'
         }`}
       >
         ⚑ {flagged ? 'Flagged' : 'Flag'}
@@ -66,17 +66,19 @@ export default function LearnCard({ item }) {
           <p lang="bn" className="font-bangla text-8xl font-bold leading-tight text-primary">
             {item.bn}
           </p>
-          <div className="mt-1 flex items-center justify-center gap-3">
-            {romanOn && <span className="rounded-full bg-accent px-4 py-1 text-xl font-extrabold">{item.roman}</span>}
+          <div className="mt-1 flex flex-col items-center justify-center gap-3">
+            {romanOn && <span className="rounded-full bg-accent px-4 py-1 text-xl font-bold">{item.roman}</span>}
             <Speaker text={item.bn} size="lg" label="Hear the letter" />
           </div>
           <div className="mt-5 border-t border-primary/10 pt-4">
-            <p className="text-6xl"><VisualText>{item.example.emoji}</VisualText></p>
+            <p className="text-6xl">
+              <VisualText>{item.example.emoji}</VisualText>
+            </p>
             <p lang="bn" className="font-bangla text-3xl font-bold text-ink">
               {item.example.bn}
             </p>
             {romanOn && <p className="font-bold text-primary">{item.example.roman}</p>}
-            <p className="mb-2 text-sm text-ink/70">{item.example.en}</p>
+            <p className="mb-2 text-sm text-muted">{item.example.en}</p>
             <Speaker text={item.example.bn} label="Hear the word" />
           </div>
         </>
@@ -87,13 +89,17 @@ export default function LearnCard({ item }) {
           <p lang="bn" className="font-bangla text-8xl font-bold leading-tight text-primary">
             {item.bn}
           </p>
-          <div className="mt-1 flex items-center justify-center gap-3">
-            {romanOn && <span className="rounded-full bg-accent px-4 py-1 text-xl font-extrabold">{item.roman}</span>}
+          <div className="mt-1 flex flex-col items-center justify-center gap-3">
+            {romanOn && <span className="rounded-full bg-accent px-4 py-1 text-xl font-bold">{item.roman}</span>}
             <Speaker text={item.bn} size="lg" label="Hear it" />
           </div>
           {item.signChar && (
-            <p className="mt-4 text-ink/75">
-              The sign <span className="font-bangla text-3xl font-bold text-ink">◌{item.signChar}</span> says "{item.signRoman}"
+            <p className="mt-4 text-muted">
+              The sign{' '}
+              <span lang="bn" className="font-bangla text-3xl font-bold text-ink">
+                ◌{item.signChar}
+              </span>{' '}
+              says "{item.signRoman}"
             </p>
           )}
         </>
@@ -107,8 +113,8 @@ export default function LearnCard({ item }) {
           <p lang="bn" className="mt-2 font-bangla text-5xl font-bold leading-snug text-primary">
             {item.bn}
           </p>
-          {romanOn && <p className="mt-1 text-xl font-extrabold text-ink">{item.roman}</p>}
-          <p className="mb-3 text-ink/75">{item.en}</p>
+          {romanOn && <p className="mt-1 text-xl font-bold text-ink">{item.roman}</p>}
+          <p className="mb-3 text-muted">{item.en}</p>
           <Speaker text={item.bn} size="lg" label="Hear the word" />
         </>
       )}
@@ -118,10 +124,10 @@ export default function LearnCard({ item }) {
           <p lang="bn" className="mt-6 font-bangla text-4xl font-bold leading-snug text-primary">
             {item.bn}
           </p>
-          {romanOn && <p className="mt-2 text-lg font-extrabold text-ink">{item.roman}</p>}
-          <p className="mb-3 text-ink/75">{item.en}</p>
+          {romanOn && <p className="mt-2 text-lg font-bold text-ink">{item.roman}</p>}
+          <p className="mb-3 text-muted">{item.en}</p>
           <Speaker text={item.bn} size="lg" label="Hear the sentence" />
-          <p className="mt-4 text-xs font-bold uppercase tracking-wide text-ink/70">Tap a word to hear it</p>
+          <p className="mt-4 text-sm font-bold uppercase tracking-wide text-muted">Tap a word to hear it</p>
           <TappableWords tokens={item.tokens} />
         </>
       )}

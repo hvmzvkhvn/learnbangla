@@ -60,16 +60,18 @@ export default function GeoGame({ onFinish }) {
 
   return (
     <div>
-      <p className="mb-3 text-center text-sm font-extrabold uppercase tracking-wide text-ink/70">
+      <p className="mb-3 text-center text-sm font-bold uppercase tracking-wide text-muted">
         Question {i + 1} of {qs.length}
       </p>
       {q.kind === 'tap' && (
         <>
           <div className="mb-2 flex items-center justify-center gap-3 text-center">
             <div>
-              <p className="text-sm font-bold text-ink/75">Tap this division on the map</p>
-              <p className="font-bangla text-4xl font-extrabold text-primary">{q.region.bn}</p>
-              <p className="text-sm text-ink/70">{q.region.name}</p>
+              <p className="text-sm font-bold text-muted">Tap this division on the map</p>
+              <p lang="bn" className="font-bangla text-4xl font-bold text-primary">
+                {q.region.bn}
+              </p>
+              <p className="text-sm text-muted">{q.region.name}</p>
             </div>
             <Speaker text={q.region.bn} size="lg" />
           </div>
@@ -87,20 +89,28 @@ export default function GeoGame({ onFinish }) {
           region={q.region}
         >
           <div className="flex items-center justify-center gap-3 rounded-3xl bg-white p-4 shadow-sm">
-            <span className="text-5xl"><VisualText>{q.line.emoji}</VisualText></span>
-            <p className="font-bangla text-2xl font-bold text-primary">{q.line.bn}</p>
+            <span className="text-5xl">
+              <VisualText>{q.line.emoji}</VisualText>
+            </span>
+            <p lang="bn" className="font-bangla text-2xl font-bold text-primary">
+              {q.line.bn}
+            </p>
             <Speaker text={q.line.bn} size="lg" />
           </div>
-          {solved && <p className="mt-2 text-center text-sm text-ink/75">{q.line.en}</p>}
+          {solved && <p className="mt-2 text-center text-sm text-muted">{q.line.en}</p>}
         </Choice>
       )}
       {q.kind === 'city' && (
         <Choice title="Which division is this city in?" options={q.options} answer={answer} bad={bad} solved={solved} region={q.region}>
           <div className="flex items-center justify-center gap-3 rounded-3xl bg-white p-4 shadow-sm">
-            <span className="text-5xl"><VisualText>{q.city.emoji}</VisualText></span>
+            <span className="text-5xl">
+              <VisualText>{q.city.emoji}</VisualText>
+            </span>
             <div className="text-center">
-              <p className="font-bangla text-4xl font-extrabold text-primary">{q.city.bn}</p>
-              <p className="text-sm text-ink/75">{q.city.name}</p>
+              <p lang="bn" className="font-bangla text-4xl font-bold text-primary">
+                {q.city.bn}
+              </p>
+              <p className="text-sm text-muted">{q.city.name}</p>
             </div>
             <Speaker text={q.city.bn} size="lg" />
           </div>
@@ -121,8 +131,8 @@ export default function GeoGame({ onFinish }) {
 function Choice({ title, sub, options, answer, bad, solved, region, children }) {
   return (
     <div>
-      <p className="mb-1 text-center text-lg font-extrabold text-ink">{title}</p>
-      {sub && <p className="mb-2 text-center text-sm text-ink/70">{sub}</p>}
+      <p className="mb-1 text-center text-lg font-bold text-ink">{title}</p>
+      {sub && <p className="mb-2 text-center text-sm text-muted">{sub}</p>}
       {children}
       <div className="mt-4 grid grid-cols-2 gap-3">
         {options.map((r) => (
@@ -131,7 +141,7 @@ function Choice({ title, sub, options, answer, bad, solved, region, children }) 
             type="button"
             onClick={() => answer(r)}
             disabled={solved && r.id !== region.id}
-            className={`min-h-[5.5rem] rounded-2xl border-4 px-2 py-3 text-center transition active:scale-95 ${
+            className={`min-h-[5.5rem] rounded-2xl border-4 px-2 py-3 text-center transition active:scale-[0.98] ${
               solved && r.id === region.id
                 ? 'border-success bg-success/15'
                 : bad[r.id]
@@ -139,9 +149,13 @@ function Choice({ title, sub, options, answer, bad, solved, region, children }) 
                   : 'border-primary/15 bg-white hover:border-primary/40'
             }`}
           >
-            <span className="block text-2xl"><VisualText>{r.emoji}</VisualText></span>
-            <span className="block font-bangla text-xl font-extrabold text-ink">{r.bn}</span>
-            <span className="block text-xs font-bold text-ink/70">{r.name}</span>
+            <span className="block text-2xl">
+              <VisualText>{r.emoji}</VisualText>
+            </span>
+            <span lang="bn" className="block font-bangla text-xl font-bold text-ink">
+              {r.bn}
+            </span>
+            <span className="block text-xs font-bold text-muted">{r.name}</span>
           </button>
         ))}
       </div>
