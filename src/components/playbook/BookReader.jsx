@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { pageArtPath } from '../../data/playbook/artwork'
+import { readerUnits, unitArtwork } from './readerUnits.js'
+export { stepCount } from './readerUnits.js'
 import Artwork, { PlayIcon, coverIds } from './Artwork'
 import { speak, stop } from '../../audio/audio'
 import { useRoman } from '../../state/roman'
@@ -10,23 +11,16 @@ import './playbook.css'
 
 const dates = ['1905', '1947', '1952', '1966', '1970', '26 Mar 1971', '16 Dec 1971']
 const BASE = import.meta.env.BASE_URL
-const lineOf = (x) => ({ bn: x.bn, roman: x.roman, en: x.en })
-
-/** How many short readings a book has once every page's extra lines are counted. */
-export const stepCount = (pages) => pages.reduce((n, p) => n + 1 + (p.more?.length ?? 0), 0)
-
 /**
  * A reader for picture books and illustrated histories.
- *   book mode  — one short reading at a time (a page's first line, then its extra lines) under that page's painting
+ *   book mode  — one short reading at a time (a page's first line, then its extra lines) with a dedicated painting for each reading
  *   story mode — one page at a time: narration, longer background paragraphs, then all of its Bangla lines
  * A page may carry `more` (extra Bangla lines), `deep` (extra English paragraphs), `chapter` (starts a chapter),
- * `label` (its chapter-button text) and `art` (a painting path, when it borrows another page's picture).
+ * `label` (its chapter-button text) and `art` (a dedicated painting path).
  */
 export default function BookReader({id, bookId, title, pages, mode = 'book', hideEnglish = false, backTo = '/playbook', xp = 15, onFinish, finishText}) {
   const story = mode === 'story'
-  const units = useMemo(() => story
-    ? pages.map((p, pageIndex) => ({ pageIndex, lines: [p.lineEn ? { ...lineOf(p), en: p.lineEn, showEn: true } : lineOf(p), ...(p.more ?? []).map(lineOf)] }))
-    : pages.flatMap((p, pageIndex) => [lineOf(p), ...(p.more ?? []).map(lineOf)].map((line, k, all) => ({ pageIndex, lines: [line], part: all.length > 1 ? `${k + 1} of ${all.length}` : '' }))), [pages, story])
+  const units = useMemo(() => readerUnits(pages, story), [pages, story])
   const [saved, save] = useBookmarks()
   const [i, setI] = useState(() => {
     const mark = saved[id]
@@ -47,15 +41,15 @@ export default function BookReader({id, bookId, title, pages, mode = 'book', hid
   const done = i >= units.length
   const unit = units[Math.min(i, units.length - 1)]
   const pg = pages[unit.pageIndex]
-  const artSrc = (pageIndex) => `${BASE}${pages[pageIndex].art ?? pageArtPath(id, pageIndex)}`
+  const artSrc = (reading) => `${BASE}${unitArtwork(id, pages, reading)}`
   const chapter = [...pages.slice(0, unit.pageIndex + 1)].reverse().find((p) => p.chapter)?.chapter
   useEffect(() => {
     const next = units[i + 1]
-    if (next && next.pageIndex !== unit.pageIndex) {
+    if (next) {
       const img = new Image()
-      img.src = artSrc(next.pageIndex)
+      img.src = `${BASE}${unitArtwork(id, pages, next)}`
     }
-  }, [id, i]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [id, i, pages, units])
   useEffect(() => () => { run.current++; stop() }, [])
   const cancel = () => { run.current++; stop(); setPlaying(false); setActive(null) }
   const go = (n) => {
@@ -109,11 +103,11 @@ export default function BookReader({id, bookId, title, pages, mode = 'book', hid
     {story && <nav className="pb-timeline" aria-label="Story chapters">{pages.map((p, k) => <button key={k} onClick={() => go(k)} aria-current={i === k ? 'step' : undefined}>{label(p, k)}</button>)}</nav>}
     {!story && chapter && <p className="pb-chapter"><span>Chapter</span><b lang="bn">{chapter.bn}</b> · {chapter.en}</p>}
     <div className={`pb-reader-sheet ${story ? 'pb-story-sheet' : ''}`}>
-      <div className="pb-reader-art"><Artwork key={`${id}-${unit.pageIndex}`} src={artSrc(unit.pageIndex)} alt={pg.artNote || pg.en} eager /></div>
+      <div className="pb-reader-art"><Artwork key={artSrc(unit)} src={artSrc(unit)} alt={unit.artAlt || pg.artAlt || pg.en} eager /></div>
       <div>
-        {pg.artNote && <p className="pb-art-note">{pg.artNote}</p>}
-        {story && <><p className="pb-history-narration">{pg.en}</p>{(pg.deep ?? []).map((t, k) => <p key={k} className="pb-deep">{t}</p>)}</>}
-        {unit.lines.map((line, l) => <div className="pb-caption" key={l} data-line-active={active?.l === l}>
+        {story && <><p className="pb-history-narration">{pg.en}</p>{(pg.deep ?? []).map((t, k) => <div key={k} className="pb-illustrated-background">{pg.deepArt?.[k] && <Artwork src={`${BASE}${pg.deepArt[k].art}`} alt={pg.deepArt[k].artAlt} />}<p className="pb-deep">{t}</p></div>)}</>}
+        {unit.lines.map((line, l) => <div className={`pb-caption ${story && l > 0 && line.art ? 'pb-illustrated-caption' : ''}`} key={l} data-line-active={active?.l === l}>
+          {story && l > 0 && line.art && <Artwork src={`${BASE}${line.art}`} alt={line.artAlt || line.en} />}
           <p className="pb-caption-bn" lang="bn">{line.bn.split(' ').map((word, k) => <button key={k} className="pb-word" data-active={active?.l === l && active.w === k} onClick={() => hearWord(l, k)} aria-label={`Hear ${word}`}>{word}</button>)}</p>
           {romanOn && <p className="pb-roman">{line.roman}</p>}
           {!story && (showEn ? <p className="pb-translation">{line.en}</p> : <button className="pb-translation underline" onClick={() => setShowEn(true)}>Show English meaning</button>)}

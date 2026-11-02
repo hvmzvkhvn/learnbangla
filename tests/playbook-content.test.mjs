@@ -50,7 +50,7 @@ test('every division and timeline chapter has background paragraphs and extra Ba
   assert.equal(panels, 45)
 })
 
-test('the new histories are complete and borrow only paintings that exist', () => {
+test('the new histories are complete and have dedicated paintings', () => {
   assert.deepEqual(Object.keys(historyStories).sort(), ['ancient-mughal', 'colonial', 'language-liberation', 'people-culture'])
   for (const [id, story] of Object.entries(historyStories)) {
     assert.ok(story.title && story.titleBn && story.span, id)

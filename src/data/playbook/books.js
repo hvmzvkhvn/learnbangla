@@ -150,7 +150,8 @@ export const olderBooks = [
   },
 ]
 
-// ---- longer readings: extra lines and chapters under the same paintings ---------------------------------------------
+// ---- longer readings: extra lines with their own illustrations ---------------------------------------------
+import { illustrateAdditions } from './readingArtwork.js'
 import { youngMore } from './bookMoreYoung.js'
 import { olderMore } from './bookMoreOlder.js'
 const applyMore = (books, table) =>
@@ -160,6 +161,7 @@ const applyMore = (books, table) =>
     if (m.pages.length !== b.pages.length) throw new Error(`${b.id}: ${m.pages.length} sets of extra lines for ${b.pages.length} pages`)
     b.pages.forEach((p, i) => {
       p.more = m.pages[i]
+      illustrateAdditions('book', b.id, p, i)
       if (m.chapters[i]) p.chapter = m.chapters[i]
     })
   })

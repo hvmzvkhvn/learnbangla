@@ -1,0 +1,132 @@
+{
+  "mode": "built-in image_gen",
+  "note": "Reproduction guidance including visual-review refinements.",
+  "total": 419,
+  "collections": [
+    {
+      "collection": "book-tara-morning",
+      "count": 12,
+      "path": "prompts/book-tara-morning.json"
+    },
+    {
+      "collection": "book-nana-village",
+      "count": 12,
+      "path": "prompts/book-nana-village.json"
+    },
+    {
+      "collection": "book-rainy-day",
+      "count": 12,
+      "path": "prompts/book-rainy-day.json"
+    },
+    {
+      "collection": "book-my-animals",
+      "count": 12,
+      "path": "prompts/book-my-animals.json"
+    },
+    {
+      "collection": "book-at-market",
+      "count": 12,
+      "path": "prompts/book-at-market.json"
+    },
+    {
+      "collection": "book-eid-morning",
+      "count": 12,
+      "path": "prompts/book-eid-morning.json"
+    },
+    {
+      "collection": "book-dhaka-rickshaw",
+      "count": 14,
+      "path": "prompts/book-dhaka-rickshaw.json"
+    },
+    {
+      "collection": "book-boishakh-fair",
+      "count": 14,
+      "path": "prompts/book-boishakh-fair.json"
+    },
+    {
+      "collection": "book-hilsa-river",
+      "count": 14,
+      "path": "prompts/book-hilsa-river.json"
+    },
+    {
+      "collection": "book-dada-village",
+      "count": 14,
+      "path": "prompts/book-dada-village.json"
+    },
+    {
+      "collection": "book-our-school",
+      "count": 14,
+      "path": "prompts/book-our-school.json"
+    },
+    {
+      "collection": "book-coxs-bazar",
+      "count": 14,
+      "path": "prompts/book-coxs-bazar.json"
+    },
+    {
+      "collection": "story-dhaka",
+      "count": 15,
+      "path": "prompts/story-dhaka.json"
+    },
+    {
+      "collection": "story-chattogram",
+      "count": 12,
+      "path": "prompts/story-chattogram.json"
+    },
+    {
+      "collection": "story-sylhet",
+      "count": 15,
+      "path": "prompts/story-sylhet.json"
+    },
+    {
+      "collection": "story-barishal",
+      "count": 12,
+      "path": "prompts/story-barishal.json"
+    },
+    {
+      "collection": "story-khulna",
+      "count": 15,
+      "path": "prompts/story-khulna.json"
+    },
+    {
+      "collection": "story-rajshahi",
+      "count": 15,
+      "path": "prompts/story-rajshahi.json"
+    },
+    {
+      "collection": "story-mymensingh",
+      "count": 15,
+      "path": "prompts/story-mymensingh.json"
+    },
+    {
+      "collection": "story-rangpur",
+      "count": 15,
+      "path": "prompts/story-rangpur.json"
+    },
+    {
+      "collection": "story-timeline",
+      "count": 21,
+      "path": "prompts/story-timeline.json"
+    },
+    {
+      "collection": "history-ancient-mughal",
+      "count": 32,
+      "path": "prompts/history-ancient-mughal.json"
+    },
+    {
+      "collection": "history-colonial",
+      "count": 28,
+      "path": "prompts/history-colonial.json"
+    },
+    {
+      "collection": "history-language-liberation",
+      "count": 36,
+      "path": "prompts/history-language-liberation.json"
+    },
+    {
+      "collection": "history-people-culture",
+      "count": 32,
+      "path": "prompts/history-people-culture.json"
+    }
+  ]
+}

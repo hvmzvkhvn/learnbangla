@@ -1,0 +1,150 @@
+{
+  "mode": "built-in image_gen",
+  "note": "Reproduction guidance including visual-review refinements.",
+  "jobs": [
+    {
+      "key": "book-eid-morning-01-reading-01",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 0,
+      "kind": "reading",
+      "index": 0,
+      "text": "The moon has risen.",
+      "art": "images/playbook/additions/book-eid-morning-01-reading-01.webp",
+      "alt": "The moon has risen.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: Eid morning.\nPRIMARY SCENE TO ILLUSTRATE: The moon has risen.\nContext only (do not cram all events into image): Today is Eid!\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-01-reading-02",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 0,
+      "kind": "reading",
+      "index": 1,
+      "text": "Everyone is happy.",
+      "art": "images/playbook/additions/book-eid-morning-01-reading-02.webp",
+      "alt": "Everyone is happy.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: Eid morning.\nPRIMARY SCENE TO ILLUSTRATE: Everyone is happy.\nContext only (do not cram all events into image): Today is Eid!\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-02-reading-01",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 1,
+      "kind": "reading",
+      "index": 0,
+      "text": "The dress is beautiful.",
+      "art": "images/playbook/additions/book-eid-morning-02-reading-01.webp",
+      "alt": "The dress is beautiful.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: The dress is beautiful.\nContext only (do not cram all events into image): A new dress.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-02-reading-02",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 1,
+      "kind": "reading",
+      "index": 1,
+      "text": "I put on the dress.",
+      "art": "images/playbook/additions/book-eid-morning-02-reading-02.webp",
+      "alt": "I put on the dress.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: I put on the dress.\nContext only (do not cram all events into image): A new dress.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-03-reading-01",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 2,
+      "kind": "reading",
+      "index": 0,
+      "text": "Abbu and Bhaiya come along.",
+      "art": "images/playbook/additions/book-eid-morning-03-reading-01.webp",
+      "alt": "Abbu and Bhaiya come along.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: Abbu and Bhaiya come along.\nContext only (do not cram all events into image): We go to the mosque.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-03-reading-02",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 2,
+      "kind": "reading",
+      "index": 1,
+      "text": "Many people are at the mosque.",
+      "art": "images/playbook/additions/book-eid-morning-03-reading-02.webp",
+      "alt": "Many people are at the mosque.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: Many people are at the mosque.\nContext only (do not cram all events into image): We go to the mosque.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-04-reading-01",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 3,
+      "kind": "reading",
+      "index": 0,
+      "text": "Everyone says, Eid Mubarak.",
+      "art": "images/playbook/additions/book-eid-morning-04-reading-01.webp",
+      "alt": "Everyone says, Eid Mubarak.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: A day of joy.\nPRIMARY SCENE TO ILLUSTRATE: Everyone says, Eid Mubarak.\nContext only (do not cram all events into image): Everyone hugs.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-04-reading-02",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 3,
+      "kind": "reading",
+      "index": 1,
+      "text": "I hug Abbu.",
+      "art": "images/playbook/additions/book-eid-morning-04-reading-02.webp",
+      "alt": "I hug Abbu.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: A day of joy.\nPRIMARY SCENE TO ILLUSTRATE: I hug Abbu.\nContext only (do not cram all events into image): Everyone hugs.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-05-reading-01",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 4,
+      "kind": "reading",
+      "index": 0,
+      "text": "Ammu cooks payesh.",
+      "art": "images/playbook/additions/book-eid-morning-05-reading-01.webp",
+      "alt": "Ammu cooks payesh.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: Ammu cooks payesh.\nContext only (do not cram all events into image): Tasty food.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-05-reading-02",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 4,
+      "kind": "reading",
+      "index": 1,
+      "text": "We all eat together.",
+      "art": "images/playbook/additions/book-eid-morning-05-reading-02.webp",
+      "alt": "We all eat together.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: We all eat together.\nContext only (do not cram all events into image): Tasty food.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-06-reading-01",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 5,
+      "kind": "reading",
+      "index": 0,
+      "text": "I am very happy.",
+      "art": "images/playbook/additions/book-eid-morning-06-reading-01.webp",
+      "alt": "I am very happy.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: I am very happy.\nContext only (do not cram all events into image): I got salami (Eid money).\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-eid-morning-06-reading-02",
+      "group": "book",
+      "id": "eid-morning",
+      "page": 5,
+      "kind": "reading",
+      "index": 1,
+      "text": "I will buy a balloon.",
+      "art": "images/playbook/additions/book-eid-morning-06-reading-02.webp",
+      "alt": "I will buy a balloon.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Eid Morning. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: I will buy a balloon.\nContext only (do not cram all events into image): I got salami (Eid money).\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    }
+  ]
+}

@@ -879,3 +879,28 @@
   border-radius: 999px;
   background: rgb(var(--primary-text));
 }
+
+/* Added passages retain their own image, with space reserved before lazy loading. */
+.pb-illustrated-background {
+  margin: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(var(--primary-text), 0.12);
+  border-radius: 16px;
+}
+.pb-illustrated-background > img,
+.pb-illustrated-caption > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+.pb-illustrated-background .pb-deep { padding: 20px; }
+.pb-illustrated-caption > img { border-radius: 12px; margin-bottom: 20px; }
+@media (min-width: 760px) {
+  .pb-illustrated-background { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+  .pb-illustrated-caption > img { max-width: 640px; }
+}
+@media (max-width: 480px) {
+  .pb-illustrated-background { margin: 16px; }
+}

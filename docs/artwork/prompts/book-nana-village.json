@@ -1,0 +1,150 @@
+{
+  "mode": "built-in image_gen",
+  "note": "Reproduction guidance including visual-review refinements.",
+  "jobs": [
+    {
+      "key": "book-nana-village-01-reading-01",
+      "group": "book",
+      "id": "nana-village",
+      "page": 0,
+      "kind": "reading",
+      "index": 0,
+      "text": "Waves on the river.",
+      "art": "images/playbook/additions/book-nana-village-01-reading-01.webp",
+      "alt": "Waves on the river.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: On the way.\nPRIMARY SCENE TO ILLUSTRATE: Waves on the river.\nContext only (do not cram all events into image): The boat goes on the river.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-01-reading-02",
+      "group": "book",
+      "id": "nana-village",
+      "page": 0,
+      "kind": "reading",
+      "index": 1,
+      "text": "We go to Nana's house.",
+      "art": "images/playbook/additions/book-nana-village-01-reading-02.webp",
+      "alt": "We go to Nana's house.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: On the way.\nPRIMARY SCENE TO ILLUSTRATE: We go to Nana's house.\nContext only (do not cram all events into image): The boat goes on the river.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-02-reading-01",
+      "group": "book",
+      "id": "nana-village",
+      "page": 1,
+      "kind": "reading",
+      "index": 0,
+      "text": "The rice grows tall.",
+      "art": "images/playbook/additions/book-nana-village-02-reading-01.webp",
+      "alt": "The rice grows tall.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: The rice grows tall.\nContext only (do not cram all events into image): Green rice in the field.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-02-reading-02",
+      "group": "book",
+      "id": "nana-village",
+      "page": 1,
+      "kind": "reading",
+      "index": 1,
+      "text": "The farmer works in the field.",
+      "art": "images/playbook/additions/book-nana-village-02-reading-02.webp",
+      "alt": "The farmer works in the field.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: page 2.\nPRIMARY SCENE TO ILLUSTRATE: The farmer works in the field.\nContext only (do not cram all events into image): Green rice in the field.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-03-reading-01",
+      "group": "book",
+      "id": "nana-village",
+      "page": 2,
+      "kind": "reading",
+      "index": 0,
+      "text": "The ducks say quack quack.",
+      "art": "images/playbook/additions/book-nana-village-03-reading-01.webp",
+      "alt": "The ducks say quack quack.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: The ducks say quack quack.\nContext only (do not cram all events into image): Ducks swim in the pond.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-03-reading-02",
+      "group": "book",
+      "id": "nana-village",
+      "page": 2,
+      "kind": "reading",
+      "index": 1,
+      "text": "There are fish in the pond.",
+      "art": "images/playbook/additions/book-nana-village-03-reading-02.webp",
+      "alt": "There are fish in the pond.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: page 3.\nPRIMARY SCENE TO ILLUSTRATE: There are fish in the pond.\nContext only (do not cram all events into image): Ducks swim in the pond.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-04-reading-01",
+      "group": "book",
+      "id": "nana-village",
+      "page": 3,
+      "kind": "reading",
+      "index": 0,
+      "text": "The mangoes are yellow.",
+      "art": "images/playbook/additions/book-nana-village-04-reading-01.webp",
+      "alt": "The mangoes are yellow.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: Nana's home.\nPRIMARY SCENE TO ILLUSTRATE: The mangoes are yellow.\nContext only (do not cram all events into image): Mangoes on the tree.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-04-reading-02",
+      "group": "book",
+      "id": "nana-village",
+      "page": 3,
+      "kind": "reading",
+      "index": 1,
+      "text": "Tara eats a mango.",
+      "art": "images/playbook/additions/book-nana-village-04-reading-02.webp",
+      "alt": "Tara eats a mango.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: Nana's home.\nPRIMARY SCENE TO ILLUSTRATE: Tara eats a mango.\nContext only (do not cram all events into image): Mangoes on the tree.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-05-reading-01",
+      "group": "book",
+      "id": "nana-village",
+      "page": 4,
+      "kind": "reading",
+      "index": 0,
+      "text": "The cow eats grass.",
+      "art": "images/playbook/additions/book-nana-village-05-reading-01.webp",
+      "alt": "The cow eats grass.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: The cow eats grass.\nContext only (do not cram all events into image): A cow in the field.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-05-reading-02",
+      "group": "book",
+      "id": "nana-village",
+      "page": 4,
+      "kind": "reading",
+      "index": 1,
+      "text": "A bird flies in the sky.",
+      "art": "images/playbook/additions/book-nana-village-05-reading-02.webp",
+      "alt": "A bird flies in the sky.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: page 5.\nPRIMARY SCENE TO ILLUSTRATE: A bird flies in the sky.\nContext only (do not cram all events into image): A cow in the field.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-06-reading-01",
+      "group": "book",
+      "id": "nana-village",
+      "page": 5,
+      "kind": "reading",
+      "index": 0,
+      "text": "The sky is red.",
+      "art": "images/playbook/additions/book-nana-village-06-reading-01.webp",
+      "alt": "The sky is red.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: The sky is red.\nContext only (do not cram all events into image): The sun sets.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    },
+    {
+      "key": "book-nana-village-06-reading-02",
+      "group": "book",
+      "id": "nana-village",
+      "page": 5,
+      "kind": "reading",
+      "index": 1,
+      "text": "Nana tells a story.",
+      "art": "images/playbook/additions/book-nana-village-06-reading-02.webp",
+      "alt": "Nana tells a story.",
+      "prompt": "Use case: illustration-story. Asset: LearnBangla illustrated reading. Collection: Nana's Village. Chapter: page 6.\nPRIMARY SCENE TO ILLUSTRATE: Nana tells a story.\nContext only (do not cram all events into image): The sun sets.\n\nWarm, expressive, child-friendly. Where a girl is mentioned, keep Tara consistent: Bengali girl about 7, brown skin, black hair in two braids, mustard yellow floral dress; mother cream floral sari, dark green blouse; father cream panjabi, dark hair and short beard; grandfather white beard, white kurta and checked lungi. Only include characters needed by the specific reading. A Rainy Day uses teal dress, red leggings and yellow rain boots.\nOne full-bleed landscape 3:2 illustration, 1536x1024. Detailed hand-painted gouache with tactile brushwork, natural proportions, luminous light, warm ochre, terracotta and teal, lush Bengali greenery. Match a polished illustrated Bengali reading collection. No text, lettering, numbers, speech bubbles, watermark, borders, collage or multiple panels. One clear focal scene, readable at phone size. Avoid generic clipart or emoji style."
+    }
+  ]
+}
