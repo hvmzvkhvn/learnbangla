@@ -5,6 +5,7 @@ alter table public.learner_state add column if not exists revision bigint not nu
 
 -- Writes must pass the revision check; reads remain owner-only through RLS.
 drop policy if exists learner_state_owner_all on public.learner_state;
+drop policy if exists learner_state_owner_read on public.learner_state;
 create policy learner_state_owner_read on public.learner_state for select to authenticated
 using (exists(select 1 from public.learners l where l.id = learner_id and l.owner = (select auth.uid())));
 revoke insert, update, delete on public.learner_state from authenticated, anon;
@@ -58,8 +59,11 @@ begin
 end; $$;
 -- Keep RLS on non-destructive operations, disallow bypassing the delete RPC.
 drop policy if exists learners_owner_all on public.learners;
+drop policy if exists learners_read on public.learners;
 create policy learners_read on public.learners for select to authenticated using(owner=(select auth.uid()));
+drop policy if exists learners_insert on public.learners;
 create policy learners_insert on public.learners for insert to authenticated with check(owner=(select auth.uid()));
+drop policy if exists learners_update on public.learners;
 create policy learners_update on public.learners for update to authenticated using(owner=(select auth.uid())) with check(owner=(select auth.uid()));
 revoke delete on public.learners from authenticated,anon;
 revoke all on function public.save_learner_state(uuid,jsonb,bigint,boolean),public.delete_my_learner(uuid),public.recent_password_login() from public,anon;
