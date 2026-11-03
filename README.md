@@ -144,7 +144,7 @@ Every Explore division card (13+) now also shows **What people eat**, **Nature &
 
 ### District stories (16–18 and 18+)
 
-A first batch of eight districts, one per division, each with eight chapters in `src/data/playbook/districts/`: Narayanganj, Bandarban, Sunamganj, Patuakhali, Kushtia, Bogura, Netrokona and Dinajpur. They use the same chapter shape as the division deep dives (narration, background paragraph, three Bangla lines), open from the Explore region sheet (**District story: …**) and the Playbook's history section, and show a text card until `public/images/playbook/districts/<district>-NN.webp` exists (`docs/long-story-art-plan.json` has the prompts). `tests/districts.test.mjs` checks the Bangla and romanisation; facts need a local read before wide release. Adding a district means writing `districts/<id>.js` and one line in `districts/index.js`.
+Sixteen districts so far, each with eight chapters in `src/data/playbook/districts/`. Batch 1 (one per division): Narayanganj, Bandarban, Sunamganj, Patuakhali, Kushtia, Bogura, Netrokona and Dinajpur. Batch 2: Cumilla, Rajshahi, Jashore, Tangail, Sylhet, Chattogram, Cox’s Bazar and Khulna. They use the same chapter shape as the division deep dives (narration, background paragraph, three Bangla lines), open from the Explore region sheet (**District story: …**) and the Playbook's history section, and show a text card until `public/images/playbook/districts/<district>-NN.webp` exists (`docs/long-story-art-plan.json` has the prompts). `tests/districts.test.mjs` checks the Bangla and romanisation; facts need a local read before wide release. Adding a district means writing `districts/<id>.js` and one line in `districts/index.js`.
 
 ## Super challenges
 

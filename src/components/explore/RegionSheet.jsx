@@ -77,11 +77,16 @@ export default function RegionSheet({ region: r, tier, ex, lessonId, onClose, on
           <Link to={`/playbook/division/${r.id}`} className="btn-secondary mt-2 w-full !py-3">
             <VisualText>📖</VisualText> Read the full story of {r.name}
           </Link>
-          {districtsOf(r.id).map((d) => (
-            <Link key={d.id} to={`/playbook/district/${d.id}`} className="btn-secondary mt-2 w-full !py-3">
-              <VisualText>📍</VisualText> District story: {d.name}
-            </Link>
-          ))}
+          {districtsOf(r.id).length > 0 && (
+            <div className="mt-3">
+              <p className="mb-1 text-xs font-bold uppercase tracking-wide text-muted"><VisualText>📍</VisualText> District stories</p>
+              <div className="flex flex-wrap gap-2">
+                {districtsOf(r.id).map((d) => (
+                  <Link key={d.id} to={`/playbook/district/${d.id}`} className="btn-secondary !px-4 !py-2 text-sm">{d.name}</Link>
+                ))}
+              </div>
+            </div>
+          )}
         </>)}
         <div className="mt-3">
           <BanglaLine s={r.intro} size="text-2xl" />
