@@ -15,7 +15,7 @@ const pages = [
 test('the artwork inventory matches the shipped paintings, with distinct images and descriptions', () => {
   const inventory = JSON.parse(readFileSync(new URL('../docs/long-story-art-plan.json', import.meta.url)))
   const availability = new Map(inventory.jobs.map(job => [job.relative, job.exists]))
-  assert.equal(pages.length, 680)
+  assert.equal(pages.length, 808)
   const paths = new Set(), hashes = new Set()
   for (const page of pages) {
     assert.match(page.art, /^images\/playbook\/(long|divisions|districts)\/.+\.webp$/)
