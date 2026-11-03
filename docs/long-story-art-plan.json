@@ -5,7 +5,7 @@
     {
       "id": "kabuliwala-01",
       "relative": "images/playbook/long/kabuliwala-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "1/50",
       "title": "A house in Calcutta",
@@ -14,7 +14,7 @@
     {
       "id": "kabuliwala-02",
       "relative": "images/playbook/long/kabuliwala-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "2/50",
       "title": "Mini, the chatterbox",
@@ -23,7 +23,7 @@
     {
       "id": "kabuliwala-03",
       "relative": "images/playbook/long/kabuliwala-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "3/50",
       "title": "The crow and the doorkeeper",
@@ -32,7 +32,7 @@
     {
       "id": "kabuliwala-04",
       "relative": "images/playbook/long/kabuliwala-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "4/50",
       "title": "Chapter seventeen",
@@ -41,7 +41,7 @@
     {
       "id": "kabuliwala-05",
       "relative": "images/playbook/long/kabuliwala-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "5/50",
       "title": "A voice at the window",
@@ -50,7 +50,7 @@
     {
       "id": "kabuliwala-06",
       "relative": "images/playbook/long/kabuliwala-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "6/50",
       "title": "What the bag might hold",
@@ -59,7 +59,7 @@
     {
       "id": "kabuliwala-07",
       "relative": "images/playbook/long/kabuliwala-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "7/50",
       "title": "The man at the door",
@@ -68,7 +68,7 @@
     {
       "id": "kabuliwala-08",
       "relative": "images/playbook/long/kabuliwala-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "8/50",
       "title": "Mini hides",
@@ -77,7 +77,7 @@
     {
       "id": "kabuliwala-09",
       "relative": "images/playbook/long/kabuliwala-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "9/50",
       "title": "Talk of faraway frontiers",
@@ -86,7 +86,7 @@
     {
       "id": "kabuliwala-10",
       "relative": "images/playbook/long/kabuliwala-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "10/50",
       "title": "Raisins and almonds",
@@ -95,7 +95,7 @@
     {
       "id": "kabuliwala-11",
       "relative": "images/playbook/long/kabuliwala-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "11/50",
       "title": "The bench by the door",
@@ -104,7 +104,7 @@
     {
       "id": "kabuliwala-12",
       "relative": "images/playbook/long/kabuliwala-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "12/50",
       "title": "“What is in your bag?”",
@@ -113,7 +113,7 @@
     {
       "id": "kabuliwala-13",
       "relative": "images/playbook/long/kabuliwala-13.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "13/50",
       "title": "An elephant in a bag",
@@ -122,7 +122,7 @@
     {
       "id": "kabuliwala-14",
       "relative": "images/playbook/long/kabuliwala-14.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "14/50",
       "title": "The father-in-law’s house",
@@ -131,7 +131,7 @@
     {
       "id": "kabuliwala-15",
       "relative": "images/playbook/long/kabuliwala-15.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "15/50",
       "title": "Autumn mornings",
@@ -140,7 +140,7 @@
     {
       "id": "kabuliwala-16",
       "relative": "images/playbook/long/kabuliwala-16.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "16/50",
       "title": "Kings and conquests",
@@ -149,7 +149,7 @@
     {
       "id": "kabuliwala-17",
       "relative": "images/playbook/long/kabuliwala-17.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "17/50",
       "title": "A picture of Kabul",
@@ -158,7 +158,7 @@
     {
       "id": "kabuliwala-18",
       "relative": "images/playbook/long/kabuliwala-18.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "18/50",
       "title": "A mother’s worry",
@@ -167,7 +167,7 @@
     {
       "id": "kabuliwala-19",
       "relative": "images/playbook/long/kabuliwala-19.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "19/50",
       "title": "Rahmat’s tenderness",
@@ -176,7 +176,7 @@
     {
       "id": "kabuliwala-20",
       "relative": "images/playbook/long/kabuliwala-20.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "20/50",
       "title": "A place in the day",
@@ -185,7 +185,7 @@
     {
       "id": "kabuliwala-21",
       "relative": "images/playbook/long/kabuliwala-21.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "21/50",
       "title": "A cold morning",
@@ -194,7 +194,7 @@
     {
       "id": "kabuliwala-22",
       "relative": "images/playbook/long/kabuliwala-22.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "22/50",
       "title": "Noise in the road",
@@ -203,7 +203,7 @@
     {
       "id": "kabuliwala-23",
       "relative": "images/playbook/long/kabuliwala-23.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "23/50",
       "title": "The bound man",
@@ -212,7 +212,7 @@
     {
       "id": "kabuliwala-24",
       "relative": "images/playbook/long/kabuliwala-24.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "24/50",
       "title": "At last, the father-in-law’s house",
@@ -221,7 +221,7 @@
     {
       "id": "kabuliwala-25",
       "relative": "images/playbook/long/kabuliwala-25.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "25/50",
       "title": "What had happened",
@@ -230,7 +230,7 @@
     {
       "id": "kabuliwala-26",
       "relative": "images/playbook/long/kabuliwala-26.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "26/50",
       "title": "The salaam",
@@ -239,7 +239,7 @@
     {
       "id": "kabuliwala-27",
       "relative": "images/playbook/long/kabuliwala-27.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "27/50",
       "title": "The sentence",
@@ -248,7 +248,7 @@
     {
       "id": "kabuliwala-28",
       "relative": "images/playbook/long/kabuliwala-28.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "28/50",
       "title": "Mini forgets",
@@ -257,7 +257,7 @@
     {
       "id": "kabuliwala-29",
       "relative": "images/playbook/long/kabuliwala-29.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "29/50",
       "title": "Two truths about one man",
@@ -266,7 +266,7 @@
     {
       "id": "kabuliwala-30",
       "relative": "images/playbook/long/kabuliwala-30.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "30/50",
       "title": "The seasons turn",
@@ -275,7 +275,7 @@
     {
       "id": "kabuliwala-31",
       "relative": "images/playbook/long/kabuliwala-31.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "31/50",
       "title": "A quiet girl",
@@ -284,7 +284,7 @@
     {
       "id": "kabuliwala-32",
       "relative": "images/playbook/long/kabuliwala-32.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "32/50",
       "title": "A match is made",
@@ -293,7 +293,7 @@
     {
       "id": "kabuliwala-33",
       "relative": "images/playbook/long/kabuliwala-33.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "33/50",
       "title": "The house prepares",
@@ -302,7 +302,7 @@
     {
       "id": "kabuliwala-34",
       "relative": "images/playbook/long/kabuliwala-34.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "34/50",
       "title": "The accounts",
@@ -311,7 +311,7 @@
     {
       "id": "kabuliwala-35",
       "relative": "images/playbook/long/kabuliwala-35.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "35/50",
       "title": "A morning like washed gold",
@@ -320,7 +320,7 @@
     {
       "id": "kabuliwala-36",
       "relative": "images/playbook/long/kabuliwala-36.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "36/50",
       "title": "The shehnai plays",
@@ -329,7 +329,7 @@
     {
       "id": "kabuliwala-37",
       "relative": "images/playbook/long/kabuliwala-37.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "37/50",
       "title": "Parting in the music",
@@ -338,7 +338,7 @@
     {
       "id": "kabuliwala-38",
       "relative": "images/playbook/long/kabuliwala-38.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "38/50",
       "title": "Tomorrow, the father-in-law’s house",
@@ -347,7 +347,7 @@
     {
       "id": "kabuliwala-39",
       "relative": "images/playbook/long/kabuliwala-39.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "39/50",
       "title": "A shadow at the door",
@@ -356,7 +356,7 @@
     {
       "id": "kabuliwala-40",
       "relative": "images/playbook/long/kabuliwala-40.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "40/50",
       "title": "“Do you not recognise me?”",
@@ -365,7 +365,7 @@
     {
       "id": "kabuliwala-41",
       "relative": "images/playbook/long/kabuliwala-41.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "41/50",
       "title": "“Not today, Rahmat”",
@@ -374,7 +374,7 @@
     {
       "id": "kabuliwala-42",
       "relative": "images/playbook/long/kabuliwala-42.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "42/50",
       "title": "He comes back",
@@ -383,7 +383,7 @@
     {
       "id": "kabuliwala-43",
       "relative": "images/playbook/long/kabuliwala-43.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "43/50",
       "title": "“Do not pay me, Babu”",
@@ -392,7 +392,7 @@
     {
       "id": "kabuliwala-44",
       "relative": "images/playbook/long/kabuliwala-44.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "44/50",
       "title": "The handprint",
@@ -401,7 +401,7 @@
     {
       "id": "kabuliwala-45",
       "relative": "images/playbook/long/kabuliwala-45.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "45/50",
       "title": "Two fathers",
@@ -410,7 +410,7 @@
     {
       "id": "kabuliwala-46",
       "relative": "images/playbook/long/kabuliwala-46.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "46/50",
       "title": "Mini in red silk",
@@ -419,7 +419,7 @@
     {
       "id": "kabuliwala-47",
       "relative": "images/playbook/long/kabuliwala-47.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "47/50",
       "title": "The old joke",
@@ -428,7 +428,7 @@
     {
       "id": "kabuliwala-48",
       "relative": "images/playbook/long/kabuliwala-48.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "48/50",
       "title": "“My own girl must have grown”",
@@ -437,7 +437,7 @@
     {
       "id": "kabuliwala-49",
       "relative": "images/playbook/long/kabuliwala-49.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "49/50",
       "title": "Go home, Rahmat",
@@ -446,7 +446,7 @@
     {
       "id": "kabuliwala-50",
       "relative": "images/playbook/long/kabuliwala-50.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kabuliwala",
       "slide": "50/50",
       "title": "The festival shines",
@@ -455,7 +455,7 @@
     {
       "id": "bhasha-andolon-01",
       "relative": "images/playbook/long/bhasha-andolon-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "1/50",
       "title": "A language older than borders",
@@ -464,7 +464,7 @@
     {
       "id": "bhasha-andolon-02",
       "relative": "images/playbook/long/bhasha-andolon-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "2/50",
       "title": "Two wings, one country",
@@ -473,7 +473,7 @@
     {
       "id": "bhasha-andolon-03",
       "relative": "images/playbook/long/bhasha-andolon-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "3/50",
       "title": "“Urdu alone”",
@@ -482,7 +482,7 @@
     {
       "id": "bhasha-andolon-04",
       "relative": "images/playbook/long/bhasha-andolon-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "4/50",
       "title": "A question in a booklet",
@@ -491,7 +491,7 @@
     {
       "id": "bhasha-andolon-05",
       "relative": "images/playbook/long/bhasha-andolon-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "5/50",
       "title": "Students on the campus",
@@ -500,7 +500,7 @@
     {
       "id": "bhasha-andolon-06",
       "relative": "images/playbook/long/bhasha-andolon-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "6/50",
       "title": "A voice in the Assembly",
@@ -509,7 +509,7 @@
     {
       "id": "bhasha-andolon-07",
       "relative": "images/playbook/long/bhasha-andolon-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "7/50",
       "title": "The strike of 11 March",
@@ -518,7 +518,7 @@
     {
       "id": "bhasha-andolon-08",
       "relative": "images/playbook/long/bhasha-andolon-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "8/50",
       "title": "An agreement is signed",
@@ -527,7 +527,7 @@
     {
       "id": "bhasha-andolon-09",
       "relative": "images/playbook/long/bhasha-andolon-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "9/50",
       "title": "Jinnah in Dhaka",
@@ -536,7 +536,7 @@
     {
       "id": "bhasha-andolon-10",
       "relative": "images/playbook/long/bhasha-andolon-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "10/50",
       "title": "“No! No!”",
@@ -545,7 +545,7 @@
     {
       "id": "bhasha-andolon-11",
       "relative": "images/playbook/long/bhasha-andolon-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "11/50",
       "title": "The founder is gone",
@@ -554,7 +554,7 @@
     {
       "id": "bhasha-andolon-12",
       "relative": "images/playbook/long/bhasha-andolon-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "12/50",
       "title": "Whose alphabet?",
@@ -563,7 +563,7 @@
     {
       "id": "bhasha-andolon-13",
       "relative": "images/playbook/long/bhasha-andolon-13.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "13/50",
       "title": "Coins, stamps and examinations",
@@ -572,7 +572,7 @@
     {
       "id": "bhasha-andolon-14",
       "relative": "images/playbook/long/bhasha-andolon-14.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "14/50",
       "title": "Writers keep writing",
@@ -581,7 +581,7 @@
     {
       "id": "bhasha-andolon-15",
       "relative": "images/playbook/long/bhasha-andolon-15.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "15/50",
       "title": "The Awami Muslim League",
@@ -590,7 +590,7 @@
     {
       "id": "bhasha-andolon-16",
       "relative": "images/playbook/long/bhasha-andolon-16.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "16/50",
       "title": "Prisons and patience",
@@ -599,7 +599,7 @@
     {
       "id": "bhasha-andolon-17",
       "relative": "images/playbook/long/bhasha-andolon-17.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "17/50",
       "title": "A new Prime Minister",
@@ -608,7 +608,7 @@
     {
       "id": "bhasha-andolon-18",
       "relative": "images/playbook/long/bhasha-andolon-18.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "18/50",
       "title": "27 January 1952",
@@ -617,7 +617,7 @@
     {
       "id": "bhasha-andolon-19",
       "relative": "images/playbook/long/bhasha-andolon-19.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "19/50",
       "title": "Calling the committee",
@@ -626,7 +626,7 @@
     {
       "id": "bhasha-andolon-20",
       "relative": "images/playbook/long/bhasha-andolon-20.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "20/50",
       "title": "The countdown begins",
@@ -635,7 +635,7 @@
     {
       "id": "bhasha-andolon-21",
       "relative": "images/playbook/long/bhasha-andolon-21.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "21/50",
       "title": "The ban",
@@ -644,7 +644,7 @@
     {
       "id": "bhasha-andolon-22",
       "relative": "images/playbook/long/bhasha-andolon-22.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "22/50",
       "title": "A night of decision",
@@ -653,7 +653,7 @@
     {
       "id": "bhasha-andolon-23",
       "relative": "images/playbook/long/bhasha-andolon-23.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "23/50",
       "title": "Morning at the Amtala",
@@ -662,7 +662,7 @@
     {
       "id": "bhasha-andolon-24",
       "relative": "images/playbook/long/bhasha-andolon-24.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "24/50",
       "title": "Groups of ten",
@@ -671,7 +671,7 @@
     {
       "id": "bhasha-andolon-25",
       "relative": "images/playbook/long/bhasha-andolon-25.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "25/50",
       "title": "Tear gas and batons",
@@ -680,7 +680,7 @@
     {
       "id": "bhasha-andolon-26",
       "relative": "images/playbook/long/bhasha-andolon-26.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "26/50",
       "title": "The firing",
@@ -689,7 +689,7 @@
     {
       "id": "bhasha-andolon-27",
       "relative": "images/playbook/long/bhasha-andolon-27.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "27/50",
       "title": "Names to remember",
@@ -698,7 +698,7 @@
     {
       "id": "bhasha-andolon-28",
       "relative": "images/playbook/long/bhasha-andolon-28.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "28/50",
       "title": "The hospital",
@@ -707,7 +707,7 @@
     {
       "id": "bhasha-andolon-29",
       "relative": "images/playbook/long/bhasha-andolon-29.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "29/50",
       "title": "In the Assembly",
@@ -716,7 +716,7 @@
     {
       "id": "bhasha-andolon-30",
       "relative": "images/playbook/long/bhasha-andolon-30.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "30/50",
       "title": "The city mourns",
@@ -725,7 +725,7 @@
     {
       "id": "bhasha-andolon-31",
       "relative": "images/playbook/long/bhasha-andolon-31.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "31/50",
       "title": "A monument in one night",
@@ -734,7 +734,7 @@
     {
       "id": "bhasha-andolon-32",
       "relative": "images/playbook/long/bhasha-andolon-32.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "32/50",
       "title": "Torn down",
@@ -743,7 +743,7 @@
     {
       "id": "bhasha-andolon-33",
       "relative": "images/playbook/long/bhasha-andolon-33.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "33/50",
       "title": "Women of the movement",
@@ -752,7 +752,7 @@
     {
       "id": "bhasha-andolon-34",
       "relative": "images/playbook/long/bhasha-andolon-34.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "34/50",
       "title": "A song from grief",
@@ -761,7 +761,7 @@
     {
       "id": "bhasha-andolon-35",
       "relative": "images/playbook/long/bhasha-andolon-35.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "35/50",
       "title": "Poems that could not be silenced",
@@ -770,7 +770,7 @@
     {
       "id": "bhasha-andolon-36",
       "relative": "images/playbook/long/bhasha-andolon-36.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "36/50",
       "title": "The first anniversary",
@@ -779,7 +779,7 @@
     {
       "id": "bhasha-andolon-37",
       "relative": "images/playbook/long/bhasha-andolon-37.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "37/50",
       "title": "The United Front",
@@ -788,7 +788,7 @@
     {
       "id": "bhasha-andolon-38",
       "relative": "images/playbook/long/bhasha-andolon-38.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "38/50",
       "title": "A landslide",
@@ -797,7 +797,7 @@
     {
       "id": "bhasha-andolon-39",
       "relative": "images/playbook/long/bhasha-andolon-39.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "39/50",
       "title": "Recognition at last",
@@ -806,7 +806,7 @@
     {
       "id": "bhasha-andolon-40",
       "relative": "images/playbook/long/bhasha-andolon-40.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "40/50",
       "title": "A monument that stays",
@@ -815,7 +815,7 @@
     {
       "id": "bhasha-andolon-41",
       "relative": "images/playbook/long/bhasha-andolon-41.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "41/50",
       "title": "More than a language",
@@ -824,7 +824,7 @@
     {
       "id": "bhasha-andolon-42",
       "relative": "images/playbook/long/bhasha-andolon-42.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "42/50",
       "title": "The six points",
@@ -833,7 +833,7 @@
     {
       "id": "bhasha-andolon-43",
       "relative": "images/playbook/long/bhasha-andolon-43.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "43/50",
       "title": "1971",
@@ -842,16 +842,16 @@
     {
       "id": "bhasha-andolon-44",
       "relative": "images/playbook/long/bhasha-andolon-44.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "44/50",
       "title": "Bangla in the constitution",
-      "prompt": "Illustration-story, \"The Language Movement\", slide 44 of 50, \"Bangla in the constitution\". A hall in Dhaka in 1972: the new constitution being signed by a row of members at long tables, a tricolour flag behind them, hands holding pens. Characters (keep them identical on every slide): Historical scenes of Dhaka and East Bengal, 1947–1971, painted with dignity and without graphic violence (never show wounds or blood). Students: young Bengali men in plain white or checked shirts and trousers or lungis, young women in simple cotton saris with braids. Older leaders: white kurtas, waistcoats, sherwanis and caps. Police in khaki with long sticks. Settings: Dhaka University lawns and the old mango tree, Curzon Hall, Dhaka Medical College, narrow streets of Old Dhaka, the Shaheed Minar (tall central white column flanked by shorter ones before a red sun). Mood: earnest, solemn, with warm light. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration-story, \"The Language Movement\", slide 44 of 50, \"Bangla in the constitution\". A hall in Dhaka in 1972: the new constitution being signed by a row of members at long tables, the Bangladesh flag behind them: a plain red disc on a bottle-green rectangle, no stripes, no map, hands holding pens. Characters (keep them identical on every slide): Historical scenes of Dhaka and East Bengal, 1947–1971, painted with dignity and without graphic violence (never show wounds or blood). Students: young Bengali men in plain white or checked shirts and trousers or lungis, young women in simple cotton saris with braids. Older leaders: white kurtas, waistcoats, sherwanis and caps. Police in khaki with long sticks. Settings: Dhaka University lawns and the old mango tree, Curzon Hall, Dhaka Medical College, narrow streets of Old Dhaka, the Shaheed Minar (tall central white column flanked by shorter ones before a red sun). Mood: earnest, solemn, with warm light. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "bhasha-andolon-45",
       "relative": "images/playbook/long/bhasha-andolon-45.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "45/50",
       "title": "The Book Fair",
@@ -860,7 +860,7 @@
     {
       "id": "bhasha-andolon-46",
       "relative": "images/playbook/long/bhasha-andolon-46.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "46/50",
       "title": "Alpona on the road",
@@ -869,7 +869,7 @@
     {
       "id": "bhasha-andolon-47",
       "relative": "images/playbook/long/bhasha-andolon-47.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "47/50",
       "title": "A letter from Vancouver",
@@ -878,7 +878,7 @@
     {
       "id": "bhasha-andolon-48",
       "relative": "images/playbook/long/bhasha-andolon-48.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "48/50",
       "title": "The world agrees",
@@ -887,7 +887,7 @@
     {
       "id": "bhasha-andolon-49",
       "relative": "images/playbook/long/bhasha-andolon-49.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "49/50",
       "title": "What a mother tongue is",
@@ -896,7 +896,7 @@
     {
       "id": "bhasha-andolon-50",
       "relative": "images/playbook/long/bhasha-andolon-50.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Language Movement",
       "slide": "50/50",
       "title": "Every Bangla word you learn",
@@ -905,7 +905,7 @@
     {
       "id": "begum-rokeya-01",
       "relative": "images/playbook/long/begum-rokeya-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "1/50",
       "title": "Pairaband",
@@ -914,7 +914,7 @@
     {
       "id": "begum-rokeya-02",
       "relative": "images/playbook/long/begum-rokeya-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "2/50",
       "title": "The house with high walls",
@@ -923,7 +923,7 @@
     {
       "id": "begum-rokeya-03",
       "relative": "images/playbook/long/begum-rokeya-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "3/50",
       "title": "A family of many",
@@ -932,7 +932,7 @@
     {
       "id": "begum-rokeya-04",
       "relative": "images/playbook/long/begum-rokeya-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "4/50",
       "title": "Veils inside the home",
@@ -941,7 +941,7 @@
     {
       "id": "begum-rokeya-05",
       "relative": "images/playbook/long/begum-rokeya-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "5/50",
       "title": "Which languages?",
@@ -950,7 +950,7 @@
     {
       "id": "begum-rokeya-06",
       "relative": "images/playbook/long/begum-rokeya-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "6/50",
       "title": "Brother Ibrahim",
@@ -959,7 +959,7 @@
     {
       "id": "begum-rokeya-07",
       "relative": "images/playbook/long/begum-rokeya-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "7/50",
       "title": "Sister Karimunnesa",
@@ -968,7 +968,7 @@
     {
       "id": "begum-rokeya-08",
       "relative": "images/playbook/long/begum-rokeya-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "8/50",
       "title": "The lamp at night",
@@ -977,7 +977,7 @@
     {
       "id": "begum-rokeya-09",
       "relative": "images/playbook/long/begum-rokeya-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "9/50",
       "title": "What she saw outside the walls",
@@ -986,7 +986,7 @@
     {
       "id": "begum-rokeya-10",
       "relative": "images/playbook/long/begum-rokeya-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "10/50",
       "title": "Marriage at sixteen",
@@ -995,7 +995,7 @@
     {
       "id": "begum-rokeya-11",
       "relative": "images/playbook/long/begum-rokeya-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "11/50",
       "title": "The long journey west",
@@ -1004,7 +1004,7 @@
     {
       "id": "begum-rokeya-12",
       "relative": "images/playbook/long/begum-rokeya-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "12/50",
       "title": "A city on the Ganges",
@@ -1013,7 +1013,7 @@
     {
       "id": "begum-rokeya-13",
       "relative": "images/playbook/long/begum-rokeya-13.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "13/50",
       "title": "The deputy magistrate",
@@ -1022,7 +1022,7 @@
     {
       "id": "begum-rokeya-14",
       "relative": "images/playbook/long/begum-rokeya-14.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "14/50",
       "title": "Books in the house",
@@ -1031,7 +1031,7 @@
     {
       "id": "begum-rokeya-15",
       "relative": "images/playbook/long/begum-rokeya-15.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "15/50",
       "title": "First printed words",
@@ -1040,7 +1040,7 @@
     {
       "id": "begum-rokeya-16",
       "relative": "images/playbook/long/begum-rokeya-16.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "16/50",
       "title": "“The Downfall of Women”",
@@ -1049,7 +1049,7 @@
     {
       "id": "begum-rokeya-17",
       "relative": "images/playbook/long/begum-rokeya-17.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "17/50",
       "title": "Two small daughters",
@@ -1058,7 +1058,7 @@
     {
       "id": "begum-rokeya-18",
       "relative": "images/playbook/long/begum-rokeya-18.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "18/50",
       "title": "A dream on paper",
@@ -1067,7 +1067,7 @@
     {
       "id": "begum-rokeya-19",
       "relative": "images/playbook/long/begum-rokeya-19.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "19/50",
       "title": "Inside Ladyland",
@@ -1076,7 +1076,7 @@
     {
       "id": "begum-rokeya-20",
       "relative": "images/playbook/long/begum-rokeya-20.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "20/50",
       "title": "The science of Ladyland",
@@ -1085,7 +1085,7 @@
     {
       "id": "begum-rokeya-21",
       "relative": "images/playbook/long/begum-rokeya-21.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "21/50",
       "title": "A promise at the bedside",
@@ -1094,7 +1094,7 @@
     {
       "id": "begum-rokeya-22",
       "relative": "images/playbook/long/begum-rokeya-22.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "22/50",
       "title": "Five girls",
@@ -1103,7 +1103,7 @@
     {
       "id": "begum-rokeya-23",
       "relative": "images/playbook/long/begum-rokeya-23.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "23/50",
       "title": "Trouble with the family",
@@ -1112,7 +1112,7 @@
     {
       "id": "begum-rokeya-24",
       "relative": "images/playbook/long/begum-rokeya-24.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "24/50",
       "title": "To Calcutta",
@@ -1121,7 +1121,7 @@
     {
       "id": "begum-rokeya-25",
       "relative": "images/playbook/long/begum-rokeya-25.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "25/50",
       "title": "Eight pupils",
@@ -1130,7 +1130,7 @@
     {
       "id": "begum-rokeya-26",
       "relative": "images/playbook/long/begum-rokeya-26.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "26/50",
       "title": "Knocking on doors",
@@ -1139,7 +1139,7 @@
     {
       "id": "begum-rokeya-27",
       "relative": "images/playbook/long/begum-rokeya-27.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "27/50",
       "title": "The covered carriages",
@@ -1148,7 +1148,7 @@
     {
       "id": "begum-rokeya-28",
       "relative": "images/playbook/long/begum-rokeya-28.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "28/50",
       "title": "What the girls learned",
@@ -1157,16 +1157,16 @@
     {
       "id": "begum-rokeya-29",
       "relative": "images/playbook/long/begum-rokeya-29.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "29/50",
       "title": "A long day",
-      "prompt": "Illustration-story, \"Begum Rokeya\", slide 29 of 50, \"A long day\". A split scene of one woman’s day: dawn teaching on a mat, noon with account books and visitors at a desk, night writing by a lamp, the same plain white sari in each. Characters (keep them identical on every slide): Rokeya Sakhawat Hossain (1880–1932): from a small girl with a long dark braid and a plain cotton frock (childhood, 1880s), to a young woman in a modest sari with a covered head (marriage, 1896), to a widow in a plain white sari with a calm, intelligent face and round spectacles (Calcutta, 1909–1932). Her brother Ibrahim Saber: a young man in a kurta and cap. Her husband Syed Sakhawat Hossain: a kindly man in his forties in a dark coat and a round cap, a trim moustache. Settings: a landlord’s courtyard house with high walls in Pairaband, a bungalow in Bhagalpur on the Ganges, a modest two-room school house in Calcutta, curtained horse-drawn carriages, Dhaka monuments today. Mood: gentle, dignified, warm lamplight. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration-story, \"Begum Rokeya\", slide 29 of 50, \"A long day\". Rokeya in a plain white sari working by a lamp late in the evening, with lesson books, account books and correspondence spread across her desk, a quiet classroom visible through the open door. Characters (keep them identical on every slide): Rokeya Sakhawat Hossain (1880–1932): from a small girl with a long dark braid and a plain cotton frock (childhood, 1880s), to a young woman in a modest sari with a covered head (marriage, 1896), to a widow in a plain white sari with a calm, intelligent face and round spectacles (Calcutta, 1909–1932). Her brother Ibrahim Saber: a young man in a kurta and cap. Her husband Syed Sakhawat Hossain: a kindly man in his forties in a dark coat and a round cap, a trim moustache. Settings: a landlord’s courtyard house with high walls in Pairaband, a bungalow in Bhagalpur on the Ganges, a modest two-room school house in Calcutta, curtained horse-drawn carriages, Dhaka monuments today. Mood: gentle, dignified, warm lamplight. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "begum-rokeya-30",
       "relative": "images/playbook/long/begum-rokeya-30.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "30/50",
       "title": "A school that grows",
@@ -1175,7 +1175,7 @@
     {
       "id": "begum-rokeya-31",
       "relative": "images/playbook/long/begum-rokeya-31.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "31/50",
       "title": "Women who meet",
@@ -1184,7 +1184,7 @@
     {
       "id": "begum-rokeya-32",
       "relative": "images/playbook/long/begum-rokeya-32.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "32/50",
       "title": "Helping hands",
@@ -1193,7 +1193,7 @@
     {
       "id": "begum-rokeya-33",
       "relative": "images/playbook/long/begum-rokeya-33.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "33/50",
       "title": "Motichur",
@@ -1202,7 +1202,7 @@
     {
       "id": "begum-rokeya-34",
       "relative": "images/playbook/long/begum-rokeya-34.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "34/50",
       "title": "Two wheels of a cart",
@@ -1211,7 +1211,7 @@
     {
       "id": "begum-rokeya-35",
       "relative": "images/playbook/long/begum-rokeya-35.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "35/50",
       "title": "A refuge called Tarini Bhaban",
@@ -1220,7 +1220,7 @@
     {
       "id": "begum-rokeya-36",
       "relative": "images/playbook/long/begum-rokeya-36.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "36/50",
       "title": "The Secluded Women",
@@ -1229,7 +1229,7 @@
     {
       "id": "begum-rokeya-37",
       "relative": "images/playbook/long/begum-rokeya-37.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "37/50",
       "title": "Laughter as a weapon",
@@ -1238,7 +1238,7 @@
     {
       "id": "begum-rokeya-38",
       "relative": "images/playbook/long/begum-rokeya-38.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "38/50",
       "title": "Friends of every faith",
@@ -1247,7 +1247,7 @@
     {
       "id": "begum-rokeya-39",
       "relative": "images/playbook/long/begum-rokeya-39.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "39/50",
       "title": "A lineage of reformers",
@@ -1256,7 +1256,7 @@
     {
       "id": "begum-rokeya-40",
       "relative": "images/playbook/long/begum-rokeya-40.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "40/50",
       "title": "Criticism and strain",
@@ -1265,7 +1265,7 @@
     {
       "id": "begum-rokeya-41",
       "relative": "images/playbook/long/begum-rokeya-41.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "41/50",
       "title": "Tired but working",
@@ -1274,7 +1274,7 @@
     {
       "id": "begum-rokeya-42",
       "relative": "images/playbook/long/begum-rokeya-42.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "42/50",
       "title": "The last night",
@@ -1283,7 +1283,7 @@
     {
       "id": "begum-rokeya-43",
       "relative": "images/playbook/long/begum-rokeya-43.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "43/50",
       "title": "A school carries on",
@@ -1292,7 +1292,7 @@
     {
       "id": "begum-rokeya-44",
       "relative": "images/playbook/long/begum-rokeya-44.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "44/50",
       "title": "The school today",
@@ -1301,7 +1301,7 @@
     {
       "id": "begum-rokeya-45",
       "relative": "images/playbook/long/begum-rokeya-45.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "45/50",
       "title": "Rokeya Day",
@@ -1310,16 +1310,16 @@
     {
       "id": "begum-rokeya-46",
       "relative": "images/playbook/long/begum-rokeya-46.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "46/50",
       "title": "Her name on places",
-      "prompt": "Illustration-story, \"Begum Rokeya\", slide 46 of 50, \"Her name on places\". A collage-like painting of three places: a university hall with a long arched facade, a university campus gate in a rural town, and a small village museum beside a pond, all under one sky. Characters (keep them identical on every slide): Rokeya Sakhawat Hossain (1880–1932): from a small girl with a long dark braid and a plain cotton frock (childhood, 1880s), to a young woman in a modest sari with a covered head (marriage, 1896), to a widow in a plain white sari with a calm, intelligent face and round spectacles (Calcutta, 1909–1932). Her brother Ibrahim Saber: a young man in a kurta and cap. Her husband Syed Sakhawat Hossain: a kindly man in his forties in a dark coat and a round cap, a trim moustache. Settings: a landlord’s courtyard house with high walls in Pairaband, a bungalow in Bhagalpur on the Ganges, a modest two-room school house in Calcutta, curtained horse-drawn carriages, Dhaka monuments today. Mood: gentle, dignified, warm lamplight. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration-story, \"Begum Rokeya\", slide 46 of 50, \"Her name on places\". A small village museum dedicated to Rokeya beside a pond in Pairaband, with young visitors approaching the entrance and a dignified portrait display visible inside. Characters (keep them identical on every slide): Rokeya Sakhawat Hossain (1880–1932): from a small girl with a long dark braid and a plain cotton frock (childhood, 1880s), to a young woman in a modest sari with a covered head (marriage, 1896), to a widow in a plain white sari with a calm, intelligent face and round spectacles (Calcutta, 1909–1932). Her brother Ibrahim Saber: a young man in a kurta and cap. Her husband Syed Sakhawat Hossain: a kindly man in his forties in a dark coat and a round cap, a trim moustache. Settings: a landlord’s courtyard house with high walls in Pairaband, a bungalow in Bhagalpur on the Ganges, a modest two-room school house in Calcutta, curtained horse-drawn carriages, Dhaka monuments today. Mood: gentle, dignified, warm lamplight. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "begum-rokeya-47",
       "relative": "images/playbook/long/begum-rokeya-47.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "47/50",
       "title": "More girls in school",
@@ -1328,16 +1328,16 @@
     {
       "id": "begum-rokeya-48",
       "relative": "images/playbook/long/begum-rokeya-48.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "48/50",
       "title": "Women at work",
-      "prompt": "Illustration-story, \"Begum Rokeya\", slide 48 of 50, \"Women at work\". A bright garment factory floor with rows of women at sewing machines in colourful clothes, next to a small shop run by a woman and a laptop with a young woman at a village tech centre. Characters (keep them identical on every slide): Rokeya Sakhawat Hossain (1880–1932): from a small girl with a long dark braid and a plain cotton frock (childhood, 1880s), to a young woman in a modest sari with a covered head (marriage, 1896), to a widow in a plain white sari with a calm, intelligent face and round spectacles (Calcutta, 1909–1932). Her brother Ibrahim Saber: a young man in a kurta and cap. Her husband Syed Sakhawat Hossain: a kindly man in his forties in a dark coat and a round cap, a trim moustache. Settings: a landlord’s courtyard house with high walls in Pairaband, a bungalow in Bhagalpur on the Ganges, a modest two-room school house in Calcutta, curtained horse-drawn carriages, Dhaka monuments today. Mood: gentle, dignified, warm lamplight. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration-story, \"Begum Rokeya\", slide 48 of 50, \"Women at work\". A bright garment workshop with women at sewing machines in colourful clothes, and a woman manager handling orders on a laptop at a nearby desk. Characters (keep them identical on every slide): Rokeya Sakhawat Hossain (1880–1932): from a small girl with a long dark braid and a plain cotton frock (childhood, 1880s), to a young woman in a modest sari with a covered head (marriage, 1896), to a widow in a plain white sari with a calm, intelligent face and round spectacles (Calcutta, 1909–1932). Her brother Ibrahim Saber: a young man in a kurta and cap. Her husband Syed Sakhawat Hossain: a kindly man in his forties in a dark coat and a round cap, a trim moustache. Settings: a landlord’s courtyard house with high walls in Pairaband, a bungalow in Bhagalpur on the Ganges, a modest two-room school house in Calcutta, curtained horse-drawn carriages, Dhaka monuments today. Mood: gentle, dignified, warm lamplight. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "begum-rokeya-49",
       "relative": "images/playbook/long/begum-rokeya-49.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "49/50",
       "title": "The work that is left",
@@ -1346,7 +1346,7 @@
     {
       "id": "begum-rokeya-50",
       "relative": "images/playbook/long/begum-rokeya-50.webp",
-      "exists": false,
+      "exists": true,
       "story": "Begum Rokeya",
       "slide": "50/50",
       "title": "A letter to a young reader",
@@ -1355,7 +1355,7 @@
     {
       "id": "sundarbans-honey-01",
       "relative": "images/playbook/long/sundarbans-honey-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "1/50",
       "title": "Where land meets the sea",
@@ -1364,7 +1364,7 @@
     {
       "id": "sundarbans-honey-02",
       "relative": "images/playbook/long/sundarbans-honey-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "2/50",
       "title": "Habib’s village",
@@ -1373,7 +1373,7 @@
     {
       "id": "sundarbans-honey-03",
       "relative": "images/playbook/long/sundarbans-honey-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "3/50",
       "title": "The tide at the door",
@@ -1382,7 +1382,7 @@
     {
       "id": "sundarbans-honey-04",
       "relative": "images/playbook/long/sundarbans-honey-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "4/50",
       "title": "Father, the honey-gatherer",
@@ -1391,7 +1391,7 @@
     {
       "id": "sundarbans-honey-05",
       "relative": "images/playbook/long/sundarbans-honey-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "5/50",
       "title": "“Take me with you”",
@@ -1400,7 +1400,7 @@
     {
       "id": "sundarbans-honey-06",
       "relative": "images/playbook/long/sundarbans-honey-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "6/50",
       "title": "Mother’s fear",
@@ -1409,7 +1409,7 @@
     {
       "id": "sundarbans-honey-07",
       "relative": "images/playbook/long/sundarbans-honey-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "7/50",
       "title": "The crew",
@@ -1418,7 +1418,7 @@
     {
       "id": "sundarbans-honey-08",
       "relative": "images/playbook/long/sundarbans-honey-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "8/50",
       "title": "The permit",
@@ -1427,7 +1427,7 @@
     {
       "id": "sundarbans-honey-09",
       "relative": "images/playbook/long/sundarbans-honey-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "9/50",
       "title": "Packing the boat",
@@ -1436,7 +1436,7 @@
     {
       "id": "sundarbans-honey-10",
       "relative": "images/playbook/long/sundarbans-honey-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "10/50",
       "title": "The night before",
@@ -1445,7 +1445,7 @@
     {
       "id": "sundarbans-honey-11",
       "relative": "images/playbook/long/sundarbans-honey-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "11/50",
       "title": "Casting off",
@@ -1454,7 +1454,7 @@
     {
       "id": "sundarbans-honey-12",
       "relative": "images/playbook/long/sundarbans-honey-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "12/50",
       "title": "Rivers like roads",
@@ -1463,7 +1463,7 @@
     {
       "id": "sundarbans-honey-13",
       "relative": "images/playbook/long/sundarbans-honey-13.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "13/50",
       "title": "The first night on the water",
@@ -1472,7 +1472,7 @@
     {
       "id": "sundarbans-honey-14",
       "relative": "images/playbook/long/sundarbans-honey-14.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "14/50",
       "title": "Roots like spears",
@@ -1481,7 +1481,7 @@
     {
       "id": "sundarbans-honey-15",
       "relative": "images/playbook/long/sundarbans-honey-15.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "15/50",
       "title": "The trees of the tide",
@@ -1490,7 +1490,7 @@
     {
       "id": "sundarbans-honey-16",
       "relative": "images/playbook/long/sundarbans-honey-16.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "16/50",
       "title": "Salt and survival",
@@ -1499,7 +1499,7 @@
     {
       "id": "sundarbans-honey-17",
       "relative": "images/playbook/long/sundarbans-honey-17.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "17/50",
       "title": "Deer on the bank",
@@ -1508,7 +1508,7 @@
     {
       "id": "sundarbans-honey-18",
       "relative": "images/playbook/long/sundarbans-honey-18.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "18/50",
       "title": "Crocodiles and dolphins",
@@ -1517,7 +1517,7 @@
     {
       "id": "sundarbans-honey-19",
       "relative": "images/playbook/long/sundarbans-honey-19.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "19/50",
       "title": "A mark in the mud",
@@ -1526,7 +1526,7 @@
     {
       "id": "sundarbans-honey-20",
       "relative": "images/playbook/long/sundarbans-honey-20.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "20/50",
       "title": "Rules for the forest",
@@ -1535,7 +1535,7 @@
     {
       "id": "sundarbans-honey-21",
       "relative": "images/playbook/long/sundarbans-honey-21.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "21/50",
       "title": "A small shrine",
@@ -1544,7 +1544,7 @@
     {
       "id": "sundarbans-honey-22",
       "relative": "images/playbook/long/sundarbans-honey-22.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "22/50",
       "title": "The tale of Bonbibi",
@@ -1553,7 +1553,7 @@
     {
       "id": "sundarbans-honey-23",
       "relative": "images/playbook/long/sundarbans-honey-23.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "23/50",
       "title": "Dokkhin Rai, the tiger lord",
@@ -1562,7 +1562,7 @@
     {
       "id": "sundarbans-honey-24",
       "relative": "images/playbook/long/sundarbans-honey-24.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "24/50",
       "title": "Dukhey and the greedy uncle",
@@ -1571,7 +1571,7 @@
     {
       "id": "sundarbans-honey-25",
       "relative": "images/playbook/long/sundarbans-honey-25.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "25/50",
       "title": "Mother of the forest",
@@ -1580,7 +1580,7 @@
     {
       "id": "sundarbans-honey-26",
       "relative": "images/playbook/long/sundarbans-honey-26.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "26/50",
       "title": "Take only what you need",
@@ -1589,7 +1589,7 @@
     {
       "id": "sundarbans-honey-27",
       "relative": "images/playbook/long/sundarbans-honey-27.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "27/50",
       "title": "One forest, two faiths",
@@ -1598,7 +1598,7 @@
     {
       "id": "sundarbans-honey-28",
       "relative": "images/playbook/long/sundarbans-honey-28.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "28/50",
       "title": "Life on the boat",
@@ -1607,7 +1607,7 @@
     {
       "id": "sundarbans-honey-29",
       "relative": "images/playbook/long/sundarbans-honey-29.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "29/50",
       "title": "A drop of fresh water",
@@ -1616,7 +1616,7 @@
     {
       "id": "sundarbans-honey-30",
       "relative": "images/playbook/long/sundarbans-honey-30.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "30/50",
       "title": "Kalbaishakhi",
@@ -1625,7 +1625,7 @@
     {
       "id": "sundarbans-honey-31",
       "relative": "images/playbook/long/sundarbans-honey-31.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "31/50",
       "title": "Looking up",
@@ -1634,7 +1634,7 @@
     {
       "id": "sundarbans-honey-32",
       "relative": "images/playbook/long/sundarbans-honey-32.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "32/50",
       "title": "Reading the bees",
@@ -1643,7 +1643,7 @@
     {
       "id": "sundarbans-honey-33",
       "relative": "images/playbook/long/sundarbans-honey-33.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "33/50",
       "title": "Smoke to calm the bees",
@@ -1652,7 +1652,7 @@
     {
       "id": "sundarbans-honey-34",
       "relative": "images/playbook/long/sundarbans-honey-34.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "34/50",
       "title": "Up the tree",
@@ -1661,7 +1661,7 @@
     {
       "id": "sundarbans-honey-35",
       "relative": "images/playbook/long/sundarbans-honey-35.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "35/50",
       "title": "Cutting the comb",
@@ -1670,7 +1670,7 @@
     {
       "id": "sundarbans-honey-36",
       "relative": "images/playbook/long/sundarbans-honey-36.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "36/50",
       "title": "A sting",
@@ -1679,7 +1679,7 @@
     {
       "id": "sundarbans-honey-37",
       "relative": "images/playbook/long/sundarbans-honey-37.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "37/50",
       "title": "Squeezing the honey",
@@ -1688,7 +1688,7 @@
     {
       "id": "sundarbans-honey-38",
       "relative": "images/playbook/long/sundarbans-honey-38.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "38/50",
       "title": "Wax and sharing",
@@ -1697,7 +1697,7 @@
     {
       "id": "sundarbans-honey-39",
       "relative": "images/playbook/long/sundarbans-honey-39.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "39/50",
       "title": "The roar in the dark",
@@ -1706,7 +1706,7 @@
     {
       "id": "sundarbans-honey-40",
       "relative": "images/playbook/long/sundarbans-honey-40.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "40/50",
       "title": "The tiger at the creek",
@@ -1715,7 +1715,7 @@
     {
       "id": "sundarbans-honey-41",
       "relative": "images/playbook/long/sundarbans-honey-41.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "41/50",
       "title": "Turning for home",
@@ -1724,7 +1724,7 @@
     {
       "id": "sundarbans-honey-42",
       "relative": "images/playbook/long/sundarbans-honey-42.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "42/50",
       "title": "Home on the tide",
@@ -1733,7 +1733,7 @@
     {
       "id": "sundarbans-honey-43",
       "relative": "images/playbook/long/sundarbans-honey-43.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "43/50",
       "title": "At the honey market",
@@ -1742,7 +1742,7 @@
     {
       "id": "sundarbans-honey-44",
       "relative": "images/playbook/long/sundarbans-honey-44.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "44/50",
       "title": "What the honey bought",
@@ -1751,7 +1751,7 @@
     {
       "id": "sundarbans-honey-45",
       "relative": "images/playbook/long/sundarbans-honey-45.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "45/50",
       "title": "A shield of roots",
@@ -1760,7 +1760,7 @@
     {
       "id": "sundarbans-honey-46",
       "relative": "images/playbook/long/sundarbans-honey-46.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "46/50",
       "title": "A changing coast",
@@ -1769,7 +1769,7 @@
     {
       "id": "sundarbans-honey-47",
       "relative": "images/playbook/long/sundarbans-honey-47.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "47/50",
       "title": "Counting tigers",
@@ -1778,7 +1778,7 @@
     {
       "id": "sundarbans-honey-48",
       "relative": "images/playbook/long/sundarbans-honey-48.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "48/50",
       "title": "Neighbours of the tiger",
@@ -1787,7 +1787,7 @@
     {
       "id": "sundarbans-honey-49",
       "relative": "images/playbook/long/sundarbans-honey-49.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "49/50",
       "title": "Habib, years later",
@@ -1796,7 +1796,7 @@
     {
       "id": "sundarbans-honey-50",
       "relative": "images/playbook/long/sundarbans-honey-50.webp",
-      "exists": false,
+      "exists": true,
       "story": "The Honey Season",
       "slide": "50/50",
       "title": "What the forest asks",
@@ -1805,7 +1805,7 @@
     {
       "id": "dhaka-01",
       "relative": "images/playbook/divisions/dhaka-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "1/12",
       "title": "A capital on the Buriganga",
@@ -1814,7 +1814,7 @@
     {
       "id": "dhaka-02",
       "relative": "images/playbook/divisions/dhaka-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "2/12",
       "title": "The lanes of Old Dhaka",
@@ -1823,7 +1823,7 @@
     {
       "id": "dhaka-03",
       "relative": "images/playbook/divisions/dhaka-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "3/12",
       "title": "The pink palace",
@@ -1832,7 +1832,7 @@
     {
       "id": "dhaka-04",
       "relative": "images/playbook/divisions/dhaka-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "4/12",
       "title": "Rickshaw city",
@@ -1841,7 +1841,7 @@
     {
       "id": "dhaka-05",
       "relative": "images/playbook/divisions/dhaka-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "5/12",
       "title": "The Shaheed Minar",
@@ -1850,7 +1850,7 @@
     {
       "id": "dhaka-06",
       "relative": "images/playbook/divisions/dhaka-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "6/12",
       "title": "A parliament of light",
@@ -1859,7 +1859,7 @@
     {
       "id": "dhaka-07",
       "relative": "images/playbook/divisions/dhaka-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "7/12",
       "title": "The stitch that built an economy",
@@ -1868,7 +1868,7 @@
     {
       "id": "dhaka-08",
       "relative": "images/playbook/divisions/dhaka-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "8/12",
       "title": "Muslin and jamdani",
@@ -1877,7 +1877,7 @@
     {
       "id": "dhaka-09",
       "relative": "images/playbook/divisions/dhaka-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "9/12",
       "title": "Sadarghat, the river gateway",
@@ -1886,7 +1886,7 @@
     {
       "id": "dhaka-10",
       "relative": "images/playbook/divisions/dhaka-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "10/12",
       "title": "Sonargaon, the old capital",
@@ -1895,7 +1895,7 @@
     {
       "id": "dhaka-11",
       "relative": "images/playbook/divisions/dhaka-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "11/12",
       "title": "A bridge over the Padma",
@@ -1904,7 +1904,7 @@
     {
       "id": "dhaka-12",
       "relative": "images/playbook/divisions/dhaka-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka Division in depth",
       "slide": "12/12",
       "title": "The southern delta",
@@ -1913,7 +1913,7 @@
     {
       "id": "chattogram-01",
       "relative": "images/playbook/divisions/chattogram-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "1/12",
       "title": "Between the hills and the sea",
@@ -1922,7 +1922,7 @@
     {
       "id": "chattogram-02",
       "relative": "images/playbook/divisions/chattogram-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "2/12",
       "title": "The port city",
@@ -1931,7 +1931,7 @@
     {
       "id": "chattogram-03",
       "relative": "images/playbook/divisions/chattogram-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "3/12",
       "title": "Kaptai Lake",
@@ -1940,7 +1940,7 @@
     {
       "id": "chattogram-04",
       "relative": "images/playbook/divisions/chattogram-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "4/12",
       "title": "The hill country",
@@ -1949,7 +1949,7 @@
     {
       "id": "chattogram-05",
       "relative": "images/playbook/divisions/chattogram-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "5/12",
       "title": "The peoples of the hills",
@@ -1958,7 +1958,7 @@
     {
       "id": "chattogram-06",
       "relative": "images/playbook/divisions/chattogram-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "6/12",
       "title": "The longest beach",
@@ -1967,7 +1967,7 @@
     {
       "id": "chattogram-07",
       "relative": "images/playbook/divisions/chattogram-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "7/12",
       "title": "Salt, fish and betel leaf",
@@ -1976,7 +1976,7 @@
     {
       "id": "chattogram-08",
       "relative": "images/playbook/divisions/chattogram-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "8/12",
       "title": "The coral island",
@@ -1985,7 +1985,7 @@
     {
       "id": "chattogram-09",
       "relative": "images/playbook/divisions/chattogram-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "9/12",
       "title": "Refuge at Kutupalong",
@@ -1994,7 +1994,7 @@
     {
       "id": "chattogram-10",
       "relative": "images/playbook/divisions/chattogram-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "10/12",
       "title": "Mainamati and the Buddhist kings",
@@ -2003,7 +2003,7 @@
     {
       "id": "chattogram-11",
       "relative": "images/playbook/divisions/chattogram-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "11/12",
       "title": "A fire in the armoury",
@@ -2012,7 +2012,7 @@
     {
       "id": "chattogram-12",
       "relative": "images/playbook/divisions/chattogram-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chattogram Division in depth",
       "slide": "12/12",
       "title": "Mezban and shutki",
@@ -2021,7 +2021,7 @@
     {
       "id": "sylhet-01",
       "relative": "images/playbook/divisions/sylhet-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "1/12",
       "title": "Hills, tea and water",
@@ -2030,7 +2030,7 @@
     {
       "id": "sylhet-02",
       "relative": "images/playbook/divisions/sylhet-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "2/12",
       "title": "The tea capital",
@@ -2039,7 +2039,7 @@
     {
       "id": "sylhet-03",
       "relative": "images/playbook/divisions/sylhet-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "3/12",
       "title": "The people of the gardens",
@@ -2048,7 +2048,7 @@
     {
       "id": "sylhet-04",
       "relative": "images/playbook/divisions/sylhet-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "4/12",
       "title": "The haor, a seasonal sea",
@@ -2057,7 +2057,7 @@
     {
       "id": "sylhet-05",
       "relative": "images/playbook/divisions/sylhet-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "5/12",
       "title": "The drowned forest",
@@ -2066,7 +2066,7 @@
     {
       "id": "sylhet-06",
       "relative": "images/playbook/divisions/sylhet-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "6/12",
       "title": "Jaflong and the stone rivers",
@@ -2075,7 +2075,7 @@
     {
       "id": "sylhet-07",
       "relative": "images/playbook/divisions/sylhet-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "7/12",
       "title": "Madhabkunda and the rain",
@@ -2084,7 +2084,7 @@
     {
       "id": "sylhet-08",
       "relative": "images/playbook/divisions/sylhet-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "8/12",
       "title": "Lawachara and the singing gibbons",
@@ -2093,7 +2093,7 @@
     {
       "id": "sylhet-09",
       "relative": "images/playbook/divisions/sylhet-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "9/12",
       "title": "The shrine of Shah Jalal",
@@ -2102,7 +2102,7 @@
     {
       "id": "sylhet-10",
       "relative": "images/playbook/divisions/sylhet-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "10/12",
       "title": "A language of its own",
@@ -2111,7 +2111,7 @@
     {
       "id": "sylhet-11",
       "relative": "images/playbook/divisions/sylhet-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "11/12",
       "title": "Londoni",
@@ -2120,7 +2120,7 @@
     {
       "id": "sylhet-12",
       "relative": "images/playbook/divisions/sylhet-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sylhet Division in depth",
       "slide": "12/12",
       "title": "The singing poets",
@@ -2138,7 +2138,7 @@
     {
       "id": "barishal-02",
       "relative": "images/playbook/divisions/barishal-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "2/12",
       "title": "The Venice of Bengal",
@@ -2156,7 +2156,7 @@
     {
       "id": "barishal-04",
       "relative": "images/playbook/divisions/barishal-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "4/12",
       "title": "Kuakata, where the sun rises and sets",
@@ -2165,7 +2165,7 @@
     {
       "id": "barishal-05",
       "relative": "images/playbook/divisions/barishal-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "5/12",
       "title": "Bhola, the island district",
@@ -2174,7 +2174,7 @@
     {
       "id": "barishal-06",
       "relative": "images/playbook/divisions/barishal-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "6/12",
       "title": "The night of 12 November 1970",
@@ -2183,7 +2183,7 @@
     {
       "id": "barishal-07",
       "relative": "images/playbook/divisions/barishal-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "7/12",
       "title": "Shelters and warnings",
@@ -2192,7 +2192,7 @@
     {
       "id": "barishal-08",
       "relative": "images/playbook/divisions/barishal-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "8/12",
       "title": "The silver fish",
@@ -2210,7 +2210,7 @@
     {
       "id": "barishal-10",
       "relative": "images/playbook/divisions/barishal-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "10/12",
       "title": "Boats and boatbuilders",
@@ -2219,7 +2219,7 @@
     {
       "id": "barishal-11",
       "relative": "images/playbook/divisions/barishal-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "11/12",
       "title": "A new port at Payra",
@@ -2255,7 +2255,7 @@
     {
       "id": "khulna-03",
       "relative": "images/playbook/divisions/khulna-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "3/12",
       "title": "The city of mosques",
@@ -2264,7 +2264,7 @@
     {
       "id": "khulna-04",
       "relative": "images/playbook/divisions/khulna-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "4/12",
       "title": "The saint’s pond",
@@ -2273,7 +2273,7 @@
     {
       "id": "khulna-05",
       "relative": "images/playbook/divisions/khulna-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "5/12",
       "title": "The white gold",
@@ -2282,7 +2282,7 @@
     {
       "id": "khulna-06",
       "relative": "images/playbook/divisions/khulna-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "6/12",
       "title": "The poet of Sagardari",
@@ -2291,7 +2291,7 @@
     {
       "id": "khulna-07",
       "relative": "images/playbook/divisions/khulna-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "7/12",
       "title": "Lalon’s song",
@@ -2336,7 +2336,7 @@
     {
       "id": "khulna-12",
       "relative": "images/playbook/divisions/khulna-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "12/12",
       "title": "The road to Benapole",
@@ -2345,7 +2345,7 @@
     {
       "id": "rajshahi-01",
       "relative": "images/playbook/divisions/rajshahi-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "1/12",
       "title": "The north-west and the Padma",
@@ -3915,7 +3915,7 @@
       "story": "Munshiganj District",
       "slide": "3/8",
       "title": "The scientist of Rarikhal",
-      "prompt": "Illustration, \"Munshiganj District\", chapter 3 of 8, \"The scientist of Rarikhal\". A nineteenth-century Bengali scientist in a coat at a long table with delicate apparatus, a potted plant connected to a pen-lever recording on a revolving drum, a window onto a green garden, quiet concentration. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Munshiganj District\", chapter 3 of 8, \"The scientist of Rarikhal\". Jagadish Chandra Bose in a coat at a laboratory table with delicate plant-response apparatus, a potted plant connected to a pen-lever recording on a revolving drum, a window onto a green garden, quiet concentration. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "munshiganj-04",
@@ -4446,7 +4446,7 @@
       "story": "Dhaka District",
       "slide": "6/8",
       "title": "The Martyrs’ Memorial at Savar",
-      "prompt": "Illustration, \"Dhaka District\", chapter 6 of 8, \"The Martyrs’ Memorial at Savar\". A tall monument of seven triangular concrete walls of increasing height rising among green lawns and ponds, a red sun painted behind, visitors laying flowers at the base, school children in uniform in a line. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Dhaka District\", chapter 6 of 8, \"The Martyrs’ Memorial at Savar\". Seven pairs of triangular concrete planes rise above the reflecting pool and lawns at the National Martyrs’ Memorial in Savar, visitors laying flowers at the base, school children in uniform in a line. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "dhaka-07",

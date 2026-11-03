@@ -15,7 +15,7 @@ export function PlayIcon({ kind, ...props }) {
   return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d={paths[kind] || paths.read} /></svg>
 }
 
-// `fallback` is shown instead of the picture when its file is missing (used by the big stories while their paintings are made)
+// Readers and library previews can supply a text card if a painting cannot load.
 export default function Artwork({ bookId, src, scene, id, alt, className = '', eager = false, fallback }) {
   const [failed, setFailed] = useState(false)
   if (failed && fallback) return fallback

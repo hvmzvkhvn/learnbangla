@@ -2,6 +2,7 @@ import VisualText from '../art/VisualText'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import PaintedBuild from '../components/playbook/PaintedBuild'
 import { pageArtPath } from '../data/playbook/artwork'
+import { longArtPath } from '../data/playbook/long'
 import Artwork, { PlayIcon, coverUrl } from '../components/playbook/Artwork'
 import BookReader, { stepCount } from '../components/playbook/BookReader'
 import LookLearn from '../components/playbook/LookLearn'
@@ -26,7 +27,7 @@ function Section({ kind, id = kind, title, hint, children, count }) {
 function Tile({ to, scene, bookId, art, title, sub, done, id, kind = 'read', page = 0, pages, children }) {
   return <Link to={to} className={`pb-tile pb-${kind}`}>
     <div className="pb-cover">
-      {children || <Artwork bookId={bookId} src={art} scene={scene} id={id} alt={`${title.en} — illustrated scene`} />}
+      {children && !art ? children : <Artwork bookId={bookId} src={art} scene={scene} id={id} alt={children ? '' : `${title.en} — illustrated scene`} fallback={children} />}
       <span className="pb-type"><PlayIcon kind={kind} />{kind === 'read' ? 'Read & listen' : kind === 'look' ? 'Tap & discover' : kind === 'build' ? 'Listen & build' : 'Story'}</span>
       {done && <span className="pb-done">✓ Completed</span>}
     </div>
@@ -101,7 +102,7 @@ export default function Playbook() {
       {books.map(b => <Tile key={b.id} to={`/playbook/book/${b.id}`} bookId={b.id} scene={b.pages[0].scene} id={`t-${b.id}`} title={b.title} sub={`${b.pages.length} pages · ${stepCount(b.pages)} readings`} done={Boolean(read[`book:${b.id}`])} page={saved[`book:${b.id}`]?.of ? saved[`book:${b.id}`].page : 0} pages={saved[`book:${b.id}`]?.of || stepCount(b.pages)} />)}
     </Section>
     <Section kind="read" id="long" title="Big stories" hint="Fifty slides each, told two ways — easier or fuller. Pick the telling that suits you." count={`${longStories.length} stories`}>
-      {longStories.map(st => <Tile key={st.id} to={`/playbook/long/${st.id}`} id={`long-${st.id}`} title={{bn:st.titleBn,en:st.title}} sub={`${topics[st.topic]} · ${st.beats.length} slides · easier or fuller`} done={Boolean(read[`long:${st.id}`])} page={saved[`long:${st.id}`]?.of ? saved[`long:${st.id}`].page : 0} pages={saved[`long:${st.id}`]?.of || st.beats.length}><div className="pb-long-cover"><small>{topics[st.topic]}</small><b lang="bn">৫০</b><small>slides · two tellings</small></div></Tile>)}
+      {longStories.map(st => <Tile key={st.id} to={`/playbook/long/${st.id}`} id={`long-${st.id}`} art={`${import.meta.env.BASE_URL}${longArtPath(st.id, 0)}`} title={{bn:st.titleBn,en:st.title}} sub={`${topics[st.topic]} · ${st.beats.length} slides · easier or fuller`} done={Boolean(read[`long:${st.id}`])} page={saved[`long:${st.id}`]?.of ? saved[`long:${st.id}`].page : 0} pages={saved[`long:${st.id}`]?.of || st.beats.length}><div className="pb-long-cover"><small>{topics[st.topic]}</small><b lang="bn">৫০</b><small>slides · two tellings</small></div></Tile>)}
     </Section>
     <Section kind="look" title="Look a little closer" hint="From a busy bazaar to your own bedroom. Every picture has words to discover." count={`${lookScenes.length} places`}>
       {lookScenes.map(l => <Tile key={l.id} kind="look" to={`/playbook/look/${l.id}`} scene={l.scene} id={`t-look-${l.id}`} title={l.title} sub={`${l.scene.items.filter(i => i.word).length} words to find`} done={Boolean(looked[l.id])} />)}
@@ -113,8 +114,8 @@ export default function Playbook() {
       <Tile kind="history" to="/playbook/story/timeline" art={`${import.meta.env.BASE_URL}${pageArtPath('story:timeline', 2)}`} id="t-timeline" title={{bn:'স্বাধীনতার পথ',en:timelineStory.title}} sub="1905–1971 · 7 chapters" done={Boolean(read['story:timeline'])} page={saved['story:timeline']?.page || 0} pages={7} />
       {Object.entries(regionStoryboards).map(([key, story]) => <Tile key={key} kind="history" to={`/playbook/story/${key}`} art={`${import.meta.env.BASE_URL}${pageArtPath(`story:${key}`, 0)}`} id={`region-${key}`} title={{bn:exploreById[key]?.bn || '',en:story.title.replace('The story of ', '')}} sub={`${story.panels.length} illustrated chapters`} done={Boolean(read[`story:${key}`])} page={saved[`story:${key}`]?.page || 0} pages={story.panels.length} />)}
       {Object.entries(historyStories).map(([key, story]) => <Tile key={key} kind="history" to={`/playbook/story/${key}`} art={`${import.meta.env.BASE_URL}${story.panels[0].art}`} id={`history-${key}`} title={{bn:story.titleBn,en:story.title}} sub={`${story.panels.length} chapters · ${story.span}`} done={Boolean(read[`story:${key}`])} page={saved[`story:${key}`]?.page || 0} pages={story.panels.length} />)}
-      {Object.values(divisionStories).map((d) => <Tile key={d.id} kind="history" to={`/playbook/division/${d.id}`} id={`division-${d.id}`} title={{bn:d.titleBn,en:d.title.replace(' in depth', '')}} sub={`${d.chapters.length} chapters · in depth`} done={Boolean(read[`division:${d.id}`])} page={saved[`division:${d.id}`]?.page || 0} pages={d.chapters.length}><div className="pb-long-cover"><small>In depth</small><b lang="bn">{d.titleBn}</b><small>{d.chapters.length} chapters</small></div></Tile>)}
-      {Object.values(districtStories).map((d) => <Tile key={d.id} kind="history" to={`/playbook/district/${d.id}`} id={`district-${d.id}`} title={{bn:d.nameBn,en:`${d.name} District`}} sub={`${d.chapters.length} chapters · district story`} done={Boolean(read[`district:${d.id}`])} page={saved[`district:${d.id}`]?.page || 0} pages={d.chapters.length}><div className="pb-long-cover"><small>District story</small><b lang="bn">{d.nameBn}</b><small>{d.chapters.length} chapters</small></div></Tile>)}
+      {Object.values(divisionStories).map((d) => <Tile key={d.id} kind="history" to={`/playbook/division/${d.id}`} id={`division-${d.id}`} art={`${import.meta.env.BASE_URL}${d.panels[0].art}`} title={{bn:d.titleBn,en:d.title.replace(' in depth', '')}} sub={`${d.chapters.length} chapters · in depth`} done={Boolean(read[`division:${d.id}`])} page={saved[`division:${d.id}`]?.page || 0} pages={d.chapters.length}><div className="pb-long-cover"><small>In depth</small><b lang="bn">{d.titleBn}</b><small>{d.chapters.length} chapters</small></div></Tile>)}
+      {Object.values(districtStories).map((d) => <Tile key={d.id} kind="history" to={`/playbook/district/${d.id}`} id={`district-${d.id}`} art={`${import.meta.env.BASE_URL}${d.panels[0].art}`} title={{bn:d.nameBn,en:`${d.name} District`}} sub={`${d.chapters.length} chapters · district story`} done={Boolean(read[`district:${d.id}`])} page={saved[`district:${d.id}`]?.page || 0} pages={d.chapters.length}><div className="pb-long-cover"><small>District story</small><b lang="bn">{d.nameBn}</b><small>{d.chapters.length} chapters</small></div></Tile>)}
     </Section>}
     <p className="pb-footer">Made for curious minds. Rooted in Bangladesh.</p>
   </div>
