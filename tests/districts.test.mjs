@@ -8,8 +8,8 @@ const ROMAN_OK = /^[A-Za-zãũẽĩõ0-9\s,.?!'‘’“”—-]+$/
 const words = (s) => s.trim().split(/\s+/).length
 const DIVISIONS = ['barishal', 'chattogram', 'dhaka', 'khulna', 'mymensingh', 'rajshahi', 'rangpur', 'sylhet']
 
-test('forty-eight district stories, every division covered, each with eight chapters', () => {
-  assert.deepEqual(Object.keys(districtStories).sort(), ['bagerhat', 'bandarban', 'bhola', 'bogura', 'brahmanbaria', 'chandpur', 'chapainawabganj', 'chattogram', 'coxsbazar', 'cumilla', 'dhaka', 'dinajpur', 'faridpur', 'feni', 'gazipur', 'gopalganj', 'habiganj', 'jashore', 'khagrachhari', 'khulna', 'kishoreganj', 'kurigram', 'kushtia', 'lakshmipur', 'madaripur', 'manikganj', 'meherpur', 'moulvibazar', 'munshiganj', 'mymensingh', 'naogaon', 'narayanganj', 'narsingdi', 'natore', 'netrokona', 'noakhali', 'pabna', 'panchagarh', 'patuakhali', 'rajbari', 'rajshahi', 'rangamati', 'satkhira', 'shariatpur', 'sirajganj', 'sunamganj', 'sylhet', 'tangail'])
+test('fifty-six district stories, every division covered, each with eight chapters', () => {
+  assert.deepEqual(Object.keys(districtStories).sort(), ['bagerhat', 'bandarban', 'barguna', 'barishal', 'bhola', 'bogura', 'brahmanbaria', 'chandpur', 'chapainawabganj', 'chattogram', 'chuadanga', 'coxsbazar', 'cumilla', 'dhaka', 'dinajpur', 'faridpur', 'feni', 'gazipur', 'gopalganj', 'habiganj', 'jashore', 'jhalokati', 'jhenaidah', 'khagrachhari', 'khulna', 'kishoreganj', 'kurigram', 'kushtia', 'lakshmipur', 'madaripur', 'magura', 'manikganj', 'meherpur', 'moulvibazar', 'munshiganj', 'mymensingh', 'naogaon', 'narail', 'narayanganj', 'narsingdi', 'natore', 'netrokona', 'noakhali', 'pabna', 'panchagarh', 'patuakhali', 'pirojpur', 'rajbari', 'rajshahi', 'rangamati', 'satkhira', 'shariatpur', 'sirajganj', 'sunamganj', 'sylhet', 'tangail'])
   for (const d of Object.values(districtStories)) assert.ok(DIVISIONS.includes(d.division), d.id)
   for (const div of DIVISIONS) assert.ok(districtsOf(div).length >= 1, div)
   for (const [id, d] of Object.entries(districtStories)) {

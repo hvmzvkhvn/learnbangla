@@ -1,4 +1,4 @@
-// District stories (16–18 and 18+): forty-eight districts so far, eight chapters each (batch 1: one per division; batch 2: richer-history districts; batch 3: rivers, music, border and coast; batch 4: the capital, palaces, bridges, tea, mosques and haors; batch 5: the island, the north, the hills and the freedom government; batch 6: river towns, looms, the Padma Bridge, the border and the hills).
+// District stories (16–18 and 18+): fifty-six districts so far, eight chapters each (batch 1: one per division; batch 2: richer-history districts; batch 3: rivers, music, border and coast; batch 4: the capital, palaces, bridges, tea, mosques and haors; batch 5: the island, the north, the hills and the freedom government; batch 6: river towns, looms, the Padma Bridge, the border and the hills; batch 7: the southern coast, canals and the south-west).
 // Chapters use the same shape as the division deep dives (see ../divisions/helpers.js).
 import { narayanganj } from './narayanganj.js'
 import { bandarban } from './bandarban.js'
@@ -48,6 +48,14 @@ import { rajbari } from './rajbari.js'
 import { feni } from './feni.js'
 import { lakshmipur } from './lakshmipur.js'
 import { khagrachhari } from './khagrachhari.js'
+import { barguna } from './barguna.js'
+import { jhalokati } from './jhalokati.js'
+import { pirojpur } from './pirojpur.js'
+import { chuadanga } from './chuadanga.js'
+import { jhenaidah } from './jhenaidah.js'
+import { magura } from './magura.js'
+import { narail } from './narail.js'
+import { barishal } from './barishal.js'
 
 export const districtArtPath = (id, index) => `images/playbook/districts/${id}-${String(index + 1).padStart(2, '0')}.webp`
 
@@ -100,6 +108,14 @@ const meta = [
   ['feni', 'Feni', 'ফেনী', 'chattogram', feni],
   ['lakshmipur', 'Lakshmipur', 'লক্ষ্মীপুর', 'chattogram', lakshmipur],
   ['khagrachhari', 'Khagrachhari', 'খাগড়াছড়ি', 'chattogram', khagrachhari],
+  ['barguna', 'Barguna', 'বরগুনা', 'barishal', barguna],
+  ['jhalokati', 'Jhalokati', 'ঝালকাঠি', 'barishal', jhalokati],
+  ['pirojpur', 'Pirojpur', 'পিরোজপুর', 'barishal', pirojpur],
+  ['chuadanga', 'Chuadanga', 'চুয়াডাঙ্গা', 'khulna', chuadanga],
+  ['jhenaidah', 'Jhenaidah', 'ঝিনাইদহ', 'khulna', jhenaidah],
+  ['magura', 'Magura', 'মাগুরা', 'khulna', magura],
+  ['narail', 'Narail', 'নড়াইল', 'khulna', narail],
+  ['barishal', 'Barishal', 'বরিশাল', 'barishal', barishal],
 ]
 
 export const districtStories = Object.fromEntries(meta.map(([id, name, nameBn, division, chapters]) => [id, {
