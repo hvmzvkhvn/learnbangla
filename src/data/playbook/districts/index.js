@@ -1,4 +1,4 @@
-// District stories (16–18 and 18+): forty districts so far, eight chapters each (batch 1: one per division; batch 2: richer-history districts; batch 3: rivers, music, border and coast; batch 4: the capital, palaces, bridges, tea, mosques and haors; batch 5: the island, the north, the hills and the freedom government).
+// District stories (16–18 and 18+): forty-eight districts so far, eight chapters each (batch 1: one per division; batch 2: richer-history districts; batch 3: rivers, music, border and coast; batch 4: the capital, palaces, bridges, tea, mosques and haors; batch 5: the island, the north, the hills and the freedom government; batch 6: river towns, looms, the Padma Bridge, the border and the hills).
 // Chapters use the same shape as the division deep dives (see ../divisions/helpers.js).
 import { narayanganj } from './narayanganj.js'
 import { bandarban } from './bandarban.js'
@@ -40,6 +40,14 @@ import { meherpur } from './meherpur.js'
 import { rangamati } from './rangamati.js'
 import { chandpur } from './chandpur.js'
 import { mymensingh } from './mymensingh.js'
+import { manikganj } from './manikganj.js'
+import { narsingdi } from './narsingdi.js'
+import { madaripur } from './madaripur.js'
+import { shariatpur } from './shariatpur.js'
+import { rajbari } from './rajbari.js'
+import { feni } from './feni.js'
+import { lakshmipur } from './lakshmipur.js'
+import { khagrachhari } from './khagrachhari.js'
 
 export const districtArtPath = (id, index) => `images/playbook/districts/${id}-${String(index + 1).padStart(2, '0')}.webp`
 
@@ -84,6 +92,14 @@ const meta = [
   ['rangamati', 'Rangamati', 'রাঙামাটি', 'chattogram', rangamati],
   ['chandpur', 'Chandpur', 'চাঁদপুর', 'chattogram', chandpur],
   ['mymensingh', 'Mymensingh', 'ময়মনসিংহ', 'mymensingh', mymensingh],
+  ['manikganj', 'Manikganj', 'মানিকগঞ্জ', 'dhaka', manikganj],
+  ['narsingdi', 'Narsingdi', 'নরসিংদী', 'dhaka', narsingdi],
+  ['madaripur', 'Madaripur', 'মাদারীপুর', 'dhaka', madaripur],
+  ['shariatpur', 'Shariatpur', 'শরীয়তপুর', 'dhaka', shariatpur],
+  ['rajbari', 'Rajbari', 'রাজবাড়ী', 'dhaka', rajbari],
+  ['feni', 'Feni', 'ফেনী', 'chattogram', feni],
+  ['lakshmipur', 'Lakshmipur', 'লক্ষ্মীপুর', 'chattogram', lakshmipur],
+  ['khagrachhari', 'Khagrachhari', 'খাগড়াছড়ি', 'chattogram', khagrachhari],
 ]
 
 export const districtStories = Object.fromEntries(meta.map(([id, name, nameBn, division, chapters]) => [id, {
