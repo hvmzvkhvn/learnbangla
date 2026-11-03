@@ -1,4 +1,4 @@
-// District stories (16–18 and 18+): sixteen districts so far, eight chapters each (batch 1: one per division; batch 2: richer-history districts).
+// District stories (16–18 and 18+): twenty-four districts so far, eight chapters each (batch 1: one per division; batch 2: richer-history districts; batch 3: rivers, music, border and coast).
 // Chapters use the same shape as the division deep dives (see ../divisions/helpers.js).
 import { narayanganj } from './narayanganj.js'
 import { bandarban } from './bandarban.js'
@@ -16,6 +16,14 @@ import { sylhet } from './sylhet.js'
 import { chattogram } from './chattogram.js'
 import { coxsbazar } from './coxsbazar.js'
 import { khulna } from './khulna.js'
+import { brahmanbaria } from './brahmanbaria.js'
+import { munshiganj } from './munshiganj.js'
+import { gazipur } from './gazipur.js'
+import { naogaon } from './naogaon.js'
+import { sirajganj } from './sirajganj.js'
+import { noakhali } from './noakhali.js'
+import { habiganj } from './habiganj.js'
+import { satkhira } from './satkhira.js'
 
 export const districtArtPath = (id, index) => `images/playbook/districts/${id}-${String(index + 1).padStart(2, '0')}.webp`
 
@@ -36,6 +44,14 @@ const meta = [
   ['chattogram', 'Chattogram', 'চট্টগ্রাম', 'chattogram', chattogram],
   ['coxsbazar', 'Cox’s Bazar', 'কক্সবাজার', 'chattogram', coxsbazar],
   ['khulna', 'Khulna', 'খুলনা', 'khulna', khulna],
+  ['brahmanbaria', 'Brahmanbaria', 'ব্রাহ্মণবাড়িয়া', 'chattogram', brahmanbaria],
+  ['munshiganj', 'Munshiganj', 'মুন্সিগঞ্জ', 'dhaka', munshiganj],
+  ['gazipur', 'Gazipur', 'গাজীপুর', 'dhaka', gazipur],
+  ['naogaon', 'Naogaon', 'নওগাঁ', 'rajshahi', naogaon],
+  ['sirajganj', 'Sirajganj', 'সিরাজগঞ্জ', 'rajshahi', sirajganj],
+  ['noakhali', 'Noakhali', 'নোয়াখালী', 'chattogram', noakhali],
+  ['habiganj', 'Habiganj', 'হবিগঞ্জ', 'sylhet', habiganj],
+  ['satkhira', 'Satkhira', 'সাতক্ষীরা', 'khulna', satkhira],
 ]
 
 export const districtStories = Object.fromEntries(meta.map(([id, name, nameBn, division, chapters]) => [id, {

@@ -8,8 +8,8 @@ const ROMAN_OK = /^[A-Za-zãũẽĩõ0-9\s,.?!'‘’“”—-]+$/
 const words = (s) => s.trim().split(/\s+/).length
 const DIVISIONS = ['barishal', 'chattogram', 'dhaka', 'khulna', 'mymensingh', 'rajshahi', 'rangpur', 'sylhet']
 
-test('sixteen district stories, every division covered, each with eight chapters', () => {
-  assert.deepEqual(Object.keys(districtStories).sort(), ['bandarban', 'bogura', 'chattogram', 'coxsbazar', 'cumilla', 'dinajpur', 'jashore', 'khulna', 'kushtia', 'narayanganj', 'netrokona', 'patuakhali', 'rajshahi', 'sunamganj', 'sylhet', 'tangail'])
+test('twenty-four district stories, every division covered, each with eight chapters', () => {
+  assert.deepEqual(Object.keys(districtStories).sort(), ['bandarban', 'bogura', 'brahmanbaria', 'chattogram', 'coxsbazar', 'cumilla', 'dinajpur', 'gazipur', 'habiganj', 'jashore', 'khulna', 'kushtia', 'munshiganj', 'naogaon', 'narayanganj', 'netrokona', 'noakhali', 'patuakhali', 'rajshahi', 'satkhira', 'sirajganj', 'sunamganj', 'sylhet', 'tangail'])
   for (const d of Object.values(districtStories)) assert.ok(DIVISIONS.includes(d.division), d.id)
   for (const div of DIVISIONS) assert.ok(districtsOf(div).length >= 1, div)
   for (const [id, d] of Object.entries(districtStories)) {
