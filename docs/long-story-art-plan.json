@@ -2129,7 +2129,7 @@
     {
       "id": "barishal-01",
       "relative": "images/playbook/divisions/barishal-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "1/12",
       "title": "A land of rivers and canals",
@@ -2147,7 +2147,7 @@
     {
       "id": "barishal-03",
       "relative": "images/playbook/divisions/barishal-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "3/12",
       "title": "The floating guava market",
@@ -2201,7 +2201,7 @@
     {
       "id": "barishal-09",
       "relative": "images/playbook/divisions/barishal-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "9/12",
       "title": "The poets of Barishal",
@@ -2228,7 +2228,7 @@
     {
       "id": "barishal-12",
       "relative": "images/playbook/divisions/barishal-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal Division in depth",
       "slide": "12/12",
       "title": "The green belt",
@@ -2237,7 +2237,7 @@
     {
       "id": "khulna-01",
       "relative": "images/playbook/divisions/khulna-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "1/12",
       "title": "The south-west corner",
@@ -2246,7 +2246,7 @@
     {
       "id": "khulna-02",
       "relative": "images/playbook/divisions/khulna-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "2/12",
       "title": "The great forest",
@@ -2300,7 +2300,7 @@
     {
       "id": "khulna-08",
       "relative": "images/playbook/divisions/khulna-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "8/12",
       "title": "Tagore on the river",
@@ -2309,7 +2309,7 @@
     {
       "id": "khulna-09",
       "relative": "images/playbook/divisions/khulna-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "9/12",
       "title": "The government in a mango grove",
@@ -2318,7 +2318,7 @@
     {
       "id": "khulna-10",
       "relative": "images/playbook/divisions/khulna-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "10/12",
       "title": "Mongla, the second port",
@@ -2327,7 +2327,7 @@
     {
       "id": "khulna-11",
       "relative": "images/playbook/divisions/khulna-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khulna Division in depth",
       "slide": "11/12",
       "title": "Living with salt",
@@ -2354,7 +2354,7 @@
     {
       "id": "rajshahi-02",
       "relative": "images/playbook/divisions/rajshahi-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "2/12",
       "title": "The silk city",
@@ -2363,7 +2363,7 @@
     {
       "id": "rajshahi-03",
       "relative": "images/playbook/divisions/rajshahi-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "3/12",
       "title": "Mango country",
@@ -2372,7 +2372,7 @@
     {
       "id": "rajshahi-04",
       "relative": "images/playbook/divisions/rajshahi-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "4/12",
       "title": "The monastery at Paharpur",
@@ -2381,7 +2381,7 @@
     {
       "id": "rajshahi-05",
       "relative": "images/playbook/divisions/rajshahi-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "5/12",
       "title": "Pundranagara",
@@ -2390,7 +2390,7 @@
     {
       "id": "rajshahi-06",
       "relative": "images/playbook/divisions/rajshahi-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "6/12",
       "title": "The terracotta temples of Puthia",
@@ -2399,7 +2399,7 @@
     {
       "id": "rajshahi-07",
       "relative": "images/playbook/divisions/rajshahi-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "7/12",
       "title": "Rani Bhabani of Natore",
@@ -2408,16 +2408,16 @@
     {
       "id": "rajshahi-08",
       "relative": "images/playbook/divisions/rajshahi-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "8/12",
       "title": "The Golden Mosque of Gaur",
-      "prompt": "Illustration, \"Rajshahi Division in depth\", chapter 8 of 12, \"The Golden Mosque of Gaur\". A medieval brick mosque with eleven gilded domes and a long arcade glimmering in late afternoon sun, wide lawns, a few visitors in white caps at the entrance. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Rajshahi Division in depth\", chapter 8 of 12, \"The Golden Mosque of Gaur\". The compact stone-clad Chhota Sona Mosque, with five arched front entrances and a low roof of rounded domes and Bengali chauchala vaults, in warm afternoon light, a few visitors crossing the lawn. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "rajshahi-09",
       "relative": "images/playbook/divisions/rajshahi-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "9/12",
       "title": "The Barind plateau",
@@ -2426,7 +2426,7 @@
     {
       "id": "rajshahi-10",
       "relative": "images/playbook/divisions/rajshahi-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "10/12",
       "title": "The Santals of the north",
@@ -2435,7 +2435,7 @@
     {
       "id": "rajshahi-11",
       "relative": "images/playbook/divisions/rajshahi-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "11/12",
       "title": "Bogurar doi",
@@ -2444,7 +2444,7 @@
     {
       "id": "rajshahi-12",
       "relative": "images/playbook/divisions/rajshahi-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajshahi Division in depth",
       "slide": "12/12",
       "title": "Bridges over the great rivers",
@@ -2453,7 +2453,7 @@
     {
       "id": "mymensingh-01",
       "relative": "images/playbook/divisions/mymensingh-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "1/12",
       "title": "The country of the Brahmaputra",
@@ -2462,7 +2462,7 @@
     {
       "id": "mymensingh-02",
       "relative": "images/playbook/divisions/mymensingh-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "2/12",
       "title": "The ballads of Mymensingh",
@@ -2471,7 +2471,7 @@
     {
       "id": "mymensingh-03",
       "relative": "images/playbook/divisions/mymensingh-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "3/12",
       "title": "The story of Mahua",
@@ -2480,7 +2480,7 @@
     {
       "id": "mymensingh-04",
       "relative": "images/playbook/divisions/mymensingh-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "4/12",
       "title": "Muktagacha’s monda",
@@ -2489,7 +2489,7 @@
     {
       "id": "mymensingh-05",
       "relative": "images/playbook/divisions/mymensingh-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "5/12",
       "title": "The farmers’ university",
@@ -2498,7 +2498,7 @@
     {
       "id": "mymensingh-06",
       "relative": "images/playbook/divisions/mymensingh-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "6/12",
       "title": "Zainul Abedin’s lines",
@@ -2507,7 +2507,7 @@
     {
       "id": "mymensingh-07",
       "relative": "images/playbook/divisions/mymensingh-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "7/12",
       "title": "The hills and the Garo",
@@ -2516,7 +2516,7 @@
     {
       "id": "mymensingh-08",
       "relative": "images/playbook/divisions/mymensingh-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "8/12",
       "title": "The white hills of Bijoypur",
@@ -2525,7 +2525,7 @@
     {
       "id": "mymensingh-09",
       "relative": "images/playbook/divisions/mymensingh-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "9/12",
       "title": "The boy poet of Trishal",
@@ -2534,7 +2534,7 @@
     {
       "id": "mymensingh-10",
       "relative": "images/playbook/divisions/mymensingh-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "10/12",
       "title": "Life on the chars of Jamalpur",
@@ -2543,7 +2543,7 @@
     {
       "id": "mymensingh-11",
       "relative": "images/playbook/divisions/mymensingh-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "11/12",
       "title": "Shashi Lodge and the river town",
@@ -2552,7 +2552,7 @@
     {
       "id": "mymensingh-12",
       "relative": "images/playbook/divisions/mymensingh-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Mymensingh Division in depth",
       "slide": "12/12",
       "title": "Sal forest and pineapples",
@@ -2561,7 +2561,7 @@
     {
       "id": "rangpur-01",
       "relative": "images/playbook/divisions/rangpur-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "1/12",
       "title": "The far north",
@@ -2570,7 +2570,7 @@
     {
       "id": "rangpur-02",
       "relative": "images/playbook/divisions/rangpur-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "2/12",
       "title": "The girl of Pairaband",
@@ -2579,7 +2579,7 @@
     {
       "id": "rangpur-03",
       "relative": "images/playbook/divisions/rangpur-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "3/12",
       "title": "Tajhat Palace and the city of Rangpur",
@@ -2588,7 +2588,7 @@
     {
       "id": "rangpur-04",
       "relative": "images/playbook/divisions/rangpur-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "4/12",
       "title": "The temple of Kantajew",
@@ -2597,7 +2597,7 @@
     {
       "id": "rangpur-05",
       "relative": "images/playbook/divisions/rangpur-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "5/12",
       "title": "Ramsagar and the fruits of Dinajpur",
@@ -2606,7 +2606,7 @@
     {
       "id": "rangpur-06",
       "relative": "images/playbook/divisions/rangpur-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "6/12",
       "title": "The river Teesta",
@@ -2615,7 +2615,7 @@
     {
       "id": "rangpur-07",
       "relative": "images/playbook/divisions/rangpur-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "7/12",
       "title": "Bhawaiya, the song of the north",
@@ -2624,7 +2624,7 @@
     {
       "id": "rangpur-08",
       "relative": "images/playbook/divisions/rangpur-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "8/12",
       "title": "Tea at the top of Bangladesh",
@@ -2633,7 +2633,7 @@
     {
       "id": "rangpur-09",
       "relative": "images/playbook/divisions/rangpur-09.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "9/12",
       "title": "Chars and the hungry season",
@@ -2642,7 +2642,7 @@
     {
       "id": "rangpur-10",
       "relative": "images/playbook/divisions/rangpur-10.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "10/12",
       "title": "Railway town of Saidpur",
@@ -2651,7 +2651,7 @@
     {
       "id": "rangpur-11",
       "relative": "images/playbook/divisions/rangpur-11.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "11/12",
       "title": "The cold north",
@@ -2660,7 +2660,7 @@
     {
       "id": "rangpur-12",
       "relative": "images/playbook/divisions/rangpur-12.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur Division in depth",
       "slide": "12/12",
       "title": "The enclaves that came home",
@@ -2669,7 +2669,7 @@
     {
       "id": "narayanganj-01",
       "relative": "images/playbook/districts/narayanganj-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narayanganj District",
       "slide": "1/8",
       "title": "The port on the Shitalakshya",
@@ -2678,7 +2678,7 @@
     {
       "id": "narayanganj-02",
       "relative": "images/playbook/districts/narayanganj-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narayanganj District",
       "slide": "2/8",
       "title": "The Dundee of the East",
@@ -2687,7 +2687,7 @@
     {
       "id": "narayanganj-03",
       "relative": "images/playbook/districts/narayanganj-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narayanganj District",
       "slide": "3/8",
       "title": "The Adamjee mill",
@@ -2696,7 +2696,7 @@
     {
       "id": "narayanganj-04",
       "relative": "images/playbook/districts/narayanganj-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narayanganj District",
       "slide": "4/8",
       "title": "Forts on the river",
@@ -2705,7 +2705,7 @@
     {
       "id": "narayanganj-05",
       "relative": "images/playbook/districts/narayanganj-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narayanganj District",
       "slide": "5/8",
       "title": "Sonargaon’s old mosque and streets",
@@ -2714,7 +2714,7 @@
     {
       "id": "narayanganj-06",
       "relative": "images/playbook/districts/narayanganj-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narayanganj District",
       "slide": "6/8",
       "title": "Jamdani at Rupganj",
@@ -2723,7 +2723,7 @@
     {
       "id": "narayanganj-07",
       "relative": "images/playbook/districts/narayanganj-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narayanganj District",
       "slide": "7/8",
       "title": "Boats, ships and docks",
@@ -2732,7 +2732,7 @@
     {
       "id": "narayanganj-08",
       "relative": "images/playbook/districts/narayanganj-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narayanganj District",
       "slide": "8/8",
       "title": "A river to be saved",
@@ -2741,7 +2741,7 @@
     {
       "id": "bandarban-01",
       "relative": "images/playbook/districts/bandarban-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bandarban District",
       "slide": "1/8",
       "title": "The district of the hills",
@@ -2750,7 +2750,7 @@
     {
       "id": "bandarban-02",
       "relative": "images/playbook/districts/bandarban-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bandarban District",
       "slide": "2/8",
       "title": "The Sangu river",
@@ -2759,7 +2759,7 @@
     {
       "id": "bandarban-03",
       "relative": "images/playbook/districts/bandarban-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bandarban District",
       "slide": "3/8",
       "title": "The Bohmong chief",
@@ -2768,7 +2768,7 @@
     {
       "id": "bandarban-04",
       "relative": "images/playbook/districts/bandarban-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bandarban District",
       "slide": "4/8",
       "title": "The Golden Temple",
@@ -2777,7 +2777,7 @@
     {
       "id": "bandarban-05",
       "relative": "images/playbook/districts/bandarban-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bandarban District",
       "slide": "5/8",
       "title": "The blue lake in the hills",
@@ -2786,7 +2786,7 @@
     {
       "id": "bandarban-06",
       "relative": "images/playbook/districts/bandarban-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bandarban District",
       "slide": "6/8",
       "title": "Above the clouds",
@@ -2795,7 +2795,7 @@
     {
       "id": "bandarban-07",
       "relative": "images/playbook/districts/bandarban-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bandarban District",
       "slide": "7/8",
       "title": "Jhum, bamboo and cloth",
@@ -2804,7 +2804,7 @@
     {
       "id": "bandarban-08",
       "relative": "images/playbook/districts/bandarban-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bandarban District",
       "slide": "8/8",
       "title": "Walking the Keokradong trail",
@@ -2813,7 +2813,7 @@
     {
       "id": "sunamganj-01",
       "relative": "images/playbook/districts/sunamganj-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sunamganj District",
       "slide": "1/8",
       "title": "The district of haors",
@@ -2822,7 +2822,7 @@
     {
       "id": "sunamganj-02",
       "relative": "images/playbook/districts/sunamganj-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sunamganj District",
       "slide": "2/8",
       "title": "Tanguar Haor",
@@ -2831,7 +2831,7 @@
     {
       "id": "sunamganj-03",
       "relative": "images/playbook/districts/sunamganj-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sunamganj District",
       "slide": "3/8",
       "title": "A swamp of trees",
@@ -2840,7 +2840,7 @@
     {
       "id": "sunamganj-04",
       "relative": "images/playbook/districts/sunamganj-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sunamganj District",
       "slide": "4/8",
       "title": "One crop a year",
@@ -2849,7 +2849,7 @@
     {
       "id": "sunamganj-05",
       "relative": "images/playbook/districts/sunamganj-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sunamganj District",
       "slide": "5/8",
       "title": "The flood of 2017",
@@ -2858,7 +2858,7 @@
     {
       "id": "sunamganj-06",
       "relative": "images/playbook/districts/sunamganj-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sunamganj District",
       "slide": "6/8",
       "title": "When the haor is a lake of fish",
@@ -2867,7 +2867,7 @@
     {
       "id": "sunamganj-07",
       "relative": "images/playbook/districts/sunamganj-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sunamganj District",
       "slide": "7/8",
       "title": "The blue lake of Tekerghat",
@@ -2876,7 +2876,7 @@
     {
       "id": "sunamganj-08",
       "relative": "images/playbook/districts/sunamganj-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sunamganj District",
       "slide": "8/8",
       "title": "A songwriter’s country",
@@ -2885,7 +2885,7 @@
     {
       "id": "patuakhali-01",
       "relative": "images/playbook/districts/patuakhali-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Patuakhali District",
       "slide": "1/8",
       "title": "Where the rivers meet the sea",
@@ -2894,7 +2894,7 @@
     {
       "id": "patuakhali-02",
       "relative": "images/playbook/districts/patuakhali-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Patuakhali District",
       "slide": "2/8",
       "title": "Kuakata and the Gangamati",
@@ -2903,7 +2903,7 @@
     {
       "id": "patuakhali-03",
       "relative": "images/playbook/districts/patuakhali-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Patuakhali District",
       "slide": "3/8",
       "title": "The Rakhine of the coast",
@@ -2912,7 +2912,7 @@
     {
       "id": "patuakhali-04",
       "relative": "images/playbook/districts/patuakhali-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Patuakhali District",
       "slide": "4/8",
       "title": "Mohipur and the dried fish",
@@ -2921,7 +2921,7 @@
     {
       "id": "patuakhali-05",
       "relative": "images/playbook/districts/patuakhali-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Patuakhali District",
       "slide": "5/8",
       "title": "Payra, the new port",
@@ -2930,7 +2930,7 @@
     {
       "id": "patuakhali-06",
       "relative": "images/playbook/districts/patuakhali-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Patuakhali District",
       "slide": "6/8",
       "title": "The storm of 2007",
@@ -2939,7 +2939,7 @@
     {
       "id": "patuakhali-07",
       "relative": "images/playbook/districts/patuakhali-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Patuakhali District",
       "slide": "7/8",
       "title": "Coconuts, betel nut and watermelon",
@@ -2948,7 +2948,7 @@
     {
       "id": "patuakhali-08",
       "relative": "images/playbook/districts/patuakhali-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Patuakhali District",
       "slide": "8/8",
       "title": "A faster road to the coast",
@@ -2957,7 +2957,7 @@
     {
       "id": "kushtia-01",
       "relative": "images/playbook/districts/kushtia-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kushtia District",
       "slide": "1/8",
       "title": "The Gorai and the Padma",
@@ -2966,7 +2966,7 @@
     {
       "id": "kushtia-02",
       "relative": "images/playbook/districts/kushtia-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kushtia District",
       "slide": "2/8",
       "title": "Lalon, the singer of the soul",
@@ -2975,7 +2975,7 @@
     {
       "id": "kushtia-03",
       "relative": "images/playbook/districts/kushtia-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kushtia District",
       "slide": "3/8",
       "title": "The akhra at Cheuria",
@@ -2984,7 +2984,7 @@
     {
       "id": "kushtia-04",
       "relative": "images/playbook/districts/kushtia-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kushtia District",
       "slide": "4/8",
       "title": "The poet’s houseboat at Shelaidaha",
@@ -2993,7 +2993,7 @@
     {
       "id": "kushtia-05",
       "relative": "images/playbook/districts/kushtia-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kushtia District",
       "slide": "5/8",
       "title": "The writer of Lahinipara",
@@ -3002,7 +3002,7 @@
     {
       "id": "kushtia-06",
       "relative": "images/playbook/districts/kushtia-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kushtia District",
       "slide": "6/8",
       "title": "Looms and mills",
@@ -3011,7 +3011,7 @@
     {
       "id": "kushtia-07",
       "relative": "images/playbook/districts/kushtia-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kushtia District",
       "slide": "7/8",
       "title": "A bridge and a university",
@@ -3020,7 +3020,7 @@
     {
       "id": "kushtia-08",
       "relative": "images/playbook/districts/kushtia-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kushtia District",
       "slide": "8/8",
       "title": "A thirsty river",
@@ -3029,7 +3029,7 @@
     {
       "id": "bogura-01",
       "relative": "images/playbook/districts/bogura-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bogura District",
       "slide": "1/8",
       "title": "The river Karatoya",
@@ -3038,7 +3038,7 @@
     {
       "id": "bogura-02",
       "relative": "images/playbook/districts/bogura-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bogura District",
       "slide": "2/8",
       "title": "The city of Pundra",
@@ -3047,7 +3047,7 @@
     {
       "id": "bogura-03",
       "relative": "images/playbook/districts/bogura-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bogura District",
       "slide": "3/8",
       "title": "Behula and the raft",
@@ -3056,16 +3056,16 @@
     {
       "id": "bogura-04",
       "relative": "images/playbook/districts/bogura-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bogura District",
       "slide": "4/8",
       "title": "The monastery of Vasu",
-      "prompt": "Illustration, \"Bogura District\", chapter 4 of 8, \"The monastery of Vasu\". The tall mound of an ancient brick monastery in a field, with arched doorways of the cells visible, a green hill-like slope of grass and trees, a monk in saffron walking along the path. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Bogura District\", chapter 4 of 8, \"The monastery of Vasu\". The excavated low red-brick foundations and roofless rectangular cells of Vasu Vihara around a grassy courtyard, farmland and trees beyond, a visiting monk in saffron walking on the outside path. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "bogura-05",
       "relative": "images/playbook/districts/bogura-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bogura District",
       "slide": "5/8",
       "title": "Hiuen Tsang’s Pundravardhana",
@@ -3074,7 +3074,7 @@
     {
       "id": "bogura-06",
       "relative": "images/playbook/districts/bogura-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bogura District",
       "slide": "6/8",
       "title": "A town of colleges and nawabs",
@@ -3083,7 +3083,7 @@
     {
       "id": "bogura-07",
       "relative": "images/playbook/districts/bogura-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bogura District",
       "slide": "7/8",
       "title": "Fields of the north-west",
@@ -3092,7 +3092,7 @@
     {
       "id": "bogura-08",
       "relative": "images/playbook/districts/bogura-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bogura District",
       "slide": "8/8",
       "title": "The river that moved",
@@ -3101,7 +3101,7 @@
     {
       "id": "netrokona-01",
       "relative": "images/playbook/districts/netrokona-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Netrokona District",
       "slide": "1/8",
       "title": "Haors under the Garo Hills",
@@ -3110,7 +3110,7 @@
     {
       "id": "netrokona-02",
       "relative": "images/playbook/districts/netrokona-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Netrokona District",
       "slide": "2/8",
       "title": "The Someshwari",
@@ -3119,7 +3119,7 @@
     {
       "id": "netrokona-03",
       "relative": "images/playbook/districts/netrokona-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Netrokona District",
       "slide": "3/8",
       "title": "White clay and ceramics",
@@ -3128,7 +3128,7 @@
     {
       "id": "netrokona-04",
       "relative": "images/playbook/districts/netrokona-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Netrokona District",
       "slide": "4/8",
       "title": "Songs from the villages",
@@ -3137,7 +3137,7 @@
     {
       "id": "netrokona-05",
       "relative": "images/playbook/districts/netrokona-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Netrokona District",
       "slide": "5/8",
       "title": "Humayun Ahmed’s village",
@@ -3146,7 +3146,7 @@
     {
       "id": "netrokona-06",
       "relative": "images/playbook/districts/netrokona-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Netrokona District",
       "slide": "6/8",
       "title": "A land of many peoples",
@@ -3155,7 +3155,7 @@
     {
       "id": "netrokona-07",
       "relative": "images/playbook/districts/netrokona-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Netrokona District",
       "slide": "7/8",
       "title": "The rain-fed harvest",
