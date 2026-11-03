@@ -105,7 +105,7 @@ const meta = [
 export const districtStories = Object.fromEntries(meta.map(([id, name, nameBn, division, chapters]) => [id, {
   id, name, nameBn, division, title: `${name} District`, chapters,
   panels: chapters.map((ch, i) => ({
-    label: ch.heading, heading: ch.heading, art: districtArtPath(id, i), en: ch.en, deep: [ch.deep],
+    label: ch.heading, heading: ch.heading, art: districtArtPath(id, i), artAlt: ch.paint, en: ch.en, deep: [ch.deep],
     bn: ch.main.bn, roman: ch.main.roman, lineEn: ch.main.en, more: ch.more,
   })),
 }]))

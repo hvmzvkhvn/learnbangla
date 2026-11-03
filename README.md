@@ -130,6 +130,8 @@ The Playbook's **Big stories** section is for every age. Each story is five part
 
 The four stories so far: *Kabuliwala* (Tagore's classic, retold), *The Language Movement* (1947–2000), *Begum Rokeya* (1880–1932), and *The Honey Season* (a fictional boy in the Sundarbans). Each lives in `src/data/playbook/long/<story>.js` with its five part files in `long/<story>/`.
 
+**Illustration coverage.** All 200 big-story slides and 51 of 96 division chapters have dedicated paintings. The remaining 45 division chapters and 384 district chapters use the reader’s text fallback.
+
 **Paintings are separate from the text.** A slide looks for `public/images/playbook/long/<story-id>-NN.webp` (NN = 01…50) and shows a text card until the file exists, so paintings can be added a few at a time. `node scripts/long-art-plan.mjs` rewrites `docs/long-story-art-plan.json`: one generation prompt per slide (200 so far), each with the story's character and setting notes so the pictures stay consistent.
 
 `tests/long-stories.test.mjs` checks every story has 50 unique slides and that every Bangla line has valid script, a matching romanisation (same word count) and English, that easier lines stay short and fuller lines stay long. It cannot check whether the Bangla is *good* Bangla, or the history correct: new stories need a native-speaker read on `/review` and a fact check before wide release.

@@ -15,6 +15,7 @@ export const divisionPages = (id, chapters) => chapters.map((ch, i) => ({
   label: ch.heading,
   heading: ch.heading,
   art: divisionArtPath(id, i),
+  artAlt: ch.paint,
   en: ch.en,
   deep: [ch.deep],
   bn: ch.main.bn,

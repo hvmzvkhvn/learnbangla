@@ -25,6 +25,7 @@ export function longPages(story, level) {
       partTitle: part.title,
       partTitleBn: part.titleBn,
       art: longArtPath(story.id, i),
+      artAlt: b.paint,
       en: t.en,
       deep: t.deep ? [t.deep] : [],
       bn: first.bn,
