@@ -1,0 +1,44 @@
+{
+  "prompts": [
+    {
+      "id": "khulna-01",
+      "relative": "images/playbook/districts/khulna-01.webp",
+      "prompt": "Illustration, \"Khulna District\", chapter 1 of 8, \"The city of two rivers\". A river-city skyline at dusk: the broad Rupsha with ferries and boats, the Bhairab joining from the left, a busy ghat with traders, jute warehouses and a few high-rises, flocks of birds crossing the orange sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "khulna-02",
+      "relative": "images/playbook/districts/khulna-02.webp",
+      "prompt": "Illustration, \"Khulna District\", chapter 2 of 8, \"Khan Jahan Ali Bridge\". Khan Jahan Ali Bridge over the broad Rupsha River: a long low concrete box-girder bridge on sturdy piers, buses crossing, a small boat beneath, city buildings on one bank and green fields on the other in morning mist. No cable stays, suspension cables or soaring pylons. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "khulna-03",
+      "relative": "images/playbook/districts/khulna-03.webp",
+      "prompt": "Illustration, \"Khulna District\", chapter 3 of 8, \"Khalishpur and the jute mills\". An industrial riverside quarter: tall brick mill buildings with chimneys, a canal of bales of golden jute on barges, workers with gamchhas on their shoulders going to a shift, a tea stall and bicycles. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "khulna-04",
+      "relative": "images/playbook/districts/khulna-04.webp",
+      "prompt": "Illustration, \"Khulna District\", chapter 4 of 8, \"The shipyard on the Rupsha\". A dockyard on a river at sunrise: a half-built steel ship on a slipway, workers with welding masks, sparks, a crane lifting a block, an old wooden boat in the foreground being painted. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "khulna-05",
+      "relative": "images/playbook/districts/khulna-05.webp",
+      "prompt": "Illustration, \"Khulna District\", chapter 5 of 8, \"Life at the forest’s edge\". A village on an earthen embankment beside a mangrove forest at low tide: houses on stilts, women carrying water pots along the dyke, a fisherman mending a net, the dark green Sundarbans just across a creek. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "khulna-06",
+      "relative": "images/playbook/districts/khulna-06.webp",
+      "prompt": "Illustration, \"Khulna District\", chapter 6 of 8, \"The chemist of Raruli\". A young scholar in a simple dhoti at a table in a village house with glass flasks and bottles, a hand-lettered sign, books on shelves, a window opening to a pond and betel palms, kerosene lamp glow. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "khulna-07",
+      "relative": "images/playbook/districts/khulna-07.webp",
+      "prompt": "Illustration, \"Khulna District\", chapter 7 of 8, \"Crabs and the white gold\". A coastal pond farm at dawn: rows of net enclosures where women lift mud crabs tied with grass, a boy with a bucket of small shrimps, a thatched shed, a hint of mangrove on the horizon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "khulna-08",
+      "relative": "images/playbook/districts/khulna-08.webp",
+      "prompt": "Illustration, \"Khulna District\", chapter 8 of 8, \"A university for the south\". A leafy campus beside a river: a long modern building with students arriving on foot and rickshaws, a sign for Forestry and Wood Technology, a group of young researchers with notebooks and a boat tied at the bank, mist rising. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    }
+  ]
+}

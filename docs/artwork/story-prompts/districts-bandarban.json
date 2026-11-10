@@ -1,0 +1,44 @@
+{
+  "prompts": [
+    {
+      "id": "bandarban-01",
+      "relative": "images/playbook/districts/bandarban-01.webp",
+      "prompt": "Illustration, \"Bandarban District\", chapter 1 of 8, \"The district of the hills\". Layer upon layer of blue-green ridges at dawn with cloud filling the valleys, a thin river shining far below, a bamboo village on a high slope. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "bandarban-02",
+      "relative": "images/playbook/districts/bandarban-02.webp",
+      "prompt": "Illustration, \"Bandarban District\", chapter 2 of 8, \"The Sangu river\". A long narrow boat gliding up a green gorge on a clear river, steep forested walls on both sides, a boatman at the stern, a waterfall in the distance. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "bandarban-03",
+      "relative": "images/playbook/districts/bandarban-03.webp",
+      "prompt": "Illustration, \"Bandarban District\", chapter 3 of 8, \"The Bohmong chief\". A hill-country gathering of village headmen in traditional dress seated on mats in a wooden hall, an elder in a long embroidered robe at the centre, banners and carved pillars. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "bandarban-04",
+      "relative": "images/playbook/districts/bandarban-04.webp",
+      "prompt": "Illustration, \"Bandarban District\", chapter 4 of 8, \"The Golden Temple\". A grand Buddhist temple with tiered golden roofs on a green hilltop, a huge seated golden Buddha visible through the open hall, monks in saffron robes, wreaths of clouds. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "bandarban-05",
+      "relative": "images/playbook/districts/bandarban-05.webp",
+      "prompt": "Illustration, \"Bandarban District\", chapter 5 of 8, \"The blue lake in the hills\". A deep blue lake in a bowl of green hills at sunrise, a bamboo hut at the shore, a few trekkers camped beside it, mist drifting over the water and a Bawm woman carrying firewood. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "bandarban-06",
+      "relative": "images/playbook/districts/bandarban-06.webp",
+      "prompt": "Illustration, \"Bandarban District\", chapter 6 of 8, \"Above the clouds\". A mountain-top viewpoint with a small resort and a railing, wisps of cloud flowing through the valleys below, the rising sun turning them gold, visitors silent with cameras. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "bandarban-07",
+      "relative": "images/playbook/districts/bandarban-07.webp",
+      "prompt": "Illustration, \"Bandarban District\", chapter 7 of 8, \"Jhum, bamboo and cloth\". A hill farm in the harvest: terraced slopes of golden rice mixed with maize and vegetables, women in woven wrap-around skirts cutting grain with sickles, a bamboo granary behind. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    },
+    {
+      "id": "bandarban-08",
+      "relative": "images/playbook/districts/bandarban-08.webp",
+      "prompt": "Illustration, \"Bandarban District\", chapter 8 of 8, \"Walking the Keokradong trail\". A line of trekkers with backpacks and a local guide crossing a ridge path at dawn, a village of bamboo huts below, a hanging bridge ahead, mist in the valley. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+    }
+  ]
+}
