@@ -4064,16 +4064,16 @@
     {
       "id": "naogaon-04",
       "relative": "images/playbook/districts/naogaon-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Naogaon District",
       "slide": "4/8",
       "title": "The black-stone mosque of Kusumba",
-      "prompt": "Illustration, \"Naogaon District\", chapter 4 of 8, \"The black-stone mosque of Kusumba\". A sixteenth-century mosque of dark stone and white plaster with three domes and carved panels in a leafy compound, an old tamarind tree, a worshipper entering, a still pond in front and a cloudy sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Naogaon District\", chapter 4 of 8, \"The black-stone mosque of Kusumba\". A sixteenth-century mosque of dark stone and white plaster with six domes in two rows of three and carved panels in a leafy compound, an old tamarind tree, a worshipper entering, a still pond in front and a cloudy sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "naogaon-05",
       "relative": "images/playbook/districts/naogaon-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Naogaon District",
       "slide": "5/8",
       "title": "The Santals of the Barind",
@@ -4082,7 +4082,7 @@
     {
       "id": "naogaon-06",
       "relative": "images/playbook/districts/naogaon-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Naogaon District",
       "slide": "6/8",
       "title": "The Atrai and the beels",
@@ -4091,7 +4091,7 @@
     {
       "id": "naogaon-07",
       "relative": "images/playbook/districts/naogaon-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Naogaon District",
       "slide": "7/8",
       "title": "The mills and the markets",
@@ -4100,7 +4100,7 @@
     {
       "id": "naogaon-08",
       "relative": "images/playbook/districts/naogaon-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Naogaon District",
       "slide": "8/8",
       "title": "A monastery brought back to light",
@@ -4109,7 +4109,7 @@
     {
       "id": "sirajganj-01",
       "relative": "images/playbook/districts/sirajganj-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sirajganj District",
       "slide": "1/8",
       "title": "The port on the Jamuna",
@@ -4118,7 +4118,7 @@
     {
       "id": "sirajganj-02",
       "relative": "images/playbook/districts/sirajganj-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sirajganj District",
       "slide": "2/8",
       "title": "The golden fibre trade",
@@ -4127,7 +4127,7 @@
     {
       "id": "sirajganj-03",
       "relative": "images/playbook/districts/sirajganj-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sirajganj District",
       "slide": "3/8",
       "title": "Tagore at Shahzadpur",
@@ -4136,7 +4136,7 @@
     {
       "id": "sirajganj-04",
       "relative": "images/playbook/districts/sirajganj-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sirajganj District",
       "slide": "4/8",
       "title": "The shrine of Shah Dawla",
@@ -4145,7 +4145,7 @@
     {
       "id": "sirajganj-05",
       "relative": "images/playbook/districts/sirajganj-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sirajganj District",
       "slide": "5/8",
       "title": "The poet of the Anal Prabaha",
@@ -4154,7 +4154,7 @@
     {
       "id": "sirajganj-06",
       "relative": "images/playbook/districts/sirajganj-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sirajganj District",
       "slide": "6/8",
       "title": "The looms of Belkuchi",
@@ -4163,16 +4163,16 @@
     {
       "id": "sirajganj-07",
       "relative": "images/playbook/districts/sirajganj-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sirajganj District",
       "slide": "7/8",
       "title": "Enayetpur Sharif",
-      "prompt": "Illustration, \"Sirajganj District\", chapter 7 of 8, \"Enayetpur Sharif\". A large shrine complex at a great annual gathering: a huge crowd of men in white caps seated in rows on a field before a domed building, banners with Arabic calligraphy, tents, a minaret, afternoon sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Sirajganj District\", chapter 7 of 8, \"Enayetpur Sharif\". A large shrine complex at a great annual gathering: a huge crowd of men in white caps seated in rows on a field before a domed building, plain fabric awnings, tents, a minaret, afternoon sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "sirajganj-08",
       "relative": "images/playbook/districts/sirajganj-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sirajganj District",
       "slide": "8/8",
       "title": "The river that eats and gives",
@@ -4181,7 +4181,7 @@
     {
       "id": "noakhali-01",
       "relative": "images/playbook/districts/noakhali-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Noakhali District",
       "slide": "1/8",
       "title": "Land made by the Meghna",
@@ -4190,7 +4190,7 @@
     {
       "id": "noakhali-02",
       "relative": "images/playbook/districts/noakhali-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Noakhali District",
       "slide": "2/8",
       "title": "Hatiya, the island district",
@@ -4199,7 +4199,7 @@
     {
       "id": "noakhali-03",
       "relative": "images/playbook/districts/noakhali-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Noakhali District",
       "slide": "3/8",
       "title": "Nijhum Dwip, the quiet island",
@@ -4208,16 +4208,16 @@
     {
       "id": "noakhali-04",
       "relative": "images/playbook/districts/noakhali-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Noakhali District",
       "slide": "4/8",
       "title": "The land that moves",
-      "prompt": "Illustration, \"Noakhali District\", chapter 4 of 8, \"The land that moves\". A before-and-after river scene: a new char with first grass and a flag planted by a group of young men arguing and gesturing; in the background old land cut away with a half-fallen house at the bank, a fisherman casting a net between them. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Noakhali District\", chapter 4 of 8, \"The land that moves\". A single continuous river landscape: a new char with first grass and a flag planted by a group of young men arguing and gesturing; in the background old land cut away with a half-fallen house at the bank, a fisherman casting a net between them. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "noakhali-05",
       "relative": "images/playbook/districts/noakhali-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Noakhali District",
       "slide": "5/8",
       "title": "The walk of 1946",
@@ -4226,7 +4226,7 @@
     {
       "id": "noakhali-06",
       "relative": "images/playbook/districts/noakhali-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Noakhali District",
       "slide": "6/8",
       "title": "The Gandhi Ashram at Joyag",
@@ -4235,7 +4235,7 @@
     {
       "id": "noakhali-07",
       "relative": "images/playbook/districts/noakhali-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Noakhali District",
       "slide": "7/8",
       "title": "Bhasan Char",
@@ -4244,16 +4244,16 @@
     {
       "id": "noakhali-08",
       "relative": "images/playbook/districts/noakhali-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Noakhali District",
       "slide": "8/8",
       "title": "Sons of the soil, workers of the world",
-      "prompt": "Illustration, \"Noakhali District\", chapter 8 of 8, \"Sons of the soil, workers of the world\". A village family at an airport arrivals gate and a mosque in the village: a young man hugging his mother with a suitcase, a new brick house with a tin roof under construction, a mobile phone in a woman’s hand showing a face on a video call. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Noakhali District\", chapter 8 of 8, \"Sons of the soil, workers of the world\". A family reunion in a village courtyard: a young man hugging his mother with a suitcase, a new brick house with a tin roof under construction, a mobile phone in a woman’s hand showing a face on a video call. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "habiganj-01",
       "relative": "images/playbook/districts/habiganj-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Habiganj District",
       "slide": "1/8",
       "title": "Hills in the east, haors in the west",
@@ -4262,7 +4262,7 @@
     {
       "id": "habiganj-02",
       "relative": "images/playbook/districts/habiganj-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Habiganj District",
       "slide": "2/8",
       "title": "Satchari, the hill forest",
@@ -4271,7 +4271,7 @@
     {
       "id": "habiganj-03",
       "relative": "images/playbook/districts/habiganj-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Habiganj District",
       "slide": "3/8",
       "title": "Gibbons and leaf monkeys",
@@ -4280,7 +4280,7 @@
     {
       "id": "habiganj-04",
       "relative": "images/playbook/districts/habiganj-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Habiganj District",
       "slide": "4/8",
       "title": "The Tripura of the hills",
@@ -4289,7 +4289,7 @@
     {
       "id": "habiganj-05",
       "relative": "images/playbook/districts/habiganj-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Habiganj District",
       "slide": "5/8",
       "title": "Tea at Teliapara",
@@ -4298,7 +4298,7 @@
     {
       "id": "habiganj-06",
       "relative": "images/playbook/districts/habiganj-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Habiganj District",
       "slide": "6/8",
       "title": "The gas beneath Nabiganj",
@@ -4307,7 +4307,7 @@
     {
       "id": "habiganj-07",
       "relative": "images/playbook/districts/habiganj-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Habiganj District",
       "slide": "7/8",
       "title": "Baniachong, the great village",
@@ -4316,7 +4316,7 @@
     {
       "id": "habiganj-08",
       "relative": "images/playbook/districts/habiganj-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Habiganj District",
       "slide": "8/8",
       "title": "Ajmiriganj and the flood of the haor",
@@ -4325,7 +4325,7 @@
     {
       "id": "satkhira-01",
       "relative": "images/playbook/districts/satkhira-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Satkhira District",
       "slide": "1/8",
       "title": "The far south-west",
@@ -4334,7 +4334,7 @@
     {
       "id": "satkhira-02",
       "relative": "images/playbook/districts/satkhira-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Satkhira District",
       "slide": "2/8",
       "title": "The goddess of Jashoreshwari",
@@ -4343,7 +4343,7 @@
     {
       "id": "satkhira-03",
       "relative": "images/playbook/districts/satkhira-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Satkhira District",
       "slide": "3/8",
       "title": "Burigoalini, the edge of the forest",
@@ -4352,7 +4352,7 @@
     {
       "id": "satkhira-04",
       "relative": "images/playbook/districts/satkhira-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Satkhira District",
       "slide": "4/8",
       "title": "Gabura, the island of the climate",
@@ -4361,7 +4361,7 @@
     {
       "id": "satkhira-05",
       "relative": "images/playbook/districts/satkhira-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Satkhira District",
       "slide": "5/8",
       "title": "The day Aila came",
@@ -4370,7 +4370,7 @@
     {
       "id": "satkhira-06",
       "relative": "images/playbook/districts/satkhira-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Satkhira District",
       "slide": "6/8",
       "title": "Water, water everywhere",
@@ -4379,7 +4379,7 @@
     {
       "id": "satkhira-07",
       "relative": "images/playbook/districts/satkhira-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Satkhira District",
       "slide": "7/8",
       "title": "White gold and its costs",
@@ -4388,7 +4388,7 @@
     {
       "id": "satkhira-08",
       "relative": "images/playbook/districts/satkhira-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Satkhira District",
       "slide": "8/8",
       "title": "People and tigers",
@@ -4397,7 +4397,7 @@
     {
       "id": "dhaka-01",
       "relative": "images/playbook/districts/dhaka-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka District",
       "slide": "1/8",
       "title": "A city of many layers",
@@ -4406,7 +4406,7 @@
     {
       "id": "dhaka-02",
       "relative": "images/playbook/districts/dhaka-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka District",
       "slide": "2/8",
       "title": "The temple of Dhakeshwari",
@@ -4415,16 +4415,16 @@
     {
       "id": "dhaka-03",
       "relative": "images/playbook/districts/dhaka-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka District",
       "slide": "3/8",
       "title": "The Armenian church",
-      "prompt": "Illustration, \"Dhaka District\", chapter 3 of 8, \"The Armenian church\". A small white church with a clock tower and a courtyard of old gravestones with Armenian lettering, sunlight through tall trees, a caretaker sweeping leaves, narrow Old Dhaka lanes pressing in on every side. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Dhaka District\", chapter 3 of 8, \"The Armenian church\". A small white church with a clock tower and a courtyard of old weathered gravestones with indistinct engraved marks, sunlight through tall trees, a caretaker sweeping leaves, narrow Old Dhaka lanes pressing in on every side. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "dhaka-04",
       "relative": "images/playbook/districts/dhaka-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka District",
       "slide": "4/8",
       "title": "Curzon Hall and the university",
@@ -4433,7 +4433,7 @@
     {
       "id": "dhaka-05",
       "relative": "images/playbook/districts/dhaka-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka District",
       "slide": "5/8",
       "title": "Hatirjheel",
@@ -4442,7 +4442,7 @@
     {
       "id": "dhaka-06",
       "relative": "images/playbook/districts/dhaka-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka District",
       "slide": "6/8",
       "title": "The Martyrs’ Memorial at Savar",
@@ -4451,7 +4451,7 @@
     {
       "id": "dhaka-07",
       "relative": "images/playbook/districts/dhaka-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka District",
       "slide": "7/8",
       "title": "Brass and chariots at Dhamrai",
@@ -4460,7 +4460,7 @@
     {
       "id": "dhaka-08",
       "relative": "images/playbook/districts/dhaka-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Dhaka District",
       "slide": "8/8",
       "title": "Across the Buriganga",
@@ -4469,7 +4469,7 @@
     {
       "id": "natore-01",
       "relative": "images/playbook/districts/natore-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Natore District",
       "slide": "1/8",
       "title": "Where the Padma plain flattens",
@@ -4478,7 +4478,7 @@
     {
       "id": "natore-02",
       "relative": "images/playbook/districts/natore-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Natore District",
       "slide": "2/8",
       "title": "Rani Bhabani",
@@ -4487,7 +4487,7 @@
     {
       "id": "natore-03",
       "relative": "images/playbook/districts/natore-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Natore District",
       "slide": "3/8",
       "title": "The Natore Rajbari",
@@ -4496,7 +4496,7 @@
     {
       "id": "natore-04",
       "relative": "images/playbook/districts/natore-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Natore District",
       "slide": "4/8",
       "title": "The northern residence",
@@ -4505,7 +4505,7 @@
     {
       "id": "natore-05",
       "relative": "images/playbook/districts/natore-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Natore District",
       "slide": "5/8",
       "title": "The Chalan Beel",
@@ -4514,7 +4514,7 @@
     {
       "id": "natore-06",
       "relative": "images/playbook/districts/natore-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Natore District",
       "slide": "6/8",
       "title": "Kanchagolla",
@@ -4523,7 +4523,7 @@
     {
       "id": "natore-07",
       "relative": "images/playbook/districts/natore-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Natore District",
       "slide": "7/8",
       "title": "Singra and the rivers",
@@ -4532,7 +4532,7 @@
     {
       "id": "natore-08",
       "relative": "images/playbook/districts/natore-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Natore District",
       "slide": "8/8",
       "title": "A town you pass through",
@@ -4541,7 +4541,7 @@
     {
       "id": "pabna-01",
       "relative": "images/playbook/districts/pabna-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pabna District",
       "slide": "1/8",
       "title": "A district on the Padma",
@@ -4550,7 +4550,7 @@
     {
       "id": "pabna-02",
       "relative": "images/playbook/districts/pabna-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pabna District",
       "slide": "2/8",
       "title": "The Hardinge Bridge",
@@ -4559,16 +4559,16 @@
     {
       "id": "pabna-03",
       "relative": "images/playbook/districts/pabna-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pabna District",
       "slide": "3/8",
       "title": "Lalon Shah Bridge",
-      "prompt": "Illustration, \"Pabna District\", chapter 3 of 8, \"Lalon Shah Bridge\". A modern road-and-rail bridge arching over a wide river on a bright morning, with the old steel railway bridge visible beside it, buses and trucks crossing, a passenger boat below and wisps of cloud. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Pabna District\", chapter 3 of 8, \"Lalon Shah Bridge\". A modern prestressed concrete road bridge on concrete piers extending over a wide river on a bright morning, with the old steel railway bridge visible beside it, buses and trucks crossing, a passenger boat below and wisps of cloud. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "pabna-04",
       "relative": "images/playbook/districts/pabna-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pabna District",
       "slide": "4/8",
       "title": "The peasants of eighteen seventy-three",
@@ -4577,7 +4577,7 @@
     {
       "id": "pabna-05",
       "relative": "images/playbook/districts/pabna-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pabna District",
       "slide": "5/8",
       "title": "Anukulchandra and the ashram",
@@ -4586,7 +4586,7 @@
     {
       "id": "pabna-06",
       "relative": "images/playbook/districts/pabna-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pabna District",
       "slide": "6/8",
       "title": "Looms in the lanes",
@@ -4595,7 +4595,7 @@
     {
       "id": "pabna-07",
       "relative": "images/playbook/districts/pabna-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pabna District",
       "slide": "7/8",
       "title": "Ishwardi",
@@ -4604,7 +4604,7 @@
     {
       "id": "pabna-08",
       "relative": "images/playbook/districts/pabna-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pabna District",
       "slide": "8/8",
       "title": "Life on the chars",
@@ -4613,7 +4613,7 @@
     {
       "id": "moulvibazar-01",
       "relative": "images/playbook/districts/moulvibazar-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Moulvibazar District",
       "slide": "1/8",
       "title": "Hills in a hundred greens",
@@ -4622,7 +4622,7 @@
     {
       "id": "moulvibazar-02",
       "relative": "images/playbook/districts/moulvibazar-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Moulvibazar District",
       "slide": "2/8",
       "title": "The tea capital",
@@ -4631,16 +4631,16 @@
     {
       "id": "moulvibazar-03",
       "relative": "images/playbook/districts/moulvibazar-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Moulvibazar District",
       "slide": "3/8",
       "title": "Seven colours in a cup",
-      "prompt": "Illustration, \"Moulvibazar District\", chapter 3 of 8, \"Seven colours in a cup\". A small tea shop with a glass cup showing seven bands of colour, from deep red to pale cream, a cheerful tea maker pouring from a height, wooden benches, a signboard in Bangla, customers leaning in to see. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Moulvibazar District\", chapter 3 of 8, \"Seven colours in a cup\". A small tea shop with a glass cup showing seven bands of colour, from deep red to pale cream, a cheerful tea maker pouring from a height, wooden benches, a plain unlettered signboard, customers leaning in to see. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "moulvibazar-04",
       "relative": "images/playbook/districts/moulvibazar-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Moulvibazar District",
       "slide": "4/8",
       "title": "Lawachara and the gibbons",
@@ -4649,7 +4649,7 @@
     {
       "id": "moulvibazar-05",
       "relative": "images/playbook/districts/moulvibazar-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Moulvibazar District",
       "slide": "5/8",
       "title": "Madhabkunda",
@@ -4658,7 +4658,7 @@
     {
       "id": "moulvibazar-06",
       "relative": "images/playbook/districts/moulvibazar-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Moulvibazar District",
       "slide": "6/8",
       "title": "Hail Haor and Baikka Beel",
@@ -4667,7 +4667,7 @@
     {
       "id": "moulvibazar-07",
       "relative": "images/playbook/districts/moulvibazar-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Moulvibazar District",
       "slide": "7/8",
       "title": "Manipuri dance and other peoples",
@@ -4676,7 +4676,7 @@
     {
       "id": "moulvibazar-08",
       "relative": "images/playbook/districts/moulvibazar-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Moulvibazar District",
       "slide": "8/8",
       "title": "Pineapple and lemon hills",
@@ -4685,7 +4685,7 @@
     {
       "id": "bagerhat-01",
       "relative": "images/playbook/districts/bagerhat-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bagerhat District",
       "slide": "1/8",
       "title": "Between a medieval city and a mangrove forest",
@@ -4694,7 +4694,7 @@
     {
       "id": "bagerhat-02",
       "relative": "images/playbook/districts/bagerhat-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bagerhat District",
       "slide": "2/8",
       "title": "Khan Jahan Ali",
@@ -4703,7 +4703,7 @@
     {
       "id": "bagerhat-03",
       "relative": "images/playbook/districts/bagerhat-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bagerhat District",
       "slide": "3/8",
       "title": "Shat Gombuj Mosque",
@@ -4712,7 +4712,7 @@
     {
       "id": "bagerhat-04",
       "relative": "images/playbook/districts/bagerhat-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bagerhat District",
       "slide": "4/8",
       "title": "Other monuments of the old city",
@@ -4721,7 +4721,7 @@
     {
       "id": "bagerhat-05",
       "relative": "images/playbook/districts/bagerhat-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bagerhat District",
       "slide": "5/8",
       "title": "The crocodiles of the pond",
@@ -4730,7 +4730,7 @@
     {
       "id": "bagerhat-06",
       "relative": "images/playbook/districts/bagerhat-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bagerhat District",
       "slide": "6/8",
       "title": "Mongla Port",
@@ -4739,7 +4739,7 @@
     {
       "id": "bagerhat-07",
       "relative": "images/playbook/districts/bagerhat-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bagerhat District",
       "slide": "7/8",
       "title": "Hiron Point and the tigers",
@@ -4748,7 +4748,7 @@
     {
       "id": "bagerhat-08",
       "relative": "images/playbook/districts/bagerhat-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Bagerhat District",
       "slide": "8/8",
       "title": "Shrimp farms and salt",
@@ -4757,7 +4757,7 @@
     {
       "id": "kishoreganj-01",
       "relative": "images/playbook/districts/kishoreganj-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kishoreganj District",
       "slide": "1/8",
       "title": "A district of haors",
@@ -4766,7 +4766,7 @@
     {
       "id": "kishoreganj-02",
       "relative": "images/playbook/districts/kishoreganj-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kishoreganj District",
       "slide": "2/8",
       "title": "The railway town of Bhairab",
@@ -4775,7 +4775,7 @@
     {
       "id": "kishoreganj-03",
       "relative": "images/playbook/districts/kishoreganj-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kishoreganj District",
       "slide": "3/8",
       "title": "Zainul Abedin",
@@ -4784,7 +4784,7 @@
     {
       "id": "kishoreganj-04",
       "relative": "images/playbook/districts/kishoreganj-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kishoreganj District",
       "slide": "4/8",
       "title": "The Rays of Masua",
@@ -4793,7 +4793,7 @@
     {
       "id": "kishoreganj-05",
       "relative": "images/playbook/districts/kishoreganj-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kishoreganj District",
       "slide": "5/8",
       "title": "Isa Khan and the old forts",
@@ -4802,7 +4802,7 @@
     {
       "id": "kishoreganj-06",
       "relative": "images/playbook/districts/kishoreganj-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kishoreganj District",
       "slide": "6/8",
       "title": "The great Eid ground of Sholakia",
@@ -4811,7 +4811,7 @@
     {
       "id": "kishoreganj-07",
       "relative": "images/playbook/districts/kishoreganj-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kishoreganj District",
       "slide": "7/8",
       "title": "The ballads of the haor",
@@ -4820,16 +4820,16 @@
     {
       "id": "kishoreganj-08",
       "relative": "images/playbook/districts/kishoreganj-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Kishoreganj District",
       "slide": "8/8",
       "title": "When the early flood comes",
-      "prompt": "Illustration, \"Kishoreganj District\", chapter 8 of 8, \"When the early flood comes\". A farmer standing in a half-flooded rice field at dawn, grain only half cut, a woman with a basket of cut rice wading, boats being rushed to the edge, dark clouds in the north and a wall of water on the horizon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Kishoreganj District\", chapter 8 of 8, \"When the early flood comes\". A farmer standing in a half-flooded rice field at dawn, grain only half cut, a woman with a basket of cut rice wading, boats being rushed to the edge, dark clouds in the north and floodwater spreading across the distant fields. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "faridpur-01",
       "relative": "images/playbook/districts/faridpur-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Faridpur District",
       "slide": "1/8",
       "title": "A river-cut heartland",
@@ -4838,7 +4838,7 @@
     {
       "id": "faridpur-02",
       "relative": "images/playbook/districts/faridpur-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Faridpur District",
       "slide": "2/8",
       "title": "The village poet",
@@ -4847,7 +4847,7 @@
     {
       "id": "faridpur-03",
       "relative": "images/playbook/districts/faridpur-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Faridpur District",
       "slide": "3/8",
       "title": "The embroidered quilt",
@@ -4856,7 +4856,7 @@
     {
       "id": "faridpur-04",
       "relative": "images/playbook/districts/faridpur-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Faridpur District",
       "slide": "4/8",
       "title": "The sweetness of date juice",
@@ -4865,7 +4865,7 @@
     {
       "id": "faridpur-05",
       "relative": "images/playbook/districts/faridpur-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Faridpur District",
       "slide": "5/8",
       "title": "The Arial Khan and the char",
@@ -4874,7 +4874,7 @@
     {
       "id": "faridpur-06",
       "relative": "images/playbook/districts/faridpur-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Faridpur District",
       "slide": "6/8",
       "title": "The Faraizi reformers",
@@ -4883,7 +4883,7 @@
     {
       "id": "faridpur-07",
       "relative": "images/playbook/districts/faridpur-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Faridpur District",
       "slide": "7/8",
       "title": "Rajendra College and the freedom movement",
@@ -4892,7 +4892,7 @@
     {
       "id": "faridpur-08",
       "relative": "images/playbook/districts/faridpur-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Faridpur District",
       "slide": "8/8",
       "title": "Boats, ferries and the Padma crossing",
@@ -4901,7 +4901,7 @@
     {
       "id": "chapainawabganj-01",
       "relative": "images/playbook/districts/chapainawabganj-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chapainawabganj District",
       "slide": "1/8",
       "title": "At the western gate",
@@ -4910,7 +4910,7 @@
     {
       "id": "chapainawabganj-02",
       "relative": "images/playbook/districts/chapainawabganj-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chapainawabganj District",
       "slide": "2/8",
       "title": "Gaur, the lost capital",
@@ -4919,25 +4919,25 @@
     {
       "id": "chapainawabganj-03",
       "relative": "images/playbook/districts/chapainawabganj-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chapainawabganj District",
       "slide": "3/8",
       "title": "The Chhota Sona Mosque",
-      "prompt": "Illustration, \"Chapainawabganj District\", chapter 3 of 8, \"The Chhota Sona Mosque\". A graceful medieval mosque with fifteen domes and glazed tile decoration, sunlight on warm stone and brick, arched mihrabs, tall mango trees around, a courtyard with a few worshippers, cool shadows inside. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Chapainawabganj District\", chapter 3 of 8, \"The Chhota Sona Mosque\". A graceful medieval mosque with twelve small round domes and three central chauchala roof vaults, dark carved stone facing and five front archways, sunlight on warm stone and brick, arched mihrabs, tall mango trees around, a courtyard with a few worshippers, cool shadows inside. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "chapainawabganj-04",
       "relative": "images/playbook/districts/chapainawabganj-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chapainawabganj District",
       "slide": "4/8",
       "title": "Shah Niamatullah’s tomb",
-      "prompt": "Illustration, \"Chapainawabganj District\", chapter 4 of 8, \"Shah Niamatullah’s tomb\". A fine old mosque of dark stone and brick with a delicate dome, a smaller tomb beside it with a green cloth, devotees lighting incense, a peaceful orchard, a woman sweeping the path, a dove flying. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
+      "prompt": "Illustration, \"Chapainawabganj District\", chapter 4 of 8, \"Shah Niamatullah’s tomb\". A square brick mausoleum with a central dome and arcaded veranda, the green-draped tomb inside its shaded chamber, a nearby three-domed Mughal mosque, respectful visitors in a peaceful orchard, a woman sweeping the path and a dove flying. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet."
     },
     {
       "id": "chapainawabganj-05",
       "relative": "images/playbook/districts/chapainawabganj-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chapainawabganj District",
       "slide": "5/8",
       "title": "The mango season",
@@ -4946,7 +4946,7 @@
     {
       "id": "chapainawabganj-06",
       "relative": "images/playbook/districts/chapainawabganj-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chapainawabganj District",
       "slide": "6/8",
       "title": "The orchards through the year",
@@ -4955,7 +4955,7 @@
     {
       "id": "chapainawabganj-07",
       "relative": "images/playbook/districts/chapainawabganj-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chapainawabganj District",
       "slide": "7/8",
       "title": "The Sonamasjid border post",
