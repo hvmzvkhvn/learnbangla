@@ -14,6 +14,15 @@ const pages = [
 
 test('the artwork inventory matches the shipped paintings, with distinct images and descriptions', () => {
   const inventory = JSON.parse(readFileSync(new URL('../docs/long-story-art-plan.json', import.meta.url)))
+  const promptFiles = new Map()
+  for (const job of inventory.jobs) {
+    assert.match(job.promptFile, /^artwork\/story-prompts\/[a-z0-9-]+\.json$/)
+    if (!promptFiles.has(job.promptFile)) {
+      const data = JSON.parse(readFileSync(new URL(`../docs/${job.promptFile}`, import.meta.url)))
+      promptFiles.set(job.promptFile, new Map(data.prompts.map(item => [item.relative, item.prompt])))
+    }
+    assert.ok(promptFiles.get(job.promptFile).get(job.relative)?.length > 100, `Missing generation prompt: ${job.id}`)
+  }
   const availability = new Map(inventory.jobs.map(job => [job.relative, job.exists]))
   assert.equal(pages.length, 808)
   const paths = new Set(), hashes = new Set()

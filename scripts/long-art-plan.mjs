@@ -5,7 +5,7 @@
 //   node scripts/long-art-plan.mjs
 import { createServer } from 'vite'
 import { fileURLToPath } from 'node:url'
-import { writeFileSync, existsSync } from 'node:fs'
+import { writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import path from 'node:path'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -45,5 +45,21 @@ jobs.push(...Object.values(districtStories).flatMap((d) => d.chapters.map((ch, i
   title: ch.heading,
   prompt: `Illustration, "${d.title}", chapter ${i + 1} of ${d.chapters.length}, "${ch.heading}". ${ch.paint} ${DIVISION_NOTE} ${STYLE}`,
 }))))
-writeFileSync(path.join(root, 'docs/long-story-art-plan.json'), JSON.stringify({ generator: 'any image generator', note: 'Save each result at its `relative` path under public/. Slides without a file show a text card.', jobs }, null, 2) + '\n')
-console.log(`${jobs.length} painting prompts (big stories + division chapters) (${jobs.filter((j) => j.exists).length} already painted) → docs/long-story-art-plan.json`)
+// Keep the availability index compact; full prompts are grouped into reviewable story files.
+const promptDirectory = path.join(root, 'docs/artwork/story-prompts')
+mkdirSync(promptDirectory, { recursive: true })
+const groups = new Map()
+for (const job of jobs) {
+  const storyId = `${job.relative.split('/')[2]}-${job.id.replace(/-\d+$/, '')}`
+  if (!groups.has(storyId)) groups.set(storyId, [])
+  groups.get(storyId).push({ id: job.id, relative: job.relative, prompt: job.prompt })
+}
+for (const [storyId, prompts] of groups) {
+  writeFileSync(path.join(promptDirectory, `${storyId}.json`), JSON.stringify({ prompts }, null, 2) + '\n')
+}
+const inventory = jobs.map(({ prompt: _prompt, ...job }) => ({
+  ...job,
+  promptFile: `artwork/story-prompts/${job.relative.split('/')[2]}-${job.id.replace(/-\d+$/, '')}.json`,
+}))
+writeFileSync(path.join(root, 'docs/long-story-art-plan.json'), JSON.stringify({ generator: 'any image generator', note: 'Save each result at its relative path under public/. Full prompts are in promptFile (relative to docs/), matched by job id. Slides without a file show a text card.', jobs: inventory }, null, 2) + '\n')
+console.log(`${jobs.length} painting prompts (${jobs.filter((j) => j.exists).length} already painted) → docs/long-story-art-plan.json and docs/artwork/story-prompts/`)
