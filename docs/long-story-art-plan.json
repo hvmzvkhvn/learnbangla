@@ -6764,7 +6764,7 @@
     {
       "id": "joypurhat-08",
       "relative": "images/playbook/districts/joypurhat-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Joypurhat District",
       "slide": "8/8",
       "title": "Potatoes, cane and the next season",
@@ -6773,7 +6773,7 @@
     {
       "id": "jamalpur-01",
       "relative": "images/playbook/districts/jamalpur-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jamalpur District",
       "slide": "1/8",
       "title": "Between the Brahmaputra and the Jamuna",
@@ -6782,7 +6782,7 @@
     {
       "id": "jamalpur-02",
       "relative": "images/playbook/districts/jamalpur-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jamalpur District",
       "slide": "2/8",
       "title": "The Old Brahmaputra",
@@ -6791,7 +6791,7 @@
     {
       "id": "jamalpur-03",
       "relative": "images/playbook/districts/jamalpur-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jamalpur District",
       "slide": "3/8",
       "title": "The battle of Kamalpur",
@@ -6800,7 +6800,7 @@
     {
       "id": "jamalpur-04",
       "relative": "images/playbook/districts/jamalpur-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jamalpur District",
       "slide": "4/8",
       "title": "The days of freedom in December",
@@ -6809,7 +6809,7 @@
     {
       "id": "jamalpur-05",
       "relative": "images/playbook/districts/jamalpur-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jamalpur District",
       "slide": "5/8",
       "title": "Islampur, between two rivers",
@@ -6818,7 +6818,7 @@
     {
       "id": "jamalpur-06",
       "relative": "images/playbook/districts/jamalpur-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jamalpur District",
       "slide": "6/8",
       "title": "Dewanganj and the mills",
@@ -6827,7 +6827,7 @@
     {
       "id": "jamalpur-07",
       "relative": "images/playbook/districts/jamalpur-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jamalpur District",
       "slide": "7/8",
       "title": "Life on the Jamuna chars",
@@ -6836,7 +6836,7 @@
     {
       "id": "jamalpur-08",
       "relative": "images/playbook/districts/jamalpur-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jamalpur District",
       "slide": "8/8",
       "title": "Schools, rivers and the future",
@@ -6845,7 +6845,7 @@
     {
       "id": "sherpur-01",
       "relative": "images/playbook/districts/sherpur-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sherpur District",
       "slide": "1/8",
       "title": "Where the plain meets the Garo hills",
@@ -6854,7 +6854,7 @@
     {
       "id": "sherpur-02",
       "relative": "images/playbook/districts/sherpur-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sherpur District",
       "slide": "2/8",
       "title": "The Garo people of Nalitabari",
@@ -6863,7 +6863,7 @@
     {
       "id": "sherpur-03",
       "relative": "images/playbook/districts/sherpur-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sherpur District",
       "slide": "3/8",
       "title": "Madhutila Eco Park",
@@ -6872,7 +6872,7 @@
     {
       "id": "sherpur-04",
       "relative": "images/playbook/districts/sherpur-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sherpur District",
       "slide": "4/8",
       "title": "Mosques of old Sherpur",
@@ -6881,7 +6881,7 @@
     {
       "id": "sherpur-05",
       "relative": "images/playbook/districts/sherpur-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sherpur District",
       "slide": "5/8",
       "title": "Durga Puja at Mangalbhaban",
@@ -6890,7 +6890,7 @@
     {
       "id": "sherpur-06",
       "relative": "images/playbook/districts/sherpur-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sherpur District",
       "slide": "6/8",
       "title": "Koch and Hajong",
@@ -6899,7 +6899,7 @@
     {
       "id": "sherpur-07",
       "relative": "images/playbook/districts/sherpur-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sherpur District",
       "slide": "7/8",
       "title": "Rice, pineapple and the sal forest",
@@ -6908,7 +6908,7 @@
     {
       "id": "sherpur-08",
       "relative": "images/playbook/districts/sherpur-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Sherpur District",
       "slide": "8/8",
       "title": "Remembering the liberation war",
@@ -6917,7 +6917,7 @@
     {
       "id": "gaibandha-01",
       "relative": "images/playbook/districts/gaibandha-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Gaibandha District",
       "slide": "1/8",
       "title": "Land of the western bank",
@@ -6926,7 +6926,7 @@
     {
       "id": "gaibandha-02",
       "relative": "images/playbook/districts/gaibandha-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Gaibandha District",
       "slide": "2/8",
       "title": "The chars of the Brahmaputra",
@@ -6935,7 +6935,7 @@
     {
       "id": "gaibandha-03",
       "relative": "images/playbook/districts/gaibandha-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Gaibandha District",
       "slide": "3/8",
       "title": "The floods of fifty-four, seventy-four and seventy-eight",
@@ -6944,7 +6944,7 @@
     {
       "id": "gaibandha-04",
       "relative": "images/playbook/districts/gaibandha-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Gaibandha District",
       "slide": "4/8",
       "title": "Fulchhari ghat",
@@ -6953,7 +6953,7 @@
     {
       "id": "gaibandha-05",
       "relative": "images/playbook/districts/gaibandha-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Gaibandha District",
       "slide": "5/8",
       "title": "The Karatoya, an ancient river",
@@ -6962,7 +6962,7 @@
     {
       "id": "gaibandha-06",
       "relative": "images/playbook/districts/gaibandha-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Gaibandha District",
       "slide": "6/8",
       "title": "Balashi Ghat",
@@ -6971,7 +6971,7 @@
     {
       "id": "gaibandha-07",
       "relative": "images/playbook/districts/gaibandha-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Gaibandha District",
       "slide": "7/8",
       "title": "Gobindaganj and the memory of seventy-one",
@@ -6980,7 +6980,7 @@
     {
       "id": "gaibandha-08",
       "relative": "images/playbook/districts/gaibandha-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Gaibandha District",
       "slide": "8/8",
       "title": "Songs of the north and the road ahead",
@@ -6989,7 +6989,7 @@
     {
       "id": "lalmonirhat-01",
       "relative": "images/playbook/districts/lalmonirhat-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lalmonirhat District",
       "slide": "1/8",
       "title": "A district of the Teesta",
@@ -6998,7 +6998,7 @@
     {
       "id": "lalmonirhat-02",
       "relative": "images/playbook/districts/lalmonirhat-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lalmonirhat District",
       "slide": "2/8",
       "title": "The Tin Bigha corridor",
@@ -7007,7 +7007,7 @@
     {
       "id": "lalmonirhat-03",
       "relative": "images/playbook/districts/lalmonirhat-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lalmonirhat District",
       "slide": "3/8",
       "title": "The exchange of the enclaves",
@@ -7016,7 +7016,7 @@
     {
       "id": "lalmonirhat-04",
       "relative": "images/playbook/districts/lalmonirhat-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lalmonirhat District",
       "slide": "4/8",
       "title": "The Teesta Barrage",
@@ -7025,7 +7025,7 @@
     {
       "id": "lalmonirhat-05",
       "relative": "images/playbook/districts/lalmonirhat-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lalmonirhat District",
       "slide": "5/8",
       "title": "The railway town",
@@ -7034,7 +7034,7 @@
     {
       "id": "lalmonirhat-06",
       "relative": "images/playbook/districts/lalmonirhat-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lalmonirhat District",
       "slide": "6/8",
       "title": "The old airfield",
@@ -7043,7 +7043,7 @@
     {
       "id": "lalmonirhat-07",
       "relative": "images/playbook/districts/lalmonirhat-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lalmonirhat District",
       "slide": "7/8",
       "title": "Life on the Teesta chars",
@@ -7052,7 +7052,7 @@
     {
       "id": "lalmonirhat-08",
       "relative": "images/playbook/districts/lalmonirhat-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lalmonirhat District",
       "slide": "8/8",
       "title": "Tobacco, maize and potatoes",
@@ -7061,7 +7061,7 @@
     {
       "id": "nilphamari-01",
       "relative": "images/playbook/districts/nilphamari-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Nilphamari District",
       "slide": "1/8",
       "title": "The blue district",
@@ -7070,7 +7070,7 @@
     {
       "id": "nilphamari-02",
       "relative": "images/playbook/districts/nilphamari-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Nilphamari District",
       "slide": "2/8",
       "title": "Indigo and the name",
@@ -7079,7 +7079,7 @@
     {
       "id": "nilphamari-03",
       "relative": "images/playbook/districts/nilphamari-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Nilphamari District",
       "slide": "3/8",
       "title": "Saidpur Railway Workshop",
@@ -7088,7 +7088,7 @@
     {
       "id": "nilphamari-04",
       "relative": "images/playbook/districts/nilphamari-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Nilphamari District",
       "slide": "4/8",
       "title": "Saidpur town and its airport",
@@ -7097,7 +7097,7 @@
     {
       "id": "nilphamari-05",
       "relative": "images/playbook/districts/nilphamari-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Nilphamari District",
       "slide": "5/8",
       "title": "The Teesta canals",
@@ -7106,7 +7106,7 @@
     {
       "id": "nilphamari-06",
       "relative": "images/playbook/districts/nilphamari-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Nilphamari District",
       "slide": "6/8",
       "title": "Potatoes, jute and the cold north",
@@ -7115,7 +7115,7 @@
     {
       "id": "nilphamari-07",
       "relative": "images/playbook/districts/nilphamari-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Nilphamari District",
       "slide": "7/8",
       "title": "Domar, Jaldhaka and the border towns",
@@ -7124,7 +7124,7 @@
     {
       "id": "nilphamari-08",
       "relative": "images/playbook/districts/nilphamari-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Nilphamari District",
       "slide": "8/8",
       "title": "The north-west gateway",
@@ -7133,7 +7133,7 @@
     {
       "id": "thakurgaon-01",
       "relative": "images/playbook/districts/thakurgaon-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Thakurgaon District",
       "slide": "1/8",
       "title": "The far north-west plain",
@@ -7142,7 +7142,7 @@
     {
       "id": "thakurgaon-02",
       "relative": "images/playbook/districts/thakurgaon-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Thakurgaon District",
       "slide": "2/8",
       "title": "The Tangon and the Kulik",
@@ -7151,7 +7151,7 @@
     {
       "id": "thakurgaon-03",
       "relative": "images/playbook/districts/thakurgaon-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Thakurgaon District",
       "slide": "3/8",
       "title": "The Nekmard fair",
@@ -7160,7 +7160,7 @@
     {
       "id": "thakurgaon-04",
       "relative": "images/playbook/districts/thakurgaon-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Thakurgaon District",
       "slide": "4/8",
       "title": "The sugar mill",
@@ -7169,7 +7169,7 @@
     {
       "id": "thakurgaon-05",
       "relative": "images/playbook/districts/thakurgaon-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Thakurgaon District",
       "slide": "5/8",
       "title": "Santal and Oraon villages",
@@ -7178,7 +7178,7 @@
     {
       "id": "thakurgaon-06",
       "relative": "images/playbook/districts/thakurgaon-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Thakurgaon District",
       "slide": "6/8",
       "title": "Tulaipanji and the northern farm",
@@ -7187,7 +7187,7 @@
     {
       "id": "thakurgaon-07",
       "relative": "images/playbook/districts/thakurgaon-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Thakurgaon District",
       "slide": "7/8",
       "title": "Fog and the winter kitchen",
@@ -7196,7 +7196,7 @@
     {
       "id": "thakurgaon-08",
       "relative": "images/playbook/districts/thakurgaon-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Thakurgaon District",
       "slide": "8/8",
       "title": "A town with an airport",
@@ -7205,7 +7205,7 @@
     {
       "id": "rangpur-01",
       "relative": "images/playbook/districts/rangpur-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur District",
       "slide": "1/8",
       "title": "The city of the north",
@@ -7214,7 +7214,7 @@
     {
       "id": "rangpur-02",
       "relative": "images/playbook/districts/rangpur-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur District",
       "slide": "2/8",
       "title": "Begum Rokeya of Pairaband",
@@ -7223,7 +7223,7 @@
     {
       "id": "rangpur-03",
       "relative": "images/playbook/districts/rangpur-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur District",
       "slide": "3/8",
       "title": "Tajhat Palace",
@@ -7232,7 +7232,7 @@
     {
       "id": "rangpur-04",
       "relative": "images/playbook/districts/rangpur-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur District",
       "slide": "4/8",
       "title": "Carmichael College and the city of learning",
@@ -7241,7 +7241,7 @@
     {
       "id": "rangpur-05",
       "relative": "images/playbook/districts/rangpur-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur District",
       "slide": "5/8",
       "title": "Haribhanga, the king of mangoes",
@@ -7250,7 +7250,7 @@
     {
       "id": "rangpur-06",
       "relative": "images/playbook/districts/rangpur-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur District",
       "slide": "6/8",
       "title": "Shataranji and the crafts of Rangpur",
@@ -7259,7 +7259,7 @@
     {
       "id": "rangpur-07",
       "relative": "images/playbook/districts/rangpur-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur District",
       "slide": "7/8",
       "title": "The Rangpur Dhing",
@@ -7268,7 +7268,7 @@
     {
       "id": "rangpur-08",
       "relative": "images/playbook/districts/rangpur-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rangpur District",
       "slide": "8/8",
       "title": "Bhawaiya and the song of the north",
