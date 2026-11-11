@@ -5864,7 +5864,7 @@
     {
       "id": "rajbari-04",
       "relative": "images/playbook/districts/rajbari-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajbari District",
       "slide": "4/8",
       "title": "Daulatdia ferry",
@@ -5873,7 +5873,7 @@
     {
       "id": "rajbari-05",
       "relative": "images/playbook/districts/rajbari-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajbari District",
       "slide": "5/8",
       "title": "Jute, wheat and the fertile land",
@@ -5882,7 +5882,7 @@
     {
       "id": "rajbari-06",
       "relative": "images/playbook/districts/rajbari-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajbari District",
       "slide": "6/8",
       "title": "The Chandana and the Kumar",
@@ -5891,7 +5891,7 @@
     {
       "id": "rajbari-07",
       "relative": "images/playbook/districts/rajbari-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajbari District",
       "slide": "7/8",
       "title": "Pangsha and the old estates",
@@ -5900,7 +5900,7 @@
     {
       "id": "rajbari-08",
       "relative": "images/playbook/districts/rajbari-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Rajbari District",
       "slide": "8/8",
       "title": "A district at the crossing",
@@ -5909,7 +5909,7 @@
     {
       "id": "feni-01",
       "relative": "images/playbook/districts/feni-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Feni District",
       "slide": "1/8",
       "title": "A district on the border river",
@@ -5918,7 +5918,7 @@
     {
       "id": "feni-02",
       "relative": "images/playbook/districts/feni-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Feni District",
       "slide": "2/8",
       "title": "The Feni river and the border",
@@ -5927,7 +5927,7 @@
     {
       "id": "feni-03",
       "relative": "images/playbook/districts/feni-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Feni District",
       "slide": "3/8",
       "title": "The Muhuri project",
@@ -5936,7 +5936,7 @@
     {
       "id": "feni-04",
       "relative": "images/playbook/districts/feni-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Feni District",
       "slide": "4/8",
       "title": "The floods of August 2024",
@@ -5945,7 +5945,7 @@
     {
       "id": "feni-05",
       "relative": "images/playbook/districts/feni-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Feni District",
       "slide": "5/8",
       "title": "The railway junction",
@@ -5954,7 +5954,7 @@
     {
       "id": "feni-06",
       "relative": "images/playbook/districts/feni-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Feni District",
       "slide": "6/8",
       "title": "Rice, bananas and betel",
@@ -5963,7 +5963,7 @@
     {
       "id": "feni-07",
       "relative": "images/playbook/districts/feni-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Feni District",
       "slide": "7/8",
       "title": "Workers abroad",
@@ -5972,7 +5972,7 @@
     {
       "id": "feni-08",
       "relative": "images/playbook/districts/feni-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Feni District",
       "slide": "8/8",
       "title": "The Maitri Setu and the hills",
@@ -5981,7 +5981,7 @@
     {
       "id": "lakshmipur-01",
       "relative": "images/playbook/districts/lakshmipur-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lakshmipur District",
       "slide": "1/8",
       "title": "A district at the river mouth",
@@ -5990,7 +5990,7 @@
     {
       "id": "lakshmipur-02",
       "relative": "images/playbook/districts/lakshmipur-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lakshmipur District",
       "slide": "2/8",
       "title": "Char Alexander",
@@ -5999,7 +5999,7 @@
     {
       "id": "lakshmipur-03",
       "relative": "images/playbook/districts/lakshmipur-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lakshmipur District",
       "slide": "3/8",
       "title": "The betel nut palms",
@@ -6008,7 +6008,7 @@
     {
       "id": "lakshmipur-04",
       "relative": "images/playbook/districts/lakshmipur-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lakshmipur District",
       "slide": "4/8",
       "title": "The river that takes land",
@@ -6017,7 +6017,7 @@
     {
       "id": "lakshmipur-05",
       "relative": "images/playbook/districts/lakshmipur-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lakshmipur District",
       "slide": "5/8",
       "title": "Hilsa, shrimp and dried fish",
@@ -6026,7 +6026,7 @@
     {
       "id": "lakshmipur-06",
       "relative": "images/playbook/districts/lakshmipur-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lakshmipur District",
       "slide": "6/8",
       "title": "Cyclone warnings and shelters",
@@ -6035,7 +6035,7 @@
     {
       "id": "lakshmipur-07",
       "relative": "images/playbook/districts/lakshmipur-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lakshmipur District",
       "slide": "7/8",
       "title": "Coconuts, rice and the village pond",
@@ -6044,7 +6044,7 @@
     {
       "id": "lakshmipur-08",
       "relative": "images/playbook/districts/lakshmipur-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Lakshmipur District",
       "slide": "8/8",
       "title": "Schools, madrasas and the road ahead",
@@ -6053,7 +6053,7 @@
     {
       "id": "khagrachhari-01",
       "relative": "images/playbook/districts/khagrachhari-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khagrachhari District",
       "slide": "1/8",
       "title": "Hills beyond the plain",
@@ -6062,7 +6062,7 @@
     {
       "id": "khagrachhari-02",
       "relative": "images/playbook/districts/khagrachhari-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khagrachhari District",
       "slide": "2/8",
       "title": "The Tripura people",
@@ -6071,7 +6071,7 @@
     {
       "id": "khagrachhari-03",
       "relative": "images/playbook/districts/khagrachhari-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khagrachhari District",
       "slide": "3/8",
       "title": "Boisabi, the festival of the three peoples",
@@ -6080,7 +6080,7 @@
     {
       "id": "khagrachhari-04",
       "relative": "images/playbook/districts/khagrachhari-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khagrachhari District",
       "slide": "4/8",
       "title": "The cave of Alutila",
@@ -6089,7 +6089,7 @@
     {
       "id": "khagrachhari-05",
       "relative": "images/playbook/districts/khagrachhari-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khagrachhari District",
       "slide": "5/8",
       "title": "Waterfalls in the green",
@@ -6098,7 +6098,7 @@
     {
       "id": "khagrachhari-06",
       "relative": "images/playbook/districts/khagrachhari-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khagrachhari District",
       "slide": "6/8",
       "title": "The hill market",
@@ -6107,7 +6107,7 @@
     {
       "id": "khagrachhari-07",
       "relative": "images/playbook/districts/khagrachhari-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khagrachhari District",
       "slide": "7/8",
       "title": "Fruit, ginger and the hill farm",
@@ -6116,7 +6116,7 @@
     {
       "id": "khagrachhari-08",
       "relative": "images/playbook/districts/khagrachhari-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Khagrachhari District",
       "slide": "8/8",
       "title": "Peace and the roads ahead",
@@ -6125,7 +6125,7 @@
     {
       "id": "barguna-01",
       "relative": "images/playbook/districts/barguna-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barguna District",
       "slide": "1/8",
       "title": "A district between the rivers and the sea",
@@ -6134,7 +6134,7 @@
     {
       "id": "barguna-02",
       "relative": "images/playbook/districts/barguna-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barguna District",
       "slide": "2/8",
       "title": "Patharghata, the fishing port",
@@ -6143,7 +6143,7 @@
     {
       "id": "barguna-03",
       "relative": "images/playbook/districts/barguna-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barguna District",
       "slide": "3/8",
       "title": "Cyclone Sidr",
@@ -6152,7 +6152,7 @@
     {
       "id": "barguna-04",
       "relative": "images/playbook/districts/barguna-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barguna District",
       "slide": "4/8",
       "title": "Tengragiri, a forest on the shore",
@@ -6161,7 +6161,7 @@
     {
       "id": "barguna-05",
       "relative": "images/playbook/districts/barguna-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barguna District",
       "slide": "5/8",
       "title": "The Rakhine community",
@@ -6170,7 +6170,7 @@
     {
       "id": "barguna-06",
       "relative": "images/playbook/districts/barguna-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barguna District",
       "slide": "6/8",
       "title": "Coconut and betel nut",
@@ -6179,7 +6179,7 @@
     {
       "id": "barguna-07",
       "relative": "images/playbook/districts/barguna-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barguna District",
       "slide": "7/8",
       "title": "The Bishkhali ghat",
@@ -6188,7 +6188,7 @@
     {
       "id": "barguna-08",
       "relative": "images/playbook/districts/barguna-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barguna District",
       "slide": "8/8",
       "title": "Schools on the coast",
@@ -6197,7 +6197,7 @@
     {
       "id": "jhalokati-01",
       "relative": "images/playbook/districts/jhalokati-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhalokati District",
       "slide": "1/8",
       "title": "A land of canals",
@@ -6206,7 +6206,7 @@
     {
       "id": "jhalokati-02",
       "relative": "images/playbook/districts/jhalokati-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhalokati District",
       "slide": "2/8",
       "title": "Sher-e-Bangla",
@@ -6215,7 +6215,7 @@
     {
       "id": "jhalokati-03",
       "relative": "images/playbook/districts/jhalokati-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhalokati District",
       "slide": "3/8",
       "title": "Kirtipasha Zamindar House",
@@ -6224,7 +6224,7 @@
     {
       "id": "jhalokati-04",
       "relative": "images/playbook/districts/jhalokati-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhalokati District",
       "slide": "4/8",
       "title": "Guavas and the floating market",
@@ -6233,7 +6233,7 @@
     {
       "id": "jhalokati-05",
       "relative": "images/playbook/districts/jhalokati-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhalokati District",
       "slide": "5/8",
       "title": "Betel leaf and the green gardens",
@@ -6242,7 +6242,7 @@
     {
       "id": "jhalokati-06",
       "relative": "images/playbook/districts/jhalokati-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhalokati District",
       "slide": "6/8",
       "title": "The Sugandha river",
@@ -6251,7 +6251,7 @@
     {
       "id": "jhalokati-07",
       "relative": "images/playbook/districts/jhalokati-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhalokati District",
       "slide": "7/8",
       "title": "The timber yards",
@@ -6260,7 +6260,7 @@
     {
       "id": "jhalokati-08",
       "relative": "images/playbook/districts/jhalokati-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhalokati District",
       "slide": "8/8",
       "title": "Schools, politics and the future",
@@ -6269,7 +6269,7 @@
     {
       "id": "pirojpur-01",
       "relative": "images/playbook/districts/pirojpur-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pirojpur District",
       "slide": "1/8",
       "title": "A district of rivers and gardens",
@@ -6278,7 +6278,7 @@
     {
       "id": "pirojpur-02",
       "relative": "images/playbook/districts/pirojpur-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pirojpur District",
       "slide": "2/8",
       "title": "The floating market of Swarupkathi",
@@ -6287,7 +6287,7 @@
     {
       "id": "pirojpur-03",
       "relative": "images/playbook/districts/pirojpur-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pirojpur District",
       "slide": "3/8",
       "title": "Floating gardens",
@@ -6296,7 +6296,7 @@
     {
       "id": "pirojpur-04",
       "relative": "images/playbook/districts/pirojpur-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pirojpur District",
       "slide": "4/8",
       "title": "Mathbaria and the edge of the forest",
@@ -6305,7 +6305,7 @@
     {
       "id": "pirojpur-05",
       "relative": "images/playbook/districts/pirojpur-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pirojpur District",
       "slide": "5/8",
       "title": "The Baleshwar",
@@ -6314,7 +6314,7 @@
     {
       "id": "pirojpur-06",
       "relative": "images/playbook/districts/pirojpur-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pirojpur District",
       "slide": "6/8",
       "title": "Rice, coconut and the village pond",
@@ -6323,7 +6323,7 @@
     {
       "id": "pirojpur-07",
       "relative": "images/playbook/districts/pirojpur-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pirojpur District",
       "slide": "7/8",
       "title": "The war of seventy-one in the south",
@@ -6332,7 +6332,7 @@
     {
       "id": "pirojpur-08",
       "relative": "images/playbook/districts/pirojpur-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Pirojpur District",
       "slide": "8/8",
       "title": "Raising the next generation",
@@ -6341,7 +6341,7 @@
     {
       "id": "chuadanga-01",
       "relative": "images/playbook/districts/chuadanga-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chuadanga District",
       "slide": "1/8",
       "title": "A border district of the west",
@@ -6350,7 +6350,7 @@
     {
       "id": "chuadanga-02",
       "relative": "images/playbook/districts/chuadanga-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chuadanga District",
       "slide": "2/8",
       "title": "The railway comes to Chuadanga",
@@ -6359,7 +6359,7 @@
     {
       "id": "chuadanga-03",
       "relative": "images/playbook/districts/chuadanga-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chuadanga District",
       "slide": "3/8",
       "title": "Darshana, the border crossing",
@@ -6368,7 +6368,7 @@
     {
       "id": "chuadanga-04",
       "relative": "images/playbook/districts/chuadanga-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chuadanga District",
       "slide": "4/8",
       "title": "Sugarcane country",
@@ -6377,7 +6377,7 @@
     {
       "id": "chuadanga-05",
       "relative": "images/playbook/districts/chuadanga-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chuadanga District",
       "slide": "5/8",
       "title": "The rivers Mathabhanga and Kumar",
@@ -6386,7 +6386,7 @@
     {
       "id": "chuadanga-06",
       "relative": "images/playbook/districts/chuadanga-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chuadanga District",
       "slide": "6/8",
       "title": "Early days of the freedom war",
@@ -6395,7 +6395,7 @@
     {
       "id": "chuadanga-07",
       "relative": "images/playbook/districts/chuadanga-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chuadanga District",
       "slide": "7/8",
       "title": "Wheat, tobacco and the dry winter",
@@ -6404,7 +6404,7 @@
     {
       "id": "chuadanga-08",
       "relative": "images/playbook/districts/chuadanga-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Chuadanga District",
       "slide": "8/8",
       "title": "A quiet crossroads",
@@ -6413,7 +6413,7 @@
     {
       "id": "jhenaidah-01",
       "relative": "images/playbook/districts/jhenaidah-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhenaidah District",
       "slide": "1/8",
       "title": "A plain of old rivers",
@@ -6422,7 +6422,7 @@
     {
       "id": "jhenaidah-02",
       "relative": "images/playbook/districts/jhenaidah-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhenaidah District",
       "slide": "2/8",
       "title": "Pagla Kanai, the mad poet",
@@ -6431,7 +6431,7 @@
     {
       "id": "jhenaidah-03",
       "relative": "images/playbook/districts/jhenaidah-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhenaidah District",
       "slide": "3/8",
       "title": "The Shailkupa mosque",
@@ -6440,7 +6440,7 @@
     {
       "id": "jhenaidah-04",
       "relative": "images/playbook/districts/jhenaidah-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhenaidah District",
       "slide": "4/8",
       "title": "Kharer Dighi and Harihar Garh",
@@ -6449,7 +6449,7 @@
     {
       "id": "jhenaidah-05",
       "relative": "images/playbook/districts/jhenaidah-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhenaidah District",
       "slide": "5/8",
       "title": "The Kobadak and the poet",
@@ -6458,7 +6458,7 @@
     {
       "id": "jhenaidah-06",
       "relative": "images/playbook/districts/jhenaidah-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhenaidah District",
       "slide": "6/8",
       "title": "Shailkupa in the war",
@@ -6467,7 +6467,7 @@
     {
       "id": "jhenaidah-07",
       "relative": "images/playbook/districts/jhenaidah-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhenaidah District",
       "slide": "7/8",
       "title": "Fields, dates and bananas",
@@ -6476,7 +6476,7 @@
     {
       "id": "jhenaidah-08",
       "relative": "images/playbook/districts/jhenaidah-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Jhenaidah District",
       "slide": "8/8",
       "title": "A market town and its schools",
@@ -6485,7 +6485,7 @@
     {
       "id": "magura-01",
       "relative": "images/playbook/districts/magura-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Magura District",
       "slide": "1/8",
       "title": "A district of old rivers in the south-west",
@@ -6494,7 +6494,7 @@
     {
       "id": "magura-02",
       "relative": "images/playbook/districts/magura-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Magura District",
       "slide": "2/8",
       "title": "Sreepur and Sridevi",
@@ -6503,7 +6503,7 @@
     {
       "id": "magura-03",
       "relative": "images/playbook/districts/magura-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Magura District",
       "slide": "3/8",
       "title": "Two zamindar houses",
@@ -6512,7 +6512,7 @@
     {
       "id": "magura-04",
       "relative": "images/playbook/districts/magura-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Magura District",
       "slide": "4/8",
       "title": "A school older than the district",
@@ -6521,7 +6521,7 @@
     {
       "id": "magura-05",
       "relative": "images/playbook/districts/magura-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Magura District",
       "slide": "5/8",
       "title": "Jarigan and the folk songs",
@@ -6530,7 +6530,7 @@
     {
       "id": "magura-06",
       "relative": "images/playbook/districts/magura-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Magura District",
       "slide": "6/8",
       "title": "Jatra and the village stage",
@@ -6539,7 +6539,7 @@
     {
       "id": "magura-07",
       "relative": "images/playbook/districts/magura-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Magura District",
       "slide": "7/8",
       "title": "Rice, jute and sugarcane",
@@ -6548,7 +6548,7 @@
     {
       "id": "magura-08",
       "relative": "images/playbook/districts/magura-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Magura District",
       "slide": "8/8",
       "title": "On the road between rivers",
@@ -6557,7 +6557,7 @@
     {
       "id": "narail-01",
       "relative": "images/playbook/districts/narail-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narail District",
       "slide": "1/8",
       "title": "The district of the Chitra",
@@ -6566,7 +6566,7 @@
     {
       "id": "narail-02",
       "relative": "images/playbook/districts/narail-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narail District",
       "slide": "2/8",
       "title": "The boy from Masimdia",
@@ -6575,7 +6575,7 @@
     {
       "id": "narail-03",
       "relative": "images/playbook/districts/narail-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narail District",
       "slide": "3/8",
       "title": "The strong farmers",
@@ -6584,7 +6584,7 @@
     {
       "id": "narail-04",
       "relative": "images/playbook/districts/narail-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narail District",
       "slide": "4/8",
       "title": "Shishu Swarga, the children’s heaven",
@@ -6593,7 +6593,7 @@
     {
       "id": "narail-05",
       "relative": "images/playbook/districts/narail-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narail District",
       "slide": "5/8",
       "title": "Narail’s old college",
@@ -6602,7 +6602,7 @@
     {
       "id": "narail-06",
       "relative": "images/playbook/districts/narail-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narail District",
       "slide": "6/8",
       "title": "The Chitra river",
@@ -6611,7 +6611,7 @@
     {
       "id": "narail-07",
       "relative": "images/playbook/districts/narail-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narail District",
       "slide": "7/8",
       "title": "Beels, fish and jute",
@@ -6620,7 +6620,7 @@
     {
       "id": "narail-08",
       "relative": "images/playbook/districts/narail-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Narail District",
       "slide": "8/8",
       "title": "A district that paints",
@@ -6629,7 +6629,7 @@
     {
       "id": "barishal-01",
       "relative": "images/playbook/districts/barishal-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal District",
       "slide": "1/8",
       "title": "A city on the Kirtankhola",
@@ -6638,7 +6638,7 @@
     {
       "id": "barishal-02",
       "relative": "images/playbook/districts/barishal-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal District",
       "slide": "2/8",
       "title": "Jibanananda Das",
@@ -6647,7 +6647,7 @@
     {
       "id": "barishal-03",
       "relative": "images/playbook/districts/barishal-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal District",
       "slide": "3/8",
       "title": "The Barisal Guns",
@@ -6656,7 +6656,7 @@
     {
       "id": "barishal-04",
       "relative": "images/playbook/districts/barishal-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal District",
       "slide": "4/8",
       "title": "Aswini Kumar Dutta and Brojomohan College",
@@ -6665,7 +6665,7 @@
     {
       "id": "barishal-05",
       "relative": "images/playbook/districts/barishal-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal District",
       "slide": "5/8",
       "title": "Durga Sagar",
@@ -6674,7 +6674,7 @@
     {
       "id": "barishal-06",
       "relative": "images/playbook/districts/barishal-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal District",
       "slide": "6/8",
       "title": "The overnight launch",
@@ -6683,7 +6683,7 @@
     {
       "id": "barishal-07",
       "relative": "images/playbook/districts/barishal-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal District",
       "slide": "7/8",
       "title": "Evenings by the river",
@@ -6692,7 +6692,7 @@
     {
       "id": "barishal-08",
       "relative": "images/playbook/districts/barishal-08.webp",
-      "exists": false,
+      "exists": true,
       "story": "Barishal District",
       "slide": "8/8",
       "title": "A city nearer to the capital",
@@ -6701,7 +6701,7 @@
     {
       "id": "joypurhat-01",
       "relative": "images/playbook/districts/joypurhat-01.webp",
-      "exists": false,
+      "exists": true,
       "story": "Joypurhat District",
       "slide": "1/8",
       "title": "A small district on the red earth",
@@ -6710,7 +6710,7 @@
     {
       "id": "joypurhat-02",
       "relative": "images/playbook/districts/joypurhat-02.webp",
-      "exists": false,
+      "exists": true,
       "story": "Joypurhat District",
       "slide": "2/8",
       "title": "Near the ancient monasteries",
@@ -6719,7 +6719,7 @@
     {
       "id": "joypurhat-03",
       "relative": "images/playbook/districts/joypurhat-03.webp",
-      "exists": false,
+      "exists": true,
       "story": "Joypurhat District",
       "slide": "3/8",
       "title": "The sugar mill",
@@ -6728,7 +6728,7 @@
     {
       "id": "joypurhat-04",
       "relative": "images/playbook/districts/joypurhat-04.webp",
-      "exists": false,
+      "exists": true,
       "story": "Joypurhat District",
       "slide": "4/8",
       "title": "The railway town",
@@ -6737,7 +6737,7 @@
     {
       "id": "joypurhat-05",
       "relative": "images/playbook/districts/joypurhat-05.webp",
-      "exists": false,
+      "exists": true,
       "story": "Joypurhat District",
       "slide": "5/8",
       "title": "Panchbibi and the five ladies",
@@ -6746,7 +6746,7 @@
     {
       "id": "joypurhat-06",
       "relative": "images/playbook/districts/joypurhat-06.webp",
-      "exists": false,
+      "exists": true,
       "story": "Joypurhat District",
       "slide": "6/8",
       "title": "The Little Jamuna",
@@ -6755,7 +6755,7 @@
     {
       "id": "joypurhat-07",
       "relative": "images/playbook/districts/joypurhat-07.webp",
-      "exists": false,
+      "exists": true,
       "story": "Joypurhat District",
       "slide": "7/8",
       "title": "Remembering seventy-one",
