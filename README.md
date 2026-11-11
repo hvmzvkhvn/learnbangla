@@ -130,7 +130,7 @@ The Playbook's **Big stories** section is for every age. Each story is five part
 
 The four stories so far: *Kabuliwala* (Tagore's classic, retold), *The Language Movement* (1947–2000), *Begum Rokeya* (1880–1932), and *The Honey Season* (a fictional boy in the Sundarbans). Each lives in `src/data/playbook/long/<story>.js` with its five part files in `long/<story>/`.
 
-**Illustration coverage.** All 200 big-story slides, all 96 division chapters and 355 district chapters have dedicated paintings. The remaining 157 district chapters use the reader’s text fallback.
+**Illustration coverage.** All 200 big-story slides, all 96 division chapters and 455 district chapters have dedicated paintings. The remaining 57 district chapters use the reader’s text fallback.
 
 **Paintings are separate from the text.** A slide looks for `public/images/playbook/long/<story-id>-NN.webp` (NN = 01…50) and shows a text card until the file exists, so paintings can be added a few at a time. `node scripts/long-art-plan.mjs` rewrites `docs/long-story-art-plan.json`: an availability index for all 808 illustration slots. Each job links to a full generation prompt in `docs/artwork/story-prompts/<collection>-<story-id>.json`, including the character and setting notes needed for consistency.
 

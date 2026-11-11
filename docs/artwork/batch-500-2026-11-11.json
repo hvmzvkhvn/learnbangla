@@ -1,0 +1,1011 @@
+{
+  "mode": "built-in image_gen",
+  "count": 100,
+  "jobs": [
+    {
+      "id": "rajbari-04",
+      "relative": "images/playbook/districts/rajbari-04.webp",
+      "exists": false,
+      "story": "Rajbari District",
+      "slide": "4/8",
+      "title": "Daulatdia ferry",
+      "promptFile": "artwork/story-prompts/districts-rajbari.json",
+      "prompt": "Illustration, \"Rajbari District\", chapter 4 of 8, \"Daulatdia ferry\". A line of waiting buses and trucks at a river ghat under a dusty sun, hawkers selling guavas and cucumbers, a ferry arriving with a ramp lowering, passengers on a roof, a woman with a basket and a barefoot boy. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "rajbari-05",
+      "relative": "images/playbook/districts/rajbari-05.webp",
+      "exists": false,
+      "story": "Rajbari District",
+      "slide": "5/8",
+      "title": "Jute, wheat and the fertile land",
+      "promptFile": "artwork/story-prompts/districts-rajbari.json",
+      "prompt": "Illustration, \"Rajbari District\", chapter 5 of 8, \"Jute, wheat and the fertile land\". A broad field of green jute with farmers in lungis cutting stems, bundles in a retting pond, women carrying fibre, next to a golden wheat field, bullocks pulling a cart and a large blue sky with cumulus clouds. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "rajbari-06",
+      "relative": "images/playbook/districts/rajbari-06.webp",
+      "exists": false,
+      "story": "Rajbari District",
+      "slide": "6/8",
+      "title": "The Chandana and the Kumar",
+      "promptFile": "artwork/story-prompts/districts-rajbari.json",
+      "prompt": "Illustration, \"Rajbari District\", chapter 6 of 8, \"The Chandana and the Kumar\". A narrow slow river bending between tall grass banks, women washing clothes on a bamboo platform, a small boat with a boy fishing with a line, cattle drinking, a low sun and kingfishers skimming the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "rajbari-07",
+      "relative": "images/playbook/districts/rajbari-07.webp",
+      "exists": false,
+      "story": "Rajbari District",
+      "slide": "7/8",
+      "title": "Pangsha and the old estates",
+      "promptFile": "artwork/story-prompts/districts-rajbari.json",
+      "prompt": "Illustration, \"Rajbari District\", chapter 7 of 8, \"Pangsha and the old estates\". A quiet old town with a faded two-storey zamindar house, a long pond with brick steps, a temple spire and a mosque dome side by side, school children walking along a tree-lined road and evening dust in the light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "rajbari-08",
+      "relative": "images/playbook/districts/rajbari-08.webp",
+      "exists": false,
+      "story": "Rajbari District",
+      "slide": "8/8",
+      "title": "A district at the crossing",
+      "promptFile": "artwork/story-prompts/districts-rajbari.json",
+      "prompt": "Illustration, \"Rajbari District\", chapter 8 of 8, \"A district at the crossing\". A rural crossroads at evening with a bus stop, a tea stall with lamps, travellers waiting with bundles, a school bus passing, a new bridge in the distance and a thin moon above a line of palm trees. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "feni-01",
+      "relative": "images/playbook/districts/feni-01.webp",
+      "exists": false,
+      "story": "Feni District",
+      "slide": "1/8",
+      "title": "A district on the border river",
+      "promptFile": "artwork/story-prompts/districts-feni.json",
+      "prompt": "Illustration, \"Feni District\", chapter 1 of 8, \"A district on the border river\". A broad green plain with a slow river and a bridge, a border fence far away across fields, rice and banana groves, a railway line with a train, rain-heavy clouds and farmers wading in a flooded field. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "feni-02",
+      "relative": "images/playbook/districts/feni-02.webp",
+      "exists": false,
+      "story": "Feni District",
+      "slide": "2/8",
+      "title": "The Feni river and the border",
+      "promptFile": "artwork/story-prompts/districts-feni.json",
+      "prompt": "Illustration, \"Feni District\", chapter 2 of 8, \"The Feni river and the border\". A wide river with a bridge over it at dawn, a boundary pillar on a bank, boats of fishermen, a guard post, rice fields on either side and the green hills of Tripura on the horizon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "feni-03",
+      "relative": "images/playbook/districts/feni-03.webp",
+      "exists": false,
+      "story": "Feni District",
+      "slide": "3/8",
+      "title": "The Muhuri project",
+      "promptFile": "artwork/story-prompts/districts-feni.json",
+      "prompt": "Illustration, \"Feni District\", chapter 3 of 8, \"The Muhuri project\". A long earthen dam with sluice gates across a river, a rush of water through the gates, farmers inspecting irrigation channels in the fields below, a pump house, a flock of ducks and bright evening light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "feni-04",
+      "relative": "images/playbook/districts/feni-04.webp",
+      "exists": false,
+      "story": "Feni District",
+      "slide": "4/8",
+      "title": "The floods of August 2024",
+      "promptFile": "artwork/story-prompts/districts-feni.json",
+      "prompt": "Illustration, \"Feni District\", chapter 4 of 8, \"The floods of August 2024\". A flooded town with roads under brown water, people wading with children on their shoulders, boats ferrying families from rooftops, volunteers handing out bread, a mosque with its lower floor submerged and heavy grey clouds. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "feni-05",
+      "relative": "images/playbook/districts/feni-05.webp",
+      "exists": false,
+      "story": "Feni District",
+      "slide": "5/8",
+      "title": "The railway junction",
+      "promptFile": "artwork/story-prompts/districts-feni.json",
+      "prompt": "Illustration, \"Feni District\", chapter 5 of 8, \"The railway junction\". A railway junction at night with a long train at the platform, vendors with trays of tea and snacks, passengers hurrying across a footbridge, signal lights red and green, an announcer voice and a warm yellow glow on rails. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "feni-06",
+      "relative": "images/playbook/districts/feni-06.webp",
+      "exists": false,
+      "story": "Feni District",
+      "slide": "6/8",
+      "title": "Rice, bananas and betel",
+      "promptFile": "artwork/story-prompts/districts-feni.json",
+      "prompt": "Illustration, \"Feni District\", chapter 6 of 8, \"Rice, bananas and betel\". A farm of banana plants heavy with green bunches, betel nut palms in neat rows, a farmer cutting a bunch with a long knife, rice fields beyond, a bicycle with sacks and a bright blue sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "feni-07",
+      "relative": "images/playbook/districts/feni-07.webp",
+      "exists": false,
+      "story": "Feni District",
+      "slide": "7/8",
+      "title": "Workers abroad",
+      "promptFile": "artwork/story-prompts/districts-feni.json",
+      "prompt": "Illustration, \"Feni District\", chapter 7 of 8, \"Workers abroad\". A new brick house with a satellite dish and a gate beside a rice field, a woman speaking on a phone to a smiling man on the screen in a desert-coloured room, a remittance office with a queue and a bus to the airport. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "feni-08",
+      "relative": "images/playbook/districts/feni-08.webp",
+      "exists": false,
+      "story": "Feni District",
+      "slide": "8/8",
+      "title": "The Maitri Setu and the hills",
+      "promptFile": "artwork/story-prompts/districts-feni.json",
+      "prompt": "Illustration, \"Feni District\", chapter 8 of 8, \"The Maitri Setu and the hills\". A modern bridge across a narrow river with flags of two countries at either end, a few pedestrians and a truck crossing, green hills on both banks, an unlettered signboard and clear morning sunlight. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "lakshmipur-01",
+      "relative": "images/playbook/districts/lakshmipur-01.webp",
+      "exists": false,
+      "story": "Lakshmipur District",
+      "slide": "1/8",
+      "title": "A district at the river mouth",
+      "promptFile": "artwork/story-prompts/districts-lakshmipur.json",
+      "prompt": "Illustration, \"Lakshmipur District\", chapter 1 of 8, \"A district at the river mouth\". A wide estuary at the edge of the sea with islands of sand and grass, a fishing boat with a patched sail, birds wheeling over the water, a coconut grove on the shore and a bright pink-and-gold sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "lakshmipur-02",
+      "relative": "images/playbook/districts/lakshmipur-02.webp",
+      "exists": false,
+      "story": "Lakshmipur District",
+      "slide": "2/8",
+      "title": "Char Alexander",
+      "promptFile": "artwork/story-prompts/districts-lakshmipur.json",
+      "prompt": "Illustration, \"Lakshmipur District\", chapter 2 of 8, \"Char Alexander\". A long empty beach of dark sand at low tide, a line of young mangrove trees, fiddler crabs on the mud, a flock of migratory birds, tire tracks of a lone motorbike, grey-blue sea and soft cloudy light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "lakshmipur-03",
+      "relative": "images/playbook/districts/lakshmipur-03.webp",
+      "exists": false,
+      "story": "Lakshmipur District",
+      "slide": "3/8",
+      "title": "The betel nut palms",
+      "promptFile": "artwork/story-prompts/districts-lakshmipur.json",
+      "prompt": "Illustration, \"Lakshmipur District\", chapter 3 of 8, \"The betel nut palms\". A grove of tall slender areca palms with clusters of orange-green nuts, a climber high on a trunk with a curved knife, nuts spread to dry on mats in a yard, women sorting them, a basket of betel leaves and golden light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "lakshmipur-04",
+      "relative": "images/playbook/districts/lakshmipur-04.webp",
+      "exists": false,
+      "story": "Lakshmipur District",
+      "slide": "4/8",
+      "title": "The river that takes land",
+      "promptFile": "artwork/story-prompts/districts-lakshmipur.json",
+      "prompt": "Illustration, \"Lakshmipur District\", chapter 4 of 8, \"The river that takes land\". A broken bank of a wide river with the roots of a fallen palm, a family loading their belongings onto a boat, a half-submerged mosque, a woman with a child looking back and a grey stormy sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "lakshmipur-05",
+      "relative": "images/playbook/districts/lakshmipur-05.webp",
+      "exists": false,
+      "story": "Lakshmipur District",
+      "slide": "5/8",
+      "title": "Hilsa, shrimp and dried fish",
+      "promptFile": "artwork/story-prompts/districts-lakshmipur.json",
+      "prompt": "Illustration, \"Lakshmipur District\", chapter 5 of 8, \"Hilsa, shrimp and dried fish\". Rows of small fish laid out to dry on bamboo racks on a sandy shore, women turning them in the sun, a fishing boat just landed, a man weighing a crate of shrimp, crows overhead and a hot white sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "lakshmipur-06",
+      "relative": "images/playbook/districts/lakshmipur-06.webp",
+      "exists": false,
+      "story": "Lakshmipur District",
+      "slide": "6/8",
+      "title": "Cyclone warnings and shelters",
+      "promptFile": "artwork/story-prompts/districts-lakshmipur.json",
+      "prompt": "Illustration, \"Lakshmipur District\", chapter 6 of 8, \"Cyclone warnings and shelters\". A coastal village before a storm: volunteers with red square flags with black centre squares and megaphones walking the lane, families carrying bundles toward a tall concrete shelter on stilts, animals led on ropes, dark clouds and rising wind bending the palms. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "lakshmipur-07",
+      "relative": "images/playbook/districts/lakshmipur-07.webp",
+      "exists": false,
+      "story": "Lakshmipur District",
+      "slide": "7/8",
+      "title": "Coconuts, rice and the village pond",
+      "promptFile": "artwork/story-prompts/districts-lakshmipur.json",
+      "prompt": "Illustration, \"Lakshmipur District\", chapter 7 of 8, \"Coconuts, rice and the village pond\". A village homestead at noon with tall coconut palms, a clay-plastered house with a thatched roof, a pond with a bamboo bathing platform, a woman grating coconut on the veranda, ducks, rice drying on a mat and a boy climbing a guava tree. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "lakshmipur-08",
+      "relative": "images/playbook/districts/lakshmipur-08.webp",
+      "exists": false,
+      "story": "Lakshmipur District",
+      "slide": "8/8",
+      "title": "Schools, madrasas and the road ahead",
+      "promptFile": "artwork/story-prompts/districts-lakshmipur.json",
+      "prompt": "Illustration, \"Lakshmipur District\", chapter 8 of 8, \"Schools, madrasas and the road ahead\". A village school yard with children in uniforms drilling in rows, a madrasa with students reciting beside it, a brick building under construction, a girl on a bicycle with books and the sun setting behind palms. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "khagrachhari-01",
+      "relative": "images/playbook/districts/khagrachhari-01.webp",
+      "exists": false,
+      "story": "Khagrachhari District",
+      "slide": "1/8",
+      "title": "Hills beyond the plain",
+      "promptFile": "artwork/story-prompts/districts-khagrachhari.json",
+      "prompt": "Illustration, \"Khagrachhari District\", chapter 1 of 8, \"Hills beyond the plain\". A rolling range of forested hills in layers of green and blue mist, a winding road with a bus, a small hill village with bamboo houses on stilts, a stream in a valley and terraced fields catching the morning sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "khagrachhari-02",
+      "relative": "images/playbook/districts/khagrachhari-02.webp",
+      "exists": false,
+      "story": "Khagrachhari District",
+      "slide": "2/8",
+      "title": "The Tripura people",
+      "promptFile": "artwork/story-prompts/districts-khagrachhari.json",
+      "prompt": "Illustration, \"Khagrachhari District\", chapter 2 of 8, \"The Tripura people\". A Tripura family in colourful hand-woven clothes on the porch of a bamboo house, an elder woman weaving a bright shawl, a man carrying a bamboo basket on his back, children with flowers in their hair and the green hills beyond. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "khagrachhari-03",
+      "relative": "images/playbook/districts/khagrachhari-03.webp",
+      "exists": false,
+      "story": "Khagrachhari District",
+      "slide": "3/8",
+      "title": "Boisabi, the festival of the three peoples",
+      "promptFile": "artwork/story-prompts/districts-khagrachhari.json",
+      "prompt": "Illustration, \"Khagrachhari District\", chapter 3 of 8, \"Boisabi, the festival of the three peoples\". A riverbank festival with young people in colourful clothes pouring water on one another and laughing, floating lamps and flowers on a stream, drummers and dancers, plain colourful festival banners and spring blossoms. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "khagrachhari-04",
+      "relative": "images/playbook/districts/khagrachhari-04.webp",
+      "exists": false,
+      "story": "Khagrachhari District",
+      "slide": "4/8",
+      "title": "The cave of Alutila",
+      "promptFile": "artwork/story-prompts/districts-khagrachhari.json",
+      "prompt": "Illustration, \"Khagrachhari District\", chapter 4 of 8, \"The cave of Alutila\". A narrow dark cave mouth in a forested hillside, visitors with torches and helmets crouching inside, damp stone walls shining in the beams, a stream flowing out, bats flitting and a guide pointing ahead. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "khagrachhari-05",
+      "relative": "images/playbook/districts/khagrachhari-05.webp",
+      "exists": false,
+      "story": "Khagrachhari District",
+      "slide": "5/8",
+      "title": "Waterfalls in the green",
+      "promptFile": "artwork/story-prompts/districts-khagrachhari.json",
+      "prompt": "Illustration, \"Khagrachhari District\", chapter 5 of 8, \"Waterfalls in the green\". A tall waterfall pouring in white threads over dark rock into a green pool in a forest, visitors on stone steps, mist, ferns and mossy boulders, a rainbow in the spray and a child dipping fingers in the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "khagrachhari-06",
+      "relative": "images/playbook/districts/khagrachhari-06.webp",
+      "exists": false,
+      "story": "Khagrachhari District",
+      "slide": "6/8",
+      "title": "The hill market",
+      "promptFile": "artwork/story-prompts/districts-khagrachhari.json",
+      "prompt": "Illustration, \"Khagrachhari District\", chapter 6 of 8, \"The hill market\". A weekly hill market under bamboo shelters with women of different peoples selling baskets of ginger, turmeric, bananas and bamboo shoots, handwoven cloth spread on mats, men weighing crops on hand scales, a goat and bright umbrellas. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "khagrachhari-07",
+      "relative": "images/playbook/districts/khagrachhari-07.webp",
+      "exists": false,
+      "story": "Khagrachhari District",
+      "slide": "7/8",
+      "title": "Fruit, ginger and the hill farm",
+      "promptFile": "artwork/story-prompts/districts-khagrachhari.json",
+      "prompt": "Illustration, \"Khagrachhari District\", chapter 7 of 8, \"Fruit, ginger and the hill farm\". A terraced hillside with rows of pineapple and ginger plants, a farmer in a woven hat carrying a basket of oranges, young rubber trees in neat lines, a bamboo hut and clouds drifting through the valley. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "khagrachhari-08",
+      "relative": "images/playbook/districts/khagrachhari-08.webp",
+      "exists": false,
+      "story": "Khagrachhari District",
+      "slide": "8/8",
+      "title": "Peace and the roads ahead",
+      "promptFile": "artwork/story-prompts/districts-khagrachhari.json",
+      "prompt": "Illustration, \"Khagrachhari District\", chapter 8 of 8, \"Peace and the roads ahead\". A hill road at evening with a bus carrying passengers of different communities, a school with a flag and children in uniform, a new bridge over a stream, a girl with a book on a bamboo bench and a soft rainbow in the hills. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barguna-01",
+      "relative": "images/playbook/districts/barguna-01.webp",
+      "exists": false,
+      "story": "Barguna District",
+      "slide": "1/8",
+      "title": "A district between the rivers and the sea",
+      "promptFile": "artwork/story-prompts/districts-barguna.json",
+      "prompt": "Illustration, \"Barguna District\", chapter 1 of 8, \"A district between the rivers and the sea\". A coastal delta view of tidal rivers winding between rice fields and coconut groves toward a sea horizon, a fishing boat on a creek, mangrove edges, white egrets and a low warm sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barguna-02",
+      "relative": "images/playbook/districts/barguna-02.webp",
+      "exists": false,
+      "story": "Barguna District",
+      "slide": "2/8",
+      "title": "Patharghata, the fishing port",
+      "promptFile": "artwork/story-prompts/districts-barguna.json",
+      "prompt": "Illustration, \"Barguna District\", chapter 2 of 8, \"Patharghata, the fishing port\". A busy sea-fishing harbour at dawn with dozens of wooden trawlers moored, baskets of silver fish carried on heads, ice blocks being crushed, auctioneers at a landing, gulls and a pink sky over the estuary. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barguna-03",
+      "relative": "images/playbook/districts/barguna-03.webp",
+      "exists": false,
+      "story": "Barguna District",
+      "slide": "3/8",
+      "title": "Cyclone Sidr",
+      "promptFile": "artwork/story-prompts/districts-barguna.json",
+      "prompt": "Illustration, \"Barguna District\", chapter 3 of 8, \"Cyclone Sidr\". A coastal village after a storm: broken trees, a boat stranded on a rice field, people gathering what remains of their homes, a hand-painted sign for relief, a wide grey sky starting to clear and a child holding a cooking pot. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barguna-04",
+      "relative": "images/playbook/districts/barguna-04.webp",
+      "exists": false,
+      "story": "Barguna District",
+      "slide": "4/8",
+      "title": "Tengragiri, a forest on the shore",
+      "promptFile": "artwork/story-prompts/districts-barguna.json",
+      "prompt": "Illustration, \"Barguna District\", chapter 4 of 8, \"Tengragiri, a forest on the shore\". A mangrove forest at high tide with prop roots rising from the water, a narrow creek with a small boat and a forest guard, a spotted deer on a muddy bank, kingfishers on a branch and mist among the trees. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barguna-05",
+      "relative": "images/playbook/districts/barguna-05.webp",
+      "exists": false,
+      "story": "Barguna District",
+      "slide": "5/8",
+      "title": "The Rakhine community",
+      "promptFile": "artwork/story-prompts/districts-barguna.json",
+      "prompt": "Illustration, \"Barguna District\", chapter 5 of 8, \"The Rakhine community\". A Rakhine village on stilts near a creek, women in checked sarongs weaving cloth on a loom in the shade of a house, a golden Buddhist pagoda behind coconut palms, monks in saffron on a path and children in white. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barguna-06",
+      "relative": "images/playbook/districts/barguna-06.webp",
+      "exists": false,
+      "story": "Barguna District",
+      "slide": "6/8",
+      "title": "Coconut and betel nut",
+      "promptFile": "artwork/story-prompts/districts-barguna.json",
+      "prompt": "Illustration, \"Barguna District\", chapter 6 of 8, \"Coconut and betel nut\". A homestead of tall palms with clusters of green coconuts and orange areca nuts, a climber with a looped rope on a trunk, women husking coconuts on a mat, a heap of coconut shells for fuel and a pond with ducks. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barguna-07",
+      "relative": "images/playbook/districts/barguna-07.webp",
+      "exists": false,
+      "story": "Barguna District",
+      "slide": "7/8",
+      "title": "The Bishkhali ghat",
+      "promptFile": "artwork/story-prompts/districts-barguna.json",
+      "prompt": "Illustration, \"Barguna District\", chapter 7 of 8, \"The Bishkhali ghat\". A river ghat at midday with steps leading to a wide river, women washing clothes and pots, children diving off a wooden jetty, a ferry loading passengers and bicycles, a tea stall under a tree and a hot blue sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barguna-08",
+      "relative": "images/playbook/districts/barguna-08.webp",
+      "exists": false,
+      "story": "Barguna District",
+      "slide": "8/8",
+      "title": "Schools on the coast",
+      "promptFile": "artwork/story-prompts/districts-barguna.json",
+      "prompt": "Illustration, \"Barguna District\", chapter 8 of 8, \"Schools on the coast\". A raised concrete school building on stilts in a coastal village with children climbing the stairs, a teacher ringing a bell, bicycles stacked below, solar panels on the roof, palms bending in a salty breeze and bright morning light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhalokati-01",
+      "relative": "images/playbook/districts/jhalokati-01.webp",
+      "exists": false,
+      "story": "Jhalokati District",
+      "slide": "1/8",
+      "title": "A land of canals",
+      "promptFile": "artwork/story-prompts/districts-jhalokati.json",
+      "prompt": "Illustration, \"Jhalokati District\", chapter 1 of 8, \"A land of canals\". A web of narrow canals between green paddy fields and groves of coconut and betel nut palms, a small boat poled by a boy, a bamboo footbridge, ducks, a woman at a canal-side ghat and a soft hazy morning. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhalokati-02",
+      "relative": "images/playbook/districts/jhalokati-02.webp",
+      "exists": false,
+      "story": "Jhalokati District",
+      "slide": "2/8",
+      "title": "Sher-e-Bangla",
+      "promptFile": "artwork/story-prompts/districts-jhalokati.json",
+      "prompt": "Illustration, \"Jhalokati District\", chapter 2 of 8, \"Sher-e-Bangla\". A statesman in a dark achkan and cap addressing a great crowd of farmers from a platform in an open field, a plain fabric banner, a village behind and long afternoon shadows. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhalokati-03",
+      "relative": "images/playbook/districts/jhalokati-03.webp",
+      "exists": false,
+      "story": "Jhalokati District",
+      "slide": "3/8",
+      "title": "Kirtipasha Zamindar House",
+      "promptFile": "artwork/story-prompts/districts-jhalokati.json",
+      "prompt": "Illustration, \"Jhalokati District\", chapter 3 of 8, \"Kirtipasha Zamindar House\". A grand old mansion with an arched front, tall pillars and ornate plasterwork, a large pond with stone steps in front, mist on the water, a caretaker on the lawn and a crow on the roof beneath a pearl-grey sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhalokati-04",
+      "relative": "images/playbook/districts/jhalokati-04.webp",
+      "exists": false,
+      "story": "Jhalokati District",
+      "slide": "4/8",
+      "title": "Guavas and the floating market",
+      "promptFile": "artwork/story-prompts/districts-jhalokati.json",
+      "prompt": "Illustration, \"Jhalokati District\", chapter 4 of 8, \"Guavas and the floating market\". A canal at dawn crowded with small boats loaded with green guavas, farmers bargaining with buyers from boat to boat, children weighing fruit on hand scales, baskets stacked at the front and the early sun on the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhalokati-05",
+      "relative": "images/playbook/districts/jhalokati-05.webp",
+      "exists": false,
+      "story": "Jhalokati District",
+      "slide": "5/8",
+      "title": "Betel leaf and the green gardens",
+      "promptFile": "artwork/story-prompts/districts-jhalokati.json",
+      "prompt": "Illustration, \"Jhalokati District\", chapter 5 of 8, \"Betel leaf and the green gardens\". A dense shaded garden of betel vines climbing bamboo trellises, a farmer in a lungi tying the creepers, baskets of glossy green leaves in a boat, a canal beside and speckled sunlight through the leaves. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhalokati-06",
+      "relative": "images/playbook/districts/jhalokati-06.webp",
+      "exists": false,
+      "story": "Jhalokati District",
+      "slide": "6/8",
+      "title": "The Sugandha river",
+      "promptFile": "artwork/story-prompts/districts-jhalokati.json",
+      "prompt": "Illustration, \"Jhalokati District\", chapter 6 of 8, \"The Sugandha river\". A broad calm river at sunset with a ferry carrying passengers and bicycles, fishing boats with lamps, a ghat with brick steps and women lighting lamps, a flock of ducks crossing and a horizon of palms. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhalokati-07",
+      "relative": "images/playbook/districts/jhalokati-07.webp",
+      "exists": false,
+      "story": "Jhalokati District",
+      "slide": "7/8",
+      "title": "The timber yards",
+      "promptFile": "artwork/story-prompts/districts-jhalokati.json",
+      "prompt": "Illustration, \"Jhalokati District\", chapter 7 of 8, \"The timber yards\". A riverside timber yard with huge stacks of logs and planks, sawyers working a long two-man saw over a pit, a boat loaded with bamboo and wood, a man with a measuring stick and sawdust gleaming in the sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhalokati-08",
+      "relative": "images/playbook/districts/jhalokati-08.webp",
+      "exists": false,
+      "story": "Jhalokati District",
+      "slide": "8/8",
+      "title": "Schools, politics and the future",
+      "promptFile": "artwork/story-prompts/districts-jhalokati.json",
+      "prompt": "Illustration, \"Jhalokati District\", chapter 8 of 8, \"Schools, politics and the future\". A school courtyard assembly with children in blue and white uniforms singing, a teacher with a flag, a library window with students reading, a poster of a famous leader on the wall and boats on a canal beyond the fence. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "pirojpur-01",
+      "relative": "images/playbook/districts/pirojpur-01.webp",
+      "exists": false,
+      "story": "Pirojpur District",
+      "slide": "1/8",
+      "title": "A district of rivers and gardens",
+      "promptFile": "artwork/story-prompts/districts-pirojpur.json",
+      "prompt": "Illustration, \"Pirojpur District\", chapter 1 of 8, \"A district of rivers and gardens\". A green delta landscape of rivers, canals and guava orchards, raised garden beds on water, a boat with a farmer carrying baskets, a mosque minaret and coconut palms on the horizon, a mild morning mist. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "pirojpur-02",
+      "relative": "images/playbook/districts/pirojpur-02.webp",
+      "exists": false,
+      "story": "Pirojpur District",
+      "slide": "2/8",
+      "title": "The floating market of Swarupkathi",
+      "promptFile": "artwork/story-prompts/districts-pirojpur.json",
+      "prompt": "Illustration, \"Pirojpur District\", chapter 2 of 8, \"The floating market of Swarupkathi\". A crowded canal at dawn with dozens of narrow boats heaped with green guavas, farmers handing fruit across to buyers, scale beams swinging, a mosque in the background and reflections of palm trees in the still water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "pirojpur-03",
+      "relative": "images/playbook/districts/pirojpur-03.webp",
+      "exists": false,
+      "story": "Pirojpur District",
+      "slide": "3/8",
+      "title": "Floating gardens",
+      "promptFile": "artwork/story-prompts/districts-pirojpur.json",
+      "prompt": "Illustration, \"Pirojpur District\", chapter 3 of 8, \"Floating gardens\". A vast flooded field with long rafts of water hyacinth and bamboo planted with vegetables, a farmer on a small boat tending rows of gourds and spinach on the floating bed, ducks swimming around and a village on the bank. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "pirojpur-04",
+      "relative": "images/playbook/districts/pirojpur-04.webp",
+      "exists": false,
+      "story": "Pirojpur District",
+      "slide": "4/8",
+      "title": "Mathbaria and the edge of the forest",
+      "promptFile": "artwork/story-prompts/districts-pirojpur.json",
+      "prompt": "Illustration, \"Pirojpur District\", chapter 4 of 8, \"Mathbaria and the edge of the forest\". A river settlement on the edge of a mangrove forest, a fisherman’s house raised on posts, nets drying, honey collectors in a small boat setting out, a wall of dark green trees across the water and a pale golden sunrise. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "pirojpur-05",
+      "relative": "images/playbook/districts/pirojpur-05.webp",
+      "exists": false,
+      "story": "Pirojpur District",
+      "slide": "5/8",
+      "title": "The Baleshwar",
+      "promptFile": "artwork/story-prompts/districts-pirojpur.json",
+      "prompt": "Illustration, \"Pirojpur District\", chapter 5 of 8, \"The Baleshwar\". A broad river estuary at midday with large cargo boats and a distant ship, a fisherman standing in a narrow boat, dark mangroves along the far bank, white clouds and a strong glittering light on the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "pirojpur-06",
+      "relative": "images/playbook/districts/pirojpur-06.webp",
+      "exists": false,
+      "story": "Pirojpur District",
+      "slide": "6/8",
+      "title": "Rice, coconut and the village pond",
+      "promptFile": "artwork/story-prompts/districts-pirojpur.json",
+      "prompt": "Illustration, \"Pirojpur District\", chapter 6 of 8, \"Rice, coconut and the village pond\". A homestead with a raised house, a pond with a bamboo platform where a woman washes rice, coconut palms and a guava tree, hens and a goat in the yard, a boy with a fishing rod and warm afternoon light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "pirojpur-07",
+      "relative": "images/playbook/districts/pirojpur-07.webp",
+      "exists": false,
+      "story": "Pirojpur District",
+      "slide": "7/8",
+      "title": "The war of seventy-one in the south",
+      "promptFile": "artwork/story-prompts/districts-pirojpur.json",
+      "prompt": "Illustration, \"Pirojpur District\", chapter 7 of 8, \"The war of seventy-one in the south\". A river bank in 1971 with freedom fighters in lungis hiding in tall grass, a launch on the river with soldiers, a villager rowing silently in the dusk, an old tree and a green 1971 Bangladesh flag with a red disc containing a golden map of Bangladesh raised on a bamboo pole at the edge of a village. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "pirojpur-08",
+      "relative": "images/playbook/districts/pirojpur-08.webp",
+      "exists": false,
+      "story": "Pirojpur District",
+      "slide": "8/8",
+      "title": "Raising the next generation",
+      "promptFile": "artwork/story-prompts/districts-pirojpur.json",
+      "prompt": "Illustration, \"Pirojpur District\", chapter 8 of 8, \"Raising the next generation\". A village library hut with bamboo shelves of books and children reading on the floor, a teacher reading aloud, a solar lamp, a small boat tied outside and a bright evening sky seen through the open door. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "chuadanga-01",
+      "relative": "images/playbook/districts/chuadanga-01.webp",
+      "exists": false,
+      "story": "Chuadanga District",
+      "slide": "1/8",
+      "title": "A border district of the west",
+      "promptFile": "artwork/story-prompts/districts-chuadanga.json",
+      "prompt": "Illustration, \"Chuadanga District\", chapter 1 of 8, \"A border district of the west\". A wide flat plain at the western border with fields of sugarcane and wheat, a railway line with a train heading to a distant border post, a slow river with a ferry, a clay-walled village and a pale gold sunset. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "chuadanga-02",
+      "relative": "images/playbook/districts/chuadanga-02.webp",
+      "exists": false,
+      "story": "Chuadanga District",
+      "slide": "2/8",
+      "title": "The railway comes to Chuadanga",
+      "promptFile": "artwork/story-prompts/districts-chuadanga.json",
+      "prompt": "Illustration, \"Chuadanga District\", chapter 2 of 8, \"The railway comes to Chuadanga\". A small colonial-era railway station with a clock tower and a long platform, an early steam train arriving, officials in coats and merchants with bundles, a bullock cart waiting and a smoky golden sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "chuadanga-03",
+      "relative": "images/playbook/districts/chuadanga-03.webp",
+      "exists": false,
+      "story": "Chuadanga District",
+      "slide": "3/8",
+      "title": "Darshana, the border crossing",
+      "promptFile": "artwork/story-prompts/districts-chuadanga.json",
+      "prompt": "Illustration, \"Chuadanga District\", chapter 3 of 8, \"Darshana, the border crossing\". A railway border post at Darshana with a train waiting at the platform, customs officials checking sacks, porters carrying bundles toward the line that crosses the border, a signal gantry and a guard in uniform. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "chuadanga-04",
+      "relative": "images/playbook/districts/chuadanga-04.webp",
+      "exists": false,
+      "story": "Chuadanga District",
+      "slide": "4/8",
+      "title": "Sugarcane country",
+      "promptFile": "artwork/story-prompts/districts-chuadanga.json",
+      "prompt": "Illustration, \"Chuadanga District\", chapter 4 of 8, \"Sugarcane country\". A tall green sugarcane field with workers cutting stalks with long knives, bundles of cane loaded onto bullock carts and tractors heading for a mill with a tall chimney, the sweet smell of crushed cane and a hazy winter sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "chuadanga-05",
+      "relative": "images/playbook/districts/chuadanga-05.webp",
+      "exists": false,
+      "story": "Chuadanga District",
+      "slide": "5/8",
+      "title": "The rivers Mathabhanga and Kumar",
+      "promptFile": "artwork/story-prompts/districts-chuadanga.json",
+      "prompt": "Illustration, \"Chuadanga District\", chapter 5 of 8, \"The rivers Mathabhanga and Kumar\". A narrow clear river curving through a farmland of green and gold, a boy pulling a net from a small boat, a bamboo bridge, a heron fishing in the shallows and cattle watering at a gentle bank at sunset. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "chuadanga-06",
+      "relative": "images/playbook/districts/chuadanga-06.webp",
+      "exists": false,
+      "story": "Chuadanga District",
+      "slide": "6/8",
+      "title": "Early days of the freedom war",
+      "promptFile": "artwork/story-prompts/districts-chuadanga.json",
+      "prompt": "Illustration, \"Chuadanga District\", chapter 6 of 8, \"Early days of the freedom war\". A makeshift camp under trees near the border at night, young men in lungis and shirts being given instruction in handling old rifles, a hurricane lamp on a table with maps, a bicycle messenger arriving and a crescent moon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "chuadanga-07",
+      "relative": "images/playbook/districts/chuadanga-07.webp",
+      "exists": false,
+      "story": "Chuadanga District",
+      "slide": "7/8",
+      "title": "Wheat, tobacco and the dry winter",
+      "promptFile": "artwork/story-prompts/districts-chuadanga.json",
+      "prompt": "Illustration, \"Chuadanga District\", chapter 7 of 8, \"Wheat, tobacco and the dry winter\". A winter morning on the plain with golden wheat ripening beside broad-leaved tobacco, farmers cutting wheat with sickles, women stringing tobacco leaves to dry under a shed, a tractor on the track and low pale sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "chuadanga-08",
+      "relative": "images/playbook/districts/chuadanga-08.webp",
+      "exists": false,
+      "story": "Chuadanga District",
+      "slide": "8/8",
+      "title": "A quiet crossroads",
+      "promptFile": "artwork/story-prompts/districts-chuadanga.json",
+      "prompt": "Illustration, \"Chuadanga District\", chapter 8 of 8, \"A quiet crossroads\". A market town at dusk with a tea stall, shops with lamps, a school bus passing, villagers with bicycles carrying sugarcane and vegetables, a mosque, a temple spire and a hazy red sun over the fields. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhenaidah-01",
+      "relative": "images/playbook/districts/jhenaidah-01.webp",
+      "exists": false,
+      "story": "Jhenaidah District",
+      "slide": "1/8",
+      "title": "A plain of old rivers",
+      "promptFile": "artwork/story-prompts/districts-jhenaidah.json",
+      "prompt": "Illustration, \"Jhenaidah District\", chapter 1 of 8, \"A plain of old rivers\". A flat south-western plain with a slow winding river, date palms along the embankment, a ferry with farmers and bicycles, golden mustard fields and a village with a mosque dome beyond, soft winter light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhenaidah-02",
+      "relative": "images/playbook/districts/jhenaidah-02.webp",
+      "exists": false,
+      "story": "Jhenaidah District",
+      "slide": "2/8",
+      "title": "Pagla Kanai, the mad poet",
+      "promptFile": "artwork/story-prompts/districts-jhenaidah.json",
+      "prompt": "Illustration, \"Jhenaidah District\", chapter 2 of 8, \"Pagla Kanai, the mad poet\". A barefoot village mystic in a patched robe with a single-stringed instrument, singing under a banyan tree to a circle of farmers and boatmen, a clay lamp, dusk light and a path of fireflies. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhenaidah-03",
+      "relative": "images/playbook/districts/jhenaidah-03.webp",
+      "exists": false,
+      "story": "Jhenaidah District",
+      "slide": "3/8",
+      "title": "The Shailkupa mosque",
+      "promptFile": "artwork/story-prompts/districts-jhenaidah.json",
+      "prompt": "Illustration, \"Jhenaidah District\", chapter 3 of 8, \"The Shailkupa mosque\". An old brick mosque with several domes, thick walls, arched doorways and faint terracotta patterns, a courtyard with a pond, an elderly caretaker sweeping and tall trees casting long shadows in warm afternoon light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhenaidah-04",
+      "relative": "images/playbook/districts/jhenaidah-04.webp",
+      "exists": false,
+      "story": "Jhenaidah District",
+      "slide": "4/8",
+      "title": "Kharer Dighi and Harihar Garh",
+      "promptFile": "artwork/story-prompts/districts-jhenaidah.json",
+      "prompt": "Illustration, \"Jhenaidah District\", chapter 4 of 8, \"Kharer Dighi and Harihar Garh\". A large still old pond with grassy banks and a small ancient mosque near it, a tall earthen mound with trees in the background, a farmer leading a cow and a mist at sunrise. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhenaidah-05",
+      "relative": "images/playbook/districts/jhenaidah-05.webp",
+      "exists": false,
+      "story": "Jhenaidah District",
+      "slide": "5/8",
+      "title": "The Kobadak and the poet",
+      "promptFile": "artwork/story-prompts/districts-jhenaidah.json",
+      "prompt": "Illustration, \"Jhenaidah District\", chapter 5 of 8, \"The Kobadak and the poet\". A graceful slow river at dusk with a poet in nineteenth-century dress sitting on a bank with a notebook, a boat drifting by, willows and a village in the distance, the moon rising pale. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhenaidah-06",
+      "relative": "images/playbook/districts/jhenaidah-06.webp",
+      "exists": false,
+      "story": "Jhenaidah District",
+      "slide": "6/8",
+      "title": "Shailkupa in the war",
+      "promptFile": "artwork/story-prompts/districts-jhenaidah.json",
+      "prompt": "Illustration, \"Jhenaidah District\", chapter 6 of 8, \"Shailkupa in the war\". Freedom fighters in lungis and shirts moving through tall grass at dusk toward a small town, bicycles and rifles, a villager pointing the way, a school building in the distance and low red clouds. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhenaidah-07",
+      "relative": "images/playbook/districts/jhenaidah-07.webp",
+      "exists": false,
+      "story": "Jhenaidah District",
+      "slide": "7/8",
+      "title": "Fields, dates and bananas",
+      "promptFile": "artwork/story-prompts/districts-jhenaidah.json",
+      "prompt": "Illustration, \"Jhenaidah District\", chapter 7 of 8, \"Fields, dates and bananas\". A winter farm scene with date palms tapped for juice, clay pots tied to the trunks, a climber coming down a tree, a field of ripe bananas and golden mustard in bloom and a farmer carrying a bunch on his shoulder. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "jhenaidah-08",
+      "relative": "images/playbook/districts/jhenaidah-08.webp",
+      "exists": false,
+      "story": "Jhenaidah District",
+      "slide": "8/8",
+      "title": "A market town and its schools",
+      "promptFile": "artwork/story-prompts/districts-jhenaidah.json",
+      "prompt": "Illustration, \"Jhenaidah District\", chapter 8 of 8, \"A market town and its schools\". A busy district town street in the morning with shops opening, a rickshaw with schoolchildren in uniform, boys in cadet-style grey uniforms marching in a line toward a college gate, a tea stall, banana sellers and bright sunlight. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "magura-01",
+      "relative": "images/playbook/districts/magura-01.webp",
+      "exists": false,
+      "story": "Magura District",
+      "slide": "1/8",
+      "title": "A district of old rivers in the south-west",
+      "promptFile": "artwork/story-prompts/districts-magura.json",
+      "prompt": "Illustration, \"Magura District\", chapter 1 of 8, \"A district of old rivers in the south-west\". A broad green plain crossed by two rivers with date palms and banana groves, farmers on a raised embankment, a ferry and a mosque, ducks on a pond and clouds drifting in a wide sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "magura-02",
+      "relative": "images/playbook/districts/magura-02.webp",
+      "exists": false,
+      "story": "Magura District",
+      "slide": "2/8",
+      "title": "Sreepur and Sridevi",
+      "promptFile": "artwork/story-prompts/districts-magura.json",
+      "prompt": "Illustration, \"Magura District\", chapter 2 of 8, \"Sreepur and Sridevi\". A legendary queen in a simple white sari and a gold crown standing at the edge of a pond beside a small palace, courtiers behind her, villagers bringing gifts and a hazy gold evening light on the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "magura-03",
+      "relative": "images/playbook/districts/magura-03.webp",
+      "exists": false,
+      "story": "Magura District",
+      "slide": "3/8",
+      "title": "Two zamindar houses",
+      "promptFile": "artwork/story-prompts/districts-magura.json",
+      "prompt": "Illustration, \"Magura District\", chapter 3 of 8, \"Two zamindar houses\". Two weathered two-storey mansions among tangled trees, one with fluted pillars and a carved doorway, the other with arched windows and a broken balcony, a boy with a goat passing and lizards on the sun-warmed walls. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "magura-04",
+      "relative": "images/playbook/districts/magura-04.webp",
+      "exists": false,
+      "story": "Magura District",
+      "slide": "4/8",
+      "title": "A school older than the district",
+      "promptFile": "artwork/story-prompts/districts-magura.json",
+      "prompt": "Illustration, \"Magura District\", chapter 4 of 8, \"A school older than the district\". A plain old red-brick school with a bell on a post, boys in white shirts and shorts lined up in the yard, a teacher with a cane and a register, a mango tree and a nineteenth-century wall clock in the doorway. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "magura-05",
+      "relative": "images/playbook/districts/magura-05.webp",
+      "exists": false,
+      "story": "Magura District",
+      "slide": "5/8",
+      "title": "Jarigan and the folk songs",
+      "promptFile": "artwork/story-prompts/districts-magura.json",
+      "prompt": "Illustration, \"Magura District\", chapter 5 of 8, \"Jarigan and the folk songs\". A courtyard at night with villagers on mats around a group of singers and drummers, a lamp in the centre, a man in a white panjabi and cap singing with a hand to his ear, a harmonium and a dholak, and stars through the trees. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "magura-06",
+      "relative": "images/playbook/districts/magura-06.webp",
+      "exists": false,
+      "story": "Magura District",
+      "slide": "6/8",
+      "title": "Jatra and the village stage",
+      "promptFile": "artwork/story-prompts/districts-magura.json",
+      "prompt": "Illustration, \"Magura District\", chapter 6 of 8, \"Jatra and the village stage\". A temporary open-air stage lit with bright lamps in a harvested field, actors in colourful costumes and crowns performing a dramatic scene, a crowd of villagers seated on the ground with children on shoulders and a night sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "magura-07",
+      "relative": "images/playbook/districts/magura-07.webp",
+      "exists": false,
+      "story": "Magura District",
+      "slide": "7/8",
+      "title": "Rice, jute and sugarcane",
+      "promptFile": "artwork/story-prompts/districts-magura.json",
+      "prompt": "Illustration, \"Magura District\", chapter 7 of 8, \"Rice, jute and sugarcane\". A broad field with rows of green sugarcane, a farmer cutting rice at the edge of another plot, bundles of jute tied for retting, a cart and a woman carrying water on her head, noon light on a dusty path. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "magura-08",
+      "relative": "images/playbook/districts/magura-08.webp",
+      "exists": false,
+      "story": "Magura District",
+      "slide": "8/8",
+      "title": "On the road between rivers",
+      "promptFile": "artwork/story-prompts/districts-magura.json",
+      "prompt": "Illustration, \"Magura District\", chapter 8 of 8, \"On the road between rivers\". A new paved road with a bus passing through green fields toward a distant bridge, a tea stall with young men, a motorbike with a courier box, a girl cycling to school and a bright blue sky with white clouds. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "narail-01",
+      "relative": "images/playbook/districts/narail-01.webp",
+      "exists": false,
+      "story": "Narail District",
+      "slide": "1/8",
+      "title": "The district of the Chitra",
+      "promptFile": "artwork/story-prompts/districts-narail.json",
+      "prompt": "Illustration, \"Narail District\", chapter 1 of 8, \"The district of the Chitra\". A quiet river winding through lush green fields with a long wooden boat poled by a boatman, jackfruit and banana groves, a raised embankment with a path and cows, soft morning mist and a pale sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "narail-02",
+      "relative": "images/playbook/districts/narail-02.webp",
+      "exists": false,
+      "story": "Narail District",
+      "slide": "2/8",
+      "title": "The boy from Masimdia",
+      "promptFile": "artwork/story-prompts/districts-narail.json",
+      "prompt": "Illustration, \"Narail District\", chapter 2 of 8, \"The boy from Masimdia\". A boy of about ten in a village courtyard drawing with a charred stick on a mud wall, watched by amused neighbours, a mango tree, a clay water pot, hens and a river glimpsed beyond the fence in the afternoon light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "narail-03",
+      "relative": "images/playbook/districts/narail-03.webp",
+      "exists": false,
+      "story": "Narail District",
+      "slide": "3/8",
+      "title": "The strong farmers",
+      "promptFile": "artwork/story-prompts/districts-narail.json",
+      "prompt": "Illustration, \"Narail District\", chapter 3 of 8, \"The strong farmers\". A huge canvas in rich earth colours of a muscular bare-chested peasant with powerful arms ploughing a field with oxen, women bent in the paddy, a sky of heavy gold, and the artist stepping back from the easel in a barn studio. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "narail-04",
+      "relative": "images/playbook/districts/narail-04.webp",
+      "exists": false,
+      "story": "Narail District",
+      "slide": "4/8",
+      "title": "Shishu Swarga, the children’s heaven",
+      "promptFile": "artwork/story-prompts/districts-narail.json",
+      "prompt": "Illustration, \"Narail District\", chapter 4 of 8, \"Shishu Swarga, the children’s heaven\". A riverside compound with thatched huts and an open-air studio, children of different ages sketching and painting on mats under a mango tree, an old bearded artist in a lungi guiding a small hand, animals wandering and bright easels. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "narail-05",
+      "relative": "images/playbook/districts/narail-05.webp",
+      "exists": false,
+      "story": "Narail District",
+      "slide": "5/8",
+      "title": "Narail’s old college",
+      "promptFile": "artwork/story-prompts/districts-narail.json",
+      "prompt": "Illustration, \"Narail District\", chapter 5 of 8, \"Narail’s old college\". A handsome colonial-style college building with pillared verandas and a clock, students in white shirts walking beneath arches with books, a flag, mango trees and a bicycle rack, warm afternoon sunlight on cream walls. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "narail-06",
+      "relative": "images/playbook/districts/narail-06.webp",
+      "exists": false,
+      "story": "Narail District",
+      "slide": "6/8",
+      "title": "The Chitra river",
+      "promptFile": "artwork/story-prompts/districts-narail.json",
+      "prompt": "Illustration, \"Narail District\", chapter 6 of 8, \"The Chitra river\". A calm river at sunset with long reflections, a wooden ferry crossing with villagers and bicycles, fishermen with small nets along the bank, women filling pots at a ghat and a flock of white ibis flying across a pink sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "narail-07",
+      "relative": "images/playbook/districts/narail-07.webp",
+      "exists": false,
+      "story": "Narail District",
+      "slide": "7/8",
+      "title": "Beels, fish and jute",
+      "promptFile": "artwork/story-prompts/districts-narail.json",
+      "prompt": "Illustration, \"Narail District\", chapter 7 of 8, \"Beels, fish and jute\". A broad beel in the rainy season with water lilies and floating weeds, fishermen setting traps from narrow boats, bundles of jute drying on the bank, a woman picking water spinach and a sunset reflected in wide shallow water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "narail-08",
+      "relative": "images/playbook/districts/narail-08.webp",
+      "exists": false,
+      "story": "Narail District",
+      "slide": "8/8",
+      "title": "A district that paints",
+      "promptFile": "artwork/story-prompts/districts-narail.json",
+      "prompt": "Illustration, \"Narail District\", chapter 8 of 8, \"A district that paints\". A village fair at the riverbank with children painting on big sheets of paper laid on the grass, a stage with folk singers, kites in the sky, stalls of sweets and toys and a plain festival banner, warm winter sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barishal-01",
+      "relative": "images/playbook/districts/barishal-01.webp",
+      "exists": false,
+      "story": "Barishal District",
+      "slide": "1/8",
+      "title": "A city on the Kirtankhola",
+      "promptFile": "artwork/story-prompts/districts-barishal.json",
+      "prompt": "Illustration, \"Barishal District\", chapter 1 of 8, \"A city on the Kirtankhola\". A busy river-front city at dusk with a wide river, a launch with lights, country boats with lanterns, a ghat with steps and people, tall palms along the embankment, a minaret and a green tree-lined road and a purple sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barishal-02",
+      "relative": "images/playbook/districts/barishal-02.webp",
+      "exists": false,
+      "story": "Barishal District",
+      "slide": "2/8",
+      "title": "Jibanananda Das",
+      "promptFile": "artwork/story-prompts/districts-barishal.json",
+      "prompt": "Illustration, \"Barishal District\", chapter 2 of 8, \"Jibanananda Das\". A thoughtful young poet in a plain shirt walking alone along a river embankment at dusk, a notebook in his hand, fireflies and a heron, a small house with a lamp, the river wide and silent and a crescent moon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barishal-03",
+      "relative": "images/playbook/districts/barishal-03.webp",
+      "exists": false,
+      "story": "Barishal District",
+      "slide": "3/8",
+      "title": "The Barisal Guns",
+      "promptFile": "artwork/story-prompts/districts-barishal.json",
+      "prompt": "Illustration, \"Barishal District\", chapter 3 of 8, \"The Barisal Guns\". A misty river estuary at night with a far lightning flash on the horizon, a fisherman lifting his head from his net to listen, a flat boat on still water, a lantern and a pale moon behind dark clouds. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barishal-04",
+      "relative": "images/playbook/districts/barishal-04.webp",
+      "exists": false,
+      "story": "Barishal District",
+      "slide": "4/8",
+      "title": "Aswini Kumar Dutta and Brojomohan College",
+      "promptFile": "artwork/story-prompts/districts-barishal.json",
+      "prompt": "Illustration, \"Barishal District\", chapter 4 of 8, \"Aswini Kumar Dutta and Brojomohan College\". A grand old college building with a clock tower and wide steps, a bearded reformer in a dhoti and shawl addressing students in the courtyard, young men in white with books, a banner for swadeshi and an afternoon sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2.",
+      "revisionPrompt": "Keep the painting, people, composition and warm illustrated style unchanged. Replace the striped tricolour banner at the right with plain unmarked cream fabric. Remove the spinning wheel symbol below it. This is an early twentieth-century Bengali education reform scene; include no flags, symbols or readable text."
+    },
+    {
+      "id": "barishal-05",
+      "relative": "images/playbook/districts/barishal-05.webp",
+      "exists": false,
+      "story": "Barishal District",
+      "slide": "5/8",
+      "title": "Durga Sagar",
+      "promptFile": "artwork/story-prompts/districts-barishal.json",
+      "prompt": "Illustration, \"Barishal District\", chapter 5 of 8, \"Durga Sagar\". A vast still lake ringed with palms and old trees, ducks and a flock of migratory birds on the water, a small boat with a boy, a temple spire at the far edge and mist lifting at dawn, with a pink glow over the horizon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barishal-06",
+      "relative": "images/playbook/districts/barishal-06.webp",
+      "exists": false,
+      "story": "Barishal District",
+      "slide": "6/8",
+      "title": "The overnight launch",
+      "promptFile": "artwork/story-prompts/districts-barishal.json",
+      "prompt": "Illustration, \"Barishal District\", chapter 6 of 8, \"The overnight launch\". A huge multi-deck river launch at night lit by hundreds of lamps gliding on a dark wide river, passengers on the open deck with blankets, hawkers selling tea, the shore lights far off, stars and a thin mist on the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barishal-07",
+      "relative": "images/playbook/districts/barishal-07.webp",
+      "exists": false,
+      "story": "Barishal District",
+      "slide": "7/8",
+      "title": "Evenings by the river",
+      "promptFile": "artwork/story-prompts/districts-barishal.json",
+      "prompt": "Illustration, \"Barishal District\", chapter 7 of 8, \"Evenings by the river\". A riverside park in the evening with families on benches and grass, children eating roasted nuts, balloon sellers, a tea cart with steam, couples walking along a railing, the broad river with boats and the sky fading from gold to violet. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "barishal-08",
+      "relative": "images/playbook/districts/barishal-08.webp",
+      "exists": false,
+      "story": "Barishal District",
+      "slide": "8/8",
+      "title": "A city nearer to the capital",
+      "promptFile": "artwork/story-prompts/districts-barishal.json",
+      "prompt": "Illustration, \"Barishal District\", chapter 8 of 8, \"A city nearer to the capital\". A modern road leading through green fields to a wide bridge in the distance, a bus with passengers, a small aircraft landing at a regional airport, a young woman with a laptop seated at an open roadside cafe in the foreground and construction cranes beside the river. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "joypurhat-01",
+      "relative": "images/playbook/districts/joypurhat-01.webp",
+      "exists": false,
+      "story": "Joypurhat District",
+      "slide": "1/8",
+      "title": "A small district on the red earth",
+      "promptFile": "artwork/story-prompts/districts-joypurhat.json",
+      "prompt": "Illustration, \"Joypurhat District\", chapter 1 of 8, \"A small district on the red earth\". A gently rolling plain of reddish soil with fields of sugarcane and rice, a small river with a bamboo bridge, a train crossing an embankment, tall palm trees, a village pond and a wide pale sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "joypurhat-02",
+      "relative": "images/playbook/districts/joypurhat-02.webp",
+      "exists": false,
+      "story": "Joypurhat District",
+      "slide": "2/8",
+      "title": "Near the ancient monasteries",
+      "promptFile": "artwork/story-prompts/districts-joypurhat.json",
+      "prompt": "Illustration, \"Joypurhat District\", chapter 2 of 8, \"Near the ancient monasteries\". A great ruined Buddhist monastery of red brick seen across a field, a crossed terrace with a central temple mound, visitors walking beside the excavated terraces in a present-day scene, and in the foreground a Joypurhat farmer on a bicycle. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "joypurhat-03",
+      "relative": "images/playbook/districts/joypurhat-03.webp",
+      "exists": false,
+      "story": "Joypurhat District",
+      "slide": "3/8",
+      "title": "The sugar mill",
+      "promptFile": "artwork/story-prompts/districts-joypurhat.json",
+      "prompt": "Illustration, \"Joypurhat District\", chapter 3 of 8, \"The sugar mill\". A large old sugar mill with a tall chimney and steam, trucks and bullock carts stacked with sugarcane waiting at the gate, workers in caps, golden cane juice flowing into vats and a smoky orange sunset. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "joypurhat-04",
+      "relative": "images/playbook/districts/joypurhat-04.webp",
+      "exists": false,
+      "story": "Joypurhat District",
+      "slide": "4/8",
+      "title": "The railway town",
+      "promptFile": "artwork/story-prompts/districts-joypurhat.json",
+      "prompt": "Illustration, \"Joypurhat District\", chapter 4 of 8, \"The railway town\". A railway station of the late nineteenth century with a brick building and long platform, an old steam train, passengers with sacks and baskets, a stationmaster in a cap with a flag, a tea vendor and a train-shed clock under a pale evening sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "joypurhat-05",
+      "relative": "images/playbook/districts/joypurhat-05.webp",
+      "exists": false,
+      "story": "Joypurhat District",
+      "slide": "5/8",
+      "title": "Panchbibi and the five ladies",
+      "promptFile": "artwork/story-prompts/districts-joypurhat.json",
+      "prompt": "Illustration, \"Joypurhat District\", chapter 5 of 8, \"Panchbibi and the five ladies\". A quiet village road lined with mango trees leading to a small old shrine with five tombs under a banyan tree, women lighting lamps and tying threads, a school nearby and the golden light of a rural afternoon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "joypurhat-06",
+      "relative": "images/playbook/districts/joypurhat-06.webp",
+      "exists": false,
+      "story": "Joypurhat District",
+      "slide": "6/8",
+      "title": "The Little Jamuna",
+      "promptFile": "artwork/story-prompts/districts-joypurhat.json",
+      "prompt": "Illustration, \"Joypurhat District\", chapter 6 of 8, \"The Little Jamuna\". A small clear river in winter flowing between white sand banks and fields of mustard in flower, a woman washing pots at a bamboo ghat, two boys with a net, a heron and a train bridge far off in the haze. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    },
+    {
+      "id": "joypurhat-07",
+      "relative": "images/playbook/districts/joypurhat-07.webp",
+      "exists": false,
+      "story": "Joypurhat District",
+      "slide": "7/8",
+      "title": "Remembering seventy-one",
+      "promptFile": "artwork/story-prompts/districts-joypurhat.json",
+      "prompt": "Illustration, \"Joypurhat District\", chapter 7 of 8, \"Remembering seventy-one\". A quiet field memorial with a white obelisk and a red-green flag, flowers laid at its base, schoolchildren in a line, an elderly man in a freedom-fighter’s cap standing with folded hands and the evening sun low behind bamboo. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent scene specific to this chapter. Natural anatomy and scale. Historical clothing and objects must suit the depicted period. No invented extra towers on monuments. Books and signs have no readable text. No collage or decorative emoji. Landscape 3:2."
+    }
+  ],
+  "references": [
+    "https://en.banglapedia.org/index.php?lang=en&title=National_Flag",
+    "https://file-chittagong.portal.gov.bd/uploads/6b9a9df8-2650-4326-bbfd-55418d77e00d/681/9ce/7cb/6819ce7cb0a3f332539892.pdf"
+  ]
+}
