@@ -1,0 +1,587 @@
+{
+  "mode": "built-in image_gen",
+  "count": 57,
+  "jobs": [
+    {
+      "id": "joypurhat-08",
+      "relative": "images/playbook/districts/joypurhat-08.webp",
+      "exists": false,
+      "story": "Joypurhat District",
+      "slide": "8/8",
+      "title": "Potatoes, cane and the next season",
+      "promptFile": "artwork/story-prompts/districts-joypurhat.json",
+      "prompt": "Illustration, \"Joypurhat District\", chapter 8 of 8, \"Potatoes, cane and the next season\". A broad winter field with ridges of potato plants being dug up, sacks stacked on a bullock cart, a cold storage building in the distance, women sorting tubers under an awning and long sunset shadows across the red soil. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "jamalpur-01",
+      "relative": "images/playbook/districts/jamalpur-01.webp",
+      "exists": false,
+      "story": "Jamalpur District",
+      "slide": "1/8",
+      "title": "Between the Brahmaputra and the Jamuna",
+      "promptFile": "artwork/story-prompts/districts-jamalpur.json",
+      "prompt": "Illustration, \"Jamalpur District\", chapter 1 of 8, \"Between the Brahmaputra and the Jamuna\". A vast braided river landscape at dawn, two great channels with sandbars between, boats with brown sails, a char village of low houses, cattle on the sand, a slender old river curving through green fields in the distance and soft mist. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "jamalpur-02",
+      "relative": "images/playbook/districts/jamalpur-02.webp",
+      "exists": false,
+      "story": "Jamalpur District",
+      "slide": "2/8",
+      "title": "The Old Brahmaputra",
+      "promptFile": "artwork/story-prompts/districts-jamalpur.json",
+      "prompt": "Illustration, \"Jamalpur District\", chapter 2 of 8, \"The Old Brahmaputra\". A slim river curving between green banks in the morning, a ferry boat with passengers and bicycles, a ghat with bathers, a market town on the bank with tin roofs and a minaret, cows grazing and a pale gold light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "jamalpur-03",
+      "relative": "images/playbook/districts/jamalpur-03.webp",
+      "exists": false,
+      "story": "Jamalpur District",
+      "slide": "3/8",
+      "title": "The battle of Kamalpur",
+      "promptFile": "artwork/story-prompts/districts-jamalpur.json",
+      "prompt": "Illustration, \"Jamalpur District\", chapter 3 of 8, \"The battle of Kamalpur\". A border outpost with bunkers and barbed wire at night, freedom fighters crawling forward under tracer fire, a bright flare in the sky, a boat on a river behind them and a commander with binoculars in the dark. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "jamalpur-04",
+      "relative": "images/playbook/districts/jamalpur-04.webp",
+      "exists": false,
+      "story": "Jamalpur District",
+      "slide": "4/8",
+      "title": "The days of freedom in December",
+      "promptFile": "artwork/story-prompts/districts-jamalpur.json",
+      "prompt": "Illustration, \"Jamalpur District\", chapter 4 of 8, \"The days of freedom in December\". A town square in the morning with a crowd cheering, a 1971 Bangladesh flag, green with a red disc containing a gold map of Bangladesh, raised on a bamboo pole, freedom fighters in lungis with rifles on shoulders, villagers handing out sweets, children running and a plain celebratory fabric banner. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "jamalpur-05",
+      "relative": "images/playbook/districts/jamalpur-05.webp",
+      "exists": false,
+      "story": "Jamalpur District",
+      "slide": "5/8",
+      "title": "Islampur, between two rivers",
+      "promptFile": "artwork/story-prompts/districts-jamalpur.json",
+      "prompt": "Illustration, \"Jamalpur District\", chapter 5 of 8, \"Islampur, between two rivers\". A narrow strip of land between two enormous rivers with a market town at its centre, boats on both sides, sandbags along an eroding bank, farmers loading jute and rice onto a boat, a mosque and school on a raised mound. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "jamalpur-06",
+      "relative": "images/playbook/districts/jamalpur-06.webp",
+      "exists": false,
+      "story": "Jamalpur District",
+      "slide": "6/8",
+      "title": "Dewanganj and the mills",
+      "promptFile": "artwork/story-prompts/districts-jamalpur.json",
+      "prompt": "Illustration, \"Jamalpur District\", chapter 6 of 8, \"Dewanganj and the mills\". A riverbank industrial scene with a large old jute mill with a tall chimney, bales of jute loaded onto barges, workers in lungis, a sugar mill beside it with steaming vats, a steamer on the broad Brahmaputra and a bright blue sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "jamalpur-07",
+      "relative": "images/playbook/districts/jamalpur-07.webp",
+      "exists": false,
+      "story": "Jamalpur District",
+      "slide": "7/8",
+      "title": "Life on the Jamuna chars",
+      "promptFile": "artwork/story-prompts/districts-jamalpur.json",
+      "prompt": "Illustration, \"Jamalpur District\", chapter 7 of 8, \"Life on the Jamuna chars\". A family home built on a sandy island, raised on a mound of earth with a thatched roof, rows of pumpkins drying on a bamboo rack, a mother cooking over a clay stove, children at a floating school boat and a wide pale river around. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "jamalpur-08",
+      "relative": "images/playbook/districts/jamalpur-08.webp",
+      "exists": false,
+      "story": "Jamalpur District",
+      "slide": "8/8",
+      "title": "Schools, rivers and the future",
+      "promptFile": "artwork/story-prompts/districts-jamalpur.json",
+      "prompt": "Illustration, \"Jamalpur District\", chapter 8 of 8, \"Schools, rivers and the future\". A school on a riverbank with a bamboo fence, children in uniform at morning assembly, a teacher raising a flag, a library corner, the river wide behind and new roads and a bridge visible on the horizon under a bright morning sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "sherpur-01",
+      "relative": "images/playbook/districts/sherpur-01.webp",
+      "exists": false,
+      "story": "Sherpur District",
+      "slide": "1/8",
+      "title": "Where the plain meets the Garo hills",
+      "promptFile": "artwork/story-prompts/districts-sherpur.json",
+      "prompt": "Illustration, \"Sherpur District\", chapter 1 of 8, \"Where the plain meets the Garo hills\". A line of low green hills across the northern horizon with a flat plain of paddy fields and sal trees in front, a thin river with a wooden bridge, a village with tin and thatched houses and a soft mist in the early morning. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "sherpur-02",
+      "relative": "images/playbook/districts/sherpur-02.webp",
+      "exists": false,
+      "story": "Sherpur District",
+      "slide": "2/8",
+      "title": "The Garo people of Nalitabari",
+      "promptFile": "artwork/story-prompts/districts-sherpur.json",
+      "prompt": "Illustration, \"Sherpur District\", chapter 2 of 8, \"The Garo people of Nalitabari\". A Garo village at the edge of a forest with raised houses and carved wooden posts, women in checked wrap-skirts carrying baskets of bananas and pineapples, men with long drums, children in school clothes and green hills behind. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "sherpur-03",
+      "relative": "images/playbook/districts/sherpur-03.webp",
+      "exists": false,
+      "story": "Sherpur District",
+      "slide": "3/8",
+      "title": "Madhutila Eco Park",
+      "promptFile": "artwork/story-prompts/districts-sherpur.json",
+      "prompt": "Illustration, \"Sherpur District\", chapter 3 of 8, \"Madhutila Eco Park\". A forest park with tall sal trees, a walking trail beneath the canopy, a family on a trail with a guide, butterflies and a hornbill in a tree, hills in the mist behind and shafts of sunlight through the leaves. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "sherpur-04",
+      "relative": "images/playbook/districts/sherpur-04.webp",
+      "exists": false,
+      "story": "Sherpur District",
+      "slide": "4/8",
+      "title": "Mosques of old Sherpur",
+      "promptFile": "artwork/story-prompts/districts-sherpur.json",
+      "prompt": "Illustration, \"Sherpur District\", chapter 4 of 8, \"Mosques of old Sherpur\". An old brick mosque with several low domes and a courtyard with a pond, an imam at the doorway, weathered terracotta flowers on the walls, villagers sitting under a tree and warm afternoon light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "sherpur-05",
+      "relative": "images/playbook/districts/sherpur-05.webp",
+      "exists": false,
+      "story": "Sherpur District",
+      "slide": "5/8",
+      "title": "Durga Puja at Mangalbhaban",
+      "promptFile": "artwork/story-prompts/districts-sherpur.json",
+      "prompt": "Illustration, \"Sherpur District\", chapter 5 of 8, \"Durga Puja at Mangalbhaban\". A festival night at a Hindu mansion courtyard with a clay image of the goddess Durga under a decorated canopy, drummers with dhaks, women in red-bordered saris offering lamps, flower garlands, children on shoulders and the glow of oil lamps. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "sherpur-06",
+      "relative": "images/playbook/districts/sherpur-06.webp",
+      "exists": false,
+      "story": "Sherpur District",
+      "slide": "6/8",
+      "title": "Koch and Hajong",
+      "promptFile": "artwork/story-prompts/districts-sherpur.json",
+      "prompt": "Illustration, \"Sherpur District\", chapter 6 of 8, \"Koch and Hajong\". A village of the Koch and Hajong peoples in the foothills with houses on stilts and woven bamboo walls, women spinning cotton and weaving at porch looms, a bullock cart with firewood, rice fields and dark forest behind. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "sherpur-07",
+      "relative": "images/playbook/districts/sherpur-07.webp",
+      "exists": false,
+      "story": "Sherpur District",
+      "slide": "7/8",
+      "title": "Rice, pineapple and the sal forest",
+      "promptFile": "artwork/story-prompts/districts-sherpur.json",
+      "prompt": "Illustration, \"Sherpur District\", chapter 7 of 8, \"Rice, pineapple and the sal forest\". A hillside farm with rows of pineapple plants and banana trees at the edge of a sal forest, a farmer in a woven hat carrying a basket of pineapples, rice paddies in the plain below and a bullock cart on a dusty track. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "sherpur-08",
+      "relative": "images/playbook/districts/sherpur-08.webp",
+      "exists": false,
+      "story": "Sherpur District",
+      "slide": "8/8",
+      "title": "Remembering the liberation war",
+      "promptFile": "artwork/story-prompts/districts-sherpur.json",
+      "prompt": "Illustration, \"Sherpur District\", chapter 8 of 8, \"Remembering the liberation war\". A field memorial near a quiet river with a modest brick monument and a flag, flowers and incense, a group of schoolchildren in line, an elderly freedom fighter in a faded cap, bamboo trees and a golden sunset. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2.",
+      "revisionPrompt": "Preserve this illustration and all people, setting and composition. Correct only the flag: present-day Bangladesh flag, plain dark green field with a solid red disc. Remove the gold map from inside the disc completely. No other change."
+    },
+    {
+      "id": "gaibandha-01",
+      "relative": "images/playbook/districts/gaibandha-01.webp",
+      "exists": false,
+      "story": "Gaibandha District",
+      "slide": "1/8",
+      "title": "Land of the western bank",
+      "promptFile": "artwork/story-prompts/districts-gaibandha.json",
+      "prompt": "Illustration, \"Gaibandha District\", chapter 1 of 8, \"Land of the western bank\". A wide braided river at dawn with sandbars, a ferry carrying people and bicycles, a char village with low houses and cattle, tall grass on the bank and a soft pink mist over the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "gaibandha-02",
+      "relative": "images/playbook/districts/gaibandha-02.webp",
+      "exists": false,
+      "story": "Gaibandha District",
+      "slide": "2/8",
+      "title": "The chars of the Brahmaputra",
+      "promptFile": "artwork/story-prompts/districts-gaibandha.json",
+      "prompt": "Illustration, \"Gaibandha District\", chapter 2 of 8, \"The chars of the Brahmaputra\". A sandy island in the middle of a very wide river with a family house on a mound, a goat tied to a post, a woman pounding grain, a boat pulled onto the sand, a horizon of water and a flock of birds under a hazy sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "gaibandha-03",
+      "relative": "images/playbook/districts/gaibandha-03.webp",
+      "exists": false,
+      "story": "Gaibandha District",
+      "slide": "3/8",
+      "title": "The floods of fifty-four, seventy-four and seventy-eight",
+      "promptFile": "artwork/story-prompts/districts-gaibandha.json",
+      "prompt": "Illustration, \"Gaibandha District\", chapter 3 of 8, \"The floods of fifty-four, seventy-four and seventy-eight\". A submerged village with only treetops and rooftops showing above brown water, people crowded on a boat with bundles, a relief helicopter overhead, a starving cow on a mound and heavy clouds above. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "gaibandha-04",
+      "relative": "images/playbook/districts/gaibandha-04.webp",
+      "exists": false,
+      "story": "Gaibandha District",
+      "slide": "4/8",
+      "title": "Fulchhari ghat",
+      "promptFile": "artwork/story-prompts/districts-gaibandha.json",
+      "prompt": "Illustration, \"Gaibandha District\", chapter 4 of 8, \"Fulchhari ghat\". A busy river port with steamers and country boats tied along a long ghat, porters carrying sacks and bundles on their backs, tea stalls under a tin roof, passengers with umbrellas and a broad river glittering at midday. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "gaibandha-05",
+      "relative": "images/playbook/districts/gaibandha-05.webp",
+      "exists": false,
+      "story": "Gaibandha District",
+      "slide": "5/8",
+      "title": "The Karatoya, an ancient river",
+      "promptFile": "artwork/story-prompts/districts-gaibandha.json",
+      "prompt": "Illustration, \"Gaibandha District\", chapter 5 of 8, \"The Karatoya, an ancient river\". A pale old river flowing slowly through green fields with ancient brick mounds visible on the bank, a priest bathing at dawn, women filling pots, ducks and lilies, a mist rising and the sun glowing orange. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "gaibandha-06",
+      "relative": "images/playbook/districts/gaibandha-06.webp",
+      "exists": false,
+      "story": "Gaibandha District",
+      "slide": "6/8",
+      "title": "Balashi Ghat",
+      "promptFile": "artwork/story-prompts/districts-gaibandha.json",
+      "prompt": "Illustration, \"Gaibandha District\", chapter 6 of 8, \"Balashi Ghat\". A long embankment beside a wide river at sunset with strolling families, children flying kites, vendors with roasted nuts and tea, a boat with a lantern drifting by and a wall of golden light across the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "gaibandha-07",
+      "relative": "images/playbook/districts/gaibandha-07.webp",
+      "exists": false,
+      "story": "Gaibandha District",
+      "slide": "7/8",
+      "title": "Gobindaganj and the memory of seventy-one",
+      "promptFile": "artwork/story-prompts/districts-gaibandha.json",
+      "prompt": "Illustration, \"Gaibandha District\", chapter 7 of 8, \"Gobindaganj and the memory of seventy-one\". A market town street with brick mosque domes above the rooftops, a rickshaw stand and a tea stall, a small memorial with a flag in a field nearby, schoolchildren laying flowers and an elderly man in a faded cap standing with folded hands. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "gaibandha-08",
+      "relative": "images/playbook/districts/gaibandha-08.webp",
+      "exists": false,
+      "story": "Gaibandha District",
+      "slide": "8/8",
+      "title": "Songs of the north and the road ahead",
+      "promptFile": "artwork/story-prompts/districts-gaibandha.json",
+      "prompt": "Illustration, \"Gaibandha District\", chapter 8 of 8, \"Songs of the north and the road ahead\". A village gathering at evening with a singer playing a dotara beside a second musician with a bamboo flute, listeners on mats, children sitting on laps, a loudspeaker on a pole, a new paved road and a bus visible beyond the fields, and soft lanterns glowing. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "lalmonirhat-01",
+      "relative": "images/playbook/districts/lalmonirhat-01.webp",
+      "exists": false,
+      "story": "Lalmonirhat District",
+      "slide": "1/8",
+      "title": "A district of the Teesta",
+      "promptFile": "artwork/story-prompts/districts-lalmonirhat.json",
+      "prompt": "Illustration, \"Lalmonirhat District\", chapter 1 of 8, \"A district of the Teesta\". A wide, shallow river with sandy islands and braided channels under a big sky, cattle crossing a shallow, a railway bridge in the distance, a char village of low houses, wide maize fields and the pale line of far hills. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "lalmonirhat-02",
+      "relative": "images/playbook/districts/lalmonirhat-02.webp",
+      "exists": false,
+      "story": "Lalmonirhat District",
+      "slide": "2/8",
+      "title": "The Tin Bigha corridor",
+      "promptFile": "artwork/story-prompts/districts-lalmonirhat.json",
+      "prompt": "Illustration, \"Lalmonirhat District\", chapter 2 of 8, \"The Tin Bigha corridor\". A historical early-1990s view of a narrow road corridor between fenced fields with a gate and watchtowers on both sides, villagers on bicycles and carts passing through a barrier at a set hour, guards with flags, an unlettered signboard and a pale early light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2.",
+      "revisionPrompt": "Preserve this illustrated border corridor scene, people, guards, buildings, lighting and composition. Remove both flags and their poles entirely. Leave the watchtower and gate unchanged. No new symbols, signs or readable lettering. No other changes."
+    },
+    {
+      "id": "lalmonirhat-03",
+      "relative": "images/playbook/districts/lalmonirhat-03.webp",
+      "exists": false,
+      "story": "Lalmonirhat District",
+      "slide": "3/8",
+      "title": "The exchange of the enclaves",
+      "promptFile": "artwork/story-prompts/districts-lalmonirhat.json",
+      "prompt": "Illustration, \"Lalmonirhat District\", chapter 3 of 8, \"The exchange of the enclaves\". A midnight celebration at a border with a crowd of villagers cheering, flags of two countries held aloft, children on shoulders, officials with certificates, flares and sparklers lighting the dark and a joyful face looking up. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "lalmonirhat-04",
+      "relative": "images/playbook/districts/lalmonirhat-04.webp",
+      "exists": false,
+      "story": "Lalmonirhat District",
+      "slide": "4/8",
+      "title": "The Teesta Barrage",
+      "promptFile": "artwork/story-prompts/districts-lalmonirhat.json",
+      "prompt": "Illustration, \"Lalmonirhat District\", chapter 4 of 8, \"The Teesta Barrage\". A long concrete barrage with rows of steel gates across a wide river, water pouring in white sheets through some gates, irrigation canals leading away into green fields, engineers in helmets on a walkway and a flock of birds over the water. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "lalmonirhat-05",
+      "relative": "images/playbook/districts/lalmonirhat-05.webp",
+      "exists": false,
+      "story": "Lalmonirhat District",
+      "slide": "5/8",
+      "title": "The railway town",
+      "promptFile": "artwork/story-prompts/districts-lalmonirhat.json",
+      "prompt": "Illustration, \"Lalmonirhat District\", chapter 5 of 8, \"The railway town\". A big old railway junction with red-brick buildings and workshops, an old locomotive shed, rows of tracks, a vintage steam engine on display, railway workers in blue uniforms and passengers waiting on a long platform in the golden light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "lalmonirhat-06",
+      "relative": "images/playbook/districts/lalmonirhat-06.webp",
+      "exists": false,
+      "story": "Lalmonirhat District",
+      "slide": "6/8",
+      "title": "The old airfield",
+      "promptFile": "artwork/story-prompts/districts-lalmonirhat.json",
+      "prompt": "Illustration, \"Lalmonirhat District\", chapter 6 of 8, \"The old airfield\". A vast overgrown airfield with a long cracked runway running between grassy fields, a lone windsock on a pole, an old brick control tower, a goatherd crossing with goats and a distant tiny aircraft in a golden afternoon sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "lalmonirhat-07",
+      "relative": "images/playbook/districts/lalmonirhat-07.webp",
+      "exists": false,
+      "story": "Lalmonirhat District",
+      "slide": "7/8",
+      "title": "Life on the Teesta chars",
+      "promptFile": "artwork/story-prompts/districts-lalmonirhat.json",
+      "prompt": "Illustration, \"Lalmonirhat District\", chapter 7 of 8, \"Life on the Teesta chars\". A sand island in a shallow braided river with maize and groundnuts growing in neat rows, a woman carrying a baby and a bundle across a dry channel, a boy with a buffalo, scattered tin-roofed houses and a faint line of mountains on the horizon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "lalmonirhat-08",
+      "relative": "images/playbook/districts/lalmonirhat-08.webp",
+      "exists": false,
+      "story": "Lalmonirhat District",
+      "slide": "8/8",
+      "title": "Tobacco, maize and potatoes",
+      "promptFile": "artwork/story-prompts/districts-lalmonirhat.json",
+      "prompt": "Illustration, \"Lalmonirhat District\", chapter 8 of 8, \"Tobacco, maize and potatoes\". A winter field of potatoes being dug with hoes, sacks stacked on a cart, a maize field with golden cobs drying on a roof, a tobacco-curing shed with broad leaves hanging, farmers in woollen caps and a thin cold sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "nilphamari-01",
+      "relative": "images/playbook/districts/nilphamari-01.webp",
+      "exists": false,
+      "story": "Nilphamari District",
+      "slide": "1/8",
+      "title": "The blue district",
+      "promptFile": "artwork/story-prompts/districts-nilphamari.json",
+      "prompt": "Illustration, \"Nilphamari District\", chapter 1 of 8, \"The blue district\". A wide green plain of rice and potatoes at dawn with a broad shallow river and sandbars in the distance, a train on a bridge, brick kilns with smoke, a long straight road and a faint blue haze along the horizon. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "nilphamari-02",
+      "relative": "images/playbook/districts/nilphamari-02.webp",
+      "exists": false,
+      "story": "Nilphamari District",
+      "slide": "2/8",
+      "title": "Indigo and the name",
+      "promptFile": "artwork/story-prompts/districts-nilphamari.json",
+      "prompt": "Illustration, \"Nilphamari District\", chapter 2 of 8, \"Indigo and the name\". A dark indigo vat in a nineteenth-century factory yard with workers stirring blue liquid, bundles of green indigo plants, a European planter on a veranda with a whip, and in the distance farmers in white dhotis standing with bowed heads. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "nilphamari-03",
+      "relative": "images/playbook/districts/nilphamari-03.webp",
+      "exists": false,
+      "story": "Nilphamari District",
+      "slide": "3/8",
+      "title": "Saidpur Railway Workshop",
+      "promptFile": "artwork/story-prompts/districts-nilphamari.json",
+      "prompt": "Illustration, \"Nilphamari District\", chapter 3 of 8, \"Saidpur Railway Workshop\". A huge old railway workshop hall with a high iron roof, locomotives and carriages on rails being repaired, workers in blue overalls with hammers and welding torches, sparks flying, shafts of light from high windows. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "nilphamari-04",
+      "relative": "images/playbook/districts/nilphamari-04.webp",
+      "exists": false,
+      "story": "Nilphamari District",
+      "slide": "4/8",
+      "title": "Saidpur town and its airport",
+      "promptFile": "artwork/story-prompts/districts-nilphamari.json",
+      "prompt": "Illustration, \"Nilphamari District\", chapter 4 of 8, \"Saidpur town and its airport\". A busy north-west town street with wide avenues and old railway bungalows, rickshaws and a bus station, a small passenger aircraft landing at a small airport, a tea stall and an unlettered signboard under a clear blue sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "nilphamari-05",
+      "relative": "images/playbook/districts/nilphamari-05.webp",
+      "exists": false,
+      "story": "Nilphamari District",
+      "slide": "5/8",
+      "title": "The Teesta canals",
+      "promptFile": "artwork/story-prompts/districts-nilphamari.json",
+      "prompt": "Illustration, \"Nilphamari District\", chapter 5 of 8, \"The Teesta canals\". A broad irrigation canal with fresh water between rows of young green wheat and rice seedlings, farmers directing the flow with spades, a sluice gate, a woman with a basket of vegetables on a path and a golden evening sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "nilphamari-06",
+      "relative": "images/playbook/districts/nilphamari-06.webp",
+      "exists": false,
+      "story": "Nilphamari District",
+      "slide": "6/8",
+      "title": "Potatoes, jute and the cold north",
+      "promptFile": "artwork/story-prompts/districts-nilphamari.json",
+      "prompt": "Illustration, \"Nilphamari District\", chapter 6 of 8, \"Potatoes, jute and the cold north\". A foggy winter morning in a village with potato fields, farmers in wool caps and shawls bent at their work, a bonfire of straw with children warming their hands, bundles of jute stacked and a pale sun breaking through the mist. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "nilphamari-07",
+      "relative": "images/playbook/districts/nilphamari-07.webp",
+      "exists": false,
+      "story": "Nilphamari District",
+      "slide": "7/8",
+      "title": "Domar, Jaldhaka and the border towns",
+      "promptFile": "artwork/story-prompts/districts-nilphamari.json",
+      "prompt": "Illustration, \"Nilphamari District\", chapter 7 of 8, \"Domar, Jaldhaka and the border towns\". A small border market with traders on both sides of a barbed-wire fence handing goods through a gate, women with baskets of chillies and greens, an unlettered signboard, a school and a pale sky with distant hills. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "nilphamari-08",
+      "relative": "images/playbook/districts/nilphamari-08.webp",
+      "exists": false,
+      "story": "Nilphamari District",
+      "slide": "8/8",
+      "title": "The north-west gateway",
+      "promptFile": "artwork/story-prompts/districts-nilphamari.json",
+      "prompt": "Illustration, \"Nilphamari District\", chapter 8 of 8, \"The north-west gateway\". A modern road leading across a plain toward a railway bridge and an airport tower, a bus passing, a school on the roadside, solar panels on roofs, a mobile phone tower and young people on bicycles in the warm light of morning. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "thakurgaon-01",
+      "relative": "images/playbook/districts/thakurgaon-01.webp",
+      "exists": false,
+      "story": "Thakurgaon District",
+      "slide": "1/8",
+      "title": "The far north-west plain",
+      "promptFile": "artwork/story-prompts/districts-thakurgaon.json",
+      "prompt": "Illustration, \"Thakurgaon District\", chapter 1 of 8, \"The far north-west plain\". A flat open plain at the north-western edge of the country with fields of rice and wheat, a slow river with a bamboo bridge, tall mango trees, a village of clay and tin houses, a bullock cart on a dusty track and a vast sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "thakurgaon-02",
+      "relative": "images/playbook/districts/thakurgaon-02.webp",
+      "exists": false,
+      "story": "Thakurgaon District",
+      "slide": "2/8",
+      "title": "The Tangon and the Kulik",
+      "promptFile": "artwork/story-prompts/districts-thakurgaon.json",
+      "prompt": "Illustration, \"Thakurgaon District\", chapter 2 of 8, \"The Tangon and the Kulik\". Two clear rivers winding through green plain, a boy fishing from a bamboo raft, women washing at a ghat, a flock of white egrets over the water, cows crossing a shallow ford and low morning sun in soft haze. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "thakurgaon-03",
+      "relative": "images/playbook/districts/thakurgaon-03.webp",
+      "exists": false,
+      "story": "Thakurgaon District",
+      "slide": "3/8",
+      "title": "The Nekmard fair",
+      "promptFile": "artwork/story-prompts/districts-thakurgaon.json",
+      "prompt": "Illustration, \"Thakurgaon District\", chapter 3 of 8, \"The Nekmard fair\". A huge rural fair on open ground in winter with hundreds of cattle and bulls tethered in rows, farmers bargaining, stalls of toys, sweets and pottery, a Ferris wheel in the distance, dust and crowds, and a plain fabric banner. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "thakurgaon-04",
+      "relative": "images/playbook/districts/thakurgaon-04.webp",
+      "exists": false,
+      "story": "Thakurgaon District",
+      "slide": "4/8",
+      "title": "The sugar mill",
+      "promptFile": "artwork/story-prompts/districts-thakurgaon.json",
+      "prompt": "Illustration, \"Thakurgaon District\", chapter 4 of 8, \"The sugar mill\". A big sugar mill beside a road with a tall chimney, lines of carts and tractors stacked with sugarcane, workers unloading with hooks, the smell of boiling cane juice, children chewing sticks of cane and a hazy sunset. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "thakurgaon-05",
+      "relative": "images/playbook/districts/thakurgaon-05.webp",
+      "exists": false,
+      "story": "Thakurgaon District",
+      "slide": "5/8",
+      "title": "Santal and Oraon villages",
+      "promptFile": "artwork/story-prompts/districts-thakurgaon.json",
+      "prompt": "Illustration, \"Thakurgaon District\", chapter 5 of 8, \"Santal and Oraon villages\". A Santal village with neatly painted mud houses decorated with white and ochre patterns, women in saris with red borders carrying water pots, men with flutes and a drum, children playing and bright green fields beyond. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "thakurgaon-06",
+      "relative": "images/playbook/districts/thakurgaon-06.webp",
+      "exists": false,
+      "story": "Thakurgaon District",
+      "slide": "6/8",
+      "title": "Tulaipanji and the northern farm",
+      "promptFile": "artwork/story-prompts/districts-thakurgaon.json",
+      "prompt": "Illustration, \"Thakurgaon District\", chapter 6 of 8, \"Tulaipanji and the northern farm\". A golden paddy field of slender grain in autumn with farmers cutting rice by sickle, women winnowing grain on a mat, a pot of fragrant rice steaming on a clay stove, sacks of potatoes and wheat bundles on a cart, and a clear blue sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "thakurgaon-07",
+      "relative": "images/playbook/districts/thakurgaon-07.webp",
+      "exists": false,
+      "story": "Thakurgaon District",
+      "slide": "7/8",
+      "title": "Fog and the winter kitchen",
+      "promptFile": "artwork/story-prompts/districts-thakurgaon.json",
+      "prompt": "Illustration, \"Thakurgaon District\", chapter 7 of 8, \"Fog and the winter kitchen\". A winter morning in a village courtyard shrouded in white fog, a family around a straw fire in woollen shawls, a woman steaming pitha in a clay pot, a child holding a glass of date juice, hens in the yard and a pale sun behind the mist. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "thakurgaon-08",
+      "relative": "images/playbook/districts/thakurgaon-08.webp",
+      "exists": false,
+      "story": "Thakurgaon District",
+      "slide": "8/8",
+      "title": "A town with an airport",
+      "promptFile": "artwork/story-prompts/districts-thakurgaon.json",
+      "prompt": "Illustration, \"Thakurgaon District\", chapter 8 of 8, \"A town with an airport\". A historical late-1970s scene at a small regional airport in a green plain with a small passenger aircraft on the runway, travellers walking across the apron with bags, a rural bus waiting outside, a tea stall, a fog-bank over fields beyond and a soft winter sun. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "rangpur-01",
+      "relative": "images/playbook/districts/rangpur-01.webp",
+      "exists": false,
+      "story": "Rangpur District",
+      "slide": "1/8",
+      "title": "The city of the north",
+      "promptFile": "artwork/story-prompts/districts-rangpur.json",
+      "prompt": "Illustration, \"Rangpur District\", chapter 1 of 8, \"The city of the north\". A busy northern city at dusk with wide avenues, rickshaws and bicycles, a domed palace with green lawns, a university gate, a mosque and a temple spire, a tea stall and long rows of lights coming on beneath a cool violet sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "rangpur-02",
+      "relative": "images/playbook/districts/rangpur-02.webp",
+      "exists": false,
+      "story": "Rangpur District",
+      "slide": "2/8",
+      "title": "Begum Rokeya of Pairaband",
+      "promptFile": "artwork/story-prompts/districts-rangpur.json",
+      "prompt": "Illustration, \"Rangpur District\", chapter 2 of 8, \"Begum Rokeya of Pairaband\". A girl of about nine reading secretly by lamplight in a zamindar house, a book hidden under her shawl, her brother whispering lessons at a window, a dark courtyard and a veiled mother in the doorway, a single flickering flame. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "rangpur-03",
+      "relative": "images/playbook/districts/rangpur-03.webp",
+      "exists": false,
+      "story": "Rangpur District",
+      "slide": "3/8",
+      "title": "Tajhat Palace",
+      "promptFile": "artwork/story-prompts/districts-rangpur.json",
+      "prompt": "Illustration, \"Rangpur District\", chapter 3 of 8, \"Tajhat Palace\". A grand white palace with columns, arches and a central dome, a long flight of steps, formal gardens with a pond, a caretaker sweeping the porch, visitors in the galleries and the golden light of late afternoon on the walls. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "rangpur-04",
+      "relative": "images/playbook/districts/rangpur-04.webp",
+      "exists": false,
+      "story": "Rangpur District",
+      "slide": "4/8",
+      "title": "Carmichael College and the city of learning",
+      "promptFile": "artwork/story-prompts/districts-rangpur.json",
+      "prompt": "Illustration, \"Rangpur District\", chapter 4 of 8, \"Carmichael College and the city of learning\". A long historic college building with arched verandas and a low roofline, students in white shirts walking in pairs along a shaded avenue, a bicycle stand, banyan trees and a plain fabric banner for a cultural event, in a warm afternoon light. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "rangpur-05",
+      "relative": "images/playbook/districts/rangpur-05.webp",
+      "exists": false,
+      "story": "Rangpur District",
+      "slide": "5/8",
+      "title": "Haribhanga, the king of mangoes",
+      "promptFile": "artwork/story-prompts/districts-rangpur.json",
+      "prompt": "Illustration, \"Rangpur District\", chapter 5 of 8, \"Haribhanga, the king of mangoes\". A mango orchard in June with trees heavy with large green-gold fruits, pickers handing baskets down from ladders, a pile of mangoes on a mat with a man cutting one for a child, trucks loading at the roadside and a bright sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "rangpur-06",
+      "relative": "images/playbook/districts/rangpur-06.webp",
+      "exists": false,
+      "story": "Rangpur District",
+      "slide": "6/8",
+      "title": "Shataranji and the crafts of Rangpur",
+      "promptFile": "artwork/story-prompts/districts-rangpur.json",
+      "prompt": "Illustration, \"Rangpur District\", chapter 6 of 8, \"Shataranji and the crafts of Rangpur\". A weaver’s workshop with a wide handloom and brightly striped cotton rugs, bundles of coloured yarn, a man and a boy working together at the loom, finished shataranji rugs rolled up on a shelf and sunlight in the doorway. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "rangpur-07",
+      "relative": "images/playbook/districts/rangpur-07.webp",
+      "exists": false,
+      "story": "Rangpur District",
+      "slide": "7/8",
+      "title": "The Rangpur Dhing",
+      "promptFile": "artwork/story-prompts/districts-rangpur.json",
+      "prompt": "Illustration, \"Rangpur District\", chapter 7 of 8, \"The Rangpur Dhing\". A large crowd of farmers with staves and sickles gathered before a landlord’s revenue office at dusk, a defiant young leader raising an arm, a stern tax agent in a turban stepping back, torches in the yard and a heavy stormy sky. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    },
+    {
+      "id": "rangpur-08",
+      "relative": "images/playbook/districts/rangpur-08.webp",
+      "exists": false,
+      "story": "Rangpur District",
+      "slide": "8/8",
+      "title": "Bhawaiya and the song of the north",
+      "promptFile": "artwork/story-prompts/districts-rangpur.json",
+      "prompt": "Illustration, \"Rangpur District\", chapter 8 of 8, \"Bhawaiya and the song of the north\". A bullock-cart driver on a wide road under an enormous sky at sunset, singing with his head thrown back, a long whip over his shoulder, the cart loaded with straw, a scattered flock of birds and a far line of palm trees. A documentary-style painted scene of real Bangladeshi places and people, accurate to the place described, respectful and dignified, no tourist clichés. Warm hand-painted gouache and coloured pencil, lightly textured paper, sophisticated storybook illustration with believable Bengali environments, expressive natural faces and coherent scale. Forest teal, terracotta, saffron and cream palette. Full-bleed landscape 3:2 composition. NO text, lettering, numerals, speech bubbles, border, logos, emoji or watermarks. One complete scene, not a collage or contact sheet. Production constraints: One coherent chapter-specific scene. Natural anatomy and believable scale. Clothing and objects must suit the depicted period. No invented towers on monuments. Books and signs have no readable text. Present-day Bangladesh flags are green with a red disc; 1971 flags additionally carry a gold Bangladesh map within the disc. No collage. Landscape 3:2."
+    }
+  ],
+  "notes": [
+    "Thakurgaon airport illustration depicts its late-1970s operating period, not a claim of current flights.",
+    "Tin Bigha corridor illustration depicts its early-1990s restricted-access period."
+  ],
+  "references": [
+    "https://thakurgaonsadar.thakurgaon.gov.bd/pages/tourist-spot/ঠাকুরগাঁও-বিমানবন্দর-7fd9a8-6977007bc4774958d7bd5955",
+    "https://carmichael.college.gov.bd/pages/static-pages/696ca8cd35ce18e1c05c9135",
+    "https://www.mea.gov.in/Uploads/PublicationDocs/24529_LBA_MEA_Booklet_final.pdf"
+  ]
+}
